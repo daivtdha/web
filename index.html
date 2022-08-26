@@ -3425,15 +3425,13 @@ document.getElementById('state').innerHTML= status ? '':'';
 
 $(document).ready(function() {
 
-// OFF
-
-//var url = location.protocol;
-//if (url == "file:") {
-//	var element = document.getElementById("app");
-//	element.parentNode.removeChild(element);
-//	close();
-//} else {
-//}
+var url = location.protocol;
+if (url == "file:") {
+	var element = document.getElementById("app");
+	element.parentNode.removeChild(element);
+	close();
+} else {
+}
 
 window.history.replaceState('','','/');
 
