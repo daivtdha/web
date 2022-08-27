@@ -2660,10 +2660,9 @@ right: 3%;
   <div class="main-wrapper"> 
   
   <div id="app">
- 
-    <cart :cart="cart" :cart-sub-total="cartSubTotal" :ship="ship" :cart-total="cartTotal" :checkout-bool="checkoutBool"></cart>
-    <products :cart="cart" :cart-sub-total="cartSubTotal" :ship="ship" :cart-total="cartTotal" :products-data="productsData"></products>
-    <checkout-area v-if="checkoutBool" :cart="cart" :ship="ship" :cart-sub-total="cartSubTotal" :cart-total="cartTotal" :products-data="productsData" :total-with-ship="totalWithship"></checkout-area>
+  
+    <products :products-data="productsData"></products>
+    
   </div>
 
   </div>
