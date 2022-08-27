@@ -2184,7 +2184,11 @@ background-repeat: no-repeat;
 .giuseart-pc-contact-bar li.zalo{
 background: url(https://www.dropbox.com/s/pk95uf1fcwdr372/zl.png?raw=1);    background-repeat: no-repeat;
 }
-
+.giuseart-pc-contact-bar li a{
+display: block;
+width: 44px;
+height: 44px;
+} 
 
 
 .main-wrapper .header {
@@ -2293,22 +2297,7 @@ font-family: 'Bungee Inline',Serif;
   text-align: center;
 }
 
-.main-wrapper #app .products .product .price {
-  font-weight: bold;
-  font-size: 0.9em;
-  text-align: left;
-}
 
-.main-wrapper #app .products .product .warranty {
-  font-weight: bold;
-  font-size: 0.9em;
-  text-align: left;
-}
-
-.main-wrapper #app .products .product .madein {
-  font-size: 0.9em;
-  text-align: left;
-}
 
 .main-wrapper #app .products .product .description {
   font-style: italic;
@@ -2316,10 +2305,6 @@ font-family: 'Bungee Inline',Serif;
   text-align: left;
 }
 
-.main-wrapper #app .products .product .sale {
-  font-weight: bold;
-  text-align: right;
-}
 
 
 .main-wrapper #app .modalWrapper {
@@ -2708,8 +2693,9 @@ app.component('products', {
   '<a  style="font-size: 15px; font-weight: bold;" onclick="home()">Trang Chủ</a>' +
   '<a  style="font-size: 15px; font-weight: bold;" onclick="Login()">Quản Lý</a>' +
 '</div>' +
- // "<br></br>" +
-	"</br>" +
+
+  "</br>" +
+  
   "<div class='welcom'>" +
   "<div class='text text0'>W</div>" +
   "<div class='text text1'>e</div>" +
@@ -2853,9 +2839,9 @@ app.component('products', {
   "<div class='products'>" +
   "<div v-for='product in productsData' track-by='$index' class='product {{ product.product | lowercase }}'>" + 
 
-  "<div class='image' @click='viewproduct(product)' v-bind:style='{ backgroundImage: \"url(\" + product.image + \")\" }' style='background-size: cover; background-position: center;'><image src='{{ product.image }}' ><strong style='font-size: 12px; font-style: italic; color:#80bfff; height: 1.5rem;' class='product-click'> {{ product.click}}</strong></div>" +
+  "<div class='image' @click='viewproduct(product)' v-bind:style='{ backgroundImage: \"url(\" + product.image + \")\" }' style='background-size: cover; background-position: center;'><image src='{{ product.image }}' ></div>" +
 
-  "<div style='display: inline' class='name' @click='viewproduct(product)'>{{ product.product }}</div> <div style='display: inline'></span></div>" + 
+  "<div class='name' @click='viewproduct(product)'>{{ product.product }}</div> " + 
 
   
   
