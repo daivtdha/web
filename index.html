@@ -2201,7 +2201,7 @@ width: 100%;
 .main-wrapper .header span {
 font-family: 'Bungee Inline',Serif;
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 150;
   font-weight: bold;
 }
 .color-1 {
@@ -2217,11 +2217,12 @@ font-family: 'Bungee Inline',Serif;
   color: #ff1493;
 }
 
+
 .main-wrapper #app {
   margin: 0 auto;
   padding: 0em;
   text-align: center;
-  background-image: linear-gradient(to bottom right,#16a085, #a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
+  background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
 
 }
 .main-wrapper #app .cart {
@@ -3059,7 +3060,7 @@ app.component('products', {
   "<div class='modal'>" +   
   "<div class='close'  @click='hideModal()' <span style='font-size: 1.2rem; text-align: right; float: right;  font-weight: bold; color: red; filter: hue-rotate(277deg) brightness(0.96);cursor:pointer;' @click='showCart = !showCart'>❎</span></div>" + 
   
-  //"<div class='name'>{{ modalData.product }} </span> </div>" +
+  "<div class='name'>{{ modalData.product }} </span> </div>" +
   
   "<div class='imageWrapper'><div class='image' v-bind:style='{ backgroundImage: \"url(\" + modalData.image + \")\" }' style='background-size: cover; background-position: center;' v-on:mouseover='imageMouseOver($event)' v-on:mousemove='imageMouseMove($event)' v-on:mouseout='imageMouseOut($event)'></div></div>" +
   
@@ -3199,6 +3200,8 @@ hideModal: function() {
 
   }
 });
+
+
 
 
 </script>
@@ -3344,13 +3347,15 @@ document.getElementById('state').innerHTML= status ? '':'';
 
 $(document).ready(function() {
 
-var url = location.protocol;
-if (url == "file:") {
-	var element = document.getElementById("app");
-	element.parentNode.removeChild(element);
-	close();
-} else {
-}
+// OFF
+
+//var url = location.protocol;
+//if (url == "file:") {
+//	var element = document.getElementById("app");
+//	element.parentNode.removeChild(element);
+//	close();
+//} else {
+//}
 
 window.history.replaceState('','','/');
 
