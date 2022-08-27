@@ -2222,6 +2222,7 @@ font-family: 'Bungee Inline',Serif;
   margin: 0 auto;
   padding: 0em;
   text-align: center;
+  
   background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
 
 }
@@ -2816,7 +2817,10 @@ app.component('products', {
 
 
   template:
- 
+ '<div id="topnav" class="topnav">' +
+  '<a  style="font-size: 15px; font-weight: bold;" onclick="home()">Trang Chủ</a>' +
+  '<a  style="font-size: 15px; font-weight: bold;" onclick="Login()">Quản Lý</a>' +
+'</div>' +
   
   "<p id='dialog-khohet' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Sản phẩm này đã hết hàng trong kho, Chúng tôi sẽ sớm cung cấp lại sản phẩm.</p>" +
   "<p id='dialog-qty' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Bạn đã chọn quá số lượng trong kho.</p>" +
@@ -3124,6 +3128,8 @@ hideModal: function() {
 
   }
 });
+
+
 
 
 
