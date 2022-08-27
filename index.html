@@ -2687,10 +2687,7 @@ app.component('products', {
 
 
   template:
- '<div id="topnav" class="topnav">' +
-  '<a  style="font-size: 15px; font-weight: bold;" onclick="home()">Trang Chủ</a>' +
-  '<a  style="font-size: 15px; font-weight: bold;" onclick="Login()">Quản Lý</a>' +
-'</div>' +
+
   
   "<p id='dialog-khohet' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Sản phẩm này đã hết hàng trong kho, Chúng tôi sẽ sớm cung cấp lại sản phẩm.</p>" +
   "<p id='dialog-qty' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Bạn đã chọn quá số lượng trong kho.</p>" +
@@ -2706,9 +2703,12 @@ app.component('products', {
   "<p id='dialog-sanpham' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Bạn hãy chọn một số món hàng.</p>" +
   "<p id='dialog-tongtien' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Cám ơn Bạn đã mua hàng, Chúng tôi sẽ giao hàng trong thời gian sớm nhất.</p>" +
   
-  "</div>" +
-
-  "<br></br>" +
+  "<div>" +
+ '<div id="topnav" class="topnav">' +
+  '<a  style="font-size: 15px; font-weight: bold;" onclick="home()">Trang Chủ</a>' +
+  '<a  style="font-size: 15px; font-weight: bold;" onclick="Login()">Quản Lý</a>' +
+'</div>' +
+ // "<br></br>" +
 
   "<div class='welcom'>" +
   "<div class='text text0'>W</div>" +
@@ -2851,7 +2851,7 @@ app.component('products', {
   "<p id='state'></p>" +
   
   "<div class='products'>" +
-  "<div v-for='product in productsData' track-by='$index' id='{{ product.id }}' price='{{product.price}}' class='product {{ product.product | lowercase }}'>" + 
+  "<div v-for='product in productsData' track-by='$index' class='product {{ product.product | lowercase }}'>" + 
 
   "<div class='image' @click='viewproduct(product)' v-bind:style='{ backgroundImage: \"url(\" + product.image + \")\" }' style='background-size: cover; background-position: center;'><image src='{{ product.image }}' ><strong style='font-size: 12px; font-style: italic; color:#80bfff; height: 1.5rem;' class='product-click'> {{ product.click}}</strong></div>" +
 
