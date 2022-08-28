@@ -12,11 +12,7 @@
 
 
 <style>
-body{
-margin: 0;
-        background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
-        font-family: 'Titillium Web', sans-serif;
-}
+
 
 
 /* Layout helpers
@@ -1332,8 +1328,19 @@ a.ui-button:active,
     *:after {
         box-sizing: border-box;
     }
+html, 
+body {
+    height: 100%;
+}
+    html {
+        overflow-y: scroll;
+    }
 
-
+    body {
+        background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
+        font-family: 'Titillium Web', sans-serif;
+		margin: 0;
+    }
 
     a {
         text-decoration: none;
@@ -1347,11 +1354,11 @@ a.ui-button:active,
 
     .form {
         background:white;
-        padding: 15px;
+        padding: 40px;
         max-width: 650px;
         margin: 40px auto;
         border-radius: 4px;
-       
+        box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
     }
 
     .tab-group {
@@ -1369,7 +1376,7 @@ a.ui-button:active,
     .tab-group li a {
         display: block;
         text-decoration: none;
-        padding: 8px;
+        padding: 1px;
         background: rgba(160, 179, 176, 0.25);
         color: #a0b3b0;
         font-size: 20px;
@@ -1519,8 +1526,8 @@ a.ui-button:active,
   font-weight: bold;
   font-size: 16px;
   padding: 5px;
-
-  bottom: 30px;
+  margin-top: 5px;
+  bottom: 0px;
 }
 
 .footer .footer-left,
