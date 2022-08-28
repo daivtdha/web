@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,11 @@
 
 
 <style>
-
+body{
+margin: 0;
+        background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
+        font-family: 'Titillium Web', sans-serif;
+}
 
 
 /* Layout helpers
@@ -1328,18 +1332,8 @@ a.ui-button:active,
     *:after {
         box-sizing: border-box;
     }
-html, 
-body {
-    height: 100%;
-}
-    html {
-        overflow-y: scroll;
-    }
 
-    body {
-        background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
-        font-family: 'Titillium Web', sans-serif;
-    }
+
 
     a {
         text-decoration: none;
@@ -1353,11 +1347,11 @@ body {
 
     .form {
         background:white;
-        padding: 40px;
+        padding: 15px;
         max-width: 650px;
         margin: 40px auto;
         border-radius: 4px;
-        box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+       
     }
 
     .tab-group {
@@ -1515,8 +1509,9 @@ body {
     }
 
 	
+	
 .footer {
-  background-image: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+  background-image: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
   width: 100%;
   high:auto;
   text-align: left;
@@ -1524,8 +1519,8 @@ body {
   font-weight: bold;
   font-size: 16px;
   padding: 5px;
-  margin-top: 5px;
-  bottom: 0px;
+
+  bottom: 30px;
 }
 
 .footer .footer-left,
@@ -1800,7 +1795,7 @@ body {
 </head>
 
 <body>
-
+	
 <p align="center" style="font-size:1.7em; color: #000099; font-weight: bold">ĐĂNG NHẬP QUẢN LÝ</p>
 <p id='dialog-user' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập UserNmae.</p>
 <p id='dialog-pass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Password.</p>
