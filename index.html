@@ -2874,10 +2874,10 @@ app.component('products', {
   "<div class='name'>{{ modalData.product }} </span> </div>" +
   
   "<div class='imageWrapper'><div class='imageWrapper' v-bind:style='{ backgroundImage: \"url(\" + modalData.image + \")\" }' style='background-size: cover; background-position: center;' ></div></div>" +
-  "<br></br>" +
+  "</br>" +
   "<button type='button' id='addToCart' @click='modalAddToCart(modalData)'>Thực thi</button> &nbsp;" +
   "<button  @click='hideModal()'> Đóng </button>" +
-   
+  "<br></br>" + 
   //"<div <p style='font-size: 18px;' class='price'> Giá:  {{ modalData.price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});}}  </p> <span style='font-size: 18px; width: 2.7rem; height: 1.5rem; color: red'>Kho: {{ modalData.qty }}</span> &nbsp; <strong style='font-size: 16px; color: white; width: 2.7rem; height: 1.5rem; background: red;'>- {{ modalData.sale}} %</strong> &nbsp; <strong> BH: {{ modalData.warranty }} .</strong>&nbsp; <strong> SX: {{ modalData.madein }} .</strong></div>" +
   "<div class='description'>{{ modalData.description }}</div>" +
   "<div class='details'>{{ modalData.details }}</div>" +
@@ -3004,7 +3004,17 @@ hideModal: function() {
 
 
 
+Login = function() {      
+    var khánh;
+    khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	khánh2 = ".html"
 
+	khánh = khánh1 + "/dangnhap" + khánh2;
+    //options = 'toolbar=no,menubar=no,location=no,directories=no,status=yes,resizable=1,width=800,height=auto';
+    //window.open(url,'sharer',options);
+	window.open(khánh,target="_blank");
+
+}
 
 
 </script>
