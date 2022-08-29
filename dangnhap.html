@@ -2124,12 +2124,14 @@ if (url == "file:") {
 });
 
 window.history.replaceState('','','/');
-var script_url = "kMuAXuBYaXzfc+hPuYLP2cF9ZOkTv5TOoUq6yknnYYUkaYdixbsOBgJ8N/V8GrzYuehXgeSR42b5EIF1rVgUnw==";
+//var script_url = "kMuAXuBYaXzfc+hPuYLP2cF9ZOkTv5TOoUq6yknnYYUkaYdixbsOBgJ8N/V8GrzYuehXgeSR42b5EIF1rVgUnw==";
+var script_url = "https://script.google.com/macros/s/AKfycbwRcT6AaIPJIxN65LUI6JK0eH7twhImkOIsz_Uzc68lB_cXIL-Fi_72QIfAfYBFwPSv/exec";
 
   function Login_value() {
 	var user=$("#username").val();
 	var pass= $("#password").val();
-    var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
+    //var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
+	var url = script_url+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
 
 	if (document.getElementById('username').value === "") {
 	// alert("OK");
@@ -2260,7 +2262,8 @@ function Changepassword_value() {
 	
 	var newpassleng = newpass.length;
 	
-    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
+    //var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
+	var url = script_url+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
 
 	if (document.getElementById('oldusername').value === "") {
 
