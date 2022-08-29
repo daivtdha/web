@@ -1388,12 +1388,12 @@ body {
     }
 
     .tab-group li a:hover {
-        background:#707b7c;
+        background: #179b77;
         color: #ffffff;
     }
 
     .tab-group .active a {
-        background: #707b7c ;
+        background: #1ab188;
         color: #ffffff;
     }
 
@@ -1494,7 +1494,7 @@ body {
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: .1em;
-        background: #707b7c;
+        background: #1ab188;
         color: #ffffff;
         transition: all 0.5s ease;
         -webkit-appearance: none;
@@ -1502,7 +1502,7 @@ body {
 
     .button:hover,
     .button:focus {
-        background: #34495e;
+        background: #179b77;
     }
 
     .button-block {
@@ -1990,8 +1990,7 @@ body {
 			});
 </script>
 		
-<script type="text/javascript">
-//<![CDATA[
+<script type="text/javascript">//<![CDATA[
 
 !function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
 
@@ -2124,14 +2123,12 @@ if (url == "file:") {
 });
 
 window.history.replaceState('','','/');
-//var script_url = "kMuAXuBYaXzfc+hPuYLP2cF9ZOkTv5TOoUq6yknnYYUkaYdixbsOBgJ8N/V8GrzYuehXgeSR42b5EIF1rVgUnw==";
-var script_url = "https://script.google.com/macros/s/AKfycbwRcT6AaIPJIxN65LUI6JK0eH7twhImkOIsz_Uzc68lB_cXIL-Fi_72QIfAfYBFwPSv/exec";
+var script_url = "kMuAXuBYaXzfc+hPuYLP2cF9ZOkTv5TOoUq6yknnYYUkaYdixbsOBgJ8N/V8GrzYuehXgeSR42b5EIF1rVgUnw==";
 
   function Login_value() {
 	var user=$("#username").val();
 	var pass= $("#password").val();
-    //var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
-	var url = script_url+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
+    var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
 
 	if (document.getElementById('username').value === "") {
 	// alert("OK");
@@ -2262,8 +2259,7 @@ function Changepassword_value() {
 	
 	var newpassleng = newpass.length;
 	
-    //var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
-	var url = script_url+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
+    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
 
 	if (document.getElementById('oldusername').value === "") {
 
