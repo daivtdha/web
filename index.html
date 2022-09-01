@@ -2856,39 +2856,13 @@ app.component('products', {
   "<div class='products'>" +
   "<div v-for='product in productsData' track-by='$index' class='product {{ product.product | lowercase }}'>" + 
 
-  "<div class='image' @click='viewproduct(product)' v-bind:style='{ backgroundImage: \"url(\" + product.image + \")\" }' style='background-size: cover; background-position: center;'><image src='{{ product.image }}' ></div>" +
+  "<div class='image' @click='TruyenDan(product)' v-bind:style='{ backgroundImage: \"url(\" + product.image + \")\" }' style='background-size: cover; background-position: center;'><image src='{{ product.image }}' ></div>" +
 
-  "<div class='name' @click='viewproduct(product)'>{{ product.product }}</div> " + 
-
+  "<div class='name' @click='TruyenDan(product)'>{{ product.product }}</div> " + 
+//@click='Toshare(modalData)'
+  //onclick="home()"
   
-  
-  "</div>" +
-
-  
-  "<div class='modalWrapper' v-show='showModal'>" +
-  "<div class='overlay' @click='hideModal()'></div>" + 
-  
-  "<div class='modal'>" +   
-  "<div class='close'  @click='hideModal()' <span style='font-size: 1.2rem; text-align: right; float: right;  font-weight: bold; color: red; filter: hue-rotate(277deg) brightness(0.96);cursor:pointer;' @click='showCart = !showCart'>❎</span></div>" + 
-  
-  "<div class='name'>{{ modalData.product }} </span> </div>" +
-  
-  "<div class='imageWrapper'><div class='imageWrapper' v-bind:style='{ backgroundImage: \"url(\" + modalData.image + \")\" }' style='background-size: cover; background-position: center;' ></div></div>" +
-  "</br>" +
-  "<button type='button' id='addToCart' @click='modalAddToCart(modalData)'>Thực thi</button> &nbsp;" +
-  "<button  @click='hideModal()'> Đóng </button>" +
-  "<br></br>" + 
-  //"<div <p style='font-size: 18px;' class='price'> Giá:  {{ modalData.price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});}}  </p> <span style='font-size: 18px; width: 2.7rem; height: 1.5rem; color: red'>Kho: {{ modalData.qty }}</span> &nbsp; <strong style='font-size: 16px; color: white; width: 2.7rem; height: 1.5rem; background: red;'>- {{ modalData.sale}} %</strong> &nbsp; <strong> BH: {{ modalData.warranty }} .</strong>&nbsp; <strong> SX: {{ modalData.madein }} .</strong></div>" +
-  "<div class='description'>{{ modalData.description }}</div>" +
-  "<div class='details'>{{ modalData.details }}</div>" +
-  "<label for='modalAmount'></label>" +
-
-  //"<input id='modalAmount' value='{{ modalAmount }}' v-model='modalAmount' class='amount' @keyup.enter='modalAddToCart(modalData), hideModal()'/>" +
-  //"<button type='button' id='addToCart' @click='modalAddToCart(modalData),  hideModal()'>Chọn mua</button> &nbsp;" +
-  
-  //"<input style='width: 2.7rem; height: 1.8rem;' id='modalAmount' value='{{ modalAmount }}' v-model='modalAmount' class='amount' @keyup.enter='modalAddToCart(modalData)'/>" +
-
-  "</div></div>",
+  "</div>",
 
   props: ['productsData'],
 
@@ -2961,7 +2935,13 @@ app.component('products', {
     },
 
 
+TruyenDan: function(product) {      
+    var truyềndan;
+    truyềndan = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '') +'/' + product.product + '.html');
+	//truyềndan = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '') +'/ok/' + product.product + '.html');
+	window.open(truyềndan,target="_blank");
 
+},
 
 Toshare: function(product) {      
 var str1;
@@ -3003,6 +2983,8 @@ hideModal: function() {
 });
 
 
+
+
 Login = function() {      
     var khánh;
     khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
@@ -3015,7 +2997,6 @@ Login = function() {
 //alert(khánh);
 }
 
-
 // FACEBOOK
  shareface = function(){
     url = 'https://www.facebook.com/sharer/sharer.php?u=' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
@@ -3025,14 +3006,14 @@ Login = function() {
 } 
 </script>
 
-
 <script src='https://dl.dropbox.com/s/kcxlupr4mru2s8x/Daidha.js'></script>
+
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 
 
 <script>
-
+//<script src='https://dl.dropbox.com/s/zsa4c36cfoqlrim/Daidha_Sua.js'>
 		//var url;
     //url1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
 	// alert(url);
