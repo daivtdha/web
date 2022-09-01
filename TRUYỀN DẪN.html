@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+
+  <title>Đài VT Đông Hà</title>
+  
+  
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body{
+	background: linear-gradient(to bottom right,#16a085,#a2d9ce,#e6f5ff,#fcf3cf,#a2d9ce, #16a085);
+	color: #565e6b;
+}
+
+.wrapper{
+	width: 90%;
+	height: 50em;
+	background: #fff;
+	margin: 15px auto 0;
+}
+
+.wrapper .title{
+	padding: 20px 10px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	border-bottom: 1px solid #ebedec;
+}
+
+.wrapper .tabs_wrap{
+	padding: 20px;
+	border-bottom: 1px solid #ebedec;
+}
+
+.wrapper .tabs_wrap ul{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.wrapper .tabs_wrap ul li{
+	width: 150px;
+    text-align: center;
+    background: #e9ecf1;
+    border-right: 1px solid #c1c4c9;
+    padding: 13px 15px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.wrapper .tabs_wrap ul li:first-child{
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.wrapper .tabs_wrap ul li:last-child{
+	border-right: 0px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.wrapper .tabs_wrap ul li:hover,
+.wrapper .tabs_wrap ul li.active{
+	background: #45b39d;
+	color: #fff;
+}
+
+.wrapper .container .item_wrap{
+	padding: 10px 20px;
+	border-bottom: 1px solid  #45b39d;
+	cursor: pointer;
+}
+
+.wrapper .container .item_wrap:hover{
+	background: #e9ecf1;
+}
+
+.wrapper .container .item{
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.item_wrap .item .item_left{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.item_wrap .item_left img{
+	width: 70px;
+	height: 70px;
+	display: block;
+}
+
+.item_wrap .item_left .data{
+	margin-left: 20px;
+}
+
+.item_wrap .item_left .data .name{
+	font-weight: 600;
+}
+
+.item_wrap .item_left .data .distance{
+	color: #7f8b9b;
+	font-size: 14px;
+	margin-top: 3px;
+}
+
+.item_wrap .item_right .status{
+	position: relative;
+	color: #77818d;
+}
+
+.item_wrap .item_right .status:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+    left: -12px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #b3bbc8;
+}
+
+.item_wrap.offline .item_right .status{
+	color: #b3bbc8;	
+}
+
+.item_wrap.online .item_right .status:before{
+	background: #7fc469;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="wrapper">
+  <div class="title">
+    TRUYỀN DẪN
+  </div>
+
+  <div class="tabs_wrap">
+    <ul>
+      <li data-tabs="trucca" class="active">TRỰC CA</li>
+      <li data-tabs="kenhluong" class="">KÊNH LUỒNG</li>
+      <li data-tabs="vattu" class="">VẬT TƯ</li>
+    </ul>
+  </div>
+  
+  
+  <div class="container">
+    <ul>
+
+<!–TRỰC CA–>	
+	<li class="item_wrap trucca online" style="display: block;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/PhanCa.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">PHÂN TRỰC CA ĐÔNG HÀ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item_wrap trucca online" style="display: block;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/PhanCa.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">PHÂN TRỰC CA ĐỒNG HỚI</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item_wrap trucca online" style="display: block;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/PhanCa.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">PHÂN TRỰC CA HUẾ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
+
+<!–KÊNH LUỒNG–>
+      <li class="item_wrap kenhluong online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/KenhLuong.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">KÊNH LUỒNG ĐÔNG HÀ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item_wrap kenhluong online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/KenhLuong.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">KÊNH LUỒNG ĐỒNG HỚI</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item_wrap kenhluong online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/KenhLuong.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">KÊNH LUỒNG HUẾ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>	  
+	  
+<!–VẬT TƯ–>
+      <li class="item_wrap vattu online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/VatTu.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">VẬT TƯ ĐÔNG HÀ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>	  
+
+      <li class="item_wrap vattu online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/VatTu.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">VẬT TƯ ĐỒNG HỚI</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item_wrap vattu online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/VatTu.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">VẬT TƯ HUẾ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>		  
+	  
+	  </ul>
+  </div>
+</div>
+
+
+<script id="rendered-js">
+var tabs = document.querySelectorAll(".tabs_wrap ul li");
+var truccas = document.querySelectorAll(".trucca");
+var kenhluongs = document.querySelectorAll(".kenhluong");
+var vattus = document.querySelectorAll(".vattu");
+var all = document.querySelectorAll(".item_wrap");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(tab => {
+      tab.classList.remove("active");
+    });
+    tab.classList.add("active");
+    var tabval = tab.getAttribute("data-tabs");
+
+    all.forEach(item => {
+      item.style.display = "none";
+    });
+
+    if (tabval == "trucca") {
+      truccas.forEach(trucca => {
+        trucca.style.display = "block";
+      });
+    } else
+    if (tabval == "kenhluong") {
+      kenhluongs.forEach(kenhluong => {
+        kenhluong.style.display = "block";
+      });
+    } else
+    if (tabval == "vattu") {
+      vattus.forEach(vattu => {
+        vattu.style.display = "block";
+      });	  
+
+    }
+
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
