@@ -1,163 +1,220 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<Truyền Dẫn lang="en"><head>
+<meta http-equiv="content-type" content="text/Truyền Dẫn; charset=UTF-8">
 
   <meta charset="UTF-8">
   
 
   <title>ĐÀI VT ĐÔNG HÀ</title>
   
-  
-  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="TruyenDanPicture/css.css">
   
 <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
-
-*{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-family: 'Montserrat', sans-serif;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-body{
-	background: white;
-	color: #565e6b;
-}
-
-.wrapper{
-	width: 100%;
-	height: 100%;
-	background: #fff;
-	margin: 15px auto 0;
-}
-
-.wrapper .title{
-	padding: 20px 10px;
-	text-align: center;
-	font-size: 24px;
-	font-weight: 700;
-	border-bottom: 1px solid #ebedec;
+Truyền Dẫn, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-.wrapper .tabs_wrap{
-	padding: 20px;
-	border-bottom: 1px solid #ebedec;
+Truyền Dẫn {
+  line-height: 1;
 }
 
-.wrapper .tabs_wrap ul{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+ol, ul {
+  list-style: none;
 }
 
-.wrapper .tabs_wrap ul li{
-	width: 150px;
-    text-align: center;
-    background: #e9ecf1;
-    border-right: 1px solid #c1c4c9;
-    padding: 13px 15px;
-	cursor: pointer;
-	-webkit-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.wrapper .tabs_wrap ul li:first-child{
-	border-top-left-radius: 25px;
-	border-bottom-left-radius: 25px;
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
-.wrapper .tabs_wrap ul li:last-child{
-	border-right: 0px;
-	border-top-right-radius: 25px;
-	border-bottom-right-radius: 25px;
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
 }
 
-.wrapper .tabs_wrap ul li:hover,
-.wrapper .tabs_wrap ul li.active{
-	background: #45b39d;
-	color: #fff;
+a img {
+  border: none;
 }
 
-.wrapper .container .item_wrap{
-	padding: 10px 20px;
-	border-bottom: 1px solid  #45b39d;
-	cursor: pointer;
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
 }
 
-.wrapper .container .item_wrap:hover{
-	background: #e9ecf1;
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.wrapper .container .item{
-	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+body {
+  background-color: #efefef;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
-.item_wrap .item .item_left{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+a {
+  transition: all .2s linear;
 }
 
-.item_wrap .item_left img{
-	width: 70px;
-	height: 70px;
-	display: block;
+.projects-tags {
+  padding: 20px 10px;
+  text-align: center;
+}
+.projects-tags button {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 3px;
+  padding: 5px 20px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  border: 2px #333 solid;
+}
+.projects-tags button.active {
+  background-color: #fff;
+  color: #333;
 }
 
-.item_wrap .item_left .data{
-	margin-left: 20px;
+.container {
+  max-width: 1100px;  
+  margin: 0 auto;
 }
 
-.item_wrap .item_left .data .name{
-	font-weight: 600;
+.project {
+  width: 31.333%;
+  float: left;
+  margin: 1%;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.3);
+  font-size: 0;
+}
+.project img {
+  max-width: 100%;
+  transition: all .4s ease;
+}
+.project:hover .project-info {
+  bottom: 0;
+}
+.project:hover .project-info p {
+  opacity: 1;
+}
+.project:hover img {
+  transform: scale(1.2);
 }
 
-.item_wrap .item_left .data .distance{
-	color: #7f8b9b;
-	font-size: 14px;
-	margin-top: 3px;
+
+
+.project-info h3 {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  line-height: 65px;
+  margin: 25px 1;
+  text-align: center;
+}
+.project-info p {
+  transition: all 1s ease;
+  opacity: 0;
+}
+.project-info .tags {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.project-info .projects-tags button, .projects-tags .project-info button, .project-info .tag, .project-info .project-btn {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.project-info .tag {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 10px;
+  line-height: 10px;
+  margin: 0 3px;
+  padding: 2px 5px;
+  font-weight: 400;
+}
+.project-info .project-btn {
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.project-info .project-btn:hover {
+  background: #5dade2;
+  color: #333;
+}
+.project-info .fa {
+  margin: 0 5px;
+}
+.project-info .project-btns {
+  text-align: center;
+  margin-bottom: 5px;
+  //margin-top: 5px;
+}
+.project-info .project-btns li {
+  display: inline-block;
+  margin-right: 5px;
 }
 
-.item_wrap .item_right .status{
-	position: relative;
-	color: #77818d;
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  .project {
+    width: 48%;
+  }
 }
-
-.item_wrap .item_right .status:before{
-	content: "";
-	position: absolute;
-	top: 5px;
-    left: -12px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: #b3bbc8;
+@media only screen and (max-width: 767px) {
+  .project {
+    width: 76%;
+    margin: 2% auto;
+    float: none;
+  }
 }
+@media only screen and (max-width: 479px) {
+  .project {
+    width: 96%;
+  }
 
-.item_wrap.offline .item_right .status{
-	color: #b3bbc8;	
-}
-
-.item_wrap.online .item_right .status:before{
-	background: #7fc469;
+  .project-info {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 </style>
 
@@ -177,209 +234,255 @@ body{
 </head>
 
 <body translate="no">
-  <div class="wrapper">
-  <div class="title">TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</div>
 
-  <div class="tabs_wrap">
-    <ul>
-      <li data-tabs="trucca" class="active">TRỰC CA</li>
-      <li data-tabs="kenhluong" class="">KÊNH LUỒNG</li>
-      <li data-tabs="vattu" class="">VẬT TƯ</li>
-    </ul>
-  </div>
-  
-  
   <div class="container">
-    <ul>
+  <ul class="projects-tags">
+  <button id="all" class="active">All</button>
+  </ul>
+  
+  <ul class="projects-list">
+    <li class="project" data-tags="LỊCH PHÂN CA" style="">
+      <img src="TruyenDanPicture/TrucCaDHA.jpg" alt="">
+      <div class="project-info">
+        <h3>LỊCH PHÂN CA ĐÔNG HÀ</h3>
+        
+        <ul class="project-btns">
+          <li><a href="https://daidha.site/" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>OPEN</a></li>
+        </ul>
+      </div>
 
-<!–TRỰC CA–>	
-	<li class="item_wrap trucca online" style="display: block;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/PhanCa.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">TRỰC CA ĐÔNG HÀ</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>
+    </li>
 
-      <li class="item_wrap trucca online" style="display: block;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/PhanCa.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">TRỰC CA ĐỒNG HỚI</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>
+    <li class="project" data-tags="LỊCH PHÂN CA" style="">
+      <img src="TruyenDanPicture/TrucCaDHI.png" alt="">
+      <div class="project-info">
 
-      <li class="item_wrap trucca online" style="display: block;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/PhanCa.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">TRỰC CA HUẾ</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>
+        <!-- /.tags -->
+        <h3>LỊCH PHÂN CA ĐỒNG HỚI</h3>
+        <ul class="project-btns">
+          <li><a href="https://daidha.site/" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>OPEN</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
 
-<!–KÊNH LUỒNG–>
-      <li class="item_wrap kenhluong online" style="display: none;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/KenhLuong.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">KÊNH LUỒNG ĐÔNG HÀ</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>
+    </li>
+    <!-- /.project -->
+	
+    <li class="project" data-tags="LỊCH PHÂN CA" style="">
+      <img src="TruyenDanPicture/TrucCaHUE.jpg" alt="">
+      <div class="project-info">
+        <!-- /.tags -->
+        <h3>LỊCH PHÂN CA HUẾ</h3>
+        
+        <ul class="project-btns">
+          <li><a href="https://daidha.site/" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>OPEN</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
+      <img src="TruyenDanPicture/VatTuDPDHA.png" alt="">
+      <div class="project-info">
 
-      <li class="item_wrap kenhluong online" style="display: none;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/KenhLuong.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">KÊNH LUỒNG ĐỒNG HỚI</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>
+        <!-- /.tags -->
+        <h3>VẬT TƯ DP TD-CMIP ĐÔNG HÀ</h3>
+        
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/travel-onepage" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/travel-onepage" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
+      <img src="TruyenDanPicture/VatTuDPDHI.png" alt="">
+      <div class="project-info">
+        
+        <!-- /.tags -->
+        <h3>VẬT TƯ DP TD-CMIP ĐỒNG HỚI</h3>
+        <p></p>
+        <ul class="project-btns">
+          <li><a href="https://daidha.site/" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>          
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    
+    <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
+      <img src="TruyenDanPicture/VatTuDPHUE.jpg" alt="">
+      <div class="project-info">
+        <!-- /.tags -->
+        <h3>VẬT TƯ DP TD-CMIP HUẾ</h3>
+        <p></p>
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/mini-projects/pizza-card-ui" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/mini-projects/tree/master/pizza-card-ui" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    
 
-      <li class="item_wrap kenhluong online" style="display: none;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/KenhLuong.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">KÊNH LUỒNG HUẾ</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>	  
-	  
-<!–VẬT TƯ–>
-      <li class="item_wrap vattu online" style="display: none;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/VatTu.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">VẬT TƯ ĐÔNG HÀ</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>	  
+    <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
+      <img src="TruyenDanPicture/VatTuDP_MANE.jpg" alt="">
+      <div class="project-info">
 
-      <li class="item_wrap vattu online" style="display: none;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/VatTu.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">VẬT TƯ ĐỒNG HỚI</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>
-
-      <li class="item_wrap vattu online" style="display: none;">
-        <div class="item">
-          <div class="item_left">
-            <div class="img">
-              <img src="TruyenDanPicture/VatTu.png" alt="">
-            </div>
-            <div class="data">
-              <p class="name">VẬT TƯ HUẾ</p>
-            </div>
-          </div>
-          <div class="item_right">
-            <div class="status">Online</div>
-          </div>
-        </div>
-      </li>		  
-	  
-	  </ul>
-  </div>
+        <!-- /.tags -->
+        <h3>VẬT TƯ DP MANE ĐÔNG HÀ</h3>
+        
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/travel-onepage" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/travel-onepage" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
+      <img src="TruyenDanPicture/VatTuDP_MANE.jpg" alt="">
+      <div class="project-info">
+        
+        <!-- /.tags -->
+        <h3>VẬT TƯ DP MANE ĐỒNG HỚI</h3>
+        <p></p>
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/mini-projects/blog-post-ui" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/mini-projects/tree/master/blog-post-ui" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    
+    <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
+      <img src="TruyenDanPicture/VatTuDP_MANE.jpg" alt="">
+      <div class="project-info">
+        <!-- /.tags -->
+        <h3>VẬT TƯ DP MANE HUẾ</h3>
+        <p></p>
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/mini-projects/pizza-card-ui" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/mini-projects/tree/master/pizza-card-ui" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    
+    <li class="project" data-tags="TÀI LIỆU" style="">
+      <img src="TruyenDanPicture/CongVan.jpg" alt="">
+	  <div class="project-info">
+        <!-- /.tags -->
+        <h3>CÔNG VĂN KỶ THUẬT</h3>
+        
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/quotes-rotator-with-background-slider" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/quotes-rotator-with-background-slider" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+   
+    <li class="project" data-tags="TÀI LIỆU" style="">
+      <img src="TruyenDanPicture/TaiLieu.png" alt="">
+      <div class="project-info">
+        
+        <!-- /.tags -->
+        <h3>TÀI LIỆU TD - IP</h3>
+        <p></p>
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/mini-projects/pricing-table/" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/mini-projects/tree/master/pricing-table" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    
+    <li class="project" data-tags="TÀI LIỆU" style="">
+      <img src="TruyenDanPicture/TracNghiem.jpg" alt="">
+      <div class="project-info">
+        
+        <!-- /.tags -->
+        <h3>TRẮC NGHIỆM</h3>
+        <p></p>
+        <ul class="project-btns">
+          <li><a href="https://cdpn.io/alvarotrigo/mini-projects/pricing-table/" target="_blank" class="project-btn"><i class="fa fa-external-link"></i>Show</a></li>
+          <li><a href="https://github.com/krzysztof-m/mini-projects/tree/master/pricing-table" target="_blank" class="project-btn"><i class="fa fa-github"></i>Code</a></li>
+        </ul>
+        <!-- /.project-btns -->
+      </div>
+      <!-- /.project-info -->
+    </li>
+    <!-- /.project -->
+    
+   
+  </ul>
+  <!-- /.projects-list -->
 </div>
+<!-- /.container -->
+   
 
 
+<script src="TruyenDanPicture/jquery.min.js"></script>
 <script id="rendered-js">
-var tabs = document.querySelectorAll(".tabs_wrap ul li");
-var truccas = document.querySelectorAll(".trucca");
-var kenhluongs = document.querySelectorAll(".kenhluong");
-var vattus = document.querySelectorAll(".vattu");
-var all = document.querySelectorAll(".item_wrap");
+//<script src="TruyenDanPicture/jquery-2.2.4.min.js">
+$(document).ready(function () {
+  var $projectsList = $('.projects-list');
+  var $projects = $projectsList.find('.project');
+  var $projectsTags = $('.projects-tags');
+  var tagsObj = {};
+  var fadeSpeed = 300;
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(tab => {
-      tab.classList.remove("active");
+  $projects.each(function () {
+    var project = this;
+    var $project = $(this);
+    var $tagsList = $project.find('.tags');
+    var tags = $project.data('tags').split(',');
+    tags.forEach(function (tag) {
+      var li = '<li class="tag">';
+      li += tag;
+      li += '</li>';
+      $tagsList.append($(li)); //same li or $(li)?
+
+      if (!tagsObj.hasOwnProperty(tag))
+      tagsObj[tag] = [];
+      tagsObj[tag].push(project);
     });
-    tab.classList.add("active");
-    var tabval = tab.getAttribute("data-tabs");
+  });
 
-    all.forEach(item => {
-      item.style.display = "none";
+  //console.log(tagsObj);
+  $.each(tagsObj, function (tag) {
+    var $button = $('<button>' + tag + '</button>');
+    $button.on('click', function () {
+      if ($projects.is(':animated'))
+      return false;
+      $(this).addClass('active').siblings().removeClass('active');
+      $projects.filter(':visible').fadeOut(fadeSpeed, function () {
+        $projects.filter(tagsObj[tag]).fadeIn(fadeSpeed);
+      });
+    }).appendTo($projectsTags);
+  });
+
+  $('#all').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    $projects.filter(':visible').fadeOut(fadeSpeed, function () {
+      $projects.fadeIn(fadeSpeed);
     });
-
-    if (tabval == "trucca") {
-      truccas.forEach(trucca => {
-        trucca.style.display = "block";
-      });
-    } else
-    if (tabval == "kenhluong") {
-      kenhluongs.forEach(kenhluong => {
-        kenhluong.style.display = "block";
-      });
-    } else
-    if (tabval == "vattu") {
-      vattus.forEach(vattu => {
-        vattu.style.display = "block";
-      });	  
-
-    }
-
   });
 });
 //# sourceURL=pen.js
@@ -391,4 +494,4 @@ tabs.forEach(tab => {
 
 
  
-</body></html>
+</body></Truyền Dẫn>
