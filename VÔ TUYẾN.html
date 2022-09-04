@@ -290,28 +290,8 @@ body {
     <script src="VoTuyen/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
 
   
-      <script id="rendered-js">
-let ul = document.querySelector('.tab-list__list');
-let links = document.querySelectorAll('.tab-list__link');
-let tabs = document.querySelectorAll('.tab__box');
-
-ul.addEventListener('click', e => {
-  //only apply js if tab isn't already the active one
-  if (e.target.classList.contains('tab-list__link') && !e.target.classList.contains('tab-list__link--is-active')) {
-    e.preventDefault();
-    //loop through all links and divs and remove the active/visible classes
-    links.forEach((el, idx) => {
-      el.classList.remove('tab-list__link--is-active');
-      tabs[idx].classList.remove('tab__box--is-visible');
-      //add the active class to the clicked link
-      e.target.classList.add('tab-list__link--is-active');
-      //if the active link's href attribute matches the div's id attribute (slicing out the #) apply the visible class to that div
-      if (e.target.getAttribute('href').slice(1) === tabs[idx].getAttribute('id')) {
-        tabs[idx].classList.add('tab__box--is-visible');
-      }
-    });
-  }
-});
+<script id="rendered-js">
+const _0x249abb=_0x49f8;function _0x2dbc(){const _0x5d9255=['remove','target','649619RnlAlF','classList','2222664QtAacH','getAttribute','264TSKbdx','.tab-list__link','2869764aOvIJz','388GzpxAL','.tab-list__list','add','627910JljktY','querySelector','3260803gDovTe','99ihCXsR','294669sEqYoQ','tab__box--is-visible','tab-list__link','15545icWjSA','href','addEventListener','querySelectorAll','tab-list__link--is-active','2hdUopc','click','forEach','contains'];_0x2dbc=function(){return _0x5d9255;};return _0x2dbc();}function _0x49f8(_0x243202,_0x1f4030){const _0x2dbc0b=_0x2dbc();return _0x49f8=function(_0x49f87e,_0x36df4f){_0x49f87e=_0x49f87e-0x9f;let _0x29e7b1=_0x2dbc0b[_0x49f87e];return _0x29e7b1;},_0x49f8(_0x243202,_0x1f4030);}(function(_0x387058,_0x4b012c){const _0x1fc690=_0x49f8,_0x53d0f6=_0x387058();while(!![]){try{const _0x5311b6=parseInt(_0x1fc690(0xb7))/0x1*(parseInt(_0x1fc690(0xb1))/0x2)+parseInt(_0x1fc690(0xa1))/0x3+-parseInt(_0x1fc690(0xa2))/0x4*(-parseInt(_0x1fc690(0xac))/0x5)+-parseInt(_0x1fc690(0xb9))/0x6+-parseInt(_0x1fc690(0xa7))/0x7+-parseInt(_0x1fc690(0x9f))/0x8*(parseInt(_0x1fc690(0xa9))/0x9)+parseInt(_0x1fc690(0xa5))/0xa*(parseInt(_0x1fc690(0xa8))/0xb);if(_0x5311b6===_0x4b012c)break;else _0x53d0f6['push'](_0x53d0f6['shift']());}catch(_0x20704c){_0x53d0f6['push'](_0x53d0f6['shift']());}}}(_0x2dbc,0x87c8d));let ul=document[_0x249abb(0xa6)](_0x249abb(0xa3)),links=document[_0x249abb(0xaf)](_0x249abb(0xa0)),tabs=document[_0x249abb(0xaf)]('.tab__box');ul[_0x249abb(0xae)](_0x249abb(0xb2),_0x4e457d=>{const _0x2dfda5=_0x249abb;_0x4e457d[_0x2dfda5(0xb6)]['classList'][_0x2dfda5(0xb4)](_0x2dfda5(0xab))&&!_0x4e457d[_0x2dfda5(0xb6)][_0x2dfda5(0xb8)][_0x2dfda5(0xb4)]('tab-list__link--is-active')&&(_0x4e457d['preventDefault'](),links[_0x2dfda5(0xb3)]((_0x3cd4e9,_0x114562)=>{const _0x12d25d=_0x2dfda5;_0x3cd4e9['classList'][_0x12d25d(0xb5)](_0x12d25d(0xb0)),tabs[_0x114562]['classList'][_0x12d25d(0xb5)]('tab__box--is-visible'),_0x4e457d['target']['classList']['add'](_0x12d25d(0xb0)),_0x4e457d[_0x12d25d(0xb6)]['getAttribute'](_0x12d25d(0xad))['slice'](0x1)===tabs[_0x114562][_0x12d25d(0xba)]('id')&&tabs[_0x114562]['classList'][_0x12d25d(0xa4)](_0x12d25d(0xaa));}));});
 //# sourceURL=pen.js
     </script>
 
