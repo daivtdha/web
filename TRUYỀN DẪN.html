@@ -193,6 +193,16 @@ a {
   .project {
     width: 48%;
   }
+
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 48%; /* Full width */
+}
+
 }
 @media only screen and (max-width: 767px) {
   .project {
@@ -200,6 +210,16 @@ a {
     margin: 2% auto;
     float: none;
   }
+
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 76%; /* Full width */
+}  
+  
 }
 @media only screen and (max-width: 479px) {
   .project {
@@ -210,6 +230,15 @@ a {
     font-size: 12px;
     line-height: 15px;
   }
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 96%; /* Full width */
+}
+
 }
 
 
@@ -365,10 +394,10 @@ span.psw {
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" id="username" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" id="password" placeholder="Enter Password" name="psw" required>
         
       <button type="submit">Login</button>
       <label>
@@ -588,11 +617,54 @@ span.psw {
    
 
 
-
-
 <script src="TruyenDanPicture/jquery.min.js"></script>
 <script id="rendered-js">
-function _0x23b4(_0x14d5bc,_0x346482){var _0x3166f6=_0x3166();return _0x23b4=function(_0x23b471,_0x1d94e9){_0x23b471=_0x23b471-0x1af;var _0x34b7fc=_0x3166f6[_0x23b471];return _0x34b7fc;},_0x23b4(_0x14d5bc,_0x346482);}var _0x3545fb=_0x23b4;function _0x3166(){var _0x321f69=['siblings','418794JRtBMz','find','forEach','removeClass','144KTkOgI','click','each','331620BVBvxk','552rgnnwd','addClass','6140bZbeQA','<button>','filter','ready','split','</button>','appendTo','522790ytrCrS','active','8589VuccFW','data','fadeIn','hasOwnProperty','append','1244152bqAYll','.project','#all','372pkAXnX','<li\x20class=\x22tag\x22>',':animated','70201BQHfba',':visible','fadeOut','.projects-list'];_0x3166=function(){return _0x321f69;};return _0x3166();}(function(_0x4e3420,_0x2d3744){var _0x42af5a=_0x23b4,_0x991ed4=_0x4e3420();while(!![]){try{var _0x2ad123=parseInt(_0x42af5a(0x1c8))/0x1+-parseInt(_0x42af5a(0x1cd))/0x2+-parseInt(_0x42af5a(0x1c5))/0x3*(-parseInt(_0x42af5a(0x1b4))/0x4)+-parseInt(_0x42af5a(0x1bb))/0x5+-parseInt(_0x42af5a(0x1b2))/0x6*(parseInt(_0x42af5a(0x1bd))/0x7)+-parseInt(_0x42af5a(0x1c2))/0x8+parseInt(_0x42af5a(0x1d1))/0x9*(parseInt(_0x42af5a(0x1b1))/0xa);if(_0x2ad123===_0x2d3744)break;else _0x991ed4['push'](_0x991ed4['shift']());}catch(_0x1048b5){_0x991ed4['push'](_0x991ed4['shift']());}}}(_0x3166,0x32f87),$(document)[_0x3545fb(0x1b7)](function(){var _0x1c150f=_0x3545fb,_0x4de3cd=$(_0x1c150f(0x1cb))[_0x1c150f(0x1ce)](_0x1c150f(0x1c3)),_0x171646=$('.projects-tags'),_0x1d0720={},_0xccdd03=0x12c;_0x4de3cd[_0x1c150f(0x1b0)](function(){var _0x24be20=_0x1c150f,_0x3fa806=this,_0x42a7bd=$(this),_0xa64802=_0x42a7bd['find']('.tags');_0x42a7bd[_0x24be20(0x1be)]('tags')[_0x24be20(0x1b8)](',')[_0x24be20(0x1cf)](function(_0x26b611){var _0x38e78b=_0x24be20,_0x24c1a5=_0x38e78b(0x1c6);_0x24c1a5+=_0x26b611,_0x24c1a5+='</li>',_0xa64802[_0x38e78b(0x1c1)]($(_0x24c1a5)),_0x1d0720[_0x38e78b(0x1c0)](_0x26b611)||(_0x1d0720[_0x26b611]=[]),_0x1d0720[_0x26b611]['push'](_0x3fa806);});}),$['each'](_0x1d0720,function(_0x20e67f){var _0x5139ec=_0x1c150f;$(_0x5139ec(0x1b5)+_0x20e67f+_0x5139ec(0x1b9))['on']('click',function(){var _0x484cea=_0x5139ec;return!_0x4de3cd['is'](_0x484cea(0x1c7))&&($(this)['addClass'](_0x484cea(0x1bc))[_0x484cea(0x1cc)]()['removeClass'](_0x484cea(0x1bc)),void _0x4de3cd['filter'](_0x484cea(0x1c9))[_0x484cea(0x1ca)](_0xccdd03,function(){var _0x45cf6e=_0x484cea;_0x4de3cd[_0x45cf6e(0x1b6)](_0x1d0720[_0x20e67f])[_0x45cf6e(0x1bf)](_0xccdd03);}));})[_0x5139ec(0x1ba)](_0x171646);}),$(_0x1c150f(0x1c4))['on'](_0x1c150f(0x1af),function(){var _0x14c821=_0x1c150f;$(this)[_0x14c821(0x1b3)](_0x14c821(0x1bc))[_0x14c821(0x1cc)]()[_0x14c821(0x1d0)](_0x14c821(0x1bc)),_0x4de3cd[_0x14c821(0x1b6)](':visible')[_0x14c821(0x1ca)](_0xccdd03,function(){_0x4de3cd['fadeIn'](_0xccdd03);});});}));
+//<script src="TruyenDanPicture/jquery-2.2.4.min.js">
+$(document).ready(function () {
+  var $projectsList = $('.projects-list');
+  var $projects = $projectsList.find('.project');
+  var $projectsTags = $('.projects-tags');
+  var tagsObj = {};
+  var fadeSpeed = 300;
+
+  $projects.each(function () {
+    var project = this;
+    var $project = $(this);
+    var $tagsList = $project.find('.tags');
+    var tags = $project.data('tags').split(',');
+    tags.forEach(function (tag) {
+      var li = '<li class="tag">';
+      li += tag;
+      li += '</li>';
+      $tagsList.append($(li)); //same li or $(li)?
+
+      if (!tagsObj.hasOwnProperty(tag))
+      tagsObj[tag] = [];
+      tagsObj[tag].push(project);
+    });
+  });
+
+  //console.log(tagsObj);
+  $.each(tagsObj, function (tag) {
+    var $button = $('<button>' + tag + '</button>');
+    $button.on('click', function () {
+      if ($projects.is(':animated'))
+      return false;
+      $(this).addClass('active').siblings().removeClass('active');
+      $projects.filter(':visible').fadeOut(fadeSpeed, function () {
+        $projects.filter(tagsObj[tag]).fadeIn(fadeSpeed);
+      });
+    }).appendTo($projectsTags);
+  });
+
+  $('#all').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    $projects.filter(':visible').fadeOut(fadeSpeed, function () {
+      $projects.fadeIn(fadeSpeed);
+    });
+  });
+});
+//# sourceURL=pen.js
     </script>
 
 
