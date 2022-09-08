@@ -193,21 +193,14 @@ a {
   .project {
     width: 48%;
   }
-.modal-content {
-  width: 48%; /* Could be more or less, depending on screen size */
 }
-}
-
 @media only screen and (max-width: 767px) {
   .project {
     width: 76%;
     margin: 2% auto;
     float: none;
   }
-.modal-content {
-  width: 76%; /* Could be more or less, depending on screen size */
 }
-  }
 @media only screen and (max-width: 479px) {
   .project {
     width: 96%;
@@ -217,9 +210,6 @@ a {
     font-size: 12px;
     line-height: 15px;
   }
-.modal-content {
-  width: 96%; /* Could be more or less, depending on screen size */
-}
 }
 
 
@@ -271,7 +261,7 @@ img.avatar {
   border-radius: 50%;
 }
 
-.container2 {
+.container {
   padding: 16px;
 }
 
@@ -373,7 +363,7 @@ span.psw {
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
-    <div class="container2">
+    <div class="container">
       <label for="uname"><b>Username</b></label>
       <input type="text" id="username" placeholder="Enter Username" name="uname" required>
 
@@ -381,11 +371,14 @@ span.psw {
       <input type="password" id="password" placeholder="Enter Password" name="psw" required>
         
       <button type="submit">Login</button>
-
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
     </div>
 
-    <div class="container2" style="background-color:#f1f1f1">
+    <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
@@ -395,7 +388,7 @@ span.psw {
   <br><h1>TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</h1>
 
   
-  
+  <input type="text" id="username" placeholder="Enter Username" name="uname" required>
   
   
 
