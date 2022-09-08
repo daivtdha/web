@@ -194,7 +194,7 @@ a {
     width: 48%;
   }
 .modal-content {
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: 48%; /* Could be more or less, depending on screen size */
 }
 }
 
@@ -205,7 +205,7 @@ a {
     float: none;
   }
 .modal-content {
-  width: 70%; /* Could be more or less, depending on screen size */
+  width: 76%; /* Could be more or less, depending on screen size */
 }
   }
 @media only screen and (max-width: 479px) {
@@ -218,7 +218,7 @@ a {
     line-height: 15px;
   }
 .modal-content {
-  width: 90%; /* Could be more or less, depending on screen size */
+  width: 96%; /* Could be more or less, depending on screen size */
 }
 }
 
@@ -271,7 +271,7 @@ img.avatar {
   border-radius: 50%;
 }
 
-.container {
+.container2 {
   padding: 16px;
 }
 
@@ -319,6 +319,21 @@ span.psw {
   cursor: pointer;
 }
 
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
@@ -358,7 +373,7 @@ span.psw {
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
-    <div class="container">
+    <div class="container2">
       <label for="uname"><b>Username</b></label>
       <input type="text" id="username" placeholder="Enter Username" name="uname" required>
 
@@ -369,7 +384,7 @@ span.psw {
 
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container2" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
