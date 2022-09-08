@@ -193,14 +193,21 @@ a {
   .project {
     width: 48%;
   }
+.modal-content {
+  width: 48%; /* Could be more or less, depending on screen size */
 }
+}
+
 @media only screen and (max-width: 767px) {
   .project {
     width: 76%;
     margin: 2% auto;
     float: none;
   }
+.modal-content {
+  width: 76%; /* Could be more or less, depending on screen size */
 }
+  }
 @media only screen and (max-width: 479px) {
   .project {
     width: 96%;
@@ -210,7 +217,9 @@ a {
     font-size: 12px;
     line-height: 15px;
   }
-
+.modal-content {
+  width: 96%; /* Could be more or less, depending on screen size */
+}
 }
 
 
@@ -292,7 +301,6 @@ span.psw {
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-  height: 80%;
 }
 
 /* The Close Button (x) */
@@ -373,14 +381,11 @@ span.psw {
       <input type="password" id="password" placeholder="Enter Password" name="psw" required>
         
       <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
