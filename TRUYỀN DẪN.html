@@ -339,6 +339,261 @@ span.psw {
 
 
 
+/* FORM LOGIN */
+    .form {
+        background: #f8f9f9;
+        padding: 40px;
+        max-width: 650px;
+        margin: 40px auto;
+        
+        
+    }
+
+    .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+
+    .tab-group:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .tab-group li a {
+        display: block;
+        text-decoration: none;
+        padding: 1px;
+        background: rgba(160, 179, 176, 0.25);
+        color: #a0b3b0;
+        font-size: 20px;
+        float: left;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+    }
+
+    .tab-group li a:hover {
+        background:#1f618d;
+        color: #ffffff;
+    }
+
+    .tab-group .active a {
+        background: #0e6655;
+        color: #ffffff;
+    }
+
+    .tab-content>main:last-child {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 0 0 40px;
+    }
+
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+    }
+
+    label .req {
+        margin: 2px;
+        color: #1ab188;
+    }
+
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+
+    label.active .req {
+        opacity: 0;
+    }
+
+    label.highlight {
+        color: #ffffff;
+    }
+
+    input,
+    textarea {
+        font-size: 17px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px 10px;
+        background: none;
+        background-image: none;
+        border: 1px solid #a0b3b0;
+        color: black;
+        border-radius: 0;
+        transition: border-color .25s ease, box-shadow .25s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: 0;
+        border-color: #1ab188;
+    }
+
+    textarea {
+        border: 2px solid #a0b3b0;
+        resize: vertical;
+    }
+
+    .field-wrap {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .top-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .top-row>main {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .top-row>main:last-child {
+        margin: 0;
+    }
+
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 8px 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        background: #0e6655;
+        color: #ffffff;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+    }
+
+    .button:hover,
+    .button:focus {
+        background: #1f618d;
+    }
+
+    .button-block {
+        display: block;
+        width: 100%;
+    }
+
+    .forgot {
+        margin-top: -20px;
+        text-align: right;
+    }
+
+
+
+
+/* MODAL LOGIN Full-width input fields */
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  width: auto; /* Full width */
+  height: auto; /* Full height */
+
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
+  padding-top: 0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+}
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+}  
+
 
 </style>
 
@@ -358,31 +613,97 @@ span.psw {
 </head>
 
 <body translate="no">
-<div id="id01" class="modal">  
+
+<!-- Modal -->
+
+<main id="id01" class="modal">
+  
   <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
+    <main class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
+    </main><!-- Modal -->
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" id="username" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" id="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+    <main class="form">
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+        <ul class="tab-group">
+
+            <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+
+        </ul>
+					<main id="loader"></main>
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
+					
+					<main id="loader2"></main>
+					<p align="center" id="repas" style="font-size: 1.5em; color: black;"></p>
+        <main class="tab-content">
+
+
+            <main id="login">
+
+    <form>
+
+
+                    <main class="field-wrap" autocomplete="off">
+                        <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </main>
+
+
+                    <main class="field-wrap">
+                        <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </main>
+
+				
+
+					<input class="button button-block" type = "button" onClick="Login_value(); " value = "Đăng Nhập" /></input>
+
+                </form>
+
+            </main>
+
+
+
+            <main id="changepass">
+
+                <form>
+
+                  <main class="top-row">
+
+				  <main class="field-wrap" autocomplete="off">
+                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </main>
+
+                    <main class="field-wrap">
+                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </main>
+                  </main>
+
+                    <main class="field-wrap" autocomplete="off">
+                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
+                    </main>
+
+
+                    <main class="field-wrap">
+                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
+                    </main>
+
+
+
+					<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+
+                </form>
+
+            </main>
+
+
+        </main><!-- tab-content -->
+
+    </main> <!-- /form -->
+
+
+</form><!-- Modal -->
+</main>
 
 
   <div class="container">
@@ -633,6 +954,86 @@ $(document).ready(function () {
 });
 //# sourceURL=pen.js
     </script>
+<script src="Login_data/jquery.min.js"></script>
+<script id="rendered-js">
+//https://ordinarycoders.com/blog/article/custom-user-login-forms
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
+  var $this = $(this),
+  label = $this.prev('label');
+
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  } else if (e.type === 'blur') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.removeClass('highlight');
+    }
+  } else if (e.type === 'focus') {
+
+    if ($this.val() === '') {
+      label.removeClass('highlight');
+    } else
+    if ($this.val() !== '') {
+      label.addClass('highlight');
+    }
+  }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > main').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+
+// Canh lề Modal giữa
+$(function() {
+
+  var modal = $(".modal");
+
+  var body = $(window);
+
+  // Get modal size
+
+  var w = modal.width();
+
+  var h = modal.height();
+
+  // Get window size
+
+  var bw = body.width();
+
+  var bh = body.height();
+
+  // Update the css and center the modal on screen
+
+  modal.css({
+
+    "position": "absolute",
+
+    "top": ((bh - h) / 2) + "px",
+
+    "left": ((bw - w) / 2) + "px"
+
+  })
+
+});
+
+</script>
 
 </body>
