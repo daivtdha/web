@@ -3,16 +3,317 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <meta charset="UTF-8">
-  
 
   <title>ĐÀI VT ĐÔNG HÀ - VÔ TUYẾN</title>
+ <link href="Login_data/css.css" rel="stylesheet" type="text/css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="VoTuyen/normalize.min.css">
 
   
   
 <style>
+/* FORM LOGIN */
+    .form {
+        background: #f8f9f9;
+        padding: 40px;
+        max-width: auto;
+        margin: 40px auto;
+        
+        
+    }
+
+    .tabmodal-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+    }
+
+    .tabmodal-group:after {
+        content: "";
+        display: tabmodalle;
+        clear: both;
+    }
+
+    .tabmodal-group li a {
+        display: block;
+        text-decoration: none;
+        padding: 1px;
+        background: rgba(160, 179, 176, 0.25);
+        color: #a0b3b0;
+        font-size: 20px;
+        float: left;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+    }
+
+    .tabmodal-group li a:hover {
+        background:#1f618d;
+        color: #ffffff;
+    }
+
+    .tabmodal-group .active a {
+        background: #0e6655;
+        color: #ffffff;
+    }
+
+    .tabmodal-content>main:last-child {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        font-weight: 300;
+        margin: 0 0 40px;
+    }
+
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+    }
+
+    label .req {
+        margin: 2px;
+        color: #1ab188;
+    }
+
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+
+    label.active .req {
+        opacity: 0;
+    }
+
+    label.highlight {
+        color: #ffffff;
+    }
+
+    input,
+    textarea {
+        font-size: 17px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px 10px;
+        background: none;
+        background-image: none;
+        border: 1px solid #a0b3b0;
+        color: black;
+        border-radius: 0;
+        transition: border-color .25s ease, box-shadow .25s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: 0;
+        border-color: #1ab188;
+    }
+
+    textarea {
+        border: 2px solid #a0b3b0;
+        resize: vertical;
+    }
+
+    .field-wrap {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .top-row:after {
+        content: "";
+        display: tabmodalle;
+        clear: both;
+    }
+
+    .top-row>main {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .top-row>main:last-child {
+        margin: 0;
+    }
+
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 8px 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        background: #0e6655;
+        color: #ffffff;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+    }
+
+    .button:hover,
+    .button:focus {
+        background: #1f618d;
+    }
+
+    .button-block {
+        display: block;
+        width: 100%;
+    }
+
+    .forgot {
+        margin-top: -20px;
+        text-align: right;
+    }
+
+
+
+
+/* MODAL LOGIN Full-width input fields */
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width:100px;
+  font-weight:bold;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  
+  top: 30;
+  width: 60%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
+  padding-top: 0px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width:auto; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+}
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+} 
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
 :root {
   box-sizing: border-box;
@@ -198,6 +499,10 @@ body {
     padding: 1em;
   }
 }
+
+
+
+
 </style>
 
   <script>
@@ -216,6 +521,101 @@ body {
 </head>
 
 <body translate="no">
+
+<!-- Modal -->
+
+<main id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <main class="imgcontainer">
+	
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	  <h2>ĐĂNG NHẬP</h2>
+    </main><!-- Modal -->
+
+
+    <main class="form">
+
+        <ul class="tabmodal-group">
+
+            <li onClick="Delre();" class="tabmodal active"><a href="#login">Login</a></li>
+            <li onClick="Delre();" class="tabmodal"><a href="#changepass">ChangePwd</a></li>
+
+        </ul>
+					<main id="loader"></main>
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
+					
+					<main id="loader2"></main>
+					<p align="center" id="repas" style="font-size: 1.5em; color: black;"></p>
+        <main class="tabmodal-content">
+
+
+            <main id="login">
+
+    <form>
+
+
+                    <main class="field-wrap" autocomplete="off">
+                        <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </main>
+
+
+                    <main class="field-wrap">
+                        <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </main>
+
+				
+
+					<input class="button button-block" type = "button" onClick="Login_value(); " value = "Đăng Nhập" /></input>
+
+                </form>
+
+            </main>
+
+
+
+            <main id="changepass">
+
+                <form>
+
+                  <main class="top-row">
+
+				  <main class="field-wrap" autocomplete="off">
+                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </main>
+
+                    <main class="field-wrap">
+                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </main>
+                  </main>
+
+                    <main class="field-wrap" autocomplete="off">
+                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
+                    </main>
+
+
+                    <main class="field-wrap">
+                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
+                    </main>
+
+
+
+					<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+
+                </form>
+
+            </main>
+
+
+        </main><!-- tabmodal-content -->
+
+    </main> <!-- /form -->
+
+
+</form><!-- Modal -->
+</main>
+
+
   <h1 class="main-heading">VÔ TUYẾN ĐÀI VT ĐÔNG HÀ</h1>
     <div class="wrap">
         <ul class="tab-list__list">
@@ -229,18 +629,18 @@ body {
                 <li class="tab__item">                   
                    <img src="VoTuyen/LichDHA.jpg" alt=""> 
                    <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐÔNG HÀ</h2>
-		   <button class="tab__btn">Xem</button>
+				   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                    
                 </li>
                 <li class="tab__item">                   
                    <img src="VoTuyen/LichDHI.png" alt=""> 
                    <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐỒNG HỚI</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
                 <li class="tab__item">                   
                    <img src="VoTuyen/LichHUE.jpg" alt=""> 
                    <h2 class="tab__heading">LỊCH CÔNG VIỆC VT HUẾ</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
 
             </ul>
@@ -249,17 +649,17 @@ body {
                 <li class="tab__item">                   
                    <img src="VoTuyen/VatTuDPDHA.png" alt=""> 
                    <h2 class="tab__heading">VẬT TƯ DP VT ĐÔNG HÀ</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
                 <li class="tab__item">                   
                    <img src="VoTuyen/VatTuDPDHI.png" alt=""> 
                    <h2 class="tab__heading">VẬT TƯ DP VT ĐỒNG HỚI</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
                 <li class="tab__item">                   
                    <img src="VoTuyen/VatTuDPHUE.jpg" alt=""> 
                    <h2 class="tab__heading">VẬT TƯ DP VT HUẾ</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
 
             </ul>			
@@ -268,17 +668,17 @@ body {
                 <li class="tab__item">                   
                    <img src="VoTuyen/CongVan.jpg" alt=""> 
                    <h2 class="tab__heading">CÔNG VĂN VÔ TUYẾN</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
                 <li class="tab__item">                   
                    <img src="VoTuyen/TaiLieu.png" alt=""> 
                    <h2 class="tab__heading">TÀI LIỆU VÔ TUYẾN</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
                 <li class="tab__item">                   
                    <img src="VoTuyen/TaiLieu.png" alt=""> 
                    <h2 class="tab__heading">TRẮC NGHIỆM VÔ TUYẾN</h2>
-                   <button class="tab__btn">Xem</button>
+                   <button onclick="document.getElementById('id01').style.display='block'">Login</button>
                 </li>
 
             </ul>
@@ -287,13 +687,166 @@ body {
 
 			</div>    
     </div>
+
+
+<script src="VoTuyen/Login.min.js"></script>
+<script id="rendered-js">
+//https://ordinarycoders.com/blog/article/custom-user-login-forms
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+  label = $this.prev('label');
+
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  } else if (e.type === 'blur') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.removeClass('highlight');
+    }
+  } else if (e.type === 'focus') {
+
+    if ($this.val() === '') {
+      label.removeClass('highlight');
+    } else
+    if ($this.val() !== '') {
+      label.addClass('highlight');
+    }
+  }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > main').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+
+    </script>
+
     <script src="VoTuyen/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
 
   
-<script id="rendered-js">
-const _0x249abb=_0x49f8;function _0x2dbc(){const _0x5d9255=['remove','target','649619RnlAlF','classList','2222664QtAacH','getAttribute','264TSKbdx','.tab-list__link','2869764aOvIJz','388GzpxAL','.tab-list__list','add','627910JljktY','querySelector','3260803gDovTe','99ihCXsR','294669sEqYoQ','tab__box--is-visible','tab-list__link','15545icWjSA','href','addEventListener','querySelectorAll','tab-list__link--is-active','2hdUopc','click','forEach','contains'];_0x2dbc=function(){return _0x5d9255;};return _0x2dbc();}function _0x49f8(_0x243202,_0x1f4030){const _0x2dbc0b=_0x2dbc();return _0x49f8=function(_0x49f87e,_0x36df4f){_0x49f87e=_0x49f87e-0x9f;let _0x29e7b1=_0x2dbc0b[_0x49f87e];return _0x29e7b1;},_0x49f8(_0x243202,_0x1f4030);}(function(_0x387058,_0x4b012c){const _0x1fc690=_0x49f8,_0x53d0f6=_0x387058();while(!![]){try{const _0x5311b6=parseInt(_0x1fc690(0xb7))/0x1*(parseInt(_0x1fc690(0xb1))/0x2)+parseInt(_0x1fc690(0xa1))/0x3+-parseInt(_0x1fc690(0xa2))/0x4*(-parseInt(_0x1fc690(0xac))/0x5)+-parseInt(_0x1fc690(0xb9))/0x6+-parseInt(_0x1fc690(0xa7))/0x7+-parseInt(_0x1fc690(0x9f))/0x8*(parseInt(_0x1fc690(0xa9))/0x9)+parseInt(_0x1fc690(0xa5))/0xa*(parseInt(_0x1fc690(0xa8))/0xb);if(_0x5311b6===_0x4b012c)break;else _0x53d0f6['push'](_0x53d0f6['shift']());}catch(_0x20704c){_0x53d0f6['push'](_0x53d0f6['shift']());}}}(_0x2dbc,0x87c8d));let ul=document[_0x249abb(0xa6)](_0x249abb(0xa3)),links=document[_0x249abb(0xaf)](_0x249abb(0xa0)),tabs=document[_0x249abb(0xaf)]('.tab__box');ul[_0x249abb(0xae)](_0x249abb(0xb2),_0x4e457d=>{const _0x2dfda5=_0x249abb;_0x4e457d[_0x2dfda5(0xb6)]['classList'][_0x2dfda5(0xb4)](_0x2dfda5(0xab))&&!_0x4e457d[_0x2dfda5(0xb6)][_0x2dfda5(0xb8)][_0x2dfda5(0xb4)]('tab-list__link--is-active')&&(_0x4e457d['preventDefault'](),links[_0x2dfda5(0xb3)]((_0x3cd4e9,_0x114562)=>{const _0x12d25d=_0x2dfda5;_0x3cd4e9['classList'][_0x12d25d(0xb5)](_0x12d25d(0xb0)),tabs[_0x114562]['classList'][_0x12d25d(0xb5)]('tab__box--is-visible'),_0x4e457d['target']['classList']['add'](_0x12d25d(0xb0)),_0x4e457d[_0x12d25d(0xb6)]['getAttribute'](_0x12d25d(0xad))['slice'](0x1)===tabs[_0x114562][_0x12d25d(0xba)]('id')&&tabs[_0x114562]['classList'][_0x12d25d(0xa4)](_0x12d25d(0xaa));}));});
-//# sourceURL=pen.js
-    </script>
+      <script id="rendered-js">
+let ul = document.querySelector('.tab-list__list');
+let links = document.querySelectorAll('.tab-list__link');
+let tabs = document.querySelectorAll('.tab__box');
 
-</body>
-</html>
+ul.addEventListener('click', e => {
+  //only apply js if tab isn't already the active one
+  if (e.target.classList.contains('tab-list__link') && !e.target.classList.contains('tab-list__link--is-active')) {
+    e.preventDefault();
+    //loop through all links and divs and remove the active/visible classes
+    links.forEach((el, idx) => {
+      el.classList.remove('tab-list__link--is-active');
+      tabs[idx].classList.remove('tab__box--is-visible');
+      //add the active class to the clicked link
+      e.target.classList.add('tab-list__link--is-active');
+      //if the active link's href attribute matches the div's id attribute (slicing out the #) apply the visible class to that div
+      if (e.target.getAttribute('href').slice(1) === tabs[idx].getAttribute('id')) {
+        tabs[idx].classList.add('tab__box--is-visible');
+      }
+    });
+  }
+});
+//# sourceURL=pen.js
+    </script>  
+
+<script id="rendered-js">
+//https://ordinarycoders.com/blog/article/custom-user-login-forms
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+  label = $this.prev('label');
+
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  } else if (e.type === 'blur') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.removeClass('highlight');
+    }
+  } else if (e.type === 'focus') {
+
+    if ($this.val() === '') {
+      label.removeClass('highlight');
+    } else
+    if ($this.val() !== '') {
+      label.addClass('highlight');
+    }
+  }
+
+});
+
+$('.tabmodal a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tabmodal-content > main').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+
+// Canh lề Modal giữa
+$(function() {
+
+  var modal = $(".modal");
+
+  var body = $(window);
+
+  // Get modal size
+
+  var w = modal.width();
+
+  var h = modal.height();
+
+  // Get window size
+
+  var bw = body.width();
+
+  var bh = body.height();
+
+  // Update the css and center the modal on screen
+
+  modal.css({
+
+    "position": "absolute",
+
+    "top": ((bh - h) / 2) + "px",
+
+    "left": ((bw - w) / 2) + "px"
+
+  })
+
+});
+
+</script>
+
+
+ 
+</body></html>
