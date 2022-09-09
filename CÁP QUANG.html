@@ -8695,17 +8695,29 @@ span.psw {
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
 } 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 }
 
 @media (max-width: 600px) {
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
 }  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 }
 
 @media screen and (max-width: 980px) {
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
 }
 }  
     
@@ -9026,7 +9038,7 @@ span.psw {
 </script>
 
 
-<script src="Login_data/jquery.min.js"></script>
+<script src="CapQuangPicture/Login.min.js"></script>
 <script id="rendered-js">
 //https://ordinarycoders.com/blog/article/custom-user-login-forms
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
