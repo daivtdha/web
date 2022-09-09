@@ -9003,9 +9003,87 @@ span.psw {
 <script src="CapQuangPicture/imagesloaded.js"></script>
 <script src="CapQuangPicture/popper.min.js"></script>
 <script src="CapQuangPicture/bootstrap.min.js"></script>
-<script src="CapQuangPicture/Login.min.js"></script>
 
 <script id="rendered-js">
-function _0x51b5(){var _0x3dc343=['prev','focus','imagesLoaded','5PemLfp','addClass','4236606yzMNDB','masonry','5225020wAsXLd','18LukiFZ','196396oSWXdW','attr','hide','363790IFKGZR','.tab-content\x20>\x20main','fadeIn','keyup','.tab\x20a','href','removeClass','active','1700918IoEoKS','1691202IAIpCi','929267KnpXiV','active\x20highlight','type','label','keyup\x20blur\x20focus','val','.masonry-container','each','siblings','.form','.card','8zNTGtr','highlight','preventDefault','click'];_0x51b5=function(){return _0x3dc343;};return _0x51b5();}var _0x2d4fdd=_0x3291;function _0x3291(_0x2ed814,_0x306b74){var _0x51b544=_0x51b5();return _0x3291=function(_0x329118,_0x12dbfe){_0x329118=_0x329118-0x1a6;var _0x5139e3=_0x51b544[_0x329118];return _0x5139e3;},_0x3291(_0x2ed814,_0x306b74);}(function(_0x3293af,_0x40c6a8){var _0x41940c=_0x3291,_0x397df3=_0x3293af();while(!![]){try{var _0x19f6e9=parseInt(_0x41940c(0x1ac))/0x1+parseInt(_0x41940c(0x1aa))/0x2+parseInt(_0x41940c(0x1ab))/0x3+-parseInt(_0x41940c(0x1c4))/0x4*(-parseInt(_0x41940c(0x1be))/0x5)+-parseInt(_0x41940c(0x1c0))/0x6+parseInt(_0x41940c(0x1c7))/0x7*(-parseInt(_0x41940c(0x1b7))/0x8)+parseInt(_0x41940c(0x1c3))/0x9*(-parseInt(_0x41940c(0x1c2))/0xa);if(_0x19f6e9===_0x40c6a8)break;else _0x397df3['push'](_0x397df3['shift']());}catch(_0x8f1b85){_0x397df3['push'](_0x397df3['shift']());}}}(_0x51b5,0x8feac),(!function(_0xbdc732){var _0x4f72fe=_0x3291,_0x55d062=_0xbdc732(_0x4f72fe(0x1b2));_0x55d062[_0x4f72fe(0x1bd)](function(){var _0x18c47e=_0x4f72fe;_0x55d062[_0x18c47e(0x1c1)]({'columnWidth':'.card','itemSelector':_0x18c47e(0x1b6)});}),_0xbdc732('a[data-toggle=tab]')[_0x4f72fe(0x1b3)](function(){_0xbdc732(this)['on']('shown.bs.tab',function(){var _0x11de66=_0x3291;_0x55d062[_0x11de66(0x1bd)](function(){var _0x2a6258=_0x11de66;_0x55d062[_0x2a6258(0x1c1)]({'columnWidth':_0x2a6258(0x1b6),'itemSelector':'.card'});});});});}(jQuery),$(_0x2d4fdd(0x1b5))['find']('input,\x20textarea')['on'](_0x2d4fdd(0x1b0),function(_0x410c43){var _0x3ff552=_0x2d4fdd,_0x217435=$(this),_0x287629=_0x217435[_0x3ff552(0x1bb)](_0x3ff552(0x1af));_0x3ff552(0x1ca)===_0x410c43[_0x3ff552(0x1ae)]?''===_0x217435[_0x3ff552(0x1b1)]()?_0x287629[_0x3ff552(0x1a8)](_0x3ff552(0x1ad)):_0x287629['addClass'](_0x3ff552(0x1ad)):'blur'===_0x410c43[_0x3ff552(0x1ae)]?''===_0x217435[_0x3ff552(0x1b1)]()?_0x287629[_0x3ff552(0x1a8)](_0x3ff552(0x1ad)):_0x287629[_0x3ff552(0x1a8)]('highlight'):_0x3ff552(0x1bc)===_0x410c43[_0x3ff552(0x1ae)]&&(''===_0x217435['val']()?_0x287629['removeClass'](_0x3ff552(0x1b8)):''!==_0x217435[_0x3ff552(0x1b1)]()&&_0x287629['addClass']('highlight'));}),$(_0x2d4fdd(0x1a6))['on'](_0x2d4fdd(0x1ba),function(_0x363592){var _0x196848=_0x2d4fdd;_0x363592[_0x196848(0x1b9)](),$(this)['parent']()[_0x196848(0x1bf)](_0x196848(0x1a9)),$(this)['parent']()[_0x196848(0x1b4)]()['removeClass']('active'),target=$(this)[_0x196848(0x1c5)](_0x196848(0x1a7)),$(_0x196848(0x1c8))['not'](target)[_0x196848(0x1c6)](),$(target)[_0x196848(0x1c9)](0x258);})));
+//Initialize Masonry inside Bootstrap 3 Tab component 
+
+(function ($) {
+
+  var $container = $('.masonry-container');
+  $container.imagesLoaded(function () {
+    $container.masonry({
+      columnWidth: '.card',
+      itemSelector: '.card' });
+
+  });
+
+  //Reinitialize masonry inside each panel after the relative tab link is clicked - 
+  $('a[data-toggle=tab]').each(function () {
+    var $this = $(this);
+
+    $this.on('shown.bs.tab', function () {
+
+      $container.imagesLoaded(function () {
+        $container.masonry({
+          columnWidth: '.card',
+          itemSelector: '.card' });
+
+      });
+
+    }); //end shown
+  }); //end each
+
+})(jQuery);
+
+</script>
+
+
+<script src="CapQuangPicture/Login.min.js"></script>
+<script id="rendered-js">
+//https://ordinarycoders.com/blog/article/custom-user-login-forms
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+  label = $this.prev('label');
+
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  } else if (e.type === 'blur') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.removeClass('highlight');
+    }
+  } else if (e.type === 'focus') {
+
+    if ($this.val() === '') {
+      label.removeClass('highlight');
+    } else
+    if ($this.val() !== '') {
+      label.addClass('highlight');
+    }
+  }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > main').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+
 </script>
 </body></html>
