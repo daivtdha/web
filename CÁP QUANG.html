@@ -332,7 +332,7 @@ label {
 }
 
 button {
-  border-radius: 0;
+  border-radius:5% 5% 5% 5%;  
 }
 
 button:focus {
@@ -367,6 +367,7 @@ html [type="button"],
 [type="submit"] {
   -webkit-appearance: button;
 }
+
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -666,6 +667,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 
 @media (min-width: 576px) {
   .container {
@@ -8416,9 +8418,10 @@ a.text-dark:focus, a.text-dark:hover {
         background: #f8f9f9;
         padding: 40px;
         max-width: 700px;
+		width: 97%;
         margin: 40px auto;
         font-family:times new roman;
-        width: 97%;
+        
     }
 
     .tab-group {
@@ -8576,7 +8579,9 @@ a.text-dark:focus, a.text-dark:hover {
         margin-top: -20px;
         text-align: right;
     }
-
+[type="submit2"] {
+  width: 100px;
+}
 
 
 
@@ -8723,7 +8728,9 @@ span.psw {
 }
 }  
     
-
+.text-center {
+  text-align: center;
+}
 
 </style>
 
@@ -8873,7 +8880,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG ĐÔNG HÀ 1</h5>
                   <p class="card-text">Quản lý CQ Đông Hà 1 - Trạm Viễn thông Đông Hà.</p>
-                  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 300px; top: 0px;">                
@@ -8881,7 +8890,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG ĐÔNG HÀ 2</h5>
                   <p class="card-text">Quản lý CQ Đông Hà 2 - Trạm Viễn thông Đông Hà.</p>
-                  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 600px; top: 0px;">
@@ -8889,7 +8900,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG ĐÔNG HÀ 3</h5>
                   <p class="card-text">Quản lý CQ Đông Hà 3 - Trạm Viễn thông Đông Hà.</p>
-                  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </div>
               </div>
             </div>
@@ -8906,7 +8919,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG ĐỒNG HỚI 1</h5>
                   <p class="card-text">Quản lý CQ Đồng Hới - Trạm Viễn thông Đồng Hới.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 300px; top: 0px; transition-property: opacity, transform; transition-duration: 0.4s; transition-delay: 0ms; transform: translate3d(-300px, 0px, 0px);">
@@ -8914,7 +8929,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG ĐỒNG HỚI 2</h5>
                   <p class="card-text">Quản lý CQ Đồng Hới - Trạm Viễn thông Đồng Hới.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 600px; top: 0px; transition-property: opacity, transform; transition-duration: 0.4s; transition-delay: 0ms; transform: translate3d(-600px, 0px, 0px);">
@@ -8922,7 +8939,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG ĐỒNG HỚI 3</h5>
                   <p class="card-text">Quản lý CQ Đồng Hới - Trạm Viễn thông Đồng Hới.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
 			  
@@ -8938,7 +8957,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG HUẾ 1</h5>
                   <p class="card-text">Quản lý CQ Huế - Trạm Viễn thông Huế.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 300px; top: 0px; transition-property: opacity, transform; transition-duration: 0.4s; transition-delay: 0ms; transform: translate3d(-300px, 0px, 0px);">
@@ -8946,7 +8967,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG HUẾ 2</h5>
                   <p class="card-text">Quản lý CQ Huế - Trạm Viễn thông Huế.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 600px; top: 0px; transition-property: opacity, transform; transition-duration: 0.4s; transition-delay: 0ms; transform: translate3d(-600px, 0px, 0px);">
@@ -8954,7 +8977,9 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG HUẾ 3</h5>
                   <p class="card-text">Quản lý CQ Huế - Trạm Viễn thông Huế.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
             </div>
@@ -8963,7 +8988,7 @@ span.psw {
 		  
 
 		  
-          <!-- content 4 -->
+          <!-- HCM -->
           <div class="tab-pane masonry-container fade" id="hcm" role="tabpanel" aria-labelledby="hcm-tab" style="position: relative; height: 36px;" aria-expanded="false">
             <h3>HCM </h3>
             <div class="card-columns">
@@ -8972,14 +8997,19 @@ span.psw {
                 <div class="card-body">
                   <h5 class="card-title">CÁP QUANG HCM 1</h5>
                   <p class="card-text">Quản lý Cáp quang HCM 1.</p>                  
-                </div>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
+				  </div>
               </div>
               <div class="card" style="position: absolute; left: 300px; top: 0px; transition-property: opacity, transform; transition-duration: 0.4s; transition-delay: 0ms; transform: translate3d(-300px, 12px, 0px);">
                 <img class="card-img-top" src="CapQuangPicture/CapQuang10.jpg" alt="Card image cap">                
                 <div class="card-body">
 				<h5 class="card-title">CÁP QUANG HCM 2</h5>
                   <p class="card-text">Quản lý Cáp quang HCM 2.</p>
-                  
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>                  
                 </div>
               </div>
               <div class="card" style="position: absolute; left: 600px; top: 0px; transition-property: opacity, transform; transition-duration: 0.4s; transition-delay: 0ms; transform: translate3d(-600px, 24px, 0px);">
@@ -8987,7 +9017,9 @@ span.psw {
                 <div class="card-body">
 				<h5 class="card-title">CÁP QUANG HCM 3</h5>
                   <p class="card-text">Quản lý Cáp quang HCM 3.</p>
-
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                   
                 </div>
               </div>
