@@ -8418,13 +8418,14 @@ a.text-dark:focus, a.text-dark:hover {
         max-width: 700px;
         margin: 40px auto;
         font-family:times new roman;
-        
+        width: 97%;
     }
 
     .tab-group {
         list-style: none;
         padding: 0;
         margin: 0 0 40px 0;
+		
     }
 
     .tab-group:after {
@@ -8749,7 +8750,7 @@ span.psw {
   <form class="modal-content animate" action="/action_page.php" method="post">
     <main class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-	  <h2>ĐĂNG NHẬP CQ</h2>
+	  <h2 style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP CQ</h2>
     </main><!-- Modal -->
 
 
@@ -8757,8 +8758,8 @@ span.psw {
 
         <ul class="tab-group">
 
-            <li onClick="Delre();" class="tab active"><a href="#login">Đăng nhập</a></li>
-            <li onClick="Delre();" class="tab"><a href="#changepass">Đổi Passw</a></li>
+            <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 
         </ul>
 					<main id="loader"></main>
