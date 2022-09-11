@@ -583,10 +583,6 @@ span.psw {
   width:100%; /* Could be more or less, depending on screen size */
 } 
 .modal {
-  display: none; /* Hidden by default */ 
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 50%;
   width: 100%; /* Full width */
   height: auto; /* Full height */
 }
@@ -597,10 +593,6 @@ span.psw {
   width:100%; /* Could be more or less, depending on screen size */
 }  
 .modal {
-  display: none; /* Hidden by default */ 
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 50%;
   width: 100%; /* Full width */
   height: auto; /* Full height */
 }
@@ -611,14 +603,10 @@ span.psw {
   width:100%; /* Could be more or less, depending on screen size */
 }
 .modal {
-  display: none; /* Hidden by default */ 
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 50%;
   width: 100%; /* Full width */
   height: auto; /* Full height */
 }
-} 
+}
 
 
 </style>
@@ -1029,6 +1017,38 @@ $('.tab a').on('click', function (e) {
 
 });
 
+// Canh lề Modal giữa
+$(function() {
+
+  var modal = $(".modal");
+
+  var body = $(window);
+
+  // Get modal size
+
+  var w = modal.width();
+
+  var h = modal.height();
+
+  // Get window size
+
+  var bw = body.width();
+
+  var bh = body.height();
+
+  // Update the css and center the modal on screen
+
+  modal.css({
+
+    "position": "absolute",
+
+    "top": ((bh - h) / 2 + 55) + "px",
+
+    "left": ((bw - w) / 2) + "px"
+
+  })
+
+});
 
 // Click Image Open Madal 
 
