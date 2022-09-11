@@ -507,7 +507,6 @@ span.psw {
 
 
 
-
 /* MODAL LOGIN Full-width input fields */
 
 
@@ -524,7 +523,11 @@ span.psw {
   background-color:  #f8f9f9; /* Fallback color */
   background-color:  #f8f9f9; /* Black w/ opacity */
   padding-top: 0;
+  top: 20%;
 }
+
+
+
 
 /* Modal Content/Box */
 .modal-content {
@@ -534,7 +537,7 @@ span.psw {
   width: 100%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button (x) */
+/* The Close Button (X) */
 .close {
   position: absolute;
   right: 25px;
@@ -606,7 +609,7 @@ span.psw {
   width: 100%; /* Full width */
   height: auto; /* Full height */
 }
-}
+} 
 
 
 </style>
@@ -1041,9 +1044,6 @@ $(function() {
   modal.css({
 
     "position": "absolute",
-
-    "top": ((bh - h) / 2 + 55) + "px",
-
     "left": ((bw - w) / 2) + "px"
 
   })
