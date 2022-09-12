@@ -2028,21 +2028,11 @@ span.psw {
 } 
 .modal {
   width: 100%; /* Full width */
-  height: 50%;
+  max-height: calc(100% - 2em);
   overflow: hidden;
 }
 }
 
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: 50%;
-  overflow: hidden;
-}	
-}
 
 @media screen and (max-width: 980px) {
 .modal-content {
@@ -2050,7 +2040,7 @@ span.psw {
 }
 .modal {
   width: 100%; /* Full width */
-  height: 50%;
+  height: 100%;
   overflow: hidden;
 }
 } 
