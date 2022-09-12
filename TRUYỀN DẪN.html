@@ -2022,20 +2022,32 @@ span.psw {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
+@media only screen and (max-width: 1099px) {
 .modal {
   width: 100%; /* Full width */
-  height: 50%;
+  height: 100%;
   overflow: hidden;
 }
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
 }
 }
+
+@media only screen and (min-width: 768px) {
+.modal {
+  width: 100%; /* Full width */
+  height: 30%;
+  overflow: hidden;
+}
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+}
+
 @media only screen and (max-width: 767px) {
 .modal {
   width: 100%; /* Full width */
-  height: 50%;
+  height: 30%;
   overflow: hidden;
 }
 .modal-content {
@@ -2045,7 +2057,7 @@ span.psw {
 @media only screen and (max-width: 479px) {
 .modal {
   width: 100%; /* Full width */
-  height: 50%;
+  height: 30%;
   overflow: hidden;
 }
 .modal-content {
