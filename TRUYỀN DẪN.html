@@ -2021,37 +2021,38 @@ span.psw {
   }
 }
 
-
-
-
-@media only screen and (min-width: 768px) {
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
 .modal {
   width: 100%; /* Full width */
+  height: 50%;
   overflow: hidden;
 }
-.modal-body {
-    /* 100% = dialog height, 120px = header + footer */
-    max-height: calc(50%);
 }
+
+@media (max-width: 768px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: 50%;
+  overflow: hidden;
+}
+}
+
+@media screen and (max-width: 980px) {
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
 }
-}
-
-
-@media only screen and (max-width: 479px) {
 .modal {
   width: 100%; /* Full width */
-  
+  height: 70%;
   overflow: hidden;
 }
-.modal-body {
-max-height: calc(50%);
-}
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-}
+} 
 </style>
 
   <script>
