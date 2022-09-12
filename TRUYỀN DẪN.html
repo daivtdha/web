@@ -2024,9 +2024,12 @@ span.psw {
 
 @media only screen and (max-width: 1099px) {
 .modal {
-  width: 100%; /* Full width */
-  height: 100%;
+  width: 100%; /* Full width */  
   overflow: hidden;
+}
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
 }
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
@@ -2036,8 +2039,11 @@ span.psw {
 @media only screen and (min-width: 768px) {
 .modal {
   width: 100%; /* Full width */
-  height: 30%;
   overflow: hidden;
+}
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
 }
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
@@ -2047,9 +2053,13 @@ span.psw {
 @media only screen and (max-width: 767px) {
 .modal {
   width: 100%; /* Full width */
-  height: 30%;
+  
   overflow: hidden;
 }
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+}	
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
 }
@@ -2057,8 +2067,12 @@ span.psw {
 @media only screen and (max-width: 479px) {
 .modal {
   width: 100%; /* Full width */
-  height: 30%;
+  
   overflow: hidden;
+}
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
 }
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
