@@ -1388,7 +1388,7 @@ a.ui-button:active,
 
 
 #btn-show-dialog {
-  background-color:#009999;
+  background-color: #0e6655;
   border: none;
   color:white;
   padding: 1px;
@@ -1398,7 +1398,7 @@ a.ui-button:active,
   font-size: 17px;
   margin: 3px 1px;
   cursor: pointer;
-    height: 30px;
+  height: 30px;
   width: 90px;
   font-weight: bold;
 }
@@ -1407,7 +1407,7 @@ a.ui-button:active,
 
 
 .popup_time {
-  width: 80%;
+  width: 70%;
   padding: 15px;
   left: 0;
   margin-left: 5%;
@@ -1550,20 +1550,23 @@ a {
 }
 .projects-tags button {
   display: inline-block;
-  background: #21618c;
+  background: #0e6655;
   color: #fff;
   font-size: 15px;
   line-height: 20px;
   margin: 0 3px;
-  padding: 5px 20px;
+  padding: 5px 10px;
   font-weight:bold;
-  border: none;
+
   cursor: pointer;
-  border: 5px #333 solid;
+  border: 2px 5% 5% 5% 5%;;
+  border-radius:5% 5% 5% 5%;
 }
 .projects-tags button.active {
   background-color: #fff;
   color: #333;
+  border: 2px 5% 5% 5% 5%;;
+  border-radius:5% 5% 5% 5%;
 }
 
 .container {
@@ -1686,13 +1689,14 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color:  #0e6655;
   color: white;
   padding: 8px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   font-weight:bold;
+  border-radius:5% 5% 5% 5%;
   
 }
 
@@ -1925,8 +1929,8 @@ span.psw {
         outline: none;
         border-radius: 0;
         padding: 8px 0;
-        font-size: 1.2rem;
-        font-weight: 400;
+        font-size: 1rem;
+        font-weight:bold;
         text-transform: uppercase;
         letter-spacing: .1em;
         background: #0e6655;
@@ -1934,6 +1938,7 @@ span.psw {
         transition: all 0.5s ease;
         -webkit-appearance: none;
 		font-family:times new roman;
+		margin: auto;
     }
 
     .button:hover,
@@ -1943,13 +1948,12 @@ span.psw {
 
     .button-block {
         display: block;
-        width: 100%;
+        width: 25%;	
+		border-radius:5% 5% 5% 5%;
+		
     }
 
-    .forgot {
-        margin-top: -20px;
-        text-align: right;
-    }
+
 
 
 
@@ -2021,7 +2025,7 @@ span.psw {
 } 
 .modal {
   width: 100%; /* Full width */
-  height: 70%;
+  height: 50%;
   overflow: hidden;
 }
 }
@@ -2032,7 +2036,7 @@ span.psw {
 }  
 .modal {
   width: 100%; /* Full width */
-  height: 70%;
+  height: 50%;
   overflow: hidden;
 }
 }
@@ -2043,7 +2047,7 @@ span.psw {
 }
 .modal {
   width: 100%; /* Full width */
-  height: 70%;
+  height: 50%;
   overflow: hidden;
 }
 } 
@@ -2099,21 +2103,18 @@ span.psw {
 
             <main id="login">
 
-    <form>
-
+				<form>
 
                     <main class="field-wrap" autocomplete="off">
                         <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
                     </main>
 
-
                     <main class="field-wrap">
                         <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-                    </main>
-
-				
+                    </main>				
 
 					<input class="button button-block" type = "button" onClick="Login_value(); " value = "Đăng Nhập" /></input>
+										
 
                 </form>
 
@@ -2176,25 +2177,15 @@ span.psw {
     <li class="project" data-tags="LỊCH PHÂN CA" style="">
       <img id="ImgCaDHA" src="TruyenDanPicture/TrucCaDHA.jpg" alt="">
       <div class="project-info">
-        <h3>LỊCH PHÂN CA ĐÔNG HÀ</h3>        
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-      </div>
+        <h3>LỊCH PHÂN CA ĐÔNG HÀ</h3>
+	  </div>
 
     </li>
 
     <li class="project" data-tags="LỊCH PHÂN CA" style="">
       <img id="ImgCaDHI" src="TruyenDanPicture/TrucCaDHI.png" alt="">
       <div class="project-info">
-
-        <!-- /.tags -->
         <h3>LỊCH PHÂN CA ĐỒNG HỚI</h3>
-        <ul class="project-btns">
-		
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
 
     </li>
@@ -2205,11 +2196,6 @@ span.psw {
       <div class="project-info">
         <!-- /.tags -->
         <h3>LỊCH PHÂN CA HUẾ</h3>
-        
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
     </li>
@@ -2217,29 +2203,15 @@ span.psw {
     <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
       <img src="TruyenDanPicture/VatTuDPDHA.png" alt="">
       <div class="project-info">
-
-        <!-- /.tags -->
         <h3>VẬT TƯ DP TD-CMIP ĐÔNG HÀ</h3>
-        
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
-      <!-- /.project-info -->
+
     </li>
     <!-- /.project -->
     <li class="project" data-tags="VẬT TƯ DỰ PHÒNG" style="">
       <img src="TruyenDanPicture/VatTuDPDHI.png" alt="">
       <div class="project-info">
-        
-        <!-- /.tags -->
-        <h3>VẬT TƯ DP TD-CMIP ĐỒNG HỚI</h3>
-        <p></p>
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>          
-        </ul>
-        <!-- /.project-btns -->
+        <h3>VẬT TƯ DP TD-CMIP ĐỒNG HỚI</h3> 
       </div>
       <!-- /.project-info -->
     </li>
@@ -2250,11 +2222,6 @@ span.psw {
       <div class="project-info">
         <!-- /.tags -->
         <h3>VẬT TƯ DP TD-CMIP HUẾ</h3>
-        <p></p>
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
     </li>
@@ -2267,11 +2234,6 @@ span.psw {
 
         <!-- /.tags -->
         <h3>VẬT TƯ DP MANE ĐÔNG HÀ</h3>
-        
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
     </li>
@@ -2282,10 +2244,6 @@ span.psw {
         
         <!-- /.tags -->
         <h3>VẬT TƯ DP MANE ĐỒNG HỚI</h3>
-        <p></p>
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
         <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
@@ -2297,11 +2255,6 @@ span.psw {
       <div class="project-info">
         <!-- /.tags -->
         <h3>VẬT TƯ DP MANE HUẾ</h3>
-        <p></p>
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
     </li>
@@ -2312,11 +2265,6 @@ span.psw {
 	  <div class="project-info">
         <!-- /.tags -->
         <h3>CÔNG VĂN KỶ THUẬT</h3>
-        
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
     </li>
@@ -2328,11 +2276,6 @@ span.psw {
         
         <!-- /.tags -->
         <h3>TÀI LIỆU TD - IP</h3>
-        <p></p>
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
-        <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
     </li>
@@ -2344,10 +2287,6 @@ span.psw {
         
         <!-- /.tags -->
         <h3>TRẮC NGHIỆM</h3>
-        <p></p>
-        <ul class="project-btns">
-          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-external-link"></i>Login</button></li>
-        </ul>
         <!-- /.project-btns -->
       </div>
       <!-- /.project-info -->
@@ -2383,7 +2322,7 @@ span.psw {
 <p id="testText"></p>
 <div class="overlay_time" id="dialog_time">
   <div class="popup_time">
-    <p>Thời gian quá lâu không dùng !!</p>
+    <p>Thời gian lâu không dùng !!</p>
     <div class="text-right">
       <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
     </div>
