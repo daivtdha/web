@@ -1748,7 +1748,10 @@ span.psw {
   padding-bottom: 0px;
   font-family:times new roman;
 }
-
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+}
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -2025,7 +2028,7 @@ span.psw {
 } 
 .modal {
   width: 100%; /* Full width */
-  height: auto;
+  max-height: calc(100% - 120px);
   overflow: hidden;
 }
 }
@@ -2036,9 +2039,9 @@ span.psw {
 }  
 .modal {
   width: 100%; /* Full width */
-  height: auto;
+  max-height: calc(100% - 120px);
   overflow: hidden;
-}
+}	
 }
 
 @media screen and (max-width: 980px) {
@@ -2047,7 +2050,7 @@ span.psw {
 }
 .modal {
   width: 100%; /* Full width */
-  height: auto;
+  max-height: calc(100% - 120px);
   overflow: hidden;
 }
 } 
