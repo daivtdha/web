@@ -1,0 +1,1311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LỊCH TRỰC CA ĐHA</title>
+
+<link rel="stylesheet" href="data/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./sortable-OK/sortable.css" />
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+<head>
+<style>
+
+
+.button {
+  background-color:#009999;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+  
+}
+
+.button1 {border-radius: 12px;}
+
+
+
+
+
+
+ body {
+
+    color: #666;
+    font: 90%/180% Arial, Helvetica, sans-serif;
+    width:100%;
+    max-width:100%;
+    margin: 0 auto;
+	
+	background-image: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+}
+
+
+ body {
+
+    color: #666;
+    font: 90%/180% Arial, Helvetica, sans-serif;
+    width:100%;
+    max-width:100%;
+    margin: 0 auto;
+	
+	background-image: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+}
+
+
+
+ table, th, td {
+border-collapse: collapse;
+border: 1px solid black;
+padding: 4px;
+}
+
+tr:nth-child(even) {
+background-color: #ebebe0;
+padding: 10px;
+text-align: left;
+  }
+tr:nth-child(odd) {
+background-color:white;
+text-align: left;
+  } 
+
+table {
+display: block;
+width:auto;
+height: 800px;
+overflow: scroll;
+
+margin:0 auto;
+ }
+
+table tr:hover td {
+    background:  #f6ddcc ;
+
+}
+
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		table, th, td {
+		   border: 1px solid #bbb;
+		   text-align: left;
+		}
+
+		button {
+			cursor: pointer;
+		}
+		/*Initial style sort*/
+		.tablemanager th.sorterHeader {
+			cursor: pointer;
+		}
+		.tablemanager th.sorterHeader:after {
+			content: " \f0dc";
+			font-family: "FontAwesome";
+		}
+		/*Style sort desc*/
+		.tablemanager th.sortingDesc:after {
+			content: " \f0dd";
+			font-family: "FontAwesome";
+		}
+		/*Style sort asc*/
+		.tablemanager th.sortingAsc:after {
+			content: " \f0de";
+			font-family: "FontAwesome";
+		}
+		/*Style disabled*/
+		.tablemanager th.disableSort {
+
+		}
+		#for_numrows {
+			padding: 10px;
+			float: left;
+		}
+		#for_filter_by {
+			padding: 1px;
+			float: right;
+		}
+		#pagesControllers {
+			display: block;
+			text-align: center;
+		}
+
+
+
+.footer {
+  background-image: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 5px;
+  
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 5px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 20px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color:#0099ff;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 10px;
+  margin-right: 3px;
+
+}
+
+
+
+
+.footer .footer-center {
+  width: 25%;
+}
+
+.footer .footer-center i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+
+
+
+.footer .footer-right {
+  width: 35%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer h2 span {
+  color: #0099ff;
+}
+
+.footer .menu {
+  color:black;
+  margin: 0px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #0099ff;
+}
+
+.footer .name {
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+
+.input1 {border-radius: 12px;}
+
+fieldset {
+
+background: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+
+display: block;
+
+left: 0;
+max-width:100%;
+
+}
+
+fieldset:focus-within {
+  background: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#ff9900);
+
+}
+
+
+
+legend{
+width:150px;
+height:22px;
+text-align: center;
+font-size: 16px; 
+font-weight:  bold;
+color: red;
+padding: 2px 2px ;
+
+box-shadow: 0 0 0 2px #ddd;
+font: time new roman;
+
+border-radius: 10em;
+}
+
+
+
+
+
+
+form .question {
+  position: relative;
+  padding: 10px 4px;
+  display:inline-block;
+}
+form .question:first-of-type {
+  padding-top: 0;
+}
+form .question:last-of-type {
+  padding-bottom: 0;
+}
+form .question label {
+  transform-origin: left center;
+  color: #000000;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-size: 17px;
+  box-sizing: border-box;
+  padding: 10px 17px;
+  display: block;
+  position: absolute;
+  margin-top: -35px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+.question .id {
+	width:60px;
+	}
+.question .khachhang {
+	width:160px;
+	}
+ .question .email {
+	width:157px;
+	}
+ .question .sodienthoai {
+	width:157px;
+	}
+ .question .diachi {
+	width:590px;
+	}
+ .question .tenhang {
+	width:590px;
+	}
+ .question .tongtien {
+	width:185px;
+	}
+ .question .NGAY_DAT_HANG {
+	width:185px;
+	}
+ .question .NGAY_SHIP_HANG {
+	width:185px;
+	}
+ .question .ghichu {
+	width:390px;
+	}
+
+
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+
+  
+ .question .id {
+	width:60px;
+	}
+ .question .khachhang {
+	width:251px;
+	}
+ .question .email {
+	width:154px;
+	}
+ .question .sodienthoai {
+	width:154px;
+	}
+ .question .diachi {
+	width:329px;
+	}
+ .question .tenhang {
+	width:329px;
+	}
+ .question .tongtien {
+	width:154px;
+	}
+ .question .NGAY_DAT_HANG {
+	width:154px;
+	}
+ .question .NGAY_SHIP_HANG {
+	width:154px;
+	}
+ .question .ghichu {
+	width:154px;
+	}
+}  
+
+
+
+.popup {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.85);
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.dialog-btn {
+  background-color:#44B78B;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+
+
+#btn-show-dialog {
+  background-color:#009999;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 30px;
+  width: 90px;
+  font-weight: bold;
+}
+
+#btn-show-dialog {border-radius: 12px;}
+
+
+
+
+.popup_time {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.overlay_time {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.85);
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_time {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_time {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_time {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.header-img {
+    height: 55px;
+    width: 55px;
+	float: left;
+}
+
+
+
+header  {
+    display: inline;
+
+}
+		
+</style>
+
+</head>
+
+
+<body oncontextmenu="return false">
+<P></p>
+
+
+<p align="center" style="font-size: 1.8em; color: #000099; font-weight: bold">QUẢN LÝ SHOP HÀNG</p>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Thoát</button>
+
+<div class="overlay" id="dialog-container">
+  <div class="popup">
+    <p>Bạn có muốn Thoát không ?</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+
+<div class="overlay_time" id="dialog_time">
+  <div class="popup_time">
+    <p>Bạn phải Đăng nhập lại !!</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+    </div>
+  </div>
+</div>
+
+
+<form>
+<fieldset>
+<legend align="center">  Admin   </legend>
+
+<P></p>
+
+<div class="input" align="left">
+
+<div align="right"><input class="input input1" type = "hidden" name ="nhanvien" id="nhanvien" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="Admin" readonly></div>
+
+  <div class="question">
+  <label>Id</label>
+    <textarea class="id" type="text" name ="id" id="id" style="height:30px"></textarea>
+   </div>
+
+ <div class="question">
+   <label>Khách Hàng</label>
+    <textarea class="khachhang" type="text" name ="khachhang" id="khachhang" value="" style="height:30px"></textarea>
+  </div> 
+
+ <div class="question">
+   <label>Điện Thoại</label>
+    <textarea class="sodienthoai" type = "text" name ="sodienthoai" id="sodienthoai" value="" style="height:30px"></textarea>
+  </div> 
+
+ <div class="question">
+   <label>Email</label>
+    <textarea class="email" type = "text" name ="email" id="email" value="" style="height:30px"></textarea>
+  </div>
+
+ <div class="question">
+   <label>Địa Chỉ</label>
+    <textarea class="diachi" type = "text" name ="diachi" id="diachi" value="" style="height:30px"></textarea>
+  </div>
+
+ <div class="question">
+   <label>Tên Hàng</label>
+    <textarea class="tenhang" type = "text" name ="tenhang" id="tenhang" style="height:30px"></textarea>
+  </div>
+
+ <div class="question">
+   <label>Tổng Tiền</label>
+    <textarea class="tongtien" type = "text" name ="tongtien" id="tongtien" style="height:30px"></textarea>
+  </div>
+
+ <div class="question">
+   <label>Ngày Đặt</label>
+    <textarea class="NGAY_DAT_HANG" type = "text" name ="NGAY_DAT_HANG" id="NGAY_DAT_HANG" value="" style="height:30px"></textarea>
+  </div>
+
+ <div class="question">
+   <label>Ngày Giao</label>
+    <textarea class="NGAY_SHIP_HANG" type = "text" name ="NGAY_SHIP_HANG" id="NGAY_SHIP_HANG" value="" style="height:30px"></textarea>
+  </div>
+
+ <div class="question">
+   <label>Ghi Chú</label>
+    <textarea class="ghichu" type = "text" name ="ghichu" id="ghichu" style="height:30px"></textarea>
+  </div>
+
+<div class="question">
+<label>Trạng Thái</label>
+<select name ="trangthai" id="trangthai" style="width:185px;height:35px" >
+  <option value="Giao Hàng">Giao Hàng</option>
+  <option value="Hủy Hàng">Hủy Hàng</option>
+  <option value="Đặt Hàng">Đặt Hàng</option>  
+</select>
+</div>
+
+
+<div class="question2" align="center">
+
+	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
+	
+	<input type="button" class="button button1" onclick="updatecfeAD_value()" value="CẬP NHẬT" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
+	
+</div>
+</div>
+</fieldset>
+
+</form>
+
+
+<div align="center">
+
+<p></p>
+<textarea type="text" id="searchAdmin" onkeyup='searchTableAdmin()' style="width:180px; height:23px; border-radius: 1em; " placeholder="Tìm Kiếm"></textarea>
+<textarea type = "text" name ="totalOfFilter" id="totalOfFilter" style="width:120px; height:23px; border-radius: 1em; " placeholder="Tổng Tiền" readonly></textarea>
+
+
+<div class = "mytable" id="showData"></div>
+<div id="loader"></div>
+
+		<div class="container">			
+				<h2 id="devtools-state"></h2>
+				<h3 id="devtools-orientation"></h3>	
+		</div>
+		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="./sortable-OK/tableManager.js"></script>
+<script>
+(function () {
+	'use strict';
+
+	const devtools = {
+		isOpen: false,
+		orientation: undefined
+	};
+
+	const threshold = 160;
+
+	const emitEvent = (isOpen, orientation) => {
+		window.dispatchEvent(new CustomEvent('devtoolschange', {
+			detail: {
+				isOpen,
+				orientation
+			}
+		}));
+	};
+
+	const main = ({emitEvents = true} = {}) => {
+		const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+		const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+		
+
+		if (
+			!(heightThreshold && widthThreshold) &&
+			((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)
+		) {
+			if ((!devtools.isOpen || devtools.orientation !== orientation) && emitEvents) {
+				//emitEvent(true, orientation);
+				close();
+			}
+
+			devtools.isOpen = true;
+			devtools.orientation = orientation;
+		} else {
+			if (devtools.isOpen && emitEvents) {
+				emitEvent(false, undefined);
+			}
+
+			devtools.isOpen = false;
+			devtools.orientation = undefined;
+		}
+	};
+
+	main({emitEvents: false});
+	setInterval(main, 500);
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = devtools;
+	} else {
+		window.devtools = devtools;
+	}
+})();
+
+			const stateElement = document.querySelector('#devtools-state');
+			const orientationElement = document.querySelector('#devtools-orientation');
+
+			//stateElement.textContent = window.devtools.isOpen ? 'yes' : 'no';
+			orientationElement.textContent = window.devtools.orientation ? window.devtools.orientation : '';
+
+			window.addEventListener('devtoolschange', event => {
+			//	stateElement.textContent = event.detail.isOpen ? 'yes' : 'no';
+				orientationElement.textContent = event.detail.orientation ? event.detail.orientation : '';
+			});
+
+// https://stackoverflow.com/questions/35961938/how-to-close-console-in-chrome-using-javascript
+
+window.requestFrame = (function() {
+  return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
+    window.setTimeout(c, 50);
+  }))));
+})();
+var test = {
+  st: false,
+  el: document.createElement("img"),
+  rn: function() {
+    test.st = false;
+    console.log(test.el);
+    console.clear();
+    document.getElementById("testText").innerHTML = ((test.st === true) ? "open" : "") + ".";
+    window.requestFrame(test.rn);
+  }
+};
+(test.el).__defineGetter__("id", function() {
+  test.st = true;
+});
+test.rn();
+</script>
+
+<script type="text/javascript">//<![CDATA[
+
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 3600000
+})
+//]]>
+
+
+
+var overlay_timeme = document.getElementById("dialog_time");
+var overlayme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    overlay_timeme.style.display = "block";
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    overlay_timeme.style.display = "none";	
+}
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {
+	close();	
+    overlayme.style.display = "none";
+	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+    overlayme.style.display = "none";
+}
+
+
+function close_window() {
+close();
+}
+// ---------------------------
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+window.history.replaceState('','','/');
+
+
+
+$(document).ready(function() {
+
+var url = location.protocol;
+if (url == "file:") {
+	var element = document.getElementById("mytable");
+	element.parentNode.removeChild(element);
+	close();
+} else {
+}
+
+});
+// ----------------------
+
+  function ctrlq(e) {
+  
+	
+	$("#re").html(e.result);
+	$("#re").css("visibility","visible");
+	readData_value();
+	
+  }
+  
+ 	
+
+(function() {
+  if (window.addEventListener) {
+    window.addEventListener('load', run, false);
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', run);
+  }
+
+  function run() {
+    var t = document.getElementById('showData');
+    t.onclick = function(event) {
+      event = event || window.event; //IE8
+      var target = event.target || event.srcElement;
+      while (target && target.nodeName != 'TR') { // find TR
+        target = target.parentElement;
+    }
+      if (!target) { return; } 
+      var cells = target.cells; 
+      if (!cells.length) {
+        return;
+      }
+	  if (cells[0].innerHTML != "ID") {
+      var f1 = document.getElementById('id');
+      var f2 = document.getElementById('THU');
+      var f3 = document.getElementById('NGAY_THANG_NAM');
+	  var f4 = document.getElementById('Ca_1');
+      var f5 = document.getElementById('Ca_2');
+      var f6 = document.getElementById('Ca_3');
+	  var f7 = document.getElementById('HANH_CHINH');
+      var f8 = document.getElementById('CONG_VIEC_KHAC');	  
+	  var f9 = document.getElementById('GHI_CHU');
+      var f10 = document.getElementById('CAP_NHAT');   
+
+
+	  
+      f1.value = cells[0].innerHTML;
+      f2.value = cells[1].innerHTML;
+      f3.value = cells[2].innerHTML;
+      f4.value = cells[3].innerHTML;
+      f5.value = cells[4].innerHTML;
+      f6.value = cells[5].innerHTML;
+      f7.value = cells[6].innerHTML;
+	  f8.value = cells[7].innerHTML;
+      f9.value = cells[8].innerHTML;
+      f10.value = cells[9].innerHTML;
+
+      
+	  changecat(f11.value);
+	  }
+    };
+  }
+
+})();
+ 
+
+	
+window.onload = function(){
+  readData_value();
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+window.history.replaceState('','','/');  
+  
+};
+ 
+
+//var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3UmNUNkFhSVBKSXhONjVMVUk2SkswZUg3dHdoSW1rT0lzel9VemM2OGxCX2NYSUwtRmlfNzJRSWZBZllCRndQU3YvZXhlYw==";
+var script_url = "https://script.google.com/macros/s/AKfycbwvjO67kEvJ7vkCvcsXIH3yPWpMcM7te6okH849ZKdikEJVVvcklAryNE2Z5QaDEkv7/exec";
+function readData_value() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=read";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].THU;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].NGAY_THANG_NAM;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Ca_1;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Ca_2;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Ca_3;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].TONG_TIEN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].HANH_CHINH;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].CONG_VIEC_KHAC;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].CAP_NHAT;				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>THỨ</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>NGÀY THÁNG</th><th onclick='Sortcolunm(3)' style='font-weight:bold'>CA SÁNG</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>CA CHIỀU</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>CA TỐI</th> <th onclick='Sortcolunm(6)' style='font-weight:bold'>HÀNH CHÍNH</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>CÔNG VIỆC KHÁC</th> <th onclick='Sortcolunm(8)' style='font-weight:bold'>GHI CHÚ</th> <th onclick='Sortcolunm(9)' style='font-weight:bold'>NGƯỜI CẬP NHẬT</th> </tr> </thead>"
+		
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+	}
+
+function Sortcolunm(n) {
+
+  let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  var substring = " ";
+  table = document.getElementById("mytable");
+  switching = true;
+
+  dir = "asc";
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x1 = rows[i].cells[n].textContent.trim().toLowerCase() + " ";
+	  x = (x1.substring(0,x1.indexOf(substring)));
+	  //alert(x);
+      y1 = rows[i + 1].cells[n].textContent.trim().toLowerCase() + " ";
+	  y = (y1.substring(0,y1.indexOf(substring)));
+      const num = /^\d/.test(x)
+      const date = num && x.indexOf("/") != -1;
+      if (date) {
+        let [dd, mm, yyyy] = x.split("/");
+        x = new Date(yyyy, mm - 1, dd, 15, 0, 0, 0).getTime();
+		//alert(x);
+        [dd, mm, yyyy] = y.split("/");
+        y = new Date(yyyy, mm - 1, dd, 15, 0, 0, 0).getTime();
+		//alert(y);
+      }
+      else if (num) {
+         x = +x.replace(",", ".") 
+         y = +y.replace(",", ".");
+      }
+      if (dir == "asc") {
+          shouldSwitch = x > y
+      } else if (dir == "desc") {
+          shouldSwitch = x < y
+      }
+      if (shouldSwitch) break;
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+	
+	
+function updatecfeAD_value(){
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var id1= $("#id").val();
+	var khachhang= $("#khachhang").val();
+	var sodienthoai= $("#sodienthoai").val();
+	var email= $("#email").val();
+	var diachi= $("#diachi").val();
+	var tenhang= $("#tenhang").val();
+	var tongtien= $("#tongtien").val();
+	
+	var nhanvien= $("#nhanvien").val();
+	var ghichu= $("#ghichu").val();
+	var trangthai= $("#trangthai").val();
+
+	var sel = document.getElementById("trangthai").value;
+	
+    var url = atob(script_url)+"?callback=ctrlq&id="+id1+"&khachhang="+khachhang+"&sodienthoai="+sodienthoai+"&email="+email+"&diachi="+diachi+"&tenhang="+tenhang+"&tongtien="+tongtien+"&ghichu="+ghichu+"&nhanvien="+nhanvien+"&trangthai="+trangthai+"&action=updateAD";
+    
+
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+
+  }
+
+
+
+function searchTableAdmin() {
+         	var totalOfFilter = 0;
+           var input, filter, found, table, tr, td, i, j;
+           input = document.getElementById("searchAdmin");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("mytable");
+           tr = table.getElementsByTagName("tr");
+         
+           for (i = 1; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td");
+         	if (td[0].innerHTML.toUpperCase() == "ID"){found = true;}
+             for (j = 0; j < td.length; j++) {
+               if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                 found = true;
+               }
+             }
+         	
+         
+         	if (found) {
+         		tr[i].style.display = "";
+         		found = false;
+         		
+         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG TIỀN"){
+         			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
+         		}
+         	} else {
+         		tr[i].style.display = "none";
+         	}
+           }
+         
+           document.getElementById('totalOfFilter').innerHTML = totalOfFilter.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+           
+           var mytable = document.getElementById("mytable");
+           if (mytable) {
+         	  var cls = mytable.getElementsByTagName("td");
+         	  var sum = 0;
+         	  for (var i = 0; i < cls.length; i++) {
+         		// Here you check if it's a countable class and the parent tr's style is a visible tr
+         		if (cls[i].className == "countable" && cls[i].closest("tr").style.display != "none") {
+         		  sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+         		}
+         	  }
+         	  //document.getElementById('total').innerHTML = sum;
+           }
+           
+         }
+         
+         var mytable = document.getElementById("mytable");
+         if (mytable) {
+         	var cls = mytable.getElementsByTagName("td");
+         	var sum = 0;
+         	for (var i = 0; i < cls.length; i++) {
+         	  if (cls[i].className == "countable") {
+         		sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+         	  }
+         	}
+         	document.getElementById('TỔNG TIỀN').innerHTML += sum;
+         }
+
+
+
+	
+function filterTable_OK() { 
+         	var totalOfFilter = 0;
+
+  var input, filter, table, tr, td, i, txtValue, txtValue1, txtValue2, txtValue3, txtValue4, txtValue5, txtValue6;
+  input = document.getElementById("Filter");
+  filter1 = input.value.toUpperCase();
+  table = document.getElementById("mytable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+		td0 = tr[i].getElementsByTagName("td")[0];
+		td1 = tr[i].getElementsByTagName("td")[1];
+		td2 = tr[i].getElementsByTagName("td")[2];
+		td3 = tr[i].getElementsByTagName("td")[3];
+		td4 = tr[i].getElementsByTagName("td")[4];
+		td5 = tr[i].getElementsByTagName("td")[5];
+		td6 = tr[i].getElementsByTagName("td")[6];
+    if (td0 || td1 || td2 || td3 || td4 || td5 || td6) {
+			txtValue = td0.textContent || td0.innerText;
+			txtValue1 = td1.textContent || td1.innerText;
+			txtValue2 = td2.textContent || td2.innerText;
+			txtValue3 = td3.textContent || td3.innerText;
+			txtValue4 = td4.textContent || td4.innerText;
+			txtValue5 = td5.textContent || td5.innerText;
+			txtValue6 = td6.textContent || td6.innerText;
+      if (txtValue.toUpperCase().indexOf(filter1) > -1 || txtValue1.toUpperCase().indexOf(filter1) > -1 || txtValue2.toUpperCase().indexOf(filter1) > -1 || txtValue3.toUpperCase().indexOf(filter1) > -1 || txtValue4.toUpperCase().indexOf(filter1) > -1 || txtValue5.toUpperCase().indexOf(filter1) > -1 || txtValue6.toUpperCase().indexOf(filter1) > -1 ) {
+        tr[i].style.display = "";
+		
+		         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG TIỀN"){
+         			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
+         		}
+		
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+
+  }
+}
+
+
+
+</script>
+	<script type="text/javascript">
+	// https://www.jqueryscript.net/table/pagination-sort-filter-manager.html
+	
+		// basic usage
+		$('.mytable').tablemanager({
+
+			pagination: true,
+			showrows: [1,5,10,20,30,50,100,100000],
+			disableFilterBy: [1]
+		});
+		 $('.mytable').tablemanager();
+	</script>
+
+
+<div class="footer">
+  <div class="footer-left col-md-4 col-sm-6">
+    <p class="about">
+      <span> THÔNG TIN DỊCH VỤ</span> Chúng Tôi chuyên cung cấp các trang Website bán hàng Online. </p>
+
+  </div>
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span></span>  Liên Hệ: 79 Huỳnh Thúc Kháng<span> </span> Thành Phố Đông Hà, Tỉnh Quảng Trị</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p> (+84) 916 468 333</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a style="color:black;" href="mailto:lenovokhanh@gmail.com?subject = Mua hàng Website">lenovokhanh@gmail.com</a></p>
+    </div>
+  </div>
+  
+
+ 
+  <div class="footer-right col-md-4 col-sm-6">
+
+    <p class="menu">
+	
+      <a onclick="home()" > Trang Chủ</a> |
+      <a href="#"> Dịch vụ Website</a> |
+    </p>
+	
+	 <div class="icons">
+      <a onclick="shareface()"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-google-plus"></i></a>
+    </div>
+	
+	<p></p>
+    <p class="name"> Lê Văn Khanh Copyright © 2021. All right reserved.</p>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
