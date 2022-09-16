@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -369,22 +369,22 @@ form .question label {
 .question .id {
 	width:60px;
 	}
-.question .khachhang {
+.question .thu {
 	width:160px;
 	}
- .question .email {
+ .question .Ca_1 {
 	width:157px;
 	}
- .question .sodienthoai {
+ .question .ngaythang {
 	width:157px;
 	}
- .question .diachi {
+ .question .Ca_2 {
 	width:590px;
 	}
- .question .tenhang {
+ .question .Ca_3 {
 	width:590px;
 	}
- .question .tongtien {
+ .question .hanhchinh {
 	width:185px;
 	}
  .question .NGAY_DAT_HANG {
@@ -419,22 +419,22 @@ form .question label {
  .question .id {
 	width:60px;
 	}
- .question .khachhang {
+ .question .thu {
 	width:251px;
 	}
- .question .email {
+ .question .Ca_1 {
 	width:154px;
 	}
- .question .sodienthoai {
+ .question .ngaythang {
 	width:154px;
 	}
- .question .diachi {
+ .question .Ca_2 {
 	width:329px;
 	}
- .question .tenhang {
+ .question .Ca_3 {
 	width:329px;
 	}
- .question .tongtien {
+ .question .hanhchinh {
 	width:154px;
 	}
  .question .NGAY_DAT_HANG {
@@ -641,7 +641,7 @@ header  {
 
 <div class="input" align="left">
 
-<div align="right"><input class="input input1" type = "hidden" name ="nhanvien" id="nhanvien" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="Admin" readonly></div>
+<div align="right"><input class="input input1" type = "hidden" name ="congvieckhac" id="congvieckhac" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="Admin" readonly></div>
 
   <div class="question">
   <label>Id</label>
@@ -649,65 +649,58 @@ header  {
    </div>
 
  <div class="question">
-   <label>Khách Hàng</label>
-    <textarea class="khachhang" type="text" name ="khachhang" id="khachhang" value="" style="height:30px"></textarea>
+   <label>Thứ</label>
+    <textarea class="thu" type="text" name ="thu" id="thu" value="" style="height:30px"></textarea>
   </div> 
 
  <div class="question">
-   <label>Điện Thoại</label>
-    <textarea class="sodienthoai" type = "text" name ="sodienthoai" id="sodienthoai" value="" style="height:30px"></textarea>
+   <label>Ngày Tháng</label>
+    <textarea class="ngaythang" type = "text" name ="ngaythang" id="ngaythang" value="" style="height:30px"></textarea>
   </div> 
 
  <div class="question">
-   <label>Email</label>
-    <textarea class="email" type = "text" name ="email" id="email" value="" style="height:30px"></textarea>
+   <label>Ca Sáng</label>
+    <textarea class="Ca_1" type = "text" name ="Ca_1" id="Ca_1" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Địa Chỉ</label>
-    <textarea class="diachi" type = "text" name ="diachi" id="diachi" value="" style="height:30px"></textarea>
+   <label>Ca Chiều</label>
+    <textarea class="Ca_2" type = "text" name ="Ca_2" id="Ca_2" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Tên Hàng</label>
-    <textarea class="tenhang" type = "text" name ="tenhang" id="tenhang" style="height:30px"></textarea>
+   <label>Ca Tối</label>
+    <textarea class="Ca_3" type = "text" name ="Ca_3" id="Ca_3" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Tổng Tiền</label>
-    <textarea class="tongtien" type = "text" name ="tongtien" id="tongtien" style="height:30px"></textarea>
+   <label>Hành Chính</label>
+    <textarea class="hanhchinh" type = "text" name ="hanhchinh" id="hanhchinh" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Ngày Đặt</label>
+   <label>Công Việc Khác</label>
     <textarea class="NGAY_DAT_HANG" type = "text" name ="NGAY_DAT_HANG" id="NGAY_DAT_HANG" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Ngày Giao</label>
+   <label>Ghi Chú</label>
     <textarea class="NGAY_SHIP_HANG" type = "text" name ="NGAY_SHIP_HANG" id="NGAY_SHIP_HANG" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Ghi Chú</label>
+   <label>Cập Nhật</label>
     <textarea class="ghichu" type = "text" name ="ghichu" id="ghichu" style="height:30px"></textarea>
   </div>
 
-<div class="question">
-<label>Trạng Thái</label>
-<select name ="trangthai" id="trangthai" style="width:185px;height:35px" >
-  <option value="Giao Hàng">Giao Hàng</option>
-  <option value="Hủy Hàng">Hủy Hàng</option>
-  <option value="Đặt Hàng">Đặt Hàng</option>  
-</select>
-</div>
+
 
 
 <div class="question2" align="center">
 
 	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
 	
-	<input type="button" class="button button1" onclick="updatecfeAD_value()" value="CẬP NHẬT" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
+	<input type="button" class="button button1" onclick="updateCaDHA_value()" value="CẬP NHẬT" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
 	
 </div>
 </div>
@@ -900,17 +893,6 @@ window.history.replaceState('','','/');
 
 
 
-$(document).ready(function() {
-
-var url = location.protocol;
-if (url == "file:") {
-	var element = document.getElementById("mytable");
-	element.parentNode.removeChild(element);
-	close();
-} else {
-}
-
-});
 // ----------------------
 
   function ctrlq(e) {
@@ -970,7 +952,7 @@ if (url == "file:") {
       f10.value = cells[9].innerHTML;
 
       
-	  changecat(f11.value);
+	  changecat(f12.value);
 	  }
     };
   }
@@ -994,14 +976,14 @@ window.history.replaceState('','','/');
  
 
 //var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3UmNUNkFhSVBKSXhONjVMVUk2SkswZUg3dHdoSW1rT0lzel9VemM2OGxCX2NYSUwtRmlfNzJRSWZBZllCRndQU3YvZXhlYw==";
-var script_url = "https://script.google.com/macros/s/AKfycbwvjO67kEvJ7vkCvcsXIH3yPWpMcM7te6okH849ZKdikEJVVvcklAryNE2Z5QaDEkv7/exec";
+var script_url = "https://script.google.com/macros/s/AKfycbzuEeWmvBhbxJ3zWgeT10IUH29vXkRcSxapizFE3_pIFBM3_mq-E00Bc0Zu5cimSifB/exec";
 function readData_value() {
 
 $("#re").css("visibility","hidden");
    
    
  //var url = atob(script_url)+"?action=read";
-  var url = script_url+"?action=read";
+ var url = script_url+"?action=read";
 
 $.getJSON(url, function (json) {
 
@@ -1111,26 +1093,26 @@ function Sortcolunm(n) {
 
 	
 	
-function updatecfeAD_value(){
+function updateCaDHA_value(){
 	$("#re").css("visibility","hidden");
      document.getElementById("loader").style.visibility = "visible";
 	
 	
 	var id1= $("#id").val();
-	var khachhang= $("#khachhang").val();
-	var sodienthoai= $("#sodienthoai").val();
-	var email= $("#email").val();
-	var diachi= $("#diachi").val();
-	var tenhang= $("#tenhang").val();
-	var tongtien= $("#tongtien").val();
+	var thu= $("#thu").val();
+	var ngaythang= $("#ngaythang").val();
+	var Ca_1= $("#Ca_1").val();
+	var Ca_2= $("#Ca_2").val();
+	var Ca_3= $("#Ca_3").val();
+	var hanhchinh= $("#hanhchinh").val();
 	
-	var nhanvien= $("#nhanvien").val();
+	var congvieckhac= $("#congvieckhac").val();
 	var ghichu= $("#ghichu").val();
-	var trangthai= $("#trangthai").val();
+	var capnhat= $("#capnhat").val();
 
-	var sel = document.getElementById("trangthai").value;
+	var sel = document.getElementById("capnhat").value;
 	
-    var url = atob(script_url)+"?callback=ctrlq&id="+id1+"&khachhang="+khachhang+"&sodienthoai="+sodienthoai+"&email="+email+"&diachi="+diachi+"&tenhang="+tenhang+"&tongtien="+tongtien+"&ghichu="+ghichu+"&nhanvien="+nhanvien+"&trangthai="+trangthai+"&action=updateAD";
+    var url = atob(script_url)+"?callback=ctrlq&id="+id1+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&capnhat="+capnhat+"&action=updateAD";
     
 
 
