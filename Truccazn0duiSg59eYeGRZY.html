@@ -1000,7 +1000,8 @@ function readData_value() {
 $("#re").css("visibility","hidden");
    
    
- var url = atob(script_url)+"?action=read";
+ //var url = atob(script_url)+"?action=read";
+  var url = script_url+"?action=read";
 
 $.getJSON(url, function (json) {
 
