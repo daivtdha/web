@@ -2305,7 +2305,7 @@ span.psw {
 <script src="TruyenDanPicture/jquery.min.js"></script>
 <script src="TruyenDanPicture/Login.min.js"></script>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
 eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|main|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
 </script>
@@ -2431,9 +2431,12 @@ close();
 
 $(document).ready(function() {
 
+
+
+
 var url = location.protocol;
 if (url == "file:") {
-	var element = document.getElementById("LoginCaDHA");
+	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
 } else {
@@ -2442,15 +2445,17 @@ if (url == "file:") {
 });
 
 window.history.replaceState('','','/');
-//var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3UmNUNkFhSVBKSXhONjVMVUk2SkswZUg3dHdoSW1rT0lzel9VemM2OGxCX2NYSUwtRmlfNzJRSWZBZllCRndQU3YvZXhlYw==";
-var script_url = "https://script.google.com/macros/s/AKfycbzuEeWmvBhbxJ3zWgeT10IUH29vXkRcSxapizFE3_pIFBM3_mq-E00Bc0Zu5cimSifB/exec";
 
+// THAY ĐÂY
+
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6dUVlV212QmhieEozeldnZVQxMElVSDI5dlhrUmNTeGFwaXpGRTNfcElGQk0zX21xLUUwMEJjMFp1NWNpbVNpZkIvZXhlYw==";
+//var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
   function LoginCaDHA_value() {
-	var user=$("#username").val();
+
+  var user=$("#username").val();
 	var pass= $("#password").val();
-    //var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
-	var url = script_url+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
+    var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
 
 	if (document.getElementById('username').value === "") {
 	// alert("OK");
@@ -2487,8 +2492,8 @@ var script_url = "https://script.google.com/macros/s/AKfycbzuEeWmvBhbxJ3zWgeT10I
 			return false;
 	
 	}	
-	
 
+	
   Date.prototype.yyyymmdd = function() {
   var yyyy = this.getFullYear();
   var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
@@ -2511,6 +2516,7 @@ Date.prototype.yyyymmddhhmmss = function() {
 
 var d = new Date();
 document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
+
 	
 	
     var request = jQuery.ajax({
@@ -2578,20 +2584,55 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 		
 		} else {	
 	
-	var khánh;
+	//var khánh;
     khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
 	khánh2 = ".html"	
-	khánh = khánh1 + "/" + e.result + khánh2;
-	//window.open(khánh,target="_blank");
+	Updatetime_value();
 	
-    options = 'toolbar=0,status=0,resizable=1';
-    window.open(khánh,'sharer',options);
 	
-	window.history.replaceState('','','/');
-	close();
+				$(function() {
+				$("#dialog-LoginOK").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {			
+						
+                        $(this).dialog("close");
+						//window.open(khánh,target="_blank");
+				options = 'toolbar=0,status=0,resizable=1';
+				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
+				window.history.replaceState('','','/');				
+				close();		
+		
+                    }
+		
+                }
+            });
+			});
+	
+			return false;
+
   }
 
 };
+
+
+  function Updatetime_value() {    
+
+ 
+	var ngay= $("#ngay").val();
+		
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Updatetime";
+  
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+  }
+
 
 
 
@@ -2604,7 +2645,7 @@ function Changepassword_value() {
 	
 	var newpassleng = newpass.length;
 	
-    var url = script_url+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
+    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
 
 	if (document.getElementById('oldusername').value === "") {
 
@@ -2745,7 +2786,7 @@ $(document).keydown(function(event) {
     window.open(url,'sharer',options);
 } 
   
-// FORM LOGIN:
+
         // https://www.ordinarycoders.com/blog/article/custom-user-login-forms
 
         $('.form').find('input, textarea').on('keyup blur focus', function(e) {
@@ -2792,6 +2833,7 @@ $(document).keydown(function(event) {
             $(target).fadeIn(600);
 
         });
+		
 </script>
 
 
