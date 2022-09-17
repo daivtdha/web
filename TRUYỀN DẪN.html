@@ -2077,6 +2077,14 @@ span.psw {
 
 <div id="id01" class="modal">
   
+  <form class="modal-content animate" action="/action_page.php" method="post">
+  
+    <div class="imgcontainer">
+	
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	  <h2 id="dn" style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP TD</h2>
+    </div><!-- Modal -->
+  
 
 <p id='dialog-user' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập UserNmae.</p>
 <p id='dialog-pass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Password.</p>
@@ -2119,11 +2127,9 @@ span.psw {
 
                     <div class="field-wrap">
                         <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-                    </div>
+                    </div>				
 
-				
-
-					<input class="button button-block" type = "button" onClick="LoginCaDHA_value(); " value = "Đăng Nhập" /></input>
+		    <input class="button button-block" type = "button" onClick="LoginCaDHA_value(); " value = "Đăng Nhập" /></input>
 
                 </form>
 
@@ -2136,8 +2142,7 @@ span.psw {
                 <form>
 
                   <div class="top-row">
-
-				  <div class="field-wrap" autocomplete="off">
+			<div class="field-wrap" autocomplete="off">
                         <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
                     </div>
 
@@ -2150,14 +2155,10 @@ span.psw {
                         <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
                     </div>
 
-
                     <div class="field-wrap">
                         <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
                     </div>
-
-
-
-					<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+		   <input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
 
                 </form>
 
