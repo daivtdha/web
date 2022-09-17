@@ -2089,7 +2089,7 @@ span.psw {
 
         <ul class="tab-group">
 
-            <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li onClick="Delre();" class="tab active"><a href="#LoginCaDHA">Login</a></li>
             <li onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 
         </ul>
@@ -2101,7 +2101,7 @@ span.psw {
         <main class="tab-content">
 
 
-            <main id="login">
+            <main id="LoginCaDHA">
 
 				<form>
 
@@ -2433,7 +2433,7 @@ $(document).ready(function() {
 
 var url = location.protocol;
 if (url == "file:") {
-	var element = document.getElementById("login");
+	var element = document.getElementById("LoginCaDHA");
 	element.parentNode.removeChild(element);
 	close();
 } else {
@@ -2449,7 +2449,7 @@ var script_url = "https://script.google.com/macros/s/AKfycbzuEeWmvBhbxJ3zWgeT10I
   function LoginCaDHA_value() {
 	var user=$("#username").val();
 	var pass= $("#password").val();
-    //var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=Login";
+    //var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
 	var url = script_url+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
 
 	if (document.getElementById('username').value === "") {
