@@ -1801,7 +1801,7 @@ body {
 
 <body>
 
-<p align="center" style="font-size:1.7em; color: #000099; font-weight: bold">ĐĂNG NHẬP QUẢN LÝ</p>
+<p align="center" style="font-size:1.7em; color: #000099; font-weight: bold">ĐĂNG NHẬP PHÂN CA</p>
 <p id='dialog-user' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập UserNmae.</p>
 <p id='dialog-pass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Password.</p>
 <p id='dialog-newpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập NewPassword.</p>
@@ -2065,14 +2065,14 @@ window.history.replaceState('','','/');
 
 // THAY ĐÂY
 
-var script_url = "https://script.google.com/macros/s/AKfycbzuEeWmvBhbxJ3zWgeT10IUH29vXkRcSxapizFE3_pIFBM3_mq-E00Bc0Zu5cimSifB/exec";
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6dUVlV212QmhieEozeldnZVQxMElVSDI5dlhrUmNTeGFwaXpGRTNfcElGQk0zX21xLUUwMEJjMFp1NWNpbVNpZkIvZXhlYw==";
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
   function LoginCaDHA_value() {
 
   var user=$("#username").val();
 	var pass= $("#password").val();
-    var url = script_url+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
+    var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
 
 	if (document.getElementById('username').value === "") {
 	// alert("OK");
@@ -2468,4 +2468,38 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
 <br></p>
 	
 
+<div class="footer">
+
+	<div class="footer-left col-md-4 col-sm-6"> 
+
+      <i class="fa fa-map-marker"></i>
+      <p> Liên Hệ: 79 Huỳnh Thúc Kháng</p>
+
+	<p> Thành Phố Đông Hà, Tỉnh Quảng Trị</p>
+
+	</div>
+
+	<div class="footer-center col-md-4 col-sm-6">
+
+      <i class="fa fa-phone"></i>
+      <p> (+84) 916 468 333</p>
+	<div>
+      <p style="color:black;" href="mailto:lenovokhanh@gmail.com?subject = Mua hàng Website"><i class="fa fa-envelope"></i>lenovokhanh@gmail.com</p>
+  	 </div> 
+
+	</div>  
+
+ 
+	<div class="footer-right col-md-4 col-sm-6">
+	
+	 <div class="icons">
+      <a onclick="shareface()"><i class="fa fa-facebook"></i></a>
+		<p>Facebook</p>      
+    </div>
+	
+	<br></p>
+    <p class="name">Lê Văn Khanh, Copyright: © 2021. All right reserved.</p>
+	</div>
+</footer>
+</div>
 </html>
