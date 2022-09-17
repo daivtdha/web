@@ -2077,20 +2077,25 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
-  
-    <div class="imgcontainer">
-	
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-	  <h2 id="dn" style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP TD</h2>
-    </div><!-- Modal -->
 
+<p id='dialog-user' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập UserNmae.</p>
+<p id='dialog-pass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Password.</p>
+<p id='dialog-newpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập NewPassword.</p>
+<p id='dialog-newpassleng' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>NewPassword ít nhất 8 ký.</p>
+<p id='dialog-cfpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Confirm Password.</p>
+<p id='dialog-newcfpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>NewPassword và Confirm Password phải giống nhau.</p>
+
+<p id='dialog-Login' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đăng Nhập sai UserName hoặc Password !</p>
+<p id='dialog-ThayPassNOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đổi Password chưa được!</p>
+<p id='dialog-ThayPassOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đã đổi Password thành công !</p>
+<p id='dialog-LoginOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Login OK !</p>
+<p type = "text" id="ngay">
 
     <div class="form">
 
         <ul class="tab-group">
 
-            <li onClick="Delre();" class="tab active"><a href="#Login">Login</a></li>
+            <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
             <li onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 
         </ul>
@@ -2102,20 +2107,23 @@ span.psw {
         <div class="tab-content">
 
 
-            <div id="Login">
+            <div id="login">
 
-				<form>
+    <form>
+
 
                     <div class="field-wrap" autocomplete="off">
                         <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
                     </div>
 
+
                     <div class="field-wrap">
                         <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-                    </div>				
-                        <p type = "text" id="ngay">
+                    </div>
+
+				
+
 					<input class="button button-block" type = "button" onClick="LoginCaDHA_value(); " value = "Đăng Nhập" /></input>
-										
 
                 </form>
 
@@ -2272,16 +2280,6 @@ span.psw {
 </div>
 <!-- /.container -->
    
-<p id='dialog-user' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập UserNmae.</p>
-<p id='dialog-pass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Password.</p>
-<p id='dialog-newpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập NewPassword.</p>
-<p id='dialog-newpassleng' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>NewPassword ít nhất 8 ký.</p>
-<p id='dialog-cfpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Chưa nhập Confirm Password.</p>
-<p id='dialog-newcfpass' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>NewPassword và Confirm Password phải giống nhau.</p>
-
-<p id='dialog-Login' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đăng Nhập sai UserName hoặc Password !</p>
-<p id='dialog-ThayPassNOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đổi Password chưa được!</p>
-<p id='dialog-ThayPassOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đã đổi Password thành công !</p>
 
 <div class="overlay" id="dialog-container">
   <div class="popup">
