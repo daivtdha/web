@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QUẢN LÝ SHOP HÀNG</title>
+<title>LỊCH TRỰC CA ĐHA</title>
 
 <link rel="stylesheet" href="data/reset.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -2173,8 +2173,6 @@ header  {
   </div>
 
 
-
-
 <div class="question2" align="center">
 <p type = "text" id="ngay"></p>
 	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
@@ -2192,7 +2190,7 @@ header  {
 
 <p></p>
 <textarea type="text" id="searchAdmin" onkeyup='searchTableAdmin()' style="width:150px; height:23px; border-radius: 1em; " placeholder="Tìm Kiếm"></textarea>
-<textarea type = "text" name ="totalOfFilter" id="totalOfFilter" style="width:150px; height:23px; border-radius: 1em; " placeholder="Tổng Tiền" readonly></textarea>
+<textarea type = "text" name ="totalOfFilter" id="totalOfFilter" style="width:150px; height:23px; border-radius: 1em; " placeholder="Tổng.." readonly></textarea>
 
 
 		<div align="center" class="container">
@@ -2200,10 +2198,10 @@ header  {
 			<ul class="pagination">            
             <li data-page="prev" ><span> < <span class="sr-only">(current)</span></span></li>
 			
-				&nbsp;<a>Số dòng</a>
+				&nbsp;<a>Dòng</a>
 			 		<select class  ="form-control" name="state" id="maxRows">
 						 <option value="5000000">Tất cả</option>
-						 <option value="5">5</option>
+						 <option value="5">5</option>						 
 						 <option value="10">10</option>
 						 <option value="15">15</option>
 						 <option value="20">20</option>
@@ -2215,7 +2213,7 @@ header  {
 
 			<li data-page="next" id="prev"><span> > <span class="sr-only">(current)</span></span></li>
 			</ul>
-			
+		<button style="height:26px;" onClick="ExportToExcel_OK();readData_value();">Excel</button>	
 			</div>
 
 <div class = "mytable" id="showData"></div>
@@ -2227,6 +2225,8 @@ header  {
 		</div>	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="ExportExcel.js"></script>
+
 
 <script>
 eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|main|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
@@ -2296,7 +2296,34 @@ close();
 }
 // ---------------------------
 
+function ExportToExcel_OK(type, fn, dl) {
+            // Remove Dynamic hidden controls.
+            var list = $('#showData').find(':not(:visible)');
+			// var list = $('#showData').find(':not(:visible)').remove();
+            for (var i = list.length - 1; 0 <= i; i--) {
+                if (list[i] && list[i].parentElement) {
+                    list[i].parentElement.removeChild(list[i]);
+                }
+            }
 
+                var elt = document.getElementById('mytable');
+             // const elements = elt.getElementsByClassName("sortable");
+             //   while (elements.length > 0) elements[0].remove();
+
+                var wb = XLSX.utils.table_to_book(elt, {
+                    sheet: "Order"
+                });
+                return dl ?
+                    XLSX.write(wb, {
+                        bookType: type,
+                        bookSST: true,
+                        type: 'base64'
+                    }) :
+                    XLSX.writeFile(wb, fn || ('Phân công Trực ca ĐHA.' + (type || 'xlsx')));
+
+
+ } 
+ 
 document.addEventListener('contextmenu', event => event.preventDefault());
 history.pushState(null, null, document.URL);
 window.addEventListener('popstate', function () {
@@ -2536,6 +2563,7 @@ function Readtime_value() {
         return;
       }
 	  if (cells[0].innerHTML != "ID") {
+
       var f1 = document.getElementById('id');
       var f2 = document.getElementById('THU');
       var f3 = document.getElementById('NGAY_THANG_NAM');
@@ -2559,7 +2587,6 @@ function Readtime_value() {
 	  f8.value = cells[7].innerHTML;
       f9.value = cells[8].innerHTML;
       f10.value = cells[9].innerHTML;
-
       
 	  changecat(f12.value);
 	  }
@@ -2586,14 +2613,13 @@ window.addEventListener('popstate', function () {
 // THAY
 
 var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6dUVlV212QmhieEozeldnZVQxMElVSDI5dlhrUmNTeGFwaXpGRTNfcElGQk0zX21xLUUwMEJjMFp1NWNpbVNpZkIvZXhlYw==";
-//var script_url = "https://script.google.com/macros/s/AKfycbzuEeWmvBhbxJ3zWgeT10IUH29vXkRcSxapizFE3_pIFBM3_mq-E00Bc0Zu5cimSifB/exec";
+
 function readData_value() {
 
 $("#re").css("visibility","hidden");
    
    
  var url = atob(script_url)+"?action=read";
- //var url = script_url+"?action=read";
 
 $.getJSON(url, function (json) {
 
@@ -2627,7 +2653,9 @@ $.getJSON(url, function (json) {
 				tabCell = tr.insertCell(-1);				
 				tabCell.innerHTML = json.records[i].GHI_CHU;
 				tabCell = tr.insertCell(-1);				
-				tabCell.innerHTML = json.records[i].CAP_NHAT;				
+				tabCell.innerHTML = json.records[i].CAP_NHAT;
+				
+			
             }		
 			
         var divContainer = document.getElementById("showData");
@@ -2637,7 +2665,7 @@ $.getJSON(url, function (json) {
 		$("#re").css("visibility","visible");
         // document.getElementById("mytable").align="center";
 		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>THỨ</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>NGÀY THÁNG</th><th onclick='Sortcolunm(3)' style='font-weight:bold'>CA SÁNG</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>CA CHIỀU</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>CA TỐI</th> <th onclick='Sortcolunm(6)' style='font-weight:bold'>HÀNH CHÍNH</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>CÔNG VIỆC KHÁC</th> <th onclick='Sortcolunm(8)' style='font-weight:bold'>GHI CHÚ</th> <th onclick='Sortcolunm(9)' style='font-weight:bold'>NGƯỜI CẬP NHẬT</th> </tr> </thead>"
-		
+	
 		table.innerHTML = thead + table.innerHTML;		
 		
 		//window.onload = sorttable.init;
@@ -2743,8 +2771,7 @@ function updateCaDHA_value(){
 	var sel = document.getElementById("capnhat").value;
 	
     var url = atob(script_url)+"?callback=ctrlq&id="+id1+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&capnhat="+capnhat+"&action=updateAD";
-    
-
+ 
 
     var request = jQuery.ajax({
       crossDomain: true,
@@ -2757,6 +2784,7 @@ function updateCaDHA_value(){
 	document.getElementById("id").value = "";
 
   }
+
 
 
 function searchTableAdmin() {
@@ -2781,7 +2809,7 @@ function searchTableAdmin() {
          		tr[i].style.display = "";
          		found = false;
          		
-         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG TIỀN"){
+         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG.."){
          			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
          		}
          	} else {
@@ -2815,7 +2843,7 @@ function searchTableAdmin() {
          		sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
          	  }
          	}
-         	document.getElementById('TỔNG TIỀN').innerHTML += sum;
+         	document.getElementById('TỔNG..').innerHTML += sum;
          }
 
 
@@ -2848,7 +2876,7 @@ function filterTable_OK() {
       if (txtValue.toUpperCase().indexOf(filter1) > -1 || txtValue1.toUpperCase().indexOf(filter1) > -1 || txtValue2.toUpperCase().indexOf(filter1) > -1 || txtValue3.toUpperCase().indexOf(filter1) > -1 || txtValue4.toUpperCase().indexOf(filter1) > -1 || txtValue5.toUpperCase().indexOf(filter1) > -1 || txtValue6.toUpperCase().indexOf(filter1) > -1 ) {
         tr[i].style.display = "";
 		
-		         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG TIỀN"){
+		         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG.."){
          			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
          		}
 		
