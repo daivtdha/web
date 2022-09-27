@@ -2341,8 +2341,7 @@ header  {
 
 <div class="question2" align="center">
 <p type = "text" id="ngay"></p>
-<p type = "text" id="userCa"></p>
-<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
+	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
 	
 	<input type="button" class="button button1" id="btn-show-update" value="Cập nhật" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
 	<input type="button" class="button button1" id="btn-show-insert" value="Thêm SL" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
@@ -2637,7 +2636,6 @@ $(function() {
 $(document).ready(function() {
 
 Readtime_value();
-
 window.history.replaceState('','','/');
 var url = location.protocol;
 if (url == "file:") {
@@ -2657,7 +2655,6 @@ if (url == "file:") {
   function ctrlq(e) {
 
 document.getElementById("ngay").value = e.result;
-document.getElementById("userCa").value = e.result;
 Date.prototype.yyyymmdd = function() {
   var yyyy = this.getFullYear();
   var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
@@ -2686,7 +2683,6 @@ self.close();
 
 } else {
 //window.history.replaceState('','','/');
-UserCa_value();
 readDataCaDHA();
 
 }
@@ -2712,21 +2708,6 @@ function Readtime_value() {
 
   }	
 
-function UserCa_value() {
- 
-	var userCa= $("#userCa").val();	
-    var url = atob(script_url)+"?callback=ctrlq&userCa="+userCa+"&action=UserCa";
-  
-  
-    var request = jQuery.ajax({
-      crossDomain: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-  }	  
-  
 (function() {
   if (window.addEventListener) {
     window.addEventListener('load', run, false);
@@ -2797,7 +2778,7 @@ window.addEventListener('popstate', function () {
 
 // THAY
 
-var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6aVhualJzaFZBZ3dSNGF0bjR1Vk9EbS1aMGFUODNhOElsM3ZhMFYwVWVVU3BnTHFwbk8tWVN5RTlhekczU1U0QlovZXhlYw==";
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5YS1ibDJnWEN2YndnakdBMDd1d0VwcV8tVU0wdXFnanZEeDg1eFV6QWJZNzdkZ1h1aThqbkhvMkNpRHhjeGtiRzEvZXhlYw==";
 
 function readDataCaDHA() {
 
@@ -2997,11 +2978,10 @@ function updateCaDHA_value(){
 	var congvieckhac= $("#congvieckhac").val();
 	var ghichu= $("#ghichu").val();
 	var capnhat= $("#capnhat").val();
-	var userCa= $("#userCa").val();
 
-	//var sel = document.getElementById("capnhat").value;
+	var sel = document.getElementById("capnhat").value;
 	
-    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&userCa="+userCa+"&capnhatCaDHA="+capnhatCaDHA+"&action=updateCaDHA";
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&capnhat="+capnhat+"&capnhatCaDHA="+capnhatCaDHA+"&action=updateCaDHA";
  
 
     var request = jQuery.ajax({
@@ -3035,11 +3015,9 @@ function deleteCaDHA_value(){
 	var ghichu= $("#ghichu").val();
 	var capnhat= $("#capnhat").val();
 
-	var userCa= $("#userCa").val();
-
-	//var sel = document.getElementById("capnhat").value;
+	var sel = document.getElementById("capnhat").value;
 	
-    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&userCa="+userCa+"&capnhatCaDHA="+capnhatCaDHA+"&action=deleteCaDHA";
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&capnhat="+capnhat+"&capnhatCaDHA="+capnhatCaDHA+"&action=deleteCaDHA";
  
 
     var request = jQuery.ajax({
@@ -3073,11 +3051,9 @@ function insertCaDHA_value(){
 	var ghichu= $("#ghichu").val();
 	var capnhat= $("#capnhat").val();
 
-	var userCa= $("#userCa").val();
-
-	//var sel = document.getElementById("capnhat").value;
+	var sel = document.getElementById("capnhat").value;
 	
-    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&userCa="+userCa+"&capnhatCaDHA="+capnhatCaDHA+"&action=insertCaDHA";
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&thu="+thu+"&ngaythang="+ngaythang+"&Ca_1="+Ca_1+"&Ca_2="+Ca_2+"&Ca_3="+Ca_3+"&hanhchinh="+hanhchinh+"&ghichu="+ghichu+"&congvieckhac="+congvieckhac+"&capnhat="+capnhat+"&capnhatCaDHA="+capnhatCaDHA+"&action=insertCaDHA";
  
 
     var request = jQuery.ajax({
