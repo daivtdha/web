@@ -2129,7 +2129,7 @@ span.psw {
                         <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
                     </div>				
 
-		    <input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
+		    <input class="button button-block" type = "button" onClick="LoginAll(); " value = "Đăng Nhập" /></input>
 
                 </form>
 
@@ -2312,14 +2312,838 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 		
 <script type="text/javascript">//<![CDATA[
 
-!function(c){"use strict";c.fn.idle=function(e){var t,o,n=e.startAtIdle||!1,i=!e.startAtIdle||!0,a=c.extend({},{idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},e),l=null;return c(this).on("idle:stop",{},function(){c(this).off(a.events),a.keepTracking=!1,t(l,a)}),t=function(e,t){return n&&(t.onActive.call(),n=!1),clearTimeout(e),t.keepTracking?o(t):void 0},o=function(e){return(e.recurIdleCall?setInterval:setTimeout)(function(){n=!0,e.onIdle.call()},e.idle)},this.each(function(){l=o(a),c(this).on(a.events,function(){l=t(l,a)}),(a.onShow||a.onHide)&&c(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?i&&(i=!1,a.onHide.call()):i||(i=!0,a.onShow.call())})})}}(jQuery),$(document).idle({onIdle:function(){Search_dialog_time()},idle:18e5});var overlay_timeme=document.getElementById("dialog_time"),overlayme=document.getElementById("testText");function Search_dialog_time(){(null==document.getElementById("dialog_time")||null==document.getElementById("testText")?close:show_dialog_time)()}function show_dialog_time(){overlay_timeme.style.display="block"}function confirm_time(){close(),overlay_timeme.style.display="none"}document.getElementById("confirm_time").onclick=function(){confirm_time()},document.getElementById("btn-show-dialog").onclick=function(){show_dialog()};overlayme=document.getElementById("dialog-container");function show_dialog(){overlayme.style.display="block"}function confirm(){close(),overlayme.style.display="none"}function cancel(){overlayme.style.display="none"}function close_window(){close()}document.getElementById("confirm").onclick=function(){confirm()},document.getElementById("cancel").onclick=function(){cancel()},document.addEventListener("contextmenu",e=>e.preventDefault()),home=function(){location.href=location.protocol+"//"+location.hostname+(location.port?":"+location.port:"")},window.requestFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||window.oRequestAnimationFrame||function(e){window.setTimeout(e,50)};var test={st:!1,el:document.createElement("img"),rn:function(){test.st=!1,console.log(test.el),console.clear(),document.getElementById("testText").innerHTML=(!0===test.st?"open":"")+".",window.requestFrame(test.rn)}};test.el.__defineGetter__("id",function(){test.st=!0}),test.rn(),document.getElementById("btn-show-dialog").onclick=function(){show_dialog()};overlayme=document.getElementById("dialog-container");function show_dialog(){overlayme.style.display="block"}function confirm(){close_window(),overlayme.style.display="none"}function cancel(){overlayme.style.display="none"}function close_window(){close()}document.getElementById("confirm").onclick=function(){confirm()},document.getElementById("cancel").onclick=function(){cancel()},$(document).ready(function(){var e;"file:"==location.protocol&&((e=document.getElementById("login")).parentNode.removeChild(e),close())}),window.history.replaceState("","","/");var script_url="aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6ZEZpRy1vSkMyQ1k4cTJncHk0VmxaSjFfOHlZQTRRYWIwbHoxbkluak90QldLOUxCd3VRQnVzcy1fd3pJenhfMjMvZXhlYw==";function LoginQL_value(){var e=$("#username").val(),t=$("#password").val(),o=$("#ngay").val();Date.prototype.yyyymmdd=function(){var e=this.getFullYear(),t=this.getMonth()<9?"0"+(this.getMonth()+1):this.getMonth()+1,o=this.getDate()<10?"0"+this.getDate():this.getDate();return"".concat(e).concat(t).concat(o)},Date.prototype.yyyymmddhhmm=function(){var e=this.yyyymmdd(),t=this.getHours()<10?"0"+this.getHours():this.getHours(),o=60*(this.getMinutes()<10?"0"+this.getMinutes():this.getMinutes());return"".concat(e).concat(t).concat(o)},Date.prototype.yyyymmddhhmmss=function(){var e=this.yyyymmddhhmm(),t=this.getSeconds()<10?"0"+this.getSeconds():this.getSeconds();return"".concat(e)+t};var n=new Date;document.getElementById("ngay").value=n.yyyymmddhhmmss().toString();o=$("#ngay").val(),n=atob(script_url)+"?callback=ctrlq&ngay="+o+"&action=Updatetime",jQuery.ajax({crossDodiv:!0,url:n,method:"GET",dataType:"jsonp"}),n=atob(script_url)+"?callback=ctrlq&ngay="+o+"&password="+t+"&username="+e+"&action=LoginQL";if(""===document.getElementById("username").value)return $(function(){$("#dialog-user").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;if(""===document.getElementById("password").value)return $(function(){$("#dialog-pass").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;jQuery.ajax({crossDodiv:!0,url:n,method:"GET",dataType:"jsonp"})}function ctrlq(e){return document.getElementById("password").value="","Đăng nhập sai User Name hoặc Password !"===e.result?$(function(){$("#dialog-Login").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}):"Đổi Password NOK !"===e.result?$(function(){$("#dialog-ThayPassNOK").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}):"Đổi Password OK !"===e.result?$(function(){$("#dialog-ThayPassOK").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}):(khánh1=location.protocol+"//"+location.hostname+(location.port?":"+location.port:""),khánh2=".html",$(function(){$("#dialog-LoginOK").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close"),options="toolbar=0,status=0,resizable=1",window.open(khánh1+"/"+e.result+khánh2,"sharer",options),window.history.replaceState("","","/"),close()}}})})),!1}function Updatetime_value(){var e=$("#ngay").val(),e=atob(script_url)+"?callback=ctrlq&ngay="+e+"&action=Updatetime";jQuery.ajax({crossDodiv:!0,url:e,method:"GET",dataType:"jsonp"})}function Changepassword_value(){var e=$("#oldusername").val(),t=$("#oldpassword").val(),o=$("#newpassword").val(),n=($("#cfpassword").val(),o.length),o=atob(script_url)+"?callback=ctrlq&oldpassword="+t+"&oldusername="+e+"&newpassword="+o+"&action=Changepassword";if(""===document.getElementById("oldusername").value)return $(function(){$("#dialog-user").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;if(""===document.getElementById("oldpassword").value)return $(function(){$("#dialog-pass").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;if(""===document.getElementById("newpassword").value)return $(function(){$("#dialog-newpass").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;if(n<8)return $(function(){$("#dialog-newpassleng").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;if(""===document.getElementById("cfpassword").value)return $(function(){$("#dialog-cfpass").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;if(document.getElementById("newpassword").value!==document.getElementById("cfpassword").value)return $(function(){$("#dialog-newcfpass").dialog({modal:!0,buttons:{OK:function(){$(this).dialog("close")}}})}),!1;jQuery.ajax({crossDodiv:!0,url:o,method:"GET",dataType:"jsonp"});document.getElementById("oldusername").value="",document.getElementById("oldpassword").value="",document.getElementById("newpassword").value="",document.getElementById("cfpassword").value=""}function Delre(){document.querySelector("#re").innerHTML=""}$(document).keydown(function(e){return("s"!=String.fromCharCode(e.which).toLowerCase()&&13!=e.keyCode||!e.ctrlKey)&&19!=e.which||(e.preventDefault(),!1)}),shareface=function(){url="https://www.facebook.com/sharer/sharer.php?u="+location.protocol+"//"+location.hostname+(location.port?":"+location.port:""),options="toolbar=0,status=0,resizable=1,width=626,height=436",window.open(url,"sharer",options)},$(".form").find("input, textarea").on("keyup blur focus",function(e){var t=$(this),o=t.prev("label");"keyup"===e.type?""===t.val()?o.removeClass("active highlight"):o.addClass("active highlight"):"blur"===e.type?""===t.val()?o.removeClass("active highlight"):o.removeClass("highlight"):"focus"===e.type&&(""===t.val()?o.removeClass("highlight"):""!==t.val()&&o.addClass("highlight"))}),$(".tab a").on("click",function(e){e.preventDefault(),$(this).parent().addClass("active"),$(this).parent().siblings().removeClass("active"),target=$(this).attr("href"),$(".tab-content > div").not(target).hide(),$(target).fadeIn(600)});
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 1800000
+})
+//]]>
+
+
+var overlay_timeme = document.getElementById("dialog_time");
+var overlayme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    overlay_timeme.style.display = "block";
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    overlay_timeme.style.display = "none";	
+}
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {
+	close();	
+    overlayme.style.display = "none";
+	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+    overlayme.style.display = "none";
+}
+
+
+function close_window() {
+close();
+}
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+home = function(){
+location.href = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+}
+
+
+window.requestFrame = (function() {
+  return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
+    window.setTimeout(c, 50);
+  }))));
+})();
+var test = {
+  st: false,
+  el: document.createElement("img"),
+  rn: function() {
+    test.st = false;
+    console.log(test.el);
+    console.clear();
+    document.getElementById("testText").innerHTML = ((test.st === true) ? "open" : "") + ".";
+    window.requestFrame(test.rn);
+  }
+};
+(test.el).__defineGetter__("id", function() {
+  test.st = true;
+});
+test.rn();
+//------------------------
+
+
+// Thoát
+
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {  
+	close_window();	
+    overlayme.style.display = "none";	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {  
+    overlayme.style.display = "none";
+}
+
+
+function close_window() {
+close();
+}
+
+// --------------------
+
+
+$(document).ready(function() {
+
+
+
+
+var url = location.protocol;
+if (url == "file:") {
+	var element = document.getElementById("login");
+	element.parentNode.removeChild(element);
+	close();
+} else {
+}
+
+});
+
+window.history.replaceState('','','/');
+
+// THAY ĐÂY
+
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6ZEZpRy1vSkMyQ1k4cTJncHk0VmxaSjFfOHlZQTRRYWIwbHoxbkluak90QldLOUxCd3VRQnVzcy1fd3pJenhfMjMvZXhlYw==";
+//var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
+
+  function LoginQL_value() {
+
+	var user=$("#username").val();
+	var pass= $("#password").val();
+	var ngay= $("#ngay").val();
+
+
+Date.prototype.yyyymmdd = function() {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+  return "".concat(yyyy).concat(mm).concat(dd);
+};
+
+Date.prototype.yyyymmddhhmm = function() {
+  var yyyymmdd = this.yyyymmdd();
+  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
+  return "".concat(yyyymmdd).concat(hh).concat(min);
+};
+
+Date.prototype.yyyymmddhhmmss = function() {
+  var yyyymmddhhmm = this.yyyymmddhhmm();
+  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+  return "".concat(yyyymmddhhmm)+ss;
+};
+
+var d = new Date();
+document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
+
+
+	var ngay= $("#ngay").val();
+		
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Updatetime";
+  
+
+    var request = jQuery.ajax({
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+
+
+	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+"&action=LoginQL";
+
+	if (document.getElementById('username').value === "") {
+	// alert("OK");
+	
+				$(function() {
+            $("#dialog-user").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}	
+	
+	if (document.getElementById('password').value === "") {
+	// alert("OK");
+	
+			$(function() {
+            $("#dialog-pass").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}	
+
+	
+
+	
+    var request = jQuery.ajax({
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+
+
+  }
+
+  function ctrlq(e) {
+  document.getElementById('password').value = "";
+       if (e.result === "Đăng nhập sai User Name hoặc Password !") {
+
+			
+			$(function() {
+            $("#dialog-Login").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+		
+       } else if (e.result === "Đổi Password NOK !") {
+
+			
+			$(function() {
+            $("#dialog-ThayPassNOK").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+
+
+       } else if (e.result === "Đổi Password OK !") {
+
+			
+			$(function() {
+            $("#dialog-ThayPassOK").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+			
+		
+		} else {	
+	
+	//var khánh;
+    khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	khánh2 = ".html"	
+	// Updatetime_value();
+	
+	
+				$(function() {
+				$("#dialog-LoginOK").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {			
+						
+                        $(this).dialog("close");
+						//window.open(khánh,target="_blank");
+				options = 'toolbar=0,status=0,resizable=1';
+				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
+				window.history.replaceState('','','/');				
+				close();		
+		
+                    }
+		
+                }
+            });
+			});
+	
+			return false;
+
+  }
+
+};
+
+
+  function Updatetime_value() {    
+
+ 
+	var ngay= $("#ngay").val();
+		
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Updatetime";
+  
+
+    var request = jQuery.ajax({
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+  }
+
+
+
+
+function Changepassword_value() {
+
+	var olduser=$("#oldusername").val();
+	var oldpass= $("#oldpassword").val();
+	var newpass= $("#newpassword").val();
+	var cfpass= $("#cfpassword").val();
+	
+	var newpassleng = newpass.length;
+	
+    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
+
+	if (document.getElementById('oldusername').value === "") {
+
+	
+				$(function() {
+            $("#dialog-user").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}	
+	
+	if (document.getElementById('oldpassword').value === "") {
+
+	
+				$(function() {
+            $("#dialog-pass").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}
+
+	if (document.getElementById('newpassword').value === "") {
+
+	
+				$(function() {
+            $("#dialog-newpass").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}
+	if(newpassleng < 8) {
+
+			$(function() {
+            $("#dialog-newpassleng").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+			
+    return false;
+}
+	
+	
+	if (document.getElementById('cfpassword').value === "") {
+
+	
+				$(function() {
+            $("#dialog-cfpass").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}
+
+	if (document.getElementById('newpassword').value !== document.getElementById('cfpassword').value) {
+
+	
+				$(function() {
+            $("#dialog-newcfpass").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	
+	}
+	
+
+    var request = jQuery.ajax({	
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";	
+  }
+
+function Delre() {
+  document.querySelector("#re").innerHTML="";
+}
+ 
+  
+$(document).keydown(function(event) {
+    if (!((String.fromCharCode(event.which).toLowerCase() == 's' || event.keyCode == 13) && event.ctrlKey) && !(event.which == 19)) return true;
+    event.preventDefault();
+    return false;
+});  
+
+// FACEBOOK
+ shareface = function(){
+    url = 'https://www.facebook.com/sharer/sharer.php?u=' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	
+    options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+    window.open(url,'sharer',options);
+} 
+  
+
+        // https://www.ordinarycoders.com/blog/article/custom-user-login-forms
+
+        $('.form').find('input, textarea').on('keyup blur focus', function(e) {
+
+            var $this = $(this),
+                label = $this.prev('label');
+
+            if (e.type === 'keyup') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.addClass('active highlight');
+                }
+            } else if (e.type === 'blur') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');		
+                } else {
+                    label.removeClass('highlight');
+                }
+            } else if (e.type === 'focus') {
+
+                if ($this.val() === '') {
+                    label.removeClass('highlight');
+                } else
+                if ($this.val() !== '') {
+                    label.addClass('highlight');
+                }
+            }
+
+        });
+
+        $('.tab a').on('click', function(e) {
+
+            e.preventDefault();
+
+            $(this).parent().addClass('active');
+			
+            $(this).parent().siblings().removeClass('active');
+
+            target = $(this).attr('href');
+
+            $('.tab-content > div').not(target).hide();
+
+            $(target).fadeIn(600);
+
+        });
 		
 </script>
 
 
 <script id="rendered-js">
 
-var _0x426f53=_0xaaff;(function(_0x59dda1,_0x2f49f2){var _0x2f3ee6=_0xaaff,_0x4cf507=_0x59dda1();while(!![]){try{var _0x5bc812=parseInt(_0x2f3ee6(0xb2))/0x1*(-parseInt(_0x2f3ee6(0x7a))/0x2)+-parseInt(_0x2f3ee6(0xac))/0x3*(-parseInt(_0x2f3ee6(0xf1))/0x4)+-parseInt(_0x2f3ee6(0xec))/0x5+parseInt(_0x2f3ee6(0x74))/0x6+-parseInt(_0x2f3ee6(0xb4))/0x7*(parseInt(_0x2f3ee6(0xe8))/0x8)+parseInt(_0x2f3ee6(0x99))/0x9+-parseInt(_0x2f3ee6(0xbd))/0xa*(-parseInt(_0x2f3ee6(0xea))/0xb);if(_0x5bc812===_0x2f49f2)break;else _0x4cf507['push'](_0x4cf507['shift']());}catch(_0x64ec76){_0x4cf507['push'](_0x4cf507['shift']());}}}(_0x3236,0x577c0));var _0x32c2e4=_0x59c5;(function(){var _0x37d0d8=_0xaaff;for(var _0x291b7b=_0x59c5,_0x2e00cc=_0x429f();;)try{if(0xf0a93==+parseInt(_0x291b7b(0x17c))+-parseInt(_0x291b7b(0x16a))/0x2+parseInt(_0x291b7b(0x170))/0x3+-parseInt(_0x291b7b(0x10c))/0x4*(parseInt(_0x291b7b(0x173))/0x5)+-parseInt(_0x291b7b(0x108))/0x6*(-parseInt(_0x291b7b(0x176))/0x7)+parseInt(_0x291b7b(0x17e))/0x8+-parseInt(_0x291b7b(0x15e))/0x9)break;_0x2e00cc[_0x37d0d8(0xf6)](_0x2e00cc[_0x37d0d8(0xff)]());}catch(_0x576211){_0x2e00cc['push'](_0x2e00cc[_0x37d0d8(0xff)]());}}()),function(_0x107cdc){'use strict';_0x107cdc['fn']['idle']=function(_0x18772f){var _0x170a5f=_0xaaff,_0xdf285d,_0x27db89,_0x430645=_0x59c5,_0x321938=_0x18772f[_0x170a5f(0xd9)]||!0x1,_0x42e3d0=!_0x18772f[_0x430645(0x17a)]||!0x0,_0x285b93=_0x107cdc[_0x430645(0x16f)]({},{'idle':0xea60,'events':_0x430645(0x11d),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0x18772f),_0x11acdd=null;return _0x107cdc(this)['on'](_0x430645(0x175),{},function(){var _0x23d30c=_0x430645;_0x107cdc(this)['off'](_0x285b93[_0x23d30c(0x14c)]),_0x285b93[_0x23d30c(0x158)]=!0x1,_0xdf285d(_0x11acdd,_0x285b93);}),_0xdf285d=function(_0x2806ba,_0x1d3aa3){var _0x2cf2dc=_0x170a5f,_0x45109b=_0x430645;return _0x321938&&(_0x1d3aa3[_0x45109b(0x13a)][_0x45109b(0x165)](),_0x321938=!0x1),clearTimeout(_0x2806ba),_0x1d3aa3[_0x2cf2dc(0xa8)]?_0x27db89(_0x1d3aa3):void 0x0;},_0x27db89=function(_0x1f0ab9){var _0x483a51=_0x430645;return(_0x1f0ab9[_0x483a51(0x113)]?setInterval:setTimeout)(function(){var _0x5dc5cc=_0x483a51;_0x321938=!0x0,_0x1f0ab9[_0x5dc5cc(0x16e)][_0x5dc5cc(0x165)]();},_0x1f0ab9[_0x483a51(0x121)]);},this[_0x430645(0x178)](function(){var _0x378200=_0x430645;_0x11acdd=_0x27db89(_0x285b93),_0x107cdc(this)['on'](_0x285b93[_0x378200(0x14c)],function(){_0x11acdd=_0xdf285d(_0x11acdd,_0x285b93);}),(_0x285b93[_0x378200(0x177)]||_0x285b93[_0x378200(0x140)])&&_0x107cdc(document)['on'](_0x378200(0x148),function(){var _0xddc1aa=_0xaaff,_0x44265a=_0x378200;document[_0x44265a(0x134)]||document[_0xddc1aa(0xbf)]||document[_0x44265a(0xfd)]||document[_0x44265a(0x14a)]?_0x42e3d0&&(_0x42e3d0=!0x1,_0x285b93[_0xddc1aa(0xd7)][_0x44265a(0x165)]()):_0x42e3d0||(_0x42e3d0=!0x0,_0x285b93[_0x44265a(0x177)][_0x44265a(0x165)]());});});};}(jQuery),$(document)[_0x32c2e4(0x121)]({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740});var overlay_timeme=document[_0x32c2e4(0xfb)]('dialog_time'),overlayme=document[_0x426f53(0x86)](_0x32c2e4(0x12e));function Search_dialog_time(){var _0x2fafc3=_0x426f53,_0x282e69=_0x32c2e4;(null==document[_0x282e69(0xfb)](_0x282e69(0x11e))||null==document[_0x282e69(0xfb)](_0x2fafc3(0xc3))?close:show_dialog_time)();}function _0xaaff(_0x5b0221,_0x72cd3b){var _0x3236d7=_0x3236();return _0xaaff=function(_0xaaffb9,_0x52d5e9){_0xaaffb9=_0xaaffb9-0x6f;var _0x575786=_0x3236d7[_0xaaffb9];return _0x575786;},_0xaaff(_0x5b0221,_0x72cd3b);}function show_dialog_time(){var _0x40d335=_0x426f53;overlay_timeme['style'][_0x40d335(0x9a)]=_0x32c2e4(0x14d);}function confirm_time(){var _0xaed72a=_0x426f53,_0x59e615=_0x32c2e4;close(),overlay_timeme[_0xaed72a(0xdb)][_0x59e615(0x114)]=_0x59e615(0x174);}function show_dialog(){var _0x305ad4=_0x32c2e4;overlayme[_0x305ad4(0x147)][_0x305ad4(0x114)]=_0x305ad4(0x14d);}function confirm(){var _0x12cd4e=_0x32c2e4;close(),overlayme[_0x12cd4e(0x147)][_0x12cd4e(0x114)]=_0x12cd4e(0x174);}function cancel(){var _0x2526e7=_0x32c2e4;overlayme[_0x2526e7(0x147)][_0x2526e7(0x114)]='none';}function close_window(){close();}document[_0x32c2e4(0xfb)](_0x32c2e4(0x10b))[_0x32c2e4(0x159)]=function(){confirm_time();},document['getElementById'](_0x32c2e4(0x169))[_0x32c2e4(0x159)]=function(){show_dialog();},overlayme=document[_0x426f53(0x86)](_0x32c2e4(0x106)),document[_0x32c2e4(0xfb)](_0x426f53(0xf2))[_0x32c2e4(0x159)]=function(){confirm();},document[_0x426f53(0x86)](_0x32c2e4(0x130))[_0x426f53(0xd0)]=function(){cancel();},document[_0x32c2e4(0x163)](_0x426f53(0xfa),_0x3c3199=>_0x3c3199[_0x426f53(0xa4)]()),home=function(){var _0x1be5bc=_0x426f53,_0x55f5f2=_0x32c2e4;location[_0x55f5f2(0x164)]=location[_0x55f5f2(0x14b)]+'//'+location[_0x1be5bc(0xca)]+(location[_0x1be5bc(0xe2)]?':'+location['port']:'');},window[_0x32c2e4(0xfe)]=window[_0x32c2e4(0x12f)]||window[_0x426f53(0xc9)]||window[_0x32c2e4(0x15c)]||window[_0x32c2e4(0x123)]||window[_0x32c2e4(0x153)]||function(_0x3e79ff){var _0x31d05c=_0x426f53;window[_0x31d05c(0x6f)](_0x3e79ff,0x32);};var test={'st':!0x1,'el':document['createElement'](_0x32c2e4(0x117)),'rn':function(){var _0x3209e0=_0x426f53,_0x43d4af=_0x32c2e4;test['st']=!0x1,console[_0x43d4af(0x15b)](test['el']),console[_0x3209e0(0x9d)](),document[_0x43d4af(0xfb)](_0x43d4af(0x12e))[_0x43d4af(0x156)]=(!0x0===test['st']?_0x3209e0(0x7e):'')+'.',window[_0x43d4af(0xfe)](test['rn']);}};function show_dialog(){var _0x617a2f=_0x426f53;overlayme[_0x32c2e4(0x147)][_0x617a2f(0x9a)]=_0x617a2f(0xc5);}function _0x59c5(_0x18a377,_0xd9648b){var _0x16626e=_0x429f();return(_0x59c5=function(_0x25acf5,_0x251c91){return _0x16626e[_0x25acf5-=0xf8];})(_0x18a377,_0xd9648b);}function _0x429f(){var _0x1a96ed=_0x426f53,_0x4d72de=[_0x1a96ed(0xf0),'btn-show-dialog',_0x1a96ed(0xb5),_0x1a96ed(0xa4),'active',_0x1a96ed(0xcb),_0x1a96ed(0xab),_0x1a96ed(0xb6),_0x1a96ed(0x90),'getHours',_0x1a96ed(0xc6),_0x1a96ed(0x9c),'none',_0x1a96ed(0xa6),_0x1a96ed(0xc7),_0x1a96ed(0xc8),_0x1a96ed(0x8c),_0x1a96ed(0xb7),_0x1a96ed(0xd9),_0x1a96ed(0xd8),_0x1a96ed(0xae),_0x1a96ed(0xe0),_0x1a96ed(0x78),_0x1a96ed(0x91),_0x1a96ed(0x71),_0x1a96ed(0x7b),_0x1a96ed(0xc2),_0x1a96ed(0x85),_0x1a96ed(0xa2),_0x1a96ed(0xd4),_0x1a96ed(0xf3),_0x1a96ed(0x86),_0x1a96ed(0xba),'mozHidden',_0x1a96ed(0xf5),'getSeconds',_0x1a96ed(0xa1),_0x1a96ed(0x88),_0x1a96ed(0x95),_0x1a96ed(0xfc),'siblings',_0x1a96ed(0x8d),_0x1a96ed(0x93),'https://www.facebook.com/sharer/sharer.php?u=',_0x1a96ed(0xce),'#dialog-newpass',_0x1a96ed(0xf2),_0x1a96ed(0xf4),_0x1a96ed(0xd2),_0x1a96ed(0xbc),_0x1a96ed(0xbe),'open',_0x1a96ed(0x8a),_0x1a96ed(0x79),'.tab\x20a',_0x1a96ed(0x7d),_0x1a96ed(0x9a),_0x1a96ed(0xef),_0x1a96ed(0xf9),_0x1a96ed(0x83),_0x1a96ed(0xa9),_0x1a96ed(0x9b),'keyup\x20blur\x20focus','?callback=ctrlq&oldpassword=',_0x1a96ed(0xe2),_0x1a96ed(0xaf),_0x1a96ed(0x87),_0x1a96ed(0x80),_0x1a96ed(0x101),'idle','length',_0x1a96ed(0x94),'removeChild',_0x1a96ed(0x8f),_0x1a96ed(0xdd),_0x1a96ed(0xc4),_0x1a96ed(0xd1),_0x1a96ed(0xf8),_0x1a96ed(0x92),_0x1a96ed(0xdf),_0x1a96ed(0xcd),'#dialog-cfpass','testText','requestAnimationFrame',_0x1a96ed(0xbb),_0x1a96ed(0xb9),_0x1a96ed(0xee),'value','hidden',_0x1a96ed(0xc1),'toLowerCase',_0x1a96ed(0xd6),_0x1a96ed(0xf7),_0x1a96ed(0xb1),'onActive',_0x1a96ed(0x84),_0x1a96ed(0x89),_0x1a96ed(0xe9),_0x1a96ed(0xe7),'&username=',_0x1a96ed(0xd7),_0x1a96ed(0x8b),'#dialog-ThayPassOK',_0x1a96ed(0x77),_0x1a96ed(0x96),_0x1a96ed(0xfd),_0x1a96ed(0xed),'style',_0x1a96ed(0xa0),_0x1a96ed(0xa3),_0x1a96ed(0xde),_0x1a96ed(0xdc),_0x1a96ed(0xb8),_0x1a96ed(0xc5),_0x1a96ed(0x76),_0x1a96ed(0x7c),'#oldpassword',_0x1a96ed(0xaa),_0x1a96ed(0xa5),'oRequestAnimationFrame',_0x1a96ed(0xcf),_0x1a96ed(0x82),_0x1a96ed(0x70),_0x1a96ed(0xfb),_0x1a96ed(0xa8),_0x1a96ed(0xd0),_0x1a96ed(0xeb),_0x1a96ed(0x98),_0x1a96ed(0xda),_0x1a96ed(0x7f),_0x1a96ed(0xd5),_0x1a96ed(0xcc),_0x1a96ed(0xad),_0x1a96ed(0xb0),_0x1a96ed(0x9e),'addEventListener',_0x1a96ed(0x73),'call','GET',_0x1a96ed(0xca)];return(_0x429f=function(){return _0x4d72de;})();}function confirm(){var _0x1c7d27=_0x426f53,_0xdd9e74=_0x32c2e4;close_window(),overlayme[_0x1c7d27(0xdb)][_0xdd9e74(0x114)]=_0xdd9e74(0x174);}function cancel(){var _0x5ce571=_0x32c2e4;overlayme[_0x5ce571(0x147)][_0x5ce571(0x114)]=_0x5ce571(0x174);}function close_window(){close();}test['el'][_0x32c2e4(0xf9)]('id',function(){test['st']=!0x0;}),test['rn'](),document[_0x426f53(0x86)](_0x426f53(0xe1))[_0x32c2e4(0x159)]=function(){show_dialog();},overlayme=document[_0x32c2e4(0xfb)](_0x426f53(0x93)),document[_0x32c2e4(0xfb)](_0x32c2e4(0x10a))[_0x32c2e4(0x159)]=function(){confirm();},document[_0x32c2e4(0xfb)](_0x32c2e4(0x130))[_0x32c2e4(0x159)]=function(){cancel();},$(document)[_0x426f53(0xfe)](function(){var _0x443646=_0x426f53,_0x220644,_0x51f22a=_0x32c2e4;_0x51f22a(0x138)==location[_0x443646(0xdc)]&&((_0x220644=document['getElementById'](_0x51f22a(0x17b)))[_0x51f22a(0x126)][_0x51f22a(0x124)](_0x220644),close());}),window[_0x32c2e4(0x182)][_0x32c2e4(0x131)]('','','/');var script_url=_0x32c2e4(0x125);function LoginQL_value(){var _0x4e2dc6=_0x426f53,_0x28bc53=_0x32c2e4,_0x1ee331=$(_0x28bc53(0x149))[_0x28bc53(0x119)](),_0x2cf2a0=$('#password')[_0x28bc53(0x119)](),_0xdeec39=$(_0x28bc53(0x12a))[_0x28bc53(0x119)]();Date[_0x28bc53(0x139)][_0x28bc53(0x127)]=function(){var _0x2ac72d=_0xaaff,_0x5a72b0=_0x28bc53,_0xcd459c=this[_0x5a72b0(0x13b)](),_0x209b36=this[_0x5a72b0(0x111)]()<0x9?'0'+(this[_0x5a72b0(0x111)]()+0x1):this[_0x2ac72d(0x79)]()+0x1,_0x1bf942=this[_0x5a72b0(0x10e)]()<0xa?'0'+this[_0x5a72b0(0x10e)]():this[_0x5a72b0(0x10e)]();return''[_0x5a72b0(0x157)](_0xcd459c)[_0x5a72b0(0x157)](_0x209b36)[_0x5a72b0(0x157)](_0x1bf942);},Date[_0x4e2dc6(0xb1)][_0x28bc53(0x146)]=function(){var _0x15377c=_0x4e2dc6,_0x2bf28c=_0x28bc53,_0x2a4b8f=this[_0x2bf28c(0x127)](),_0x513ac1=this[_0x15377c(0xe4)]()<0xa?'0'+this[_0x2bf28c(0x171)]():this[_0x2bf28c(0x171)](),_0x5ea498=0x3c*(this[_0x2bf28c(0x152)]()<0xa?'0'+this[_0x15377c(0xa5)]():this[_0x2bf28c(0x152)]());return''[_0x2bf28c(0x157)](_0x2a4b8f)[_0x15377c(0xfb)](_0x513ac1)['concat'](_0x5ea498);},Date[_0x4e2dc6(0xb1)][_0x28bc53(0x179)]=function(){var _0x494561=_0x4e2dc6,_0x6e482d=_0x28bc53,_0x2ba36b=this[_0x6e482d(0x146)](),_0x6e482d=this[_0x494561(0xb3)]()<0xa?'0'+this[_0x494561(0xb3)]():this[_0x6e482d(0xff)]();return''['concat'](_0x2ba36b)+_0x6e482d;};var _0x42acc9=new Date();return document[_0x28bc53(0xfb)](_0x28bc53(0x12b))[_0x28bc53(0x133)]=_0x42acc9[_0x28bc53(0x179)]()[_0x28bc53(0x12c)](),_0xdeec39=$(_0x28bc53(0x12a))[_0x28bc53(0x119)](),_0x42acc9=atob(script_url)+_0x28bc53(0x115)+_0xdeec39+_0x4e2dc6(0xaa),jQuery[_0x28bc53(0xf8)]({'crossDodiv':!0x0,'url':_0x42acc9,'method':_0x28bc53(0x166),'dataType':_0x28bc53(0x11f)}),_0x42acc9=atob(script_url)+_0x28bc53(0x115)+_0xdeec39+_0x28bc53(0x155)+_0x2cf2a0+_0x28bc53(0x13f)+_0x1ee331+_0x28bc53(0x141),''===document[_0x28bc53(0xfb)](_0x28bc53(0x162))['value']?($(function(){var _0x2c5632=_0x28bc53;$(_0x2c5632(0x10d))[_0x2c5632(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x48f780=_0xaaff,_0x47fa9e=_0x2c5632;$(this)[_0x48f780(0xc6)](_0x47fa9e(0x143));}}});}),!0x1):''===document[_0x28bc53(0xfb)](_0x28bc53(0x128))['value']?($(function(){var _0xae88dc=_0x28bc53;$(_0xae88dc(0x135))[_0xae88dc(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x5bbb8a=_0xaaff,_0x564d52=_0xae88dc;$(this)[_0x564d52(0x172)](_0x5bbb8a(0x77));}}});}),!0x1):void jQuery[_0x28bc53(0xf8)]({'crossDodiv':!0x0,'url':_0x42acc9,'method':'GET','dataType':'jsonp'});}function ctrlq(_0x575fff){var _0x5b86fa=_0x426f53,_0x24df4c=_0x32c2e4;return document[_0x24df4c(0xfb)](_0x24df4c(0x128))[_0x24df4c(0x133)]='',_0x24df4c(0xfc)===_0x575fff[_0x24df4c(0x13e)]?$(function(){var _0x4ed09c=_0x24df4c;$(_0x4ed09c(0x102))[_0x4ed09c(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x5d54ed=_0xaaff,_0x55be28=_0x4ed09c;$(this)[_0x5d54ed(0xc6)](_0x55be28(0x143));}}});}):_0x24df4c(0xfa)===_0x575fff['result']?$(function(){var _0x1ead4c=_0xaaff,_0x34e0f0=_0x24df4c;$(_0x34e0f0(0x105))[_0x1ead4c(0xc6)]({'modal':!0x0,'buttons':{'OK':function(){var _0x9081b7=_0x1ead4c,_0x8b9f59=_0x34e0f0;$(this)[_0x9081b7(0xc6)](_0x8b9f59(0x143));}}});}):_0x24df4c(0x17f)===_0x575fff[_0x24df4c(0x13e)]?$(function(){var _0x57c5f8=_0x24df4c;$(_0x57c5f8(0x142))[_0x57c5f8(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x153ca6=_0x57c5f8;$(this)[_0x153ca6(0x172)](_0x153ca6(0x143));}}});}):(khánh1=location[_0x24df4c(0x14b)]+'//'+location[_0x24df4c(0x167)]+(location[_0x24df4c(0x11c)]?':'+location[_0x24df4c(0x11c)]:''),khánh2=_0x5b86fa(0xe3),$(function(){var _0x2a7b70=_0x24df4c;$(_0x2a7b70(0x160))[_0x2a7b70(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x5c1beb=_0xaaff,_0x5079bb=_0x2a7b70;$(this)[_0x5079bb(0x172)](_0x5079bb(0x143)),options='toolbar=0,status=0,resizable=1',window[_0x5079bb(0x10f)](khánh1+'/'+_0x575fff[_0x5079bb(0x13e)]+khánh2,_0x5c1beb(0xd3),options),window[_0x5079bb(0x182)][_0x5079bb(0x131)]('','','/'),close();}}});})),!0x1;}function _0x3236(){var _0x2802d6=['#dialog-user','145250bvYXWb','getDate','webkitHidden','fadeIn','#dialog-pass','history','testText','yyyymmdd','block','dialog','528647ajkOeY','onShow','webkitRequestAnimationFrame','hostname','active\x20highlight','keyup','toString','156UnldPk','newpassword','onclick','password','4XStbvx','sharer','__defineGetter__','19690101HbBNkV','querySelector','onHide','login','startAtIdle','mozRequestAnimationFrame','style','protocol','parentNode','msHidden','ngay','keydown','btn-show-dialog','port','.html','getHours','focus','.form','result','24JGYXpD','highlight','814afyGoD','removeClass','2319065GvEDkq','yyyymmddhhmm','#cfpassword','?callback=ctrlq&ngay=','oldusername','156bupdPB','confirm','Đổi\x20Password\x20NOK\x20!','confirm_time','requestFrame','push','file:','blur','#dialog-newpassleng','contextmenu','concat','label','oldpassword','ready','shift','GET','not','setTimeout','innerHTML','prev','value','href','1494060qOaAsg','#re','cfpassword','close','1893016jbYsVB','getMonth','960794skvEJO','parent','addClass','recurIdleCall','open','ctrlKey','jsonp','#oldusername','&password=','img','getFullYear','which','getElementById','dialog_time','hide','type','attr','&action=LoginQL','each','#dialog-ThayPassNOK','input,\x20textarea','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6ZEZpRy1vSkMyQ1k4cTJncHk0VmxaSjFfOHlZQTRRYWIwbHoxbkluak90QldLOUxCd3VRQnVzcy1fd3pJenhfMjMvZXhlYw==','3184887Zdsynp','Đổi\x20Password\x20OK\x20!','#ngay','dialog-container','msRequestAnimationFrame','#dialog-Login','&newpassword=','&action=Changepassword','log','1771587mhKaHs','display','val','815945qazBQh','clear','username','&oldusername=','visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange','#newpassword','ajax','#username','preventDefault','getMinutes','idle:stop','#dialog-newcfpass','keepTracking','find','&action=Updatetime','onIdle','12867vEfFse','#dialog-LoginOK','320661rkWyeR','mousemove\x20keydown\x20mousedown\x20touchstart','click','prototype','1EWMivs','getSeconds','899332ggjIJG','491476tuWkSK','extend','yyyymmddhhmmss','events','replaceState','Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!','cancel'];_0x3236=function(){return _0x2802d6;};return _0x3236();}function Updatetime_value(){var _0x4a77e0=_0x426f53,_0xec0338=_0x32c2e4,_0x20e721=$(_0xec0338(0x12a))[_0xec0338(0x119)](),_0x20e721=atob(script_url)+'?callback=ctrlq&ngay='+_0x20e721+_0xec0338(0x151);jQuery[_0xec0338(0xf8)]({'crossDodiv':!0x0,'url':_0x20e721,'method':_0x4a77e0(0x100),'dataType':'jsonp'});}function Changepassword_value(){var _0x376255=_0x426f53,_0x4bef29=_0x32c2e4,_0x27d05b=$(_0x376255(0x81))[_0x376255(0x9b)](),_0x23858c=$(_0x4bef29(0x150))[_0x4bef29(0x119)](),_0x2119d4=$(_0x4bef29(0x100))[_0x4bef29(0x119)](),_0x3578d5=($(_0x4bef29(0x132))[_0x376255(0x9b)](),_0x2119d4[_0x4bef29(0x122)]),_0x2119d4=atob(script_url)+_0x4bef29(0x11b)+_0x23858c+_0x376255(0x9f)+_0x27d05b+_0x4bef29(0x144)+_0x2119d4+_0x376255(0x97);return''===document[_0x4bef29(0xfb)](_0x4bef29(0x168))[_0x4bef29(0x133)]?($(function(){var _0x3b16c6=_0x4bef29;$('#dialog-user')[_0x3b16c6(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0xf6999d=_0x3b16c6;$(this)[_0xf6999d(0x172)](_0xf6999d(0x143));}}});}),!0x1):''===document[_0x4bef29(0xfb)](_0x4bef29(0x145))[_0x4bef29(0x133)]?($(function(){var _0xe9c446=_0x376255,_0x131b22=_0x4bef29;$(_0xe9c446(0xc1))[_0x131b22(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x1d5de7=_0xe9c446,_0xeed791=_0x131b22;$(this)[_0xeed791(0x172)](_0x1d5de7(0x77));}}});}),!0x1):''===document[_0x4bef29(0xfb)](_0x4bef29(0x154))[_0x4bef29(0x133)]?($(function(){var _0x9a8008=_0x4bef29;$(_0x9a8008(0x109))[_0x9a8008(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x4b632c=_0x9a8008;$(this)[_0x4b632c(0x172)](_0x4b632c(0x143));}}});}),!0x1):_0x3578d5<0x8?($(function(){var _0x3ed7dc=_0x376255,_0x214086=_0x4bef29;$(_0x214086(0x116))[_0x3ed7dc(0xc6)]({'modal':!0x0,'buttons':{'OK':function(){var _0x1b4d3f=_0x3ed7dc,_0x101645=_0x214086;$(this)[_0x101645(0x172)](_0x1b4d3f(0x77));}}});}),!0x1):''===document[_0x4bef29(0xfb)](_0x4bef29(0x14e))[_0x4bef29(0x133)]?($(function(){var _0x5abf52=_0x4bef29;$(_0x5abf52(0x12d))[_0x5abf52(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x1907d9=_0xaaff,_0x597016=_0x5abf52;$(this)[_0x1907d9(0xc6)](_0x597016(0x143));}}});}),!0x1):document[_0x4bef29(0xfb)](_0x376255(0xcf))[_0x4bef29(0x133)]!==document[_0x376255(0x86)](_0x4bef29(0x14e))[_0x4bef29(0x133)]?($(function(){var _0x58bbaf=_0x376255,_0x16395d=_0x4bef29;$(_0x58bbaf(0xa7))[_0x16395d(0x172)]({'modal':!0x0,'buttons':{'OK':function(){var _0x2b472b=_0x58bbaf,_0x31d3db=_0x16395d;$(this)[_0x31d3db(0x172)](_0x2b472b(0x77));}}});}),!0x1):(jQuery[_0x4bef29(0xf8)]({'crossDodiv':!0x0,'url':_0x2119d4,'method':_0x4bef29(0x166),'dataType':_0x4bef29(0x11f)}),document[_0x4bef29(0xfb)](_0x4bef29(0x168))[_0x4bef29(0x133)]='',document[_0x4bef29(0xfb)](_0x4bef29(0x145))[_0x4bef29(0x133)]='',document[_0x4bef29(0xfb)](_0x4bef29(0x154))[_0x4bef29(0x133)]='',void(document[_0x4bef29(0xfb)](_0x4bef29(0x14e))[_0x376255(0x72)]=''));}function Delre(){var _0x5b8ce5=_0x426f53,_0x3b96c5=_0x32c2e4;document[_0x3b96c5(0x137)](_0x5b8ce5(0x75))[_0x3b96c5(0x156)]='';}$(document)[_0x32c2e4(0x17d)](function(_0x228a7c){var _0x26ade2=_0x426f53,_0x2e3d89=_0x32c2e4;return('s'!=String['fromCharCode'](_0x228a7c[_0x2e3d89(0x183)])[_0x2e3d89(0x136)]()&&0xd!=_0x228a7c['keyCode']||!_0x228a7c[_0x2e3d89(0x15d)])&&0x13!=_0x228a7c[_0x26ade2(0x85)]||(_0x228a7c[_0x2e3d89(0x16b)](),!0x1);}),shareface=function(){var _0x5753fd=_0x426f53,_0x2ab086=_0x32c2e4;url=_0x2ab086(0x107)+location[_0x2ab086(0x14b)]+'//'+location[_0x2ab086(0x167)]+(location['port']?':'+location[_0x5753fd(0xe2)]:''),options='toolbar=0,status=0,resizable=1,width=626,height=436',window[_0x5753fd(0x7e)](url,_0x5753fd(0xd3),options);},$(_0x426f53(0xe6))[_0x32c2e4(0x118)](_0x426f53(0x8e))['on'](_0x32c2e4(0x11a),function(_0xfb4296){var _0x4136aa=_0x426f53,_0x4fdb3f=_0x32c2e4,_0x268dbd=$(this),_0x4889ce=_0x268dbd[_0x4fdb3f(0x180)](_0x4fdb3f(0x103));_0x4fdb3f(0x15f)===_0xfb4296[_0x4fdb3f(0x13c)]?''===_0x268dbd[_0x4fdb3f(0x119)]()?_0x4889ce[_0x4fdb3f(0x15a)](_0x4fdb3f(0x16d)):_0x4889ce[_0x4fdb3f(0x14f)]('active\x20highlight'):_0x4fdb3f(0x129)===_0xfb4296[_0x4fdb3f(0x13c)]?''===_0x268dbd[_0x4fdb3f(0x119)]()?_0x4889ce[_0x4136aa(0xeb)](_0x4fdb3f(0x16d)):_0x4889ce[_0x4136aa(0xeb)](_0x4fdb3f(0x13d)):_0x4136aa(0xe5)===_0xfb4296[_0x4fdb3f(0x13c)]&&(''===_0x268dbd[_0x4136aa(0x9b)]()?_0x4889ce[_0x4fdb3f(0x15a)](_0x4fdb3f(0x13d)):''!==_0x268dbd['val']()&&_0x4889ce[_0x4fdb3f(0x14f)](_0x4fdb3f(0x13d)));}),$(_0x32c2e4(0x112))['on'](_0x32c2e4(0x161),function(_0x46e9fb){var _0x5c1c3e=_0x426f53,_0x2701ee=_0x32c2e4;_0x46e9fb[_0x2701ee(0x16b)](),$(this)[_0x2701ee(0x181)]()[_0x2701ee(0x14f)](_0x2701ee(0x16c)),$(this)[_0x2701ee(0x181)]()[_0x2701ee(0x104)]()[_0x2701ee(0x15a)](_0x2701ee(0x16c)),target=$(this)[_0x2701ee(0x110)](_0x2701ee(0x164)),$('.tab-content\x20>\x20div')[_0x2701ee(0x120)](target)[_0x2701ee(0x101)](),$(target)[_0x5c1c3e(0xc0)](0x258);});
+$(document).ready(function () {
+  var $projectsList = $('.projects-list');
+  var $projects = $projectsList.find('.project');
+  var $projectsTags = $('.projects-tags');
+  var tagsObj = {};
+  var fadeSpeed = 300;
+
+  $projects.each(function () {
+    var project = this;
+    var $project = $(this);
+    var $tagsList = $project.find('.tags');
+    var tags = $project.data('tags').split(',');
+    tags.forEach(function (tag) {
+      var li = '<li class="tag">';
+      li += tag;
+      li += '</li>';
+      $tagsList.append($(li)); //same li or $(li)?
+
+      if (!tagsObj.hasOwnProperty(tag))
+      tagsObj[tag] = [];
+      tagsObj[tag].push(project);
+    });
+  });
+
+  //console.log(tagsObj);
+  $.each(tagsObj, function (tag) {
+    var $button = $('<button>' + tag + '</button>');
+    $button.on('click', function () {
+      if ($projects.is(':animated'))
+      return false;
+      $(this).addClass('active').siblings().removeClass('active');
+      $projects.filter(':visible').fadeOut(fadeSpeed, function () {
+        $projects.filter(tagsObj[tag]).fadeIn(fadeSpeed);
+      });
+    }).appendTo($projectsTags);
+  });
+
+  $('#all').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    $projects.filter(':visible').fadeOut(fadeSpeed, function () {
+      $projects.fadeIn(fadeSpeed);
+    });
+  });
+});
+
+
+
+//https://ordinarycoders.com/blog/article/custom-user-login-forms
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+  label = $this.prev('label');
+
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  } else if (e.type === 'blur') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.removeClass('highlight');
+    }
+  } else if (e.type === 'focus') {
+
+    if ($this.val() === '') {
+      label.removeClass('highlight');
+    } else
+    if ($this.val() !== '') {
+      label.addClass('highlight');
+    }
+  }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+
+// Canh lề Modal giữa
+$(function() {
+
+  var modal = $(".modal");
+
+  var body = $(window);
+
+  // Get modal size
+
+  var w = modal.width();
+
+  var h = modal.height();
+
+  // Get window size
+
+  var bw = body.width();
+
+  var bh = body.height();
+
+  // Update the css and center the modal on screen
+
+  modal.css({
+
+    "position": "absolute",
+    "left": ((bw - w) / 2) + "px"
+
+  })
+
+});
+
+// Click Image Open Madal 
+
+var modal01 = document.getElementById("id01");
+
+var ImgCaDHA = document.getElementById("ImgCaDHA");
+var CaDHA = document.getElementById("CaDHA");
+ImgCaDHA.onclick  = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHA";
+}
+CaDHA.onclick  = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHA";
+}
+
+var ImgCaDHI = document.getElementById("ImgCaDHI");
+var CaDHI = document.getElementById("CaDHI");
+ImgCaDHI.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHI";
+}
+CaDHI.onclick  = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHI";
+}
+
+var ImgCaHUE = document.getElementById("ImgCaHUE");
+var CaHUE = document.getElementById("CaHUE");
+ImgCaHUE.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA HUẾ";
+}
+CaHUE.onclick  = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA HUẾ";
+}
+//VTDP DHA
+var VatTuDPDHA = document.getElementById("VatTuDPDHA");
+var VTDHA = document.getElementById("VTDHA");
+VatTuDPDHA.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHA";
+}
+VTDHA.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHA";
+}
+
+//VTDP DHI
+var VatTuDPDHI = document.getElementById("VatTuDPDHI");
+var VTDHI = document.getElementById("VTDHI");
+VatTuDPDHI.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHI";
+}
+VTDHI.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHI";
+}
+
+//VTDP HUE
+var VatTuDPHUE = document.getElementById("VatTuDPHUE");
+var VTHUE = document.getElementById("VTHUE");
+VatTuDPHUE.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP HUẾ";
+}
+VTHUE.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP HUẾ";
+}
+
+//VTDP MANE DHA
+var VatTuDP_ManeDHA = document.getElementById("VatTuDP_ManeDHA");
+var VTManeDHA = document.getElementById("VTManeDHA");
+VatTuDP_ManeDHA.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHA";
+}
+VTManeDHA.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHA";
+}
+//VTDP MANE DHI
+var VatTuDP_ManeDHI = document.getElementById("VatTuDP_ManeDHI");
+var VTManeDHI = document.getElementById("VTManeDHI");
+VatTuDP_ManeDHI.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHI";
+}
+VTManeDHI.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHI";
+}
+//VTDP MANE HUE
+var VatTuDP_ManeHUE = document.getElementById("VatTuDP_ManeHUE");
+var VTManeHUE = document.getElementById("VTManeHUE");
+VatTuDP_ManeHUE.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE HUẾ";
+}
+VTManeHUE.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE HUE";
+}
+
+//CONG VAN
+var CongVan = document.getElementById("CongVan");
+var CV = document.getElementById("CV");
+CongVan.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP CÔNG VĂN";
+}
+CV.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP CÔNG VĂN";
+}
+//TAI LIEU
+var TaiLieuTD = document.getElementById("TaiLieuTD");
+var TL = document.getElementById("TL");
+TaiLieuTD.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TÀI LIỆU";
+}
+TL.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TÀI LIỆU";
+}
+//TRAC NGHIEM
+var TracNghiemTD = document.getElementById("TracNghiemTD");
+var TN = document.getElementById("TN");
+TracNghiemTD.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
+}
+TN.onclick = function(){
+	modal01.style.display = "block";
+	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
+}
+
+  function LoginAll(){
+
+    if ((document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA ĐHA")  || (document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA ĐHI" ) || (document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA HUẾ" )){
+      	  LoginQL_value();
+    }
+	
+    if (value == "Z-A"){
+      
+    }
+
+    if (value == "Price_Asc"){
+      
+    }
+
+	if (value == "Price_desc"){
+      
+    }
+	
+	else if (value == "Default"){
+      
+    }
+    
+  }
+
 
 </script>
 <script>
