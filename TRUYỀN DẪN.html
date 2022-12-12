@@ -16,6 +16,31 @@
 
 <style>
 
+@media (max-width: 600px) {
+.swal2-popup.swal2-toast {
+    flex-direction: row;
+    position:absolute;
+    top:30%;
+    width: auto;
+    padding: .625em;
+    overflow-y: hidden;
+    background: #fff;
+    box-shadow: 0 0 .625em #d9d9d9
+}
+
+.swal2-popup.swal2-toast .swal2-header {
+    flex-direction: row;
+    padding: 0
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin: 0 .6em;
+    font-size: 1.5em
+   }
+}	
+	
 .swal2-popup.swal2-toast {
     flex-direction: row;
     position:absolute;
