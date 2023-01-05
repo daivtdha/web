@@ -109,12 +109,12 @@
 	display: block;
 	cursor: pointer;
 	position: relative;
-	margin: 1px 0 0 0;
+	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 1.2em;
+	padding: 1em 2.2em;
 	border-top: 0;
 	overflow: auto;
 }
@@ -179,7 +179,7 @@
 	right: 0;
 }
 .ui-button {
-	padding: .3em 1em;
+	padding: .4em 1em;
 	display: inline-block;
 	position: relative;
 	line-height: normal;
@@ -525,10 +525,10 @@ button.ui-button::-moz-focus-inner {
 	position: absolute;
 	right: .3em;
 	top: 50%;
-	width: 17px;
+	width: 20px;
 	margin: -10px 0 0 0;
 	padding: 1px;
-	height: 17px;
+	height: 20px;
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
@@ -912,10 +912,10 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-	border: 3px solid #006699;
+	border: 3px solid #c5c5c5;
 }
 .ui-widget-content {
-	border: 2px solid #006699;
+	border: 2px solid #dddddd;
 	background: #ffffff;
 	color: #333333;
 }
@@ -923,8 +923,8 @@ body .ui-tooltip {
 	color: #333333;
 }
 .ui-widget-header {
-	border: 0.5px solid white;
-	background: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 );
+	border: 1px solid #dddddd;
+	background: #e9e9e9;
 	color: #333333;
 	font-weight: bold;
 }
@@ -966,10 +966,10 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #006699;
+	border: 1px solid #cccccc;
 	background: #ededed;
 	font-weight: normal;
-	color:#006699;
+	color: #2b2b2b;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -995,7 +995,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
 	border: 1px solid #003eff;
-	background:#006699;
+	background: #007fff;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -1329,8 +1329,9 @@ a.ui-button:active,
 
 
 
+
 .button {
-  background-color:#006699;
+  background-color:#009999;
   border: none;
   color:white;
   padding: 1px;
@@ -1358,7 +1359,7 @@ a.ui-button:active,
     max-width:100%;
     margin: 0 auto;
 	
-	background-image: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+	background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
 }
 
 
@@ -1370,7 +1371,8 @@ padding: 0.5px;
 }
 
 tr:nth-child(even) {
-background-color:white;
+background-color: #ebebe0;
+padding: 10px;
 text-align: left;
   }
 tr:nth-child(odd) {
@@ -1379,12 +1381,12 @@ text-align: left;
   } 
 
 table tr:hover td {
-    background:#ffddcc;
+    background:  #f6ddcc ;
 }  
   
 
 .sortable th {
-  background:#006699;
+  background: #808080;
   color: #fff;
   cursor: pointer;
   font-weight: normal;
@@ -1538,7 +1540,7 @@ select.form-control {
 
 
 .footer {
-  background-image: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+ background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
 
   width: 100%;
   text-align: left;
@@ -1693,7 +1695,7 @@ select.form-control {
 
 fieldset {
 
-background: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#66ff33);
+background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
 
 display: block;
 
@@ -1703,7 +1705,7 @@ max-width:100%;
 }
 
 fieldset:focus-within {
-  background: linear-gradient(to bottom right,#33ccff,#ffffb3,#33ccff,#ffffb3,#ff9900);
+  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
 
 }
 
@@ -1884,6 +1886,9 @@ form .question label {
 	}
 }
 
+
+
+
 .popup {
   width: 80%;
   padding: 15px;
@@ -1933,7 +1938,7 @@ form .question label {
 }
 
 .dialog-btn {
-  background-color:#006699;
+  background-color:#44B78B;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -1949,7 +1954,7 @@ form .question label {
 
 
 #btn-show-dialog {
-  background-color:#006699;
+  background-color:#009999;
   border: none;
   color:white;
   padding: 1px;
@@ -2068,7 +2073,7 @@ form .question label {
 }
 
 .update-btn {
-  background-color:#006699;
+  background-color:#44B78B;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -2132,7 +2137,7 @@ form .question label {
 }
 
 .insert-btn {
-  background-color:#006699;
+  background-color:#44B78B;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -2194,7 +2199,7 @@ form .question label {
 }
 
 .delete-btn {
-  background-color:#006699;
+  background-color:#44B78B;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -2342,7 +2347,6 @@ form .question label {
 <div class="question2" align="center">
 <p type = "text" id="ngay"></p>
 <p type = "text" id="ngay2" value=""></p>
-<p type = "text" id="doma" value=""></p>
 	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
 	
 	<input type="button" class="button button1" id="btn-show-update" value="Cập nhật" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
@@ -2698,12 +2702,11 @@ readDataCaDHA();
 
   
 function Readtime_value() {
-var url2 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-document.getElementById("doma").value = url2;
-var doma= $("#doma").val(); 
-	var ngay= $("#ngay").val();
-    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&doma="+doma+"&action=Readtime"; 
-
+ 
+	var ngay= $("#ngay").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Readtime";
+  
+  
     var request = jQuery.ajax({
       crossDomain: true,
       url: url ,
@@ -2711,7 +2714,7 @@ var doma= $("#doma").val();
       dataType: "jsonp"
     });
 
-}
+  }	
 
   
   
@@ -2785,7 +2788,7 @@ window.addEventListener('popstate', function () {
 
 // THAY
 
-var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdWppekQ5STBWeUdjVlNJVTJ4aVUtT0wxSGw2TGRCeEdsanVpNTl4S2xhZVJTV3l2WnJTQktPdGZUNDVDZzJHUS9leGVj";
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4bHZGOFJGZXNsSXdtUTZIVUVYQUpnVzdlQlE1VGFrMU5JbXF1VndIZ3MyUEdiZHdjRTJwVGZCcEdNSU45MlNveHAvZXhlYw==";
 
 function readDataCaDHA() {
 
