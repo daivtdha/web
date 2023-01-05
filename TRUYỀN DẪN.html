@@ -103,12 +103,12 @@
 	display: block;
 	cursor: pointer;
 	position: relative;
-	margin: 2px 0 0 0;
+	margin: 1px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em;
+	padding: 1em 1.2em;
 	border-top: 0;
 	overflow: auto;
 }
@@ -173,7 +173,7 @@
 	right: 0;
 }
 .ui-button {
-	padding: .4em 1em;
+	padding: .3em 1em;
 	display: inline-block;
 	position: relative;
 	line-height: normal;
@@ -519,10 +519,10 @@ button.ui-button::-moz-focus-inner {
 	position: absolute;
 	right: .3em;
 	top: 50%;
-	width: 20px;
+	width: 17px;
 	margin: -10px 0 0 0;
 	padding: 1px;
-	height: 20px;
+	height: 17px;
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
@@ -906,10 +906,10 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-	border: 3px solid #c5c5c5;
+	border: 3px solid #006699;
 }
 .ui-widget-content {
-	border: 2px solid #dddddd;
+	border: 2px solid #006699;
 	background: #ffffff;
 	color: #333333;
 }
@@ -917,8 +917,8 @@ body .ui-tooltip {
 	color: #333333;
 }
 .ui-widget-header {
-	border: 1px solid #dddddd;
-	background: #e9e9e9;
+	border: 0.5px solid white;
+	background: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 );
 	color: #333333;
 	font-weight: bold;
 }
@@ -960,10 +960,10 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #cccccc;
+	border: 1px solid #006699;
 	background: #ededed;
 	font-weight: normal;
-	color: #2b2b2b;
+	color:#006699;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -989,7 +989,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
 	border: 1px solid #003eff;
-	background: #007fff;
+	background:#006699;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -1318,6 +1318,8 @@ a.ui-button:active,
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
 }
+
+
 
 /* End Thong Bao */
 
@@ -1791,7 +1793,7 @@ span.psw {
 
 /* FORM LOGIN */
     .form {
-        background: #eaecee;
+        background:#669999;
         padding: 35px;
         max-width: auto;
 		width: 700px;
@@ -1859,6 +1861,9 @@ span.psw {
         font-size: 22px;
     }
 
+	
+	
+	
     label .req {
         margin: 2px;
         color: #1ab188;
@@ -1879,26 +1884,17 @@ span.psw {
     }
 
     input,
-    textarea {
-        font-size: 17px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 5px 10px;
-        background: none;
-        background-image: none;
-        border: 1px solid #a0b3b0;
-        color: black;
-        border-radius: 0;
-        transition: border-color .25s ease, box-shadow .25s ease;
-    }
+
 
     input:focus,
     textarea:focus {
-        outline: 0;
-        border-color: #1ab188;
+        outline: 5;
+        border-color: white;
     }
 
+	
+	
+	
     textarea {
         border: 2px solid #a0b3b0;
         resize: vertical;
@@ -2072,7 +2068,10 @@ span.psw {
 </head>
 
 <body translate="no">
-
+  <div class="header";>
+  <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
+  <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
+  </div>
 <!-- Modal -->
 
 <div id="id01" class="modal">
@@ -2095,9 +2094,10 @@ span.psw {
 
 <p id='dialog-Login' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đăng Nhập sai UserName hoặc Password !</p>
 <p id='dialog-ThayPassNOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đổi Password chưa được!</p>
-<p id='dialog-ThayPassOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đã đổi Password thành công !</p>
+<p id='dialog-ThayPassOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đổi Password thành công, thông tin thay đổi trong Email của Bạn !</p>
 <p id='dialog-LoginOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Login OK !</p>
 <p type = "text" id="ngay">
+<p type = "text" id="doma" value=""></p>
 
     <div class="form">
 
@@ -2451,11 +2451,54 @@ window.history.replaceState('','','/');
 var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdWppekQ5STBWeUdjVlNJVTJ4aVUtT0wxSGw2TGRCeEdsanVpNTl4S2xhZVJTV3l2WnJTQktPdGZUNDVDZzJHUS9leGVj";
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
-  function LoginCaDHA_value() {
+  function LoginQL_value() {
 
-  var user=$("#username").val();
+	var user=$("#username").val();
 	var pass= $("#password").val();
-    var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
+	var ngay= $("#ngay").val();
+	var doma= $("#doma").val();
+
+
+Date.prototype.yyyymmdd = function() {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+  return "".concat(yyyy).concat(mm).concat(dd);
+};
+
+Date.prototype.yyyymmddhhmm = function() {
+  var yyyymmdd = this.yyyymmdd();
+  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
+  return "".concat(yyyymmdd).concat(hh).concat(min);
+};
+
+Date.prototype.yyyymmddhhmmss = function() {
+  var yyyymmddhhmm = this.yyyymmddhhmm();
+  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+  return "".concat(yyyymmddhhmm)+ss;
+};
+
+var d = new Date();
+document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
+
+	var url = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	document.getElementById("doma").value = url;
+	var doma= $("#doma").val();	    
+	var ngay= $("#ngay").val();
+  
+
+    var request = jQuery.ajax({
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+
+
+	
+var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+"&action=LoginQL";
 
 	if (document.getElementById('username').value === "") {
 	// alert("OK");
@@ -2494,30 +2537,7 @@ var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdW
 	}	
 
 	
-  Date.prototype.yyyymmdd = function() {
-  var yyyy = this.getFullYear();
-  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
-  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
-  return "".concat(yyyy).concat(mm).concat(dd);
-};
 
-Date.prototype.yyyymmddhhmm = function() {
-  var yyyymmdd = this.yyyymmdd();
-  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
-  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
-  return "".concat(yyyymmdd).concat(hh).concat(min);
-};
-
-Date.prototype.yyyymmddhhmmss = function() {
-  var yyyymmddhhmm = this.yyyymmddhhmm();
-  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
-  return "".concat(yyyymmddhhmm)+ss;
-};
-
-var d = new Date();
-document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
-
-	
 	
     var request = jQuery.ajax({
       crossDodiv: true,
@@ -2587,7 +2607,7 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 	//var khánh;
     khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
 	khánh2 = ".html"	
-	Updatetime_value();
+	// Updatetime_value();
 	
 	
 				$(function() {
@@ -2636,7 +2656,7 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 
 
 
-function ChangepasswordCaDHA_value() {
+function Changepassword_value() {
 
 	var olduser=$("#oldusername").val();
 	var oldpass= $("#oldpassword").val();
@@ -2645,7 +2665,7 @@ function ChangepasswordCaDHA_value() {
 	
 	var newpassleng = newpass.length;
 	
-    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=ChangepasswordCaDHA";
+    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
 
 	if (document.getElementById('oldusername').value === "") {
 
@@ -2835,6 +2855,8 @@ $(document).keydown(function(event) {
         });
 		
 </script>
+
+
 
 
 <script id="rendered-js">
@@ -3104,7 +3126,7 @@ TN.onclick = function(){
   function LoginAll(){
 
     if ((document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA ĐHA")  || (document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA ĐHI" ) || (document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA HUẾ" )){
-      	  LoginCaDHA_value();
+      	  LoginQL_value();
     }
 	
     if (value == "Z-A"){
@@ -3124,6 +3146,7 @@ TN.onclick = function(){
     }
     
   }
+
 
 </script>
 <script>
