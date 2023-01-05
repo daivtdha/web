@@ -2436,7 +2436,7 @@ function show_dialog_time() {
 document.getElementById("confirm_time").onclick = function(){confirm_time()};
 function confirm_time() {
 	close();	
-    overlayme.style.display = "none";	
+    overlay_timeme.style.display = "none";	
 }
 
 
@@ -2489,7 +2489,7 @@ function ExportToExcel_OK(type, fn, dl) {
                         bookSST: true,
                         type: 'base64'
                     }) :
-                    XLSX.writeFile(wb, fn || ('Phân công Trực ca DHA.' + (type || 'xlsx')));
+                    XLSX.writeFile(wb, fn || ('Phân công Trực ca ĐHA.' + (type || 'xlsx')));
 
 
  } 
@@ -2638,14 +2638,17 @@ $(function() {
 
 
 $(document).ready(function() {
+
+Readtime_value();
+window.history.replaceState('','','/');
 var url = location.protocol;
 if (url == "file:") {
-close();
+	var element = document.getElementById("mytable");
+	var element3 = document.getElementById("update");
+	element.parentNode.removeChild(element);
+	element.parentNode.removeChild(element3);
+	close();
 } else {
-var url = location.protocol;
-document.getElementById("doma").value = url;
-Readtime_value();
-
 }
 
 });
@@ -2677,13 +2680,13 @@ Date.prototype.yyyymmddhhmmss = function() {
 };
 
 var d = new Date();
-if (d.yyyymmddhhmmss() - parseInt(document.getElementById("ngay").value) > 30) {
+if (d.yyyymmddhhmmss() - parseInt(document.getElementById("ngay").value) > 10) {
 window.close();
 window.setTimeout(function(){location.href = '/';},0);
 self.close();
-} else if (document.getElementById("ngay").value == "Vui lòng đăng nhập để cập nhật") {
 
 } else {
+//window.history.replaceState('','','/');
 readDataCaDHA();
 
 }
@@ -2695,9 +2698,10 @@ readDataCaDHA();
 
   
 function Readtime_value() {
+var url2 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+document.getElementById("doma").value = url2;
+var doma= $("#doma").val(); 
 	var ngay= $("#ngay").val();
-
-	var doma= $("#doma").val();	
     var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&doma="+doma+"&action=Readtime"; 
 
     var request = jQuery.ajax({
@@ -2706,10 +2710,10 @@ function Readtime_value() {
       method: "GET",
       dataType: "jsonp"
     });
- 
-}	
 
+}
 
+  
   
 (function() {
   if (window.addEventListener) {
@@ -2774,7 +2778,7 @@ window.addEventListener('popstate', function () {
     history.pushState(null, null, document.URL);
 });
 
-window.history.replaceState('','','/');  
+//window.history.replaceState('','','/');  
   
 };
  
@@ -2784,17 +2788,6 @@ window.history.replaceState('','','/');
 var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdWppekQ5STBWeUdjVlNJVTJ4aVUtT0wxSGw2TGRCeEdsanVpNTl4S2xhZVJTV3l2WnJTQktPdGZUNDVDZzJHUS9leGVj";
 
 function readDataCaDHA() {
-
-var url = location.protocol;
-if (document.getElementById("ngay").value == "Vui lòng đăng nhập để cập nhật" || url == "file:") {
-close();
-//	var element = document.getElementById("mytable");
-//	var element3 = document.getElementById("re");
-//	element.parentNode.removeChild(element);
-//	element.parentNode.removeChild(element3);
-
-
-} else {
 
 $("#re").css("visibility","hidden");
    
@@ -2853,8 +2846,7 @@ $.getJSON(url, function (json) {
 
 		
     });
-}
-}
+	}
 
 //https://stackoverflow.com/questions/24804500/can-you-have-scrollbars-in-both-parallel-sides-of-a-div
 $(function(){
@@ -3198,7 +3190,7 @@ function searchTableAdmin() {
          		sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
          	  }
          	}
-         	//document.getElementById('TỔNG..').innerHTML += sum;
+         	document.getElementById('TỔNG..').innerHTML += sum;
          }
 
 
@@ -3268,14 +3260,13 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
       <i class="fa fa-map-marker"></i>
       <p><span></span> Liên Hệ: 18 Trần Hưng Đạo<span> </span> Thành Phố Đông Hà, Tỉnh Quảng Trị</p>
     </div>
-	<div>
+    <div>
       <i class="fa fa-phone"></i>
-      <p> (02333) 855298 ;</p>
-      <p> (+84) 911393789</p>
+      <p> (+84) 916 468 333</p>
     </div>
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a style="color:black;" href="mailto:tdnhat@vnpt.vn?subject = To Trưởng đài ĐHA">tdnhat@vnpt.vn</a></p>
+      <p><a style="color:black;" href="mailto:tramvtdha@vnpt.vn?subject = To Trạm ĐHA">tramvtdha@vnpt.vn</a></p>
     </div>
   </div>
   
