@@ -2451,51 +2451,14 @@ window.history.replaceState('','','/');
 var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdWppekQ5STBWeUdjVlNJVTJ4aVUtT0wxSGw2TGRCeEdsanVpNTl4S2xhZVJTV3l2WnJTQktPdGZUNDVDZzJHUS9leGVj";
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
-  function LoginQL_value() {
+  function LoginCaDHA_value() {
 
 	var user=$("#username").val();
 	var pass= $("#password").val();
 	var ngay= $("#ngay").val();
 	var doma= $("#doma").val();
-
-
-Date.prototype.yyyymmdd = function() {
-  var yyyy = this.getFullYear();
-  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
-  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
-  return "".concat(yyyy).concat(mm).concat(dd);
-};
-
-Date.prototype.yyyymmddhhmm = function() {
-  var yyyymmdd = this.yyyymmdd();
-  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
-  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
-  return "".concat(yyyymmdd).concat(hh).concat(min);
-};
-
-Date.prototype.yyyymmddhhmmss = function() {
-  var yyyymmddhhmm = this.yyyymmddhhmm();
-  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
-  return "".concat(yyyymmddhhmm)+ss;
-};
-
-var d = new Date();
-document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
-
-	var url = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-	document.getElementById("doma").value = url;
-	var doma= $("#doma").val();	    
-	var ngay= $("#ngay").val();
-
-    var request = jQuery.ajax({
-      crossDodiv: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-
-	var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+"&action=LoginQL";
+   // var url = atob(script_url)+"?callback=ctrlq&password="+pass+"&username="+user+"&action=LoginCaDHA";
+   var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+"&action=LoginQL";
 
 	if (document.getElementById('username').value === "") {
 	// alert("OK");
@@ -2534,7 +2497,30 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 	}	
 
 	
+  Date.prototype.yyyymmdd = function() {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+  return "".concat(yyyy).concat(mm).concat(dd);
+};
 
+Date.prototype.yyyymmddhhmm = function() {
+  var yyyymmdd = this.yyyymmdd();
+  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
+  return "".concat(yyyymmdd).concat(hh).concat(min);
+};
+
+Date.prototype.yyyymmddhhmmss = function() {
+  var yyyymmddhhmm = this.yyyymmddhhmm();
+  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+  return "".concat(yyyymmddhhmm)+ss;
+};
+
+var d = new Date();
+document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
+
+	
 	
     var request = jQuery.ajax({
       crossDodiv: true,
@@ -2600,43 +2586,38 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 			
 		
 		} else {	
+	
+	//var khánh;
+    khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	khánh2 = ".html"	
 
-			 // Alert Message  
-				Swal.fire({
-				toast: true,
-				icon: 'success',
-				title: 'Đăng nhập thành công !!',
-				animation: false,
-				position: 'bottom',
-				showConfirmButton: false,
-				timer: 1500,
-				timerProgressBar: true,
-//				didOpen: toast => {
-				//  toast.addEventListener('mouseenter', Swal.stopTimer);
-				//  toast.addEventListener('mouseleave', Swal.resumeTimer);
-				  
+	
+	
+				$(function() {
+				$("#dialog-LoginOK").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {			
+						
+                        $(this).dialog("close");
+						//window.open(khánh,target="_blank");
+				options = 'toolbar=0,status=0,resizable=1';
+				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
+				window.history.replaceState('','','/');				
+				close();		
+		
+                    }
+		
+                }
+            });
+			});
+	
+			return false;
 
-				  
-//				}
-				});
-				      khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-					  khánh2 = ".html"	
-					  options = 'toolbar=0,status=0,resizable=1';
-				
-				// https://daidhatest.github.io/đônghàVậtTưDựPhòng.html
-				// https://daidhatest.github.io/ok/đônghàVậtTưDựPhòng.html
-				
-				//window.open(khánh1 + "/ok/" + e.result + khánh2,'sharer',options);
-								
-							 
-			// ------------- 
-			//setTimeout( function() { window.open(khánh1 + "/ok/" + e.result + khánh2,target="_blank") }, 1505 );
-			setTimeout( function() { window.open(khánh1 + "/" + e.result + khánh2,target="_blank") }, 1505 );
-			window.history.replaceState('','','/');	
   }
 
-
 };
+
 
 
 function Changepassword_value() {
@@ -2769,8 +2750,7 @@ function Changepassword_value() {
 	document.getElementById('newpassword').value = "";
 	document.getElementById('cfpassword').value = "";	
   }
-  
-  
+
 function Delre() {
   document.querySelector("#re").innerHTML="";
 }
