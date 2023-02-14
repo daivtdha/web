@@ -2720,17 +2720,21 @@ close();
 
 
 $(document).ready(function() {
+
+
+
+
 var url = location.protocol;
 if (url == "file:") {
-//	var element = document.getElementById("login");
-//	element.parentNode.removeChild(element);
-//	close();
+	var element = document.getElementById("login");
+	element.parentNode.removeChild(element);
+	close();
 } else {
 }
 
 });
 
-//window.history.replaceState('','','/');
+window.history.replaceState('','','/');
 
 // THAY ĐÂY
 
