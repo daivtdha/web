@@ -12,6 +12,291 @@
   
 <style>
 
+.swal2-popup.swal2-toast {
+    flex-direction: row;
+    position:absolute;
+    top:30%;
+    width: auto;
+    padding: .625em;
+    overflow-y: hidden;
+    background: #fff;
+    box-shadow: 0 0 .625em #d9d9d9
+}
+
+.swal2-popup.swal2-toast .swal2-header {
+    flex-direction: row;
+    padding: 0
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin: 0 .6em;
+    font-size: 1.5em
+}
+
+
+
+.swal2-popup.swal2-toast .swal2-content {
+    justify-content: flex-start;
+    padding: 0;
+    font-size: 1em
+}
+
+.swal2-popup.swal2-toast .swal2-icon {
+    width: 2em;
+    min-width: 2em;
+    height: 2em;
+    margin: 0
+}
+
+.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700
+}
+
+
+
+.swal2-popup.swal2-toast .swal2-success {
+    border-color: #a5dc86
+}
+
+.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+    position: absolute;
+    width: 1.6em;
+    height: 3em;
+    transform: rotate(45deg);
+    border-radius: 50%
+}
+
+.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+    top: -.8em;
+    left: -.5em;
+    transform: rotate(-45deg);
+    transform-origin: 2em 2em;
+    border-radius: 4em 0 0 4em
+}
+
+.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+    top: -.25em;
+    left: .9375em;
+    transform-origin: 0 1.5em;
+    border-radius: 0 4em 4em 0
+}
+
+.swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+    width: 2em;
+    height: 2em
+}
+
+.swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+    top: 0;
+    left: .4375em;
+    width: .4375em;
+    height: 2.6875em
+}
+
+.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
+    height: .3125em
+}
+
+.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+    top: 1.125em;
+    left: .1875em;
+    width: .75em
+}
+
+.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+    top: .9375em;
+    right: .1875em;
+    width: 1.375em
+}
+
+.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+    -webkit-animation: swal2-toast-animate-success-line-tip .75s;
+    animation: swal2-toast-animate-success-line-tip .75s
+}
+
+.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+    -webkit-animation: swal2-toast-animate-success-line-long .75s;
+    animation: swal2-toast-animate-success-line-long .75s
+}
+
+.swal2-popup.swal2-toast.swal2-show {
+    -webkit-animation: swal2-toast-show .5s;
+    animation: swal2-toast-show .5s
+}
+
+.swal2-popup.swal2-toast.swal2-hide {
+    -webkit-animation: swal2-toast-hide .1s forwards;
+    animation: swal2-toast-hide .1s forwards
+}
+
+.swal2-container {
+    display: flex;
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: .625em;
+    overflow-x: hidden;
+    transition: background-color .1s;
+    -webkit-overflow-scrolling: touch
+}
+
+
+.swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    width: 32em;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.swal2-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.8em
+}
+
+
+.swal2-actions:not(.swal2-loading) .swal2-styled:active {
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2))
+}
+
+.swal2-timer-progress-bar-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: .25em;
+    overflow: hidden;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px
+}
+
+.swal2-timer-progress-bar {
+    width: 100%;
+    height: .25em;
+    background: rgba(0, 0, 0, .2)
+}
+
+
+
+.swal2-icon {
+    position: relative;
+    box-sizing: content-box;
+    justify-content: center;
+    width: 5em;
+    height: 5em;
+    margin: 1.25em auto 1.875em;
+    border: .25em solid transparent;
+    border-radius: 50%;
+    font-family: inherit;
+    line-height: 5em;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+
+
+
+.swal2-icon.swal2-success {
+    border-color: #a5dc86;
+    color: #a5dc86
+}
+
+
+.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+    top: -.4375em;
+    left: -2.0635em;
+    transform: rotate(-45deg);
+    transform-origin: 3.75em 3.75em;
+    border-radius: 7.5em 0 0 7.5em
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+    top: -.6875em;
+    left: 1.875em;
+    transform: rotate(-45deg);
+    transform-origin: 0 3.75em;
+    border-radius: 0 7.5em 7.5em 0
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    position: absolute;
+    z-index: 2;
+    top: -.25em;
+    left: -.25em;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    border: .25em solid rgba(165, 220, 134, .3);
+    border-radius: 50%
+}
+
+
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: .3125em;
+    border-radius: .125em;
+    background-color: #a5dc86
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+    top: 2.875em;
+    left: .8125em;
+    width: 1.5625em;
+    transform: rotate(45deg)
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+    top: 2.375em;
+    right: .5em;
+    width: 2.9375em;
+    transform: rotate(-45deg)
+}
+
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+    -webkit-animation: swal2-animate-success-line-tip .75s;
+    animation: swal2-animate-success-line-tip .75s
+}
+
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+    -webkit-animation: swal2-animate-success-line-long .75s;
+    animation: swal2-animate-success-line-long .75s
+}
+
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+    -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
+    animation: swal2-rotate-success-circular-line 4.25s ease-in
+}
+
+
+
 
 /* Layout helpers
 ----------------------------------*/
@@ -103,12 +388,12 @@
 	display: block;
 	cursor: pointer;
 	position: relative;
-	margin: 2px 0 0 0;
+	margin: 1px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-content {
-	padding: 1em 2.2em;
+	padding: 1em 1.2em;
 	border-top: 0;
 	overflow: auto;
 }
@@ -173,7 +458,7 @@
 	right: 0;
 }
 .ui-button {
-	padding: .4em 1em;
+	padding: .3em 1em;
 	display: inline-block;
 	position: relative;
 	line-height: normal;
@@ -519,10 +804,10 @@ button.ui-button::-moz-focus-inner {
 	position: absolute;
 	right: .3em;
 	top: 50%;
-	width: 20px;
+	width: 17px;
 	margin: -10px 0 0 0;
 	padding: 1px;
-	height: 20px;
+	height: 17px;
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
@@ -906,10 +1191,10 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-	border: 3px solid #c5c5c5;
+	border: 3px solid #006699;
 }
 .ui-widget-content {
-	border: 2px solid #dddddd;
+	border: 2px solid #006699;
 	background: #ffffff;
 	color: #333333;
 }
@@ -917,8 +1202,8 @@ body .ui-tooltip {
 	color: #333333;
 }
 .ui-widget-header {
-	border: 1px solid #dddddd;
-	background: #e9e9e9;
+	border: 0.5px solid white;
+	background: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 );
 	color: #333333;
 	font-weight: bold;
 }
@@ -960,10 +1245,10 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #cccccc;
+	border: 1px solid #006699;
 	background: #ededed;
 	font-weight: normal;
-	color: #2b2b2b;
+	color:#006699;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -989,7 +1274,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
 	border: 1px solid #003eff;
-	background: #007fff;
+	background:#006699;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -1318,6 +1603,8 @@ a.ui-button:active,
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
 }
+
+
 
 /* End Thong Bao */
 
@@ -1791,7 +2078,7 @@ span.psw {
 
 /* FORM LOGIN */
     .form {
-        background: #eaecee;
+        background:#669999;
         padding: 35px;
         max-width: auto;
 		width: 700px;
@@ -1859,6 +2146,9 @@ span.psw {
         font-size: 22px;
     }
 
+	
+	
+	
     label .req {
         margin: 2px;
         color: #1ab188;
@@ -1879,26 +2169,17 @@ span.psw {
     }
 
     input,
-    textarea {
-        font-size: 17px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 5px 10px;
-        background: none;
-        background-image: none;
-        border: 1px solid #a0b3b0;
-        color: black;
-        border-radius: 0;
-        transition: border-color .25s ease, box-shadow .25s ease;
-    }
+
 
     input:focus,
     textarea:focus {
-        outline: 0;
-        border-color: #1ab188;
+        outline: 5;
+        border-color: white;
     }
 
+	
+	
+	
     textarea {
         border: 2px solid #a0b3b0;
         resize: vertical;
@@ -2072,8 +2353,12 @@ span.psw {
 </head>
 
 <body translate="no">
-
+  <div class="header";>
+  <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
+  <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
+  </div>
 <!-- Modal -->
+
 
 <div id="id01" class="modal">
   
@@ -2095,10 +2380,12 @@ span.psw {
 
 <p id='dialog-Login' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đăng Nhập sai UserName hoặc Password !</p>
 <p id='dialog-ThayPassNOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đổi Password chưa được!</p>
-<p id='dialog-ThayPassOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đã đổi Password thành công !</p>
+<p id='dialog-ThayPassOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Đổi Password thành công, thông tin thay đổi trong Email của Bạn !</p>
 <p id='dialog-LoginOK' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Login OK !</p>
 <p type = "text" id="ngay">
 <p type = "text" id="doma" value=""></p>
+
+
     <div class="form">
 
         <ul class="tab-group">
@@ -2304,6 +2591,7 @@ span.psw {
 
 <script src="TruyenDanPicture/jquery.min.js"></script>
 <script src="TruyenDanPicture/Login.min.js"></script>
+<script src="./SetTimeout/Alert.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
@@ -2596,39 +2884,47 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
             });
 			});
 	
-			return false;	
-	
-	//var khánh;
-    khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-	khánh2 = ".html"	
-	Updatetime_value();
-	
-	
-				$(function() {
-				$("#dialog-LoginOK").dialog({
-                modal: true,
-                buttons: {
-                    OK: function() {			
-						
-                        $(this).dialog("close");
-						//window.open(khánh,target="_blank");
-				options = 'toolbar=0,status=0,resizable=1';
-				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
-				window.history.replaceState('','','/');				
-				close();		
-		
-                    }
-		
-                }
-            });
-			});
-	
 			return false;
+			
+		
+		} else {	
 
+			 // Alert Message  
+				Swal.fire({
+				toast: true,
+				icon: 'success',
+				title: 'Đăng nhập thành công !!',
+				animation: false,
+				position: 'bottom',
+				showConfirmButton: false,
+				timer: 1500,
+				timerProgressBar: true,
+//				didOpen: toast => {
+				//  toast.addEventListener('mouseenter', Swal.stopTimer);
+				//  toast.addEventListener('mouseleave', Swal.resumeTimer);
+				  
+
+				  
+//				}
+				});
+				      khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+					  khánh2 = ".html"	
+					  options = 'toolbar=0,status=0,resizable=1';
+				
+				// https://daidhatest.github.io/đônghàVậtTưDựPhòng.html
+				// https://daidhatest.github.io/ok/đônghàVậtTưDựPhòng.html
+				
+				//window.open(khánh1 + "/ok/" + e.result + khánh2,'sharer',options);
+								
+							 
+			// ------------- 
+			//setTimeout( function() { window.open(khánh1 + "/ok/" + e.result + khánh2,target="_blank") }, 1505 );
+			setTimeout( function() { window.open(khánh1 + "/" + e.result + khánh2,target="_blank") }, 1505 );
+			window.history.replaceState('','','/');	
   }
 
-};
 
+};
 
 
 
