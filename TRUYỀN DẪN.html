@@ -7,336 +7,10 @@
 
   <title>ĐÀI VT ĐÔNG HÀ - TRUYỀN DẪN</title>
   
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 <link rel="stylesheet" href="TruyenDanPicture/css.css">
   
 <style>
-
-.swal2-container {
-    display: flex;
-    position: fixed;
-    z-index: 1060;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: .625em;
-    overflow-x: hidden;
-    transition: background-color .1s;
-    -webkit-overflow-scrolling: touch
-}
-
-.swal2-container.swal2-backdrop-show,
-.swal2-container.swal2-noanimation {
-    background: rgba(0, 0, 0, .4)
-}
-
-
-.swal2-popup {
-    display: none;
-    position: relative;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    width: 32em;
-    max-width: 100%;
-    padding: 1.25em;
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-    font-family: inherit;
-    font-size: 1rem
-}
-
-.swal2-popup:focus {
-    outline: 0
-}
-
-.swal2-popup.swal2-loading {
-    overflow-y: hidden
-}
-
-.swal2-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1.8em
-}
-
-.swal2-title {
-    position: relative;
-    max-width: 100%;
-    margin: 0 0 .4em;
-    padding: 0;
-    color: #595959;
-    font-size: 1.875em;
-    font-weight: 600;
-    text-align: center;
-    text-transformLogin: none;
-    word-wrap: break-word
-}
-
-.swal2-actions {
-    display: flex;
-    z-index: 1;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 1.25em auto 0;
-    padding: 0 1.6em
-}
-
-
-
-
-.swal2-styled {
-    margin: .3125em;
-    padding: .625em 1.1em;
-    box-shadow: none;
-    font-weight: 500
-}
-
-.swal2-styled:not([disabled]) {
-    cursor: pointer
-}
-
-.swal2-styled.swal2-confirm {
-    border: 0;
-    border-radius: .25em;
-    background: initial;
-    background-color: #2778c4;
-    color: #fff;
-    font-size: 1.0625em
-}
-
-.swal2-styled.swal2-deny {
-    border: 0;
-    border-radius: .25em;
-    background: initial;
-    background-color: #d14529;
-    color: #fff;
-    font-size: 1.0625em
-}
-
-.swal2-styled.swal2-cancel {
-    border: 0;
-    border-radius: .25em;
-    background: initial;
-    background-color: #757575;
-    color: #fff;
-    font-size: 1.0625em
-}
-
-.swal2-styled:focus {
-    outline: 0;
-    box-shadow: 0 0 0 3px rgba(100, 150, 200, .5)
-}
-
-.swal2-styled::-moz-focus-inner {
-    border: 0
-}
-
-
-
-
-.swal2-icon {
-    position: relative;
-    box-sizing: content-box;
-    justify-content: center;
-    width: 5em;
-    height: 5em;
-    margin: 1.25em auto 1.875em;
-    border: .25em solid transparent;
-    border-radius: 50%;
-    font-family: inherit;
-    line-height: 5em;
-    cursor: default;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-}
-
-
-
-.swal2-icon.swal2-success {
-    border-color: #a5dc86;
-    color: #a5dc86
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-circular-line] {
-    position: absolute;
-    width: 3.75em;
-    height: 7.5em;
-    transformLogin: rotate(45deg);
-    border-radius: 50%
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
-    top: -.4375em;
-    left: -2.0635em;
-    transformLogin: rotate(-45deg);
-    transformLogin-origin: 3.75em 3.75em;
-    border-radius: 7.5em 0 0 7.5em
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
-    top: -.6875em;
-    left: 1.875em;
-    transformLogin: rotate(-45deg);
-    transformLogin-origin: 0 3.75em;
-    border-radius: 0 7.5em 7.5em 0
-}
-
-.swal2-icon.swal2-success .swal2-success-ring {
-    position: absolute;
-    z-index: 2;
-    top: -.25em;
-    left: -.25em;
-    box-sizing: content-box;
-    width: 100%;
-    height: 100%;
-    border: .25em solid rgba(165, 220, 134, .3);
-    border-radius: 50%
-}
-
-.swal2-icon.swal2-success .swal2-success-fix {
-    position: absolute;
-    z-index: 1;
-    top: .5em;
-    left: 1.625em;
-    width: .4375em;
-    height: 5.625em;
-    transformLogin: rotate(-45deg)
-}
-
-
-
-.swal2-icon.swal2-success [class^=swal2-success-line] {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    height: .3125em;
-    border-radius: .125em;
-    background-color: #a5dc86
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
-    top: 2.875em;
-    left: .8125em;
-    width: 1.5625em;
-    transformLogin: rotate(45deg)
-}
-
-.swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
-    top: 2.375em;
-    right: .5em;
-    width: 2.9375em;
-    transformLogin: rotate(-45deg)
-}
-
-
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
-    -webkit-animation: swal2-animate-success-line-tip .75s;
-    animation: swal2-animate-success-line-tip .75s
-}
-
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
-    -webkit-animation: swal2-animate-success-line-long .75s;
-    animation: swal2-animate-success-line-long .75s
-}
-
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
-    -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
-    animation: swal2-rotate-success-circular-line 4.25s ease-in
-}
-
-
-@keyframes swal2-animate-success-line-tip {
-    0% {
-        top: 1.1875em;
-        left: .0625em;
-        width: 0
-    }
-
-    54% {
-        top: 1.0625em;
-        left: .125em;
-        width: 0
-    }
-
-    70% {
-        top: 2.1875em;
-        left: -.375em;
-        width: 3.125em
-    }
-
-    84% {
-        top: 3em;
-        left: 1.3125em;
-        width: 1.0625em
-    }
-
-    100% {
-        top: 2.8125em;
-        left: .8125em;
-        width: 1.5625em
-    }
-}
-
-@-webkit-keyframes swal2-animate-success-line-long {
-    0% {
-        top: 3.375em;
-        right: 2.875em;
-        width: 0
-    }
-
-    65% {
-        top: 3.375em;
-        right: 2.875em;
-        width: 0
-    }
-
-    84% {
-        top: 2.1875em;
-        right: 0;
-        width: 3.4375em
-    }
-
-    100% {
-        top: 2.375em;
-        right: .5em;
-        width: 2.9375em
-    }
-}
-
-
-
-@keyframes swal2-rotate-success-circular-line {
-    0% {
-        transformLogin: rotate(-45deg)
-    }
-
-    5% {
-        transformLogin: rotate(-45deg)
-    }
-
-    12% {
-        transformLogin: rotate(-405deg)
-    }
-
-    100% {
-        transformLogin: rotate(-405deg)
-    }
-}
-
-
 
 /* Popup */
 
@@ -475,7 +149,7 @@
 /* popup_username */
 
 .popup_username {
-  width: 80%;
+  width: 60%;
   padding: 15px;
   left: 0;
   margin-left: 5%;
@@ -489,7 +163,6 @@
   z-index: 10001;
   font-weight: 700;
   text-align: center;
- 
 }
 
 .overlay_username {
@@ -504,23 +177,29 @@
   display :none;
 }
 
+
 @media (min-width: 768px) {
   .popup_username {
     width: 66.66666666%;
     margin-left: 16.666666%;
-  }
+  }	
 }
 @media (min-width: 992px) {
   .popup_username {
     width: 80%;
     margin-left: 25%;
   }
+
+	
 }
 @media (min-width: 1200px) {
   .popup_username {
     width: 33.33333%;
     margin-left: 33.33333%;
   }
+
+	
+	
 }
 
 /* popup_password */
@@ -1082,14 +761,14 @@
 /* End Popup */
 
 
-body, div, span, applet, object, iframe,
+Truyền Dẫn, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, formLogin, label, legend,
+fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -1226,7 +905,7 @@ a {
   opacity: 1;
 }
 .project:hover img {
-  transformLogin: scale(1.2);
+  transform: scale(1.2);
 }
 
 
@@ -1300,9 +979,17 @@ a {
 
 
 
-/* XÓA ĐÂY */
 
 
+/* Modal Login Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
 /* Set a style for all buttons */
 button {
@@ -1405,12 +1092,12 @@ span.psw {
 
 
 
-/* formLogin LOGIN Củ*/
-    .formLogin {
+/* FORM LOGIN */
+    .form {
         background:#669999;
         padding: 35px;
         max-width: auto;
-		width: 700px;
+		width: 900px;
         margin: 0px auto;
         font-family:times new roman;
         
@@ -1466,7 +1153,7 @@ span.psw {
 
     label {
         position: absolute;
-        transformLogin: translateY(6px);
+        transform: translateY(6px);
         left: 13px;
         color: rgba(255, 255, 255, 0.5);
         transition: all 0.25s ease;
@@ -1475,16 +1162,13 @@ span.psw {
         font-size: 22px;
     }
 
-	
-	
-	
     label .req {
         margin: 2px;
         color: #1ab188;
     }
 
     label.active {
-        transformLogin: translateY(50px);
+        transform: translateY(50px);
         left: 2px;
         font-size: 14px;
     }
@@ -1498,17 +1182,26 @@ span.psw {
     }
 
     input,
-
+    textarea {
+        font-size: 17px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px 10px;
+        background: white;
+        background-image: none;
+        border: 1px solid #a0b3b0;
+        color: black;
+        border-radius: 0;
+        transition: border-color .25s ease, box-shadow .25s ease;
+    }
 
     input:focus,
     textarea:focus {
-        outline: 5;
-        border-color: white;
+        outline: 0;
+        border-color: #1ab188;
     }
 
-	
-	
-	
     textarea {
         border: 2px solid #a0b3b0;
         resize: vertical;
@@ -1542,7 +1235,7 @@ span.psw {
         padding: 8px 0;
         font-size: 1rem;
         font-weight:bold;
-        text-transformLogin: uppercase;
+        text-transform: uppercase;
         letter-spacing: .1em;
         background: #0e6655;
         color: #ffffff;
@@ -1565,134 +1258,8 @@ span.psw {
     }
 
 
-/* formLogin LOGIN Mới */
 
-.wrapperLogin{
-  width: 380px;
-  padding: 40px 30px 50px 30px;
-  background: #fff;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
-}
-.wrapperLogin header{
-  font-size: 35px;
-  font-weight: 600;
-}
-.wrapperLogin form{
-  margin: 40px 0;
-}
-form .field{
-  width: 100%;
-  margin-bottom: 20px;
-}
-form .field.shake{
-  animation: shake 0.3s ease-in-out;
-}
-@keyframes shake {
-  0%, 100%{
-    margin-left: 0px;
-  }
-  20%, 80%{
-    margin-left: -12px;
-  }
-  40%, 60%{
-    margin-left: 12px;
-  }
-}
-form .field .field-wrap{
-  height: 40px;
-  width: 100%;
-  position: relative;
-}
-form input{
-  width: 100%;
-  height: 100%;
-  outline: none;
-  padding: 0 45px;
-  font-size: 18px;
-  background: white;
-  caret-color: #5372F0;
-  border-radius: 5px;
-  border: 1px solid #bfbfbf;
-  border-bottom-width: 2px;
-  transition: all 0.2s ease;
-}
-form .field input:focus,
-form .field.valid input{
-  border-color: #5372F0;
-}
-form .field.shake input,
-form .field.error input{
-  border-color: #dc3545;
-}
-.field .field-wrap i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-.field-wrap .icon{
-  left: 15px;
-  color: #bfbfbf;
-  transition: color 0.2s ease;
-}
-.field-wrap .error-icon{
-  right: 15px;
-  color: #dc3545;
-}
-form input:focus ~ .icon,
-form .field.valid .icon{
-  color: #5372F0;
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-  color: #bfbfbf;
-}
-form input::placeholder{
-  color: #bfbfbf;
-  font-size: 17px;
-}
-form .field .error-txt{
-  color:white;
-  text-align: left;
-  margin-top: 5px;
-}
-form .field .error{
-  display: none;
-}
-form .field.shake .error,
-form .field.error .error{
-  display: block;
-}
-form .pass-txt{
-  text-align: left;
-  margin-top: -10px;
-}
-.wrapperLogin a{
-  color: #5372F0;
-  text-decoration: none;
-}
-.wrapperLogin a:hover{
-  text-decoration: underline;
-}
-form input[type="submit"]{
-  height: 40px;
-  margin-top: 30px;
-  color: #fff;
-  padding: 0;
-  border: none;
-  background: #5372F0;
-  cursor: pointer;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-form input[type="submit"]:hover{
-  background: #2c52ed;
-}
 
-/*END formLogin LOGIN Mới */
 
 
 /* MODAL LOGIN Full-width input fields */
@@ -1789,81 +1356,6 @@ form input[type="submit"]:hover{
 }
 } 
 
-
-/* Modal Thông báo */
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-.modalMess-wrapper {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  background: rgba(41, 171, 164, 0.8);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.25s ease-in-out;
-}
-
-.modalMess-wrapper.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modalMess {
-  width: 400px;
-  height: 180px;
-  display: block;
-  margin: 50% 0 0 -200px;
-  position: relative;
-  top: 45%; 
-  left: 50%;
-  background: #fff;
-  opacity: 0;
-
-  /* Chuyển động dưới lên */
- /* transition: all 0.5s ease-in-out; */
-  
-}
-
-.modalMess-wrapper.open .modalMess {
-  margin-top: -200px;
-  opacity: 1;
-}
-
-.headMess { 
-  width: 100%;
-  height: 45px;
-  padding: 2px 15px;
-  overflow: hidden;
-  background: #e2525c;
-}
-
-.btn-close {
-  font-size: 28px;
-  display: block;
-  float: right;
-  color: #fff;
-}
-
-.contentMess {
-  padding: 3%;
-}
-
-.good-job {
-  text-align: center;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  color: #e2525c;
-}
-.good-job .fa-exclamation-circle {
-  font-size: 40px;
-}
-.good-job h1 {
-  font-size: 25px;
-}
-
-
 </style>
 
 
@@ -1892,19 +1384,19 @@ form input[type="submit"]:hover{
 
 <div id="id01" class="modal">
   
-  <formLogin class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate" action="/action_page.php" method="post">
   
     <div class="imgcontainer">
 	
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 	  <h2 id="dn" style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP TD</h2>
     </div><!-- Modal -->
+  
+<p type = "text" id="ngay">
+<p type = "text" id="doma" value=""></p>
 
-		<p type = "text" id="ngay">
-		<p type = "text" id="doma" value=""></p>
 
-
-    <div class="formLogin">
+    <div class="form">
 
         <ul class="tab-group">
 
@@ -1917,35 +1409,26 @@ form input[type="submit"]:hover{
 					
 					<div id="loader2"></div>
 					<p align="center" id="repas" style="font-size: 1.5em; color: black;"></p>
-
-		<form class="tab-content">
+        <div class="tab-content">
 
 
             <div id="login">
 
-				 <div class="field username">
-				 <div class="error error-txt">Username không thể trống</div>
-					<div class="field-wrap">          
-					  <input name="username" id="username" type="text" class="formLogin_input" autofocus placeholder="Username" autocomplete="off">
-					  <i class="icon fas fa-user"></i>
-					  <i class="error error-icon fas fa-exclamation-circle"></i>
-					</div>
-					
-				  </div>
+    <form>
 
 
-				  <div class="field password">
-				  <div class="error error-txt">Password không thể trống</div>
-					<div class="field-wrap">
-					 <input name="oldpassword" id="oldpassword" type="password" class="formLogin_input" autofocus placeholder="Password" autocomplete="off">
-					  <i class="icon fas fa-lock"></i>
-					  <i class="error error-icon fas fa-exclamation-circle"></i>
-					</div>
-					
-				  </div> 
-				<input class="button button-block" type = "submit" onClick="Login_value(); " value = "Đăng Nhập" /></input>
+                    <div class="field-wrap" autocomplete="off">
+                        <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </div>
 
 
+                    <div class="field-wrap">
+                        <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </div>				
+
+		    <input class="button button-block" type = "button" onClick="LoginAll(); " value = "Đăng Nhập" /></input>
+
+                </form>
 
             </div>
 
@@ -1953,64 +1436,38 @@ form input[type="submit"]:hover{
 
             <div id="changepass">
 
-				<div class="top-row">
+                <form>
 
-				  <div class="field oldusername">
-				  <div class="error error-txt">oldusername không thể trống</div>
-					<div class="field-wrap">
-					 <input name="oldusername" id="oldusername" type="text" class="formLogin_input" autofocus placeholder="OldUsername" autocomplete="off">
-					  <i class="icon fas fa-lock"></i>
-					  <i class="error error-icon fas fa-exclamation-circle"></i>
-					</div>
-					
-				  </div>
+                  <div class="top-row">
+			<div class="field-wrap" autocomplete="off">
+                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </div>
 
-				  <div class="field oldpassword">
-				  <div class="error error-txt">oldpassword không thể trống</div>
-					<div class="field-wrap">
-					 <input name="oldpassword" id="oldpassword" type="password" class="formLogin_input" autofocus placeholder="Password" autocomplete="off">
-					  <i class="icon fas fa-lock"></i>
-					  <i class="error error-icon fas fa-exclamation-circle"></i>
-					</div>
-					
-				  </div>
-							  
+                    <div class="field-wrap">
+                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </div>
+                  </div>
 
-				  <div class="field newpassword">
-				  <div class="error error-txt">newpassword không thể trống</div>
-					<div class="field-wrap">
-					 <input name="newpassword" id="newpassword" type="password" class="formLogin_input" autofocus placeholder="NewPassword" autocomplete="off">
-					  <i class="icon fas fa-lock"></i>
-					  <i class="error error-icon fas fa-exclamation-circle"></i>
-					</div>
-					
-				  </div>
+                    <div class="field-wrap" autocomplete="off">
+                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
+                    </div>
 
-				  <div class="field cfpassword">
-				  <div class="error error-txt">cf newpassword không thể trống</div>
-					<div class="field-wrap">
-					 <input name="cfpassword" id="cfpassword" type="password" class="formLogin_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
-					  <i class="icon fas fa-lock"></i>
-					  <i class="error error-icon fas fa-exclamation-circle"></i>
-					</div>
-					
-				  </div>
+                    <div class="field-wrap">
+                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
+                    </div>
+		   <input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
 
-
-
-					<input class="button button-block" type = "submit" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
-
-			</div>
+                </form>
 
             </div>
 
 
-        </form><!-- tab-content -->
+        </div><!-- tab-content -->
 
-    </div> <!-- /formLogin -->
+    </div> <!-- /form -->
 
 
-
+</form><!-- Modal -->
 </div>
 
 
@@ -2121,7 +1578,6 @@ form input[type="submit"]:hover{
 </div>
 <!-- /.container -->
    
-<!-- Popup bang Modal -->
 
 <div class="overlay" id="dialog-container">
   <div class="popup">
@@ -2145,8 +1601,9 @@ form input[type="submit"]:hover{
 
 <div class="overlay_username" id="dialog_username">
   <div class="popup_username">
-  	<p>Chưa nhập Username !</p>
+    
     <div class="text-right">
+     <p>Chưa nhập Username !</p>
       <button class="dialog-btn btn-primary" id="confirm_username">OK</button>
     </div>
   </div>
@@ -2160,7 +1617,16 @@ form input[type="submit"]:hover{
     </div>
   </div>
 </div> 
-   
+
+<div class="overlay_LoginOk" id="dialog_LoginOk">
+  <div class="popup_LoginOk">
+    <p>Đăng nhập OK !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_LoginOk">OK</button>
+    </div>
+  </div>
+</div>
+
 <div class="overlay_Sai_userpassword" id="dialog_Sai_userpassword">
   <div class="popup_Sai_userpassword">
     <p>Đăng Nhập sai UserName hoặc Password !</p>
@@ -2206,15 +1672,6 @@ form input[type="submit"]:hover{
   </div>
 </div>
 
-<div class="overlay_LoginOk" id="dialog_LoginOk">
-  <div class="popup_LoginOk">
-    <p>Đăng nhập OK !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_LoginOk">OK</button>
-    </div>
-  </div>
-</div>
-
 <div class="overlay_newpassword" id="dialog_newpassword">
   <div class="popup_newpassword">
     <p>Chưa nhập password mới!</p>
@@ -2249,990 +1706,27 @@ form input[type="submit"]:hover{
       <button class="dialog-btn btn-primary" id="confirm_newpasswordNok">OK</button>
     </div>
   </div>
-</div>
+</div> 
    
-
-
-<div class="modalMess-wrapper">
-  <div class="modalMess">
-    <div class="headMess">
-      <a class="btn-close trigger" href="#">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </a>
-    </div>
-    <div class="contentMess">
-        <div class="good-job">
-          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-          <h1>Đăng nhập thành công !</h1>
-        </div>
-    </div>
-  </div>
-</div>
-
-
 
 <script src="TruyenDanPicture/jquery.min.js"></script>
 <script src="TruyenDanPicture/Login.min.js"></script>
-
-<script src="./SetTimeout/Alert.js"></script>
-<script src="Alert5/jquery-2.2.4.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
 eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
 </script>
-
-
- <script id="rendered-js">
-$(document).ready(function () {
-   $('.modalMess-wrapper').toggleClass('open');
-});
-
-// Close
-$(document).ready(function () {
- $('.trigger').on('click', function () {
-    $('.modalMess-wrapper').toggleClass('open');
-   return false;
-  });
-});
-
-// OPen
-function open_modalMess() {
-    $('.modalMess-wrapper').toggleClass('open');
-   return false;
-}
-
-</script>
-
-
-  <script>
-  const form = document.querySelector("form");
-  
-eField = form.querySelector(".username"),
-eInput = eField.querySelector("input"),
-
-oField = form.querySelector(".oldusername"),
-oInput = oField.querySelector("input"),
-
-pField = form.querySelector(".password"),
-pInput = pField.querySelector("input"),
-
-opField = form.querySelector(".oldpassword"),
-opInput = opField.querySelector("input"),
-
-npField = form.querySelector(".newpassword"),
-npInput = npField.querySelector("input"),
-
-cfpField = form.querySelector(".cfpassword"),
-cfpInput = cfpField.querySelector("input");
-
-form.onsubmit = (e)=>{
-  e.preventDefault(); //preventing from form submitting
-  //if username and password is blank then add shake class in it else call specified function
-  (eInput.value == "") ? eField.classList.add("shake", "error") : checkusername();  
-  (oInput.value == "") ? oField.classList.add("shake", "error") : checkoldusername();
-  
-  (pInput.value == "") ? pField.classList.add("shake", "error") : checkPass();
-  (opInput.value == "") ? opField.classList.add("shake", "error") : checkoldPass();
-  (npInput.value == "") ? npField.classList.add("shake", "error") : checknewPass();
-  (cfpInput.value == "") ? cfpField.classList.add("shake", "error") : checkcfPass();
-
-  setTimeout(()=>{ //remove shake class after 500ms
-    eField.classList.remove("shake");
-	oField.classList.remove("shake");
-	
-    pField.classList.remove("shake");
-	opField.classList.remove("shake");
-	npField.classList.remove("shake");
-	cfpField.classList.remove("shake");
-	
-  }, 500);
-
-  eInput.onkeyup = ()=>{checkusername();} //calling checkusername function on username input keyup
-  oInput.onkeyup = ()=>{checkoldusername();} //calling checkPassword function on pass input keyup
-  
-  pInput.onkeyup = ()=>{checkPass();} //calling checkPassword function on pass input keyup
-  opInput.onkeyup = ()=>{checkoldPass();} //calling checkPassword function on pass input keyup
-  npInput.onkeyup = ()=>{checknewPass();} //calling checkPassword function on pass input keyup
-  cfpInput.onkeyup = ()=>{checkcfPass();} //calling checkPassword function on pass input keyup  
-  
-
-  function checkusername(){ //checkusername function
-    if(eInput.value == ""){ //if pass is empty then add error and remove valid class
-      eField.classList.add("error");
-      eField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
-      eField.classList.remove("error");
-      eField.classList.add("valid");
-    }
-  }
-
-   function checkoldusername(){ //checkusername function
-    if(oInput.value == ""){ //if pass is empty then add error and remove valid class
-      oField.classList.add("error");
-      oField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
-      oField.classList.remove("error");
-      oField.classList.add("valid");
-    }
-  }
-  
-  function checkPass(){ //checkPass function
-    if(pInput.value == ""){ //if pass is empty then add error and remove valid class
-      pField.classList.add("error");
-      pField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
-      pField.classList.remove("error");
-      pField.classList.add("valid");
-    }
-  }
-
-  function checkoldPass(){ //checkPass function
-    if(opInput.value == ""){ //if pass is empty then add error and remove valid class
-      opField.classList.add("error");
-      opField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
-      opField.classList.remove("error");
-      opField.classList.add("valid");
-    }
-  }
-
-   function checknewPass(){ //checkPass function
-    if(npInput.value == ""){ //if pass is empty then add error and remove valid class
-      npField.classList.add("error");
-      npField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
-      npField.classList.remove("error");
-      npField.classList.add("valid");
-    }
-  } 
-
-  function checkcfPass(){ //checkPass function
-    if(cfpInput.value == ""){ //if pass is empty then add error and remove valid class
-      cfpField.classList.add("error");
-      cfpField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
-      cfpField.classList.remove("error");
-      cfpField.classList.add("valid");
-    }
-  }  
-		  //if eField and pField doesn't contains error class that mean user filled details properly
-		  if(!eField.classList.contains("error") && !pField.classList.contains("error")){
-		   //window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
-		   alert("Đăng nhập OK")
-		   return false;
-		  }
-}
-
-  </script>
-
 		
 <script type="text/javascript">//<![CDATA[
 
-!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
-
-$(document).idle({
-  onIdle: function(){
-	Search_dialog_time();
-  },
-  idle: 1800000
-})
-//]]>
-
-
-var overlay_timeme = document.getElementById("dialog_time");
-var overlayme = document.getElementById("testText");
-function Search_dialog_time(){
-if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
-close();
-} else {
-show_dialog_time();
-}
-}
-
-
-function show_dialog_time() {
-    overlay_timeme.style.display = "block";
-}
-
-document.getElementById("confirm_time").onclick = function(){confirm_time()};
-function confirm_time() {
-	close();	
-    overlay_timeme.style.display = "none";	
-}
-
-//no username
-var overlay_username = document.getElementById("dialog_username");
-function show_dialog_username() {
-    overlay_username.style.display = "block";
-}
-
-document.getElementById("confirm_username").onclick = function(){confirm_username()};
-function confirm_username() {	
-    overlay_username.style.display = "none";	
-}
-
-//no password
-var overlay_password = document.getElementById("dialog_password");
-function show_dialog_password() {
-    overlay_password.style.display = "block";
-}
-
-document.getElementById("confirm_password").onclick = function(){confirm_password()};
-function confirm_password() {	
-    overlay_password.style.display = "none";	
-}
-
-//LoginOk
-var overlay_LoginOk = document.getElementById("dialog_LoginOk");
-function show_dialog_LoginOk() {
-    overlay_LoginOk.style.display = "block";
-}
-
-document.getElementById("confirm_LoginOk").onclick = function(){confirm_LoginOk()};
-function confirm_LoginOk() {	
-    overlay_LoginOk.style.display = "none";	
-	
-}
-
-//Sai_userpassword
-var overlay_Sai_userpassword = document.getElementById("dialog_Sai_userpassword");
-function show_dialog_Sai_userpassword() {
-    overlay_Sai_userpassword.style.display = "block";
-}
-
-document.getElementById("confirm_Sai_userpassword").onclick = function(){confirm_Sai_userpassword()};
-function confirm_Sai_userpassword() {	
-    overlay_Sai_userpassword.style.display = "none";	
-} 
-
-//Thay_password_Nok
-var overlay_Thay_password_Nok = document.getElementById("dialog_Thay_password_Nok");
-function show_dialog_Thay_password_Nok() {
-    overlay_Thay_password_Nok.style.display = "block";
-}
-
-document.getElementById("confirm_Thay_password_Nok").onclick = function(){confirm_Thay_password_Nok()};
-function confirm_Thay_password_Nok() {	
-    overlay_Thay_password_Nok.style.display = "none";	
-}
-
-//Thay_password_Ok
-var overlay_Thay_password_Ok = document.getElementById("dialog_Thay_password_Ok");
-function show_dialog_Thay_password_Ok() {
-    overlay_Thay_password_Ok.style.display = "block";
-}
-
-document.getElementById("confirm_Thay_password_Ok").onclick = function(){confirm_Thay_password_Ok()};
-function confirm_Thay_password_Ok() {	
-    overlay_Thay_password_Ok.style.display = "none";	
-}
-
-//no oldusername
-var overlay_oldusername = document.getElementById("dialog_oldusername");
-function show_dialog_oldusername() {
-    overlay_oldusername.style.display = "block";
-}
-
-document.getElementById("confirm_oldusername").onclick = function(){confirm_oldusername()};
-function confirm_oldusername() {	
-    overlay_oldusername.style.display = "none";	
-}
-
-//no oldpassword
-var overlay_oldpassword = document.getElementById("dialog_oldpassword");
-function show_dialog_oldpassword() {
-    overlay_oldpassword.style.display = "block";
-}
-
-document.getElementById("confirm_oldpassword").onclick = function(){confirm_oldpassword()};
-function confirm_oldpassword() {	
-    overlay_oldpassword.style.display = "none";	
-}
-
-//no newpassword
-var overlay_newpassword = document.getElementById("dialog_newpassword");
-function show_dialog_newpassword() {
-    overlay_newpassword.style.display = "block";
-}
-
-document.getElementById("confirm_newpassword").onclick = function(){confirm_newpassword()};
-function confirm_newpassword() {	
-    overlay_newpassword.style.display = "none";	
-} 
-
-//newpassleng
-var overlay_newpassleng = document.getElementById("dialog_newpassleng");
-function show_dialog_newpassleng() {
-    overlay_newpassleng.style.display = "block";
-}
-
-document.getElementById("confirm_newpassleng").onclick = function(){confirm_newpassleng()};
-function confirm_newpassleng() {	
-    overlay_newpassleng.style.display = "none";	
-}
-
-//no Cfpassword
-var overlay_Cfpassword = document.getElementById("dialog_Cfpassword");
-function show_dialog_Cfpassword() {
-    overlay_Cfpassword.style.display = "block";
-}
-
-document.getElementById("confirm_Cfpassword").onclick = function(){confirm_Cfpassword()};
-function confirm_Cfpassword() {	
-    overlay_Cfpassword.style.display = "none";	
-}
-
-//newpasswordNok
-var overlay_newpasswordNok = document.getElementById("dialog_newpasswordNok");
-function show_dialog_newpasswordNok() {
-    overlay_newpasswordNok.style.display = "block";
-}
-
-document.getElementById("confirm_newpasswordNok").onclick = function(){confirm_newpasswordNok()};
-function confirm_newpasswordNok() {	
-    overlay_newpasswordNok.style.display = "none";	
-}
-
-
-
-// Thoát
-document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
-var overlayme = document.getElementById("dialog-container");
-
-function show_dialog() {
-    overlayme.style.display = "block";
-}
-
-document.getElementById("confirm").onclick = function(){confirm()};
-function confirm() {
-	close();	
-    overlayme.style.display = "none";
-	
-}
-
-document.getElementById("cancel").onclick = function(){cancel()};
-function cancel() {
-    overlayme.style.display = "none";
-}
-
-
-function close_window() {
-close();
-}
-
-
-document.addEventListener('contextmenu', event => event.preventDefault());
-
-home = function(){
-location.href = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-}
-
-
-window.requestFrame = (function() {
-  return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
-    window.setTimeout(c, 50);
-  }))));
-})();
-var test = {
-  st: false,
-  el: document.createElement("img"),
-  rn: function() {
-    test.st = false;
-    console.log(test.el);
-    console.clear();
-    document.getElementById("testText").innerHTML = ((test.st === true) ? "open" : "") + ".";
-    window.requestFrame(test.rn);
-  }
-};
-(test.el).__defineGetter__("id", function() {
-  test.st = true;
-});
-test.rn();
-//------------------------
-
-
-// Thoát
-
-document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
-var overlayme = document.getElementById("dialog-container");
-
-function show_dialog() {
-    overlayme.style.display = "block";
-}
-
-document.getElementById("confirm").onclick = function(){confirm()};
-function confirm() {  
-	close_window();	
-    overlayme.style.display = "none";	
-}
-
-document.getElementById("cancel").onclick = function(){cancel()};
-function cancel() {  
-    overlayme.style.display = "none";
-}
-
-
-function close_window() {
-close();
-}
-
-// --------------------
-
-
-$(document).ready(function() {
-var url = location.protocol;
-if (url == "file:") {
-//	var element = document.getElementById("login");
-//	element.parentNode.removeChild(element);
-//	close();
-} else {
-}
-
-});
-
-//window.history.replaceState('','','/');
-
-// THAY ĐÂY
-
-//var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5OXpSZ2FEaWFSNmxNNzZQdVlxY0hFTWxLNHRhYXJXdlB5am43NHQ3QXFla1dSOWRqbmNpVDJvVnFmS201eG1ab3V4US9leGVj";
-var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdWppekQ5STBWeUdjVlNJVTJ4aVUtT0wxSGw2TGRCeEdsanVpNTl4S2xhZVJTV3l2WnJTQktPdGZUNDVDZzJHUS9leGVj";
-
-  function LoginQL_value() {
-
-	var user=$("#username").val();
-	var pass= $("#password").val();
-	var ngay= $("#ngay").val();
-	var doma= $("#doma").val();
-
-
-Date.prototype.yyyymmdd = function() {
-  var yyyy = this.getFullYear();
-  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
-  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
-  return "".concat(yyyy).concat(mm).concat(dd);
-};
-
-Date.prototype.yyyymmddhhmm = function() {
-  var yyyymmdd = this.yyyymmdd();
-  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
-  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
-  return "".concat(yyyymmdd).concat(hh).concat(min);
-};
-
-Date.prototype.yyyymmddhhmmss = function() {
-  var yyyymmddhhmm = this.yyyymmddhhmm();
-  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
-  return "".concat(yyyymmddhhmm)+ss;
-};
-
-var d = new Date();
-document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
-
-	var url = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-	document.getElementById("doma").value = url;
-	var doma= $("#doma").val();	    
-	var ngay= $("#ngay").val();
-
-    var request = jQuery.ajax({
-      crossDodiv: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-
-	var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+"&action=LoginQL";
-// Moi them
-	if (document.getElementById('username').value === "") {
-		show_dialog_username();	
-		return false;	
-	}	
-// Moi them	
-	if (document.getElementById('password').value === "") {
-		show_dialog_password();	
-		return false;
-	
-	}	
-
-	
-
-	
-    var request = jQuery.ajax({
-      crossDodiv: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-	  
-    });
-
-
-  }
-
-  function ctrlq(e) {
-  document.getElementById('password').value = "";
-       if (e.result === "Đăng nhập sai User Name hoặc Password !") {
-			show_dialog_Sai_userpassword();	// Moi them
-			return false;
-		
-       } else if (e.result === "Đổi Password NOK !") {
-			show_dialog_Thay_password_Nok(); // Moi them	
-			return false;
-
-
-       } else if (e.result === "Đổi Password OK !") {
-			show_dialog_Thay_password_Ok(); // Moi them	
-			return false;
-			
-		
-		} else {	
-
-
-				Swal.fire({
-				toast: true,
-				icon: 'success',
-				title: 'Đăng nhập thành công !!',
-				animation: false,
-				position: 'bottom',
-				showConfirmButton: false,
-				timer: 1500,
-				timerProgressBar: true,
-
-				});
-
-    khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-	khánh2 = ".html"	
-	setTimeout( function() { window.open(khánh1 + "/" + e.result + khánh2,target="_blank") }, 1505 );
-	
-	return false;
-
-}
-
-};
-
-
-function Changepassword_value() {
-
-	var olduser=$("#oldusername").val();
-	var oldpass= $("#oldpassword").val();
-	var newpass= $("#newpassword").val();
-	var cfpass= $("#cfpassword").val();
-	
-	var newpassleng = newpass.length;
-	
-    var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
-
-	if (document.getElementById('oldusername').value === "") {
-			show_dialog_oldusername();	// Moi them	
-			return false;
-	
-	}	
-	
-	if (document.getElementById('oldpassword').value === "") {
-			show_dialog_oldpassword();	// Moi them	
-			return false;
-	
-	}
-
-	if (document.getElementById('newpassword').value === "") {
-			show_dialog_newpassword();	// Moi them	
-			return false;
-	
-	}
-	if(newpassleng < 8) {
-
-		show_dialog_newpassleng();	// Moi them		
-		return false;
-	}
-	
-	
-	if (document.getElementById('cfpassword').value === "") {
-			show_dialog_Cfpassword();	// Moi them
-			return false;
-	
-	}
-
-	if (document.getElementById('newpassword').value !== document.getElementById('cfpassword').value) {
-			show_dialog_newpasswordNok();	// Moi them
-			return false;
-	
-	}
-	
-
-    var request = jQuery.ajax({	
-      crossDodiv: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-	  
-    });
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";	
-  }
-
-function Delre() {
-  document.querySelector("#re").innerHTML="";
-}
- 
-  
-$(document).keydown(function(event) {
-    if (!((String.fromCharCode(event.which).toLowerCase() == 's' || event.keyCode == 13) && event.ctrlKey) && !(event.which == 19)) return true;
-    event.preventDefault();
-    return false;
-});  
-
-// FACEBOOK
- shareface = function(){
-    url = 'https://www.facebook.com/sharer/sharer.php?u=' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
-	
-    options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
-    window.open(url,'sharer',options);
-} 
-  
-
-        // https://www.ordinarycoders.com/blog/article/custom-user-login-formLogins
-
-        $('.formLogin').find('input, textarea').on('keyup blur focus', function(e) {
-
-            var $this = $(this),
-                label = $this.prev('label');
-
-            if (e.type === 'keyup') {
-                if ($this.val() === '') {
-                    label.removeClass('active highlight');
-                } else {
-                    label.addClass('active highlight');
-                }
-            } else if (e.type === 'blur') {
-                if ($this.val() === '') {
-                    label.removeClass('active highlight');		
-                } else {
-                    label.removeClass('highlight');
-                }
-            } else if (e.type === 'focus') {
-
-                if ($this.val() === '') {
-                    label.removeClass('highlight');
-                } else
-                if ($this.val() !== '') {
-                    label.addClass('highlight');
-                }
-            }
-
-        });
-
-        $('.tab a').on('click', function(e) {
-
-            e.preventDefault();
-
-            $(this).parent().addClass('active');
-			
-            $(this).parent().siblings().removeClass('active');
-
-            target = $(this).attr('href');
-
-            $('.tab-content > div').not(target).hide();
-
-            $(target).fadeIn(600);
-
-        });
+var _0x1de2c9=_0x4b2d;(function(_0x2249eb,_0x1dfcc4){var _0x562a89=_0x4b2d,_0x2c7e17=_0x2249eb();while(!![]){try{var _0x3c40bc=-parseInt(_0x562a89(0x102))/0x1+-parseInt(_0x562a89(0x108))/0x2+-parseInt(_0x562a89(0x136))/0x3+-parseInt(_0x562a89(0xe1))/0x4+-parseInt(_0x562a89(0x104))/0x5*(-parseInt(_0x562a89(0xca))/0x6)+-parseInt(_0x562a89(0xda))/0x7*(-parseInt(_0x562a89(0x148))/0x8)+parseInt(_0x562a89(0xe3))/0x9;if(_0x3c40bc===_0x1dfcc4)break;else _0x2c7e17['push'](_0x2c7e17['shift']());}catch(_0x250462){_0x2c7e17['push'](_0x2c7e17['shift']());}}}(_0x1745,0xb6872),!function(_0x53e09b){'use strict';_0x53e09b['fn']['idle']=function(_0xe0bb1f){var _0x249b67=_0x4b2d,_0x144cde,_0x50fdbb,_0x5af5b6={'idle':0xea60,'events':_0x249b67(0xe5),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0x5d944c=_0xe0bb1f['startAtIdle']||!0x1,_0x412949=!_0xe0bb1f[_0x249b67(0xf8)]||!0x0,_0x1f88a5=_0x53e09b[_0x249b67(0x126)]({},_0x5af5b6,_0xe0bb1f),_0xe770e8=null;return _0x53e09b(this)['on'](_0x249b67(0xfa),{},function(){var _0x33ef60=_0x249b67;_0x53e09b(this)['off'](_0x1f88a5[_0x33ef60(0xb3)]),_0x1f88a5[_0x33ef60(0x12b)]=!0x1,_0x144cde(_0xe770e8,_0x1f88a5);}),_0x144cde=function(_0x33f5b6,_0x2b2fd7){var _0x21b298=_0x249b67;return _0x5d944c&&(_0x2b2fd7['onActive']['call'](),_0x5d944c=!0x1),clearTimeout(_0x33f5b6),_0x2b2fd7[_0x21b298(0x12b)]?_0x50fdbb(_0x2b2fd7):void 0x0;},_0x50fdbb=function(_0x342044){var _0x473282=_0x249b67,_0x1a0b72,_0xee526d=_0x342044[_0x473282(0xf6)]?setInterval:setTimeout;return _0x1a0b72=_0xee526d(function(){var _0x1bac17=_0x473282;_0x5d944c=!0x0,_0x342044[_0x1bac17(0x138)][_0x1bac17(0x11c)]();},_0x342044[_0x473282(0xd1)]);},this['each'](function(){var _0x48e513=_0x249b67;_0xe770e8=_0x50fdbb(_0x1f88a5),_0x53e09b(this)['on'](_0x1f88a5[_0x48e513(0xb3)],function(){_0xe770e8=_0x144cde(_0xe770e8,_0x1f88a5);}),(_0x1f88a5[_0x48e513(0x11f)]||_0x1f88a5[_0x48e513(0xd3)])&&_0x53e09b(document)['on'](_0x48e513(0xea),function(){var _0x203aff=_0x48e513;document[_0x203aff(0xbb)]||document[_0x203aff(0xc0)]||document[_0x203aff(0x142)]||document[_0x203aff(0x12c)]?_0x412949&&(_0x412949=!0x1,_0x1f88a5[_0x203aff(0xd3)][_0x203aff(0x11c)]()):_0x412949||(_0x412949=!0x0,_0x1f88a5[_0x203aff(0x11f)][_0x203aff(0x11c)]());});});};}(jQuery),$(document)['idle']({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740}));var overlay_timeme=document[_0x1de2c9(0xe0)](_0x1de2c9(0x112)),overlayme=document[_0x1de2c9(0xe0)](_0x1de2c9(0x13a));function Search_dialog_time(){var _0x21f251=_0x1de2c9;document[_0x21f251(0xe0)](_0x21f251(0x112))==null||document[_0x21f251(0xe0)]('testText')==null?close():show_dialog_time();}function show_dialog_time(){var _0x477775=_0x1de2c9;overlay_timeme[_0x477775(0xd4)]['display']=_0x477775(0xee);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xb7))['onclick']=function(){confirm_time();};function confirm_time(){var _0x4ac999=_0x1de2c9;close(),overlay_timeme['style'][_0x4ac999(0x12d)]=_0x4ac999(0xe8);}var overlay_username=document[_0x1de2c9(0xe0)](_0x1de2c9(0x124));function show_dialog_username(){var _0x7bcdbd=_0x1de2c9;overlay_username['style'][_0x7bcdbd(0x12d)]=_0x7bcdbd(0xee);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xf4))['onclick']=function(){confirm_username();};function confirm_username(){var _0x51b7d6=_0x1de2c9;overlay_username[_0x51b7d6(0xd4)][_0x51b7d6(0x12d)]=_0x51b7d6(0xe8);}var overlay_password=document[_0x1de2c9(0xe0)](_0x1de2c9(0xc7));function show_dialog_password(){var _0x3bcfba=_0x1de2c9;overlay_password[_0x3bcfba(0xd4)]['display']=_0x3bcfba(0xee);}document['getElementById']('confirm_password')[_0x1de2c9(0xd7)]=function(){confirm_password();};function confirm_password(){var _0x41f0f7=_0x1de2c9;overlay_password[_0x41f0f7(0xd4)][_0x41f0f7(0x12d)]=_0x41f0f7(0xe8);}var overlay_Sai_userpassword=document[_0x1de2c9(0xe0)](_0x1de2c9(0xe2));function show_dialog_Sai_userpassword(){var _0x29ff6b=_0x1de2c9;overlay_Sai_userpassword[_0x29ff6b(0xd4)][_0x29ff6b(0x12d)]=_0x29ff6b(0xee);}document['getElementById']('confirm_Sai_userpassword')[_0x1de2c9(0xd7)]=function(){confirm_Sai_userpassword();};function confirm_Sai_userpassword(){var _0x1f4038=_0x1de2c9;overlay_Sai_userpassword['style'][_0x1f4038(0x12d)]='none';}var overlay_Thay_password_Nok=document[_0x1de2c9(0xe0)]('dialog_Thay_password_Nok');function show_dialog_Thay_password_Nok(){var _0x517b9d=_0x1de2c9;overlay_Thay_password_Nok['style']['display']=_0x517b9d(0xee);}document['getElementById'](_0x1de2c9(0xb5))[_0x1de2c9(0xd7)]=function(){confirm_Thay_password_Nok();};function confirm_Thay_password_Nok(){var _0x993e0f=_0x1de2c9;overlay_Thay_password_Nok[_0x993e0f(0xd4)][_0x993e0f(0x12d)]=_0x993e0f(0xe8);}var overlay_Thay_password_Ok=document['getElementById'](_0x1de2c9(0x103));function show_dialog_Thay_password_Ok(){var _0xee43bd=_0x1de2c9;overlay_Thay_password_Ok[_0xee43bd(0xd4)][_0xee43bd(0x12d)]=_0xee43bd(0xee);}document['getElementById'](_0x1de2c9(0xe6))[_0x1de2c9(0xd7)]=function(){confirm_Thay_password_Ok();};function confirm_Thay_password_Ok(){var _0x58c2f5=_0x1de2c9;overlay_Thay_password_Ok[_0x58c2f5(0xd4)][_0x58c2f5(0x12d)]='none';}var overlay_oldusername=document[_0x1de2c9(0xe0)]('dialog_oldusername');function show_dialog_oldusername(){var _0x3f9baa=_0x1de2c9;overlay_oldusername[_0x3f9baa(0xd4)]['display']=_0x3f9baa(0xee);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xcf))[_0x1de2c9(0xd7)]=function(){confirm_oldusername();};function confirm_oldusername(){var _0x2e326a=_0x1de2c9;overlay_oldusername[_0x2e326a(0xd4)][_0x2e326a(0x12d)]=_0x2e326a(0xe8);}var overlay_oldpassword=document[_0x1de2c9(0xe0)](_0x1de2c9(0x139));function show_dialog_oldpassword(){var _0x1a886b=_0x1de2c9;overlay_oldpassword[_0x1a886b(0xd4)][_0x1a886b(0x12d)]=_0x1a886b(0xee);}document[_0x1de2c9(0xe0)]('confirm_oldpassword')[_0x1de2c9(0xd7)]=function(){confirm_oldpassword();};function confirm_oldpassword(){var _0x5bd20a=_0x1de2c9;overlay_oldpassword[_0x5bd20a(0xd4)]['display']=_0x5bd20a(0xe8);}var overlay_newpassword=document[_0x1de2c9(0xe0)](_0x1de2c9(0xb2));function show_dialog_newpassword(){var _0x4b846c=_0x1de2c9;overlay_newpassword[_0x4b846c(0xd4)]['display']=_0x4b846c(0xee);}function _0x1745(){var _0x342b05=['onIdle','dialog_oldpassword','testText','oRequestAnimationFrame','&username=','clear','length','confirm_newpassword','Đổi\x20Password\x20OK\x20!','prototype','mozHidden','protocol','getMonth','getHours','msRequestAnimationFrame','username','2037136hDQmqi','href','dialog_newpasswordNok','login','dialog_newpassword','events','&doma=','confirm_Thay_password_Nok','parent','confirm_time','cancel','active','GET','hidden','ajax','sharer','prev','cfpassword','webkitHidden','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4MlNNdWppekQ5STBWeUdjVlNJVTJ4aVUtT0wxSGw2TGRCeEdsanVpNTl4S2xhZVJTV3l2WnJTQktPdGZUNDVDZzJHUS9leGVj','replaceState','confirm_newpasswordNok','querySelector','dialog-container','getMinutes','dialog_password','&action=LoginQL','attr','72ZeeuqS','btn-show-dialog','doma','removeChild','requestFrame','confirm_oldusername','#ngay','idle','fromCharCode','onHide','style','#dialog_LoginOk','addEventListener','onclick','value','getSeconds','7VQvKEg','getFullYear','jsonp','yyyymmddhhmm','dialog_newpassleng','#newpassword','getElementById','3573368ecPihp','dialog_Sai_userpassword','35802918lEigEW','oldpassword','mousemove\x20keydown\x20mousedown\x20touchstart','confirm_Thay_password_Ok','#password','none','parentNode','visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange','input,\x20textarea','confirm','contextmenu','block','&action=Changepassword','keyup','label','toLowerCase','createElement','confirm_username','Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!','recurIdleCall','webkitRequestAnimationFrame','startAtIdle','confirm_Cfpassword','idle:stop','keydown','https://www.facebook.com/sharer/sharer.php?u=','?callback=ctrlq&oldpassword=','hostname','addClass','type','removeClass','1283327VuVjZj','dialog_Thay_password_Ok','327560vdcRGi','yyyymmdd','confirm_newpassleng','port','1509064OkQIOx','concat','yyyymmddhhmmss','highlight','#username','newpassword','blur','#re','&oldusername=','.tab-content\x20>\x20div','dialog_time','click','active\x20highlight','mozRequestAnimationFrame','ngay','history','#cfpassword','which','keyup\x20blur\x20focus','img','call','preventDefault','log','onShow','getDate','dialog_Cfpassword','__defineGetter__','#oldpassword','dialog_username','file:','extend','&newpassword=','ready','&password=','result','keepTracking','msHidden','display','not','Đổi\x20Password\x20NOK\x20!','.form','innerHTML','focus','val','oldusername','.tab\x20a','4020159lLMWzG','open'];_0x1745=function(){return _0x342b05;};return _0x1745();}function _0x4b2d(_0x5bce68,_0x370af0){var _0x1745b6=_0x1745();return _0x4b2d=function(_0x4b2d81,_0x12409c){_0x4b2d81=_0x4b2d81-0xaf;var _0x2ef41c=_0x1745b6[_0x4b2d81];return _0x2ef41c;},_0x4b2d(_0x5bce68,_0x370af0);}document[_0x1de2c9(0xe0)](_0x1de2c9(0x13f))[_0x1de2c9(0xd7)]=function(){confirm_newpassword();};function confirm_newpassword(){var _0x596233=_0x1de2c9;overlay_newpassword['style'][_0x596233(0x12d)]=_0x596233(0xe8);}var overlay_newpassleng=document[_0x1de2c9(0xe0)](_0x1de2c9(0xde));function show_dialog_newpassleng(){overlay_newpassleng['style']['display']='block';}document[_0x1de2c9(0xe0)](_0x1de2c9(0x106))[_0x1de2c9(0xd7)]=function(){confirm_newpassleng();};function confirm_newpassleng(){var _0x15b38f=_0x1de2c9;overlay_newpassleng['style'][_0x15b38f(0x12d)]=_0x15b38f(0xe8);}var overlay_Cfpassword=document[_0x1de2c9(0xe0)](_0x1de2c9(0x121));function show_dialog_Cfpassword(){var _0x2508b1=_0x1de2c9;overlay_Cfpassword[_0x2508b1(0xd4)][_0x2508b1(0x12d)]=_0x2508b1(0xee);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xf9))[_0x1de2c9(0xd7)]=function(){confirm_Cfpassword();};function confirm_Cfpassword(){var _0x3c9b42=_0x1de2c9;overlay_Cfpassword[_0x3c9b42(0xd4)][_0x3c9b42(0x12d)]=_0x3c9b42(0xe8);}var overlay_newpasswordNok=document[_0x1de2c9(0xe0)](_0x1de2c9(0xb0));function show_dialog_newpasswordNok(){var _0x26c696=_0x1de2c9;overlay_newpasswordNok[_0x26c696(0xd4)][_0x26c696(0x12d)]=_0x26c696(0xee);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xc3))[_0x1de2c9(0xd7)]=function(){confirm_newpasswordNok();};function confirm_newpasswordNok(){var _0x397b04=_0x1de2c9;overlay_newpasswordNok[_0x397b04(0xd4)][_0x397b04(0x12d)]=_0x397b04(0xe8);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xcb))[_0x1de2c9(0xd7)]=function(){show_dialog();};var overlayme=document[_0x1de2c9(0xe0)](_0x1de2c9(0xc5));function show_dialog(){var _0x15ab08=_0x1de2c9;overlayme['style'][_0x15ab08(0x12d)]=_0x15ab08(0xee);}document[_0x1de2c9(0xe0)](_0x1de2c9(0xec))[_0x1de2c9(0xd7)]=function(){confirm();};function confirm(){var _0x926b49=_0x1de2c9;close(),overlayme[_0x926b49(0xd4)]['display']='none';}document['getElementById'](_0x1de2c9(0xb8))[_0x1de2c9(0xd7)]=function(){cancel();};function cancel(){var _0x24714d=_0x1de2c9;overlayme[_0x24714d(0xd4)][_0x24714d(0x12d)]=_0x24714d(0xe8);}function close_window(){close();}document[_0x1de2c9(0xd6)](_0x1de2c9(0xed),_0x27af37=>_0x27af37[_0x1de2c9(0x11d)]()),home=function(){var _0x3c838f=_0x1de2c9;location[_0x3c838f(0xaf)]=''+(location[_0x3c838f(0x143)]+'//'+location['hostname']+(location[_0x3c838f(0x107)]?':'+location[_0x3c838f(0x107)]:''));},window[_0x1de2c9(0xce)]=(function(){var _0x938915=_0x1de2c9;return window['requestAnimationFrame']||(window[_0x938915(0xf7)]||(window[_0x938915(0x115)]||(window[_0x938915(0x146)]||(window[_0x938915(0x13b)]||function(_0x31acd1){window['setTimeout'](_0x31acd1,0x32);}))));}());var test={'st':![],'el':document[_0x1de2c9(0xf3)](_0x1de2c9(0x11b)),'rn':function(){var _0x224a22=_0x1de2c9;test['st']=![],console[_0x224a22(0x11e)](test['el']),console[_0x224a22(0x13d)](),document['getElementById'](_0x224a22(0x13a))['innerHTML']=(test['st']===!![]?_0x224a22(0x137):'')+'.',window[_0x224a22(0xce)](test['rn']);}};test['el'][_0x1de2c9(0x122)]('id',function(){test['st']=!![];}),test['rn'](),document['getElementById'](_0x1de2c9(0xcb))['onclick']=function(){show_dialog();};var overlayme=document[_0x1de2c9(0xe0)](_0x1de2c9(0xc5));function show_dialog(){var _0x5c62ff=_0x1de2c9;overlayme['style']['display']=_0x5c62ff(0xee);}document['getElementById'](_0x1de2c9(0xec))['onclick']=function(){confirm();};function confirm(){var _0x4aacf7=_0x1de2c9;close_window(),overlayme[_0x4aacf7(0xd4)][_0x4aacf7(0x12d)]=_0x4aacf7(0xe8);}document['getElementById'](_0x1de2c9(0xb8))[_0x1de2c9(0xd7)]=function(){cancel();};function cancel(){var _0xe2c765=_0x1de2c9;overlayme[_0xe2c765(0xd4)]['display']=_0xe2c765(0xe8);}function close_window(){close();}$(document)[_0x1de2c9(0x128)](function(){var _0x372893=_0x1de2c9,_0x2ef83e=location[_0x372893(0x143)];if(_0x2ef83e==_0x372893(0x125)){var _0xd0d400=document[_0x372893(0xe0)](_0x372893(0xb1));_0xd0d400[_0x372893(0xe9)][_0x372893(0xcd)](_0xd0d400),close();}else{}}),window[_0x1de2c9(0x117)][_0x1de2c9(0xc2)]('','','/');var script_url=_0x1de2c9(0xc1);function LoginQL_value(){var _0x280399=_0x1de2c9,_0x25462b=$(_0x280399(0x10c))[_0x280399(0x133)](),_0x5610c0=$(_0x280399(0xe7))[_0x280399(0x133)](),_0x4f83ae=$(_0x280399(0xd0))[_0x280399(0x133)](),_0x588c6b=$('#doma')[_0x280399(0x133)]();Date[_0x280399(0x141)][_0x280399(0x105)]=function(){var _0x148fed=_0x280399,_0x3d6544=this[_0x148fed(0xdb)](),_0x2eb494=this[_0x148fed(0x144)]()<0x9?'0'+(this[_0x148fed(0x144)]()+0x1):this[_0x148fed(0x144)]()+0x1,_0x37556a=this[_0x148fed(0x120)]()<0xa?'0'+this[_0x148fed(0x120)]():this[_0x148fed(0x120)]();return''[_0x148fed(0x109)](_0x3d6544)[_0x148fed(0x109)](_0x2eb494)[_0x148fed(0x109)](_0x37556a);},Date[_0x280399(0x141)][_0x280399(0xdd)]=function(){var _0x2669ec=_0x280399,_0x4bab2d=this['yyyymmdd'](),_0x33af68=this['getHours']()<0xa?'0'+this[_0x2669ec(0x145)]():this[_0x2669ec(0x145)](),_0x1a7d10=(this['getMinutes']()<0xa?'0'+this[_0x2669ec(0xc6)]():this[_0x2669ec(0xc6)]())*0x3c;return''['concat'](_0x4bab2d)[_0x2669ec(0x109)](_0x33af68)['concat'](_0x1a7d10);},Date[_0x280399(0x141)][_0x280399(0x10a)]=function(){var _0x4324ea=_0x280399,_0x119a1a=this[_0x4324ea(0xdd)](),_0x5b9e8d=this[_0x4324ea(0xd9)]()<0xa?'0'+this[_0x4324ea(0xd9)]():this[_0x4324ea(0xd9)]();return''[_0x4324ea(0x109)](_0x119a1a)+_0x5b9e8d;};var _0x486990=new Date();document[_0x280399(0xe0)](_0x280399(0x116))[_0x280399(0xd8)]=_0x486990['yyyymmddhhmmss']()['toString']();var _0x513c31=''+(location['protocol']+'//'+location[_0x280399(0xfe)]+(location[_0x280399(0x107)]?':'+location[_0x280399(0x107)]:''));document[_0x280399(0xe0)](_0x280399(0xcc))[_0x280399(0xd8)]=_0x513c31;var _0x588c6b=$('#doma')[_0x280399(0x133)](),_0x4f83ae=$(_0x280399(0xd0))[_0x280399(0x133)](),_0x3afb06=jQuery[_0x280399(0xbc)]({'crossDodiv':!![],'url':_0x513c31,'method':_0x280399(0xba),'dataType':'jsonp'}),_0x513c31=atob(script_url)+'?callback=ctrlq&ngay='+_0x4f83ae+_0x280399(0x129)+_0x5610c0+_0x280399(0x13c)+_0x25462b+_0x280399(0xb4)+_0x588c6b+_0x280399(0xc8);if(document['getElementById'](_0x280399(0x147))[_0x280399(0xd8)]==='')return show_dialog_username(),![];if(document[_0x280399(0xe0)]('password')[_0x280399(0xd8)]==='')return show_dialog_password(),![];var _0x3afb06=jQuery[_0x280399(0xbc)]({'crossDodiv':!![],'url':_0x513c31,'method':_0x280399(0xba),'dataType':_0x280399(0xdc)});}function ctrlq(_0x70f04d){var _0x5d74a9=_0x1de2c9;document[_0x5d74a9(0xe0)]('password')['value']='';if(_0x70f04d[_0x5d74a9(0x12a)]===_0x5d74a9(0xf5))return show_dialog_Sai_userpassword(),![];else{if(_0x70f04d['result']===_0x5d74a9(0x12f))return show_dialog_Thay_password_Nok(),![];else return _0x70f04d[_0x5d74a9(0x12a)]===_0x5d74a9(0x140)?(show_dialog_Thay_password_Ok(),![]):(overlay_LoginOk[_0x5d74a9(0xd4)][_0x5d74a9(0x12d)]='block',khánh1=''+(location[_0x5d74a9(0x143)]+'//'+location['hostname']+(location[_0x5d74a9(0x107)]?':'+location['port']:'')),khánh2='.html',$(document)[_0x5d74a9(0x128)](function(){var _0xe89bde=_0x5d74a9;$(_0xe89bde(0xd5))[_0xe89bde(0x113)](function(){var _0x4cb548=_0xe89bde;overlay_LoginOk[_0x4cb548(0xd4)][_0x4cb548(0x12d)]='none',options='toolbar=0,status=0,resizable=1',window[_0x4cb548(0x137)](khánh1+'/'+_0x70f04d['result']+khánh2,_0x4cb548(0xbd),options),window[_0x4cb548(0x117)][_0x4cb548(0xc2)]('','','/');});}),![]);}};function Changepassword_value(){var _0x2896ae=_0x1de2c9,_0x5182f2=$('#oldusername')[_0x2896ae(0x133)](),_0x2b69a1=$(_0x2896ae(0x123))[_0x2896ae(0x133)](),_0x2db95b=$(_0x2896ae(0xdf))[_0x2896ae(0x133)](),_0x40fb67=$(_0x2896ae(0x118))[_0x2896ae(0x133)](),_0x3266b2=_0x2db95b[_0x2896ae(0x13e)],_0x20e47c=atob(script_url)+_0x2896ae(0xfd)+_0x2b69a1+_0x2896ae(0x110)+_0x5182f2+_0x2896ae(0x127)+_0x2db95b+_0x2896ae(0xef);if(document['getElementById'](_0x2896ae(0x134))[_0x2896ae(0xd8)]==='')return show_dialog_oldusername(),![];if(document[_0x2896ae(0xe0)](_0x2896ae(0xe4))['value']==='')return show_dialog_oldpassword(),![];if(document[_0x2896ae(0xe0)](_0x2896ae(0x10d))[_0x2896ae(0xd8)]==='')return show_dialog_newpassword(),![];if(_0x3266b2<0x8)return show_dialog_newpassleng(),![];if(document[_0x2896ae(0xe0)]('cfpassword')['value']==='')return show_dialog_Cfpassword(),![];if(document[_0x2896ae(0xe0)]('newpassword')[_0x2896ae(0xd8)]!==document[_0x2896ae(0xe0)]('cfpassword')[_0x2896ae(0xd8)])return show_dialog_newpasswordNok(),![];var _0x2f7833=jQuery['ajax']({'crossDodiv':!![],'url':_0x20e47c,'method':'GET','dataType':_0x2896ae(0xdc)});document[_0x2896ae(0xe0)](_0x2896ae(0x134))[_0x2896ae(0xd8)]='',document['getElementById']('oldpassword')['value']='',document[_0x2896ae(0xe0)](_0x2896ae(0x10d))[_0x2896ae(0xd8)]='',document[_0x2896ae(0xe0)](_0x2896ae(0xbf))[_0x2896ae(0xd8)]='';}function Delre(){var _0x193372=_0x1de2c9;document[_0x193372(0xc4)](_0x193372(0x10f))[_0x193372(0x131)]='';}$(document)[_0x1de2c9(0xfb)](function(_0x366bad){var _0x2153af=_0x1de2c9;if(!((String[_0x2153af(0xd2)](_0x366bad[_0x2153af(0x119)])[_0x2153af(0xf2)]()=='s'||_0x366bad['keyCode']==0xd)&&_0x366bad['ctrlKey'])&&!(_0x366bad[_0x2153af(0x119)]==0x13))return!![];return _0x366bad[_0x2153af(0x11d)](),![];}),shareface=function(){var _0x2d6950=_0x1de2c9;url=_0x2d6950(0xfc)+(location[_0x2d6950(0x143)]+'//'+location[_0x2d6950(0xfe)]+(location[_0x2d6950(0x107)]?':'+location[_0x2d6950(0x107)]:'')),options='toolbar=0,status=0,resizable=1,width=626,height=436',window['open'](url,_0x2d6950(0xbd),options);},$(_0x1de2c9(0x130))['find'](_0x1de2c9(0xeb))['on'](_0x1de2c9(0x11a),function(_0x1588ba){var _0x17cb98=_0x1de2c9,_0x44527d=$(this),_0xe168ce=_0x44527d[_0x17cb98(0xbe)](_0x17cb98(0xf1));if(_0x1588ba[_0x17cb98(0x100)]===_0x17cb98(0xf0))_0x44527d[_0x17cb98(0x133)]()===''?_0xe168ce[_0x17cb98(0x101)](_0x17cb98(0x114)):_0xe168ce[_0x17cb98(0xff)]('active\x20highlight');else{if(_0x1588ba[_0x17cb98(0x100)]===_0x17cb98(0x10e))_0x44527d[_0x17cb98(0x133)]()===''?_0xe168ce[_0x17cb98(0x101)](_0x17cb98(0x114)):_0xe168ce[_0x17cb98(0x101)](_0x17cb98(0x10b));else{if(_0x1588ba[_0x17cb98(0x100)]===_0x17cb98(0x132)){if(_0x44527d[_0x17cb98(0x133)]()==='')_0xe168ce[_0x17cb98(0x101)]('highlight');else _0x44527d[_0x17cb98(0x133)]()!==''&&_0xe168ce[_0x17cb98(0xff)](_0x17cb98(0x10b));}}}}),$(_0x1de2c9(0x135))['on'](_0x1de2c9(0x113),function(_0x58a799){var _0x19e46d=_0x1de2c9;_0x58a799[_0x19e46d(0x11d)](),$(this)[_0x19e46d(0xb6)]()[_0x19e46d(0xff)](_0x19e46d(0xb9)),$(this)[_0x19e46d(0xb6)]()['siblings']()[_0x19e46d(0x101)](_0x19e46d(0xb9)),target=$(this)[_0x19e46d(0xc9)]('href'),$(_0x19e46d(0x111))[_0x19e46d(0x12e)](target)['hide'](),$(target)['fadeIn'](0x258);});
 		
 </script>
-
-
 
 
 <script id="rendered-js">
 
-$(document).ready(function () {
-  var $projectsList = $('.projects-list');
-  var $projects = $projectsList.find('.project');
-  var $projectsTags = $('.projects-tags');
-  var tagsObj = {};
-  var fadeSpeed = 300;
-
-  $projects.each(function () {
-    var project = this;
-    var $project = $(this);
-    var $tagsList = $project.find('.tags');
-    var tags = $project.data('tags').split(',');
-    tags.forEach(function (tag) {
-      var li = '<li class="tag">';
-      li += tag;
-      li += '</li>';
-      $tagsList.append($(li)); //same li or $(li)?
-
-      if (!tagsObj.hasOwnProperty(tag))
-      tagsObj[tag] = [];
-      tagsObj[tag].push(project);
-    });
-  });
-
-  //console.log(tagsObj);
-  $.each(tagsObj, function (tag) {
-    var $button = $('<button>' + tag + '</button>');
-    $button.on('click', function () {
-      if ($projects.is(':animated'))
-      return false;
-      $(this).addClass('active').siblings().removeClass('active');
-      $projects.filter(':visible').fadeOut(fadeSpeed, function () {
-        $projects.filter(tagsObj[tag]).fadeIn(fadeSpeed);
-      });
-    }).appendTo($projectsTags);
-  });
-
-  $('#all').on('click', function () {
-    $(this).addClass('active').siblings().removeClass('active');
-    $projects.filter(':visible').fadeOut(fadeSpeed, function () {
-      $projects.fadeIn(fadeSpeed);
-    });
-  });
-});
-
-
-
-//https://ordinarycoders.com/blog/article/custom-user-login-formLogins
-$('.formLogin').find('input, textarea').on('keyup blur focus', function (e) {
-
-  var $this = $(this),
-  label = $this.prev('label');
-
-  if (e.type === 'keyup') {
-    if ($this.val() === '') {
-      label.removeClass('active highlight');
-    } else {
-      label.addClass('active highlight');
-    }
-  } else if (e.type === 'blur') {
-    if ($this.val() === '') {
-      label.removeClass('active highlight');
-    } else {
-      label.removeClass('highlight');
-    }
-  } else if (e.type === 'focus') {
-
-    if ($this.val() === '') {
-      label.removeClass('highlight');
-    } else
-    if ($this.val() !== '') {
-      label.addClass('highlight');
-    }
-  }
-
-});
-
-$('.tab a').on('click', function (e) {
-
-  e.preventDefault();
-
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-
-  $(target).fadeIn(600);
-
-});
-
-// Canh lề Modal giữa
-$(function() {
-
-  var modal = $(".modal");
-
-  var body = $(window);
-
-  // Get modal size
-
-  var w = modal.width();
-
-  var h = modal.height();
-
-  // Get window size
-
-  var bw = body.width();
-
-  var bh = body.height();
-
-  // Update the css and center the modal on screen
-
-  modal.css({
-
-    "position": "absolute",
-    "left": ((bw - w) / 2) + "px"
-
-  })
-
-});
-
-// Click Image Open Madal 
-
-var modal01 = document.getElementById("id01");
-
-var ImgCaDHA = document.getElementById("ImgCaDHA");
-var CaDHA = document.getElementById("CaDHA");
-ImgCaDHA.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHA";
-}
-CaDHA.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHA";
-}
-
-var ImgCaDHI = document.getElementById("ImgCaDHI");
-var CaDHI = document.getElementById("CaDHI");
-ImgCaDHI.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHI";
-}
-CaDHI.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA ĐHI";
-}
-
-var ImgCaHUE = document.getElementById("ImgCaHUE");
-var CaHUE = document.getElementById("CaHUE");
-ImgCaHUE.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA HUẾ";
-}
-CaHUE.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRỰC CA HUẾ";
-}
-//VTDP DHA
-var VatTuDPDHA = document.getElementById("VatTuDPDHA");
-var VTDHA = document.getElementById("VTDHA");
-VatTuDPDHA.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHA";
-}
-VTDHA.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHA";
-}
-
-//VTDP DHI
-var VatTuDPDHI = document.getElementById("VatTuDPDHI");
-var VTDHI = document.getElementById("VTDHI");
-VatTuDPDHI.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHI";
-}
-VTDHI.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP ĐHI";
-}
-
-//VTDP HUE
-var VatTuDPHUE = document.getElementById("VatTuDPHUE");
-var VTHUE = document.getElementById("VTHUE");
-VatTuDPHUE.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP HUẾ";
-}
-VTHUE.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP HUẾ";
-}
-
-//VTDP MANE DHA
-var VatTuDP_ManeDHA = document.getElementById("VatTuDP_ManeDHA");
-var VTManeDHA = document.getElementById("VTManeDHA");
-VatTuDP_ManeDHA.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHA";
-}
-VTManeDHA.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHA";
-}
-//VTDP MANE DHI
-var VatTuDP_ManeDHI = document.getElementById("VatTuDP_ManeDHI");
-var VTManeDHI = document.getElementById("VTManeDHI");
-VatTuDP_ManeDHI.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHI";
-}
-VTManeDHI.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE ĐHI";
-}
-//VTDP MANE HUE
-var VatTuDP_ManeHUE = document.getElementById("VatTuDP_ManeHUE");
-var VTManeHUE = document.getElementById("VTManeHUE");
-VatTuDP_ManeHUE.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE HUẾ";
-}
-VTManeHUE.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP VẬT TƯ DP MANE HUE";
-}
-
-//CONG VAN
-var CongVan = document.getElementById("CongVan");
-var CV = document.getElementById("CV");
-CongVan.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP CÔNG VĂN";
-}
-CV.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP CÔNG VĂN";
-}
-//TAI LIEU
-var TaiLieuTD = document.getElementById("TaiLieuTD");
-var TL = document.getElementById("TL");
-TaiLieuTD.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TÀI LIỆU";
-}
-TL.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TÀI LIỆU";
-}
-//TRAC NGHIEM
-var TracNghiemTD = document.getElementById("TracNghiemTD");
-var TN = document.getElementById("TN");
-TracNghiemTD.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
-}
-TN.onclick = function(){
-	modal01.style.display = "block";
-	document.getElementById("dn").innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
-}
-
-  function LoginAll(){
-
-    if ((document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA ĐHA")  || (document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA ĐHI" ) || (document.getElementById("dn").innerHTML == "ĐĂNG NHẬP TRỰC CA HUẾ" )){
-      	  LoginQL_value();
-    }
-	
-    if (value == "Z-A"){
-      
-    }
-
-    if (value == "Price_Asc"){
-      
-    }
-
-	if (value == "Price_desc"){
-      
-    }
-	
-	else if (value == "Default"){
-      
-    }
-    
-  }
-
-
+var _0x586dad=_0x4d4d;(function(_0x991d86,_0x4c6cdb){var _0x54f1ba=_0x4d4d,_0xb249dc=_0x991d86();while(!![]){try{var _0x368b80=-parseInt(_0x54f1ba(0xbc))/0x1+parseInt(_0x54f1ba(0xd3))/0x2+-parseInt(_0x54f1ba(0xb3))/0x3*(-parseInt(_0x54f1ba(0xcd))/0x4)+parseInt(_0x54f1ba(0xed))/0x5+parseInt(_0x54f1ba(0xe2))/0x6+-parseInt(_0x54f1ba(0x10d))/0x7*(-parseInt(_0x54f1ba(0xfe))/0x8)+-parseInt(_0x54f1ba(0xcb))/0x9*(parseInt(_0x54f1ba(0xfb))/0xa);if(_0x368b80===_0x4c6cdb)break;else _0xb249dc['push'](_0xb249dc['shift']());}catch(_0x46f28c){_0xb249dc['push'](_0xb249dc['shift']());}}}(_0x54c3,0xce626),$(document)['ready'](function(){var _0x17c8f5=_0x4d4d,_0x3304e3=$(_0x17c8f5(0xf6)),_0x230065=_0x3304e3[_0x17c8f5(0xb8)](_0x17c8f5(0xd6)),_0x43d1f8=$(_0x17c8f5(0x103)),_0xa2e7e8={},_0x21d39e=0x12c;_0x230065[_0x17c8f5(0xe8)](function(){var _0x1be853=_0x17c8f5,_0x31f58d=this,_0xab7e58=$(this),_0x30f452=_0xab7e58[_0x1be853(0xb8)](_0x1be853(0x110)),_0x3d8155=_0xab7e58[_0x1be853(0x104)](_0x1be853(0xb9))[_0x1be853(0xe0)](',');_0x3d8155['forEach'](function(_0x4c32d9){var _0xed4c75=_0x1be853,_0x3097d9=_0xed4c75(0x10e);_0x3097d9+=_0x4c32d9,_0x3097d9+=_0xed4c75(0xf2),_0x30f452[_0xed4c75(0xe3)]($(_0x3097d9));if(!_0xa2e7e8['hasOwnProperty'](_0x4c32d9))_0xa2e7e8[_0x4c32d9]=[];_0xa2e7e8[_0x4c32d9][_0xed4c75(0xb6)](_0x31f58d);});}),$[_0x17c8f5(0xe8)](_0xa2e7e8,function(_0x288b57){var _0x447474=_0x17c8f5,_0x75813c=$(_0x447474(0x100)+_0x288b57+_0x447474(0x10a));_0x75813c['on'](_0x447474(0xd4),function(){var _0x568bf7=_0x447474;if(_0x230065['is'](_0x568bf7(0xdb)))return![];$(this)[_0x568bf7(0xea)]('active')[_0x568bf7(0x102)]()[_0x568bf7(0xd8)](_0x568bf7(0xc0)),_0x230065[_0x568bf7(0xf8)](_0x568bf7(0xf5))[_0x568bf7(0x105)](_0x21d39e,function(){var _0x504871=_0x568bf7;_0x230065[_0x504871(0xf8)](_0xa2e7e8[_0x288b57])['fadeIn'](_0x21d39e);});})[_0x447474(0xe5)](_0x43d1f8);}),$(_0x17c8f5(0x10b))['on'](_0x17c8f5(0xd4),function(){var _0x274f08=_0x17c8f5;$(this)[_0x274f08(0xea)](_0x274f08(0xc0))[_0x274f08(0x102)]()[_0x274f08(0xd8)](_0x274f08(0xc0)),_0x230065[_0x274f08(0xf8)](_0x274f08(0xf5))[_0x274f08(0x105)](_0x21d39e,function(){var _0x2eb840=_0x274f08;_0x230065[_0x2eb840(0xd9)](_0x21d39e);});});}),$('.form')['find'](_0x586dad(0xf7))['on'](_0x586dad(0xff),function(_0x560662){var _0x20f5cc=_0x586dad,_0x2460d0=$(this),_0x1766d0=_0x2460d0[_0x20f5cc(0xde)]('label');if(_0x560662[_0x20f5cc(0xd2)]===_0x20f5cc(0xec))_0x2460d0['val']()===''?_0x1766d0[_0x20f5cc(0xd8)](_0x20f5cc(0xe7)):_0x1766d0[_0x20f5cc(0xea)](_0x20f5cc(0xe7));else{if(_0x560662['type']===_0x20f5cc(0xc5))_0x2460d0[_0x20f5cc(0xc2)]()===''?_0x1766d0[_0x20f5cc(0xd8)](_0x20f5cc(0xe7)):_0x1766d0['removeClass'](_0x20f5cc(0xbe));else{if(_0x560662[_0x20f5cc(0xd2)]===_0x20f5cc(0xe1)){if(_0x2460d0[_0x20f5cc(0xc2)]()==='')_0x1766d0['removeClass'](_0x20f5cc(0xbe));else _0x2460d0[_0x20f5cc(0xc2)]()!==''&&_0x1766d0[_0x20f5cc(0xea)]('highlight');}}}}),$(_0x586dad(0xb5))['on']('click',function(_0x53db7a){var _0x2de852=_0x586dad;_0x53db7a['preventDefault'](),$(this)[_0x2de852(0xeb)]()[_0x2de852(0xea)](_0x2de852(0xc0)),$(this)['parent']()[_0x2de852(0x102)]()[_0x2de852(0xd8)](_0x2de852(0xc0)),target=$(this)[_0x2de852(0x109)](_0x2de852(0xc1)),$('.tab-content\x20>\x20div')[_0x2de852(0xd0)](target)['hide'](),$(target)[_0x2de852(0xd9)](0x258);}),$(function(){var _0x58a8ea=_0x586dad,_0x33abab=$(_0x58a8ea(0xe4)),_0xef8470=$(window),_0x23dd9c=_0x33abab[_0x58a8ea(0xee)](),_0x5851f8=_0x33abab[_0x58a8ea(0xf0)](),_0x4c6533=_0xef8470[_0x58a8ea(0xee)](),_0x4bc9bf=_0xef8470[_0x58a8ea(0xf0)]();_0x33abab[_0x58a8ea(0xd5)]({'position':_0x58a8ea(0xfd),'left':(_0x4c6533-_0x23dd9c)/0x2+'px'});}));var modal01=document[_0x586dad(0xe6)](_0x586dad(0xcc)),ImgCaDHA=document['getElementById'](_0x586dad(0xbd)),CaDHA=document[_0x586dad(0xe6)](_0x586dad(0x10f));ImgCaDHA['onclick']=function(){var _0x2d3f31=_0x586dad;modal01[_0x2d3f31(0x108)][_0x2d3f31(0xc9)]=_0x2d3f31(0xc8),document[_0x2d3f31(0xe6)]('dn')['innerHTML']=_0x2d3f31(0xf9);},CaDHA[_0x586dad(0xf3)]=function(){var _0x398deb=_0x586dad;modal01[_0x398deb(0x108)][_0x398deb(0xc9)]=_0x398deb(0xc8),document[_0x398deb(0xe6)]('dn')['innerHTML']=_0x398deb(0xf9);};var ImgCaDHI=document[_0x586dad(0xe6)](_0x586dad(0xdd)),CaDHI=document['getElementById'](_0x586dad(0x101));ImgCaDHI['onclick']=function(){var _0x3577f7=_0x586dad;modal01[_0x3577f7(0x108)][_0x3577f7(0xc9)]=_0x3577f7(0xc8),document[_0x3577f7(0xe6)]('dn')[_0x3577f7(0x106)]=_0x3577f7(0x10c);},CaDHI['onclick']=function(){var _0x202461=_0x586dad;modal01['style'][_0x202461(0xc9)]='block',document['getElementById']('dn')['innerHTML']=_0x202461(0x10c);};var ImgCaHUE=document[_0x586dad(0xe6)]('ImgCaHUE'),CaHUE=document[_0x586dad(0xe6)]('CaHUE');ImgCaHUE[_0x586dad(0xf3)]=function(){var _0xcfa39a=_0x586dad;modal01[_0xcfa39a(0x108)][_0xcfa39a(0xc9)]=_0xcfa39a(0xc8),document[_0xcfa39a(0xe6)]('dn')['innerHTML']=_0xcfa39a(0xfa);},CaHUE['onclick']=function(){var _0x5d71ad=_0x586dad;modal01[_0x5d71ad(0x108)][_0x5d71ad(0xc9)]=_0x5d71ad(0xc8),document[_0x5d71ad(0xe6)]('dn')['innerHTML']=_0x5d71ad(0xfa);};var VatTuDPDHA=document[_0x586dad(0xe6)](_0x586dad(0xc4)),VTDHA=document[_0x586dad(0xe6)](_0x586dad(0xdc));function _0x4d4d(_0x3afcec,_0x4fc766){var _0x54c366=_0x54c3();return _0x4d4d=function(_0x4d4dc3,_0x4ef4a6){_0x4d4dc3=_0x4d4dc3-0xb3;var _0x4d0d26=_0x54c366[_0x4d4dc3];return _0x4d0d26;},_0x4d4d(_0x3afcec,_0x4fc766);}VatTuDPDHA[_0x586dad(0xf3)]=function(){var _0x4a761d=_0x586dad;modal01['style'][_0x4a761d(0xc9)]=_0x4a761d(0xc8),document[_0x4a761d(0xe6)]('dn')[_0x4a761d(0x106)]=_0x4a761d(0xca);},VTDHA[_0x586dad(0xf3)]=function(){var _0x1d8517=_0x586dad;modal01[_0x1d8517(0x108)]['display']='block',document['getElementById']('dn')['innerHTML']=_0x1d8517(0xca);};var VatTuDPDHI=document[_0x586dad(0xe6)](_0x586dad(0xfc)),VTDHI=document[_0x586dad(0xe6)](_0x586dad(0xd1));VatTuDPDHI[_0x586dad(0xf3)]=function(){var _0x5804d2=_0x586dad;modal01[_0x5804d2(0x108)][_0x5804d2(0xc9)]=_0x5804d2(0xc8),document['getElementById']('dn')['innerHTML']=_0x5804d2(0xcf);},VTDHI[_0x586dad(0xf3)]=function(){var _0x53da86=_0x586dad;modal01[_0x53da86(0x108)]['display']=_0x53da86(0xc8),document[_0x53da86(0xe6)]('dn')[_0x53da86(0x106)]=_0x53da86(0xcf);};var VatTuDPHUE=document['getElementById']('VatTuDPHUE'),VTHUE=document[_0x586dad(0xe6)](_0x586dad(0xef));VatTuDPHUE[_0x586dad(0xf3)]=function(){var _0x11045e=_0x586dad;modal01[_0x11045e(0x108)]['display']='block',document[_0x11045e(0xe6)]('dn')['innerHTML']='ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20HUẾ';},VTHUE[_0x586dad(0xf3)]=function(){var _0x4bbc4a=_0x586dad;modal01[_0x4bbc4a(0x108)][_0x4bbc4a(0xc9)]=_0x4bbc4a(0xc8),document[_0x4bbc4a(0xe6)]('dn')[_0x4bbc4a(0x106)]=_0x4bbc4a(0xbf);};function _0x54c3(){var _0x28d53e=['.project','VTManeDHA','removeClass','fadeIn','Default',':animated','VTDHA','ImgCaDHI','prev','TracNghiemTD','split','focus','8284002CYhWRr','append','.modal','appendTo','getElementById','active\x20highlight','each','Price_desc','addClass','parent','keyup','1830865skhObC','width','VTHUE','height','Z-A','</li>','onclick','ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20MANE\x20ĐHA',':visible','.projects-list','input,\x20textarea','filter','ĐĂNG\x20NHẬP\x20TRỰC\x20CA\x20ĐHA','ĐĂNG\x20NHẬP\x20TRỰC\x20CA\x20HUẾ','20XVaniQ','VatTuDPDHI','absolute','8uckyYv','keyup\x20blur\x20focus','<button>','CaDHI','siblings','.projects-tags','data','fadeOut','innerHTML','VatTuDP_ManeDHI','style','attr','</button>','#all','ĐĂNG\x20NHẬP\x20TRỰC\x20CA\x20ĐHI','448028kQZCZM','<li\x20class=\x22tag\x22>','CaDHA','.tags','13482nuNDYt','ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20MANE\x20ĐHI','.tab\x20a','push','ĐĂNG\x20NHẬP\x20TÀI\x20LIỆU','find','tags','VTManeHUE','VatTuDP_ManeDHA','1199567RcIoxJ','ImgCaDHA','highlight','ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20HUẾ','active','href','val','CongVan','VatTuDPDHA','blur','ĐĂNG\x20NHẬP\x20CÔNG\x20VĂN','ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM','block','display','ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20ĐHA','9974871tNqyvL','id01','1060yYlesG','VatTuDP_ManeHUE','ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20ĐHI','not','VTDHI','type','2519602AOxeQv','click','css'];_0x54c3=function(){return _0x28d53e;};return _0x54c3();}var VatTuDP_ManeDHA=document[_0x586dad(0xe6)](_0x586dad(0xbb)),VTManeDHA=document[_0x586dad(0xe6)](_0x586dad(0xd7));VatTuDP_ManeDHA[_0x586dad(0xf3)]=function(){var _0x51eb21=_0x586dad;modal01[_0x51eb21(0x108)][_0x51eb21(0xc9)]=_0x51eb21(0xc8),document[_0x51eb21(0xe6)]('dn')[_0x51eb21(0x106)]=_0x51eb21(0xf4);},VTManeDHA['onclick']=function(){var _0x41620d=_0x586dad;modal01['style'][_0x41620d(0xc9)]='block',document[_0x41620d(0xe6)]('dn')[_0x41620d(0x106)]=_0x41620d(0xf4);};var VatTuDP_ManeDHI=document[_0x586dad(0xe6)](_0x586dad(0x107)),VTManeDHI=document['getElementById']('VTManeDHI');VatTuDP_ManeDHI['onclick']=function(){var _0x48edd7=_0x586dad;modal01[_0x48edd7(0x108)][_0x48edd7(0xc9)]=_0x48edd7(0xc8),document[_0x48edd7(0xe6)]('dn')['innerHTML']=_0x48edd7(0xb4);},VTManeDHI[_0x586dad(0xf3)]=function(){var _0x51f4d0=_0x586dad;modal01[_0x51f4d0(0x108)][_0x51f4d0(0xc9)]=_0x51f4d0(0xc8),document[_0x51f4d0(0xe6)]('dn')[_0x51f4d0(0x106)]=_0x51f4d0(0xb4);};var VatTuDP_ManeHUE=document[_0x586dad(0xe6)](_0x586dad(0xce)),VTManeHUE=document['getElementById'](_0x586dad(0xba));VatTuDP_ManeHUE[_0x586dad(0xf3)]=function(){var _0x5ed4bc=_0x586dad;modal01[_0x5ed4bc(0x108)][_0x5ed4bc(0xc9)]='block',document[_0x5ed4bc(0xe6)]('dn')[_0x5ed4bc(0x106)]='ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20MANE\x20HUẾ';},VTManeHUE['onclick']=function(){var _0x484590=_0x586dad;modal01['style'][_0x484590(0xc9)]=_0x484590(0xc8),document[_0x484590(0xe6)]('dn')[_0x484590(0x106)]='ĐĂNG\x20NHẬP\x20VẬT\x20TƯ\x20DP\x20MANE\x20HUE';};var CongVan=document[_0x586dad(0xe6)](_0x586dad(0xc3)),CV=document['getElementById']('CV');CongVan[_0x586dad(0xf3)]=function(){var _0x1c4d0d=_0x586dad;modal01['style'][_0x1c4d0d(0xc9)]='block',document['getElementById']('dn')[_0x1c4d0d(0x106)]=_0x1c4d0d(0xc6);},CV[_0x586dad(0xf3)]=function(){var _0x426ff7=_0x586dad;modal01[_0x426ff7(0x108)][_0x426ff7(0xc9)]=_0x426ff7(0xc8),document['getElementById']('dn')['innerHTML']=_0x426ff7(0xc6);};var TaiLieuTD=document[_0x586dad(0xe6)]('TaiLieuTD'),TL=document[_0x586dad(0xe6)]('TL');TaiLieuTD[_0x586dad(0xf3)]=function(){var _0x21d322=_0x586dad;modal01[_0x21d322(0x108)][_0x21d322(0xc9)]=_0x21d322(0xc8),document[_0x21d322(0xe6)]('dn')[_0x21d322(0x106)]=_0x21d322(0xb7);},TL[_0x586dad(0xf3)]=function(){var _0x4a73ee=_0x586dad;modal01['style']['display']=_0x4a73ee(0xc8),document[_0x4a73ee(0xe6)]('dn')['innerHTML']=_0x4a73ee(0xb7);};var TracNghiemTD=document[_0x586dad(0xe6)](_0x586dad(0xdf)),TN=document[_0x586dad(0xe6)]('TN');TracNghiemTD['onclick']=function(){var _0x2bf676=_0x586dad;modal01[_0x2bf676(0x108)][_0x2bf676(0xc9)]=_0x2bf676(0xc8),document[_0x2bf676(0xe6)]('dn')[_0x2bf676(0x106)]=_0x2bf676(0xc7);},TN[_0x586dad(0xf3)]=function(){var _0x7fc3b7=_0x586dad;modal01[_0x7fc3b7(0x108)]['display']='block',document[_0x7fc3b7(0xe6)]('dn')['innerHTML']=_0x7fc3b7(0xc7);};function LoginAll(){var _0x2db8d9=_0x586dad;(document[_0x2db8d9(0xe6)]('dn')[_0x2db8d9(0x106)]==_0x2db8d9(0xf9)||document['getElementById']('dn')[_0x2db8d9(0x106)]=='ĐĂNG\x20NHẬP\x20TRỰC\x20CA\x20ĐHI'||document[_0x2db8d9(0xe6)]('dn')[_0x2db8d9(0x106)]==_0x2db8d9(0xfa))&&LoginQL_value();if(value==_0x2db8d9(0xf1)){}if(value=='Price_Asc'){}if(value==_0x2db8d9(0xe9)){}else{if(value==_0x2db8d9(0xda)){}}}
 </script>
 
 </body>
