@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="data/reset.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link rel="stylesheet" href="Navigation/Navigation.css">
+
 <script>window.history.replaceState('','','/');</script>
   <script>
   if (document.location.search.match(/type=embed/gi)) {
@@ -1352,14 +1354,16 @@ a.ui-button:active,
 
 
  body {
-
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
     color: #666;
     font: 90%/180% Arial, Helvetica, sans-serif;
     width:100%;
     max-width:100%;
     margin: 0 auto;
 	
-	background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+	background-image:white);
 }
 
 
@@ -1380,7 +1384,7 @@ text-align: left;
   } 
 
 table tr:hover td {
-    background:#ffddcc;
+    background: #85c1e9;
 }  
   
 
@@ -1760,59 +1764,63 @@ form .question label {
 	width:60px;
 	min-height:40px;
 	}
-.question .hethong {
+ .question .Colum2 {
 	width:170px;
 	min-height:40px;
 	}
- .question .thietbi {
+ .question .Colum3 {
 	width:170px;
 	min-height:40px;
 	}
- .question .tenvattu {
+ .question .Colum4 {
 	width:170px;
 	min-height:40px;
 	}
- .question .loaivattu {
+ .question .Colum5 {
 	width:170px;
 	min-height:40px;
 	}
- .question .parnumber {
+ .question .Colum6 {
 	width:170px;
 	min-height:40px;
 	}
- .question .serinumber {
+ .question .Colum7 {
+	width:170px;
+	min-height:40px;
+	}
+ .question .Colum8 {
 	width:250px;
 	min-height:40px;
 	}
- .question .ngaynhan {
+ .question .Colum9 {
 	width:170px;
 	min-height:40px;
 	}
- .question .ngayxuat {
+ .question .Colum10 {
 	width:170px;
 	min-height:40px;
 	}
-	.question .vitrilapdat {
+	.question .Colum11 {
 	width:250px;
 	min-height:40px;
 	}
- .question .trangthai {
+ .question .Colum12 {
 	width:170px;
 	min-height:40px;
 	}
- .question .ghichu {
+ .question .Colum13 {
 	width:250px;
 	min-height:40px;
 	}
- .question .nhapweb {
+ .question .Colum14 {
 	width:170px;
 	min-height:40px;
 	}
- .question .capnhat {
+ .question .Colum15 {
 	width:170px;
 	min-height:40px;
 	}
- .question .ngaycapnhat {
+ .question .Colum16 {
 	width:170px;
 	min-height:40px;
 	}
@@ -1867,60 +1875,69 @@ form .question label {
 	width:50px;
 	min-height:40px;
 	}
- .question .hethong {
+ .question .Colum2 {
 	width:90px;
 	min-height:40px;
 	}
- .question .thietbi {
+	.question .Colum3 {
+	width:90px;
+	min-height:40px;
+	}
+
+ .question .tram {
+	width:90px;
+	min-height:40px;
+	}
+	.question .Colum4 {
 	width:151px;
 	min-height:40px;
 	}
- .question .tenvattu {
+ .question .Colum5 {
 	width:155px;
 	min-height:40px;
 	}
- .question .loaivattu {
+ .question .Colum6 {
 	width:154px;
 	min-height:40px;
 	}
- .question .parnumber {
+ .question .Colum7 {
 	width:155px;
 	min-height:40px;
 	}
- .question .serinumber {
+ .question .Colum8 {
 	width:154px;
 	min-height:40px;
 	}
- .question .ngaynhan {
+ .question .Colum9 {
 	width:154px;
 	min-height:40px;
 	}
- .question .ngayxuat {
+ .question .Colum10 {
 	width:154px;
 	min-height:40px;
 	}
-	.question .vitrilapdat {
+	.question .Colum11 {
 	width:154px;
 	min-height:40px;
 	}
- .question .trangthai {
+ .question .Colum12 {
 	width:155px;
 	min-height:40px;
 	}
- .question .ghichu {
+ .question .Colum13 {
 	width:155px;
 	min-height:40px;
 	}
- .question .nhapweb {
+ .question .Colum14 {
 	width:155px;
 	min-height:40px;
 	}
- .question .capnhat {
+ .question .Colum15 {
 	width:155px;
 	min-height:40px;
 	}	
 
- .question .ngaycapnhat {
+ .question .Colum16 {
 	width:155px;
 	min-height:40px;
 	}
@@ -2254,6 +2271,7 @@ form .question label {
   cursor: pointer;
 }
 
+
 		
 </style>
 
@@ -2272,7 +2290,7 @@ form .question label {
 
 <p align="center" style="font-size: 1.8em; color: #000099; font-weight: bold">VẬT TƯ DỰ PHÒNG ĐHA</p>
 <p id='dialog-id' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Hãy chọn một ID</p>
-<p id='dialog-download' class='ui-dialog-content ui-widget-content' style='text-align:center; width: auto; min-height: 19px; max-height: none; height: auto; display: none;'>Download xong !</p>
+
 &nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Thoát</button>
 
 <div class="overlay" id="dialog-container">
@@ -2297,7 +2315,7 @@ form .question label {
 
 <div class="overlay_update" id="update-container">
   <div class="popup_update">
-    <p>Bạn có tiếp tục Cập nhật không ?</p>
+    <p>Bạn muốn Cập nhật không ?</p>
     <div class="text-right">
       <button class="update-btn btn-cancel" id="cancel_update">Cancel</button>
       <button class="update-btn btn-primary" id="confirm_update">OK</button>
@@ -2307,7 +2325,7 @@ form .question label {
 
 <div class="overlay_insert" id="insert-container">
   <div class="popup_insert">
-    <p>Bạn có tiếp tục Thêm dòng số liệu không ?</p>
+    <p>Bạn có Thêm dòng số liệu không ?</p>
     <div class="text-right">
       <button class="insert-btn btn-cancel" id="cancel_insert">Cancel</button>
       <button class="insert-btn btn-primary" id="confirm_insert">OK</button>
@@ -2317,7 +2335,7 @@ form .question label {
 
 <div class="overlay_delete" id="delete-container">
   <div class="popup_delete">
-    <p>Bạn có tiếp tục Xóa dòng số liệu không ?</p>
+    <p>Bạn muốn Xóa dòng số liệu không này ?</p>
     <div class="text-right">
       <button class="delete-btn btn-cancel" id="cancel_delete">Cancel</button>
       <button class="delete-btn btn-primary" id="confirm_delete">OK</button>
@@ -2333,91 +2351,97 @@ form .question label {
 
 <div class="input" align="left">
 
-<div align="right"><input class="input input1" type = "hidden" name ="capnhatVattuDpDHA" id="capnhatVattuDpDHA" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="adminVattuDpDHA" readonly></div>
+<div align="right"><input class="input input1"  name ="capnhatVattuDpDHA" id="capnhatVattuDpDHA" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="" readonly></div>
 
   <div class="question">
   <label>Id</label>
     <textarea class="id" type="text" name ="id" id="id" style="height:30px"></textarea>
    </div>
-
+   
+ <div class="question">
+   <label>Trạm</label>
+    <textarea class="Colum2" type="text" name ="Colum2" id="Colum2" value="" style="height:30px" readonly></textarea>
+  </div>
+  
  <div class="question">
    <label>Mạng</label>
-    <textarea class="hethong" type="text" name ="hethong" id="hethong" value="" style="height:30px"></textarea>
+    <textarea class="Colum3" type="text" name ="Colum3" id="Colum3" value="" style="height:30px"></textarea>
   </div> 
 
  <div class="question">
    <label>Thiết bị</label>
-    <textarea class="thietbi" type = "text" name ="thietbi" id="thietbi" value="" style="height:30px"></textarea>
+    <textarea class="Colum4" type = "text" name ="Colum4" id="Colum4" value="" style="height:30px"></textarea>
   </div> 
 
  <div class="question">
    <label>Tên Vật tư</label>
-    <textarea class="tenvattu" type = "text" name ="tenvattu" id="tenvattu" value="" style="height:30px"></textarea>
+    <textarea class="Colum5" type = "text" name ="Colum5" id="Colum5" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
    <label>Loại Vật tư</label>
-    <textarea class="loaivattu" type = "text" name ="loaivattu" id="loaivattu" value="" style="height:30px"></textarea>
+    <textarea class="Colum6" type = "text" name ="Colum6" id="Colum6" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>Parnumber</label>
-    <textarea class="parnumber" type = "text" name ="parnumber" id="parnumber" style="height:30px"></textarea>
+    <label>Parnumber</label>
+    <textarea class="Colum7" type = "text" name ="Colum7" id="Colum7" style="height:30px"></textarea>
   </div>
 
  <div class="question">
    <label>Serinumber</label>
-    <textarea class="serinumber" type = "text" name ="serinumber" id="serinumber" style="height:30px"></textarea>
+    <textarea class="Colum8" type = "text" name ="Colum8" id="Colum8" style="height:30px"></textarea>
   </div>
 
  <div class="question">
-   <label>ngaynhan</label>
-    <textarea class="ngaynhan" type = "text" name ="ngaynhan" id="ngaynhan" style="height:30px"></textarea>
+   <label>Ngày nhận</label>
+    <textarea class="Colum9" type = "text" name ="Colum9" id="Colum9" style="height:30px"></textarea>
   </div>  
   
  <div class="question">
-   <label>ngayxuat</label>
-    <textarea class="ngayxuat" type = "text" name ="ngayxuat" id="ngayxuat" style="height:30px"></textarea>
+   <label>Ngày xuất</label>
+    <textarea class="Colum10" type = "text" name ="Colum10" id="Colum10" style="height:30px"></textarea>
   </div>   
   
  <div class="question">
    <label>Vị trí LĐ</label>
-    <textarea class="vitrilapdat" type = "text" name ="vitrilapdat" id="vitrilapdat" value="" style="height:30px"></textarea>
+    <textarea class="Colum11" type = "text" name ="Colum11" id="Colum11" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
    <label>Trạng thái</label>
-    <textarea class="trangthai" type = "text" name ="trangthai" id="trangthai" value="" style="height:30px"></textarea>
+    <textarea class="Colum12" type = "text" name ="Colum12" id="Colum12" value="" style="height:30px"></textarea>
   </div>
 
  <div class="question">
    <label>Ghi chú</label>
-    <textarea class="ghichu" type = "text" name ="ghichu" id="ghichu" style="height:30px" ></textarea>
+    <textarea class="Colum13" type = "text" name ="Colum13" id="Colum13" style="height:30px" ></textarea>
   </div>
 
  <div class="question">
    <label>Nhập Web</label>
-    <textarea class="nhapweb" type = "text" name ="nhapweb" id="nhapweb" style="height:30px" ></textarea>
+    <textarea class="Colum14" type = "text" name ="Colum14" id="Colum14" style="height:30px" ></textarea>
   </div>  
 
   <div class="question">
    <label>Người cập nhật</label>
-    <textarea class="capnhat" type = "text" name ="capnhat" id="capnhat" style="height:30px" readonly></textarea>
+    <textarea class="Colum15" type = "text" name ="Colum15" id="Colum15" style="height:30px" readonly></textarea>
   </div>
 
   <div class="question">
    <label>Ngày cập nhật</label>
-    <textarea class="ngaycapnhat" type = "text" name ="ngaycapnhat" id="ngaycapnhat" style="height:30px" readonly></textarea>
+    <textarea class="Colum16" type = "text" name ="Colum16" id="Colum16" style="height:30px" readonly></textarea>
   </div>  
 
   
 <div class="question2" align="center">
-<p type = "text" id="ngay"></p>
-<p type = "text" id="ngay2" value=""></p>
-<p type = "text" id="doma" value=""></p>
+<p type = "text" id="ngay" readonly></p>
+<p type = "text" id="ngay2" value="" readonly></p>
+<p type = "text" id="chonnavi" value="" readonly></p>
 	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"></p>
 	
 	<input type="button" class="button button1" id="btn-show-update" value="Cập nhật" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
+	
 	<input type="button" class="button button1" id="btn-show-insert" value="Thêm SL" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
 	<input type="button" class="button button1" id="btn-show-delete" value="Xóa SL" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
 </div>
@@ -2429,14 +2453,37 @@ form .question label {
 
 <div align="center">
 
-<p></p>
+
+
+  <div class="navigationBar">
+
+  <ul>
+
+    <li>
+      <a id="vattudhanavi" value="vattudhanavi" >Vật tư ĐHA</a>
+    </li>
+    <li>
+      <a id="vattudhinavi" value="vattudhinavi">Vật tư ĐHI</a>
+    </li>
+    <li>
+      <a id="vattuhuenavi" value="vattuhuenavi">Vật tư HUẾ</a>
+    </li>
+	<li>
+      <a id="thvattunavi" value="thvattunavi">Vật tư Đài ĐHA</a>
+    </li>
+	
+  </ul>
+  
+</div>
+<br><br>
+
 <textarea type="text" id="searchAdmin" onkeyup='searchTableAdmin()' style="width:150px; height:23px; border-radius: 1em; " placeholder="Tìm Kiếm"></textarea>
 
 
 
 		<div align="center" class="container">
 		
-			<ul class="pagination">            
+			<div class="pagination">            
             <li data-page="prev" ><span> < <span class="sr-only">(current)</span></span></li>
 			
 				&nbsp;<a>Dòng</a>
@@ -2453,11 +2500,13 @@ form .question label {
 			  	
 
 			<li data-page="next" id="prev"><span> > <span class="sr-only">(current)</span></span></li>
-			</ul>
+			</div>
 			<button style="height:26px;" onClick="ExportToExcel_OK();readDataVattuDpDHA_value();">Excel</button>	
 		</div>
 
 
+		
+		
 <div class="HorizontalTable">
 <div class="Horizontal"></div>
 </div>		
@@ -2487,7 +2536,1408 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <script type="text/javascript">//<![CDATA[
 
-var _0x3194b8=_0x2508;(function(_0x42221a,_0x1291a4){var _0x557167=_0x2508,_0x2578f0=_0x42221a();while(!![]){try{var _0x240f4a=parseInt(_0x557167(0xeb))/0x1+parseInt(_0x557167(0x91))/0x2*(parseInt(_0x557167(0x117))/0x3)+-parseInt(_0x557167(0xa0))/0x4*(-parseInt(_0x557167(0x138))/0x5)+parseInt(_0x557167(0x86))/0x6+-parseInt(_0x557167(0x105))/0x7+-parseInt(_0x557167(0x135))/0x8*(-parseInt(_0x557167(0xd4))/0x9)+-parseInt(_0x557167(0xe5))/0xa;if(_0x240f4a===_0x1291a4)break;else _0x2578f0['push'](_0x2578f0['shift']());}catch(_0x59c678){_0x2578f0['push'](_0x2578f0['shift']());}}}(_0x2629,0x1c7dd),(!function(_0x367473){'use strict';var _0x675a95=_0x2508;_0x367473['fn'][_0x675a95(0x134)]=function(_0xbb4948){var _0x85096e=_0x675a95,_0x565e60,_0x3af058,_0x403890=_0xbb4948[_0x85096e(0x8a)]||!0x1,_0x4c30e0=!_0xbb4948[_0x85096e(0x8a)]||!0x0,_0x37c502=_0x367473[_0x85096e(0x120)]({},{'idle':0xea60,'events':_0x85096e(0x10e),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0xbb4948),_0x54877b=null;return _0x367473(this)['on'](_0x85096e(0xed),{},function(){var _0x418ea3=_0x85096e;_0x367473(this)[_0x418ea3(0xb8)](_0x37c502['events']),_0x37c502[_0x418ea3(0x112)]=!0x1,_0x565e60(_0x54877b,_0x37c502);}),_0x565e60=function(_0x2995a1,_0x7d90ba){var _0x2b374b=_0x85096e;return _0x403890&&(_0x7d90ba['onActive'][_0x2b374b(0xa9)](),_0x403890=!0x1),clearTimeout(_0x2995a1),_0x7d90ba[_0x2b374b(0x112)]?_0x3af058(_0x7d90ba):void 0x0;},_0x3af058=function(_0xa5848d){var _0x42b5ab=_0x85096e;return(_0xa5848d[_0x42b5ab(0xf3)]?setInterval:setTimeout)(function(){var _0x59e6b3=_0x42b5ab;_0x403890=!0x0,_0xa5848d[_0x59e6b3(0x10d)][_0x59e6b3(0xa9)]();},_0xa5848d[_0x42b5ab(0x134)]);},this[_0x85096e(0x90)](function(){var _0x528595=_0x85096e;_0x54877b=_0x3af058(_0x37c502),_0x367473(this)['on'](_0x37c502[_0x528595(0xce)],function(){_0x54877b=_0x565e60(_0x54877b,_0x37c502);}),(_0x37c502['onShow']||_0x37c502['onHide'])&&_0x367473(document)['on'](_0x528595(0xa3),function(){var _0x44f886=_0x528595;document[_0x44f886(0xc4)]||document[_0x44f886(0xad)]||document[_0x44f886(0xb0)]||document[_0x44f886(0x15f)]?_0x4c30e0&&(_0x4c30e0=!0x1,_0x37c502[_0x44f886(0xa6)][_0x44f886(0xa9)]()):_0x4c30e0||(_0x4c30e0=!0x0,_0x37c502[_0x44f886(0xab)][_0x44f886(0xa9)]());});});};}(jQuery),$(document)['idle']({'onIdle':function(){Search_dialog_time();},'idle':0x124f80})));function _0x2629(){var _0x51c459=['ceil','36476IbLuGA','preventDefault','#showData','visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange','&trangthai=','&vitrilapdat=','onHide','.pagination\x20li:lt(5)','URL','call','yyyymmddhhmm','onShow','attr','webkitHidden','change','length','mozHidden','removeChild','&nhapweb=','#nhapweb','btn-show-insert','Order','addClass','event','off','stopImmediatePropagation','#doma','serinumber','records','TRANG_THAI','data-page','cancel_delete','?callback=ctrlq&id=','cancel','toString','.sortable','hidden','#id','find','getMinutes','thietbi','dialog-container','&ngaynhan=','\x20tr:gt(0)','.pagination\x20[data-page=\x22next\x22]','\x20tbody\x20tr','events','attachEvent','#serinumber','&capnhatVattuDpDHA=','prepend','ngaylog','1957455rQQIJR','active','href','parentNode','scrollLeft','val','&ngayxuat=','contextmenu','yyyymmdd','innerText','nhapweb','&serinumber=','#loaivattu','mytable','dialog','writeFile','concat','3881780FIkhqK','&ghichu=','ngaynhan','visibility','insertRow','desc','152162IljGga','scroll','idle:stop','hide','display','popstate','ready','value','recurIdleCall','toLowerCase','jsonp','#re','.pagination\x20li.active','split','?action=readVattuDpDHA','#capnhatVattuDpDHA','ngay2','#ngayxuat','prototype','#parnumber','before','yyyymmddhhmmss','countable','btn-show-update','visible','vitrilapdat','628950ufCbnZ','result','</td>','SERIAL','.pagination\x20li:gt(5)','#dialog-id','&thietbi=','NHAP_WEB','onIdle','mousemove\x20keydown\x20mousedown\x20touchstart','show','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5WW94R1dyVXpITG9EZnVibGZ1RUpsUzg0cVRSMTE5M2ZES3pmN1EwUXNORDJZU0pvMFpIbHd2SUV1VjA4dmhTLVBkUS9leGVj','getMonth','keepTracking','VI_TRI_LAP_DAT','pushState','createElement','ngaycapnhat','3oaQulP','GHI_CHU','delete-container','getHours','&loaivattu=','showData','ajax','ngay','getTime','extend','&parnumber=','asc','ngayxuat','table\x20tr:eq(0)','<th>\x20ID\x20</th>','indexOf','#hethong','next','addEventListener','confirm_delete','toUpperCase','#ghichu','load','innerHTML','textContent','&action=Readtime','className','&doma=','confirm_update','idle','8kdDahY','GET','getElementsByTagName','5HRokzk','?callback=ctrlq&ngay=','cells','getFullYear','hostname','HE_THONG','.pagination\x20li:gt(0)','#tenvattu','replace','ghichu','onclick','searchAdmin','#trangthai','.pagination\x20#prev','block','&ngaylog=','.pagination\x20[data-page=\x221\x22]','insert-container','style','click','table','dialog_time','&action=insertVattuDpDHA','TỔNG..','#ngaynhan','base64','.HorizontalTable','doma','&hethong=','substring','port','html','getDate','tenvattu','protocol','slice','#ngaylog','capnhat','nodeName','msHidden','getJSON','parentElement','table\x20tr:gt(0)','insertCell','cancel_update','write','closest','utils','.pagination','onload','Filter','68040gwFqUc','&tenvattu=','parnumber','#ngay','startAtIdle','file:','testText','update-container','#vitrilapdat','#thietbi','each','409226WQUiAf','confirm_insert','getSeconds','<td>','css','loader','appendChild','removeClass','<thead><tr>\x20<th\x20onclick=\x27Sortcolunm(0)\x27\x20style=\x27font-weight:bold\x27>ID</th><th\x20onclick=\x27Sortcolunm(1)\x27\x20style=\x27font-weight:bold\x27>Mạng</th>\x20<th\x20onclick=\x27Sortcolunm(2)\x27\x20style=\x27font-weight:bold\x27>Thiết\x20bị</th><th\x20onclick=\x27Sortcolunm(3)\x27\x20style=\x27font-weight:bold\x27>Tên\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(4)\x27\x20style=\x27font-weight:bold\x27>Loại\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(5)\x27\x20style=\x27font-weight:bold\x27>Partnumber</th>\x20<th\x20onclick=\x27Sortcolunm(6)\x27\x20style=\x27font-weight:bold\x27>Serinumber</th>\x20\x20<th\x20onclick=\x27Sortcolunm(7)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20nhận</th>\x20\x20<th\x20onclick=\x27Sortcolunm(8)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20xuất</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(9)\x27\x20style=\x27font-weight:bold\x27>Vị\x20trí\x20lắp\x20đặt</th>\x20<th\x20onclick=\x27Sortcolunm(10)\x27\x20style=\x27font-weight:bold\x27>Trạng\x20thái</th>\x20<th\x20onclick=\x27Sortcolunm(11)\x27\x20style=\x27font-weight:bold\x27>Ghi\x20chú</th>\x20<th\x20onclick=\x27Sortcolunm(12)\x27\x20style=\x27font-weight:bold\x27>Nhập\x20Web</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(13)\x27\x20style=\x27font-weight:bold\x27>Người\x20cập\x20nhật</th>\x20\x20<th\x20onclick=\x27Sortcolunm(14)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20cập\x20nhật</th>\x20</tr>\x20</thead>','#maxRows','getElementById','trim','none','.pagination\x20li'];_0x2629=function(){return _0x51c459;};return _0x2629();}function _0x2508(_0xa49bd3,_0x4a12d3){var _0x2629f4=_0x2629();return _0x2508=function(_0x25084a,_0x27f865){_0x25084a=_0x25084a-0x83;var _0x42915f=_0x2629f4[_0x25084a];return _0x42915f;},_0x2508(_0xa49bd3,_0x4a12d3);}var overlay_timeme=document[_0x3194b8(0x9b)](_0x3194b8(0x14d)),overlayme=document[_0x3194b8(0x9b)](_0x3194b8(0x8c));function Search_dialog_time(){var _0x43e631=_0x3194b8;(null==document[_0x43e631(0x9b)]('dialog_time')||null==document[_0x43e631(0x9b)](_0x43e631(0x8c))?close:show_dialog_time)();}function show_dialog_time(){var _0x507695=_0x3194b8;overlay_timeme[_0x507695(0x14a)]['display']=_0x507695(0x146);}function confirm_time(){var _0x4d22af=_0x3194b8;close(),overlayme[_0x4d22af(0x14a)][_0x4d22af(0xef)]=_0x4d22af(0x9d);}document['getElementById']('confirm_time')[_0x3194b8(0x142)]=function(){confirm_time();},document[_0x3194b8(0x9b)]('btn-show-dialog')[_0x3194b8(0x142)]=function(){show_dialog();},overlayme=document[_0x3194b8(0x9b)](_0x3194b8(0xc9));function show_dialog(){var _0x4f26dd=_0x3194b8;overlayme[_0x4f26dd(0x14a)][_0x4f26dd(0xef)]=_0x4f26dd(0x146);}function confirm(){var _0x332183=_0x3194b8;close(),overlayme[_0x332183(0x14a)][_0x332183(0xef)]=_0x332183(0x9d);}function cancel(){var _0xeea505=_0x3194b8;overlayme[_0xeea505(0x14a)]['display']=_0xeea505(0x9d);}function close_window(){close();}function ExportToExcel_OK(_0x16b222,_0x35b8fd,_0x5686fc){var _0x3b4570=_0x3194b8;for(var _0x438391=$(_0x3b4570(0xa2))[_0x3b4570(0xc6)](':not(:visible)'),_0x47310d=_0x438391[_0x3b4570(0xaf)]-0x1;0x0<=_0x47310d;_0x47310d--)_0x438391[_0x47310d]&&_0x438391[_0x47310d][_0x3b4570(0x161)]&&_0x438391[_0x47310d][_0x3b4570(0x161)][_0x3b4570(0xb1)](_0x438391[_0x47310d]);var _0x179b6f=document[_0x3b4570(0x9b)]('mytable'),_0x179b6f=XLSX[_0x3b4570(0x167)]['table_to_book'](_0x179b6f,{'sheet':_0x3b4570(0xb5)});return _0x5686fc?XLSX[_0x3b4570(0x165)](_0x179b6f,{'bookType':_0x16b222,'bookSST':!0x0,'type':_0x3b4570(0x151)}):XLSX[_0x3b4570(0xe3)](_0x179b6f,_0x35b8fd||'VTDP\x20DHA.'+(_0x16b222||'xlsx'));}function getPagination(_0x5cd650){var _0x30eef8=_0x3194b8,_0x40cb39=0x1;$('#maxRows')['on'](_0x30eef8(0xae),function(_0x3b2070){var _0x4bcf5e=_0x30eef8;_0x40cb39=0x1,$('.pagination')[_0x4bcf5e(0xc6)]('li')[_0x4bcf5e(0x15b)](0x1,-0x1)['remove']();var _0x2a88c9=0x0,_0x1944e7=parseInt($(this)['val']());0x1388==_0x1944e7?$('.pagination')[_0x4bcf5e(0xee)]():$(_0x4bcf5e(0x83))[_0x4bcf5e(0x10f)]();var _0x77b793=$(_0x5cd650+_0x4bcf5e(0xcd))['length'];if($(_0x5cd650+_0x4bcf5e(0xcb))[_0x4bcf5e(0x90)](function(){var _0x402df4=_0x4bcf5e;_0x1944e7<++_0x2a88c9&&$(this)[_0x402df4(0xee)](),_0x2a88c9<=_0x1944e7&&$(this)[_0x402df4(0x10f)]();}),_0x1944e7<_0x77b793){for(var _0x1f0076=Math[_0x4bcf5e(0x9f)](_0x77b793/_0x1944e7),_0x498e1e=0x1;_0x498e1e<=_0x1f0076;)$(_0x4bcf5e(0x145))[_0x4bcf5e(0xff)]('<li\x20data-page=\x22'+_0x498e1e+'\x22>\x09\x09\x09\x09\x09\x09\x09\x09\x20\x20<span>'+_0x498e1e++ +'<span\x20class=\x22sr-only\x22>(current)</span></span>\x09\x09\x09\x09\x09\x09\x09\x09</li>')[_0x4bcf5e(0x10f)]();}$(_0x4bcf5e(0x148))[_0x4bcf5e(0xb6)](_0x4bcf5e(0xd5)),$('.pagination\x20li')['on'](_0x4bcf5e(0x14b),function(_0x4ef150){var _0x2baab7=_0x4bcf5e;_0x4ef150[_0x2baab7(0xb9)](),_0x4ef150[_0x2baab7(0xa1)]();var _0x18032a=$(this)[_0x2baab7(0xac)](_0x2baab7(0xbe)),_0x31f0a0=parseInt($(_0x2baab7(0x9a))['val']());if('prev'==_0x18032a){if(0x1==_0x40cb39)return;_0x18032a=--_0x40cb39;}if(_0x2baab7(0x128)==_0x18032a){if(_0x40cb39==$('.pagination\x20li')[_0x2baab7(0xaf)]-0x2)return;_0x18032a=++_0x40cb39;}_0x40cb39=_0x18032a;var _0x596e89=0x0;$(_0x2baab7(0x9e))[_0x2baab7(0x98)](_0x2baab7(0xd5)),$('.pagination\x20[data-page=\x22'+_0x40cb39+'\x22]')[_0x2baab7(0xb6)]('active'),limitPagging(),$(_0x5cd650+_0x2baab7(0xcb))['each'](function(){var _0x16d428=_0x2baab7;_0x31f0a0*_0x18032a<++_0x596e89||_0x596e89<=_0x31f0a0*_0x18032a-_0x31f0a0?$(this)['hide']():$(this)[_0x16d428(0x10f)]();});}),limitPagging();})['val'](0x5)[_0x30eef8(0xae)]();}function limitPagging(){var _0x36d71=_0x3194b8;if(0x7<$(_0x36d71(0x9e))['length']&&($(_0x36d71(0xf7))['attr'](_0x36d71(0xbe))<=0x3&&($(_0x36d71(0x109))[_0x36d71(0xee)](),$(_0x36d71(0xa7))[_0x36d71(0x10f)](),$(_0x36d71(0xcc))[_0x36d71(0x10f)]()),0x3<$(_0x36d71(0xf7))[_0x36d71(0xac)](_0x36d71(0xbe)))){$(_0x36d71(0x13e))[_0x36d71(0xee)](),$(_0x36d71(0xcc))[_0x36d71(0x10f)]();for(let _0x8879fd=parseInt($('.pagination\x20li.active')[_0x36d71(0xac)](_0x36d71(0xbe)))-0x2;_0x8879fd<=parseInt($(_0x36d71(0xf7))[_0x36d71(0xac)](_0x36d71(0xbe)))+0x2;_0x8879fd++)$('.pagination\x20[data-page=\x22'+_0x8879fd+'\x22]')['show']();}}function ctrlq(_0x159cd4){var _0x286443=_0x3194b8;document[_0x286443(0x9b)]('ngay')[_0x286443(0xf2)]=_0x159cd4[_0x286443(0x106)],Date[_0x286443(0xfd)]['yyyymmdd']=function(){var _0x2b32bb=_0x286443,_0x485b56=this[_0x2b32bb(0x13b)](),_0x4bc7b8=this[_0x2b32bb(0x111)]()<0x9?'0'+(this[_0x2b32bb(0x111)]()+0x1):this[_0x2b32bb(0x111)]()+0x1,_0x5ef5a9=this['getDate']()<0xa?'0'+this['getDate']():this[_0x2b32bb(0x158)]();return''[_0x2b32bb(0xe4)](_0x485b56)[_0x2b32bb(0xe4)](_0x4bc7b8)[_0x2b32bb(0xe4)](_0x5ef5a9);},Date['prototype']['yyyymmddhhmm']=function(){var _0x11d2c7=_0x286443,_0x9029f8=this[_0x11d2c7(0xdc)](),_0xf896a8=this[_0x11d2c7(0x11a)]()<0xa?'0'+this[_0x11d2c7(0x11a)]():this['getHours'](),_0x1e1677=0x3c*(this['getMinutes']()<0xa?'0'+this['getMinutes']():this[_0x11d2c7(0xc7)]());return''[_0x11d2c7(0xe4)](_0x9029f8)[_0x11d2c7(0xe4)](_0xf896a8)[_0x11d2c7(0xe4)](_0x1e1677);},Date['prototype'][_0x286443(0x100)]=function(){var _0x2214f3=_0x286443,_0x83109=this[_0x2214f3(0xaa)](),_0x8f620f=this[_0x2214f3(0x93)]()<0xa?'0'+this[_0x2214f3(0x93)]():this[_0x2214f3(0x93)]();return''[_0x2214f3(0xe4)](_0x83109)+_0x8f620f;},0x1e<new Date()[_0x286443(0x100)]()-parseInt(document[_0x286443(0x9b)](_0x286443(0x11e))[_0x286443(0xf2)])?(window['close'](),window['setTimeout'](function(){var _0x2c82f2=_0x286443;location[_0x2c82f2(0xd6)]='/';},0x0),self['close']()):'Vui\x20lòng\x20đăng\x20nhập\x20để\x20cập\x20nhật'==document['getElementById']('ngay')[_0x286443(0xf2)]||readDataVattuDpDHA(),$('#re')[_0x286443(0x157)](_0x159cd4['result']),$(_0x286443(0xf6))[_0x286443(0x95)](_0x286443(0xe8),_0x286443(0x103));}function Readtime_value(){var _0x161bd4=_0x3194b8,_0x9ee522=$(_0x161bd4(0x89))['val'](),_0x126115=$(_0x161bd4(0xba))[_0x161bd4(0xd9)](),_0x126115=atob(script_url)+_0x161bd4(0x139)+_0x9ee522+_0x161bd4(0x132)+_0x126115+_0x161bd4(0x130);jQuery[_0x161bd4(0x11d)]({'crossDomain':!0x0,'url':_0x126115,'method':_0x161bd4(0x136),'dataType':_0x161bd4(0xf5)});}document[_0x3194b8(0x9b)]('confirm')['onclick']=function(){confirm();},document[_0x3194b8(0x9b)](_0x3194b8(0xc1))['onclick']=function(){cancel();},document['addEventListener'](_0x3194b8(0xdb),_0x522273=>_0x522273[_0x3194b8(0xa1)]()),history['pushState'](null,null,document['URL']),window['addEventListener'](_0x3194b8(0xf0),function(){var _0x1334f=_0x3194b8;history['pushState'](null,null,document[_0x1334f(0xa8)]);}),getPagination(_0x3194b8(0xa2)),$(function(){var _0x3bcdfa=_0x3194b8;$(_0x3bcdfa(0x124))[_0x3bcdfa(0xd2)](_0x3bcdfa(0x125));var _0x46bbec=0x0;$(_0x3bcdfa(0x162))[_0x3bcdfa(0x90)](function(){var _0xbe9b28=_0x3bcdfa;_0x46bbec++,$(this)['prepend'](_0xbe9b28(0x94)+_0x46bbec+_0xbe9b28(0x107));});}),$(document)[_0x3194b8(0xf1)](function(){var _0x8500b=_0x3194b8,_0x21c907=location[_0x8500b(0x15a)];_0x8500b(0x8b)==_0x21c907?close():(_0x21c907=location[_0x8500b(0x15a)],document[_0x8500b(0x9b)](_0x8500b(0x153))['value']=_0x21c907,Readtime_value());}),(function(){var _0x513ead=_0x3194b8;function _0x4ea9ee(){var _0x384670=_0x2508;document[_0x384670(0x9b)](_0x384670(0x11c))[_0x384670(0x142)]=function(_0xfac1d){var _0x45ca40=_0x384670;for(var _0x50b8ba,_0x34509b,_0x3d7816,_0x1862a5,_0x49362e,_0x570514,_0x58f16e,_0x30828c,_0x35fde4,_0x4ad67c,_0x20d6e9,_0x52efc2,_0x3e92a6,_0x1934b3,_0x13458b,_0x3b4cb1=(_0xfac1d=_0xfac1d||window[_0x45ca40(0xb7)])['target']||_0xfac1d['srcElement'];_0x3b4cb1&&'TR'!=_0x3b4cb1[_0x45ca40(0x15e)];)_0x3b4cb1=_0x3b4cb1['parentElement'];!_0x3b4cb1||(_0x50b8ba=_0x3b4cb1['cells'])[_0x45ca40(0xaf)]&&'ID'!=_0x50b8ba[0x0][_0x45ca40(0x12e)]&&(_0x34509b=document['getElementById']('id'),_0x3d7816=document['getElementById']('hethong'),_0x1862a5=document[_0x45ca40(0x9b)](_0x45ca40(0xc8)),_0x49362e=document[_0x45ca40(0x9b)](_0x45ca40(0x159)),_0x570514=document[_0x45ca40(0x9b)]('loaivattu'),_0x58f16e=document[_0x45ca40(0x9b)](_0x45ca40(0x88)),_0x30828c=document[_0x45ca40(0x9b)](_0x45ca40(0xbb)),_0x35fde4=document['getElementById'](_0x45ca40(0xe7)),_0x4ad67c=document[_0x45ca40(0x9b)](_0x45ca40(0x123)),_0x20d6e9=document[_0x45ca40(0x9b)](_0x45ca40(0x104)),_0x52efc2=document[_0x45ca40(0x9b)]('trangthai'),_0x3e92a6=document[_0x45ca40(0x9b)](_0x45ca40(0x141)),_0x1934b3=document[_0x45ca40(0x9b)](_0x45ca40(0xde)),_0x13458b=document[_0x45ca40(0x9b)](_0x45ca40(0x15d)),_0xfac1d=document[_0x45ca40(0x9b)](_0x45ca40(0x116)),_0x34509b[_0x45ca40(0xf2)]=_0x50b8ba[0x0]['innerHTML'],_0x3d7816[_0x45ca40(0xf2)]=_0x50b8ba[0x1][_0x45ca40(0x12e)],_0x1862a5[_0x45ca40(0xf2)]=_0x50b8ba[0x2][_0x45ca40(0x12e)],_0x49362e[_0x45ca40(0xf2)]=_0x50b8ba[0x3][_0x45ca40(0x12e)],_0x570514[_0x45ca40(0xf2)]=_0x50b8ba[0x4][_0x45ca40(0x12e)],_0x58f16e[_0x45ca40(0xf2)]=_0x50b8ba[0x5]['innerHTML'],_0x30828c['value']=_0x50b8ba[0x6][_0x45ca40(0x12e)],_0x35fde4[_0x45ca40(0xf2)]=_0x50b8ba[0x7]['innerHTML'],_0x4ad67c[_0x45ca40(0xf2)]=_0x50b8ba[0x8][_0x45ca40(0x12e)],_0x20d6e9[_0x45ca40(0xf2)]=_0x50b8ba[0x9][_0x45ca40(0x12e)],_0x52efc2[_0x45ca40(0xf2)]=_0x50b8ba[0xa][_0x45ca40(0x12e)],_0x3e92a6['value']=_0x50b8ba[0xb]['innerHTML'],_0x1934b3[_0x45ca40(0xf2)]=_0x50b8ba[0xc][_0x45ca40(0x12e)],_0x13458b[_0x45ca40(0xf2)]=_0x50b8ba[0xd][_0x45ca40(0x12e)],_0xfac1d[_0x45ca40(0xf2)]=_0x50b8ba[0xe]['innerHTML'],changecat(f16[_0x45ca40(0xf2)]));};}window[_0x513ead(0x129)]?window[_0x513ead(0x129)](_0x513ead(0x12d),_0x4ea9ee,!0x1):window[_0x513ead(0xcf)]&&window[_0x513ead(0xcf)](_0x513ead(0x84),_0x4ea9ee);}()),window[_0x3194b8(0x84)]=function(){var _0x22105f=_0x3194b8;document['addEventListener'](_0x22105f(0xdb),_0x2d8689=>_0x2d8689[_0x22105f(0xa1)]()),history[_0x22105f(0x114)](null,null,document[_0x22105f(0xa8)]),window['addEventListener'](_0x22105f(0xf0),function(){var _0x104d6a=_0x22105f;history['pushState'](null,null,document[_0x104d6a(0xa8)]);});};var script_url=_0x3194b8(0x110);function readDataVattuDpDHA(){var _0x2524f8=_0x3194b8,_0x4752d2;'Vui\x20lòng\x20đăng\x20nhập\x20để\x20cập\x20nhật'==document[_0x2524f8(0x9b)](_0x2524f8(0x11e))[_0x2524f8(0xf2)]||'file:'==_0x4752d2?close():($(_0x2524f8(0xf6))[_0x2524f8(0x95)]('visibility','hidden'),_0x4752d2=atob(script_url)+_0x2524f8(0xf9),$[_0x2524f8(0x160)](_0x4752d2,function(_0x40b133){var _0x5f1b49=_0x2524f8,_0x529a62=document[_0x5f1b49(0x115)](_0x5f1b49(0x14c));_0x529a62['setAttribute']('id',_0x5f1b49(0xe1)),_0x529a62['setAttribute']('class','sortable');for(var _0xe7f90c=0x0;_0xe7f90c<_0x40b133['records'][_0x5f1b49(0xaf)]-0x1;_0xe7f90c++){tr=_0x529a62[_0x5f1b49(0xe9)](-0x1);var _0x37d75f=tr['insertCell'](-0x1);_0x37d75f[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['ID'],(_0x37d75f=tr['insertCell'](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c][_0x5f1b49(0x13d)],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['THIET_BI'],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))['innerHTML']=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['TEN_VAT_TU'],(_0x37d75f=tr['insertCell'](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['LOAI_VAT_TU'],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['PART_NUMBER'],(_0x37d75f=tr['insertCell'](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c][_0x5f1b49(0x108)],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['NGAY_NHAN'],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['NGAY_XUAT'],(_0x37d75f=tr['insertCell'](-0x1))['innerHTML']=_0x40b133['records'][_0xe7f90c][_0x5f1b49(0x113)],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c][_0x5f1b49(0xbd)],(_0x37d75f=tr['insertCell'](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c][_0x5f1b49(0x118)],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c][_0x5f1b49(0x10c)],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['CAP_NHAT'],(_0x37d75f=tr[_0x5f1b49(0x163)](-0x1))[_0x5f1b49(0x12e)]=_0x40b133[_0x5f1b49(0xbc)][_0xe7f90c]['NGAY_CAP_NHAT'];}var _0x458c13=document[_0x5f1b49(0x9b)](_0x5f1b49(0x11c));_0x458c13[_0x5f1b49(0x12e)]='',_0x458c13[_0x5f1b49(0x97)](_0x529a62),$(_0x5f1b49(0xf6))[_0x5f1b49(0x95)](_0x5f1b49(0xe8),_0x5f1b49(0x103)),_0x529a62['innerHTML']=_0x5f1b49(0x99)+_0x529a62[_0x5f1b49(0x12e)];}),ChangeID());}function Sortcolunm(_0x2364da){var _0x4f3d80=_0x3194b8;let _0x24c671,_0x2a524e,_0x37d991,_0x480975,_0x42fae8,_0x2649e1,_0x58840b,_0x5d9e5a,_0x3023fc=0x0;for(_0x24c671=document[_0x4f3d80(0x9b)](_0x4f3d80(0xe1)),_0x37d991=!0x0,_0x5d9e5a=_0x4f3d80(0x122);_0x37d991;){for(_0x37d991=!0x1,_0x2a524e=_0x24c671['rows'],_0x480975=0x1;_0x480975<_0x2a524e[_0x4f3d80(0xaf)]-0x1;_0x480975++){_0x58840b=!0x1,x1=_0x2a524e[_0x480975][_0x4f3d80(0x13a)][_0x2364da][_0x4f3d80(0x12f)][_0x4f3d80(0x9c)]()[_0x4f3d80(0xf4)]()+'\x20',_0x42fae8=x1[_0x4f3d80(0x155)](0x0,x1['indexOf']('\x20')),y1=_0x2a524e[_0x480975+0x1][_0x4f3d80(0x13a)][_0x2364da][_0x4f3d80(0x12f)][_0x4f3d80(0x9c)]()[_0x4f3d80(0xf4)]()+'\x20',_0x2649e1=y1[_0x4f3d80(0x155)](0x0,y1[_0x4f3d80(0x126)]('\x20'));var _0x4deef1,_0xf361e9,_0x90ff5,_0x9fdce2=/^\d/['test'](_0x42fae8);if(_0x9fdce2&&-0x1!=_0x42fae8['indexOf']('/')?([_0x4deef1,_0xf361e9,_0x90ff5]=_0x42fae8[_0x4f3d80(0xf8)]('/'),_0x42fae8=new Date(_0x90ff5,_0xf361e9-0x1,_0x4deef1,0xf,0x0,0x0,0x0)[_0x4f3d80(0x11f)](),[_0x4deef1,_0xf361e9,_0x90ff5]=_0x2649e1[_0x4f3d80(0xf8)]('/'),_0x2649e1=new Date(_0x90ff5,_0xf361e9-0x1,_0x4deef1,0xf,0x0,0x0,0x0)[_0x4f3d80(0x11f)]()):_0x9fdce2&&(_0x42fae8=+_0x42fae8[_0x4f3d80(0x140)](',','.'),_0x2649e1=+_0x2649e1[_0x4f3d80(0x140)](',','.')),_0x4f3d80(0x122)==_0x5d9e5a?_0x58840b=_0x42fae8>_0x2649e1:_0x4f3d80(0xea)==_0x5d9e5a&&(_0x58840b=_0x42fae8<_0x2649e1),_0x58840b)break;}_0x58840b?(_0x2a524e[_0x480975][_0x4f3d80(0xd7)]['insertBefore'](_0x2a524e[_0x480975+0x1],_0x2a524e[_0x480975]),_0x37d991=!0x0,_0x3023fc++):0x0==_0x3023fc&&_0x4f3d80(0x122)==_0x5d9e5a&&(_0x5d9e5a=_0x4f3d80(0xea),_0x37d991=!0x0);}}$(function(){var _0x4c4c88=_0x3194b8;$('.HorizontalTable')[_0x4c4c88(0xec)](function(){var _0x4bac4f=_0x4c4c88;$(_0x4bac4f(0xc3))[_0x4bac4f(0xd8)]($(_0x4bac4f(0x152))[_0x4bac4f(0xd8)]());}),$('.sortable')[_0x4c4c88(0xec)](function(){var _0x28cccb=_0x4c4c88;$(_0x28cccb(0x152))[_0x28cccb(0xd8)]($(_0x28cccb(0xc3))[_0x28cccb(0xd8)]());});}),document[_0x3194b8(0x9b)](_0x3194b8(0x102))[_0x3194b8(0x142)]=function(){show_update();};var overlay_updateme=document[_0x3194b8(0x9b)](_0x3194b8(0x8d));function show_update(){var _0x14ae9b=_0x3194b8;if(''===document[_0x14ae9b(0x9b)]('id')[_0x14ae9b(0xf2)])return $(function(){var _0x316d1f=_0x14ae9b;$(_0x316d1f(0x10a))[_0x316d1f(0xe2)]({'modal':!0x0,'buttons':{'OK':function(){var _0x834c70=_0x316d1f;$(this)[_0x834c70(0xe2)]('close');}}});}),!0x1;overlay_updateme[_0x14ae9b(0x14a)][_0x14ae9b(0xef)]=_0x14ae9b(0x146);}function confirm_update(){var _0xf82d11=_0x3194b8;updateVattuDpDHA_value(),overlay_updateme[_0xf82d11(0x14a)][_0xf82d11(0xef)]=_0xf82d11(0x9d);}function cancel_update(){var _0x432538=_0x3194b8;overlay_updateme[_0x432538(0x14a)][_0x432538(0xef)]=_0x432538(0x9d);}document['getElementById'](_0x3194b8(0x133))[_0x3194b8(0x142)]=function(){confirm_update();},document[_0x3194b8(0x9b)](_0x3194b8(0x164))[_0x3194b8(0x142)]=function(){cancel_update();},document[_0x3194b8(0x9b)](_0x3194b8(0xb4))['onclick']=function(){show_insert();};var overlay_insertme=document[_0x3194b8(0x9b)](_0x3194b8(0x149));function show_insert(){var _0x29d11f=_0x3194b8;overlay_insertme['style'][_0x29d11f(0xef)]='block';}function confirm_insert(){var _0x5c49dc=_0x3194b8;insertVattuDpDHA_value(),overlay_insertme[_0x5c49dc(0x14a)][_0x5c49dc(0xef)]='none';}function cancel_insert(){var _0x46037d=_0x3194b8;overlay_insertme['style'][_0x46037d(0xef)]=_0x46037d(0x9d);}document[_0x3194b8(0x9b)](_0x3194b8(0x92))[_0x3194b8(0x142)]=function(){confirm_insert();},document[_0x3194b8(0x9b)]('cancel_insert')[_0x3194b8(0x142)]=function(){cancel_insert();},document[_0x3194b8(0x9b)]('btn-show-delete')[_0x3194b8(0x142)]=function(){show_delete();};var overlay_deleteme=document[_0x3194b8(0x9b)](_0x3194b8(0x119));function show_delete(){var _0x48abcc=_0x3194b8;if(''===document[_0x48abcc(0x9b)]('id')[_0x48abcc(0xf2)])return $(function(){var _0x3e89ea=_0x48abcc;$(_0x3e89ea(0x10a))[_0x3e89ea(0xe2)]({'modal':!0x0,'buttons':{'OK':function(){var _0x6c575c=_0x3e89ea;$(this)[_0x6c575c(0xe2)]('close');}}});}),!0x1;overlay_deleteme[_0x48abcc(0x14a)][_0x48abcc(0xef)]=_0x48abcc(0x146);}function confirm_delete(){var _0x19a32a=_0x3194b8;deleteVattuDpDHA_value(),overlay_deleteme[_0x19a32a(0x14a)][_0x19a32a(0xef)]='none';}function cancel_delete(){var _0x51de33=_0x3194b8;overlay_deleteme[_0x51de33(0x14a)][_0x51de33(0xef)]=_0x51de33(0x9d);}function ChangeID(){var _0x2e8398=_0x3194b8;document[_0x2e8398(0x9b)](_0x2e8398(0xfb))&&(document['getElementById'](_0x2e8398(0xfb))[_0x2e8398(0xf2)]=document[_0x2e8398(0x9b)]('ngay')[_0x2e8398(0xf2)],document[_0x2e8398(0x9b)]('ngay2')['id']=_0x2e8398(0xd3));}function updateVattuDpDHA_value(){var _0x2f8a32=_0x3194b8;ChangeID(),$(_0x2f8a32(0xf6))['css']('visibility','hidden'),document[_0x2f8a32(0x9b)](_0x2f8a32(0x96))[_0x2f8a32(0x14a)][_0x2f8a32(0xe8)]='visible';var _0x11793e=location[_0x2f8a32(0x15a)]+'//'+location[_0x2f8a32(0x13c)]+(location['port']?':'+location[_0x2f8a32(0x156)]:'');document[_0x2f8a32(0x9b)](_0x2f8a32(0x153))[_0x2f8a32(0xf2)]=_0x11793e;var _0x761b32=$(_0x2f8a32(0xba))[_0x2f8a32(0xd9)](),_0x2b68e3=$(_0x2f8a32(0xfa))[_0x2f8a32(0xd9)](),_0x433e02=$(_0x2f8a32(0x15c))[_0x2f8a32(0xd9)](),_0x123672=$(_0x2f8a32(0xc5))[_0x2f8a32(0xd9)](),_0x3278a6=$('#hethong')[_0x2f8a32(0xd9)](),_0xea0f35=$(_0x2f8a32(0x8f))[_0x2f8a32(0xd9)](),_0x55992e=$(_0x2f8a32(0x13f))[_0x2f8a32(0xd9)](),_0x3f5cb2=$(_0x2f8a32(0xe0))[_0x2f8a32(0xd9)](),_0x57233a=$(_0x2f8a32(0xfe))[_0x2f8a32(0xd9)](),_0x15e893=$(_0x2f8a32(0xd0))['val'](),_0x34317c=$(_0x2f8a32(0x150))[_0x2f8a32(0xd9)](),_0x4d532c=$(_0x2f8a32(0xfc))['val'](),_0x5d1ae0=$(_0x2f8a32(0x8e))[_0x2f8a32(0xd9)](),_0x49fb6b=$(_0x2f8a32(0x144))[_0x2f8a32(0xd9)](),_0x52e359=$(_0x2f8a32(0x12c))[_0x2f8a32(0xd9)](),_0xd12034=$(_0x2f8a32(0xb3))[_0x2f8a32(0xd9)](),_0x11793e=atob(script_url)+_0x2f8a32(0xc0)+_0x123672+_0x2f8a32(0x154)+_0x3278a6+_0x2f8a32(0x10b)+_0xea0f35+_0x2f8a32(0x87)+_0x55992e+'&loaivattu='+_0x3f5cb2+_0x2f8a32(0x121)+_0x57233a+_0x2f8a32(0xdf)+_0x15e893+_0x2f8a32(0xca)+_0x34317c+_0x2f8a32(0xda)+_0x4d532c+_0x2f8a32(0xa5)+_0x5d1ae0+_0x2f8a32(0xa4)+_0x49fb6b+_0x2f8a32(0xe6)+_0x52e359+_0x2f8a32(0xb2)+_0xd12034+_0x2f8a32(0xd1)+_0x2b68e3+_0x2f8a32(0x147)+_0x433e02+_0x2f8a32(0x132)+_0x761b32+'&action=updateVattuDpDHA';jQuery[_0x2f8a32(0x11d)]({'crossDomain':!0x0,'url':_0x11793e,'method':_0x2f8a32(0x136),'dataType':_0x2f8a32(0xf5)}),document[_0x2f8a32(0x9b)]('id')[_0x2f8a32(0xf2)]='';}function deleteVattuDpDHA_value(){var _0x2c5780=_0x3194b8;ChangeID(),$(_0x2c5780(0xf6))[_0x2c5780(0x95)](_0x2c5780(0xe8),'hidden'),document[_0x2c5780(0x9b)](_0x2c5780(0x96))['style'][_0x2c5780(0xe8)]=_0x2c5780(0x103);var _0x314668=location[_0x2c5780(0x15a)]+'//'+location[_0x2c5780(0x13c)]+(location['port']?':'+location[_0x2c5780(0x156)]:'');document[_0x2c5780(0x9b)]('doma')[_0x2c5780(0xf2)]=_0x314668;var _0x3be8c4=$('#doma')[_0x2c5780(0xd9)](),_0x3805e1=$(_0x2c5780(0xfa))[_0x2c5780(0xd9)](),_0x5855a7=$(_0x2c5780(0x15c))[_0x2c5780(0xd9)](),_0xb0deb9=$('#id')[_0x2c5780(0xd9)](),_0x17a2be=$('#hethong')[_0x2c5780(0xd9)](),_0x36cf28=$(_0x2c5780(0x8f))[_0x2c5780(0xd9)](),_0x755baa=$('#tenvattu')[_0x2c5780(0xd9)](),_0x23d5ea=$('#loaivattu')[_0x2c5780(0xd9)](),_0x546607=$(_0x2c5780(0xfe))['val'](),_0x7d5a8c=$(_0x2c5780(0xd0))['val'](),_0x5dd7e9=$(_0x2c5780(0x150))['val'](),_0x30724b=$(_0x2c5780(0xfc))[_0x2c5780(0xd9)](),_0x2f2e33=$(_0x2c5780(0x8e))[_0x2c5780(0xd9)](),_0x1df28e=$('#trangthai')[_0x2c5780(0xd9)](),_0x15344d=$(_0x2c5780(0x12c))[_0x2c5780(0xd9)](),_0x33826d=$('#nhapweb')[_0x2c5780(0xd9)](),_0x314668=atob(script_url)+_0x2c5780(0xc0)+_0xb0deb9+_0x2c5780(0x154)+_0x17a2be+_0x2c5780(0x10b)+_0x36cf28+_0x2c5780(0x87)+_0x755baa+'&loaivattu='+_0x23d5ea+'&parnumber='+_0x546607+'&serinumber='+_0x7d5a8c+_0x2c5780(0xca)+_0x5dd7e9+_0x2c5780(0xda)+_0x30724b+_0x2c5780(0xa5)+_0x2f2e33+_0x2c5780(0xa4)+_0x1df28e+_0x2c5780(0xe6)+_0x15344d+_0x2c5780(0xb2)+_0x33826d+'&capnhatVattuDpDHA='+_0x3805e1+_0x2c5780(0x147)+_0x5855a7+'&doma='+_0x3be8c4+'&action=deleteVattuDpDHA';jQuery['ajax']({'crossDomain':!0x0,'url':_0x314668,'method':_0x2c5780(0x136),'dataType':_0x2c5780(0xf5)}),document[_0x2c5780(0x9b)]('id')['value']='';}function insertVattuDpDHA_value(){var _0x576c1b=_0x3194b8;ChangeID(),$('#re')[_0x576c1b(0x95)](_0x576c1b(0xe8),'hidden'),document[_0x576c1b(0x9b)](_0x576c1b(0x96))['style'][_0x576c1b(0xe8)]='visible';var _0x55b431=location[_0x576c1b(0x15a)]+'//'+location['hostname']+(location['port']?':'+location[_0x576c1b(0x156)]:'');document['getElementById'](_0x576c1b(0x153))['value']=_0x55b431;var _0x4c8535=$('#doma')[_0x576c1b(0xd9)](),_0x5ad975=$(_0x576c1b(0xfa))['val'](),_0x5d72d2=$(_0x576c1b(0x15c))['val'](),_0x17f7c9=$(_0x576c1b(0xc5))['val'](),_0x20c70e=$(_0x576c1b(0x127))[_0x576c1b(0xd9)](),_0x436df7=$(_0x576c1b(0x8f))[_0x576c1b(0xd9)](),_0x416a01=$('#tenvattu')[_0x576c1b(0xd9)](),_0x47fd30=$(_0x576c1b(0xe0))[_0x576c1b(0xd9)](),_0x1e755e=$(_0x576c1b(0xfe))['val'](),_0x1b01b6=$('#serinumber')[_0x576c1b(0xd9)](),_0x3e5475=$('#ngaynhan')[_0x576c1b(0xd9)](),_0x3ad7c6=$(_0x576c1b(0xfc))[_0x576c1b(0xd9)](),_0x18315f=$(_0x576c1b(0x8e))[_0x576c1b(0xd9)](),_0x299d44=$(_0x576c1b(0x144))['val'](),_0x5bc62f=$(_0x576c1b(0x12c))[_0x576c1b(0xd9)](),_0xde410b=$(_0x576c1b(0xb3))[_0x576c1b(0xd9)](),_0x55b431=atob(script_url)+'?callback=ctrlq&id='+_0x17f7c9+_0x576c1b(0x154)+_0x20c70e+'&thietbi='+_0x436df7+_0x576c1b(0x87)+_0x416a01+_0x576c1b(0x11b)+_0x47fd30+_0x576c1b(0x121)+_0x1e755e+_0x576c1b(0xdf)+_0x1b01b6+_0x576c1b(0xca)+_0x3e5475+'&ngayxuat='+_0x3ad7c6+_0x576c1b(0xa5)+_0x18315f+_0x576c1b(0xa4)+_0x299d44+'&ghichu='+_0x5bc62f+'&nhapweb='+_0xde410b+_0x576c1b(0xd1)+_0x5ad975+'&ngaylog='+_0x5d72d2+_0x576c1b(0x132)+_0x4c8535+_0x576c1b(0x14e);jQuery['ajax']({'crossDomain':!0x0,'url':_0x55b431,'method':'GET','dataType':'jsonp'}),document['getElementById']('id')[_0x576c1b(0xf2)]='';}function searchTableAdmin(){var _0x12460f=_0x3194b8,_0xdec87b,_0x323277,_0x46d776,_0x1e85dc=0x0,_0x2c8d96=document[_0x12460f(0x9b)](_0x12460f(0x143))[_0x12460f(0xf2)]['toUpperCase'](),_0x27b48f=document[_0x12460f(0x9b)]('mytable')[_0x12460f(0x137)]('tr');for(_0x2d7043=0x1;_0x2d7043<_0x27b48f[_0x12460f(0xaf)];_0x2d7043++){for('ID'==(_0x323277=_0x27b48f[_0x2d7043][_0x12460f(0x137)]('td'))[0x0][_0x12460f(0x12e)][_0x12460f(0x12b)]()&&(_0xdec87b=!0x0),_0x46d776=0x0;_0x46d776<_0x323277[_0x12460f(0xaf)];_0x46d776++)-0x1<_0x323277[_0x46d776]['innerHTML'][_0x12460f(0x12b)]()['indexOf'](_0x2c8d96)&&(_0xdec87b=!0x0);_0xdec87b?(_0x27b48f[_0x2d7043][_0x12460f(0x14a)][_0x12460f(0xef)]='',_0xdec87b=!0x1,'TỔNG..'!=_0x27b48f[_0x2d7043][_0x12460f(0x137)]('td')[0x6][_0x12460f(0x12e)][_0x12460f(0x12b)]()&&(_0x1e85dc+=parseInt(_0x27b48f[_0x2d7043][_0x12460f(0x137)]('td')[0x6][_0x12460f(0x12e)][_0x12460f(0x12b)]()))):_0x27b48f[_0x2d7043]['style'][_0x12460f(0xef)]=_0x12460f(0x9d);}document[_0x12460f(0x9b)]('totalOfFilter')[_0x12460f(0x12e)]=_0x1e85dc[_0x12460f(0xc2)]()[_0x12460f(0x140)](/\B(?=(\d{3})+(?!\d))/g,',');var _0x275768=document[_0x12460f(0x9b)](_0x12460f(0xe1));if(_0x275768){for(var _0x2c53f7=_0x275768[_0x12460f(0x137)]('td'),_0x2d7043=0x0;_0x2d7043<_0x2c53f7[_0x12460f(0xaf)];_0x2d7043++)_0x12460f(0x101)==_0x2c53f7[_0x2d7043][_0x12460f(0x131)]&&_0x12460f(0x9d)!=_0x2c53f7[_0x2d7043][_0x12460f(0x166)]('tr')[_0x12460f(0x14a)][_0x12460f(0xef)]&&(isNaN(_0x2c53f7[_0x2d7043][_0x12460f(0x12e)])||parseInt(_0x2c53f7[_0x2d7043][_0x12460f(0x12e)]));}}document['getElementById'](_0x3194b8(0x12a))['onclick']=function(){confirm_delete();},document['getElementById'](_0x3194b8(0xbf))['onclick']=function(){cancel_delete();};var mytable=document['getElementById']('mytable');if(mytable){for(var cls=mytable['getElementsByTagName']('td'),sum=0x0,i=0x0;i<cls[_0x3194b8(0xaf)];i++)_0x3194b8(0x101)==cls[i][_0x3194b8(0x131)]&&(sum+=isNaN(cls[i][_0x3194b8(0x12e)])?0x0:parseInt(cls[i]['innerHTML']));document[_0x3194b8(0x9b)](_0x3194b8(0x14f))['innerHTML']+=sum;}function filterTable_OK(){var _0x52bc41=_0x3194b8,_0x158e0e,_0x5d41ed,_0x59c258,_0x2ea87c,_0x3232de,_0x2829a2,_0x5c68b8,_0x16c25d,_0x338d06,_0x1f8489=document['getElementById'](_0x52bc41(0x85));for(filter1=_0x1f8489[_0x52bc41(0xf2)][_0x52bc41(0x12b)](),_0x158e0e=document[_0x52bc41(0x9b)](_0x52bc41(0xe1))['getElementsByTagName']('tr'),_0x5d41ed=0x0;_0x5d41ed<_0x158e0e[_0x52bc41(0xaf)];_0x5d41ed++)td0=_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x0],td1=_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x1],td2=_0x158e0e[_0x5d41ed]['getElementsByTagName']('td')[0x2],td3=_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x3],td4=_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x4],td5=_0x158e0e[_0x5d41ed]['getElementsByTagName']('td')[0x5],td6=_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x6],(td0||td1||td2||td3||td4||td5||td6)&&(_0x59c258=td0[_0x52bc41(0x12f)]||td0[_0x52bc41(0xdd)],_0x2ea87c=td1[_0x52bc41(0x12f)]||td1[_0x52bc41(0xdd)],_0x3232de=td2[_0x52bc41(0x12f)]||td2['innerText'],_0x2829a2=td3[_0x52bc41(0x12f)]||td3[_0x52bc41(0xdd)],_0x5c68b8=td4[_0x52bc41(0x12f)]||td4[_0x52bc41(0xdd)],_0x16c25d=td5['textContent']||td5['innerText'],_0x338d06=td6['textContent']||td6[_0x52bc41(0xdd)],-0x1<_0x59c258[_0x52bc41(0x12b)]()[_0x52bc41(0x126)](filter1)||-0x1<_0x2ea87c[_0x52bc41(0x12b)]()[_0x52bc41(0x126)](filter1)||-0x1<_0x3232de[_0x52bc41(0x12b)]()[_0x52bc41(0x126)](filter1)||-0x1<_0x2829a2[_0x52bc41(0x12b)]()[_0x52bc41(0x126)](filter1)||-0x1<_0x5c68b8['toUpperCase']()['indexOf'](filter1)||-0x1<_0x16c25d[_0x52bc41(0x12b)]()[_0x52bc41(0x126)](filter1)||-0x1<_0x338d06[_0x52bc41(0x12b)]()[_0x52bc41(0x126)](filter1)?(_0x158e0e[_0x5d41ed][_0x52bc41(0x14a)]['display']='',_0x52bc41(0x14f)!=_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x6]['innerHTML']['toUpperCase']()&&parseInt(_0x158e0e[_0x5d41ed][_0x52bc41(0x137)]('td')[0x6][_0x52bc41(0x12e)]['toUpperCase']())):_0x158e0e[_0x5d41ed][_0x52bc41(0x14a)][_0x52bc41(0xef)]=_0x52bc41(0x9d));}
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 1200000
+  //idle: 3600000
+})
+//]]>
+
+
+
+var overlay_timeme = document.getElementById("dialog_time");
+var overlayme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+
+    overlay_timeme.style.display = "block";
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    overlayme.style.display = "none";
+	
+}
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+
+function confirm() {
+	close();	
+    overlayme.style.display = "none";
+
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+
+    overlayme.style.display = "none";
+}
+
+
+function close_window() {
+	close();	
+}
+// ---------------------------
+
+function ExportToExcel_OK(type, fn, dl) {
+            // Remove Dynamic hidden controls.
+            var list = $('#showData').find(':not(:visible)');
+			// var list = $('#showData').find(':not(:visible)').remove();
+            for (var i = list.length - 1; 0 <= i; i--) {
+                if (list[i] && list[i].parentElement) {
+                    list[i].parentElement.removeChild(list[i]);
+                }
+            }
+
+                var elt = document.getElementById('mytable');
+             // const elements = elt.getElementsByClassName("sortable");
+             //   while (elements.length > 0) elements[0].remove();
+
+                var wb = XLSX.utils.table_to_book(elt, {
+                    sheet: "Order"
+                });
+                return dl ?
+                    XLSX.write(wb, {
+                        bookType: type,
+                        bookSST: true,
+                        type: 'base64'
+                    }) :
+                    XLSX.writeFile(wb, fn || ('Phân công Trực ca.' + (type || 'xlsx')));
+
+
+ } 
+ 
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+// Pagination
+
+getPagination('#showData');
+
+function getPagination(table) {
+  var lastPage = 1;
+
+  $('#maxRows')
+    .on('change', function(evt) {
+
+     lastPage = 1;
+      $('.pagination')
+        .find('li')
+        .slice(1, -1)
+        .remove();
+      var trnum = 0;
+      var maxRows = parseInt($(this).val());
+
+      if (maxRows == 5000) {
+        $('.pagination').hide();
+      } else {
+        $('.pagination').show();
+      }
+
+      var totalRows = $(table + ' tbody tr').length;
+      $(table + ' tr:gt(0)').each(function() {
+        trnum++;
+        if (trnum > maxRows) {
+
+          $(this).hide(); 
+        }
+        if (trnum <= maxRows) {
+          $(this).show();
+        } 
+      }); 
+      if (totalRows > maxRows) {
+
+        var pagenum = Math.ceil(totalRows / maxRows); 
+
+        for (var i = 1; i <= pagenum; ) {
+
+          $('.pagination #prev')
+            .before(
+              '<li data-page="' +
+                i +
+                '">\
+								  <span>' +
+                i++ +
+                '<span class="sr-only">(current)</span></span>\
+								</li>'
+            )
+            .show();
+        } 
+      } 
+      $('.pagination [data-page="1"]').addClass('active'); 
+      $('.pagination li').on('click', function(evt) {
+
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        var pageNum = $(this).attr('data-page'); 
+
+        var maxRows = parseInt($('#maxRows').val()); 
+
+        if (pageNum == 'prev') {
+          if (lastPage == 1) {
+            return;
+          }
+          pageNum = --lastPage;
+        }
+        if (pageNum == 'next') {
+          if (lastPage == $('.pagination li').length - 2) {
+            return;
+          }
+          pageNum = ++lastPage;
+        }
+
+        lastPage = pageNum;
+        var trIndex = 0; 
+        $('.pagination li').removeClass('active'); 
+        $('.pagination [data-page="' + lastPage + '"]').addClass('active'); 
+
+	  	limitPagging();
+        $(table + ' tr:gt(0)').each(function() {
+
+          trIndex++; 
+
+          if (
+            trIndex > maxRows * pageNum ||
+            trIndex <= maxRows * pageNum - maxRows
+          ) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          } 
+        }); 
+      }); 
+	  limitPagging();
+    })
+    .val(5)
+    .change();
+
+}
+
+function limitPagging(){
+
+	if($('.pagination li').length > 7 ){
+			if( $('.pagination li.active').attr('data-page') <= 3 ){
+			$('.pagination li:gt(5)').hide();
+			$('.pagination li:lt(5)').show();
+			$('.pagination [data-page="next"]').show();
+		}if ($('.pagination li.active').attr('data-page') > 3){
+			$('.pagination li:gt(0)').hide();
+			$('.pagination [data-page="next"]').show();
+			for( let i = ( parseInt($('.pagination li.active').attr('data-page'))  -2 )  ; i <= ( parseInt($('.pagination li.active').attr('data-page'))  + 2 ) ; i++ ){
+				$('.pagination [data-page="'+i+'"]').show();
+
+			}
+
+		}
+	}
+}
+
+$(function() {
+
+  $('table tr:eq(0)').prepend('<th> ID </th>');
+
+  var id = 0;
+
+  $('table tr:gt(0)').each(function() {
+    id++;
+    $(this).prepend('<td>' + id + '</td>');
+  });
+});
+
+
+
+
+$(document).ready(function() {
+
+Readtime_value();
+window.history.replaceState('','','/');
+var url = location.protocol;
+if (url == "file:") {
+	var element = document.getElementById("mytable");
+	var element3 = document.getElementById("update");
+	element.parentNode.removeChild(element);
+	element.parentNode.removeChild(element3);
+		close();
+} else {
+}
+
+});
+
+//window.history.replaceState('','','/');
+// ----------------------
+
+  function ctrlq(e) {
+
+document.getElementById("ngay").value = e.result;
+Date.prototype.yyyymmdd = function() {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+  return "".concat(yyyy).concat(mm).concat(dd);
+};
+
+Date.prototype.yyyymmddhhmm = function() {
+  var yyyymmdd = this.yyyymmdd();
+  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
+  return "".concat(yyyymmdd).concat(hh).concat(min);
+};
+
+Date.prototype.yyyymmddhhmmss = function() {
+  var yyyymmddhhmm = this.yyyymmddhhmm();
+  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+  return "".concat(yyyymmddhhmm)+ss;
+};
+
+var d = new Date();
+//if (d.yyyymmddhhmmss() - parseInt(document.getElementById("ngay").value) > 10) {
+//window.close();
+//window.setTimeout(function(){location.href = '/';},0);
+// https://daidhatest.github.io/ok/đônghàVậtTưDựPhòng.html
+//self.close();
+
+//} else {
+//window.history.replaceState('','','/');
+//readDataVattuDpDHI();
+ChangeID();
+//}
+	
+	$("#re").html(e.result);
+	$("#re").css("visibility","visible");
+	
+  }
+
+  
+function Readtime_value() {
+ 
+	var ngay= $("#ngay").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Readtime";
+	  
+  
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+
+	  });
+
+
+	
+  }	
+
+
+  
+  
+(function() {
+  if (window.addEventListener) {
+    window.addEventListener('load', run, false);
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', run);
+  }
+
+  function run() {
+    var t = document.getElementById('showData');
+    t.onclick = function(event) {
+      event = event || window.event; //IE8
+      var target = event.target || event.srcElement;
+      while (target && target.nodeName != 'TR') { // find TR
+        target = target.parentElement;
+    }
+      if (!target) { return; } 
+      var cells = target.cells; 
+      if (!cells.length) {
+        return;
+      }
+	  if (cells[0].innerHTML != "ID") {
+      var f1 = document.getElementById('id');
+	  var f2 = document.getElementById('Colum2');
+      var f3 = document.getElementById('Colum3');
+      var f4 = document.getElementById('Colum4');
+	  var f5 = document.getElementById('Colum5');
+      var f6 = document.getElementById('Colum6');
+      var f7 = document.getElementById('Colum7');
+	  var f8 = document.getElementById('Colum8');
+	  var f9 = document.getElementById('Colum9');
+	  var f10 = document.getElementById('Colum10');
+      var f11 = document.getElementById('Colum11');	  
+	  var f12 = document.getElementById('Colum12');
+	  var f13 = document.getElementById('Colum13');
+	  var f14 = document.getElementById('Colum14');
+	  var f15 = document.getElementById('Colum15');
+	  var f16 = document.getElementById('Colum16');
+
+          
+
+
+	  
+      f1.value = cells[0].innerHTML;
+      f2.value = cells[1].innerHTML;
+      f3.value = cells[2].innerHTML;
+      f4.value = cells[3].innerHTML;
+      f5.value = cells[4].innerHTML;
+      f6.value = cells[5].innerHTML;
+      f7.value = cells[6].innerHTML;
+	  f8.value = cells[7].innerHTML;
+      f9.value = cells[8].innerHTML;
+      f10.value = cells[9].innerHTML;
+	  f11.value = cells[10].innerHTML;
+      f12.value = cells[11].innerHTML;
+      f13.value = cells[12].innerHTML;     
+      f14.value = cells[13].innerHTML;
+	  f15.value = cells[14].innerHTML;
+	  f16.value = cells[15].innerHTML;		  
+	  changecat(f17.value);
+	  }
+    };
+  }
+
+})();
+ 
+
+	
+window.onload = function(){
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+//window.history.replaceState('','','/');  
+  
+};
+ 
+
+
+
+function readDataVattuDpDHA() {
+
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpDHA";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Trạm</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(3)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(6)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>Serial</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(9)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(10)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(13)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(14)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(15)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+
+	
+function readDataVattuDpDHI() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpDHI";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(3)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(6)' style='font-weight:bold'>Colum8</th>  <th onclick='Sortcolunm(7)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(9)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(10)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(13)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(14)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+
+
+function readDataVattuDpHUE() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpHUE";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(3)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(6)' style='font-weight:bold'>Colum8</th>  <th onclick='Sortcolunm(7)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(9)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(10)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(13)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(14)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+
+
+function readDataVattuDpTH() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpTH";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(3)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(6)' style='font-weight:bold'>Colum8</th>  <th onclick='Sortcolunm(7)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(9)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(10)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(13)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(14)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+	
+function getPart1(str) {        // Lấy chuổi trái của "ngay"
+    return str.split(' ')[0];
+}
+		
+function getPart2(str) {        // Lấy chuổi phải của "ngay"
+    return str.split(' ')[1];
+}
+
+function ChangeID() {
+document.getElementById("capnhatVattuDpDHA").value = getPart2(document.getElementById("ngay").value);   // Lấy chuổi phải của "ngay"
+// Đổi Value ngày: gán giá trị 'ngay' cho 'ngay2' sau dó đổi ngay2 thành 'ngaylog'
+if (document.getElementById('ngay2')) {
+document.getElementById("ngay2").value = getPart1(document.getElementById("ngay").value); // Lấy chuổi trái của "ngay"
+document.getElementById('ngay2').id = 'ngaylog';
+document.getElementById('capnhatVattuDpDHA').id = 'combine';
+
+if (document.getElementById("combine").value == "vattudha") {
+readDataVattuDpDHA();
+}
+if (document.getElementById("combine").value == "vattudhi") {
+readDataVattuDpDHI();
+}
+if (document.getElementById("combine").value == "vattuhue") {
+readDataVattuDpHUE();
+}
+
+}
+}
+
+
+	
+// CHỌN NAVIGATION
+var vattudhanavi = document.getElementById("vattudhanavi");
+
+vattudhanavi.onclick  = function(){
+
+document.getElementById('chonnavi').value = "navidha";
+		
+readDataVattuDpDHA();
+
+//alert(document.getElementById("vattudhanavi").getAttribute("value"));
+}
+
+var vattudhinavi = document.getElementById("vattudhinavi");
+vattudhinavi.onclick  = function(){
+document.getElementById('chonnavi').value = "navidhi";
+readDataVattuDpDHI();
+
+}
+
+var vattuhuenavi = document.getElementById("vattuhuenavi");
+vattuhuenavi.onclick  = function(){
+document.getElementById('chonnavi').value = "navihue";
+readDataVattuDpHUE();
+
+}
+
+var thvattunavi = document.getElementById("thvattunavi");
+thvattunavi.onclick  = function(){
+document.getElementById('chonnavi').value = "navith";
+readDataVattuDpTH();
+
+}
+// END CHỌN NAVIGATION
+	
+	
+//https://stackoverflow.com/questions/24804500/can-you-have-scrollbars-in-both-parallel-sides-of-a-div
+$(function(){
+      $(".HorizontalTable").scroll(function(){
+        $(".sortable").scrollLeft($(".HorizontalTable").scrollLeft());
+      });
+      $(".sortable").scroll(function(){
+        $(".HorizontalTable").scrollLeft($(".sortable").scrollLeft());
+      });
+});	
+	
+function Sortcolunm(n) {
+
+  let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  var substring = " ";
+  table = document.getElementById("mytable");
+  switching = true;
+
+  dir = "asc";
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x1 = rows[i].cells[n].textContent.trim().toLowerCase() + " ";
+	  x = (x1.substring(0,x1.indexOf(substring)));
+	  //alert(x);
+      y1 = rows[i + 1].cells[n].textContent.trim().toLowerCase() + " ";
+	  y = (y1.substring(0,y1.indexOf(substring)));
+      const num = /^\d/.test(x)
+      const date = num && x.indexOf("/") != -1;
+      if (date) {
+        let [dd, mm, yyyy] = x.split("/");
+        x = new Date(yyyy, mm - 1, dd, 15, 0, 0, 0).getTime();
+		//alert(x);
+        [dd, mm, yyyy] = y.split("/");
+        y = new Date(yyyy, mm - 1, dd, 15, 0, 0, 0).getTime();
+		//alert(y);
+      }
+      else if (num) {
+         x = +x.replace(",", ".") 
+         y = +y.replace(",", ".");
+      }
+      if (dir == "asc") {
+          shouldSwitch = x > y
+      } else if (dir == "desc") {
+          shouldSwitch = x < y
+      }
+      if (shouldSwitch) break;
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+
+//---UPDATE---
+
+document.getElementById("btn-show-update").onclick = function(){show_update()};
+var overlay_updateme = document.getElementById("update-container");
+
+function show_update() {
+
+	if (document.getElementById('id').value === "") {
+	// alert("OK");
+	
+			$(function() {
+            $("#dialog-id").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	}
+
+
+overlay_updateme.style.display = "block";
+}
+
+
+document.getElementById("confirm_update").onclick = function(){confirm_update()};
+function confirm_update() {
+//var Row = document.getElementById("mytable");
+//var Cells = Row.getElementsByTagName("td");
+if (document.getElementById("combine").value == "vattudha"  && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	//if (Cells[1].innerText !== "ĐHA") {
+	//alert(Cells[1].innerText);
+	//alert("Chỉ Update được ĐHA");
+	//} else {
+	updateVattuDpDHA_value();
+	//readDataVattuDpDHA();
+	//}   
+} else if (document.getElementById("combine").value == "vattudhi" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	 updateVattuDpDHI_value();
+} else if (document.getElementById("combine").value == "vattuhue" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navith") {
+	  updateVattuDpHUE_value();
+} else {
+  alert("Khong the Update");
+}
+
+overlay_updateme.style.display = "none";
+	
+}
+
+document.getElementById("cancel_update").onclick = function(){cancel_update()};
+function cancel_update() { 
+    overlay_updateme.style.display = "none";
+}
+
+//---INSERT---
+document.getElementById("btn-show-insert").onclick = function(){show_insert()};
+var overlay_insertme = document.getElementById("insert-container");
+
+function show_insert() {
+    overlay_insertme.style.display = "block";
+}
+
+
+document.getElementById("confirm_insert").onclick = function(){confirm_insert()};
+function confirm_insert() {
+
+if (document.getElementById("combine").value == "vattudha"  && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	insertVattuDpDHA_value();
+} else if (document.getElementById("combine").value == "vattudhi" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	 insertVattuDpDHI_value();
+} else if (document.getElementById("combine").value == "vattuhue" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navith") {
+	  insertVattuDpHUE_value();
+} else {
+  alert("Khong the Insert");
+}	
+    overlay_insertme.style.display = "none";	
+}
+
+document.getElementById("cancel_insert").onclick = function(){cancel_insert()};
+function cancel_insert() { 
+    overlay_insertme.style.display = "none";
+}
+
+//---DELETE---
+
+document.getElementById("btn-show-delete").onclick = function(){show_delete()};
+var overlay_deleteme = document.getElementById("delete-container");
+
+function show_delete() {
+
+	if (document.getElementById('id').value === "") {
+	// alert("OK");
+	
+			$(function() {
+            $("#dialog-id").dialog({
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+			});
+	
+			return false;
+	}
+
+    overlay_deleteme.style.display = "block";
+}
+
+
+document.getElementById("confirm_delete").onclick = function(){confirm_delete()};
+function confirm_delete() {
+
+if (document.getElementById("combine").value == "vattudha"  && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	deleteVattuDpDHA_value();
+} else if (document.getElementById("combine").value == "vattudhi" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	deleteVattuDpDHI_value();
+} else if (document.getElementById("combine").value == "vattuhue" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navith") {
+	deleteVattuDpHUE_value();
+} else {
+  alert("Khong the Delete");
+}
+	
+    overlay_deleteme.style.display = "none";
+	
+}
+
+document.getElementById("cancel_delete").onclick = function(){cancel_delete()};
+function cancel_delete() { 
+    overlay_deleteme.style.display = "none";
+}
+
+// THAY
+
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3LVBwWEpBbjBpOWlqN3hNVXVKUnpTbG00azhhTkxWWUlYRDdFS0tmUkFyeFkxZW1wUjE2S0FLZ09HRVcyZGZaY3ptQS9leGVj";
+
+	
+function updateVattuDpDHA_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=updateVattuDpDHA";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+readDataVattuDpDHA();
+  }
+
+
+
+function updateVattuDpDHI_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=updateVattuDpDHI";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpDHI();
+  }
+  
+
+function updateVattuDpHUE_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=updateVattuDpHUE";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpHUE();
+  } 
+  
+function deleteVattuDpDHA_value(){
+//ChangeID();
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuDpDHA";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+	readDataVattuDpDHA();
+  }  
+
+ function deleteVattuDpDHI_value(){
+//ChangeID();
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuDpDHI";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+	readDataVattuDpDHI();
+  } 
+
+function deleteVattuDpHUE_value(){
+//ChangeID();
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuDpHUE";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+	readDataVattuDpHUE();
+  }   
+  
+function insertVattuDpDHA_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuDpDHA";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+readDataVattuDpDHA();
+  }
+
+  
+function insertVattuDpDHI_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuDpDHI";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+readDataVattuDpDHI();
+  }
+
+function insertVattuDpHUE_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuDpHUE";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+readDataVattuDpHUE();
+  }
+  
+function searchTableAdmin() {
+         	var totalOfFilter = 0;
+           var input, filter, found, table, tr, td, i, j;
+           input = document.getElementById("searchAdmin");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("mytable");
+           tr = table.getElementsByTagName("tr");
+         
+           for (i = 1; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td");
+         	if (td[0].innerHTML.toUpperCase() == "ID"){found = true;}
+             for (j = 0; j < td.length; j++) {
+               if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                 found = true;
+               }
+             }
+         	
+         
+         	if (found) {
+         		tr[i].style.display = "";
+         		found = false;
+         		
+         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG.."){
+         			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
+         		}
+         	} else {
+         		tr[i].style.display = "none";
+         	}
+           }
+         
+           document.getElementById('totalOfFilter').innerHTML = totalOfFilter.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+           
+           var mytable = document.getElementById("mytable");
+           if (mytable) {
+         	  var cls = mytable.getElementsByTagName("td");
+         	  var sum = 0;
+         	  for (var i = 0; i < cls.length; i++) {
+         		// Here you check if it's a countable class and the parent tr's style is a visible tr
+         		if (cls[i].className == "countable" && cls[i].closest("tr").style.display != "none") {
+         		  sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+         		}
+         	  }
+         	  //document.getElementById('total').innerHTML = sum;
+           }
+           
+         }
+         
+         var mytable = document.getElementById("mytable");
+         if (mytable) {
+         	var cls = mytable.getElementsByTagName("td");
+         	var sum = 0;
+         	for (var i = 0; i < cls.length; i++) {
+         	  if (cls[i].className == "countable") {
+         		sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+         	  }
+         	}
+         	document.getElementById('TỔNG..').innerHTML += sum;
+         }
+
+
+
+	
+function filterTable_OK() { 
+         	var totalOfFilter = 0;
+
+  var input, filter, table, tr, td, i, txtValue, txtValue1, txtValue2, txtValue3, txtValue4, txtValue5, txtValue6;
+  input = document.getElementById("Filter");
+  filter1 = input.value.toUpperCase();
+  table = document.getElementById("mytable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+		td0 = tr[i].getElementsByTagName("td")[0];
+		td1 = tr[i].getElementsByTagName("td")[1];
+		td2 = tr[i].getElementsByTagName("td")[2];
+		td3 = tr[i].getElementsByTagName("td")[3];
+		td4 = tr[i].getElementsByTagName("td")[4];
+		td5 = tr[i].getElementsByTagName("td")[5];
+		td6 = tr[i].getElementsByTagName("td")[6];
+    if (td0 || td1 || td2 || td3 || td4 || td5 || td6) {
+			txtValue = td0.textContent || td0.innerText;
+			txtValue1 = td1.textContent || td1.innerText;
+			txtValue2 = td2.textContent || td2.innerText;
+			txtValue3 = td3.textContent || td3.innerText;
+			txtValue4 = td4.textContent || td4.innerText;
+			txtValue5 = td5.textContent || td5.innerText;
+			txtValue6 = td6.textContent || td6.innerText;
+      if (txtValue.toUpperCase().indexOf(filter1) > -1 || txtValue1.toUpperCase().indexOf(filter1) > -1 || txtValue2.toUpperCase().indexOf(filter1) > -1 || txtValue3.toUpperCase().indexOf(filter1) > -1 || txtValue4.toUpperCase().indexOf(filter1) > -1 || txtValue5.toUpperCase().indexOf(filter1) > -1 || txtValue6.toUpperCase().indexOf(filter1) > -1 ) {
+        tr[i].style.display = "";
+		
+		         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG.."){
+         			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
+         		}
+		
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+
+  }
+}
+
+
 
 </script>
 
@@ -2508,7 +3958,7 @@ function _0x34af(){var _0x4d5da9=['<input\x20type=\x27text\x27\x20id=\x27','arra
     </div>
 	<div>
       <i class="fa fa-phone"></i>
-      <p> (02333) 855298 ;</p>
+      <p> (02333) 855298/p>
       <p> (+84) 911393789</p>
     </div>
     <div>
