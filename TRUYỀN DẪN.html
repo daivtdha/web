@@ -1604,8 +1604,82 @@ form input[type="submit"]:hover{
 
 /*END  DROP LIST */
 
-</style>
+/* Modal Thông báo */
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.modalMess-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.modalMess-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+    z-index: 10001;
+}
+
+.modalMess {
+  width: 400px;
+  height: 180px;
+  display: block;
+  margin: 50% 0 0 -200px;
+  position: relative;
+  top: 55%; 
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+
+  /* Chuyển động dưới lên */
+ /* transition: all 0.5s ease-in-out; */
+  
+}
+
+.modalMess-wrapper.open .modalMess {
+  margin-top: -200px;
+  opacity: 1;
+}
+
+.headMess { 
+  width: 100%;
+  height: 45px;
+  padding: 2px 15px;
+  overflow: hidden;
+  background:#e2525c;
+}
+
+.btn-close {
+  font-size: 28px;
+  display: block;
+  float: right;
+  color: #fff;
+}
+
+.contentMess {
+  padding: 3%;
+}
+
+.good-job {
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #e2525c;
+}
+.good-job .fa-exclamation-circle {
+  font-size: 40px;
+}
+.good-job h1 {
+  font-size: 25px;
+}	
+	
+	
+</style>
 
   <script>
   window.console = window.console || function(t) {};
@@ -1623,321 +1697,8 @@ form input[type="submit"]:hover{
 </head>
 
 <body translate="no">
-  <div class="header";>
-  <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
-  <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
-  </div>
-<!-- Modal -->
-
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-  
-    <div class="imgcontainer">
 	
-      <span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>
-	  <h2 id="dn" style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP TD</h2>
-    </div><!-- Modal -->
-
-<p type = "text" id="ngay">
-<p type = "text" id="doma" value=""></p>
-
-
-    <div class="form">
-
-        <ul class="tab-group">
-
-            <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
-            <li onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
-
-        </ul>
-					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
-					
-					<div id="loader2"></div>
-					<p align="center" id="repas" style="font-size: 1.5em; color: black;"></p>
-        <div class="tab-content">
-
-
-            <div id="login">
-
-    <form>
-
-	
-				<p type = "text" id = "chon" size = "20" </p>
-				<p type = "text" id = "combine" size = "20" </br>
-				
-				<div class="field-wrap">
-				  <select  id="khuvuc" class="dropdown" placeholder="Please choose">
-					<option value="dha" selected="selected">Đông hà</option>
-					<option value="dhi">Đồng hới</option>
-					<option value="hue" >Huế</option>				   
-				  </select>
-				</div>
-
-				<div class="field username">
-                    <div class="field-wrap" autocomplete="off">
-                        <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
-                    </div>
-				</div>
-				
-				 <div class="field password">
-                    <div class="field-wrap">
-                        <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>				
-				 </div>
-				 
-				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
-
-                </form>
-
-            </div>
-
-
-
-            <div id="changepass">
-
-                <form>
-
-                
-				  
-				  <div class="field username">
-					<div class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
-                    </div>
-					</div>
-
-					<div class="field password">
-                    <div class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>
-					</div>
-                  
-				
-
-                    <div class="field password">
-					<div class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>
-					</div>
-
-                    <div class="field password">
-					<div class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>
-					</div>
-					
-		   <input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
-
-                </form>
-
-            </div>
-
-
-        </div><!-- tab-content -->
-
-    </div> <!-- /form -->
-
-
-</form><!-- Modal -->
-</div>
-
-
-  <div class="container">
-  <h1>TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</h1>
-&nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Thoát</button>
-
-  <ul class="projects-tags">
- 
-  <button id="all" class="active">TẤT CẢ</button>
-  </ul>
-  
-  <ul class="projects-list">
-    <li class="project" data-tags="TRUYỀN DẪN" style="">
-      <img id="ImgCaDHA" src="TruyenDanPicture/TrucCaDHA.jpg" alt="">
-      <div class="project-info">
-        <h3 id="CaDHA" onclick="document.getElementById('id01').style.display='block'">LỊCH PHÂN CA ĐÀI ĐÔNG HÀ</h3>
-	  </div>
-
-    </li>
-
-
-
-    <li class="project" data-tags="TRUYỀN DẪN" style="">
-      <img id="VatTuDPDHA" src="TruyenDanPicture/VatTuDPDHA.png" alt="">
-      <div class="project-info">
-        <h3 id="VTDHA" onclick="document.getElementById('id01').style.display='block'">VẬT TƯ DP TD ĐÀI ĐÔNG HÀ</h3>
-      </div>
-
-    </li>
-
-
-
-    
-    <li class="project" data-tags="TÀI LIỆU" style="">
-      <img id="CongVan" src="TruyenDanPicture/CongVan.jpg" alt="">
-	  <div class="project-info">
-        <h3 id="CV" onclick="document.getElementById('id01').style.display='block'">CÔNG VĂN KỶ THUẬT</h3>
-      </div>
-    </li>
-   
-    <li class="project" data-tags="TÀI LIỆU" style="">
-      <img id="TaiLieuTD" src="TruyenDanPicture/TaiLieu.png" alt="">
-      <div class="project-info">
-        <h3 id="TL" onclick="document.getElementById('id01').style.display='block'">TÀI LIỆU TD - IP</h3>
-      </div>
-    </li>
-
-    
-    <li class="project" data-tags="TÀI LIỆU" style="">
-      <img id="TracNghiemTD" src="TruyenDanPicture/TracNghiem.jpg" alt="">
-      <div class="project-info">
-        <h3 id="TN" onclick="document.getElementById('id01').style.display='block'">TRẮC NGHIỆM</h3>
-      </div>
-
-    </li>
-
-  
-  </ul>
-
-</div>
-<!-- /.container -->
-   
-
-<div class="overlay" id="dialog-container">
-  <div class="popup">
-    <p>Bạn có muốn Thoát không ?</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
-      <button class="dialog-btn btn-primary" id="confirm">OK</button>
-    </div>
-  </div>
-</div>
-<p id="testText"></p>
-<div class="overlay_time" id="dialog_time">
-  <div class="popup_time">
-    <p>Thời gian lâu không dùng !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
-    </div>
-  </div>
-</div>   
-
-
-<div class="overlay_username" id="dialog_username">
-  <div class="popup_username">
-    <p>Chưa nhập Username !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_username">OK</button>
-    </div>
-  </div>
-</div> 
-   
-<div class="overlay_password" id="dialog_password">
-  <div class="popup_password">
-    <p>Chưa nhập password !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_password">OK</button>
-    </div>
-  </div>
-</div> 
-
-<div class="overlay_LoginOk" id="dialog_LoginOk">
-  <div class="popup_LoginOk">
-    <p>Đăng nhập OK !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_LoginOk">OK</button>
-    </div>
-  </div>
-</div>
-   
-<div class="overlay_Sai_userpassword" id="dialog_Sai_userpassword">
-  <div class="popup_Sai_userpassword">
-    <p>Đăng Nhập sai UserName hoặc Password !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_Sai_userpassword">OK</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay_Thay_password_Nok" id="dialog_Thay_password_Nok">
-  <div class="popup_Thay_password_Nok">
-    <p>Đổi password chưa được !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_Thay_password_Nok">OK</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay_Thay_password_Ok" id="dialog_Thay_password_Ok">
-  <div class="popup_Thay_password_Ok">
-    <p>Đổi Password thành công, thông tin thay đổi đã gửi đến Email của Bạn !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_Thay_password_Ok">OK</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay_oldusername" id="dialog_oldusername">
-  <div class="popup_oldusername">
-    <p>Chưa nhập username !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_oldusername">OK</button>
-    </div>
-  </div>
-</div> 
-
-<div class="overlay_oldpassword" id="dialog_oldpassword">
-  <div class="popup_oldpassword">
-    <p>Chưa nhập password !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_oldpassword">OK</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay_newpassword" id="dialog_newpassword">
-  <div class="popup_newpassword">
-    <p>Chưa nhập password mới!</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_newpassword">OK</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay_newpassleng" id="dialog_newpassleng">
-  <div class="popup_newpassleng">
-    <p>Password mới ít nhất phải 8 ký tự !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_newpassleng">OK</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay_Cfpassword" id="dialog_Cfpassword">
-  <div class="popup_Cfpassword">
-    <p>Chưa nhập lại password !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_Cfpassword">OK</button>
-    </div>
-  </div>
-</div> 
-
-<div class="overlay_newpasswordNok" id="dialog_newpasswordNok">
-  <div class="popup_newpasswordNok">
-    <p>Nhập lại password mới không đúng!</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_newpasswordNok">OK</button>
-    </div>
-  </div>
-</div> 
+<script language=JavaScript>m='%20%20%3Cdiv%20class%3D%22header%22%3B%3E%0A%20%20%3C%21--%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%22/Banner%20DHA%20New.png%22%20/%3E%20%20--%3E%0A%20%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%20%20%22https%3A//www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%2520DHA%2520New.png%3Fraw%3D1%22%20/%3E%20%20%20%0A%20%20%3C/div%3E%0A%3C%21--%20Modal%20--%3E%0A%0A%0A%3Cdiv%20id%3D%22id01%22%20class%3D%22modal%22%3E%0A%20%20%0A%20%20%3Cform%20class%3D%22modal-content%20animate%22%20action%3D%22/action_page.php%22%20method%3D%22post%22%3E%0A%20%20%0A%20%20%20%20%3Cdiv%20class%3D%22imgcontainer%22%3E%0A%09%0A%20%20%20%20%20%20%3Cspan%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27none%27%22%20class%3D%22close%22%3E%u274E%3C/span%3E%0A%09%20%20%3Ch2%20id%3D%22dn%22%20style%3D%22font-size%3A%201.5em%3B%20font-weight%3A%20bold%22%3B%3E%u0110%u0102NG%20NH%u1EACP%20TD%3C/h2%3E%0A%20%20%20%20%3C/div%3E%3C%21--%20Modal%20--%3E%0A%0A%3Cp%20type%20%3D%20%22text%22%20id%3D%22ngay%22%3E%0A%3Cp%20type%20%3D%20%22text%22%20id%3D%22doma%22%20value%3D%22%22%3E%3C/p%3E%0A%0A%0A%20%20%20%20%3Cdiv%20class%3D%22form%22%3E%0A%0A%20%20%20%20%20%20%20%20%3Cul%20class%3D%22tab-group%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22tab%20active%22%3E%3Ca%20href%3D%22%23login%22%3ELogin%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22tab%22%3E%3Ca%20href%3D%22%23changepass%22%3EChangePwd%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%3C/ul%3E%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader%22%3E%3C/div%3E%0A%09%09%09%09%09%3C%21--%3Cp%20align%3D%22center%22%20id%3D%22re%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%3E%3C/p%3E--%3E%0A%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader2%22%3E%3C/div%3E%0A%09%09%09%09%09%3Cp%20align%3D%22center%22%20id%3D%22repas%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tab-content%22%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22login%22%3E%0A%0A%20%20%20%20%3Cform%3E%0A%0A%09%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22chon%22%20size%20%3D%20%2220%22%20%3C/p%3E%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22combine%22%20size%20%3D%20%2220%22%20%3C/br%3E%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%3E%0A%09%09%09%09%20%20%3Cselect%20%20id%3D%22khuvuc%22%20class%3D%22dropdown%22%20placeholder%3D%22Please%20choose%22%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dha%22%20selected%3D%22selected%22%3E%u0110%F4ng%20h%E0%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dhi%22%3E%u0110%u1ED3ng%20h%u1EDBi%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22hue%22%20%3EHu%u1EBF%3C/option%3E%09%09%09%09%20%20%20%0A%09%09%09%09%20%20%3C/select%3E%0A%09%09%09%09%3C/div%3E%0A%0A%09%09%09%09%3Cdiv%20class%3D%22field%20username%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22username%22%20id%3D%22username%22%20type%3D%22text%22%20class%3D%22form_input%22%20%20placeholder%3D%22Username%22%20autocomplete%3D%22off%22%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%3C/div%3E%0A%09%09%09%09%0A%09%09%09%09%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22password%22%20id%3D%22password%22%20type%3D%22password%22%20class%3D%22form_input%22%20placeholder%3D%22Password%22%20autocomplete%3D%22off%22%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%09%09%09%09%0A%09%09%09%09%20%3C/div%3E%0A%09%09%09%09%20%0A%09%09%09%09%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20onClick%3D%22LoginQL_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u0103ng%20Nh%u1EADp%22%20/%3E%3C/input%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22changepass%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%20%20%0A%09%09%09%09%20%20%3Cdiv%20class%3D%22field%20username%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldusername%22%20id%3D%22oldusername%22%20type%3D%22text%22%20class%3D%22form_input%22%20autofocus%20placeholder%3D%22Username%22%20autocomplete%3D%22off%22%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldpassword%22%20id%3D%22oldpassword%22%20type%3D%22password%22%20class%3D%22form_input%22%20autofocus%20placeholder%3D%22Password%22%20autocomplete%3D%22off%22%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22newpassword%22%20id%3D%22newpassword%22%20type%3D%22password%22%20class%3D%22form_input%22%20autofocus%20placeholder%3D%22NewPassword%22%20autocomplete%3D%22off%22%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22cfpassword%22%20id%3D%22cfpassword%22%20type%3D%22password%22%20class%3D%22form_input%22%20autofocus%20placeholder%3D%22Confirm%20NewPassword%22%20autocomplete%3D%22off%22%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%0A%09%09%20%20%20%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20onClick%3D%22Changepassword_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u1ED5i%20Password%22%20/%3E%3C/input%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%20%20%20%20%20%20%20%20%3C/div%3E%3C%21--%20tab-content%20--%3E%0A%0A%20%20%20%20%3C/div%3E%20%3C%21--%20/form%20--%3E%0A%0A%0A%3C/form%3E%3C%21--%20Modal%20--%3E%0A%3C/div%3E%0A%0A%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%3Ch1%3ETRUY%u1EC0N%20D%u1EAAN%20%u0110%C0I%20VT%20%u0110%D4NG%20H%C0%3C/h1%3E%0A%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%3Cbutton%20id%3D%22btn-show-dialog%22%3ETho%E1t%3C/button%3E%0A%0A%20%20%3Cul%20class%3D%22projects-tags%22%3E%0A%20%0A%20%20%3Cbutton%20id%3D%22all%22%20class%3D%22active%22%3ET%u1EA4T%20C%u1EA2%3C/button%3E%0A%20%20%3C/ul%3E%0A%20%20%0A%20%20%3Cul%20class%3D%22projects-list%22%3E%0A%20%20%20%20%3Cli%20class%3D%22project%22%20data-tags%3D%22TRUY%u1EC0N%20D%u1EAAN%22%20style%3D%22%22%3E%0A%20%20%20%20%20%20%3Cimg%20id%3D%22ImgCaDHA%22%20src%3D%22TruyenDanPicture/TrucCaDHA.jpg%22%20alt%3D%22%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22project-info%22%3E%0A%20%20%20%20%20%20%20%20%3Ch3%20id%3D%22CaDHA%22%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27block%27%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%C0I%20%u0110%D4NG%20H%C0%3C/h3%3E%0A%09%20%20%3C/div%3E%0A%0A%20%20%20%20%3C/li%3E%0A%0A%0A%0A%20%20%20%20%3Cli%20class%3D%22project%22%20data-tags%3D%22TRUY%u1EC0N%20D%u1EAAN%22%20style%3D%22%22%3E%0A%20%20%20%20%20%20%3Cimg%20id%3D%22VatTuDPDHA%22%20src%3D%22TruyenDanPicture/VatTuDPDHA.png%22%20alt%3D%22%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22project-info%22%3E%0A%20%20%20%20%20%20%20%20%3Ch3%20id%3D%22VTDHA%22%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27block%27%22%3EV%u1EACT%20T%u01AF%20DP%20TD%20%u0110%C0I%20%u0110%D4NG%20H%C0%3C/h3%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3C/li%3E%0A%0A%0A%0A%20%20%20%20%0A%20%20%20%20%3Cli%20class%3D%22project%22%20data-tags%3D%22T%C0I%20LI%u1EC6U%22%20style%3D%22%22%3E%0A%20%20%20%20%20%20%3Cimg%20id%3D%22CongVan%22%20src%3D%22TruyenDanPicture/CongVan.jpg%22%20alt%3D%22%22%3E%0A%09%20%20%3Cdiv%20class%3D%22project-info%22%3E%0A%20%20%20%20%20%20%20%20%3Ch3%20id%3D%22CV%22%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27block%27%22%3EC%D4NG%20V%u0102N%20K%u1EF6%20THU%u1EACT%3C/h3%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/li%3E%0A%20%20%20%0A%20%20%20%20%3Cli%20class%3D%22project%22%20data-tags%3D%22T%C0I%20LI%u1EC6U%22%20style%3D%22%22%3E%0A%20%20%20%20%20%20%3Cimg%20id%3D%22TaiLieuTD%22%20src%3D%22TruyenDanPicture/TaiLieu.png%22%20alt%3D%22%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22project-info%22%3E%0A%20%20%20%20%20%20%20%20%3Ch3%20id%3D%22TL%22%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27block%27%22%3ET%C0I%20LI%u1EC6U%20TD%20-%20IP%3C/h3%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%0A%20%20%20%20%3Cli%20class%3D%22project%22%20data-tags%3D%22T%C0I%20LI%u1EC6U%22%20style%3D%22%22%3E%0A%20%20%20%20%20%20%3Cimg%20id%3D%22TracNghiemTD%22%20src%3D%22TruyenDanPicture/TracNghiem.jpg%22%20alt%3D%22%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22project-info%22%3E%0A%20%20%20%20%20%20%20%20%3Ch3%20id%3D%22TN%22%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27block%27%22%3ETR%u1EAEC%20NGHI%u1EC6M%3C/h3%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3C/li%3E%0A%0A%20%20%0A%20%20%3C/ul%3E%0A%0A%3C/div%3E%0A%3C%21--%20/.container%20--%3E%0A%20%20%20%0A%0A%3Cdiv%20class%3D%22overlay%22%20id%3D%22dialog-container%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%20%20%3Cp%3EB%u1EA1n%20c%F3%20mu%u1ED1n%20Tho%E1t%20kh%F4ng%20%3F%3C/p%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-cancel%22%20id%3D%22cancel%22%3ECancel%3C/button%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cp%20id%3D%22testText%22%3E%3C/p%3E%0A%3Cdiv%20class%3D%22overlay_time%22%20id%3D%22dialog_time%22%3E%0A%20%20%3Cdiv%20class%3D%22popup_time%22%3E%0A%20%20%20%20%3Cp%3ETh%u1EDDi%20gian%20l%E2u%20kh%F4ng%20d%F9ng%20%21%3C/p%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_time%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%20%20%20%0A%0A%0A%20%20%3C%21--%20Modal%20Aleert--%3E%20%20%20%0A%3Cdiv%20class%3D%22modalMess-wrapper%22%3E%0A%20%20%3Cdiv%20class%3D%22modalMess%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22headMess%22%3E%0A%20%20%20%20%20%20%3Ca%20id%3D%22close%22%20class%3D%22btn-close%20trigger%22%20%3E%0A%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-times%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22contentMess%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22good-job%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-exclamation-circle%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ch1%20id%3D%22alert%22%20value%3D%22%22%20%3E%3C/h1%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E';d=unescape(m);document.write(d);</script>
    
 
 <script src="TruyenDanPicture/jquery.min.js"></script>
@@ -1953,7 +1714,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 		
 <script type="text/javascript">//<![CDATA[
 
-var _0x37ca74=_0x4f46;function _0x4f46(_0x5c2a48,_0x111f47){var _0x353439=_0x3534();return _0x4f46=function(_0x4f4617,_0x175b06){_0x4f4617=_0x4f4617-0x11c;var _0x544187=_0x353439[_0x4f4617];return _0x544187;},_0x4f46(_0x5c2a48,_0x111f47);}(function(_0x34a17b,_0x14e17d){var _0x305487=_0x4f46,_0x3899d4=_0x34a17b();while(!![]){try{var _0x48f4ee=parseInt(_0x305487(0x1a2))/0x1*(-parseInt(_0x305487(0x19d))/0x2)+parseInt(_0x305487(0x127))/0x3*(parseInt(_0x305487(0x174))/0x4)+-parseInt(_0x305487(0x13b))/0x5*(parseInt(_0x305487(0x12d))/0x6)+-parseInt(_0x305487(0x1b3))/0x7+parseInt(_0x305487(0x16b))/0x8*(parseInt(_0x305487(0x168))/0x9)+-parseInt(_0x305487(0x152))/0xa*(-parseInt(_0x305487(0x19b))/0xb)+-parseInt(_0x305487(0x163))/0xc*(-parseInt(_0x305487(0x146))/0xd);if(_0x48f4ee===_0x14e17d)break;else _0x3899d4['push'](_0x3899d4['shift']());}catch(_0x17fab0){_0x3899d4['push'](_0x3899d4['shift']());}}}(_0x3534,0x3999c),!function(_0x397235){'use strict';var _0x5592e3=_0x4f46;_0x397235['fn'][_0x5592e3(0x193)]=function(_0x5dc7e6){var _0x1dfd19=_0x5592e3,_0x426979,_0x598779,_0x5e22ee={'idle':0xea60,'events':_0x1dfd19(0x150),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0x2b6053=_0x5dc7e6[_0x1dfd19(0x173)]||!0x1,_0x42d46a=!_0x5dc7e6[_0x1dfd19(0x173)]||!0x0,_0x324a82=_0x397235[_0x1dfd19(0x170)]({},_0x5e22ee,_0x5dc7e6),_0x1bed7c=null;return _0x397235(this)['on'](_0x1dfd19(0x1ab),{},function(){var _0x561826=_0x1dfd19;_0x397235(this)[_0x561826(0x15c)](_0x324a82[_0x561826(0x178)]),_0x324a82[_0x561826(0x14f)]=!0x1,_0x426979(_0x1bed7c,_0x324a82);}),_0x426979=function(_0x4247d1,_0x550499){var _0xe93007=_0x1dfd19;return _0x2b6053&&(_0x550499['onActive'][_0xe93007(0x1b6)](),_0x2b6053=!0x1),clearTimeout(_0x4247d1),_0x550499['keepTracking']?_0x598779(_0x550499):void 0x0;},_0x598779=function(_0x497794){var _0x1c3ff2=_0x1dfd19,_0x53ed0e,_0x1e29f3=_0x497794[_0x1c3ff2(0x133)]?setInterval:setTimeout;return _0x53ed0e=_0x1e29f3(function(){_0x2b6053=!0x0,_0x497794['onIdle']['call']();},_0x497794[_0x1c3ff2(0x193)]);},this[_0x1dfd19(0x123)](function(){var _0x472518=_0x1dfd19;_0x1bed7c=_0x598779(_0x324a82),_0x397235(this)['on'](_0x324a82[_0x472518(0x178)],function(){_0x1bed7c=_0x426979(_0x1bed7c,_0x324a82);}),(_0x324a82[_0x472518(0x130)]||_0x324a82[_0x472518(0x1aa)])&&_0x397235(document)['on']('visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange',function(){var _0x530aa2=_0x472518;document[_0x530aa2(0x13d)]||document['webkitHidden']||document[_0x530aa2(0x17a)]||document[_0x530aa2(0x143)]?_0x42d46a&&(_0x42d46a=!0x1,_0x324a82[_0x530aa2(0x1aa)][_0x530aa2(0x1b6)]()):_0x42d46a||(_0x42d46a=!0x0,_0x324a82['onShow']['call']());});});};}(jQuery),$(document)[_0x37ca74(0x193)]({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740}));var overlay_timeme=document['getElementById'](_0x37ca74(0x14c)),overlayme=document['getElementById'](_0x37ca74(0x139));function Search_dialog_time(){var _0x2e8d45=_0x37ca74;document[_0x2e8d45(0x18d)](_0x2e8d45(0x14c))==null||document['getElementById'](_0x2e8d45(0x139))==null?close():show_dialog_time();}function show_dialog_time(){var _0x25557b=_0x37ca74;overlay_timeme[_0x25557b(0x140)][_0x25557b(0x17f)]=_0x25557b(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x1ac))[_0x37ca74(0x1ae)]=function(){confirm_time();};function confirm_time(){var _0x22b9ae=_0x37ca74;close(),overlay_timeme[_0x22b9ae(0x140)][_0x22b9ae(0x17f)]='none';}var overlay_username=document['getElementById'](_0x37ca74(0x1af));function show_dialog_username(){var _0x1a9886=_0x37ca74;overlay_username[_0x1a9886(0x140)]['display']='block';}document['getElementById'](_0x37ca74(0x18a))[_0x37ca74(0x1ae)]=function(){confirm_username();};function confirm_username(){var _0x536d6b=_0x37ca74;overlay_username[_0x536d6b(0x140)]['display']=_0x536d6b(0x134);}var overlay_password=document[_0x37ca74(0x18d)](_0x37ca74(0x19a));function show_dialog_password(){var _0x3abb70=_0x37ca74;overlay_password[_0x3abb70(0x140)][_0x3abb70(0x17f)]='block';}document['getElementById'](_0x37ca74(0x14a))['onclick']=function(){confirm_password();};function confirm_password(){var _0x4b7810=_0x37ca74;overlay_password[_0x4b7810(0x140)][_0x4b7810(0x17f)]='none';}function _0x3534(){var _0x2c12eb=['jsonp','call','getDate','dialog_Cfpassword','#doma','toolbar=0,status=0,resizable=1','label','not','prototype','parent','&oldusername=','GET','getFullYear','each','#combine','hide','removeClass','18WWgxyo','setTimeout','ctrlKey','highlight','confirm_newpassleng','which','6qqiRsK','confirm_newpasswordNok','newpassword','onShow','id01','&combine=','recurIdleCall','none','cancel','active','confirm_newpassword','addClass','testText','oldpassword','2230925QDcnMg','val','hidden','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3LVBwWEpBbjBpOWlqN3hNVXVKUnpTbG00azhhTkxWWUlYRDdFS0tmUkFyeFkxZW1wUjE2S0FLZ09HRVcyZGZaY3ptQS9leGVj','yyyymmddhhmmss','style','&action=LoginQL','&username=','msHidden','confirm_oldpassword','value','1066wrkwfv','keyup','login','&newpassword=','confirm_password','keyup\x20blur\x20focus','dialog_time','dialog_Sai_userpassword','yyyymmddhhmm','keepTracking','mousemove\x20keydown\x20mousedown\x20touchstart','contextmenu','3110WwsBOa','fadeIn','https://www.facebook.com/sharer/sharer.php?u=','#newpassword','oRequestAnimationFrame','history','#username','dialog_newpasswordNok','ngay','getSeconds','off','sharer','querySelector','password','oldusername','__defineGetter__','ajax','33216yXfhRA','?callback=ctrlq&oldpassword=','#re','port','getHours','4104423uzarzn','hostname','innerHTML','8HpQVLo','toString','confirm_Sai_userpassword','toolbar=0,status=0,resizable=1,width=626,height=436','img','extend','btn-show-dialog','msRequestAnimationFrame','startAtIdle','8292khaEqU','doma','confirm_Cfpassword','keyCode','events','result','mozHidden','requestFrame','removeChild','dialog-container','protocol','display','toLowerCase','dialog_newpassleng','length','.form','siblings','dialog_oldpassword','dialog_newpassword','yyyymmdd','click','getMonth','confirm_username','file:','#cfpassword','getElementById','href','parentNode','cfpassword','username','createElement','idle','active\x20highlight','Đổi\x20Password\x20NOK\x20!','block','#ngay','type','&password=','dialog_password','13145deYomZ','clear','2ACGVlN','&action=Changepassword','#password','input,\x20textarea','?callback=ctrlq&ngay=','84905MjsMtG','getMinutes','keydown','confirm_Thay_password_Ok','preventDefault','open','concat','.tab\x20a','onHide','idle:stop','confirm_time','confirm_LoginOk','onclick','dialog_username','addEventListener','#oldusername','replaceState','2100588NDQWZE','confirm_Thay_password_Nok'];_0x3534=function(){return _0x2c12eb;};return _0x3534();}var overlay_LoginOk=document[_0x37ca74(0x18d)]('dialog_LoginOk');function show_dialog_LoginOk(){var _0x1ef34e=_0x37ca74;overlay_LoginOk['style'][_0x1ef34e(0x17f)]='block';}document['getElementById'](_0x37ca74(0x1ad))[_0x37ca74(0x1ae)]=function(){confirm_LoginOk();};function confirm_LoginOk(){var _0x2de9c0=_0x37ca74;overlay_LoginOk[_0x2de9c0(0x140)][_0x2de9c0(0x17f)]=_0x2de9c0(0x134);}var overlay_Sai_userpassword=document[_0x37ca74(0x18d)](_0x37ca74(0x14d));function show_dialog_Sai_userpassword(){var _0x5284cc=_0x37ca74;overlay_Sai_userpassword[_0x5284cc(0x140)][_0x5284cc(0x17f)]=_0x5284cc(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x16d))[_0x37ca74(0x1ae)]=function(){confirm_Sai_userpassword();};function confirm_Sai_userpassword(){var _0x4a5718=_0x37ca74;overlay_Sai_userpassword[_0x4a5718(0x140)][_0x4a5718(0x17f)]=_0x4a5718(0x134);}var overlay_Thay_password_Nok=document['getElementById']('dialog_Thay_password_Nok');function show_dialog_Thay_password_Nok(){var _0x3d5cd8=_0x37ca74;overlay_Thay_password_Nok[_0x3d5cd8(0x140)][_0x3d5cd8(0x17f)]='block';}document[_0x37ca74(0x18d)](_0x37ca74(0x1b4))[_0x37ca74(0x1ae)]=function(){confirm_Thay_password_Nok();};function confirm_Thay_password_Nok(){var _0x27d766=_0x37ca74;overlay_Thay_password_Nok[_0x27d766(0x140)][_0x27d766(0x17f)]=_0x27d766(0x134);}var overlay_Thay_password_Ok=document[_0x37ca74(0x18d)]('dialog_Thay_password_Ok');function show_dialog_Thay_password_Ok(){var _0x3442e6=_0x37ca74;overlay_Thay_password_Ok[_0x3442e6(0x140)][_0x3442e6(0x17f)]=_0x3442e6(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x1a5))[_0x37ca74(0x1ae)]=function(){confirm_Thay_password_Ok();};function confirm_Thay_password_Ok(){overlay_Thay_password_Ok['style']['display']='none';}var overlay_oldusername=document[_0x37ca74(0x18d)]('dialog_oldusername');function show_dialog_oldusername(){var _0x18610f=_0x37ca74;overlay_oldusername[_0x18610f(0x140)][_0x18610f(0x17f)]=_0x18610f(0x196);}document[_0x37ca74(0x18d)]('confirm_oldusername')[_0x37ca74(0x1ae)]=function(){confirm_oldusername();};function confirm_oldusername(){var _0x1a0196=_0x37ca74;overlay_oldusername[_0x1a0196(0x140)][_0x1a0196(0x17f)]=_0x1a0196(0x134);}var overlay_oldpassword=document['getElementById'](_0x37ca74(0x185));function show_dialog_oldpassword(){var _0x31b1a0=_0x37ca74;overlay_oldpassword[_0x31b1a0(0x140)][_0x31b1a0(0x17f)]='block';}document[_0x37ca74(0x18d)](_0x37ca74(0x144))[_0x37ca74(0x1ae)]=function(){confirm_oldpassword();};function confirm_oldpassword(){var _0x5b0d99=_0x37ca74;overlay_oldpassword[_0x5b0d99(0x140)][_0x5b0d99(0x17f)]=_0x5b0d99(0x134);}var overlay_newpassword=document[_0x37ca74(0x18d)](_0x37ca74(0x186));function show_dialog_newpassword(){var _0x5caf5b=_0x37ca74;overlay_newpassword[_0x5caf5b(0x140)][_0x5caf5b(0x17f)]=_0x5caf5b(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x137))[_0x37ca74(0x1ae)]=function(){confirm_newpassword();};function confirm_newpassword(){var _0x1bc99b=_0x37ca74;overlay_newpassword[_0x1bc99b(0x140)][_0x1bc99b(0x17f)]=_0x1bc99b(0x134);}var overlay_newpassleng=document[_0x37ca74(0x18d)](_0x37ca74(0x181));function show_dialog_newpassleng(){var _0x229e68=_0x37ca74;overlay_newpassleng[_0x229e68(0x140)][_0x229e68(0x17f)]=_0x229e68(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x12b))[_0x37ca74(0x1ae)]=function(){confirm_newpassleng();};function confirm_newpassleng(){var _0x4216c6=_0x37ca74;overlay_newpassleng[_0x4216c6(0x140)][_0x4216c6(0x17f)]='none';}var overlay_Cfpassword=document[_0x37ca74(0x18d)](_0x37ca74(0x1b8));function show_dialog_Cfpassword(){var _0x308074=_0x37ca74;overlay_Cfpassword['style'][_0x308074(0x17f)]=_0x308074(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x176))[_0x37ca74(0x1ae)]=function(){confirm_Cfpassword();};function confirm_Cfpassword(){var _0x322fd9=_0x37ca74;overlay_Cfpassword[_0x322fd9(0x140)][_0x322fd9(0x17f)]=_0x322fd9(0x134);}var overlay_newpasswordNok=document[_0x37ca74(0x18d)](_0x37ca74(0x159));function show_dialog_newpasswordNok(){var _0x511cc3=_0x37ca74;overlay_newpasswordNok[_0x511cc3(0x140)][_0x511cc3(0x17f)]=_0x511cc3(0x196);}document[_0x37ca74(0x18d)](_0x37ca74(0x12e))[_0x37ca74(0x1ae)]=function(){confirm_newpasswordNok();};function confirm_newpasswordNok(){var _0x3d9d6a=_0x37ca74;overlay_newpasswordNok[_0x3d9d6a(0x140)]['display']=_0x3d9d6a(0x134);}document[_0x37ca74(0x18d)](_0x37ca74(0x171))[_0x37ca74(0x1ae)]=function(){show_dialog();};var overlayme=document[_0x37ca74(0x18d)]('dialog-container');function show_dialog(){var _0x29b83e=_0x37ca74;overlayme[_0x29b83e(0x140)][_0x29b83e(0x17f)]=_0x29b83e(0x196);}document['getElementById']('confirm')[_0x37ca74(0x1ae)]=function(){confirm();};function confirm(){var _0x43da37=_0x37ca74;close(),overlayme[_0x43da37(0x140)]['display']=_0x43da37(0x134);}document[_0x37ca74(0x18d)](_0x37ca74(0x135))[_0x37ca74(0x1ae)]=function(){cancel();};function cancel(){var _0x14256e=_0x37ca74;overlayme[_0x14256e(0x140)][_0x14256e(0x17f)]=_0x14256e(0x134);}function close_window(){close();}document[_0x37ca74(0x1b0)](_0x37ca74(0x151),_0x2c0360=>_0x2c0360['preventDefault']()),home=function(){var _0x581387=_0x37ca74;location[_0x581387(0x18e)]=''+(location[_0x581387(0x17e)]+'//'+location[_0x581387(0x169)]+(location[_0x581387(0x166)]?':'+location[_0x581387(0x166)]:''));},window[_0x37ca74(0x17b)]=(function(){var _0x2d9cca=_0x37ca74;return window['requestAnimationFrame']||(window['webkitRequestAnimationFrame']||(window['mozRequestAnimationFrame']||(window[_0x2d9cca(0x172)]||(window[_0x2d9cca(0x156)]||function(_0x347101){var _0x4cd2e4=_0x2d9cca;window[_0x4cd2e4(0x128)](_0x347101,0x32);}))));}());var test={'st':![],'el':document[_0x37ca74(0x192)](_0x37ca74(0x16f)),'rn':function(){var _0x5d2da7=_0x37ca74;test['st']=![],console['log'](test['el']),console[_0x5d2da7(0x19c)](),document[_0x5d2da7(0x18d)](_0x5d2da7(0x139))[_0x5d2da7(0x16a)]=(test['st']===!![]?'open':'')+'.',window[_0x5d2da7(0x17b)](test['rn']);}};test['el'][_0x37ca74(0x161)]('id',function(){test['st']=!![];}),test['rn'](),document['getElementById'](_0x37ca74(0x171))[_0x37ca74(0x1ae)]=function(){show_dialog();};var overlayme=document['getElementById'](_0x37ca74(0x17d));function show_dialog(){overlayme['style']['display']='block';}document[_0x37ca74(0x18d)]('confirm')[_0x37ca74(0x1ae)]=function(){confirm();};function confirm(){var _0xa8d6f7=_0x37ca74;close_window(),overlayme[_0xa8d6f7(0x140)][_0xa8d6f7(0x17f)]=_0xa8d6f7(0x134);}document[_0x37ca74(0x18d)](_0x37ca74(0x135))[_0x37ca74(0x1ae)]=function(){cancel();};function cancel(){var _0x183e14=_0x37ca74;overlayme[_0x183e14(0x140)][_0x183e14(0x17f)]=_0x183e14(0x134);}function close_window(){close();}$(document)['ready'](function(){var _0x73406a=_0x37ca74,_0x48c8e1=location[_0x73406a(0x17e)];if(_0x48c8e1==_0x73406a(0x18b)){var _0x26a288=document[_0x73406a(0x18d)](_0x73406a(0x148));_0x26a288[_0x73406a(0x18f)][_0x73406a(0x17c)](_0x26a288),close();}else{}}),window[_0x37ca74(0x157)][_0x37ca74(0x1b2)]('','','/');var script_url=_0x37ca74(0x13e);function LoginQL_value(){var _0x2dcb29=_0x37ca74;Date[_0x2dcb29(0x11e)][_0x2dcb29(0x187)]=function(){var _0x3c4ac3=_0x2dcb29,_0x484df1=this[_0x3c4ac3(0x122)](),_0x4cd5a6=this[_0x3c4ac3(0x189)]()<0x9?'0'+(this['getMonth']()+0x1):this[_0x3c4ac3(0x189)]()+0x1,_0x4ec1af=this[_0x3c4ac3(0x1b7)]()<0xa?'0'+this[_0x3c4ac3(0x1b7)]():this[_0x3c4ac3(0x1b7)]();return''['concat'](_0x484df1)[_0x3c4ac3(0x1a8)](_0x4cd5a6)[_0x3c4ac3(0x1a8)](_0x4ec1af);},Date[_0x2dcb29(0x11e)][_0x2dcb29(0x14e)]=function(){var _0x30b68d=_0x2dcb29,_0x4fead0=this[_0x30b68d(0x187)](),_0x476859=this[_0x30b68d(0x167)]()<0xa?'0'+this['getHours']():this[_0x30b68d(0x167)](),_0x26c9a5=(this[_0x30b68d(0x1a3)]()<0xa?'0'+this['getMinutes']():this['getMinutes']())*0x3c;return''[_0x30b68d(0x1a8)](_0x4fead0)[_0x30b68d(0x1a8)](_0x476859)[_0x30b68d(0x1a8)](_0x26c9a5);},Date[_0x2dcb29(0x11e)][_0x2dcb29(0x13f)]=function(){var _0x1c10ed=_0x2dcb29,_0x340016=this[_0x1c10ed(0x14e)](),_0x5d8d8b=this['getSeconds']()<0xa?'0'+this['getSeconds']():this[_0x1c10ed(0x15b)]();return''['concat'](_0x340016)+_0x5d8d8b;};var _0x4d6747=new Date();document[_0x2dcb29(0x18d)](_0x2dcb29(0x15a))['value']=_0x4d6747[_0x2dcb29(0x13f)]()[_0x2dcb29(0x16c)]();var _0x2bfd92=''+(location[_0x2dcb29(0x17e)]+'//'+location['hostname']+(location[_0x2dcb29(0x166)]?':'+location[_0x2dcb29(0x166)]:''));document[_0x2dcb29(0x18d)](_0x2dcb29(0x175))[_0x2dcb29(0x145)]=_0x2bfd92;var _0x145964=$(_0x2dcb29(0x158))['val'](),_0x5f1b97=$(_0x2dcb29(0x19f))[_0x2dcb29(0x13c)](),_0x23b5fb=$(_0x2dcb29(0x197))['val'](),_0x49b540=$(_0x2dcb29(0x1b9))[_0x2dcb29(0x13c)](),_0x30fb3c=$(_0x2dcb29(0x124))[_0x2dcb29(0x13c)](),_0x973841=jQuery['ajax']({'crossDodiv':!![],'url':_0x2bfd92,'method':_0x2dcb29(0x121),'dataType':_0x2dcb29(0x1b5)}),_0x2bfd92=atob(script_url)+_0x2dcb29(0x1a1)+_0x23b5fb+_0x2dcb29(0x199)+_0x5f1b97+_0x2dcb29(0x142)+_0x145964+'&doma='+_0x49b540+_0x2dcb29(0x132)+_0x30fb3c+_0x2dcb29(0x141);if(document[_0x2dcb29(0x18d)](_0x2dcb29(0x191))[_0x2dcb29(0x145)]==='')return show_dialog_username(),![];if(document[_0x2dcb29(0x18d)](_0x2dcb29(0x15f))[_0x2dcb29(0x145)]==='')return show_dialog_password(),![];var _0x973841=jQuery[_0x2dcb29(0x162)]({'crossDodiv':!![],'url':_0x2bfd92,'method':_0x2dcb29(0x121),'dataType':_0x2dcb29(0x1b5)});}function ctrlq(_0x495c79){var _0x2c6300=_0x37ca74;document[_0x2c6300(0x18d)](_0x2c6300(0x15f))[_0x2c6300(0x145)]='';if(_0x495c79['result']==='Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!')return show_dialog_Sai_userpassword(),![];else{if(_0x495c79[_0x2c6300(0x179)]===_0x2c6300(0x195))return show_dialog_Thay_password_Nok(),![];else{if(_0x495c79[_0x2c6300(0x179)]==='Đổi\x20Password\x20OK\x20!')return document[_0x2c6300(0x18d)](_0x2c6300(0x131))[_0x2c6300(0x140)]['display']=_0x2c6300(0x134),show_dialog_Thay_password_Ok(),![];else document['getElementById'](_0x2c6300(0x131))['style'][_0x2c6300(0x17f)]=_0x2c6300(0x134),overlay_LoginOk[_0x2c6300(0x140)][_0x2c6300(0x17f)]=_0x2c6300(0x196),khánh1=''+(location[_0x2c6300(0x17e)]+'//'+location[_0x2c6300(0x169)]+(location[_0x2c6300(0x166)]?':'+location[_0x2c6300(0x166)]:'')),khánh2='.html',overlay_LoginOk[_0x2c6300(0x140)]['display']=_0x2c6300(0x134),options=_0x2c6300(0x1ba),window[_0x2c6300(0x1a7)](khánh1+'/'+_0x495c79[_0x2c6300(0x179)]+khánh2,_0x2c6300(0x15d),options),window[_0x2c6300(0x157)][_0x2c6300(0x1b2)]('','','/');}}};function Changepassword_value(){var _0x462c47=_0x37ca74,_0x249454=$(_0x462c47(0x1b1))[_0x462c47(0x13c)](),_0x7ca97d=$('#oldpassword')[_0x462c47(0x13c)](),_0x1a2990=$(_0x462c47(0x155))['val'](),_0x17f75b=$(_0x462c47(0x18c))[_0x462c47(0x13c)](),_0x254501=_0x1a2990[_0x462c47(0x182)],_0x41e6b9=atob(script_url)+_0x462c47(0x164)+_0x7ca97d+_0x462c47(0x120)+_0x249454+_0x462c47(0x149)+_0x1a2990+_0x462c47(0x19e);if(document['getElementById'](_0x462c47(0x160))[_0x462c47(0x145)]==='')return show_dialog_oldusername(),![];if(document[_0x462c47(0x18d)](_0x462c47(0x13a))[_0x462c47(0x145)]==='')return show_dialog_oldpassword(),![];if(document['getElementById'](_0x462c47(0x12f))['value']==='')return show_dialog_newpassword(),![];if(_0x254501<0x8)return show_dialog_newpassleng(),![];if(document[_0x462c47(0x18d)](_0x462c47(0x190))[_0x462c47(0x145)]==='')return show_dialog_Cfpassword(),![];if(document[_0x462c47(0x18d)](_0x462c47(0x12f))['value']!==document[_0x462c47(0x18d)](_0x462c47(0x190))[_0x462c47(0x145)])return show_dialog_newpasswordNok(),![];var _0xd24fa8=jQuery[_0x462c47(0x162)]({'crossDodiv':!![],'url':_0x41e6b9,'method':'GET','dataType':_0x462c47(0x1b5)});document[_0x462c47(0x18d)](_0x462c47(0x160))[_0x462c47(0x145)]='',document[_0x462c47(0x18d)](_0x462c47(0x13a))[_0x462c47(0x145)]='',document[_0x462c47(0x18d)](_0x462c47(0x12f))[_0x462c47(0x145)]='',document[_0x462c47(0x18d)](_0x462c47(0x190))['value']='';}function Delre(){var _0x1ee82b=_0x37ca74;document[_0x1ee82b(0x15e)](_0x1ee82b(0x165))['innerHTML']='';}$(document)[_0x37ca74(0x1a4)](function(_0x867051){var _0x52f244=_0x37ca74;if(!((String['fromCharCode'](_0x867051[_0x52f244(0x12c)])[_0x52f244(0x180)]()=='s'||_0x867051[_0x52f244(0x177)]==0xd)&&_0x867051[_0x52f244(0x129)])&&!(_0x867051[_0x52f244(0x12c)]==0x13))return!![];return _0x867051[_0x52f244(0x1a6)](),![];}),shareface=function(){var _0x4832ea=_0x37ca74;url=_0x4832ea(0x154)+(location[_0x4832ea(0x17e)]+'//'+location[_0x4832ea(0x169)]+(location[_0x4832ea(0x166)]?':'+location[_0x4832ea(0x166)]:'')),options=_0x4832ea(0x16e),window['open'](url,_0x4832ea(0x15d),options);},$(_0x37ca74(0x183))['find'](_0x37ca74(0x1a0))['on'](_0x37ca74(0x14b),function(_0x4b42cb){var _0x5b8ceb=_0x37ca74,_0x21b97b=$(this),_0x29a7e0=_0x21b97b['prev'](_0x5b8ceb(0x11c));if(_0x4b42cb[_0x5b8ceb(0x198)]===_0x5b8ceb(0x147))_0x21b97b[_0x5b8ceb(0x13c)]()===''?_0x29a7e0['removeClass'](_0x5b8ceb(0x194)):_0x29a7e0[_0x5b8ceb(0x138)](_0x5b8ceb(0x194));else{if(_0x4b42cb[_0x5b8ceb(0x198)]==='blur')_0x21b97b[_0x5b8ceb(0x13c)]()===''?_0x29a7e0[_0x5b8ceb(0x126)]('active\x20highlight'):_0x29a7e0[_0x5b8ceb(0x126)](_0x5b8ceb(0x12a));else{if(_0x4b42cb[_0x5b8ceb(0x198)]==='focus'){if(_0x21b97b[_0x5b8ceb(0x13c)]()==='')_0x29a7e0['removeClass']('highlight');else _0x21b97b['val']()!==''&&_0x29a7e0[_0x5b8ceb(0x138)](_0x5b8ceb(0x12a));}}}}),$(_0x37ca74(0x1a9))['on'](_0x37ca74(0x188),function(_0xf677ff){var _0xe0c73b=_0x37ca74;_0xf677ff[_0xe0c73b(0x1a6)](),$(this)[_0xe0c73b(0x11f)]()[_0xe0c73b(0x138)](_0xe0c73b(0x136)),$(this)[_0xe0c73b(0x11f)]()[_0xe0c73b(0x184)]()[_0xe0c73b(0x126)]('active'),target=$(this)['attr'](_0xe0c73b(0x18e)),$('.tab-content\x20>\x20div')[_0xe0c73b(0x11d)](target)[_0xe0c73b(0x125)](),$(target)[_0xe0c73b(0x153)](0x258);});
+var _0x5d06b9=_0x214a;(function(_0x15956f,_0x90d264){var _0x5acd65=_0x214a,_0x594984=_0x15956f();while(!![]){try{var _0x267e0a=parseInt(_0x5acd65(0x12c))/0x1*(-parseInt(_0x5acd65(0x18e))/0x2)+-parseInt(_0x5acd65(0x17b))/0x3+parseInt(_0x5acd65(0x14c))/0x4*(parseInt(_0x5acd65(0x152))/0x5)+-parseInt(_0x5acd65(0x158))/0x6*(-parseInt(_0x5acd65(0x1a4))/0x7)+parseInt(_0x5acd65(0x184))/0x8*(parseInt(_0x5acd65(0x18a))/0x9)+-parseInt(_0x5acd65(0x14a))/0xa*(parseInt(_0x5acd65(0x149))/0xb)+parseInt(_0x5acd65(0x163))/0xc;if(_0x267e0a===_0x90d264)break;else _0x594984['push'](_0x594984['shift']());}catch(_0x442fc1){_0x594984['push'](_0x594984['shift']());}}}(_0x1c6a,0xb86bd),!function(_0x356cfb){'use strict';var _0xbd4b12=_0x214a;_0x356cfb['fn'][_0xbd4b12(0x19b)]=function(_0x244228){var _0x5d5fa5=_0xbd4b12,_0x22dcd9,_0x47eb86,_0x1d8ace={'idle':0xea60,'events':_0x5d5fa5(0x192),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0x23de87=_0x244228[_0x5d5fa5(0x146)]||!0x1,_0x216fe3=!_0x244228[_0x5d5fa5(0x146)]||!0x0,_0x156998=_0x356cfb[_0x5d5fa5(0x159)]({},_0x1d8ace,_0x244228),_0x388a87=null;return _0x356cfb(this)['on'](_0x5d5fa5(0x179),{},function(){var _0x17ce75=_0x5d5fa5;_0x356cfb(this)[_0x17ce75(0x1a3)](_0x156998[_0x17ce75(0x197)]),_0x156998[_0x17ce75(0x13c)]=!0x1,_0x22dcd9(_0x388a87,_0x156998);}),_0x22dcd9=function(_0x567d93,_0x3db890){var _0x4a722e=_0x5d5fa5;return _0x23de87&&(_0x3db890['onActive']['call'](),_0x23de87=!0x1),clearTimeout(_0x567d93),_0x3db890[_0x4a722e(0x13c)]?_0x47eb86(_0x3db890):void 0x0;},_0x47eb86=function(_0xae3244){var _0x49d1a2=_0x5d5fa5,_0x1fe343,_0x526c21=_0xae3244[_0x49d1a2(0x18f)]?setInterval:setTimeout;return _0x1fe343=_0x526c21(function(){var _0x5edb47=_0x49d1a2;_0x23de87=!0x0,_0xae3244[_0x5edb47(0x134)]['call']();},_0xae3244[_0x49d1a2(0x19b)]);},this[_0x5d5fa5(0x16b)](function(){var _0x31e6c9=_0x5d5fa5;_0x388a87=_0x47eb86(_0x156998),_0x356cfb(this)['on'](_0x156998[_0x31e6c9(0x197)],function(){_0x388a87=_0x22dcd9(_0x388a87,_0x156998);}),(_0x156998['onShow']||_0x156998['onHide'])&&_0x356cfb(document)['on'](_0x31e6c9(0x16c),function(){var _0x4a57bf=_0x31e6c9;document['hidden']||document['webkitHidden']||document[_0x4a57bf(0x194)]||document[_0x4a57bf(0x180)]?_0x216fe3&&(_0x216fe3=!0x1,_0x156998[_0x4a57bf(0x17a)]['call']()):_0x216fe3||(_0x216fe3=!0x0,_0x156998['onShow'][_0x4a57bf(0x189)]());});});};}(jQuery),$(document)['idle']({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740}));var overlay_timeme=document[_0x5d06b9(0x139)](_0x5d06b9(0x175)),overlayme=document[_0x5d06b9(0x139)](_0x5d06b9(0x164));function Search_dialog_time(){var _0x5b54bd=_0x5d06b9;document[_0x5b54bd(0x139)](_0x5b54bd(0x175))==null||document['getElementById'](_0x5b54bd(0x164))==null?close():show_dialog_time();}function show_dialog_time(){var _0x3434dc=_0x5d06b9;overlay_timeme[_0x3434dc(0x144)][_0x3434dc(0x17f)]='block';}document[_0x5d06b9(0x139)]('confirm_time')[_0x5d06b9(0x13d)]=function(){confirm_time();};function confirm_time(){var _0x27f32d=_0x5d06b9;close(),overlay_timeme[_0x27f32d(0x144)][_0x27f32d(0x17f)]=_0x27f32d(0x183);}document['getElementById']('btn-show-dialog')[_0x5d06b9(0x13d)]=function(){show_dialog();};var overlayme=document[_0x5d06b9(0x139)]('dialog-container');function show_dialog(){var _0x1d60f3=_0x5d06b9;overlayme['style'][_0x1d60f3(0x17f)]=_0x1d60f3(0x14d);}document[_0x5d06b9(0x139)](_0x5d06b9(0x1b1))['onclick']=function(){confirm();};function _0x1c6a(){var _0x1965c9=['#oldpassword','jsonp','port','active\x20highlight','innerHTML','6OKHyKp','extend','addClass','#doma','requestFrame','requestAnimationFrame','oldpassword','createElement','alert','&password=','username','19559784AiKBve','testText','highlight','val','active','&doma=','oRequestAnimationFrame','keydown','each','visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange','getMinutes','#ngay','ngay','getHours','Chưa\x20nhập\x20Username\x20!','password','#re','ajax','dialog_time','ctrlKey','Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!','keyup\x20blur\x20focus','idle:stop','onHide','3800592bukSbu','?callback=ctrlq&oldpassword=','Chưa\x20nhập\x20lại\x20Password\x20!','length','display','msHidden','hostname','toString','none','8ZMDKlz','hide','siblings','Đổi\x20Password\x20OK\x20!','open','call','1692207CRZcAm','id01','#combine','getDate','86mgBXsD','recurIdleCall','webkitRequestAnimationFrame','&oldusername=','mousemove\x20keydown\x20mousedown\x20touchstart','find','mozHidden','result','newpassword','events','ready','preventDefault','fadeIn','idle','cfpassword','history','clear','.html','blur','href','removeClass','off','8899310DhsVGZ','prototype','#cfpassword','toolbar=0,status=0,resizable=1','yyyymmddhhmm','type','concat','replaceState','#newpassword','yyyymmddhhmmss','log','&newpassword=','label','confirm','#oldusername','#password','Đổi\x20Password\x20NOK\x20!','toggleClass','setTimeout','btn-show-dialog','cancel','getFullYear','23056HlMghs','input,\x20textarea','fromCharCode','GET','Chưa\x20nhập\x20Password\x20mới\x20!','__defineGetter__','protocol','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3LVBwWEpBbjBpOWlqN3hNVXVKUnpTbG00azhhTkxWWUlYRDdFS0tmUkFyeFkxZW1wUjE2S0FLZ09HRVcyZGZaY3ptQS9leGVj','onIdle','Password\x20tối\x20thiểu\x208\x20ký\x20tự\x20!','keyup','parent','addEventListener','getElementById','&action=LoginQL','&username=','keepTracking','onclick','?callback=ctrlq&ngay=','sharer','getMonth','msRequestAnimationFrame','https://www.facebook.com/sharer/sharer.php?u=','.trigger','style','Password\x20mới\x20nhập\x20chưa\x20đúng\x20!','startAtIdle','getSeconds','.modalMess-wrapper','1474bKMxLB','17890yHoJMd','value','496zlMpoG','block','removeChild','which','contextmenu','toLowerCase','6615fAyfDs'];_0x1c6a=function(){return _0x1965c9;};return _0x1c6a();}function confirm(){var _0x2422a5=_0x5d06b9;close(),overlayme[_0x2422a5(0x144)][_0x2422a5(0x17f)]='none';}function _0x214a(_0x146721,_0x154da8){var _0x1c6a72=_0x1c6a();return _0x214a=function(_0x214a8e,_0x47e9f8){_0x214a8e=_0x214a8e-0x127;var _0x2e43de=_0x1c6a72[_0x214a8e];return _0x2e43de;},_0x214a(_0x146721,_0x154da8);}document[_0x5d06b9(0x139)](_0x5d06b9(0x12a))['onclick']=function(){cancel();};function cancel(){var _0x9a8445=_0x5d06b9;overlayme['style'][_0x9a8445(0x17f)]=_0x9a8445(0x183);}$(document)[_0x5d06b9(0x198)](function(){var _0x4b3d75=_0x5d06b9;$(_0x4b3d75(0x143))['on']('click',function(){var _0x5889e6=_0x4b3d75;return $(_0x5889e6(0x148))[_0x5889e6(0x127)]('open'),![];});});function close_window(){close();}document[_0x5d06b9(0x138)](_0x5d06b9(0x150),_0x3a151c=>_0x3a151c['preventDefault']()),home=function(){var _0x3087f2=_0x5d06b9;location[_0x3087f2(0x1a1)]=''+(location[_0x3087f2(0x132)]+'//'+location[_0x3087f2(0x181)]+(location['port']?':'+location['port']:''));},window[_0x5d06b9(0x15c)]=(function(){var _0x520d66=_0x5d06b9;return window[_0x520d66(0x15d)]||(window[_0x520d66(0x190)]||(window['mozRequestAnimationFrame']||(window[_0x520d66(0x141)]||(window[_0x520d66(0x169)]||function(_0xf94e6c){var _0x22d551=_0x520d66;window[_0x22d551(0x128)](_0xf94e6c,0x32);}))));}());var test={'st':![],'el':document[_0x5d06b9(0x15f)]('img'),'rn':function(){var _0x2eb6ff=_0x5d06b9;test['st']=![],console[_0x2eb6ff(0x1ae)](test['el']),console[_0x2eb6ff(0x19e)](),document['getElementById'](_0x2eb6ff(0x164))[_0x2eb6ff(0x157)]=(test['st']===!![]?'open':'')+'.',window[_0x2eb6ff(0x15c)](test['rn']);}};test['el'][_0x5d06b9(0x131)]('id',function(){test['st']=!![];}),test['rn'](),document[_0x5d06b9(0x139)](_0x5d06b9(0x129))[_0x5d06b9(0x13d)]=function(){show_dialog();};var overlayme=document[_0x5d06b9(0x139)]('dialog-container');function show_dialog(){var _0x5e81e5=_0x5d06b9;overlayme[_0x5e81e5(0x144)]['display']=_0x5e81e5(0x14d);}document[_0x5d06b9(0x139)](_0x5d06b9(0x1b1))[_0x5d06b9(0x13d)]=function(){confirm();};function confirm(){var _0x31279d=_0x5d06b9;close_window(),overlayme['style'][_0x31279d(0x17f)]=_0x31279d(0x183);}document['getElementById'](_0x5d06b9(0x12a))[_0x5d06b9(0x13d)]=function(){cancel();};function cancel(){var _0xed6135=_0x5d06b9;overlayme[_0xed6135(0x144)][_0xed6135(0x17f)]=_0xed6135(0x183);}function close_window(){close();}$(document)[_0x5d06b9(0x198)](function(){var _0xdcb0f3=_0x5d06b9,_0x2cd092=location[_0xdcb0f3(0x132)];if(_0x2cd092=='file:'){var _0x4e7921=document[_0xdcb0f3(0x139)]('login');_0x4e7921['parentNode'][_0xdcb0f3(0x14e)](_0x4e7921),close();}else{}}),window[_0x5d06b9(0x19d)][_0x5d06b9(0x1ab)]('','','/');var script_url=_0x5d06b9(0x133);function LoginQL_value(){var _0x5c9671=_0x5d06b9;Date[_0x5c9671(0x1a5)]['yyyymmdd']=function(){var _0x2ae78e=_0x5c9671,_0x543117=this[_0x2ae78e(0x12b)](),_0x590b06=this['getMonth']()<0x9?'0'+(this[_0x2ae78e(0x140)]()+0x1):this[_0x2ae78e(0x140)]()+0x1,_0x5f8f75=this[_0x2ae78e(0x18d)]()<0xa?'0'+this[_0x2ae78e(0x18d)]():this[_0x2ae78e(0x18d)]();return''[_0x2ae78e(0x1aa)](_0x543117)[_0x2ae78e(0x1aa)](_0x590b06)['concat'](_0x5f8f75);},Date[_0x5c9671(0x1a5)][_0x5c9671(0x1a8)]=function(){var _0x3347db=_0x5c9671,_0x1a9463=this['yyyymmdd'](),_0x3f78b1=this[_0x3347db(0x170)]()<0xa?'0'+this[_0x3347db(0x170)]():this['getHours'](),_0x95059f=(this[_0x3347db(0x16d)]()<0xa?'0'+this[_0x3347db(0x16d)]():this[_0x3347db(0x16d)]())*0x3c;return''[_0x3347db(0x1aa)](_0x1a9463)[_0x3347db(0x1aa)](_0x3f78b1)['concat'](_0x95059f);},Date[_0x5c9671(0x1a5)][_0x5c9671(0x1ad)]=function(){var _0x1e6058=_0x5c9671,_0x4f452b=this['yyyymmddhhmm'](),_0x3ef5c4=this[_0x1e6058(0x147)]()<0xa?'0'+this[_0x1e6058(0x147)]():this['getSeconds']();return''['concat'](_0x4f452b)+_0x3ef5c4;};var _0x344b8e=new Date();document['getElementById'](_0x5c9671(0x16f))['value']=_0x344b8e['yyyymmddhhmmss']()[_0x5c9671(0x182)]();var _0x128542=''+(location[_0x5c9671(0x132)]+'//'+location[_0x5c9671(0x181)]+(location[_0x5c9671(0x155)]?':'+location['port']:''));document['getElementById']('doma')[_0x5c9671(0x14b)]=_0x128542;var _0x1fa0a4=$('#username')[_0x5c9671(0x166)](),_0x5bb8ac=$(_0x5c9671(0x1b3))[_0x5c9671(0x166)](),_0x6bca71=$(_0x5c9671(0x16e))[_0x5c9671(0x166)](),_0x43d50f=$(_0x5c9671(0x15b))[_0x5c9671(0x166)](),_0x2e4d7a=$(_0x5c9671(0x18c))[_0x5c9671(0x166)](),_0x2e0aca=jQuery[_0x5c9671(0x174)]({'crossDodiv':!![],'url':_0x128542,'method':'GET','dataType':_0x5c9671(0x154)}),_0x128542=atob(script_url)+_0x5c9671(0x13e)+_0x6bca71+_0x5c9671(0x161)+_0x5bb8ac+_0x5c9671(0x13b)+_0x1fa0a4+_0x5c9671(0x168)+_0x43d50f+'&combine='+_0x2e4d7a+_0x5c9671(0x13a);if(document[_0x5c9671(0x139)](_0x5c9671(0x162))[_0x5c9671(0x14b)]==='')return $(_0x5c9671(0x148))[_0x5c9671(0x127)](_0x5c9671(0x188)),document[_0x5c9671(0x139)]('alert')[_0x5c9671(0x157)]=_0x5c9671(0x171),![];if(document[_0x5c9671(0x139)](_0x5c9671(0x172))[_0x5c9671(0x14b)]==='')return $('.modalMess-wrapper')['toggleClass'](_0x5c9671(0x188)),document['getElementById'](_0x5c9671(0x160))[_0x5c9671(0x157)]='Chưa\x20nhập\x20Password\x20!',![];var _0x2e0aca=jQuery[_0x5c9671(0x174)]({'crossDodiv':!![],'url':_0x128542,'method':_0x5c9671(0x12f),'dataType':_0x5c9671(0x154)});}function ctrlq(_0x54b8e7){var _0x366a10=_0x5d06b9;document[_0x366a10(0x139)](_0x366a10(0x172))[_0x366a10(0x14b)]='';if(_0x54b8e7[_0x366a10(0x195)]===_0x366a10(0x177))return $(_0x366a10(0x148))[_0x366a10(0x127)](_0x366a10(0x188)),document[_0x366a10(0x139)](_0x366a10(0x160))['innerHTML']='Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!',![];else{if(_0x54b8e7['result']===_0x366a10(0x1b4))return $(_0x366a10(0x148))['toggleClass'](_0x366a10(0x188)),document[_0x366a10(0x139)](_0x366a10(0x160))['innerHTML']=_0x366a10(0x1b4),![];else{if(_0x54b8e7['result']===_0x366a10(0x187))return $(_0x366a10(0x148))[_0x366a10(0x127)]('open'),document[_0x366a10(0x139)](_0x366a10(0x160))[_0x366a10(0x157)]='Đổi\x20Password\x20OK\x20!',![];else document[_0x366a10(0x139)](_0x366a10(0x18b))[_0x366a10(0x144)][_0x366a10(0x17f)]=_0x366a10(0x183),overlay_LoginOk[_0x366a10(0x144)][_0x366a10(0x17f)]=_0x366a10(0x14d),khánh1=''+(location[_0x366a10(0x132)]+'//'+location[_0x366a10(0x181)]+(location[_0x366a10(0x155)]?':'+location['port']:'')),khánh2=_0x366a10(0x19f),overlay_LoginOk['style']['display']=_0x366a10(0x183),options=_0x366a10(0x1a7),window[_0x366a10(0x188)](khánh1+'/'+_0x54b8e7[_0x366a10(0x195)]+khánh2,_0x366a10(0x13f),options),window['history'][_0x366a10(0x1ab)]('','','/');}}};function Changepassword_value(){var _0x1c8827=_0x5d06b9,_0x275b03=$(_0x1c8827(0x1b2))[_0x1c8827(0x166)](),_0x483ecb=$(_0x1c8827(0x153))[_0x1c8827(0x166)](),_0x3c1b63=$(_0x1c8827(0x1ac))['val'](),_0x4c88cf=$(_0x1c8827(0x1a6))['val'](),_0x15cb9b=_0x3c1b63[_0x1c8827(0x17e)],_0x5c24e1=atob(script_url)+_0x1c8827(0x17c)+_0x483ecb+_0x1c8827(0x191)+_0x275b03+_0x1c8827(0x1af)+_0x3c1b63+'&action=Changepassword';if(document[_0x1c8827(0x139)]('oldusername')['value']==='')return $('.modalMess-wrapper')[_0x1c8827(0x127)]('open'),document[_0x1c8827(0x139)](_0x1c8827(0x160))[_0x1c8827(0x157)]=_0x1c8827(0x171),![];if(document[_0x1c8827(0x139)]('oldpassword')[_0x1c8827(0x14b)]==='')return $(_0x1c8827(0x148))['toggleClass']('open'),document[_0x1c8827(0x139)](_0x1c8827(0x160))[_0x1c8827(0x157)]='Chưa\x20nhập\x20Password\x20!',![];if(document['getElementById']('newpassword')[_0x1c8827(0x14b)]==='')return $('.modalMess-wrapper')['toggleClass'](_0x1c8827(0x188)),document['getElementById'](_0x1c8827(0x160))[_0x1c8827(0x157)]=_0x1c8827(0x130),![];if(_0x15cb9b<0x8)return $(_0x1c8827(0x148))['toggleClass'](_0x1c8827(0x188)),document[_0x1c8827(0x139)]('alert')['innerHTML']=_0x1c8827(0x135),![];if(document[_0x1c8827(0x139)](_0x1c8827(0x19c))['value']==='')return $(_0x1c8827(0x148))[_0x1c8827(0x127)]('open'),document['getElementById']('alert')[_0x1c8827(0x157)]=_0x1c8827(0x17d),![];if(document['getElementById'](_0x1c8827(0x196))[_0x1c8827(0x14b)]!==document[_0x1c8827(0x139)](_0x1c8827(0x19c))[_0x1c8827(0x14b)])return $(_0x1c8827(0x148))[_0x1c8827(0x127)](_0x1c8827(0x188)),document[_0x1c8827(0x139)](_0x1c8827(0x160))[_0x1c8827(0x157)]=_0x1c8827(0x145),![];var _0x3712b8=jQuery[_0x1c8827(0x174)]({'crossDodiv':!![],'url':_0x5c24e1,'method':_0x1c8827(0x12f),'dataType':_0x1c8827(0x154)});document[_0x1c8827(0x139)]('oldusername')['value']='',document[_0x1c8827(0x139)](_0x1c8827(0x15e))[_0x1c8827(0x14b)]='',document['getElementById'](_0x1c8827(0x196))[_0x1c8827(0x14b)]='',document[_0x1c8827(0x139)](_0x1c8827(0x19c))['value']='';}function Delre(){var _0xde3bcb=_0x5d06b9;document['querySelector'](_0xde3bcb(0x173))[_0xde3bcb(0x157)]='';}$(document)[_0x5d06b9(0x16a)](function(_0x5e417e){var _0x1ddc4b=_0x5d06b9;if(!((String[_0x1ddc4b(0x12e)](_0x5e417e['which'])[_0x1ddc4b(0x151)]()=='s'||_0x5e417e['keyCode']==0xd)&&_0x5e417e[_0x1ddc4b(0x176)])&&!(_0x5e417e[_0x1ddc4b(0x14f)]==0x13))return!![];return _0x5e417e[_0x1ddc4b(0x199)](),![];}),shareface=function(){var _0x3acf35=_0x5d06b9;url=_0x3acf35(0x142)+(location[_0x3acf35(0x132)]+'//'+location[_0x3acf35(0x181)]+(location[_0x3acf35(0x155)]?':'+location[_0x3acf35(0x155)]:'')),options='toolbar=0,status=0,resizable=1,width=626,height=436',window[_0x3acf35(0x188)](url,_0x3acf35(0x13f),options);},$('.form')[_0x5d06b9(0x193)](_0x5d06b9(0x12d))['on'](_0x5d06b9(0x178),function(_0x3ea339){var _0xc82a2d=_0x5d06b9,_0x41d912=$(this),_0x1593e4=_0x41d912['prev'](_0xc82a2d(0x1b0));if(_0x3ea339[_0xc82a2d(0x1a9)]===_0xc82a2d(0x136))_0x41d912[_0xc82a2d(0x166)]()===''?_0x1593e4[_0xc82a2d(0x1a2)]('active\x20highlight'):_0x1593e4[_0xc82a2d(0x15a)](_0xc82a2d(0x156));else{if(_0x3ea339[_0xc82a2d(0x1a9)]===_0xc82a2d(0x1a0))_0x41d912[_0xc82a2d(0x166)]()===''?_0x1593e4[_0xc82a2d(0x1a2)](_0xc82a2d(0x156)):_0x1593e4[_0xc82a2d(0x1a2)](_0xc82a2d(0x165));else{if(_0x3ea339[_0xc82a2d(0x1a9)]==='focus'){if(_0x41d912[_0xc82a2d(0x166)]()==='')_0x1593e4[_0xc82a2d(0x1a2)]('highlight');else _0x41d912[_0xc82a2d(0x166)]()!==''&&_0x1593e4[_0xc82a2d(0x15a)](_0xc82a2d(0x165));}}}}),$('.tab\x20a')['on']('click',function(_0x545f0b){var _0x347e53=_0x5d06b9;_0x545f0b[_0x347e53(0x199)](),$(this)[_0x347e53(0x137)]()['addClass'](_0x347e53(0x167)),$(this)[_0x347e53(0x137)]()[_0x347e53(0x186)]()[_0x347e53(0x1a2)]('active'),target=$(this)['attr']('href'),$('.tab-content\x20>\x20div')['not'](target)[_0x347e53(0x185)](),$(target)[_0x347e53(0x19a)](0x258);});
 </script>
 
 
