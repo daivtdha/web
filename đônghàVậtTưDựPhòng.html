@@ -2636,8 +2636,10 @@ var overlay_resultme = document.getElementById("dialog_result");
 
 function Search_dialog_result(){
 
+alert(document.getElementById("ngay").value);
+alert(getPart2(document.getElementById("ngay").value));	
 			if (getPart2(document.getElementById("ngay").value) == "đã") {
-//alert(document.getElementById("ngay").value);
+
 			show_dialog_result();			  
 			  
 			} else if (getPart2(document.getElementById("ngay").value) == "lòng") {
