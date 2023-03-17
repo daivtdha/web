@@ -21,1313 +21,6 @@
 <style>
 
 
-/* Layout helpers
-----------------------------------*/
-.ui-helper-hidden {
-	display: none;
-}
-.ui-helper-hidden-accessible {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-.ui-helper-reset {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	line-height: 1.3;
-	text-decoration: none;
-	font-size: 100%;
-	list-style: none;
-}
-.ui-helper-clearfix:before,
-.ui-helper-clearfix:after {
-	content: "";
-	display: table;
-	border-collapse: collapse;
-}
-.ui-helper-clearfix:after {
-	clear: both;
-}
-.ui-helper-zfix {
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	position: absolute;
-	opacity: 0;
-	filter:Alpha(Opacity=0); /* support: IE8 */
-}
-
-.ui-front {
-	z-index: 100;
-}
-
-
-/* Interaction Cues
-----------------------------------*/
-.ui-state-disabled {
-	cursor: default !important;
-	pointer-events: none;
-}
-
-
-/* Icons
-----------------------------------*/
-.ui-icon {
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: -.25em;
-	position: relative;
-	text-indent: -99999px;
-	overflow: hidden;
-	background-repeat: no-repeat;
-}
-
-.ui-widget-icon-block {
-	left: 50%;
-	margin-left: -8px;
-	display: block;
-}
-
-/* Misc visuals
-----------------------------------*/
-
-/* Overlays */
-.ui-widget-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.ui-accordion .ui-accordion-header {
-	display: block;
-	cursor: pointer;
-	position: relative;
-	margin: 1px 0 0 0;
-	padding: .5em .5em .5em .7em;
-	font-size: 100%;
-}
-.ui-accordion .ui-accordion-content {
-	padding: 1em 1.2em;
-	border-top: 0;
-	overflow: auto;
-}
-.ui-autocomplete {
-	position: absolute;
-	top: 0;
-	left: 0;
-	cursor: default;
-}
-.ui-menu {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: block;
-	outline: 0;
-}
-.ui-menu .ui-menu {
-	position: absolute;
-}
-.ui-menu .ui-menu-item {
-	margin: 0;
-	cursor: pointer;
-	/* support: IE10, see #8844 */
-	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-}
-.ui-menu .ui-menu-item-wrapper {
-	position: relative;
-	padding: 3px 1em 3px .4em;
-}
-.ui-menu .ui-menu-divider {
-	margin: 5px 0;
-	height: 0;
-	font-size: 0;
-	line-height: 0;
-	border-width: 1px 0 0 0;
-}
-.ui-menu .ui-state-focus,
-.ui-menu .ui-state-active {
-	margin: -1px;
-}
-
-/* icon support */
-.ui-menu-icons {
-	position: relative;
-}
-.ui-menu-icons .ui-menu-item-wrapper {
-	padding-left: 2em;
-}
-
-/* left-aligned */
-.ui-menu .ui-icon {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: .2em;
-	margin: auto 0;
-}
-
-/* right-aligned */
-.ui-menu .ui-menu-icon {
-	left: auto;
-	right: 0;
-}
-.ui-button {
-	padding: .3em 1em;
-	display: inline-block;
-	position: relative;
-	line-height: normal;
-	margin-right: .1em;
-	cursor: pointer;
-	vertical-align: middle;
-	text-align: center;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
-	/* Support: IE <= 11 */
-	overflow: visible;
-}
-
-.ui-button,
-.ui-button:link,
-.ui-button:visited,
-.ui-button:hover,
-.ui-button:active {
-	text-decoration: none;
-}
-
-/* to make room for the icon, a width needs to be set here */
-.ui-button-icon-only {
-	width: 2em;
-	box-sizing: border-box;
-	text-indent: -9999px;
-	white-space: nowrap;
-}
-
-/* no icon support for input elements */
-input.ui-button.ui-button-icon-only {
-	text-indent: 0;
-}
-
-/* button icon element(s) */
-.ui-button-icon-only .ui-icon {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -8px;
-	margin-left: -8px;
-}
-
-.ui-button.ui-icon-notext .ui-icon {
-	padding: 0;
-	width: 2.1em;
-	height: 2.1em;
-	text-indent: -9999px;
-	white-space: nowrap;
-
-}
-
-input.ui-button.ui-icon-notext .ui-icon {
-	width: auto;
-	height: auto;
-	text-indent: 0;
-	white-space: normal;
-	padding: .4em 1em;
-}
-
-/* workarounds */
-/* Support: Firefox 5 - 40 */
-input.ui-button::-moz-focus-inner,
-button.ui-button::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-.ui-controlgroup {
-	vertical-align: middle;
-	display: inline-block;
-}
-.ui-controlgroup > .ui-controlgroup-item {
-	float: left;
-	margin-left: 0;
-	margin-right: 0;
-}
-.ui-controlgroup > .ui-controlgroup-item:focus,
-.ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
-	z-index: 9999;
-}
-.ui-controlgroup-vertical > .ui-controlgroup-item {
-	display: block;
-	float: none;
-	width: 100%;
-	margin-top: 0;
-	margin-bottom: 0;
-	text-align: left;
-}
-.ui-controlgroup-vertical .ui-controlgroup-item {
-	box-sizing: border-box;
-}
-.ui-controlgroup .ui-controlgroup-label {
-	padding: .4em 1em;
-}
-.ui-controlgroup .ui-controlgroup-label span {
-	font-size: 80%;
-}
-.ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
-	border-left: none;
-}
-.ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
-	border-top: none;
-}
-.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
-	border-right: none;
-}
-.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
-	border-bottom: none;
-}
-
-/* Spinner specific style fixes */
-.ui-controlgroup-vertical .ui-spinner-input {
-
-	/* Support: IE8 only, Android < 4.4 only */
-	width: 75%;
-	width: calc( 100% - 2.4em );
-}
-.ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
-	border-top-style: solid;
-}
-
-.ui-checkboxradio-label .ui-icon-background {
-	box-shadow: inset 1px 1px 1px #ccc;
-	border-radius: .12em;
-	border: none;
-}
-.ui-checkboxradio-radio-label .ui-icon-background {
-	width: 16px;
-	height: 16px;
-	border-radius: 1em;
-	overflow: visible;
-	border: none;
-}
-.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
-.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
-	background-image: none;
-	width: 8px;
-	height: 8px;
-	border-width: 4px;
-	border-style: solid;
-}
-.ui-checkboxradio-disabled {
-	pointer-events: none;
-}
-.ui-datepicker {
-	width: 17em;
-	padding: .2em .2em 0;
-	display: none;
-}
-.ui-datepicker .ui-datepicker-header {
-	position: relative;
-	padding: .2em 0;
-}
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-	position: absolute;
-	top: 2px;
-	width: 1.8em;
-	height: 1.8em;
-}
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
-	top: 1px;
-}
-.ui-datepicker .ui-datepicker-prev {
-	left: 2px;
-}
-.ui-datepicker .ui-datepicker-next {
-	right: 2px;
-}
-.ui-datepicker .ui-datepicker-prev-hover {
-	left: 1px;
-}
-.ui-datepicker .ui-datepicker-next-hover {
-	right: 1px;
-}
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span {
-	display: block;
-	position: absolute;
-	left: 50%;
-	margin-left: -8px;
-	top: 50%;
-	margin-top: -8px;
-}
-.ui-datepicker .ui-datepicker-title {
-	margin: 0 2.3em;
-	line-height: 1.8em;
-	text-align: center;
-}
-.ui-datepicker .ui-datepicker-title select {
-	font-size: 1em;
-	margin: 1px 0;
-}
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year {
-	width: 45%;
-}
-.ui-datepicker table {
-	width: 100%;
-	font-size: .9em;
-	border-collapse: collapse;
-	margin: 0 0 .4em;
-}
-.ui-datepicker th {
-	padding: .7em .3em;
-	text-align: center;
-	font-weight: bold;
-	border: 0;
-}
-.ui-datepicker td {
-	border: 0;
-	padding: 1px;
-}
-.ui-datepicker td span,
-.ui-datepicker td a {
-	display: block;
-	padding: .2em;
-	text-align: right;
-	text-decoration: none;
-}
-.ui-datepicker .ui-datepicker-buttonpane {
-	background-image: none;
-	margin: .7em 0 0 0;
-	padding: 0 .2em;
-	border-left: 0;
-	border-right: 0;
-	border-bottom: 0;
-}
-.ui-datepicker .ui-datepicker-buttonpane button {
-	float: right;
-	margin: .5em .2em .4em;
-	cursor: pointer;
-	padding: .2em .6em .3em .6em;
-	width: auto;
-	overflow: visible;
-}
-.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
-	float: left;
-}
-
-/* with multiple calendars */
-.ui-datepicker.ui-datepicker-multi {
-	width: auto;
-}
-.ui-datepicker-multi .ui-datepicker-group {
-	float: left;
-}
-.ui-datepicker-multi .ui-datepicker-group table {
-	width: 95%;
-	margin: 0 auto .4em;
-}
-.ui-datepicker-multi-2 .ui-datepicker-group {
-	width: 50%;
-}
-.ui-datepicker-multi-3 .ui-datepicker-group {
-	width: 33.3%;
-}
-.ui-datepicker-multi-4 .ui-datepicker-group {
-	width: 25%;
-}
-.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
-.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
-	border-left-width: 0;
-}
-.ui-datepicker-multi .ui-datepicker-buttonpane {
-	clear: left;
-}
-.ui-datepicker-row-break {
-	clear: both;
-	width: 100%;
-	font-size: 0;
-}
-
-/* RTL support */
-.ui-datepicker-rtl {
-	direction: rtl;
-}
-.ui-datepicker-rtl .ui-datepicker-prev {
-	right: 2px;
-	left: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-next {
-	left: 2px;
-	right: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-prev:hover {
-	right: 1px;
-	left: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-next:hover {
-	left: 1px;
-	right: auto;
-}
-.ui-datepicker-rtl .ui-datepicker-buttonpane {
-	clear: right;
-}
-.ui-datepicker-rtl .ui-datepicker-buttonpane button {
-	float: left;
-}
-.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
-.ui-datepicker-rtl .ui-datepicker-group {
-	float: right;
-}
-.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
-.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
-	border-right-width: 0;
-	border-left-width: 1px;
-}
-
-/* Icons */
-.ui-datepicker .ui-icon {
-	display: block;
-	text-indent: -99999px;
-	overflow: hidden;
-	background-repeat: no-repeat;
-	left: .5em;
-	top: .3em;
-}
-.ui-dialog {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: .2em;
-	outline: 0;
-}
-.ui-dialog .ui-dialog-titlebar {
-	padding: .4em 1em;
-	position: relative;
-}
-.ui-dialog .ui-dialog-title {
-	float: left;
-	margin: .1em 0;
-	white-space: nowrap;
-	width: 90%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.ui-dialog .ui-dialog-titlebar-close {
-	position: absolute;
-	right: .3em;
-	top: 50%;
-	width: 17px;
-	margin: -10px 0 0 0;
-	padding: 1px;
-	height: 17px;
-}
-.ui-dialog .ui-dialog-content {
-	position: relative;
-	border: 0;
-	padding: .5em 1em;
-	background: none;
-	overflow: auto;
-}
-.ui-dialog .ui-dialog-buttonpane {
-	text-align: left;
-	border-width: 1px 0 0 0;
-	background-image: none;
-	margin-top: .5em;
-	padding: .3em 1em .5em .4em;
-}
-.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
-	float: right;
-}
-.ui-dialog .ui-dialog-buttonpane button {
-	margin: .5em .4em .5em 0;
-	cursor: pointer;
-}
-.ui-dialog .ui-resizable-n {
-	height: 2px;
-	top: 0;
-}
-.ui-dialog .ui-resizable-e {
-	width: 2px;
-	right: 0;
-}
-.ui-dialog .ui-resizable-s {
-	height: 2px;
-	bottom: 0;
-}
-.ui-dialog .ui-resizable-w {
-	width: 2px;
-	left: 0;
-}
-.ui-dialog .ui-resizable-se,
-.ui-dialog .ui-resizable-sw,
-.ui-dialog .ui-resizable-ne,
-.ui-dialog .ui-resizable-nw {
-	width: 7px;
-	height: 7px;
-}
-.ui-dialog .ui-resizable-se {
-	right: 0;
-	bottom: 0;
-}
-.ui-dialog .ui-resizable-sw {
-	left: 0;
-	bottom: 0;
-}
-.ui-dialog .ui-resizable-ne {
-	right: 0;
-	top: 0;
-}
-.ui-dialog .ui-resizable-nw {
-	left: 0;
-	top: 0;
-}
-.ui-draggable .ui-dialog-titlebar {
-	cursor: move;
-}
-.ui-draggable-handle {
-	-ms-touch-action: none;
-	touch-action: none;
-}
-.ui-resizable {
-	position: relative;
-}
-.ui-resizable-handle {
-	position: absolute;
-	font-size: 0.1px;
-	display: block;
-	-ms-touch-action: none;
-	touch-action: none;
-}
-.ui-resizable-disabled .ui-resizable-handle,
-.ui-resizable-autohide .ui-resizable-handle {
-	display: none;
-}
-.ui-resizable-n {
-	cursor: n-resize;
-	height: 7px;
-	width: 100%;
-	top: -5px;
-	left: 0;
-}
-.ui-resizable-s {
-	cursor: s-resize;
-	height: 7px;
-	width: 100%;
-	bottom: -5px;
-	left: 0;
-}
-.ui-resizable-e {
-	cursor: e-resize;
-	width: 7px;
-	right: -5px;
-	top: 0;
-	height: 100%;
-}
-.ui-resizable-w {
-	cursor: w-resize;
-	width: 7px;
-	left: -5px;
-	top: 0;
-	height: 100%;
-}
-.ui-resizable-se {
-	cursor: se-resize;
-	width: 12px;
-	height: 12px;
-	right: 1px;
-	bottom: 1px;
-}
-.ui-resizable-sw {
-	cursor: sw-resize;
-	width: 9px;
-	height: 9px;
-	left: -5px;
-	bottom: -5px;
-}
-.ui-resizable-nw {
-	cursor: nw-resize;
-	width: 9px;
-	height: 9px;
-	left: -5px;
-	top: -5px;
-}
-.ui-resizable-ne {
-	cursor: ne-resize;
-	width: 9px;
-	height: 9px;
-	right: -5px;
-	top: -5px;
-}
-.ui-progressbar {
-	height: 2em;
-	text-align: left;
-	overflow: hidden;
-}
-.ui-progressbar .ui-progressbar-value {
-	margin: -1px;
-	height: 100%;
-}
-.ui-progressbar .ui-progressbar-overlay {
-	background: url("data:image/gif;base64,R0lGODlhKAAoAIABAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAQABACwAAAAAKAAoAAACkYwNqXrdC52DS06a7MFZI+4FHBCKoDeWKXqymPqGqxvJrXZbMx7Ttc+w9XgU2FB3lOyQRWET2IFGiU9m1frDVpxZZc6bfHwv4c1YXP6k1Vdy292Fb6UkuvFtXpvWSzA+HycXJHUXiGYIiMg2R6W459gnWGfHNdjIqDWVqemH2ekpObkpOlppWUqZiqr6edqqWQAAIfkECQEAAQAsAAAAACgAKAAAApSMgZnGfaqcg1E2uuzDmmHUBR8Qil95hiPKqWn3aqtLsS18y7G1SzNeowWBENtQd+T1JktP05nzPTdJZlR6vUxNWWjV+vUWhWNkWFwxl9VpZRedYcflIOLafaa28XdsH/ynlcc1uPVDZxQIR0K25+cICCmoqCe5mGhZOfeYSUh5yJcJyrkZWWpaR8doJ2o4NYq62lAAACH5BAkBAAEALAAAAAAoACgAAAKVDI4Yy22ZnINRNqosw0Bv7i1gyHUkFj7oSaWlu3ovC8GxNso5fluz3qLVhBVeT/Lz7ZTHyxL5dDalQWPVOsQWtRnuwXaFTj9jVVh8pma9JjZ4zYSj5ZOyma7uuolffh+IR5aW97cHuBUXKGKXlKjn+DiHWMcYJah4N0lYCMlJOXipGRr5qdgoSTrqWSq6WFl2ypoaUAAAIfkECQEAAQAsAAAAACgAKAAAApaEb6HLgd/iO7FNWtcFWe+ufODGjRfoiJ2akShbueb0wtI50zm02pbvwfWEMWBQ1zKGlLIhskiEPm9R6vRXxV4ZzWT2yHOGpWMyorblKlNp8HmHEb/lCXjcW7bmtXP8Xt229OVWR1fod2eWqNfHuMjXCPkIGNileOiImVmCOEmoSfn3yXlJWmoHGhqp6ilYuWYpmTqKUgAAIfkECQEAAQAsAAAAACgAKAAAApiEH6kb58biQ3FNWtMFWW3eNVcojuFGfqnZqSebuS06w5V80/X02pKe8zFwP6EFWOT1lDFk8rGERh1TTNOocQ61Hm4Xm2VexUHpzjymViHrFbiELsefVrn6XKfnt2Q9G/+Xdie499XHd2g4h7ioOGhXGJboGAnXSBnoBwKYyfioubZJ2Hn0RuRZaflZOil56Zp6iioKSXpUAAAh+QQJAQABACwAAAAAKAAoAAACkoQRqRvnxuI7kU1a1UU5bd5tnSeOZXhmn5lWK3qNTWvRdQxP8qvaC+/yaYQzXO7BMvaUEmJRd3TsiMAgswmNYrSgZdYrTX6tSHGZO73ezuAw2uxuQ+BbeZfMxsexY35+/Qe4J1inV0g4x3WHuMhIl2jXOKT2Q+VU5fgoSUI52VfZyfkJGkha6jmY+aaYdirq+lQAACH5BAkBAAEALAAAAAAoACgAAAKWBIKpYe0L3YNKToqswUlvznigd4wiR4KhZrKt9Upqip61i9E3vMvxRdHlbEFiEXfk9YARYxOZZD6VQ2pUunBmtRXo1Lf8hMVVcNl8JafV38aM2/Fu5V16Bn63r6xt97j09+MXSFi4BniGFae3hzbH9+hYBzkpuUh5aZmHuanZOZgIuvbGiNeomCnaxxap2upaCZsq+1kAACH5BAkBAAEALAAAAAAoACgAAAKXjI8By5zf4kOxTVrXNVlv1X0d8IGZGKLnNpYtm8Lr9cqVeuOSvfOW79D9aDHizNhDJidFZhNydEahOaDH6nomtJjp1tutKoNWkvA6JqfRVLHU/QUfau9l2x7G54d1fl995xcIGAdXqMfBNadoYrhH+Mg2KBlpVpbluCiXmMnZ2Sh4GBqJ+ckIOqqJ6LmKSllZmsoq6wpQAAAh+QQJAQABACwAAAAAKAAoAAAClYx/oLvoxuJDkU1a1YUZbJ59nSd2ZXhWqbRa2/gF8Gu2DY3iqs7yrq+xBYEkYvFSM8aSSObE+ZgRl1BHFZNr7pRCavZ5BW2142hY3AN/zWtsmf12p9XxxFl2lpLn1rseztfXZjdIWIf2s5dItwjYKBgo9yg5pHgzJXTEeGlZuenpyPmpGQoKOWkYmSpaSnqKileI2FAAACH5BAkBAAEALAAAAAAoACgAAAKVjB+gu+jG4kORTVrVhRlsnn2dJ3ZleFaptFrb+CXmO9OozeL5VfP99HvAWhpiUdcwkpBH3825AwYdU8xTqlLGhtCosArKMpvfa1mMRae9VvWZfeB2XfPkeLmm18lUcBj+p5dnN8jXZ3YIGEhYuOUn45aoCDkp16hl5IjYJvjWKcnoGQpqyPlpOhr3aElaqrq56Bq7VAAAOw==");
-	height: 100%;
-	filter: alpha(opacity=25); /* support: IE8 */
-	opacity: 0.25;
-}
-.ui-progressbar-indeterminate .ui-progressbar-value {
-	background-image: none;
-}
-.ui-selectable {
-	-ms-touch-action: none;
-	touch-action: none;
-}
-.ui-selectable-helper {
-	position: absolute;
-	z-index: 100;
-	border: 1px dotted black;
-}
-.ui-selectmenu-menu {
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-}
-.ui-selectmenu-menu .ui-menu {
-	overflow: auto;
-	overflow-x: hidden;
-	padding-bottom: 1px;
-}
-.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 1.5;
-	padding: 2px 0.4em;
-	margin: 0.5em 0 0 0;
-	height: auto;
-	border: 0;
-}
-.ui-selectmenu-open {
-	display: block;
-}
-.ui-selectmenu-text {
-	display: block;
-	margin-right: 20px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.ui-selectmenu-button.ui-button {
-	text-align: left;
-	white-space: nowrap;
-	width: 14em;
-}
-.ui-selectmenu-icon.ui-icon {
-	float: right;
-	margin-top: 0;
-}
-.ui-slider {
-	position: relative;
-	text-align: left;
-}
-.ui-slider .ui-slider-handle {
-	position: absolute;
-	z-index: 2;
-	width: 1.2em;
-	height: 1.2em;
-	cursor: default;
-	-ms-touch-action: none;
-	touch-action: none;
-}
-.ui-slider .ui-slider-range {
-	position: absolute;
-	z-index: 1;
-	font-size: .7em;
-	display: block;
-	border: 0;
-	background-position: 0 0;
-}
-
-/* support: IE8 - See #6727 */
-.ui-slider.ui-state-disabled .ui-slider-handle,
-.ui-slider.ui-state-disabled .ui-slider-range {
-	filter: inherit;
-}
-
-.ui-slider-horizontal {
-	height: .8em;
-}
-.ui-slider-horizontal .ui-slider-handle {
-	top: -.3em;
-	margin-left: -.6em;
-}
-.ui-slider-horizontal .ui-slider-range {
-	top: 0;
-	height: 100%;
-}
-.ui-slider-horizontal .ui-slider-range-min {
-	left: 0;
-}
-.ui-slider-horizontal .ui-slider-range-max {
-	right: 0;
-}
-
-.ui-slider-vertical {
-	width: .8em;
-	height: 100px;
-}
-.ui-slider-vertical .ui-slider-handle {
-	left: -.3em;
-	margin-left: 0;
-	margin-bottom: -.6em;
-}
-.ui-slider-vertical .ui-slider-range {
-	left: 0;
-	width: 100%;
-}
-.ui-slider-vertical .ui-slider-range-min {
-	bottom: 0;
-}
-.ui-slider-vertical .ui-slider-range-max {
-	top: 0;
-}
-.ui-sortable-handle {
-	-ms-touch-action: none;
-	touch-action: none;
-}
-.ui-spinner {
-	position: relative;
-	display: inline-block;
-	overflow: hidden;
-	padding: 0;
-	vertical-align: middle;
-}
-.ui-spinner-input {
-	border: none;
-	background: none;
-	color: inherit;
-	padding: .222em 0;
-	margin: .2em 0;
-	vertical-align: middle;
-	margin-left: .4em;
-	margin-right: 2em;
-}
-.ui-spinner-button {
-	width: 1.6em;
-	height: 50%;
-	font-size: .5em;
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	position: absolute;
-	cursor: default;
-	display: block;
-	overflow: hidden;
-	right: 0;
-}
-/* more specificity required here to override default borders */
-.ui-spinner a.ui-spinner-button {
-	border-top-style: none;
-	border-bottom-style: none;
-	border-right-style: none;
-}
-.ui-spinner-up {
-	top: 0;
-}
-.ui-spinner-down {
-	bottom: 0;
-}
-.ui-tabs {
-	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
-}
-.ui-tabs .ui-tabs-nav {
-	margin: 0;
-	padding: .2em .2em 0;
-}
-.ui-tabs .ui-tabs-nav li {
-	list-style: none;
-	float: left;
-	position: relative;
-	top: 0;
-	margin: 1px .2em 0 0;
-	border-bottom-width: 0;
-	padding: 0;
-	white-space: nowrap;
-}
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-	float: left;
-	padding: .5em 1em;
-	text-decoration: none;
-}
-.ui-tabs .ui-tabs-nav li.ui-tabs-active {
-	margin-bottom: -1px;
-	padding-bottom: 1px;
-}
-.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
-.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
-	cursor: text;
-}
-.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
-	cursor: pointer;
-}
-.ui-tabs .ui-tabs-panel {
-	display: block;
-	border-width: 0;
-	padding: 1em 1.4em;
-	background: none;
-}
-.ui-tooltip {
-	padding: 8px;
-	position: absolute;
-	z-index: 9999;
-	max-width: 300px;
-}
-body .ui-tooltip {
-	border-width: 2px;
-}
-/* Component containers
-----------------------------------*/
-.ui-widget {
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 1em;
-}
-.ui-widget .ui-widget {
-	font-size: 1em;
-}
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 1em;
-}
-.ui-widget.ui-widget-content {
-	border: 3px solid #006699;
-}
-.ui-widget-content {
-	border: 2px solid #006699;
-	background: #ffffff;
-	color: #333333;
-}
-.ui-widget-content a {
-	color: #333333;
-}
-.ui-widget-header {
-	border: 0.5px solid white;
-	background: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 );
-	color: #333333;
-	font-weight: bold;
-}
-.ui-widget-header a {
-	color: #333333;
-}
-
-/* Interaction states
-----------------------------------*/
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-button,
-
-/* We use html here because we need a greater specificity to make sure disabled
-works properly when clicked or hovered */
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
-	border: 1px solid #c5c5c5;
-	background: #f6f6f6;
-	font-weight: normal;
-	color: #454545;
-}
-.ui-state-default a,
-.ui-state-default a:link,
-.ui-state-default a:visited,
-a.ui-button,
-a:link.ui-button,
-a:visited.ui-button,
-.ui-button {
-	color: #454545;
-	text-decoration: none;
-}
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus,
-.ui-button:hover,
-.ui-button:focus {
-	border: 1px solid #006699;
-	background: #ededed;
-	font-weight: normal;
-	color:#006699;
-}
-.ui-state-hover a,
-.ui-state-hover a:hover,
-.ui-state-hover a:link,
-.ui-state-hover a:visited,
-.ui-state-focus a,
-.ui-state-focus a:hover,
-.ui-state-focus a:link,
-.ui-state-focus a:visited,
-a.ui-button:hover,
-a.ui-button:focus {
-	color: #2b2b2b;
-	text-decoration: none;
-}
-
-.ui-visual-focus {
-	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-	border: 1px solid #003eff;
-	background:#006699;
-	font-weight: normal;
-	color: #ffffff;
-}
-.ui-icon-background,
-.ui-state-active .ui-icon-background {
-	border: #003eff;
-	background-color: #ffffff;
-}
-.ui-state-active a,
-.ui-state-active a:link,
-.ui-state-active a:visited {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-/* Interaction Cues
-----------------------------------*/
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
-	border: 1px solid #dad55e;
-	background: #fffa90;
-	color: #777620;
-}
-.ui-state-checked {
-	border: 1px solid #dad55e;
-	background: #fffa90;
-}
-.ui-state-highlight a,
-.ui-widget-content .ui-state-highlight a,
-.ui-widget-header .ui-state-highlight a {
-	color: #777620;
-}
-.ui-state-error,
-.ui-widget-content .ui-state-error,
-.ui-widget-header .ui-state-error {
-	border: 1px solid #f1a899;
-	background: #fddfdf;
-	color: #5f3f3f;
-}
-.ui-state-error a,
-.ui-widget-content .ui-state-error a,
-.ui-widget-header .ui-state-error a {
-	color: #5f3f3f;
-}
-.ui-state-error-text,
-.ui-widget-content .ui-state-error-text,
-.ui-widget-header .ui-state-error-text {
-	color: #5f3f3f;
-}
-.ui-priority-primary,
-.ui-widget-content .ui-priority-primary,
-.ui-widget-header .ui-priority-primary {
-	font-weight: bold;
-}
-.ui-priority-secondary,
-.ui-widget-content .ui-priority-secondary,
-.ui-widget-header .ui-priority-secondary {
-	opacity: .7;
-	filter:Alpha(Opacity=70); /* support: IE8 */
-	font-weight: normal;
-}
-.ui-state-disabled,
-.ui-widget-content .ui-state-disabled,
-.ui-widget-header .ui-state-disabled {
-	opacity: .35;
-	filter:Alpha(Opacity=35); /* support: IE8 */
-	background-image: none;
-}
-.ui-state-disabled .ui-icon {
-	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
-}
-
-/* Icons
-----------------------------------*/
-
-/* states and images */
-.ui-icon {
-	width: 16px;
-	height: 16px;
-}
-.ui-icon,
-.ui-widget-content .ui-icon {
-	background-image: url("images/ui-icons_444444_256x240.png");
-}
-.ui-widget-header .ui-icon {
-	background-image: url("images/ui-icons_444444_256x240.png");
-}
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon,
-.ui-button:hover .ui-icon,
-.ui-button:focus .ui-icon {
-	background-image: url("images/ui-icons_555555_256x240.png");
-}
-.ui-state-active .ui-icon,
-.ui-button:active .ui-icon {
-	background-image: url("images/ui-icons_ffffff_256x240.png");
-}
-.ui-state-highlight .ui-icon,
-.ui-button .ui-state-highlight.ui-icon {
-	background-image: url("images/ui-icons_777620_256x240.png");
-}
-.ui-state-error .ui-icon,
-.ui-state-error-text .ui-icon {
-	background-image: url("images/ui-icons_cc0000_256x240.png");
-}
-.ui-button .ui-icon {
-	background-image: url("images/ui-icons_777777_256x240.png");
-}
-
-/* positioning */
-.ui-icon-blank { background-position: 16px 16px; }
-.ui-icon-caret-1-n { background-position: 0 0; }
-.ui-icon-caret-1-ne { background-position: -16px 0; }
-.ui-icon-caret-1-e { background-position: -32px 0; }
-.ui-icon-caret-1-se { background-position: -48px 0; }
-.ui-icon-caret-1-s { background-position: -65px 0; }
-.ui-icon-caret-1-sw { background-position: -80px 0; }
-.ui-icon-caret-1-w { background-position: -96px 0; }
-.ui-icon-caret-1-nw { background-position: -112px 0; }
-.ui-icon-caret-2-n-s { background-position: -128px 0; }
-.ui-icon-caret-2-e-w { background-position: -144px 0; }
-.ui-icon-triangle-1-n { background-position: 0 -16px; }
-.ui-icon-triangle-1-ne { background-position: -16px -16px; }
-.ui-icon-triangle-1-e { background-position: -32px -16px; }
-.ui-icon-triangle-1-se { background-position: -48px -16px; }
-.ui-icon-triangle-1-s { background-position: -65px -16px; }
-.ui-icon-triangle-1-sw { background-position: -80px -16px; }
-.ui-icon-triangle-1-w { background-position: -96px -16px; }
-.ui-icon-triangle-1-nw { background-position: -112px -16px; }
-.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
-.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
-.ui-icon-arrow-1-n { background-position: 0 -32px; }
-.ui-icon-arrow-1-ne { background-position: -16px -32px; }
-.ui-icon-arrow-1-e { background-position: -32px -32px; }
-.ui-icon-arrow-1-se { background-position: -48px -32px; }
-.ui-icon-arrow-1-s { background-position: -65px -32px; }
-.ui-icon-arrow-1-sw { background-position: -80px -32px; }
-.ui-icon-arrow-1-w { background-position: -96px -32px; }
-.ui-icon-arrow-1-nw { background-position: -112px -32px; }
-.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
-.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
-.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
-.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
-.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
-.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
-.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
-.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
-.ui-icon-arrowthick-1-n { background-position: 1px -48px; }
-.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
-.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
-.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
-.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
-.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
-.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
-.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
-.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
-.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
-.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
-.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
-.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
-.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
-.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
-.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
-.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
-.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
-.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
-.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
-.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
-.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
-.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
-.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
-.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
-.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
-.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
-.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
-.ui-icon-arrow-4 { background-position: 0 -80px; }
-.ui-icon-arrow-4-diag { background-position: -16px -80px; }
-.ui-icon-extlink { background-position: -32px -80px; }
-.ui-icon-newwin { background-position: -48px -80px; }
-.ui-icon-refresh { background-position: -64px -80px; }
-.ui-icon-shuffle { background-position: -80px -80px; }
-.ui-icon-transfer-e-w { background-position: -96px -80px; }
-.ui-icon-transferthick-e-w { background-position: -112px -80px; }
-.ui-icon-folder-collapsed { background-position: 0 -96px; }
-.ui-icon-folder-open { background-position: -16px -96px; }
-.ui-icon-document { background-position: -32px -96px; }
-.ui-icon-document-b { background-position: -48px -96px; }
-.ui-icon-note { background-position: -64px -96px; }
-.ui-icon-mail-closed { background-position: -80px -96px; }
-.ui-icon-mail-open { background-position: -96px -96px; }
-.ui-icon-suitcase { background-position: -112px -96px; }
-.ui-icon-comment { background-position: -128px -96px; }
-.ui-icon-person { background-position: -144px -96px; }
-.ui-icon-print { background-position: -160px -96px; }
-.ui-icon-trash { background-position: -176px -96px; }
-.ui-icon-locked { background-position: -192px -96px; }
-.ui-icon-unlocked { background-position: -208px -96px; }
-.ui-icon-bookmark { background-position: -224px -96px; }
-.ui-icon-tag { background-position: -240px -96px; }
-.ui-icon-home { background-position: 0 -112px; }
-.ui-icon-flag { background-position: -16px -112px; }
-.ui-icon-calendar { background-position: -32px -112px; }
-.ui-icon-cart { background-position: -48px -112px; }
-.ui-icon-pencil { background-position: -64px -112px; }
-.ui-icon-clock { background-position: -80px -112px; }
-.ui-icon-disk { background-position: -96px -112px; }
-.ui-icon-calculator { background-position: -112px -112px; }
-.ui-icon-zoomin { background-position: -128px -112px; }
-.ui-icon-zoomout { background-position: -144px -112px; }
-.ui-icon-search { background-position: -160px -112px; }
-.ui-icon-wrench { background-position: -176px -112px; }
-.ui-icon-gear { background-position: -192px -112px; }
-.ui-icon-heart { background-position: -208px -112px; }
-.ui-icon-star { background-position: -224px -112px; }
-.ui-icon-link { background-position: -240px -112px; }
-.ui-icon-cancel { background-position: 0 -128px; }
-.ui-icon-plus { background-position: -16px -128px; }
-.ui-icon-plusthick { background-position: -32px -128px; }
-.ui-icon-minus { background-position: -48px -128px; }
-.ui-icon-minusthick { background-position: -64px -128px; }
-.ui-icon-close { background-position: -80px -128px; }
-.ui-icon-closethick { background-position: -96px -128px; }
-.ui-icon-key { background-position: -112px -128px; }
-.ui-icon-lightbulb { background-position: -128px -128px; }
-.ui-icon-scissors { background-position: -144px -128px; }
-.ui-icon-clipboard { background-position: -160px -128px; }
-.ui-icon-copy { background-position: -176px -128px; }
-.ui-icon-contact { background-position: -192px -128px; }
-.ui-icon-image { background-position: -208px -128px; }
-.ui-icon-video { background-position: -224px -128px; }
-.ui-icon-script { background-position: -240px -128px; }
-.ui-icon-alert { background-position: 0 -144px; }
-.ui-icon-info { background-position: -16px -144px; }
-.ui-icon-notice { background-position: -32px -144px; }
-.ui-icon-help { background-position: -48px -144px; }
-.ui-icon-check { background-position: -64px -144px; }
-.ui-icon-bullet { background-position: -80px -144px; }
-.ui-icon-radio-on { background-position: -96px -144px; }
-.ui-icon-radio-off { background-position: -112px -144px; }
-.ui-icon-pin-w { background-position: -128px -144px; }
-.ui-icon-pin-s { background-position: -144px -144px; }
-.ui-icon-play { background-position: 0 -160px; }
-.ui-icon-pause { background-position: -16px -160px; }
-.ui-icon-seek-next { background-position: -32px -160px; }
-.ui-icon-seek-prev { background-position: -48px -160px; }
-.ui-icon-seek-end { background-position: -64px -160px; }
-.ui-icon-seek-start { background-position: -80px -160px; }
-/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
-.ui-icon-seek-first { background-position: -80px -160px; }
-.ui-icon-stop { background-position: -96px -160px; }
-.ui-icon-eject { background-position: -112px -160px; }
-.ui-icon-volume-off { background-position: -128px -160px; }
-.ui-icon-volume-on { background-position: -144px -160px; }
-.ui-icon-power { background-position: 0 -176px; }
-.ui-icon-signal-diag { background-position: -16px -176px; }
-.ui-icon-signal { background-position: -32px -176px; }
-.ui-icon-battery-0 { background-position: -48px -176px; }
-.ui-icon-battery-1 { background-position: -64px -176px; }
-.ui-icon-battery-2 { background-position: -80px -176px; }
-.ui-icon-battery-3 { background-position: -96px -176px; }
-.ui-icon-circle-plus { background-position: 0 -192px; }
-.ui-icon-circle-minus { background-position: -16px -192px; }
-.ui-icon-circle-close { background-position: -32px -192px; }
-.ui-icon-circle-triangle-e { background-position: -48px -192px; }
-.ui-icon-circle-triangle-s { background-position: -64px -192px; }
-.ui-icon-circle-triangle-w { background-position: -80px -192px; }
-.ui-icon-circle-triangle-n { background-position: -96px -192px; }
-.ui-icon-circle-arrow-e { background-position: -112px -192px; }
-.ui-icon-circle-arrow-s { background-position: -128px -192px; }
-.ui-icon-circle-arrow-w { background-position: -144px -192px; }
-.ui-icon-circle-arrow-n { background-position: -160px -192px; }
-.ui-icon-circle-zoomin { background-position: -176px -192px; }
-.ui-icon-circle-zoomout { background-position: -192px -192px; }
-.ui-icon-circle-check { background-position: -208px -192px; }
-.ui-icon-circlesmall-plus { background-position: 0 -208px; }
-.ui-icon-circlesmall-minus { background-position: -16px -208px; }
-.ui-icon-circlesmall-close { background-position: -32px -208px; }
-.ui-icon-squaresmall-plus { background-position: -48px -208px; }
-.ui-icon-squaresmall-minus { background-position: -64px -208px; }
-.ui-icon-squaresmall-close { background-position: -80px -208px; }
-.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
-.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
-.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
-.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
-.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
-.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
-
-
-/* Misc visuals
-----------------------------------*/
-
-/* Corner radius */
-.ui-corner-all,
-.ui-corner-top,
-.ui-corner-left,
-.ui-corner-tl {
-	border-top-left-radius: 3px;
-}
-.ui-corner-all,
-.ui-corner-top,
-.ui-corner-right,
-.ui-corner-tr {
-	border-top-right-radius: 3px;
-}
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-left,
-.ui-corner-bl {
-	border-bottom-left-radius: 3px;
-}
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-right,
-.ui-corner-br {
-	border-bottom-right-radius: 3px;
-}
-
-/* Overlays */
-.ui-widget-overlay {
-	background: #aaaaaa;
-	opacity: .3;
-	filter: Alpha(Opacity=30); /* support: IE8 */
-}
-.ui-widget-shadow {
-	-webkit-box-shadow: 0px 0px 5px #666666;
-	box-shadow: 0px 0px 5px #666666;
-}
-
-
 
 
 
@@ -1828,11 +521,93 @@ form .question label {
 	
 
 
+@media (max-width: 380px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
 
+  .question .id {
+	width:50px;
+	min-height:40px;
+	}
+ .question .Colum2 {
+	width:56px;
+	min-height:40px;
+	}
+.question .Colum3 {
+	width:122px;
+	min-height:40px;
+	}
+
+.question .Colum4 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum5 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum6 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum7 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum8 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum9 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum10 {
+	width:122px;
+	min-height:40px;
+	}
+.question .Colum11 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum12 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum13 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum14 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum15 {
+	width:122px;
+	min-height:40px;
+	}	
+
+ .question .Colum16 {
+	width:122px;
+	min-height:40px;
+	} 
+
+}
 
 
 @media (max-width: 600px) {
-
   .footer {
     font-size: 14px;
   }
@@ -2242,6 +1017,7 @@ form .question label {
   cursor: pointer;
 }
 
+
 .popup_id {
   width: 80%;
   padding: 15px;
@@ -2290,6 +1066,7 @@ form .question label {
   }
 }
 
+
 .popup_result {
   width: 80%;
   padding: 15px;
@@ -2337,9 +1114,9 @@ form .question label {
     margin-left: 33.33333%;
   }
 }
-	
-	
-	
+
+
+
 .id-btn {
   background-color:#006699;
   color: white;
@@ -2353,6 +1130,8 @@ form .question label {
   background-color:#015249;
   cursor: pointer;
 }
+
+
 		
 </style>
 
@@ -2431,7 +1210,8 @@ form .question label {
       <button class="id-btn btn-primary" id="confirm_id">OK</button>
     </div>
   </div>
-</div>	
+</div>
+
 
 <div class="overlay_result" id="dialog_result">
   <div class="popup_result">
@@ -2440,8 +1220,9 @@ form .question label {
       <button class="dialog-btn btn-primary" id="confirm_result">OK</button>
     </div>
   </div>
-</div>	
-	
+</div>
+
+
 <form>
 <fieldset>
 <legend id ="legend" align="center"> Bảng cập nhật   </legend>
@@ -2534,11 +1315,10 @@ form .question label {
 
   
 <div class="question2" align="center">
-<p type = "text" id="ngay" readonly hidden></p>
-<p type = "text" id="doma" value=""></p>
+<p type = "text" id="ngay" readonly></p>
 <p type = "text" id="ngay2" value="" readonly></p>
 <p type = "text" id="chonnavi" value="" readonly></p>
-	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold"hidden></p>
+	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold" hidden></p>
 	
 	<input type="button" class="button button1" id="btn-show-update" value="Cập nhật" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
 	
@@ -2626,9 +1406,6 @@ form .question label {
 
 
 
-<script>
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|main|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
-</script>
 
 <script>
 
@@ -2636,10 +1413,8 @@ var overlay_resultme = document.getElementById("dialog_result");
 
 function Search_dialog_result(){
 
-//alert(document.getElementById("ngay").value);
-//alert(getPart2(document.getElementById("ngay").value));	
 			if (getPart2(document.getElementById("ngay").value) == "đã") {
-
+//alert(document.getElementById("ngay").value);
 			show_dialog_result();			  
 			  
 			} else if (getPart2(document.getElementById("ngay").value) == "lòng") {
@@ -2661,13 +1436,1471 @@ function confirm_result() {
 	
     overlay_resultme.style.display = "none";
 	
-}	
-	
+}
+
 </script>
 
+<script>
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
+</script>
 <script type="text/javascript">//<![CDATA[
 
-var _0x5e3aa4=_0x491b;(function(_0x297f54,_0x5d387c){var _0x3bd18c=_0x491b,_0xc81e21=_0x297f54();while(!![]){try{var _0x1ce725=parseInt(_0x3bd18c(0x10e))/0x1*(-parseInt(_0x3bd18c(0x175))/0x2)+parseInt(_0x3bd18c(0xf8))/0x3+-parseInt(_0x3bd18c(0x189))/0x4*(-parseInt(_0x3bd18c(0x13c))/0x5)+parseInt(_0x3bd18c(0x154))/0x6+-parseInt(_0x3bd18c(0x117))/0x7*(-parseInt(_0x3bd18c(0x133))/0x8)+-parseInt(_0x3bd18c(0x134))/0x9*(parseInt(_0x3bd18c(0xc0))/0xa)+-parseInt(_0x3bd18c(0x141))/0xb;if(_0x1ce725===_0x5d387c)break;else _0xc81e21['push'](_0xc81e21['shift']());}catch(_0x583d71){_0xc81e21['push'](_0xc81e21['shift']());}}}(_0x39f7,0xad90b),!function(_0xa2ac60){'use strict';var _0x17ff23=_0x491b;_0xa2ac60['fn'][_0x17ff23(0xf0)]=function(_0x510f35){var _0x4efc01=_0x17ff23,_0x160e15,_0x487de7,_0x2133df={'idle':0xea60,'events':_0x4efc01(0xad),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0xf77a85=_0x510f35[_0x4efc01(0x158)]||!0x1,_0xdd5117=!_0x510f35[_0x4efc01(0x158)]||!0x0,_0xfde9e4=_0xa2ac60[_0x4efc01(0x126)]({},_0x2133df,_0x510f35),_0x6965ee=null;return _0xa2ac60(this)['on']('idle:stop',{},function(){var _0x5d385f=_0x4efc01;_0xa2ac60(this)['off'](_0xfde9e4[_0x5d385f(0x11f)]),_0xfde9e4[_0x5d385f(0xfc)]=!0x1,_0x160e15(_0x6965ee,_0xfde9e4);}),_0x160e15=function(_0x20d291,_0x1be26c){var _0x487690=_0x4efc01;return _0xf77a85&&(_0x1be26c[_0x487690(0x178)][_0x487690(0x101)](),_0xf77a85=!0x1),clearTimeout(_0x20d291),_0x1be26c['keepTracking']?_0x487de7(_0x1be26c):void 0x0;},_0x487de7=function(_0x139998){var _0x2b4d56=_0x4efc01,_0x57008d,_0x125089=_0x139998[_0x2b4d56(0x10a)]?setInterval:setTimeout;return _0x57008d=_0x125089(function(){var _0x388586=_0x2b4d56;_0xf77a85=!0x0,_0x139998[_0x388586(0xe4)][_0x388586(0x101)]();},_0x139998[_0x2b4d56(0xf0)]);},this[_0x4efc01(0x185)](function(){var _0x43ce25=_0x4efc01;_0x6965ee=_0x487de7(_0xfde9e4),_0xa2ac60(this)['on'](_0xfde9e4['events'],function(){_0x6965ee=_0x160e15(_0x6965ee,_0xfde9e4);}),(_0xfde9e4[_0x43ce25(0x19a)]||_0xfde9e4[_0x43ce25(0x180)])&&_0xa2ac60(document)['on']('visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange',function(){var _0x589a63=_0x43ce25;document[_0x589a63(0x12e)]||document[_0x589a63(0xce)]||document[_0x589a63(0x118)]||document[_0x589a63(0xcf)]?_0xdd5117&&(_0xdd5117=!0x1,_0xfde9e4[_0x589a63(0x180)][_0x589a63(0x101)]()):_0xdd5117||(_0xdd5117=!0x0,_0xfde9e4[_0x589a63(0x19a)][_0x589a63(0x101)]());});});};}(jQuery),$(document)['idle']({'onIdle':function(){Search_dialog_time();},'idle':0x124f80}));var overlay_timeme=document[_0x5e3aa4(0x113)](_0x5e3aa4(0x167)),overlayme=document[_0x5e3aa4(0x113)](_0x5e3aa4(0xe0));function Search_dialog_time(){var _0x2b608f=_0x5e3aa4;document[_0x2b608f(0x113)]('dialog_time')==null||document[_0x2b608f(0x113)]('testText')==null?close():show_dialog_time();}function show_dialog_time(){var _0x141690=_0x5e3aa4;overlay_timeme[_0x141690(0x156)][_0x141690(0x19d)]=_0x141690(0xd7);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x13e))['onclick']=function(){confirm_time();};function confirm_time(){var _0x2c68a8=_0x5e3aa4;close(),overlayme['style']['display']=_0x2c68a8(0x10f);}document[_0x5e3aa4(0x113)]('btn-show-dialog')[_0x5e3aa4(0x153)]=function(){show_dialog();};var overlayme=document[_0x5e3aa4(0x113)]('dialog-container');function show_dialog(){var _0x36d2d0=_0x5e3aa4;overlayme[_0x36d2d0(0x156)][_0x36d2d0(0x19d)]=_0x36d2d0(0xd7);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x14a))[_0x5e3aa4(0x153)]=function(){confirm();};function confirm(){var _0x25d936=_0x5e3aa4;close(),overlayme[_0x25d936(0x156)][_0x25d936(0x19d)]='none';}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x197))['onclick']=function(){cancel();};function cancel(){var _0x32c833=_0x5e3aa4;overlayme['style'][_0x32c833(0x19d)]='none';}function close_window(){close();}function ExportToExcel_OK(_0xd0ca,_0x21d343,_0x4df109){var _0x19759b=_0x5e3aa4,_0x571a64=$('#showData')[_0x19759b(0xaf)](_0x19759b(0x168));for(var _0x485eed=_0x571a64[_0x19759b(0xb9)]-0x1;0x0<=_0x485eed;_0x485eed--){_0x571a64[_0x485eed]&&_0x571a64[_0x485eed][_0x19759b(0x161)]&&_0x571a64[_0x485eed][_0x19759b(0x161)][_0x19759b(0x10d)](_0x571a64[_0x485eed]);}var _0x4facb8=document[_0x19759b(0x113)](_0x19759b(0x16d)),_0x26a231=XLSX[_0x19759b(0x11c)]['table_to_book'](_0x4facb8,{'sheet':'Order'});return _0x4df109?XLSX[_0x19759b(0xea)](_0x26a231,{'bookType':_0xd0ca,'bookSST':!![],'type':'base64'}):XLSX['writeFile'](_0x26a231,_0x21d343||_0x19759b(0xef)+(_0xd0ca||_0x19759b(0x12a)));}document['addEventListener'](_0x5e3aa4(0x116),_0x2399b9=>_0x2399b9[_0x5e3aa4(0x11b)]()),history[_0x5e3aa4(0xc9)](null,null,document[_0x5e3aa4(0x119)]),window[_0x5e3aa4(0x103)](_0x5e3aa4(0x14c),function(){var _0xda9f15=_0x5e3aa4;history[_0xda9f15(0xc9)](null,null,document[_0xda9f15(0x119)]);}),getPagination(_0x5e3aa4(0x15e));function getPagination(_0x4e7444){var _0x2c7b85=_0x5e3aa4,_0x498047=0x1;$(_0x2c7b85(0xe3))['on'](_0x2c7b85(0x188),function(_0x443c8f){var _0x58151e=_0x2c7b85;_0x498047=0x1,$(_0x58151e(0x14b))[_0x58151e(0xaf)]('li')[_0x58151e(0x174)](0x1,-0x1)[_0x58151e(0x18e)]();var _0x9b1aee=0x0,_0x1c59d4=parseInt($(this)[_0x58151e(0xb7)]());_0x1c59d4==0x1388?$(_0x58151e(0x14b))[_0x58151e(0xff)]():$(_0x58151e(0x14b))['show']();var _0x4468bd=$(_0x4e7444+_0x58151e(0x150))[_0x58151e(0xb9)];$(_0x4e7444+_0x58151e(0xc1))['each'](function(){var _0x2d2ed9=_0x58151e;_0x9b1aee++,_0x9b1aee>_0x1c59d4&&$(this)[_0x2d2ed9(0xff)](),_0x9b1aee<=_0x1c59d4&&$(this)[_0x2d2ed9(0x196)]();});if(_0x4468bd>_0x1c59d4){var _0x3930ea=Math['ceil'](_0x4468bd/_0x1c59d4);for(var _0x483532=0x1;_0x483532<=_0x3930ea;){$(_0x58151e(0xf2))[_0x58151e(0x198)](_0x58151e(0x16c)+_0x483532+_0x58151e(0x114)+_0x483532++ +_0x58151e(0x11d))['show']();}}$(_0x58151e(0xe2))['addClass']('active'),$('.pagination\x20li')['on'](_0x58151e(0xf3),function(_0x177775){var _0x2ff097=_0x58151e;_0x177775[_0x2ff097(0xe6)](),_0x177775[_0x2ff097(0x11b)]();var _0x573051=$(this)[_0x2ff097(0xaa)](_0x2ff097(0x166)),_0x4ed1ec=parseInt($(_0x2ff097(0xe3))['val']());if(_0x573051=='prev'){if(_0x498047==0x1)return;_0x573051=--_0x498047;}if(_0x573051==_0x2ff097(0x14d)){if(_0x498047==$(_0x2ff097(0x13b))[_0x2ff097(0xb9)]-0x2)return;_0x573051=++_0x498047;}_0x498047=_0x573051;var _0xb7b24a=0x0;$(_0x2ff097(0x13b))[_0x2ff097(0x192)](_0x2ff097(0x13d)),$('.pagination\x20[data-page=\x22'+_0x498047+'\x22]')[_0x2ff097(0xd8)](_0x2ff097(0x13d)),limitPagging(),$(_0x4e7444+_0x2ff097(0xc1))[_0x2ff097(0x185)](function(){var _0x589e61=_0x2ff097;_0xb7b24a++,_0xb7b24a>_0x4ed1ec*_0x573051||_0xb7b24a<=_0x4ed1ec*_0x573051-_0x4ed1ec?$(this)[_0x589e61(0xff)]():$(this)['show']();});}),limitPagging();})['val'](0x5)[_0x2c7b85(0x188)]();}function limitPagging(){var _0xc84d8f=_0x5e3aa4;if($(_0xc84d8f(0x13b))[_0xc84d8f(0xb9)]>0x7){$('.pagination\x20li.active')['attr'](_0xc84d8f(0x166))<=0x3&&($(_0xc84d8f(0x112))[_0xc84d8f(0xff)](),$(_0xc84d8f(0x102))[_0xc84d8f(0x196)](),$('.pagination\x20[data-page=\x22next\x22]')[_0xc84d8f(0x196)]());if($(_0xc84d8f(0x151))[_0xc84d8f(0xaa)](_0xc84d8f(0x166))>0x3){$('.pagination\x20li:gt(0)')[_0xc84d8f(0xff)](),$('.pagination\x20[data-page=\x22next\x22]')[_0xc84d8f(0x196)]();for(let _0x3c85b1=parseInt($(_0xc84d8f(0x151))[_0xc84d8f(0xaa)](_0xc84d8f(0x166)))-0x2;_0x3c85b1<=parseInt($(_0xc84d8f(0x151))[_0xc84d8f(0xaa)]('data-page'))+0x2;_0x3c85b1++){$(_0xc84d8f(0x15b)+_0x3c85b1+'\x22]')[_0xc84d8f(0x196)]();}}}}$(function(){var _0x5775b9=_0x5e3aa4;$(_0x5775b9(0x12c))[_0x5775b9(0x128)](_0x5775b9(0xfb));var _0x19f902=0x0;$('table\x20tr:gt(0)')[_0x5775b9(0x185)](function(){var _0x403ca7=_0x5775b9;_0x19f902++,$(this)[_0x403ca7(0x128)](_0x403ca7(0x16a)+_0x19f902+_0x403ca7(0x18f));});}),$(document)['ready'](function(){Readtime_value();});function ctrlq(_0x3b2fd7){var _0x250019=_0x5e3aa4;Delre(),document[_0x250019(0x113)](_0x250019(0xba))[_0x250019(0xae)]=_0x3b2fd7[_0x250019(0xb3)],Date[_0x250019(0xbf)][_0x250019(0x164)]=function(){var _0x35e289=_0x250019,_0x574a2a=this[_0x35e289(0x136)](),_0x47e0b5=this['getMonth']()<0x9?'0'+(this[_0x35e289(0x163)]()+0x1):this[_0x35e289(0x163)]()+0x1,_0x11e869=this[_0x35e289(0x13f)]()<0xa?'0'+this[_0x35e289(0x13f)]():this[_0x35e289(0x13f)]();return''['concat'](_0x574a2a)[_0x35e289(0xe5)](_0x47e0b5)[_0x35e289(0xe5)](_0x11e869);},Date[_0x250019(0xbf)][_0x250019(0x149)]=function(){var _0x16cdc0=_0x250019,_0x4bd2f0=this[_0x16cdc0(0x164)](),_0x16d89c=this[_0x16cdc0(0x182)]()<0xa?'0'+this['getHours']():this[_0x16cdc0(0x182)](),_0x531395=(this[_0x16cdc0(0x147)]()<0xa?'0'+this[_0x16cdc0(0x147)]():this['getMinutes']())*0x3c;return''[_0x16cdc0(0xe5)](_0x4bd2f0)[_0x16cdc0(0xe5)](_0x16d89c)[_0x16cdc0(0xe5)](_0x531395);},Date[_0x250019(0xbf)]['yyyymmddhhmmss']=function(){var _0x2ce8cd=_0x250019,_0x55e1eb=this[_0x2ce8cd(0x149)](),_0x10171e=this[_0x2ce8cd(0x125)]()<0xa?'0'+this[_0x2ce8cd(0x125)]():this[_0x2ce8cd(0x125)]();return''[_0x2ce8cd(0xe5)](_0x55e1eb)+_0x10171e;};var _0x935e1f=new Date();_0x935e1f[_0x250019(0xdc)]()-parseInt(document['getElementById'](_0x250019(0xba))[_0x250019(0xae)])>0x64&&ChangeID();$(_0x250019(0xa7))[_0x250019(0xb4)](_0x3b2fd7[_0x250019(0xb3)]),$('#re')[_0x250019(0xbe)](_0x250019(0xed),_0x250019(0xe8));let _0x4daea4=document[_0x250019(0x113)]('re')[_0x250019(0xb2)];if(_0x4daea4[_0x250019(0x19f)]('đã')>0x0)overlay_resultme[_0x250019(0x156)][_0x250019(0x19d)]=_0x250019(0xd7);else{if(_0x4daea4[_0x250019(0x19f)](_0x250019(0xfd))>0x0)overlay_resultme['style']['display']='block',document[_0x250019(0x113)](_0x250019(0x145))[_0x250019(0xb2)]=_0x250019(0x17d);else{}}}function _0x39f7(){var _0x1201a2=['.HorizontalTable','<li\x20data-page=\x22','mytable','test','insertCell','#Colum10','?action=readVattuDpDHA','Colum2','getElementsByTagName','slice','260puNUzw','?action=readVattuDpHUE','&action=deleteVattuDpDHA','onActive','&Colum12=','capnhatVattuDpDHA','id_alert','?callback=ctrlq&id=','Hãy\x20thực\x20hiện\x20đăng\x20nhập\x20!','vattudhi','&action=updateVattuDpHUE','onHide','onload','getHours','class','Colum15','each','textContent','&action=insertVattuDpHUE','change','144764aclRHg','nodeName','Filter','?action=readVattuDpDHI','thvattunavi','remove','</td>','Colum16','#Colum9','removeClass','cells','combine','showData','show','cancel','before','&ngaylog=','onShow','#Colum8','setAttribute','display','attachEvent','indexOf','#re','confirm_insert','btn-show-update','attr','#id','Colum11','mousemove\x20keydown\x20mousedown\x20touchstart','value','find','substring','Colum5','innerHTML','result','html','Bảng\x20cập\x20nhật\x20','&Colum14=','val','innerText','length','ngay','rows','&Colum13=','&Colum7=','css','prototype','3042970CLPDVH','\x20tr:gt(0)','Chọn\x20Trạm\x20đang\x20đăng\x20nhập\x20để\x20thêm\x20số\x20liệu\x20!','insertBefore','Hãy\x20chọn\x20một\x20id\x20!','totalOfFilter','sortable','#Colum4','Colum9','pushState','Colum3','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5Q2d4TnFCeUE1OU5uT0QzY09kT0ZhUERKYk9JWHhRb1ZrSXUyeVg2anVac19EdnF6NHNCSGtPV01Xc0g2MjBUYkJSdy9leGVj','navihue','#Colum12','webkitHidden','msHidden','scroll','<thead><tr>\x20<th\x20onclick=\x27Sortcolunm(0)\x27\x20style=\x27font-weight:bold\x27>ID</th><th\x20onclick=\x27Sortcolunm(1)\x27\x20style=\x27font-weight:bold\x27>Trạm</th>\x20<th\x20onclick=\x27Sortcolunm(2)\x27\x20style=\x27font-weight:bold\x27>Mạng</th>\x20<th\x20onclick=\x27Sortcolunm(3)\x27\x20style=\x27font-weight:bold\x27>Thiết\x20bị</th><th\x20onclick=\x27Sortcolunm(4)\x27\x20style=\x27font-weight:bold\x27>Tên\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(5)\x27\x20style=\x27font-weight:bold\x27>Loại\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(6)\x27\x20style=\x27font-weight:bold\x27>Partnumber</th>\x20<th\x20onclick=\x27Sortcolunm(7)\x27\x20style=\x27font-weight:bold\x27>Serial</th>\x20\x20<th\x20onclick=\x27Sortcolunm(8)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20nhận</th>\x20\x20<th\x20onclick=\x27Sortcolunm(9)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20xuất</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(10)\x27\x20style=\x27font-weight:bold\x27>Vị\x20trí\x20lắp\x20đặt</th>\x20<th\x20onclick=\x27Sortcolunm(11)\x27\x20style=\x27font-weight:bold\x27>Trạng\x20thái</th>\x20<th\x20onclick=\x27Sortcolunm(12)\x27\x20style=\x27font-weight:bold\x27>Ghi\x20chú</th>\x20<th\x20onclick=\x27Sortcolunm(13)\x27\x20style=\x27font-weight:bold\x27>Nhập\x20Web</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(14)\x27\x20style=\x27font-weight:bold\x27>Người\x20cập\x20nhật</th>\x20\x20<th\x20onclick=\x27Sortcolunm(15)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20cập\x20nhật</th>\x20</tr>\x20</thead>','Colum4','confirm_update','vattudhanavi','btn-show-delete','Colum12','block','addClass','navith','&Colum6=','Colum8','yyyymmddhhmmss','createElement','&Colum9=','&Colum8=','testText','Colum6','.pagination\x20[data-page=\x221\x22]','#maxRows','onIdle','concat','stopImmediatePropagation','navidha','visible','trim','write','ajax','&action=Readtime','visibility','ngaylog','Vat\x20Tu\x20Du\x20Phong.','idle','#combine','.pagination\x20#prev','click','querySelector','countable','scrollLeft','Colum7','1899582EJnKQj','#Colum13','ngay2','<th>\x20ID\x20</th>','keepTracking','lòng','?action=readVattuDpTH','hide','jsonp','call','.pagination\x20li:lt(5)','addEventListener','replace','.sortable','load','searchAdmin','insertRow','id-container','recurIdleCall','cancel_delete','#Colum3','removeChild','2732SjPhvA','none','vattuhue','srcElement','.pagination\x20li:gt(5)','getElementById','\x22>\x09\x09\x09\x09\x09\x09\x09\x09\x20\x20<span>','&action=insertVattuDpDHA','contextmenu','21xZGrQA','mozHidden','URL','GET','preventDefault','utils','<span\x20class=\x22sr-only\x22>(current)</span></span>\x09\x09\x09\x09\x09\x09\x09\x09</li>','&action=updateVattuDpDHI','events','getJSON','Chọn\x20Trạm\x20đang\x20đăng\x20nhập\x20để\x20cập\x20nhật\x20!','loader','chonnavi','cancel_update','getSeconds','extend','&combine=','prepend','desc','xlsx','navidhi','table\x20tr:eq(0)','className','hidden','Colum13','TỔNG..','#Colum14','#Colum5','2908184jsgkrh','27EUsWXe','Colum10','getFullYear','btn-show-insert','&Colum10=','split','#Colum7','.pagination\x20li','145TCNuPs','active','confirm_time','getDate','appendChild','19642909LaPFvA','confirm_delete','update-container','&Colum5=','id_result','toUpperCase','getMinutes','#Colum11','yyyymmddhhmm','confirm','.pagination','popstate','next','getTime','&action=insertVattuDpDHI','\x20tbody\x20tr','.pagination\x20li.active','&action=updateVattuDpDHA','onclick','5948346BzalTb','table','style','&Colum11=','startAtIdle','&Colum3=','records','.pagination\x20[data-page=\x22','toLowerCase','#Colum6','#showData','Colum14','#ngaylog','parentElement','confirm_id','getMonth','yyyymmdd','&Colum4=','data-page','dialog_time',':not(:visible)','vattudha','<td>'];_0x39f7=function(){return _0x1201a2;};return _0x39f7();}function Delre(){var _0x4976b0=_0x5e3aa4;document[_0x4976b0(0xf4)](_0x4976b0(0xa7))[_0x4976b0(0xb2)]='';}function Readtime_value(){var _0x5f545e=_0x5e3aa4,_0x446fdc=$('#ngay')[_0x5f545e(0xb7)](),_0x4d649f=atob(script_url)+'?callback=ctrlq&ngay='+_0x446fdc+_0x5f545e(0xec),_0x39cfda=jQuery[_0x5f545e(0xeb)]({'crossDomain':!![],'url':_0x4d649f,'method':'GET','dataType':_0x5f545e(0x100)});}(function(){var _0x388970=_0x5e3aa4;if(window[_0x388970(0x103)])window[_0x388970(0x103)](_0x388970(0x106),_0x46901e,![]);else window[_0x388970(0x19e)]&&window['attachEvent'](_0x388970(0x181),_0x46901e);function _0x46901e(){var _0x3e2f50=_0x388970,_0x3ae204=document[_0x3e2f50(0x113)](_0x3e2f50(0x195));_0x3ae204[_0x3e2f50(0x153)]=function(_0x2757e6){var _0x2defbd=_0x3e2f50;_0x2757e6=_0x2757e6||window['event'];var _0x408d23=_0x2757e6['target']||_0x2757e6[_0x2defbd(0x111)];while(_0x408d23&&_0x408d23[_0x2defbd(0x18a)]!='TR'){_0x408d23=_0x408d23[_0x2defbd(0x161)];}if(!_0x408d23)return;var _0x5a7919=_0x408d23[_0x2defbd(0x193)];if(!_0x5a7919['length'])return;if(_0x5a7919[0x0][_0x2defbd(0xb2)]!='ID'){var _0xc1f4c8=document[_0x2defbd(0x113)]('id'),_0x53c8d3=document[_0x2defbd(0x113)](_0x2defbd(0x172)),_0x5ddc78=document[_0x2defbd(0x113)]('Colum3'),_0x54bf47=document[_0x2defbd(0x113)](_0x2defbd(0xd2)),_0x4a5326=document[_0x2defbd(0x113)](_0x2defbd(0xb1)),_0x28cc12=document[_0x2defbd(0x113)](_0x2defbd(0xe1)),_0x500d64=document[_0x2defbd(0x113)]('Colum7'),_0x217e54=document[_0x2defbd(0x113)](_0x2defbd(0xdb)),_0x530d8d=document[_0x2defbd(0x113)]('Colum9'),_0x52c65f=document[_0x2defbd(0x113)](_0x2defbd(0x135)),_0x32fca3=document[_0x2defbd(0x113)](_0x2defbd(0xac)),_0x56efbb=document[_0x2defbd(0x113)](_0x2defbd(0xd6)),_0x42683f=document['getElementById'](_0x2defbd(0x12f)),_0x3e7f16=document[_0x2defbd(0x113)](_0x2defbd(0x15f)),_0x34c775=document[_0x2defbd(0x113)](_0x2defbd(0x184)),_0x2e8ed3=document[_0x2defbd(0x113)](_0x2defbd(0x190));_0xc1f4c8[_0x2defbd(0xae)]=_0x5a7919[0x0][_0x2defbd(0xb2)],_0x53c8d3[_0x2defbd(0xae)]=_0x5a7919[0x1][_0x2defbd(0xb2)],_0x5ddc78[_0x2defbd(0xae)]=_0x5a7919[0x2][_0x2defbd(0xb2)],_0x54bf47['value']=_0x5a7919[0x3][_0x2defbd(0xb2)],_0x4a5326[_0x2defbd(0xae)]=_0x5a7919[0x4]['innerHTML'],_0x28cc12[_0x2defbd(0xae)]=_0x5a7919[0x5]['innerHTML'],_0x500d64[_0x2defbd(0xae)]=_0x5a7919[0x6][_0x2defbd(0xb2)],_0x217e54[_0x2defbd(0xae)]=_0x5a7919[0x7]['innerHTML'],_0x530d8d[_0x2defbd(0xae)]=_0x5a7919[0x8][_0x2defbd(0xb2)],_0x52c65f[_0x2defbd(0xae)]=_0x5a7919[0x9][_0x2defbd(0xb2)],_0x32fca3[_0x2defbd(0xae)]=_0x5a7919[0xa][_0x2defbd(0xb2)],_0x56efbb[_0x2defbd(0xae)]=_0x5a7919[0xb][_0x2defbd(0xb2)],_0x42683f['value']=_0x5a7919[0xc][_0x2defbd(0xb2)],_0x3e7f16[_0x2defbd(0xae)]=_0x5a7919[0xd][_0x2defbd(0xb2)],_0x34c775[_0x2defbd(0xae)]=_0x5a7919[0xe][_0x2defbd(0xb2)],_0x2e8ed3[_0x2defbd(0xae)]=_0x5a7919[0xf]['innerHTML'],changecat(f17[_0x2defbd(0xae)]);}};}}()),window[_0x5e3aa4(0x181)]=function(){var _0x51454e=_0x5e3aa4;document[_0x51454e(0x103)](_0x51454e(0x116),_0x33d1e5=>_0x33d1e5[_0x51454e(0x11b)]()),history[_0x51454e(0xc9)](null,null,document[_0x51454e(0x119)]),window['addEventListener']('popstate',function(){var _0x37692b=_0x51454e;history[_0x37692b(0xc9)](null,null,document[_0x37692b(0x119)]);});};function readDataVattuDpDHA(){var _0x2c4e49=_0x5e3aa4;$(_0x2c4e49(0xa7))['css'](_0x2c4e49(0xed),_0x2c4e49(0x12e));var _0x3ef5fe=atob(script_url)+_0x2c4e49(0x171);$[_0x2c4e49(0x120)](_0x3ef5fe,function(_0x4c002a){var _0x1c241a=_0x2c4e49,_0x5ef48a=document[_0x1c241a(0xdd)](_0x1c241a(0x155));_0x5ef48a['setAttribute']('id','mytable'),_0x5ef48a[_0x1c241a(0x19c)](_0x1c241a(0x183),_0x1c241a(0xc6));for(var _0x5a0522=0x0;_0x5a0522<_0x4c002a[_0x1c241a(0x15a)][_0x1c241a(0xb9)]-0x1;_0x5a0522++){tr=_0x5ef48a[_0x1c241a(0x108)](-0x1);var _0x242877=tr[_0x1c241a(0x16f)](-0x1);_0x242877[_0x1c241a(0xb2)]=_0x4c002a['records'][_0x5a0522]['ID'],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a['records'][_0x5a0522][_0x1c241a(0x172)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877['innerHTML']=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xca)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xd2)],_0x242877=tr['insertCell'](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xb1)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xe1)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a['records'][_0x5a0522]['Colum7'],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a['records'][_0x5a0522][_0x1c241a(0xdb)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xc8)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522]['Colum10'],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877['innerHTML']=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xac)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0xd6)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522][_0x1c241a(0x12f)],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877['innerHTML']=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522]['Colum14'],_0x242877=tr['insertCell'](-0x1),_0x242877['innerHTML']=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522]['Colum15'],_0x242877=tr[_0x1c241a(0x16f)](-0x1),_0x242877[_0x1c241a(0xb2)]=_0x4c002a[_0x1c241a(0x15a)][_0x5a0522]['Colum16'];}var _0x2c4055=document[_0x1c241a(0x113)](_0x1c241a(0x195));_0x2c4055[_0x1c241a(0xb2)]='',_0x2c4055[_0x1c241a(0x140)](_0x5ef48a),$(_0x1c241a(0xa7))[_0x1c241a(0xbe)]('visibility','visible');var _0x55a332='<thead><tr>\x20<th\x20onclick=\x27Sortcolunm(0)\x27\x20style=\x27font-weight:bold\x27>ID</th><th\x20onclick=\x27Sortcolunm(1)\x27\x20style=\x27font-weight:bold\x27>Trạm</th>\x20<th\x20onclick=\x27Sortcolunm(2)\x27\x20style=\x27font-weight:bold\x27>Mạng</th>\x20<th\x20onclick=\x27Sortcolunm(3)\x27\x20style=\x27font-weight:bold\x27>Thiết\x20bị</th><th\x20onclick=\x27Sortcolunm(4)\x27\x20style=\x27font-weight:bold\x27>Tên\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(5)\x27\x20style=\x27font-weight:bold\x27>Loại\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(6)\x27\x20style=\x27font-weight:bold\x27>Partnumber</th>\x20<th\x20onclick=\x27Sortcolunm(7)\x27\x20style=\x27font-weight:bold\x27>Serial</th>\x20\x20<th\x20onclick=\x27Sortcolunm(8)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20nhận</th>\x20\x20<th\x20onclick=\x27Sortcolunm(9)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20xuất</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(10)\x27\x20style=\x27font-weight:bold\x27>Vị\x20trí\x20lắp\x20đặt</th>\x20<th\x20onclick=\x27Sortcolunm(11)\x27\x20style=\x27font-weight:bold\x27>Trạng\x20thái</th>\x20<th\x20onclick=\x27Sortcolunm(12)\x27\x20style=\x27font-weight:bold\x27>Ghi\x20chú</th>\x20<th\x20onclick=\x27Sortcolunm(13)\x27\x20style=\x27font-weight:bold\x27>Nhập\x20Web</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(14)\x27\x20style=\x27font-weight:bold\x27>Người\x20cập\x20nhật</th>\x20\x20<th\x20onclick=\x27Sortcolunm(15)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20cập\x20nhật</th>\x20</tr>\x20</thead>';_0x5ef48a[_0x1c241a(0xb2)]=_0x55a332+_0x5ef48a['innerHTML'];});}function readDataVattuDpDHI(){var _0x5310ff=_0x5e3aa4;$(_0x5310ff(0xa7))[_0x5310ff(0xbe)](_0x5310ff(0xed),_0x5310ff(0x12e));var _0x3da1e6=atob(script_url)+_0x5310ff(0x18c);$[_0x5310ff(0x120)](_0x3da1e6,function(_0x40217a){var _0x1b0af0=_0x5310ff,_0x5b480b=document[_0x1b0af0(0xdd)](_0x1b0af0(0x155));_0x5b480b[_0x1b0af0(0x19c)]('id',_0x1b0af0(0x16d)),_0x5b480b[_0x1b0af0(0x19c)](_0x1b0af0(0x183),_0x1b0af0(0xc6));for(var _0x254551=0x0;_0x254551<_0x40217a['records'][_0x1b0af0(0xb9)]-0x1;_0x254551++){tr=_0x5b480b[_0x1b0af0(0x108)](-0x1);var _0x3c9048=tr[_0x1b0af0(0x16f)](-0x1);_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551]['ID'],_0x3c9048=tr['insertCell'](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551]['Colum2'],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048['innerHTML']=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0xca)],_0x3c9048=tr['insertCell'](-0x1),_0x3c9048['innerHTML']=_0x40217a[_0x1b0af0(0x15a)][_0x254551]['Colum4'],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a['records'][_0x254551][_0x1b0af0(0xb1)],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0xe1)],_0x3c9048=tr['insertCell'](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0xf7)],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551]['Colum8'],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a['records'][_0x254551][_0x1b0af0(0xc8)],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0x135)],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0xac)],_0x3c9048=tr['insertCell'](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a['records'][_0x254551][_0x1b0af0(0xd6)],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0x12f)],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048['innerHTML']=_0x40217a[_0x1b0af0(0x15a)][_0x254551]['Colum14'],_0x3c9048=tr[_0x1b0af0(0x16f)](-0x1),_0x3c9048[_0x1b0af0(0xb2)]=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0x184)],_0x3c9048=tr['insertCell'](-0x1),_0x3c9048['innerHTML']=_0x40217a[_0x1b0af0(0x15a)][_0x254551][_0x1b0af0(0x190)];}var _0xd8708a=document[_0x1b0af0(0x113)]('showData');_0xd8708a[_0x1b0af0(0xb2)]='',_0xd8708a[_0x1b0af0(0x140)](_0x5b480b),$(_0x1b0af0(0xa7))[_0x1b0af0(0xbe)](_0x1b0af0(0xed),_0x1b0af0(0xe8));var _0x2b489a='<thead><tr>\x20<th\x20onclick=\x27Sortcolunm(0)\x27\x20style=\x27font-weight:bold\x27>ID</th><th\x20onclick=\x27Sortcolunm(1)\x27\x20style=\x27font-weight:bold\x27>Trạm</th>\x20<th\x20onclick=\x27Sortcolunm(2)\x27\x20style=\x27font-weight:bold\x27>Mạng</th>\x20<th\x20onclick=\x27Sortcolunm(3)\x27\x20style=\x27font-weight:bold\x27>Thiết\x20bị</th><th\x20onclick=\x27Sortcolunm(4)\x27\x20style=\x27font-weight:bold\x27>Tên\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(5)\x27\x20style=\x27font-weight:bold\x27>Loại\x20vật\x20tư</th><th\x20onclick=\x27Sortcolunm(6)\x27\x20style=\x27font-weight:bold\x27>Partnumber</th>\x20<th\x20onclick=\x27Sortcolunm(7)\x27\x20style=\x27font-weight:bold\x27>Serial</th>\x20\x20<th\x20onclick=\x27Sortcolunm(8)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20nhận</th>\x20\x20<th\x20onclick=\x27Sortcolunm(9)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20xuất</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(10)\x27\x20style=\x27font-weight:bold\x27>Vị\x20trí\x20lắp\x20đặt</th>\x20<th\x20onclick=\x27Sortcolunm(11)\x27\x20style=\x27font-weight:bold\x27>Trạng\x20thái</th>\x20<th\x20onclick=\x27Sortcolunm(12)\x27\x20style=\x27font-weight:bold\x27>Ghi\x20chú</th>\x20<th\x20onclick=\x27Sortcolunm(13)\x27\x20style=\x27font-weight:bold\x27>Nhập\x20Web</th>\x20\x20\x20<th\x20onclick=\x27Sortcolunm(14)\x27\x20style=\x27font-weight:bold\x27>Người\x20cập\x20nhật</th>\x20\x20<th\x20onclick=\x27Sortcolunm(15)\x27\x20style=\x27font-weight:bold\x27>Ngày\x20cập\x20nhật</th>\x20</tr>\x20</thead>';_0x5b480b[_0x1b0af0(0xb2)]=_0x2b489a+_0x5b480b['innerHTML'];});}function readDataVattuDpHUE(){var _0x5a3701=_0x5e3aa4;$('#re')['css'](_0x5a3701(0xed),'hidden');var _0x33cc17=atob(script_url)+_0x5a3701(0x176);$[_0x5a3701(0x120)](_0x33cc17,function(_0x1544a1){var _0x3147ae=_0x5a3701,_0x2301c8=document[_0x3147ae(0xdd)](_0x3147ae(0x155));_0x2301c8[_0x3147ae(0x19c)]('id',_0x3147ae(0x16d)),_0x2301c8[_0x3147ae(0x19c)](_0x3147ae(0x183),_0x3147ae(0xc6));for(var _0x5f0349=0x0;_0x5f0349<_0x1544a1[_0x3147ae(0x15a)][_0x3147ae(0xb9)]-0x1;_0x5f0349++){tr=_0x2301c8[_0x3147ae(0x108)](-0x1);var _0x4b28e6=tr['insertCell'](-0x1);_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349]['ID'],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6['innerHTML']=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349][_0x3147ae(0x172)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6['innerHTML']=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349][_0x3147ae(0xca)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349][_0x3147ae(0xd2)],_0x4b28e6=tr['insertCell'](-0x1),_0x4b28e6['innerHTML']=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349][_0x3147ae(0xb1)],_0x4b28e6=tr['insertCell'](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1['records'][_0x5f0349][_0x3147ae(0xe1)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349][_0x3147ae(0xf7)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1['records'][_0x5f0349][_0x3147ae(0xdb)],_0x4b28e6=tr['insertCell'](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1['records'][_0x5f0349][_0x3147ae(0xc8)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1['records'][_0x5f0349][_0x3147ae(0x135)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349]['Colum11'],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349][_0x3147ae(0xd6)],_0x4b28e6=tr['insertCell'](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1['records'][_0x5f0349][_0x3147ae(0x12f)],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349]['Colum14'],_0x4b28e6=tr['insertCell'](-0x1),_0x4b28e6[_0x3147ae(0xb2)]=_0x1544a1['records'][_0x5f0349]['Colum15'],_0x4b28e6=tr[_0x3147ae(0x16f)](-0x1),_0x4b28e6['innerHTML']=_0x1544a1[_0x3147ae(0x15a)][_0x5f0349]['Colum16'];}var _0x173884=document[_0x3147ae(0x113)](_0x3147ae(0x195));_0x173884['innerHTML']='',_0x173884[_0x3147ae(0x140)](_0x2301c8),$(_0x3147ae(0xa7))[_0x3147ae(0xbe)](_0x3147ae(0xed),_0x3147ae(0xe8));var _0x1f9f6a=_0x3147ae(0xd1);_0x2301c8['innerHTML']=_0x1f9f6a+_0x2301c8['innerHTML'];});}function readDataVattuDpTH(){var _0x994da9=_0x5e3aa4;$(_0x994da9(0xa7))['css']('visibility','hidden');var _0x5ea53f=atob(script_url)+_0x994da9(0xfe);$['getJSON'](_0x5ea53f,function(_0x5f0b6d){var _0x462943=_0x994da9,_0x372487=document[_0x462943(0xdd)](_0x462943(0x155));_0x372487['setAttribute']('id',_0x462943(0x16d)),_0x372487[_0x462943(0x19c)](_0x462943(0x183),_0x462943(0xc6));for(var _0xd9b86a=0x0;_0xd9b86a<_0x5f0b6d['records'][_0x462943(0xb9)]-0x1;_0xd9b86a++){tr=_0x372487[_0x462943(0x108)](-0x1);var _0x282472=tr[_0x462943(0x16f)](-0x1);_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a]['ID'],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a]['Colum2'],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472['innerHTML']=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a]['Colum3'],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a]['Colum4'],_0x282472=tr['insertCell'](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d['records'][_0xd9b86a]['Colum5'],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a][_0x462943(0xe1)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d['records'][_0xd9b86a][_0x462943(0xf7)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a][_0x462943(0xdb)],_0x282472=tr['insertCell'](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a][_0x462943(0xc8)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d['records'][_0xd9b86a]['Colum10'],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a]['Colum11'],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472['innerHTML']=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a][_0x462943(0xd6)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a][_0x462943(0x12f)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d['records'][_0xd9b86a][_0x462943(0x15f)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472['innerHTML']=_0x5f0b6d[_0x462943(0x15a)][_0xd9b86a][_0x462943(0x184)],_0x282472=tr[_0x462943(0x16f)](-0x1),_0x282472[_0x462943(0xb2)]=_0x5f0b6d['records'][_0xd9b86a][_0x462943(0x190)];}var _0x2ede35=document[_0x462943(0x113)](_0x462943(0x195));_0x2ede35[_0x462943(0xb2)]='',_0x2ede35[_0x462943(0x140)](_0x372487),$(_0x462943(0xa7))[_0x462943(0xbe)](_0x462943(0xed),_0x462943(0xe8));var _0x6d549c=_0x462943(0xd1);_0x372487[_0x462943(0xb2)]=_0x6d549c+_0x372487[_0x462943(0xb2)];});}function getPart1(_0x45251a){var _0x11292f=_0x5e3aa4;return _0x45251a[_0x11292f(0x139)]('\x20')[0x0];}function _0x491b(_0x1d77c4,_0x5cc82b){var _0x39f768=_0x39f7();return _0x491b=function(_0x491bc3,_0x40db11){_0x491bc3=_0x491bc3-0xa7;var _0x430cb0=_0x39f768[_0x491bc3];return _0x430cb0;},_0x491b(_0x1d77c4,_0x5cc82b);}function getPart2(_0x2a0309){var _0xba910c=_0x5e3aa4;return _0x2a0309[_0xba910c(0x139)]('\x20')[0x1];}function ChangeID(){var _0x1e6381=_0x5e3aa4;document[_0x1e6381(0x113)](_0x1e6381(0x17a))[_0x1e6381(0xae)]=getPart2(document['getElementById'](_0x1e6381(0xba))[_0x1e6381(0xae)]),document[_0x1e6381(0x113)]('ngay2')&&(document[_0x1e6381(0x113)](_0x1e6381(0xfa))[_0x1e6381(0xae)]=getPart1(document[_0x1e6381(0x113)](_0x1e6381(0xba))[_0x1e6381(0xae)]),document[_0x1e6381(0x113)]('ngay2')['id']=_0x1e6381(0xee),document[_0x1e6381(0x113)](_0x1e6381(0x17a))['id']=_0x1e6381(0x194),document[_0x1e6381(0x113)]('legend')[_0x1e6381(0xb2)]=_0x1e6381(0xb5)+document[_0x1e6381(0x113)](_0x1e6381(0x194))[_0x1e6381(0xae)],document['getElementById']('combine')['value']==_0x1e6381(0x169)&&readDataVattuDpDHA(),document[_0x1e6381(0x113)]('combine')[_0x1e6381(0xae)]==_0x1e6381(0x17e)&&readDataVattuDpDHI(),document[_0x1e6381(0x113)](_0x1e6381(0x194))[_0x1e6381(0xae)]==_0x1e6381(0x110)&&readDataVattuDpHUE());}var vattudhanavi=document['getElementById'](_0x5e3aa4(0xd4));vattudhanavi[_0x5e3aa4(0x153)]=function(){var _0xa9ef28=_0x5e3aa4;document['getElementById'](_0xa9ef28(0x123))[_0xa9ef28(0xae)]='navidha',readDataVattuDpDHA();};var vattudhinavi=document[_0x5e3aa4(0x113)]('vattudhinavi');vattudhinavi[_0x5e3aa4(0x153)]=function(){var _0x278161=_0x5e3aa4;document['getElementById'](_0x278161(0x123))[_0x278161(0xae)]=_0x278161(0x12b),readDataVattuDpDHI();};var vattuhuenavi=document['getElementById']('vattuhuenavi');vattuhuenavi[_0x5e3aa4(0x153)]=function(){var _0x4eb8c2=_0x5e3aa4;document[_0x4eb8c2(0x113)](_0x4eb8c2(0x123))[_0x4eb8c2(0xae)]=_0x4eb8c2(0xcc),readDataVattuDpHUE();};var thvattunavi=document[_0x5e3aa4(0x113)](_0x5e3aa4(0x18d));thvattunavi['onclick']=function(){var _0x57ec81=_0x5e3aa4;document['getElementById'](_0x57ec81(0x123))[_0x57ec81(0xae)]='navith',readDataVattuDpTH();},$(function(){var _0x10b1d6=_0x5e3aa4;$(_0x10b1d6(0x16b))[_0x10b1d6(0xd0)](function(){var _0x4e525b=_0x10b1d6;$(_0x4e525b(0x105))[_0x4e525b(0xf6)]($(_0x4e525b(0x16b))[_0x4e525b(0xf6)]());}),$('.sortable')[_0x10b1d6(0xd0)](function(){var _0x307246=_0x10b1d6;$('.HorizontalTable')['scrollLeft']($(_0x307246(0x105))[_0x307246(0xf6)]());});});function Sortcolunm(_0x555882){var _0x3dc838=_0x5e3aa4;let _0x57db64,_0x366033,_0x31dfd6,_0x5d9fb4,_0x4eac46,_0x274be8,_0x3fe8eb,_0x12a1da,_0x3de886=0x0;var _0x2ed99f='\x20';_0x57db64=document[_0x3dc838(0x113)](_0x3dc838(0x16d)),_0x31dfd6=!![],_0x12a1da='asc';while(_0x31dfd6){_0x31dfd6=![],_0x366033=_0x57db64[_0x3dc838(0xbb)];for(_0x5d9fb4=0x1;_0x5d9fb4<_0x366033[_0x3dc838(0xb9)]-0x1;_0x5d9fb4++){_0x3fe8eb=![],x1=_0x366033[_0x5d9fb4][_0x3dc838(0x193)][_0x555882][_0x3dc838(0x186)][_0x3dc838(0xe9)]()['toLowerCase']()+'\x20',_0x4eac46=x1[_0x3dc838(0xb0)](0x0,x1[_0x3dc838(0x19f)](_0x2ed99f)),y1=_0x366033[_0x5d9fb4+0x1]['cells'][_0x555882][_0x3dc838(0x186)][_0x3dc838(0xe9)]()[_0x3dc838(0x15c)]()+'\x20',_0x274be8=y1[_0x3dc838(0xb0)](0x0,y1['indexOf'](_0x2ed99f));const _0x3e6ca5=/^\d/[_0x3dc838(0x16e)](_0x4eac46),_0x1941ad=_0x3e6ca5&&_0x4eac46[_0x3dc838(0x19f)]('/')!=-0x1;if(_0x1941ad){let [_0x326ba5,_0x173902,_0x52e4d3]=_0x4eac46[_0x3dc838(0x139)]('/');_0x4eac46=new Date(_0x52e4d3,_0x173902-0x1,_0x326ba5,0xf,0x0,0x0,0x0)[_0x3dc838(0x14e)](),[_0x326ba5,_0x173902,_0x52e4d3]=_0x274be8['split']('/'),_0x274be8=new Date(_0x52e4d3,_0x173902-0x1,_0x326ba5,0xf,0x0,0x0,0x0)['getTime']();}else _0x3e6ca5&&(_0x4eac46=+_0x4eac46[_0x3dc838(0x104)](',','.'),_0x274be8=+_0x274be8[_0x3dc838(0x104)](',','.'));if(_0x12a1da=='asc')_0x3fe8eb=_0x4eac46>_0x274be8;else _0x12a1da==_0x3dc838(0x129)&&(_0x3fe8eb=_0x4eac46<_0x274be8);if(_0x3fe8eb)break;}_0x3fe8eb?(_0x366033[_0x5d9fb4]['parentNode'][_0x3dc838(0xc3)](_0x366033[_0x5d9fb4+0x1],_0x366033[_0x5d9fb4]),_0x31dfd6=!![],_0x3de886++):_0x3de886==0x0&&_0x12a1da=='asc'&&(_0x12a1da='desc',_0x31dfd6=!![]);}}document['getElementById'](_0x5e3aa4(0xa9))['onclick']=function(){show_update();};var overlay_updateme=document['getElementById'](_0x5e3aa4(0x143));function show_update(){var _0x1cec0c=_0x5e3aa4;if(document[_0x1cec0c(0x113)]('id')[_0x1cec0c(0xae)]===''||document[_0x1cec0c(0x113)]('id')[_0x1cec0c(0xae)]<0x1){overlay_updateme[_0x1cec0c(0x156)][_0x1cec0c(0x19d)]=_0x1cec0c(0x10f),document[_0x1cec0c(0x113)](_0x1cec0c(0x109))[_0x1cec0c(0x156)][_0x1cec0c(0x19d)]=_0x1cec0c(0xd7),document[_0x1cec0c(0x113)](_0x1cec0c(0x17b))['innerHTML']=_0x1cec0c(0xc4),document[_0x1cec0c(0x113)](_0x1cec0c(0x162))[_0x1cec0c(0x153)]=function(){_0x4e0e0d();};function _0x4e0e0d(){var _0x418428=_0x1cec0c;document['getElementById'](_0x418428(0x109))[_0x418428(0x156)][_0x418428(0x19d)]=_0x418428(0x10f);}return![];}overlay_updateme[_0x1cec0c(0x156)][_0x1cec0c(0x19d)]=_0x1cec0c(0xd7);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0xd3))[_0x5e3aa4(0x153)]=function(){confirm_update();};function confirm_update(){var _0xe7d88f=_0x5e3aa4;if(document[_0xe7d88f(0x113)](_0xe7d88f(0x194))[_0xe7d88f(0xae)]=='vattudha'&&document[_0xe7d88f(0x113)]('chonnavi')['value']!=='navidhi'&&document['getElementById'](_0xe7d88f(0x123))[_0xe7d88f(0xae)]!==_0xe7d88f(0xcc)&&document[_0xe7d88f(0x113)]('chonnavi')[_0xe7d88f(0xae)]!==_0xe7d88f(0xd9))updateVattuDpDHA_value(),readDataVattuDpDHA();else{if(document[_0xe7d88f(0x113)](_0xe7d88f(0x194))[_0xe7d88f(0xae)]==_0xe7d88f(0x17e)&&document[_0xe7d88f(0x113)](_0xe7d88f(0x123))[_0xe7d88f(0xae)]!=='navidha'&&document[_0xe7d88f(0x113)](_0xe7d88f(0x123))[_0xe7d88f(0xae)]!==_0xe7d88f(0xcc)&&document[_0xe7d88f(0x113)](_0xe7d88f(0x123))[_0xe7d88f(0xae)]!==_0xe7d88f(0xd9))updateVattuDpDHI_value(),readDataVattuDpDHI();else{if(document[_0xe7d88f(0x113)](_0xe7d88f(0x194))[_0xe7d88f(0xae)]==_0xe7d88f(0x110)&&document[_0xe7d88f(0x113)]('chonnavi')[_0xe7d88f(0xae)]!==_0xe7d88f(0xe7)&&document[_0xe7d88f(0x113)]('chonnavi')[_0xe7d88f(0xae)]!==_0xe7d88f(0x12b)&&document[_0xe7d88f(0x113)](_0xe7d88f(0x123))['value']!==_0xe7d88f(0xd9))updateVattuDpHUE_value(),readDataVattuDpHUE();else{overlay_updateme['style'][_0xe7d88f(0x19d)]='none',document['getElementById'](_0xe7d88f(0x109))[_0xe7d88f(0x156)]['display']='block',document[_0xe7d88f(0x113)](_0xe7d88f(0x17b))['innerHTML']=_0xe7d88f(0x121),document['getElementById'](_0xe7d88f(0x162))['onclick']=function(){_0x483e96();};function _0x483e96(){var _0x10240d=_0xe7d88f;document[_0x10240d(0x113)](_0x10240d(0x109))[_0x10240d(0x156)][_0x10240d(0x19d)]=_0x10240d(0x10f);}return![];}}}overlay_updateme['style']['display']=_0xe7d88f(0x10f);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x124))[_0x5e3aa4(0x153)]=function(){cancel_update();};function cancel_update(){var _0x1fbcbd=_0x5e3aa4;overlay_updateme[_0x1fbcbd(0x156)][_0x1fbcbd(0x19d)]=_0x1fbcbd(0x10f);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x137))['onclick']=function(){show_insert();};var overlay_insertme=document[_0x5e3aa4(0x113)]('insert-container');function show_insert(){var _0xab5539=_0x5e3aa4;overlay_insertme['style'][_0xab5539(0x19d)]='block';}document['getElementById'](_0x5e3aa4(0xa8))['onclick']=function(){confirm_insert();};function confirm_insert(){var _0x4cbb72=_0x5e3aa4;if(document[_0x4cbb72(0x113)](_0x4cbb72(0x194))[_0x4cbb72(0xae)]=='vattudha'&&document[_0x4cbb72(0x113)]('chonnavi')[_0x4cbb72(0xae)]!==_0x4cbb72(0x12b)&&document['getElementById'](_0x4cbb72(0x123))['value']!==_0x4cbb72(0xcc)&&document['getElementById'](_0x4cbb72(0x123))[_0x4cbb72(0xae)]!==_0x4cbb72(0xd9))insertVattuDpDHA_value(),readDataVattuDpDHA();else{if(document['getElementById'](_0x4cbb72(0x194))[_0x4cbb72(0xae)]==_0x4cbb72(0x17e)&&document[_0x4cbb72(0x113)](_0x4cbb72(0x123))[_0x4cbb72(0xae)]!==_0x4cbb72(0xe7)&&document['getElementById'](_0x4cbb72(0x123))[_0x4cbb72(0xae)]!==_0x4cbb72(0xcc)&&document[_0x4cbb72(0x113)](_0x4cbb72(0x123))['value']!==_0x4cbb72(0xd9))insertVattuDpDHI_value(),readDataVattuDpDHI();else{if(document[_0x4cbb72(0x113)](_0x4cbb72(0x194))[_0x4cbb72(0xae)]=='vattuhue'&&document[_0x4cbb72(0x113)](_0x4cbb72(0x123))[_0x4cbb72(0xae)]!==_0x4cbb72(0xe7)&&document['getElementById']('chonnavi')[_0x4cbb72(0xae)]!==_0x4cbb72(0x12b)&&document[_0x4cbb72(0x113)](_0x4cbb72(0x123))['value']!==_0x4cbb72(0xd9))insertVattuDpHUE_value(),readDataVattuDpHUE();else{overlay_insertme[_0x4cbb72(0x156)][_0x4cbb72(0x19d)]=_0x4cbb72(0x10f),document[_0x4cbb72(0x113)](_0x4cbb72(0x109))[_0x4cbb72(0x156)]['display']=_0x4cbb72(0xd7),document['getElementById'](_0x4cbb72(0x17b))['innerHTML']=_0x4cbb72(0xc2),document[_0x4cbb72(0x113)](_0x4cbb72(0x162))['onclick']=function(){_0x4b053e();};function _0x4b053e(){var _0x569c26=_0x4cbb72;document[_0x569c26(0x113)]('id-container')[_0x569c26(0x156)][_0x569c26(0x19d)]='none';}return![];}}}overlay_insertme[_0x4cbb72(0x156)]['display']=_0x4cbb72(0x10f);}document['getElementById']('cancel_insert')['onclick']=function(){cancel_insert();};function cancel_insert(){var _0x2afb51=_0x5e3aa4;overlay_insertme[_0x2afb51(0x156)][_0x2afb51(0x19d)]=_0x2afb51(0x10f);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0xd5))['onclick']=function(){show_delete();};var overlay_deleteme=document['getElementById']('delete-container');function show_delete(){var _0x47607e=_0x5e3aa4;if(document[_0x47607e(0x113)]('id')[_0x47607e(0xae)]===''||document[_0x47607e(0x113)]('id')['value']<0x1){overlay_deleteme['style'][_0x47607e(0x19d)]=_0x47607e(0x10f),document['getElementById']('id-container')[_0x47607e(0x156)][_0x47607e(0x19d)]=_0x47607e(0xd7),document['getElementById'](_0x47607e(0x17b))[_0x47607e(0xb2)]=_0x47607e(0xc4),document[_0x47607e(0x113)](_0x47607e(0x162))[_0x47607e(0x153)]=function(){_0x3d97b0();};function _0x3d97b0(){var _0x1da6ee=_0x47607e;document[_0x1da6ee(0x113)]('id-container')[_0x1da6ee(0x156)][_0x1da6ee(0x19d)]=_0x1da6ee(0x10f);}return![];}overlay_deleteme[_0x47607e(0x156)][_0x47607e(0x19d)]=_0x47607e(0xd7);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x142))[_0x5e3aa4(0x153)]=function(){confirm_delete();};function confirm_delete(){var _0x48abfd=_0x5e3aa4;if(document['getElementById']('combine')[_0x48abfd(0xae)]==_0x48abfd(0x169)&&document['getElementById'](_0x48abfd(0x123))[_0x48abfd(0xae)]!==_0x48abfd(0x12b)&&document[_0x48abfd(0x113)](_0x48abfd(0x123))[_0x48abfd(0xae)]!==_0x48abfd(0xcc)&&document[_0x48abfd(0x113)](_0x48abfd(0x123))['value']!==_0x48abfd(0xd9))deleteVattuDpDHA_value(),readDataVattuDpDHA();else{if(document['getElementById'](_0x48abfd(0x194))[_0x48abfd(0xae)]==_0x48abfd(0x17e)&&document['getElementById'](_0x48abfd(0x123))[_0x48abfd(0xae)]!==_0x48abfd(0xe7)&&document[_0x48abfd(0x113)](_0x48abfd(0x123))[_0x48abfd(0xae)]!==_0x48abfd(0xcc)&&document['getElementById'](_0x48abfd(0x123))[_0x48abfd(0xae)]!==_0x48abfd(0xd9))deleteVattuDpDHI_value(),readDataVattuDpDHI();else{if(document[_0x48abfd(0x113)](_0x48abfd(0x194))[_0x48abfd(0xae)]==_0x48abfd(0x110)&&document[_0x48abfd(0x113)](_0x48abfd(0x123))[_0x48abfd(0xae)]!=='navidha'&&document['getElementById']('chonnavi')[_0x48abfd(0xae)]!==_0x48abfd(0x12b)&&document['getElementById']('chonnavi')[_0x48abfd(0xae)]!=='navith')deleteVattuDpHUE_value(),readDataVattuDpHUE();else{overlay_deleteme[_0x48abfd(0x156)][_0x48abfd(0x19d)]='none',document['getElementById'](_0x48abfd(0x109))[_0x48abfd(0x156)]['display']=_0x48abfd(0xd7),document[_0x48abfd(0x113)]('id_alert')[_0x48abfd(0xb2)]='Chọn\x20Trạm\x20đang\x20đăng\x20nhập\x20để\x20xóa\x20số\x20liệu\x20!',document['getElementById']('confirm_id')[_0x48abfd(0x153)]=function(){_0x194120();};function _0x194120(){var _0x53feed=_0x48abfd;document[_0x53feed(0x113)]('id-container')[_0x53feed(0x156)][_0x53feed(0x19d)]=_0x53feed(0x10f);}return![];}}}overlay_deleteme['style'][_0x48abfd(0x19d)]=_0x48abfd(0x10f);}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x10b))['onclick']=function(){cancel_delete();};function cancel_delete(){var _0x57aeef=_0x5e3aa4;overlay_deleteme['style'][_0x57aeef(0x19d)]='none';}var script_url=_0x5e3aa4(0xcb);function updateVattuDpDHA_value(){var _0x1afed2=_0x5e3aa4;$(_0x1afed2(0xa7))[_0x1afed2(0xbe)](_0x1afed2(0xed),_0x1afed2(0x12e)),document[_0x1afed2(0x113)]('loader')['style']['visibility']='visible';var _0x1dd036=$(_0x1afed2(0x160))['val'](),_0x3aee9b=$(_0x1afed2(0xf1))[_0x1afed2(0xb7)](),_0x305940=$(_0x1afed2(0xab))[_0x1afed2(0xb7)](),_0x43726a=$(_0x1afed2(0x10c))[_0x1afed2(0xb7)](),_0x2f4e4d=$(_0x1afed2(0xc7))['val'](),_0xa78ed0=$(_0x1afed2(0x132))['val'](),_0x40d9b7=$('#Colum6')[_0x1afed2(0xb7)](),_0x5c8e3d=$('#Colum7')[_0x1afed2(0xb7)](),_0x16110e=$('#Colum8')[_0x1afed2(0xb7)](),_0x1c705d=$(_0x1afed2(0x191))['val'](),_0x4d3384=$('#Colum10')[_0x1afed2(0xb7)](),_0x30e822=$(_0x1afed2(0x148))[_0x1afed2(0xb7)](),_0x227822=$(_0x1afed2(0xcd))[_0x1afed2(0xb7)](),_0x5510b0=$(_0x1afed2(0xf9))['val'](),_0x5c952c=$('#Colum14')[_0x1afed2(0xb7)](),_0x465ee0=atob(script_url)+'?callback=ctrlq&id='+_0x305940+_0x1afed2(0x159)+_0x43726a+_0x1afed2(0x165)+_0x2f4e4d+_0x1afed2(0x144)+_0xa78ed0+_0x1afed2(0xda)+_0x40d9b7+_0x1afed2(0xbd)+_0x5c8e3d+_0x1afed2(0xdf)+_0x16110e+_0x1afed2(0xde)+_0x1c705d+_0x1afed2(0x138)+_0x4d3384+_0x1afed2(0x157)+_0x30e822+'&Colum12='+_0x227822+_0x1afed2(0xbc)+_0x5510b0+'&Colum14='+_0x5c952c+_0x1afed2(0x199)+_0x1dd036+'&combine='+_0x3aee9b+_0x1afed2(0x152),_0x5e2764=jQuery['ajax']({'crossDomain':!![],'url':_0x465ee0,'method':'GET','dataType':_0x1afed2(0x100)});document[_0x1afed2(0x113)]('id')['value']='',readDataVattuDpDHA();}function updateVattuDpDHI_value(){var _0x5f134a=_0x5e3aa4;$(_0x5f134a(0xa7))[_0x5f134a(0xbe)](_0x5f134a(0xed),_0x5f134a(0x12e)),document[_0x5f134a(0x113)](_0x5f134a(0x122))['style']['visibility']=_0x5f134a(0xe8);var _0x36adc9=$(_0x5f134a(0x160))['val'](),_0x28be91=$('#combine')[_0x5f134a(0xb7)](),_0x2588e4=$(_0x5f134a(0xab))['val'](),_0x2b1dc7=$(_0x5f134a(0x10c))[_0x5f134a(0xb7)](),_0x47b9e7=$(_0x5f134a(0xc7))[_0x5f134a(0xb7)](),_0x533efe=$(_0x5f134a(0x132))['val'](),_0x531553=$(_0x5f134a(0x15d))[_0x5f134a(0xb7)](),_0x18034e=$(_0x5f134a(0x13a))[_0x5f134a(0xb7)](),_0x553d5f=$(_0x5f134a(0x19b))[_0x5f134a(0xb7)](),_0x5cc508=$(_0x5f134a(0x191))[_0x5f134a(0xb7)](),_0x40710d=$('#Colum10')[_0x5f134a(0xb7)](),_0xb7db3b=$(_0x5f134a(0x148))[_0x5f134a(0xb7)](),_0x5ea7e1=$('#Colum12')[_0x5f134a(0xb7)](),_0x3b9a4c=$(_0x5f134a(0xf9))[_0x5f134a(0xb7)](),_0x395ba5=$('#Colum14')[_0x5f134a(0xb7)](),_0x251aa1=atob(script_url)+_0x5f134a(0x17c)+_0x2588e4+'&Colum3='+_0x2b1dc7+_0x5f134a(0x165)+_0x47b9e7+'&Colum5='+_0x533efe+'&Colum6='+_0x531553+_0x5f134a(0xbd)+_0x18034e+'&Colum8='+_0x553d5f+_0x5f134a(0xde)+_0x5cc508+_0x5f134a(0x138)+_0x40710d+_0x5f134a(0x157)+_0xb7db3b+'&Colum12='+_0x5ea7e1+_0x5f134a(0xbc)+_0x3b9a4c+_0x5f134a(0xb6)+_0x395ba5+_0x5f134a(0x199)+_0x36adc9+_0x5f134a(0x127)+_0x28be91+_0x5f134a(0x11e),_0x50fad1=jQuery[_0x5f134a(0xeb)]({'crossDomain':!![],'url':_0x251aa1,'method':_0x5f134a(0x11a),'dataType':_0x5f134a(0x100)});document[_0x5f134a(0x113)]('id')[_0x5f134a(0xae)]='',readDataVattuDpDHI();}function updateVattuDpHUE_value(){var _0x265749=_0x5e3aa4;$(_0x265749(0xa7))['css'](_0x265749(0xed),_0x265749(0x12e)),document['getElementById']('loader')[_0x265749(0x156)]['visibility']=_0x265749(0xe8);var _0x4710a9=$(_0x265749(0x160))['val'](),_0x151d9e=$('#combine')[_0x265749(0xb7)](),_0xa8ba6=$('#id')[_0x265749(0xb7)](),_0x1568fd=$(_0x265749(0x10c))['val'](),_0x2c01b4=$('#Colum4')[_0x265749(0xb7)](),_0x152ac3=$(_0x265749(0x132))[_0x265749(0xb7)](),_0x20ed3b=$(_0x265749(0x15d))['val'](),_0x5d44f1=$(_0x265749(0x13a))[_0x265749(0xb7)](),_0x1a9871=$(_0x265749(0x19b))['val'](),_0x327d56=$(_0x265749(0x191))[_0x265749(0xb7)](),_0x1b7532=$(_0x265749(0x170))[_0x265749(0xb7)](),_0xd83724=$(_0x265749(0x148))[_0x265749(0xb7)](),_0x176468=$(_0x265749(0xcd))[_0x265749(0xb7)](),_0x3838d5=$(_0x265749(0xf9))[_0x265749(0xb7)](),_0x1830d5=$(_0x265749(0x131))[_0x265749(0xb7)](),_0x4ddc61=atob(script_url)+_0x265749(0x17c)+_0xa8ba6+_0x265749(0x159)+_0x1568fd+_0x265749(0x165)+_0x2c01b4+_0x265749(0x144)+_0x152ac3+_0x265749(0xda)+_0x20ed3b+_0x265749(0xbd)+_0x5d44f1+_0x265749(0xdf)+_0x1a9871+_0x265749(0xde)+_0x327d56+_0x265749(0x138)+_0x1b7532+_0x265749(0x157)+_0xd83724+_0x265749(0x179)+_0x176468+_0x265749(0xbc)+_0x3838d5+_0x265749(0xb6)+_0x1830d5+_0x265749(0x199)+_0x4710a9+_0x265749(0x127)+_0x151d9e+_0x265749(0x17f),_0x2563a4=jQuery[_0x265749(0xeb)]({'crossDomain':!![],'url':_0x4ddc61,'method':_0x265749(0x11a),'dataType':_0x265749(0x100)});document[_0x265749(0x113)]('id')[_0x265749(0xae)]='',readDataVattuDpHUE();}function deleteVattuDpDHA_value(){var _0x524adf=_0x5e3aa4;$(_0x524adf(0xa7))[_0x524adf(0xbe)](_0x524adf(0xed),_0x524adf(0x12e)),document['getElementById']('loader')[_0x524adf(0x156)][_0x524adf(0xed)]=_0x524adf(0xe8);var _0x1799b0=$('#ngaylog')['val'](),_0x5078be=$(_0x524adf(0xf1))[_0x524adf(0xb7)](),_0x228143=$(_0x524adf(0xab))[_0x524adf(0xb7)](),_0x149cc3=$(_0x524adf(0x10c))['val'](),_0x530206=$(_0x524adf(0xc7))[_0x524adf(0xb7)](),_0x1391aa=$(_0x524adf(0x132))['val'](),_0x3e95b0=$('#Colum6')[_0x524adf(0xb7)](),_0x5bd104=$('#Colum7')[_0x524adf(0xb7)](),_0x301593=$('#Colum8')[_0x524adf(0xb7)](),_0x1ed8af=$(_0x524adf(0x191))[_0x524adf(0xb7)](),_0x14cb06=$('#Colum10')[_0x524adf(0xb7)](),_0x315170=$(_0x524adf(0x148))[_0x524adf(0xb7)](),_0x52088b=$(_0x524adf(0xcd))['val'](),_0x40aeec=$(_0x524adf(0xf9))[_0x524adf(0xb7)](),_0x57959d=$(_0x524adf(0x131))[_0x524adf(0xb7)](),_0xd7de8=atob(script_url)+'?callback=ctrlq&id='+_0x228143+'&Colum3='+_0x149cc3+_0x524adf(0x165)+_0x530206+'&Colum5='+_0x1391aa+_0x524adf(0xda)+_0x3e95b0+_0x524adf(0xbd)+_0x5bd104+_0x524adf(0xdf)+_0x301593+_0x524adf(0xde)+_0x1ed8af+_0x524adf(0x138)+_0x14cb06+_0x524adf(0x157)+_0x315170+_0x524adf(0x179)+_0x52088b+'&Colum13='+_0x40aeec+_0x524adf(0xb6)+_0x57959d+_0x524adf(0x199)+_0x1799b0+_0x524adf(0x127)+_0x5078be+_0x524adf(0x177),_0x4c5840=jQuery[_0x524adf(0xeb)]({'crossDomain':!![],'url':_0xd7de8,'method':'GET','dataType':_0x524adf(0x100)});document[_0x524adf(0x113)]('id')[_0x524adf(0xae)]='',readDataVattuDpDHA();}function deleteVattuDpDHI_value(){var _0xe26b65=_0x5e3aa4;$(_0xe26b65(0xa7))[_0xe26b65(0xbe)](_0xe26b65(0xed),'hidden'),document[_0xe26b65(0x113)](_0xe26b65(0x122))[_0xe26b65(0x156)][_0xe26b65(0xed)]=_0xe26b65(0xe8);var _0x46abb5=$('#ngaylog')[_0xe26b65(0xb7)](),_0x4130c6=$(_0xe26b65(0xf1))[_0xe26b65(0xb7)](),_0xd8c694=$(_0xe26b65(0xab))[_0xe26b65(0xb7)](),_0x49f44=$(_0xe26b65(0x10c))[_0xe26b65(0xb7)](),_0x115dff=$(_0xe26b65(0xc7))[_0xe26b65(0xb7)](),_0x416ef3=$(_0xe26b65(0x132))[_0xe26b65(0xb7)](),_0x93215d=$(_0xe26b65(0x15d))[_0xe26b65(0xb7)](),_0x4c8560=$(_0xe26b65(0x13a))[_0xe26b65(0xb7)](),_0x44ebac=$(_0xe26b65(0x19b))[_0xe26b65(0xb7)](),_0x2aef5b=$(_0xe26b65(0x191))[_0xe26b65(0xb7)](),_0x579e01=$(_0xe26b65(0x170))['val'](),_0x1e8519=$(_0xe26b65(0x148))[_0xe26b65(0xb7)](),_0x72a013=$(_0xe26b65(0xcd))[_0xe26b65(0xb7)](),_0x4800c4=$(_0xe26b65(0xf9))['val'](),_0x2e7be4=$(_0xe26b65(0x131))[_0xe26b65(0xb7)](),_0x30af8c=atob(script_url)+_0xe26b65(0x17c)+_0xd8c694+'&Colum3='+_0x49f44+'&Colum4='+_0x115dff+_0xe26b65(0x144)+_0x416ef3+_0xe26b65(0xda)+_0x93215d+_0xe26b65(0xbd)+_0x4c8560+_0xe26b65(0xdf)+_0x44ebac+'&Colum9='+_0x2aef5b+_0xe26b65(0x138)+_0x579e01+'&Colum11='+_0x1e8519+'&Colum12='+_0x72a013+_0xe26b65(0xbc)+_0x4800c4+_0xe26b65(0xb6)+_0x2e7be4+'&ngaylog='+_0x46abb5+_0xe26b65(0x127)+_0x4130c6+'&action=deleteVattuDpDHI',_0x28139a=jQuery['ajax']({'crossDomain':!![],'url':_0x30af8c,'method':_0xe26b65(0x11a),'dataType':'jsonp'});document[_0xe26b65(0x113)]('id')['value']='',readDataVattuDpDHI();}function deleteVattuDpHUE_value(){var _0x41c086=_0x5e3aa4;$('#re')[_0x41c086(0xbe)](_0x41c086(0xed),_0x41c086(0x12e)),document['getElementById'](_0x41c086(0x122))[_0x41c086(0x156)][_0x41c086(0xed)]='visible';var _0x221597=$('#ngaylog')['val'](),_0x2af4fb=$(_0x41c086(0xf1))[_0x41c086(0xb7)](),_0x2108a5=$(_0x41c086(0xab))[_0x41c086(0xb7)](),_0x1c62e0=$(_0x41c086(0x10c))[_0x41c086(0xb7)](),_0xf8e697=$(_0x41c086(0xc7))['val'](),_0x57f771=$(_0x41c086(0x132))[_0x41c086(0xb7)](),_0x1c5725=$(_0x41c086(0x15d))[_0x41c086(0xb7)](),_0x50994e=$(_0x41c086(0x13a))[_0x41c086(0xb7)](),_0x37f080=$(_0x41c086(0x19b))[_0x41c086(0xb7)](),_0x43a276=$('#Colum9')[_0x41c086(0xb7)](),_0x117703=$(_0x41c086(0x170))[_0x41c086(0xb7)](),_0x4b3570=$(_0x41c086(0x148))[_0x41c086(0xb7)](),_0x315341=$(_0x41c086(0xcd))[_0x41c086(0xb7)](),_0x3cd092=$('#Colum13')['val'](),_0x391674=$(_0x41c086(0x131))[_0x41c086(0xb7)](),_0x141a77=atob(script_url)+_0x41c086(0x17c)+_0x2108a5+'&Colum3='+_0x1c62e0+_0x41c086(0x165)+_0xf8e697+_0x41c086(0x144)+_0x57f771+_0x41c086(0xda)+_0x1c5725+_0x41c086(0xbd)+_0x50994e+_0x41c086(0xdf)+_0x37f080+_0x41c086(0xde)+_0x43a276+'&Colum10='+_0x117703+_0x41c086(0x157)+_0x4b3570+'&Colum12='+_0x315341+_0x41c086(0xbc)+_0x3cd092+_0x41c086(0xb6)+_0x391674+_0x41c086(0x199)+_0x221597+_0x41c086(0x127)+_0x2af4fb+'&action=deleteVattuDpHUE',_0x28fef7=jQuery[_0x41c086(0xeb)]({'crossDomain':!![],'url':_0x141a77,'method':'GET','dataType':_0x41c086(0x100)});document[_0x41c086(0x113)]('id')[_0x41c086(0xae)]='',readDataVattuDpHUE();}function insertVattuDpDHA_value(){var _0x419e8a=_0x5e3aa4;$('#re')['css'](_0x419e8a(0xed),_0x419e8a(0x12e)),document[_0x419e8a(0x113)](_0x419e8a(0x122))['style']['visibility']='visible';var _0x4d750a=$(_0x419e8a(0x160))['val'](),_0x54536a=$('#combine')[_0x419e8a(0xb7)](),_0x3f2ba6=$(_0x419e8a(0xab))[_0x419e8a(0xb7)](),_0x2b5c40=$('#Colum3')[_0x419e8a(0xb7)](),_0x531bc2=$(_0x419e8a(0xc7))[_0x419e8a(0xb7)](),_0x47d658=$(_0x419e8a(0x132))[_0x419e8a(0xb7)](),_0x519755=$('#Colum6')['val'](),_0x2ad9e1=$(_0x419e8a(0x13a))['val'](),_0xb8d526=$(_0x419e8a(0x19b))[_0x419e8a(0xb7)](),_0x3a1188=$(_0x419e8a(0x191))[_0x419e8a(0xb7)](),_0x2584d0=$('#Colum10')[_0x419e8a(0xb7)](),_0x4ac3f3=$('#Colum11')[_0x419e8a(0xb7)](),_0x37718a=$(_0x419e8a(0xcd))[_0x419e8a(0xb7)](),_0x50083c=$(_0x419e8a(0xf9))['val'](),_0x5c19a8=$('#Colum14')[_0x419e8a(0xb7)](),_0xc6942d=atob(script_url)+'?callback=ctrlq&id='+_0x3f2ba6+_0x419e8a(0x159)+_0x2b5c40+'&Colum4='+_0x531bc2+_0x419e8a(0x144)+_0x47d658+'&Colum6='+_0x519755+_0x419e8a(0xbd)+_0x2ad9e1+_0x419e8a(0xdf)+_0xb8d526+_0x419e8a(0xde)+_0x3a1188+_0x419e8a(0x138)+_0x2584d0+'&Colum11='+_0x4ac3f3+_0x419e8a(0x179)+_0x37718a+_0x419e8a(0xbc)+_0x50083c+'&Colum14='+_0x5c19a8+_0x419e8a(0x199)+_0x4d750a+'&combine='+_0x54536a+_0x419e8a(0x115),_0xea5412=jQuery[_0x419e8a(0xeb)]({'crossDomain':!![],'url':_0xc6942d,'method':_0x419e8a(0x11a),'dataType':_0x419e8a(0x100)});document[_0x419e8a(0x113)]('id')['value']='',readDataVattuDpDHA();}function insertVattuDpDHI_value(){var _0x2767cd=_0x5e3aa4;$(_0x2767cd(0xa7))['css'](_0x2767cd(0xed),_0x2767cd(0x12e)),document['getElementById'](_0x2767cd(0x122))[_0x2767cd(0x156)][_0x2767cd(0xed)]='visible';var _0x33e28a=$(_0x2767cd(0x160))[_0x2767cd(0xb7)](),_0x4a91c6=$('#combine')[_0x2767cd(0xb7)](),_0x677143=$('#id')[_0x2767cd(0xb7)](),_0x432242=$(_0x2767cd(0x10c))[_0x2767cd(0xb7)](),_0x12c93b=$(_0x2767cd(0xc7))[_0x2767cd(0xb7)](),_0x17d570=$(_0x2767cd(0x132))['val'](),_0x4bd736=$('#Colum6')[_0x2767cd(0xb7)](),_0x45557b=$(_0x2767cd(0x13a))[_0x2767cd(0xb7)](),_0xfb072e=$(_0x2767cd(0x19b))['val'](),_0x391641=$(_0x2767cd(0x191))[_0x2767cd(0xb7)](),_0x332d3e=$('#Colum10')['val'](),_0xd392e0=$('#Colum11')[_0x2767cd(0xb7)](),_0x1cd963=$('#Colum12')[_0x2767cd(0xb7)](),_0x2380e1=$(_0x2767cd(0xf9))['val'](),_0x41461c=$(_0x2767cd(0x131))[_0x2767cd(0xb7)](),_0x4477fd=atob(script_url)+_0x2767cd(0x17c)+_0x677143+_0x2767cd(0x159)+_0x432242+_0x2767cd(0x165)+_0x12c93b+_0x2767cd(0x144)+_0x17d570+_0x2767cd(0xda)+_0x4bd736+'&Colum7='+_0x45557b+'&Colum8='+_0xfb072e+_0x2767cd(0xde)+_0x391641+_0x2767cd(0x138)+_0x332d3e+_0x2767cd(0x157)+_0xd392e0+'&Colum12='+_0x1cd963+_0x2767cd(0xbc)+_0x2380e1+_0x2767cd(0xb6)+_0x41461c+_0x2767cd(0x199)+_0x33e28a+_0x2767cd(0x127)+_0x4a91c6+_0x2767cd(0x14f),_0x563ab3=jQuery[_0x2767cd(0xeb)]({'crossDomain':!![],'url':_0x4477fd,'method':'GET','dataType':'jsonp'});document['getElementById']('id')[_0x2767cd(0xae)]='',readDataVattuDpDHI();}function insertVattuDpHUE_value(){var _0x405593=_0x5e3aa4;$('#re')[_0x405593(0xbe)](_0x405593(0xed),_0x405593(0x12e)),document[_0x405593(0x113)](_0x405593(0x122))[_0x405593(0x156)][_0x405593(0xed)]='visible';var _0x568c02=$('#ngaylog')[_0x405593(0xb7)](),_0x21c133=$(_0x405593(0xf1))[_0x405593(0xb7)](),_0x3620aa=$(_0x405593(0xab))['val'](),_0x18eaf4=$(_0x405593(0x10c))['val'](),_0x41c3b5=$(_0x405593(0xc7))[_0x405593(0xb7)](),_0x1b4926=$(_0x405593(0x132))[_0x405593(0xb7)](),_0x3dba57=$(_0x405593(0x15d))[_0x405593(0xb7)](),_0x158f38=$(_0x405593(0x13a))[_0x405593(0xb7)](),_0x1f4c49=$(_0x405593(0x19b))[_0x405593(0xb7)](),_0xe93b9e=$(_0x405593(0x191))[_0x405593(0xb7)](),_0xaa7648=$(_0x405593(0x170))[_0x405593(0xb7)](),_0x8b4d38=$(_0x405593(0x148))[_0x405593(0xb7)](),_0xa1f91e=$(_0x405593(0xcd))[_0x405593(0xb7)](),_0x12a1a0=$('#Colum13')[_0x405593(0xb7)](),_0x15c4ca=$('#Colum14')[_0x405593(0xb7)](),_0x548b8b=atob(script_url)+_0x405593(0x17c)+_0x3620aa+_0x405593(0x159)+_0x18eaf4+_0x405593(0x165)+_0x41c3b5+_0x405593(0x144)+_0x1b4926+_0x405593(0xda)+_0x3dba57+_0x405593(0xbd)+_0x158f38+_0x405593(0xdf)+_0x1f4c49+_0x405593(0xde)+_0xe93b9e+_0x405593(0x138)+_0xaa7648+_0x405593(0x157)+_0x8b4d38+'&Colum12='+_0xa1f91e+_0x405593(0xbc)+_0x12a1a0+_0x405593(0xb6)+_0x15c4ca+'&ngaylog='+_0x568c02+_0x405593(0x127)+_0x21c133+_0x405593(0x187),_0x550f39=jQuery[_0x405593(0xeb)]({'crossDomain':!![],'url':_0x548b8b,'method':_0x405593(0x11a),'dataType':_0x405593(0x100)});document[_0x405593(0x113)]('id')[_0x405593(0xae)]='',readDataVattuDpHUE();}function searchTableAdmin(){var _0x32ce9d=_0x5e3aa4,_0x4c69f5=0x0,_0x5963ac,_0x4d664b,_0x7e5c24,_0x4fa860,_0x5c27a4,_0x326d5d,_0x1f3e94,_0x433211;_0x5963ac=document[_0x32ce9d(0x113)](_0x32ce9d(0x107)),_0x4d664b=_0x5963ac[_0x32ce9d(0xae)][_0x32ce9d(0x146)](),_0x4fa860=document[_0x32ce9d(0x113)](_0x32ce9d(0x16d)),_0x5c27a4=_0x4fa860[_0x32ce9d(0x173)]('tr');for(_0x1f3e94=0x1;_0x1f3e94<_0x5c27a4[_0x32ce9d(0xb9)];_0x1f3e94++){_0x326d5d=_0x5c27a4[_0x1f3e94][_0x32ce9d(0x173)]('td');_0x326d5d[0x0][_0x32ce9d(0xb2)][_0x32ce9d(0x146)]()=='ID'&&(_0x7e5c24=!![]);for(_0x433211=0x0;_0x433211<_0x326d5d[_0x32ce9d(0xb9)];_0x433211++){_0x326d5d[_0x433211][_0x32ce9d(0xb2)]['toUpperCase']()[_0x32ce9d(0x19f)](_0x4d664b)>-0x1&&(_0x7e5c24=!![]);}_0x7e5c24?(_0x5c27a4[_0x1f3e94][_0x32ce9d(0x156)][_0x32ce9d(0x19d)]='',_0x7e5c24=![],_0x5c27a4[_0x1f3e94][_0x32ce9d(0x173)]('td')[0x6][_0x32ce9d(0xb2)]['toUpperCase']()!=_0x32ce9d(0x130)&&(_0x4c69f5+=parseInt(_0x5c27a4[_0x1f3e94][_0x32ce9d(0x173)]('td')[0x6]['innerHTML'][_0x32ce9d(0x146)]()))):_0x5c27a4[_0x1f3e94][_0x32ce9d(0x156)]['display']=_0x32ce9d(0x10f);}document[_0x32ce9d(0x113)](_0x32ce9d(0xc5))[_0x32ce9d(0xb2)]=_0x4c69f5['toString']()[_0x32ce9d(0x104)](/\B(?=(\d{3})+(?!\d))/g,',');var _0x426c4d=document['getElementById'](_0x32ce9d(0x16d));if(_0x426c4d){var _0x1d5ed8=_0x426c4d[_0x32ce9d(0x173)]('td'),_0x2c14cf=0x0;for(var _0x1f3e94=0x0;_0x1f3e94<_0x1d5ed8[_0x32ce9d(0xb9)];_0x1f3e94++){_0x1d5ed8[_0x1f3e94][_0x32ce9d(0x12d)]=='countable'&&_0x1d5ed8[_0x1f3e94]['closest']('tr')[_0x32ce9d(0x156)][_0x32ce9d(0x19d)]!=_0x32ce9d(0x10f)&&(_0x2c14cf+=isNaN(_0x1d5ed8[_0x1f3e94][_0x32ce9d(0xb2)])?0x0:parseInt(_0x1d5ed8[_0x1f3e94][_0x32ce9d(0xb2)]));}}}var mytable=document[_0x5e3aa4(0x113)](_0x5e3aa4(0x16d));if(mytable){var cls=mytable[_0x5e3aa4(0x173)]('td'),sum=0x0;for(var i=0x0;i<cls[_0x5e3aa4(0xb9)];i++){cls[i][_0x5e3aa4(0x12d)]==_0x5e3aa4(0xf5)&&(sum+=isNaN(cls[i][_0x5e3aa4(0xb2)])?0x0:parseInt(cls[i][_0x5e3aa4(0xb2)]));}document[_0x5e3aa4(0x113)](_0x5e3aa4(0x130))[_0x5e3aa4(0xb2)]+=sum;}function filterTable_OK(){var _0xaab7c2=_0x5e3aa4,_0x160e13=0x0,_0x1a0811,_0x337ef1,_0xd03cd4,_0x5a4cab,_0x49fdef,_0x187a7a,_0x304ab0,_0x3fd1d5,_0x172573,_0x23cf2b,_0x2d0b3a,_0x2dce71,_0x2650e2;_0x1a0811=document[_0xaab7c2(0x113)](_0xaab7c2(0x18b)),filter1=_0x1a0811[_0xaab7c2(0xae)][_0xaab7c2(0x146)](),_0xd03cd4=document[_0xaab7c2(0x113)](_0xaab7c2(0x16d)),_0x5a4cab=_0xd03cd4[_0xaab7c2(0x173)]('tr');for(_0x187a7a=0x0;_0x187a7a<_0x5a4cab[_0xaab7c2(0xb9)];_0x187a7a++){td0=_0x5a4cab[_0x187a7a][_0xaab7c2(0x173)]('td')[0x0],td1=_0x5a4cab[_0x187a7a]['getElementsByTagName']('td')[0x1],td2=_0x5a4cab[_0x187a7a][_0xaab7c2(0x173)]('td')[0x2],td3=_0x5a4cab[_0x187a7a]['getElementsByTagName']('td')[0x3],td4=_0x5a4cab[_0x187a7a][_0xaab7c2(0x173)]('td')[0x4],td5=_0x5a4cab[_0x187a7a][_0xaab7c2(0x173)]('td')[0x5],td6=_0x5a4cab[_0x187a7a][_0xaab7c2(0x173)]('td')[0x6],(td0||td1||td2||td3||td4||td5||td6)&&(_0x304ab0=td0[_0xaab7c2(0x186)]||td0[_0xaab7c2(0xb8)],_0x3fd1d5=td1['textContent']||td1[_0xaab7c2(0xb8)],_0x172573=td2['textContent']||td2['innerText'],_0x23cf2b=td3[_0xaab7c2(0x186)]||td3['innerText'],_0x2d0b3a=td4[_0xaab7c2(0x186)]||td4[_0xaab7c2(0xb8)],_0x2dce71=td5[_0xaab7c2(0x186)]||td5[_0xaab7c2(0xb8)],_0x2650e2=td6[_0xaab7c2(0x186)]||td6['innerText'],_0x304ab0[_0xaab7c2(0x146)]()[_0xaab7c2(0x19f)](filter1)>-0x1||_0x3fd1d5[_0xaab7c2(0x146)]()[_0xaab7c2(0x19f)](filter1)>-0x1||_0x172573[_0xaab7c2(0x146)]()[_0xaab7c2(0x19f)](filter1)>-0x1||_0x23cf2b[_0xaab7c2(0x146)]()['indexOf'](filter1)>-0x1||_0x2d0b3a['toUpperCase']()['indexOf'](filter1)>-0x1||_0x2dce71['toUpperCase']()['indexOf'](filter1)>-0x1||_0x2650e2['toUpperCase']()['indexOf'](filter1)>-0x1?(_0x5a4cab[_0x187a7a]['style'][_0xaab7c2(0x19d)]='',_0x5a4cab[_0x187a7a]['getElementsByTagName']('td')[0x6][_0xaab7c2(0xb2)]['toUpperCase']()!='TỔNG..'&&(_0x160e13+=parseInt(_0x5a4cab[_0x187a7a][_0xaab7c2(0x173)]('td')[0x6]['innerHTML'][_0xaab7c2(0x146)]()))):_0x5a4cab[_0x187a7a][_0xaab7c2(0x156)][_0xaab7c2(0x19d)]=_0xaab7c2(0x10f));}}
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 1200000
+  //idle: 3600000
+})
+//]]>
+
+
+
+var overlay_timeme = document.getElementById("dialog_time");
+var overlayme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+
+    overlay_timeme.style.display = "block";
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    overlayme.style.display = "none";
+	
+}
+
+
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+
+function confirm() {
+	close();	
+    overlayme.style.display = "none";
+
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+
+    overlayme.style.display = "none";
+}
+
+
+function close_window() {
+	close();	
+}
+// ---------------------------
+
+function ExportToExcel_OK(type, fn, dl) {
+            // Remove Dynamic hidden controls.
+            var list = $('#showData').find(':not(:visible)');
+			// var list = $('#showData').find(':not(:visible)').remove();
+            for (var i = list.length - 1; 0 <= i; i--) {
+                if (list[i] && list[i].parentElement) {
+                    list[i].parentElement.removeChild(list[i]);
+                }
+            }
+
+                var elt = document.getElementById('mytable');
+             // const elements = elt.getElementsByClassName("sortable");
+             //   while (elements.length > 0) elements[0].remove();
+
+                var wb = XLSX.utils.table_to_book(elt, {
+                    sheet: "Order"
+                });
+                return dl ?
+                    XLSX.write(wb, {
+                        bookType: type,
+                        bookSST: true,
+                        type: 'base64'
+                    }) :
+                    XLSX.writeFile(wb, fn || ('Vat Tu Du Phong.' + (type || 'xlsx')));
+
+
+ } 
+ 
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+// Pagination
+
+getPagination('#showData');
+
+function getPagination(table) {
+  var lastPage = 1;
+
+  $('#maxRows')
+    .on('change', function(evt) {
+
+     lastPage = 1;
+      $('.pagination')
+        .find('li')
+        .slice(1, -1)
+        .remove();
+      var trnum = 0;
+      var maxRows = parseInt($(this).val());
+
+      if (maxRows == 5000) {
+        $('.pagination').hide();
+      } else {
+        $('.pagination').show();
+      }
+
+      var totalRows = $(table + ' tbody tr').length;
+      $(table + ' tr:gt(0)').each(function() {
+        trnum++;
+        if (trnum > maxRows) {
+
+          $(this).hide(); 
+        }
+        if (trnum <= maxRows) {
+          $(this).show();
+        } 
+      }); 
+      if (totalRows > maxRows) {
+
+        var pagenum = Math.ceil(totalRows / maxRows); 
+
+        for (var i = 1; i <= pagenum; ) {
+
+          $('.pagination #prev')
+            .before(
+              '<li data-page="' +
+                i +
+                '">\
+								  <span>' +
+                i++ +
+                '<span class="sr-only">(current)</span></span>\
+								</li>'
+            )
+            .show();
+        } 
+      } 
+      $('.pagination [data-page="1"]').addClass('active'); 
+      $('.pagination li').on('click', function(evt) {
+
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        var pageNum = $(this).attr('data-page'); 
+
+        var maxRows = parseInt($('#maxRows').val()); 
+
+        if (pageNum == 'prev') {
+          if (lastPage == 1) {
+            return;
+          }
+          pageNum = --lastPage;
+        }
+        if (pageNum == 'next') {
+          if (lastPage == $('.pagination li').length - 2) {
+            return;
+          }
+          pageNum = ++lastPage;
+        }
+
+        lastPage = pageNum;
+        var trIndex = 0; 
+        $('.pagination li').removeClass('active'); 
+        $('.pagination [data-page="' + lastPage + '"]').addClass('active'); 
+
+	  	limitPagging();
+        $(table + ' tr:gt(0)').each(function() {
+
+          trIndex++; 
+
+          if (
+            trIndex > maxRows * pageNum ||
+            trIndex <= maxRows * pageNum - maxRows
+          ) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          } 
+        }); 
+      }); 
+	  limitPagging();
+    })
+    .val(5)
+    .change();
+
+}
+
+function limitPagging(){
+
+	if($('.pagination li').length > 7 ){
+			if( $('.pagination li.active').attr('data-page') <= 3 ){
+			$('.pagination li:gt(5)').hide();
+			$('.pagination li:lt(5)').show();
+			$('.pagination [data-page="next"]').show();
+		}if ($('.pagination li.active').attr('data-page') > 3){
+			$('.pagination li:gt(0)').hide();
+			$('.pagination [data-page="next"]').show();
+			for( let i = ( parseInt($('.pagination li.active').attr('data-page'))  -2 )  ; i <= ( parseInt($('.pagination li.active').attr('data-page'))  + 2 ) ; i++ ){
+				$('.pagination [data-page="'+i+'"]').show();
+
+			}
+
+		}
+	}
+}
+
+$(function() {
+
+  $('table tr:eq(0)').prepend('<th> ID </th>');
+
+  var id = 0;
+
+  $('table tr:gt(0)').each(function() {
+    id++;
+    $(this).prepend('<td>' + id + '</td>');
+  });
+});
+
+
+
+
+$(document).ready(function() {
+
+Readtime_value();
+
+// var url = location.protocol;
+
+//if (url == "file:") {
+//close();
+//	var element = document.getElementById("mytable");
+//	var element3 = document.getElementById("update");
+//	element.parentNode.removeChild(element);
+//	element.parentNode.removeChild(element3);
+		
+//} else {
+//}
+
+});
+
+//window.history.replaceState('','','/');
+// ----------------------
+
+  function ctrlq(e) {
+Delre();
+document.getElementById("ngay").value = e.result;
+Date.prototype.yyyymmdd = function() {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+  return "".concat(yyyy).concat(mm).concat(dd);
+};
+
+Date.prototype.yyyymmddhhmm = function() {
+  var yyyymmdd = this.yyyymmdd();
+  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
+  return "".concat(yyyymmdd).concat(hh).concat(min);
+};
+
+Date.prototype.yyyymmddhhmmss = function() {
+  var yyyymmddhhmm = this.yyyymmddhhmm();
+  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+  return "".concat(yyyymmddhhmm)+ss;
+};
+
+var d = new Date();
+if (d.yyyymmddhhmmss() - parseInt(document.getElementById("ngay").value) > 100) {
+//window.close();
+//window.setTimeout(function(){location.href = '/';},0);
+//self.close();
+
+//} else if (document.getElementById("ngay").value == "Vui lòng đăng nhập để cập nhật") {
+
+//} else {
+	 ChangeID();
+}
+	
+	$("#re").html(e.result);
+	$("#re").css("visibility","visible");
+
+//alert(e.result);
+
+//		alert(document.getElementById("ngay").value);
+		let text = document.getElementById("re").innerHTML;
+		//let res = text.indexOf("đã");
+//alert(text);
+			if (text.indexOf("đã") > 0) {
+					//alert(document.getElementById("ngay").value);
+			//show_dialog_result();	
+			overlay_resultme.style.display = "block";			
+			  
+			} else if (text.indexOf("lòng") > 0 ) {
+				//show_dialog_result();
+				overlay_resultme.style.display = "block";
+				document.getElementById("id_result").innerHTML = "Hãy thực hiện đăng nhập !";
+			} else {
+  
+	}
+
+//Search_dialog_result();
+	
+  
+ }
+ 
+function Delre() {
+  document.querySelector("#re").innerHTML="";
+}
+ 
+ 
+function Readtime_value() {
+ 
+	var ngay= $("#ngay").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Readtime";
+	  
+  
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+
+	  });
+
+
+	
+  }	
+
+
+(function() {
+  if (window.addEventListener) {
+    window.addEventListener('load', run, false);
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', run);
+  }
+
+  function run() {
+    var t = document.getElementById('showData');
+    t.onclick = function(event) {
+      event = event || window.event; //IE8
+      var target = event.target || event.srcElement;
+      while (target && target.nodeName != 'TR') { // find TR
+        target = target.parentElement;
+    }
+      if (!target) { return; } 
+      var cells = target.cells; 
+      if (!cells.length) {
+        return;
+      }
+	  if (cells[0].innerHTML != "ID") {
+      var f1 = document.getElementById('id');
+	  var f2 = document.getElementById('Colum2');
+      var f3 = document.getElementById('Colum3');
+      var f4 = document.getElementById('Colum4');
+	  var f5 = document.getElementById('Colum5');
+      var f6 = document.getElementById('Colum6');
+      var f7 = document.getElementById('Colum7');
+	  var f8 = document.getElementById('Colum8');
+	  var f9 = document.getElementById('Colum9');
+	  var f10 = document.getElementById('Colum10');
+      var f11 = document.getElementById('Colum11');	  
+	  var f12 = document.getElementById('Colum12');
+	  var f13 = document.getElementById('Colum13');
+	  var f14 = document.getElementById('Colum14');
+	  var f15 = document.getElementById('Colum15');
+	  var f16 = document.getElementById('Colum16');
+
+          
+
+
+	  
+      f1.value = cells[0].innerHTML;
+      f2.value = cells[1].innerHTML;
+      f3.value = cells[2].innerHTML;
+      f4.value = cells[3].innerHTML;
+      f5.value = cells[4].innerHTML;
+      f6.value = cells[5].innerHTML;
+      f7.value = cells[6].innerHTML;
+	  f8.value = cells[7].innerHTML;
+      f9.value = cells[8].innerHTML;
+      f10.value = cells[9].innerHTML;
+	  f11.value = cells[10].innerHTML;
+      f12.value = cells[11].innerHTML;
+      f13.value = cells[12].innerHTML;     
+      f14.value = cells[13].innerHTML;
+	  f15.value = cells[14].innerHTML;
+	  f16.value = cells[15].innerHTML;		  
+	  changecat(f17.value);
+	  }
+    };
+  }
+
+})();
+ 
+
+	
+window.onload = function(){
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+//window.history.replaceState('','','/');  
+  
+};
+ 
+
+
+
+function readDataVattuDpDHA() {
+
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpDHA";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Trạm</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(3)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(6)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>Serial</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(9)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(10)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(13)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(14)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(15)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+
+	
+function readDataVattuDpDHI() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpDHI";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Trạm</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(3)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(6)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>Serial</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(9)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(10)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(13)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(14)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(15)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+
+
+function readDataVattuDpHUE() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpHUE";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Trạm</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(3)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(6)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>Serial</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(9)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(10)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(13)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(14)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(15)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+
+
+function readDataVattuDpTH() {
+
+$("#re").css("visibility","hidden");
+   
+   
+ var url = atob(script_url)+"?action=readVattuDpTH";
+
+$.getJSON(url, function (json) {
+
+        var table = document.createElement("table");
+		
+		table.setAttribute("id", "mytable");  // Add Class or id for table
+		table.setAttribute("class", "sortable");  // Add Class or id for table
+		
+        for (var i = 0; i < json.records.length - 1; i++) {
+
+            tr = table.insertRow(-1);
+				var tabCell = tr.insertCell(-1);
+				
+                tabCell.innerHTML = json.records[i].ID;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum2 //TRAM;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum3 //HE_THONG;
+				tabCell = tr.insertCell(-1);				
+				
+				tabCell.innerHTML = json.records[i].Colum4 //THIET_BI;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum5 //TEN_VAT_TU;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum6 //LOAI_VAT_TU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum7 //PART_NUMBER;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum8 //SERIAL;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum9 //NGAY_NHAN;
+				tabCell = tr.insertCell(-1);
+				tabCell.innerHTML = json.records[i].Colum10 //NGAY_XUAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum11 //VI_TRI_LAP_DAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum12 //TRANG_THAI;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum13 //GHI_CHU;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum14 //NHAP_WEB;				
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum15 //CAP_NHAT;
+				tabCell = tr.insertCell(-1);				
+				tabCell.innerHTML = json.records[i].Colum16 //NGAY_CAP_NHAT;
+				
+            }		
+			
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+	   
+		$("#re").css("visibility","visible");
+        // document.getElementById("mytable").align="center";
+		var thead = "<thead><tr> <th onclick='Sortcolunm(0)' style='font-weight:bold'>ID</th><th onclick='Sortcolunm(1)' style='font-weight:bold'>Trạm</th> <th onclick='Sortcolunm(2)' style='font-weight:bold'>Mạng</th> <th onclick='Sortcolunm(3)' style='font-weight:bold'>Thiết bị</th><th onclick='Sortcolunm(4)' style='font-weight:bold'>Tên vật tư</th><th onclick='Sortcolunm(5)' style='font-weight:bold'>Loại vật tư</th><th onclick='Sortcolunm(6)' style='font-weight:bold'>Partnumber</th> <th onclick='Sortcolunm(7)' style='font-weight:bold'>Serial</th>  <th onclick='Sortcolunm(8)' style='font-weight:bold'>Ngày nhận</th>  <th onclick='Sortcolunm(9)' style='font-weight:bold'>Ngày xuất</th>   <th onclick='Sortcolunm(10)' style='font-weight:bold'>Vị trí lắp đặt</th> <th onclick='Sortcolunm(11)' style='font-weight:bold'>Trạng thái</th> <th onclick='Sortcolunm(12)' style='font-weight:bold'>Ghi chú</th> <th onclick='Sortcolunm(13)' style='font-weight:bold'>Nhập Web</th>   <th onclick='Sortcolunm(14)' style='font-weight:bold'>Người cập nhật</th>  <th onclick='Sortcolunm(15)' style='font-weight:bold'>Ngày cập nhật</th> </tr> </thead>"
+	
+		table.innerHTML = thead + table.innerHTML;		
+		
+		//window.onload = sorttable.init;
+
+		
+    });
+
+	}
+	
+function getPart1(str) {        // Lấy chuổi trái của "ngay"
+    return str.split(' ')[0];
+}
+		
+function getPart2(str) {        // Lấy chuổi phải của "ngay"
+    return str.split(' ')[1];
+}
+
+function ChangeID() {
+document.getElementById("capnhatVattuDpDHA").value = getPart2(document.getElementById("ngay").value);   // Lấy chuổi phải của "ngay"
+// Đổi Value ngày: gán giá trị 'ngay' cho 'ngay2' sau dó đổi ngay2 thành 'ngaylog'
+if (document.getElementById('ngay2')) {
+document.getElementById("ngay2").value = getPart1(document.getElementById("ngay").value); // Lấy chuổi trái của "ngay"
+document.getElementById('ngay2').id = 'ngaylog';
+document.getElementById('capnhatVattuDpDHA').id = 'combine';
+document.getElementById('legend').innerHTML = "Bảng cập nhật " + document.getElementById('combine').value;
+
+if (document.getElementById("combine").value == "vattudha") {
+readDataVattuDpDHA();
+}
+if (document.getElementById("combine").value == "vattudhi") {
+readDataVattuDpDHI();
+}
+if (document.getElementById("combine").value == "vattuhue") {
+readDataVattuDpHUE();
+}
+
+}
+}
+
+
+	
+// CHỌN NAVIGATION
+var vattudhanavi = document.getElementById("vattudhanavi");
+
+vattudhanavi.onclick  = function(){
+
+document.getElementById('chonnavi').value = "navidha";
+		
+readDataVattuDpDHA();
+
+//alert(document.getElementById("vattudhanavi").getAttribute("value"));
+}
+
+var vattudhinavi = document.getElementById("vattudhinavi");
+vattudhinavi.onclick  = function(){
+document.getElementById('chonnavi').value = "navidhi";
+readDataVattuDpDHI();
+
+}
+
+var vattuhuenavi = document.getElementById("vattuhuenavi");
+vattuhuenavi.onclick  = function(){
+document.getElementById('chonnavi').value = "navihue";
+readDataVattuDpHUE();
+
+}
+
+var thvattunavi = document.getElementById("thvattunavi");
+thvattunavi.onclick  = function(){
+document.getElementById('chonnavi').value = "navith";
+readDataVattuDpTH();
+
+}
+// END CHỌN NAVIGATION
+	
+	
+//https://stackoverflow.com/questions/24804500/can-you-have-scrollbars-in-both-parallel-sides-of-a-div
+$(function(){
+      $(".HorizontalTable").scroll(function(){
+        $(".sortable").scrollLeft($(".HorizontalTable").scrollLeft());
+      });
+      $(".sortable").scroll(function(){
+        $(".HorizontalTable").scrollLeft($(".sortable").scrollLeft());
+      });
+});	
+	
+function Sortcolunm(n) {
+
+  let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  var substring = " ";
+  table = document.getElementById("mytable");
+  switching = true;
+
+  dir = "asc";
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x1 = rows[i].cells[n].textContent.trim().toLowerCase() + " ";
+	  x = (x1.substring(0,x1.indexOf(substring)));
+	  //alert(x);
+      y1 = rows[i + 1].cells[n].textContent.trim().toLowerCase() + " ";
+	  y = (y1.substring(0,y1.indexOf(substring)));
+      const num = /^\d/.test(x)
+      const date = num && x.indexOf("/") != -1;
+      if (date) {
+        let [dd, mm, yyyy] = x.split("/");
+        x = new Date(yyyy, mm - 1, dd, 15, 0, 0, 0).getTime();
+		//alert(x);
+        [dd, mm, yyyy] = y.split("/");
+        y = new Date(yyyy, mm - 1, dd, 15, 0, 0, 0).getTime();
+		//alert(y);
+      }
+      else if (num) {
+         x = +x.replace(",", ".") 
+         y = +y.replace(",", ".");
+      }
+      if (dir == "asc") {
+          shouldSwitch = x > y
+      } else if (dir == "desc") {
+          shouldSwitch = x < y
+      }
+      if (shouldSwitch) break;
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+
+//---UPDATE---
+
+document.getElementById("btn-show-update").onclick = function(){show_update()};
+var overlay_updateme = document.getElementById("update-container");
+
+function show_update() {
+
+	if (document.getElementById('id').value === "" || document.getElementById('id').value < 1) {
+//	 alert("id OK"); Hãy chọn một id !
+		overlay_updateme.style.display = "none";
+		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Hãy chọn một id !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+	
+			return false;
+	}
+
+	overlay_updateme.style.display = "block";
+
+}
+
+
+document.getElementById("confirm_update").onclick = function(){confirm_update()};
+function confirm_update() {
+																	//var Row = document.getElementById("mytable");
+																	//var Cells = Row.getElementsByTagName("td");
+if (document.getElementById("combine").value == "vattudha"  && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+																				//if (Cells[1].innerText !== "ĐHA") {
+																				//alert(Cells[1].innerText);
+																				//alert("Chỉ Update được ĐHA");
+																				//} else {
+	updateVattuDpDHA_value();
+	readDataVattuDpDHA();
+																//}   
+} else if (document.getElementById("combine").value == "vattudhi" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	 updateVattuDpDHI_value();
+	 readDataVattuDpDHI();
+} else if (document.getElementById("combine").value == "vattuhue" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navith") {
+	  updateVattuDpHUE_value();
+	  readDataVattuDpHUE();
+} else {
+		overlay_updateme.style.display = "none";
+  		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Chọn Trạm đang đăng nhập để cập nhật !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+		return false;
+}
+
+overlay_updateme.style.display = "none";
+	
+}
+
+document.getElementById("cancel_update").onclick = function(){cancel_update()};
+function cancel_update() { 
+    overlay_updateme.style.display = "none";
+}
+
+//---INSERT---
+document.getElementById("btn-show-insert").onclick = function(){show_insert()};
+var overlay_insertme = document.getElementById("insert-container");
+
+function show_insert() {
+    overlay_insertme.style.display = "block";
+}
+
+
+document.getElementById("confirm_insert").onclick = function(){confirm_insert()};
+function confirm_insert() {
+
+if (document.getElementById("combine").value == "vattudha"  && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	insertVattuDpDHA_value();
+	readDataVattuDpDHA();
+} else if (document.getElementById("combine").value == "vattudhi" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	 insertVattuDpDHI_value();
+	 readDataVattuDpDHI();
+} else if (document.getElementById("combine").value == "vattuhue" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navith") {
+	  insertVattuDpHUE_value();
+	  readDataVattuDpHUE();
+} else {
+		overlay_insertme.style.display = "none";
+  		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Chọn Trạm đang đăng nhập để thêm số liệu !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+		return false;
+}	
+overlay_insertme.style.display = "none";    	
+}
+
+document.getElementById("cancel_insert").onclick = function(){cancel_insert()};
+function cancel_insert() { 
+    overlay_insertme.style.display = "none";
+}
+
+//---DELETE---
+
+document.getElementById("btn-show-delete").onclick = function(){show_delete()};
+var overlay_deleteme = document.getElementById("delete-container");
+
+function show_delete() {
+
+	if (document.getElementById('id').value === "" || document.getElementById('id').value < 1 ) {
+	// alert("OK");
+		overlay_deleteme.style.display = "none";	
+		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Hãy chọn một id !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+
+			return false;
+	}
+overlay_deleteme.style.display = "block";
+
+}
+
+
+document.getElementById("confirm_delete").onclick = function(){confirm_delete()};
+function confirm_delete() {
+
+if (document.getElementById("combine").value == "vattudha"  && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	deleteVattuDpDHA_value();
+	readDataVattuDpDHA();
+} else if (document.getElementById("combine").value == "vattudhi" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navihue" && document.getElementById('chonnavi').value !== "navith") {
+	deleteVattuDpDHI_value();
+	readDataVattuDpDHI();
+} else if (document.getElementById("combine").value == "vattuhue" && document.getElementById('chonnavi').value !== "navidha" && document.getElementById('chonnavi').value !== "navidhi" && document.getElementById('chonnavi').value !== "navith") {
+	deleteVattuDpHUE_value();
+	readDataVattuDpHUE();
+} else {
+		overlay_deleteme.style.display = "none";
+  		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Chọn Trạm đang đăng nhập để xóa số liệu !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+		return false;
+}
+	
+    overlay_deleteme.style.display = "none";
+	
+}
+
+document.getElementById("cancel_delete").onclick = function(){cancel_delete()};
+function cancel_delete() { 
+    overlay_deleteme.style.display = "none";
+}
+
+// THAY
+
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5Q2d4TnFCeUE1OU5uT0QzY09kT0ZhUERKYk9JWHhRb1ZrSXUyeVg2anVac19EdnF6NHNCSGtPV01Xc0g2MjBUYkJSdy9leGVj";
+
+	
+function updateVattuDpDHA_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=updateVattuDpDHA";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+readDataVattuDpDHA();
+  }
+
+
+
+function updateVattuDpDHI_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=updateVattuDpDHI";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpDHI();
+  }
+  
+
+function updateVattuDpHUE_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=updateVattuDpHUE";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpHUE();
+  } 
+  
+function deleteVattuDpDHA_value(){
+//ChangeID();
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuDpDHA";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+	readDataVattuDpDHA();
+  }  
+
+ function deleteVattuDpDHI_value(){
+//ChangeID();
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuDpDHI";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+	readDataVattuDpDHI();
+  } 
+
+function deleteVattuDpHUE_value(){
+//ChangeID();
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuDpHUE";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	
+	document.getElementById("id").value = "";
+	readDataVattuDpHUE();
+  }   
+  
+function insertVattuDpDHA_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuDpDHA";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpDHA();
+  }
+
+  
+function insertVattuDpDHI_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuDpDHI";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpDHI();
+  }
+
+function insertVattuDpHUE_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+	var Colum3= $("#Colum3").val();
+	var Colum4= $("#Colum4").val();
+	var Colum5= $("#Colum5").val();
+	var Colum6= $("#Colum6").val();
+	var Colum7= $("#Colum7").val();
+	var Colum8= $("#Colum8").val();
+	var Colum9= $("#Colum9").val();
+	var Colum10= $("#Colum10").val();
+	var Colum11= $("#Colum11").val();		
+	var Colum12= $("#Colum12").val();	
+	var Colum13= $("#Colum13").val();	
+	var Colum14= $("#Colum14").val();	
+
+    var url = atob(script_url)+"?callback=ctrlq&id="+id+"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +"&Colum10="+Colum10  +"&Colum11="+Colum11+ "&Colum12="+Colum12+ "&Colum13="+Colum13+"&Colum14="+Colum14+  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuDpHUE";
+ 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+	document.getElementById("id").value = "";
+	readDataVattuDpHUE();
+  }
+  
+function searchTableAdmin() {
+         	var totalOfFilter = 0;
+           var input, filter, found, table, tr, td, i, j;
+           input = document.getElementById("searchAdmin");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("mytable");
+           tr = table.getElementsByTagName("tr");
+         
+           for (i = 1; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td");
+         	if (td[0].innerHTML.toUpperCase() == "ID"){found = true;}
+             for (j = 0; j < td.length; j++) {
+               if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                 found = true;
+               }
+             }
+         	
+         
+         	if (found) {
+         		tr[i].style.display = "";
+         		found = false;
+         		
+         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG.."){
+         			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
+         		}
+         	} else {
+         		tr[i].style.display = "none";
+         	}
+           }
+         
+           document.getElementById('totalOfFilter').innerHTML = totalOfFilter.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+           
+           var mytable = document.getElementById("mytable");
+           if (mytable) {
+         	  var cls = mytable.getElementsByTagName("td");
+         	  var sum = 0;
+         	  for (var i = 0; i < cls.length; i++) {
+         		// Here you check if it's a countable class and the parent tr's style is a visible tr
+         		if (cls[i].className == "countable" && cls[i].closest("tr").style.display != "none") {
+         		  sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+         		}
+         	  }
+         	  //document.getElementById('total').innerHTML = sum;
+           }
+           
+         }
+         
+         var mytable = document.getElementById("mytable");
+         if (mytable) {
+         	var cls = mytable.getElementsByTagName("td");
+         	var sum = 0;
+         	for (var i = 0; i < cls.length; i++) {
+         	  if (cls[i].className == "countable") {
+         		sum += isNaN(cls[i].innerHTML) ? 0 : parseInt(cls[i].innerHTML);
+         	  }
+         	}
+         	document.getElementById('TỔNG..').innerHTML += sum;
+         }
+
+
+
+	
+function filterTable_OK() { 
+         	var totalOfFilter = 0;
+
+  var input, filter, table, tr, td, i, txtValue, txtValue1, txtValue2, txtValue3, txtValue4, txtValue5, txtValue6;
+  input = document.getElementById("Filter");
+  filter1 = input.value.toUpperCase();
+  table = document.getElementById("mytable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+		td0 = tr[i].getElementsByTagName("td")[0];
+		td1 = tr[i].getElementsByTagName("td")[1];
+		td2 = tr[i].getElementsByTagName("td")[2];
+		td3 = tr[i].getElementsByTagName("td")[3];
+		td4 = tr[i].getElementsByTagName("td")[4];
+		td5 = tr[i].getElementsByTagName("td")[5];
+		td6 = tr[i].getElementsByTagName("td")[6];
+    if (td0 || td1 || td2 || td3 || td4 || td5 || td6) {
+			txtValue = td0.textContent || td0.innerText;
+			txtValue1 = td1.textContent || td1.innerText;
+			txtValue2 = td2.textContent || td2.innerText;
+			txtValue3 = td3.textContent || td3.innerText;
+			txtValue4 = td4.textContent || td4.innerText;
+			txtValue5 = td5.textContent || td5.innerText;
+			txtValue6 = td6.textContent || td6.innerText;
+      if (txtValue.toUpperCase().indexOf(filter1) > -1 || txtValue1.toUpperCase().indexOf(filter1) > -1 || txtValue2.toUpperCase().indexOf(filter1) > -1 || txtValue3.toUpperCase().indexOf(filter1) > -1 || txtValue4.toUpperCase().indexOf(filter1) > -1 || txtValue5.toUpperCase().indexOf(filter1) > -1 || txtValue6.toUpperCase().indexOf(filter1) > -1 ) {
+        tr[i].style.display = "";
+		
+		         		if(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase() != "TỔNG.."){
+         			totalOfFilter += parseInt(tr[i].getElementsByTagName("td")[6].innerHTML.toUpperCase());
+         		}
+		
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+
+  }
+}
+
 
 
 </script>
