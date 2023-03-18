@@ -15,6 +15,7 @@
 <style>
 
 
+
 /* Popup */
 
 .popup {
@@ -27,7 +28,7 @@
   color: rgb(1,82,73);
   background: white;
   position: absolute;
-  top: 15%;
+  top: 25%;
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
@@ -66,7 +67,7 @@
 }
 
 .dialog-btn {
-  background-color:#44B78B;
+  background-color:#006699;
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -82,7 +83,7 @@
 
 
 #btn-show-dialog {
-  background-color:#009999;
+  background-color:#006699;
   border: none;
   color:white;
   padding: 1px;
@@ -1780,7 +1781,7 @@ form input[type="submit"]:hover{
   
     <div class="imgcontainer">
 	
-      <span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close">❌</span>
 	  <h2 id="dn" style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP TD</h2>
     </div><!-- Modal -->
 
@@ -1957,6 +1958,7 @@ form input[type="submit"]:hover{
 
 <div class="overlay" id="dialog-container">
   <div class="popup">
+	</br>	
     <p>Bạn có muốn Thoát không ?</p>
     <div class="text-right">
       <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
@@ -1967,6 +1969,7 @@ form input[type="submit"]:hover{
 <p id="testText"></p>
 <div class="overlay_time" id="dialog_time">
   <div class="popup_time">
+	</br>	
     <p>Thời gian lâu không dùng !</p>
     <div class="text-right">
       <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
