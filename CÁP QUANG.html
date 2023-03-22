@@ -753,6 +753,8 @@ a {
         margin: 0px auto;
         font-family:times new roman;
 		border-radius: 5px 5px 5px 5px;
+		text-align: center;
+		margin:0 auto
         
     }
 
@@ -762,11 +764,14 @@ a {
         margin: 0 0 0px 0;
 		border-radius: 26px 26px 26px 26px;
 		background: #21618c;
-			  display: flex;
-  justify-content: center;
-  align-items: center;			
+		
+		display:inline-block;
+		width:50%;
+			
     }
 
+	
+	
     .tab-group:after {
         content: "";
         display: table;
@@ -784,15 +789,16 @@ a {
         color:black;
         font-size: 16px;
         float: left;
-        width: 40%;
+        
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
 		border-radius: 26px 26px 26px 26px;
+		
     }
 
     .tab-group li a:hover {
-        background:white;
+        background: #5dade2;
         color:black;
 		border-radius: 26px 26px 26px 26px;
 
@@ -802,8 +808,15 @@ a {
         background:white;
         color:black;
 		border-radius: 26px 26px 26px 26px;
+		 width:50%;
     }
 
+    .tab-group .disabble a {
+        background: #d6dbdf;
+        color:black;
+		border-radius: 26px 26px 26px 26px;
+		 width:50%;
+    }	
     .tab-content>div:last-child {
         display: none;
     }
@@ -1349,11 +1362,15 @@ font-size: 15px;
 
     <div class="form">
 
-			<ul class="tab-group">
+			<div class="tab-group">
+			<div>
             <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
-            <li onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
-			</ul>
-			</br>
+			</div>
+			<div>
+            <li onClick="Delre();" class="tab disabble"><a href="#changepass">ChangePwd</a></li>
+			</div>
+			</div>
+			</br></br>
 					<div id="loader"></div>
 					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
 					
@@ -1601,7 +1618,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 $(document).ready(function() {
 
 var url = location.protocol;
-if (url == "file:khanh") {
+if (url == "file:") {
 	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
@@ -2335,5 +2352,4 @@ ten9.onclick  = function(){
 
 
  
-</body>
-</html>
+</body></html>
