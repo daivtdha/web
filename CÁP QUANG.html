@@ -263,7 +263,39 @@ body {
   }
 }
 
+.dialog-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
 
+
+
+#btn-show-dialog {
+  background-color:#006699;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 30px;
+  width: 90px;
+  font-weight: bold;
+}
+
+#btn-show-dialog {border-radius: 12px;}
 
 .popup_Login {
   width: 80%;
@@ -363,44 +395,32 @@ body {
 }
 
 
-.dialog-btn {
-  background-color:#006699;
-  color: white;
-  font-weight: 700;
-  border: 1px solid #44B78B;
-  border-radius: 1px;
-  height: 30px;
-  width: 20%;
-  border-radius: 5px 5px 5px 5px;
-}
-.dialog-btn:hover {
-  background-color:#015249;
-  cursor: pointer;
-}
-
-
-
-#btn-show-dialog {
-  background-color:white;
-  border: none;
-  color:black;
-  padding: 1px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 17px;
-  margin: 3px 1px;
-  cursor: pointer;
-    height: 30px;
-  width: 90px;
-  font-weight: bold;
-  border-radius: 5px 5px 5px 5px;
-}
-
-#btn-show-dialog {border-radius: 12px;}
 
 
 /* End Popup */
+
+
+
+Truyền Dẫn, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
 
 
@@ -433,6 +453,18 @@ a img {
 
 article, aside, details, figcaption, figure, footer, header, hgroup, div, menu, nav, section, summary {
   display: block;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8f6f3;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -585,6 +617,490 @@ a {
   }
 }
 
+
+
+
+
+
+/* Modal Login Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:  #0e6655;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-weight:bold;
+  border-radius:5% 5% 5% 5%;
+  
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 20;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 30px;
+  padding-bottom: 0px;
+  font-family:times new roman;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% 10%; /* 5% from the top, 15% from the bottom and centered */
+  border: 10px solid #888;
+  width: 100px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+/* FORM LOGIN CỦ*/
+    .form {
+        background: #21618c;
+        padding: 25px;
+        max-width: auto;
+		width: 700px;
+        margin: 0px auto;
+        font-family:times new roman;
+		border-radius: 5px 5px 5px 5px;
+        
+    }
+
+    .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 10px 0;
+		border-radius: 26px 26px 26px 26px;
+		
+    }
+
+    .tab-group:after {
+        content: "";
+        display: table;
+        clear: both;
+		background:white;
+        color:black;
+		border-radius: 26px 26px 26px 26px;
+    }
+
+    .tab-group li a {
+        display: block;
+        text-decoration: none;
+        padding: 1px;
+        background: #bfc9ca;
+        color:black;
+        font-size: 20px;
+        float: left;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+		border-radius: 26px 26px 26px 26px;
+    }
+
+    .tab-group li a:hover {
+        background:white;
+        color:black;
+		border-radius: 26px 26px 26px 26px;
+    }
+
+    .tab-group .active a {
+        background:white;
+        color:black;
+		border-radius: 26px 26px 26px 26px;
+    }
+
+    .tab-content>div:last-child {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        font-weight: 300;
+        margin: 0 0 3px;
+    }
+
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+    }
+
+	
+	
+	
+    label .req {
+        margin: 2px;
+        color: #1ab188;
+    }
+
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+
+    label.active .req {
+        opacity: 0;
+    }
+
+    label.highlight {
+        color: #ffffff;
+    }
+
+    input,
+
+
+    input:focus,
+    textarea:focus {
+        outline: 5;
+        border-color: white;
+    }
+
+	
+	
+	
+    textarea {
+        border: 2px solid #a0b3b0;
+        resize: vertical;
+    }
+
+    .field-wrap {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .top-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .top-row>div {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .top-row>div:last-child {
+        margin: 0;
+    }
+
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 8px 0;
+        font-size: 1rem;
+        font-weight:bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        background:white;
+        color:black;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+		font-family:times new roman;
+		margin: auto;
+		border-radius: 26px 26px 26px 26px;
+		cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus {
+    background: #5dade2;
+    }
+
+    .button-block {
+        display: block;
+        width: 35%;	
+		border-radius: 26px 26px 26px 26px;
+		
+    }
+
+
+
+
+
+
+/* MODAL LOGIN Full-width input fields */
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  width: auto; /* Full width */
+ 
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
+  padding-top: 0;
+  top: 16%;
+  height: 79%;;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+
+
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0.1% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 0px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (X) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+}
+
+@media (max-width: 768px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+} 
+
+
+
+/* formLogin LOGIN Mới */
+
+
+form .field{
+  width: 100%;
+  margin-bottom: 20px;
+}
+form .field.shake{
+  animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+form .field .field-wrap{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+form input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: white;
+  caret-color: #5372F0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+form .field input:focus,
+form .field.valid input{
+  border-color: #5372F0;
+}
+form .field.shake input,
+form .field.error input{
+  border-color: #dc3545;
+}
+.field .field-wrap i{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.field-wrap .icon{
+  left: 2px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+.field-wrap .error-icon{
+  right: 15px;
+  color: #dc3545;
+}
+form input:focus ~ .icon,
+form .field.valid .icon{
+  color: #5372F0;
+}
+form .field.shake input:focus ~ .icon,
+form .field.error input:focus ~ .icon{
+  color: #bfbfbf;
+}
+form input::placeholder{
+  color: #bfbfbf;
+  font-size: 17px;
+}
+
+form .pass-txt{
+  text-align: left;
+  margin-top: -10px;
+}
+
+form input[type="submit"]{
+  height: 40px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: #5372F0;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+form input[type="submit"]:hover{
+  background: #2c52ed;
+}
+
+/*END formLogin LOGIN Mới */
 
 
 /* DROP LIST */
@@ -742,410 +1258,7 @@ a {
 
 /*END  DROP LIST */
 
-/* FORM LOGIN CỦ*/
-    .form {
-        background: #21618c;
-        padding: 25px;
-        max-width: auto;
-		width: 750px;
-        margin: 0px auto;
-        font-family:times new roman;
-		border-radius: 5px 5px 5px 5px;
-        
-    }
-
-    .tab-group {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0px 0;
-		border-radius: 26px 26px 26px 26px;
-		background: #21618c;
-				
-    }
-
-    .tab-group:after {
-        content: "";
-        display: table;
-        clear: both;
-		background:white;
-        color:black;
-		border-radius: 26px 26px 26px 26px;
-    }
-
-    .tab-group li a {
-        display: block;
-        text-decoration: none;
-        padding: 1px;
-        background: #bfc9ca;
-        color:black;
-        font-size: 16px;
-        float: left;
-        width: 50%;
-        text-align: center;
-        cursor: pointer;
-        transition: .5s ease;
-		border-radius: 26px 26px 26px 26px;
-    }
-
-    .tab-group li a:hover {
-        background:white;
-        color:black;
-		border-radius: 26px 26px 26px 26px;
-
-    }
-
-    .tab-group .active a {
-        background:white;
-        color:black;
-		border-radius: 26px 26px 26px 26px;
-    }
-
-    .tab-content>div:last-child {
-        display: none;
-    }
-
-    h1 {
-        text-align: center;
-        color: black;
-        font-weight: 300;
-        margin: 0 0 3px;
-    }
-
-    input,
-
-    input:focus,
-    textarea:focus {
-        outline: 5;
-        border-color: white;
-    }
-
-
-
-    .button {
-        border: 0;
-        outline: none;
-        border-radius: 0;
-        padding: 8px 0;
-        font-size: 1rem;
-        font-weight:bold;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        background:white;
-        color:black;
-        transition: all 0.5s ease;
-        -webkit-appearance: none;
-		font-family:times new roman;
-		margin: auto;
-		border-radius: 26px 26px 26px 26px;
-		cursor: pointer;
-    }
-
-    .button:hover,
-    .button:focus {
-    background: #5dade2;
-    }
-
-    .button-block {
-        display: block;
-        width: 35%;	
-		border-radius: 26px 26px 26px 26px;
-		
-    }
-
-
-
-/* formLogin LOGIN Mới */
-
-form .field{
-  width: 100%;
-  margin-bottom: 20px;
-}
-form .field.shake{
-  animation: shake 0.3s ease-in-out;
-}
-@keyframes shake {
-  0%, 100%{
-    margin-left: 0px;
-  }
-  20%, 80%{
-    margin-left: -12px;
-  }
-  40%, 60%{
-    margin-left: 12px;
-  }
-}
-form .field .field-wrap{
-  height: 40px;
-  width: 100%;
-  position: relative;
-}
-form input{
-  width: 100%;
-  height: 90%;
-  outline: none;
-  padding: 0 45px;
-  font-size: 15px;
-  background: white;
-  caret-color: #5372F0;
-  border-radius: 5px;
-  border: 1px solid #bfbfbf;
-  border-bottom-width: 2px;
-  transition: all 0.2s ease;
-}
-form .field input:focus,
-form .field.valid input{
-  border-color: #5372F0;
-}
-form .field.shake input,
-form .field.error input{
-  border-color: #dc3545;
-}
-.field .field-wrap i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-.field-wrap .icon{
-  left: 2px;
-  color: #bfbfbf;
-  transition: color 0.2s ease;
-}
-.field-wrap .error-icon{
-  right: 15px;
-  color: #dc3545;
-}
-form input:focus ~ .icon,
-form .field.valid .icon{
-  color: #5372F0;
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-  color: #bfbfbf;
-}
-form input::placeholder{
-  color: #bfbfbf;
-  font-size: 17px;
-}
-
-form .pass-txt{
-  text-align: left;
-  margin-top: -10px;
-}
-
-form input[type="submit"]{
-  height: 40px;
-  margin-top: 30px;
-  color: #fff;
-  padding: 0;
-  border: none;
-  background: #5372F0;
-  cursor: pointer;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-form input[type="submit"]:hover{
-  background: #2c52ed;
-}
-
-/*END formLogin LOGIN Mới */
-
-
-
-/* MODAL LOGIN Full-width input fields */
-
-
-/* Set a style for all buttons */
-button {
-  background-color: #21618c;
-  color: white;
-  padding: 0px 0px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width:100px;
-  font-weight:bold;
-  font-family:times new roman;
-  font-size: 1.2em;
-  border-radius:5% 5% 5% 5%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  border-radius:1% 1% 1% 1%;
-  top: 30;
-  width: auto%; /* Full width */
-  height: auto; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color:  #f8f9f9; /* Fallback color */
-  background-color:  #f8f9f9; /* Black w/ opacity */
-  padding-top: 0px;
-}
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
-font-size: 15px;
-.modal-content {
-font-size: 15px;
-    width: 100%;
-  }
-  .modal {
-font-size: 15px;
-    width: 100%;;
-  }
-  .form {
-font-size: 15px;
-    width: 100%;;
-  }
-}
-@media only screen and (max-width: 767px) {
-
-	.modal-content{
- font-size: 15px;
-    width: 100%;
-  }
-  .modal {
-font-size: 15px;
-    width: 100%;
-  }
-  .form {
-font-size: 15px;
-    width: 100%;;
-  }
-}
-@media only screen and (max-width: 479px) {
-
-.modal-content {
-font-size: 15px;
-    width: 100%;
-  .modal {
-font-size: 15px;
-    width: 100%;
-  }
-  .form {
-font-size: 15px;
-    width: 100%;;
-  }
-}
-
-}
-
-
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 20px;
-  top: 0;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-
-  
-}
-
-
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-} 
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-}
-
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-}
-
-@media screen and (max-width: 980px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-} 
-
-
+	
 /* Modal Thông báo */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -1235,7 +1348,6 @@ font-size: 15px;
 .good-job h1 {
   font-size: 25px;
 }
-
 
 
 
