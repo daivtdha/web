@@ -3,530 +3,160 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <meta charset="UTF-8">
-
-  <title>ĐÀI VT ĐÔNG HÀ - VÔ TUYẾN</title>
- <link href="Login_data/css.css" rel="stylesheet" type="text/css"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
   
-  
+
+  <title>ĐÀI VT ĐÔNG HÀ</title>
+ 
 <style>
-/* FORM LOGIN */
-    .form {
-        background: #f8f9f9;
-        padding: 40px;
-        max-width: auto;
-        margin: 40px auto;
-        font-family:times new roman;
-        
-    }
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
 
-    .tabmodal-group {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 40px 0;
-    }
-
-    .tabmodal-group:after {
-        content: "";
-        display: tabmodalle;
-        clear: both;
-    }
-
-    .tabmodal-group li a {
-        display: block;
-        text-decoration: none;
-        padding: 1px;
-        background: rgba(160, 179, 176, 0.25);
-        color: #a0b3b0;
-        font-size: 20px;
-        float: left;
-        width: 50%;
-        text-align: center;
-        cursor: pointer;
-        transition: .5s ease;
-    }
-
-    .tabmodal-group li a:hover {
-        background:#1f618d;
-        color: #ffffff;
-    }
-
-    .tabmodal-group .active a {
-        background: #0e6655;
-        color: #ffffff;
-    }
-
-    .tabmodal-content>main:last-child {
-        display: none;
-    }
-
-    h1 {
-        text-align: center;
-        color: #ffffff;
-        font-weight: 300;
-        margin: 0 0 40px;
-    }
-
-    label {
-        position: absolute;
-        transform: translateY(6px);
-        left: 13px;
-        color: rgba(255, 255, 255, 0.5);
-        transition: all 0.25s ease;
-        -webkit-backface-visibility: hidden;
-        pointer-events: none;
-        font-size: 22px;
-    }
-
-    label .req {
-        margin: 2px;
-        color: #1ab188;
-    }
-
-    label.active {
-        transform: translateY(50px);
-        left: 2px;
-        font-size: 14px;
-    }
-
-    label.active .req {
-        opacity: 0;
-    }
-
-    label.highlight {
-        color: #ffffff;
-    }
-
-    input,
-    textarea {
-        font-size: 17px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 5px 10px;
-        background: none;
-        background-image: none;
-        border: 1px solid #a0b3b0;
-        color: black;
-        border-radius: 0;
-        transition: border-color .25s ease, box-shadow .25s ease;
-    }
-
-    input:focus,
-    textarea:focus {
-        outline: 0;
-        border-color: #1ab188;
-    }
-
-    textarea {
-        border: 2px solid #a0b3b0;
-        resize: vertical;
-    }
-
-    .field-wrap {
-        position: relative;
-        margin-bottom: 30px;
-    }
-
-    .top-row:after {
-        content: "";
-        display: tabmodalle;
-        clear: both;
-    }
-
-    .top-row>main {
-        float: left;
-        width: 48%;
-        margin-right: 4%;
-    }
-
-    .top-row>main:last-child {
-        margin: 0;
-    }
-
-    .button {
-        border: 0;
-        outline: none;
-        border-radius: 0;
-        padding: 8px 0;
-        font-size: 1.2rem;
-        font-weight:bold;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        background: #0e6655;
-        color: #ffffff;
-        transition: all 0.5s ease;
-        -webkit-appearance: none;
-    }
-
-    .button:hover,
-    .button:focus {
-        background: #1f618d;
-    }
-
-    .button-block {
-        display: block;
-        width: 100%;
-    }
-
-    .forgot {
-        margin-top: -20px;
-        text-align: right;
-    }
-
-
-
-
-/* MODAL LOGIN Full-width input fields */
-
-
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width:100px;
-  font-weight:bold;
-  font-family:times new roman;
-  font-size: 1.2em;
-  border-radius:5% 5% 5% 5%;
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
-button:hover {
-  opacity: 0.8;
+body{
+	background: white;
+	color: #565e6b;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+.wrapper{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	margin: 15px auto 0;
 }
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
+.wrapper .title{
+	padding: 20px 10px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	border-bottom: 1px solid #ebedec;
 }
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+.wrapper .tabs_wrap{
+	padding: 20px;
+	border-bottom: 1px solid #ebedec;
 }
 
-.container {
-  padding: 16px;
+.wrapper .tabs_wrap ul{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
+.wrapper .tabs_wrap ul li{
+	width: 150px;
+    text-align: center;
+    background: #e9ecf1;
+    border-right: 1px solid #c1c4c9;
+    padding: 13px 15px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  border-radius:1% 1% 1% 1%;
-  top: 30;
-  width: 60%; /* Full width */
-  height: auto; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color:  #f8f9f9; /* Fallback color */
-  background-color:  #f8f9f9; /* Black w/ opacity */
-  padding-top: 0px;
+.wrapper .tabs_wrap ul li:first-child{
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width:auto; /* Could be more or less, depending on screen size */
+.wrapper .tabs_wrap ul li:last-child{
+	border-right: 0px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
 }
 
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+.wrapper .tabs_wrap ul li:hover,
+.wrapper .tabs_wrap ul li.active{
+	background: #45b39d;
+	color: #fff;
 }
 
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+.wrapper .container .item_wrap{
+	padding: 10px 20px;
+	border-bottom: 1px solid  #45b39d;
+	cursor: pointer;
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+.wrapper .container .item_wrap:hover{
+	background: #e9ecf1;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-  
+.wrapper .container .item{
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
-
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-} 
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
+.item_wrap .item .item_left{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
+.item_wrap .item_left img{
+	width: 70px;
+	height: 70px;
+	display: block;
 }
 
-@media screen and (max-width: 980px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-} 
-
-
-
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
-:root {
-  box-sizing: border-box;
+.item_wrap .item_left .data{
+	margin-left: 20px;
 }
 
-*,
-::before,
-::after {
-  box-sizing: inherit;
-  text-decoration: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.item_wrap .item_left .data .name{
+	font-weight: 600;
 }
 
-body {
-  margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
-  font-size: 99%;
-  padding:1px;
-  width: 99%;
-  max-width:97%;
-  background: linear-gradient(to right, #73c6b6, #5499c7);
+.item_wrap .item_left .data .distance{
+	color: #7f8b9b;
+	font-size: 14px;
+	margin-top: 3px;
 }
 
-/*********** MAIN HEADING **********/
-.main-heading {
-  font-size: 2em;
-  color:white;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  font-weight:bold;
+.item_wrap .item_right .status{
+	position: relative;
+	color: #77818d;
 }
 
-.main-heading::before, .main-heading::after {
-  content: "";
-  height: 0.2em;
-  width: 100%;
-  background-image: linear-gradient(to left, darkorange, transparent);
-  margin-right: 1em;
+.item_wrap .item_right .status:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+    left: -12px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #b3bbc8;
 }
 
-.main-heading::after {
-  background-image: linear-gradient(to right, darkorange, transparent);
-  margin-left: 1em;
+.item_wrap.offline .item_right .status{
+	color: #b3bbc8;	
 }
 
-/*********** LINKS **********/
-.tab-list__list {
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.item_wrap.online .item_right .status:before{
+	background: #7fc469;
 }
-
-.tab-list__link {
-  color: #fff;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  background-color: #807668;
-  display: block;
-  padding: 1em 1.5em;
-  border-radius: 5px 5px 0 0;
-  transition: all 150ms ease-out;
-  font-weight:bold;
-}
-
-.tab-list__link--is-active {
-  color: #3f4c6b;
-  background-color: #f2e7cf;
-  background-color: #fff;
-  transform: scaleY(1.1);
-  transform-origin: center bottom;
-}
-
-/*********** TAB CONTAINERS **********/
-.tab {
-  background-color: #f2e7cf;
-  background-color: #fff;
-  border-radius: 0 1px 1px 1px;
-  padding: 1.5em;
-}
-
-
-.tab__box {
-  display: none;
-}
-
-.tab__box--is-visible {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: 5px;
-  justify-content: space-around;
-}
-
-.tab__item {
-  padding: 1.5em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background: #f8f9f9;
-  border-radius:5% 5% 5% 5%;
-}
-
-
-.tab__heading {
-  font-size: 1.2em;
-  color:black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight:bold;
-}
-
-.tab__icon {
-  font-size: 3em !important;
-  margin: 0.7em 0;
-  color: darkorange;
-}
-
-.tab__para {
-  font-weight: bold;
-  color: #3f4c6b;
-  margin-bottom: 1.5em;
-}
-
-.tab__btn {
-  font-size: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: inherit;
-  padding: 0.8em 1.5em;
-  border-radius: 1px;
-  border: 0;
-  background-image: linear-gradient(to bottom,#e6f5ff,#eaeded,#1b2631);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  max-width: 18em;
-  max-high: 1em;
-  margin: 0 auto;
-}
-
-.tab__btn:hover {
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-}
-
-.tab__btn:active {
-  transform: translate(1px, 2px);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 38em) {
-  body {
-  font-size: 50%;
-  background: #1b4f72;
-  }
-
-  .wrap {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-  }
-
-  .tab-list__list {
-    flex-direction: column;
-    background-color: #807668;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .tab-list__link {
-    font-size: 0.8em;
-    padding: 1.2em 1em;
-    border-radius: 5px 0 0 5px;
-  }
-
-  .tab-list__link--is-active {
-    transform: scaleX(1.05);
-    transform-origin: right center;
-  }
-
-  .tab {
-    border-radius: 0 3px 3px 0;
-    padding: 1em;
-  }
-}
-
-
-
-
 </style>
 
   <script>
@@ -545,209 +175,217 @@ body {
 </head>
 
 <body translate="no">
-  <div class="header";>
-  <img style=" width: 100%;" src="/Banner DHA New.png" />   
+  <div class="wrapper">
+  <div class="title">
+    TRUYỀN DẪN
   </div>
-<!-- Modal -->
 
-<main id="id01" class="modal">
+  <div class="tabs_wrap">
+    <ul>
+      <li data-tabs="trucca" class="active">TRỰC CA</li>
+      <li data-tabs="kenhluong" class="">KÊNH LUỒNG</li>
+      <li data-tabs="vattu" class="">VẬT TƯ</li>
+    </ul>
+  </div>
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <main class="imgcontainer">
-	
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-	  <h2 style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP VT</h2>
-    </main><!-- Modal -->
+  
+  <div class="container">
+    <ul>
 
+<!–TRỰC CA–>	
+	<li class="item_wrap trucca online" style="display: block;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/PhanCa.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">PHÂN TRỰC CA ĐÔNG HÀ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
 
-    <main class="form">
+      <li class="item_wrap trucca online" style="display: block;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/PhanCa.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">PHÂN TRỰC CA ĐỒNG HỚI</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
 
-        <ul class="tabmodal-group">
+      <li class="item_wrap trucca online" style="display: block;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/PhanCa.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">PHÂN TRỰC CA HUẾ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
 
-            <li onClick="Delre();" class="tabmodal active"><a href="#login">Login</a></li>
-            <li onClick="Delre();" class="tabmodal"><a href="#changepass">ChangePwd</a></li>
+<!–KÊNH LUỒNG–>
+      <li class="item_wrap kenhluong online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/KenhLuong.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">KÊNH LUỒNG ĐÔNG HÀ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
 
-        </ul>
-					<main id="loader"></main>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
-					
-					<main id="loader2"></main>
-					<p align="center" id="repas" style="font-size: 1.5em; color: black;"></p>
-        <main class="tabmodal-content">
+      <li class="item_wrap kenhluong online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/KenhLuong.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">KÊNH LUỒNG ĐỒNG HỚI</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
 
+      <li class="item_wrap kenhluong online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/KenhLuong.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">KÊNH LUỒNG HUẾ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>	  
+	  
+<!–VẬT TƯ–>
+      <li class="item_wrap vattu online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/VatTu.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">VẬT TƯ ĐÔNG HÀ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>	  
 
-            <main id="login">
+      <li class="item_wrap vattu online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/VatTu.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">VẬT TƯ ĐỒNG HỚI</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>
 
-    <form>
-
-
-                    <main class="field-wrap" autocomplete="off">
-                        <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-                    </main>
-
-
-                    <main class="field-wrap">
-                        <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-                    </main>
-
-				
-
-					<input class="button button-block" type = "button" onClick="Login_value(); " value = "Đăng Nhập" /></input>
-
-                </form>
-
-            </main>
-
-
-
-            <main id="changepass">
-
-                <form>
-
-                  <main class="top-row">
-
-				  <main class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-                    </main>
-
-                    <main class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-                    </main>
-                  </main>
-
-                    <main class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
-                    </main>
-
-
-                    <main class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
-                    </main>
-
-
-
-					<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
-
-                </form>
-
-            </main>
-
-
-        </main><!-- tabmodal-content -->
-
-    </main> <!-- /form -->
-
-
-</form><!-- Modal -->
-</main>
-
-
-  <h1 class="main-heading">VÔ TUYẾN ĐÀI VT ĐÔNG HÀ</h1>
-    <div class="wrap">
-        <ul class="tab-list__list">
-            <li class="tab-list__item"><a href="#tab-1" class="tab-list__link tab-list__link--is-active">LỊCH CÔNG VIỆC</a></li>
-            <li class="tab-list__item"><a href="#tab-2" class="tab-list__link">VẬT TƯ DỰ PHÒNG</a></li>
-            <li class="tab-list__item"><a href="#tab-3" class="tab-list__link">TÀI LIỆU</a></li>
-        </ul>
-        <div class="tab">
-
-		<ul id="tab-1" class="tab__box tab__box--1  tab__box--is-visible">
-                <li class="tab__item">                   
-                   <img src="VoTuyen/LichDHA.jpg" alt=""> 
-                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐÔNG HÀ</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                   
-                </li>
-                <li class="tab__item">                   
-                   <img src="VoTuyen/LichDHI.png" alt=""> 
-                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐỒNG HỚI</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-                <li class="tab__item">                   
-                   <img src="VoTuyen/LichHUE.jpg" alt=""> 
-                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT HUẾ</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-
-            </ul>
-
-            <ul id="tab-2" class="tab__box tab__box--1">
-                <li class="tab__item">                   
-                   <img src="VoTuyen/VatTuDPDHA.png" alt=""> 
-                   <h2 class="tab__heading">VẬT TƯ DP VT ĐÔNG HÀ</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-                <li class="tab__item">                   
-                   <img src="VoTuyen/VatTuDPDHI.png" alt=""> 
-                   <h2 class="tab__heading">VẬT TƯ DP VT ĐỒNG HỚI</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-                <li class="tab__item">                   
-                   <img src="VoTuyen/VatTuDPHUE.jpg" alt=""> 
-                   <h2 class="tab__heading">VẬT TƯ DP VT HUẾ</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-
-            </ul>			
-			
-            <ul id="tab-3" class="tab__box tab__box--1">
-                <li class="tab__item">                   
-                   <img src="VoTuyen/CongVan.jpg" alt=""> 
-                   <h2 class="tab__heading">CÔNG VĂN VÔ TUYẾN</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-                <li class="tab__item">                   
-                   <img src="VoTuyen/TaiLieu.png" alt=""> 
-                   <h2 class="tab__heading">TÀI LIỆU VÔ TUYẾN</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-                <li class="tab__item">                   
-                   <img src="VoTuyen/TaiLieu.png" alt=""> 
-                   <h2 class="tab__heading">TRẮC NGHIỆM VÔ TUYẾN</h2>
-                  <div class="text-center">
-					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
-				  </div>
-                </li>
-
-            </ul>
-
-
-
-			</div>    
-    </div>
-
+      <li class="item_wrap vattu online" style="display: none;">
+        <div class="item">
+          <div class="item_left">
+            <div class="img">
+              <img src="TruyenDanPicture/VatTu.png" alt="">
+            </div>
+            <div class="data">
+              <p class="name">VẬT TƯ HUẾ</p>
+            </div>
+          </div>
+          <div class="item_right">
+            <div class="status">Online</div>
+          </div>
+        </div>
+      </li>		  
+	  
+	  </ul>
+  </div>
+</div>
 
 
 <script id="rendered-js">
-function _0x3152(_0x126715,_0x358bc8){var _0x192562=_0x1925();return _0x3152=function(_0x315235,_0xce6645){_0x315235=_0x315235-0x1de;var _0x20c623=_0x192562[_0x315235];return _0x20c623;},_0x3152(_0x126715,_0x358bc8);}var _0x12ef6c=_0x3152;function _0x1925(){var _0x579bff=['keyup\x20blur\x20focus','blur','click','attr','keyup','60etasfO','parent','3590ibGaKX','fadeIn','3766059AFoCYr','4065282NvwqPt','history','highlight','138jOEQrV','not','active\x20highlight','.tab-content\x20>\x20main','685akihuh','href','replaceState','39666iBAwPv','5034QiaMBa','siblings','228HZxWhE','66180MmpNjy','29628UBEkQv','addClass','type','847chVhRk','.form','removeClass','7088qZiMlp','val','label','.tab\x20a','active'];_0x1925=function(){return _0x579bff;};return _0x1925();}(function(_0x5cb7a4,_0x2bef74){var _0x1f0af2=_0x3152,_0x2d77fd=_0x5cb7a4();while(!![]){try{var _0x1708c5=-parseInt(_0x1f0af2(0x1ef))/0x1*(-parseInt(_0x1f0af2(0x1e7))/0x2)+parseInt(_0x1f0af2(0x1f1))/0x3*(-parseInt(_0x1f0af2(0x1f2))/0x4)+-parseInt(_0x1f0af2(0x1eb))/0x5*(parseInt(_0x1f0af2(0x1ee))/0x6)+-parseInt(_0x1f0af2(0x1f6))/0x7*(-parseInt(_0x1f0af2(0x1f9))/0x8)+-parseInt(_0x1f0af2(0x1f3))/0x9*(-parseInt(_0x1f0af2(0x1e1))/0xa)+-parseInt(_0x1f0af2(0x1e3))/0xb+-parseInt(_0x1f0af2(0x1df))/0xc*(-parseInt(_0x1f0af2(0x1e4))/0xd);if(_0x1708c5===_0x2bef74)break;else _0x2d77fd['push'](_0x2d77fd['shift']());}catch(_0x53c4af){_0x2d77fd['push'](_0x2d77fd['shift']());}}}(_0x1925,0xa98b6),window[_0x12ef6c(0x1e5)][_0x12ef6c(0x1ed)]('','','/'),$(_0x12ef6c(0x1f7))['find']('input,\x20textarea')['on'](_0x12ef6c(0x1fe),function(_0x3d5283){var _0x46a85c=_0x12ef6c,_0x1b33f9=$(this),_0x3039c0=_0x1b33f9['prev'](_0x46a85c(0x1fb));if(_0x3d5283[_0x46a85c(0x1f5)]===_0x46a85c(0x1de))_0x1b33f9[_0x46a85c(0x1fa)]()===''?_0x3039c0[_0x46a85c(0x1f8)](_0x46a85c(0x1e9)):_0x3039c0[_0x46a85c(0x1f4)]('active\x20highlight');else{if(_0x3d5283[_0x46a85c(0x1f5)]===_0x46a85c(0x1ff))_0x1b33f9[_0x46a85c(0x1fa)]()===''?_0x3039c0[_0x46a85c(0x1f8)](_0x46a85c(0x1e9)):_0x3039c0[_0x46a85c(0x1f8)]('highlight');else{if(_0x3d5283[_0x46a85c(0x1f5)]==='focus'){if(_0x1b33f9[_0x46a85c(0x1fa)]()==='')_0x3039c0['removeClass'](_0x46a85c(0x1e6));else _0x1b33f9['val']()!==''&&_0x3039c0['addClass'](_0x46a85c(0x1e6));}}}}),$(_0x12ef6c(0x1fc))['on'](_0x12ef6c(0x200),function(_0x5a52aa){var _0x2a8cc8=_0x12ef6c;_0x5a52aa['preventDefault'](),$(this)[_0x2a8cc8(0x1e0)]()['addClass'](_0x2a8cc8(0x1fd)),$(this)[_0x2a8cc8(0x1e0)]()[_0x2a8cc8(0x1f0)]()[_0x2a8cc8(0x1f8)](_0x2a8cc8(0x1fd)),target=$(this)[_0x2a8cc8(0x201)](_0x2a8cc8(0x1ec)),$(_0x2a8cc8(0x1ea))[_0x2a8cc8(0x1e8)](target)['hide'](),$(target)[_0x2a8cc8(0x1e2)](0x258);}));
+var tabs = document.querySelectorAll(".tabs_wrap ul li");
+var truccas = document.querySelectorAll(".trucca");
+var kenhluongs = document.querySelectorAll(".kenhluong");
+var vattus = document.querySelectorAll(".vattu");
+var all = document.querySelectorAll(".item_wrap");
 
-</script>
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(tab => {
+      tab.classList.remove("active");
+    });
+    tab.classList.add("active");
+    var tabval = tab.getAttribute("data-tabs");
 
-<script id="rendered-js">
-function _0x38c6(){const _0x2366fa=['342ZXmgrP','tab-list__link--is-active','145656ZmcbML','tab__box--is-visible','href','4344018hfUtHn','.tab-list__list','2360694vkFkes','1247008qvYVIC','target','.tab__box','click','slice','classList','5udUDOc','addEventListener','tab-list__link','2215572rZqnQh','querySelector','add','164435zAccVo','querySelectorAll','getAttribute','1845312WjUrHY','contains','preventDefault','.tab-list__link'];_0x38c6=function(){return _0x2366fa;};return _0x38c6();}function _0x21e6(_0x10c480,_0x261e06){const _0x38c63a=_0x38c6();return _0x21e6=function(_0x21e697,_0x135832){_0x21e697=_0x21e697-0xbd;let _0x7f905d=_0x38c63a[_0x21e697];return _0x7f905d;},_0x21e6(_0x10c480,_0x261e06);}const _0x26fc4c=_0x21e6;(function(_0x3ca774,_0x3bb331){const _0x5eb1a5=_0x21e6,_0xe8933d=_0x3ca774();while(!![]){try{const _0x26f9f7=-parseInt(_0x5eb1a5(0xc0))/0x1+-parseInt(_0x5eb1a5(0xcf))/0x2+parseInt(_0x5eb1a5(0xbd))/0x3+-parseInt(_0x5eb1a5(0xc3))/0x4+-parseInt(_0x5eb1a5(0xd5))/0x5*(parseInt(_0x5eb1a5(0xce))/0x6)+parseInt(_0x5eb1a5(0xcc))/0x7+-parseInt(_0x5eb1a5(0xc9))/0x8*(-parseInt(_0x5eb1a5(0xc7))/0x9);if(_0x26f9f7===_0x3bb331)break;else _0xe8933d['push'](_0xe8933d['shift']());}catch(_0xcada9a){_0xe8933d['push'](_0xe8933d['shift']());}}}(_0x38c6,0x63ab8));let ul=document[_0x26fc4c(0xbe)](_0x26fc4c(0xcd)),links=document[_0x26fc4c(0xc1)](_0x26fc4c(0xc6)),tabs=document[_0x26fc4c(0xc1)](_0x26fc4c(0xd1));ul[_0x26fc4c(0xd6)](_0x26fc4c(0xd2),_0x3673de=>{const _0x3767e1=_0x26fc4c;_0x3673de['target'][_0x3767e1(0xd4)][_0x3767e1(0xc4)](_0x3767e1(0xd7))&&!_0x3673de[_0x3767e1(0xd0)][_0x3767e1(0xd4)][_0x3767e1(0xc4)](_0x3767e1(0xc8))&&(_0x3673de[_0x3767e1(0xc5)](),links['forEach']((_0xd9caa6,_0x32a67d)=>{const _0x5dba2a=_0x3767e1;_0xd9caa6[_0x5dba2a(0xd4)]['remove'](_0x5dba2a(0xc8)),tabs[_0x32a67d][_0x5dba2a(0xd4)]['remove']('tab__box--is-visible'),_0x3673de['target'][_0x5dba2a(0xd4)][_0x5dba2a(0xbf)](_0x5dba2a(0xc8)),_0x3673de[_0x5dba2a(0xd0)][_0x5dba2a(0xc2)](_0x5dba2a(0xcb))[_0x5dba2a(0xd3)](0x1)===tabs[_0x32a67d][_0x5dba2a(0xc2)]('id')&&tabs[_0x32a67d][_0x5dba2a(0xd4)][_0x5dba2a(0xbf)](_0x5dba2a(0xca));}));});
-    </script>  
-<script src="VoTuyen/Login.min.js"></script>
-<script id="rendered-js">
-var _0x3d920a=_0x1699;function _0x1699(_0x23cacf,_0x191edf){var _0x745138=_0x7451();return _0x1699=function(_0x16994a,_0x26f568){_0x16994a=_0x16994a-0xb3;var _0x2e2a79=_0x745138[_0x16994a];return _0x2e2a79;},_0x1699(_0x23cacf,_0x191edf);}(function(_0x492a19,_0x138db2){var _0x508471=_0x1699,_0x392565=_0x492a19();while(!![]){try{var _0x669638=-parseInt(_0x508471(0xc9))/0x1*(parseInt(_0x508471(0xb6))/0x2)+-parseInt(_0x508471(0xc6))/0x3*(-parseInt(_0x508471(0xd6))/0x4)+-parseInt(_0x508471(0xba))/0x5*(parseInt(_0x508471(0xb4))/0x6)+parseInt(_0x508471(0xcc))/0x7+parseInt(_0x508471(0xcb))/0x8+-parseInt(_0x508471(0xd3))/0x9*(parseInt(_0x508471(0xbd))/0xa)+parseInt(_0x508471(0xd8))/0xb*(-parseInt(_0x508471(0xca))/0xc);if(_0x669638===_0x138db2)break;else _0x392565['push'](_0x392565['shift']());}catch(_0xf935ef){_0x392565['push'](_0x392565['shift']());}}}(_0x7451,0x877de),$(_0x3d920a(0xcd))['find'](_0x3d920a(0xc3))['on']('keyup\x20blur\x20focus',function(_0x2867c1){var _0x54e9bf=_0x3d920a,_0x376f02=$(this),_0x2f4eaa=_0x376f02[_0x54e9bf(0xda)](_0x54e9bf(0xd7));if(_0x2867c1[_0x54e9bf(0xbe)]===_0x54e9bf(0xc1))_0x376f02[_0x54e9bf(0xce)]()===''?_0x2f4eaa[_0x54e9bf(0xb7)](_0x54e9bf(0xc7)):_0x2f4eaa[_0x54e9bf(0xc8)](_0x54e9bf(0xc7));else{if(_0x2867c1['type']==='blur')_0x376f02['val']()===''?_0x2f4eaa[_0x54e9bf(0xb7)](_0x54e9bf(0xc7)):_0x2f4eaa['removeClass'](_0x54e9bf(0xd1));else{if(_0x2867c1['type']===_0x54e9bf(0xc2)){if(_0x376f02[_0x54e9bf(0xce)]()==='')_0x2f4eaa[_0x54e9bf(0xb7)](_0x54e9bf(0xd1));else _0x376f02[_0x54e9bf(0xce)]()!==''&&_0x2f4eaa[_0x54e9bf(0xc8)](_0x54e9bf(0xd1));}}}}),$('.tabmodal\x20a')['on'](_0x3d920a(0xb9),function(_0xee6b7f){var _0x9f1a35=_0x3d920a;_0xee6b7f[_0x9f1a35(0xbf)](),$(this)[_0x9f1a35(0xcf)]()[_0x9f1a35(0xc8)](_0x9f1a35(0xc4)),$(this)[_0x9f1a35(0xcf)]()[_0x9f1a35(0xd0)]()[_0x9f1a35(0xb7)]('active'),target=$(this)[_0x9f1a35(0xb8)](_0x9f1a35(0xbc)),$(_0x9f1a35(0xc0))[_0x9f1a35(0xb3)](target)[_0x9f1a35(0xd2)](),$(target)[_0x9f1a35(0xd5)](0x258);}),$(function(){var _0x4f465e=_0x3d920a,_0x5928b0=$(_0x4f465e(0xb5)),_0x164ab7=$(window),_0x1c5c8=_0x5928b0[_0x4f465e(0xd4)](),_0x40dec2=_0x5928b0[_0x4f465e(0xc5)](),_0x4e1e61=_0x164ab7[_0x4f465e(0xd4)](),_0x4b619b=_0x164ab7[_0x4f465e(0xc5)]();_0x5928b0[_0x4f465e(0xbb)]({'position':_0x4f465e(0xd9),'top':(_0x4b619b-_0x40dec2)/0x2+'px','left':(_0x4e1e61-_0x1c5c8)/0x2+'px'});}));function _0x7451(){var _0x27b2c6=['absolute','prev','not','454506lcmzxk','.modal','866zCUqHB','removeClass','attr','click','5IjYtwY','css','href','9922800nSXwZN','type','preventDefault','.tabmodal-content\x20>\x20main','keyup','focus','input,\x20textarea','active','height','774552IbWHyT','active\x20highlight','addClass','1193wxpoxB','48pekmXx','7251600tzmTua','7455868HuHCfW','.form','val','parent','siblings','highlight','hide','9xfQRvy','width','fadeIn','8OcaLXz','label','958012crxMsu'];_0x7451=function(){return _0x27b2c6;};return _0x7451();}
+    all.forEach(item => {
+      item.style.display = "none";
+    });
 
-</script>
+    if (tabval == "trucca") {
+      truccas.forEach(trucca => {
+        trucca.style.display = "block";
+      });
+    } else
+    if (tabval == "kenhluong") {
+      kenhluongs.forEach(kenhluong => {
+        kenhluong.style.display = "block";
+      });
+    } else
+    if (tabval == "vattu") {
+      vattus.forEach(vattu => {
+        vattu.style.display = "block";
+      });	  
+
+    }
+
+  });
+});
+//# sourceURL=pen.js
+    </script>
 
 
  
-</body></html>
+</body>
+</html>
