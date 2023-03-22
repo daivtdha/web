@@ -1091,16 +1091,25 @@ span.psw {
   .modal-content {
     width: 48%;
   }
+  .modal {
+    width: 48%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .modal-content{
+    width: 76%;
+  }
+  .modal {
     width: 76%;
   }
 }
 @media only screen and (max-width: 479px) {
   .modal-content {
     width: 96%;
+  .modal {
+    width: 96%;
   }
+}
 
 }
 
@@ -1152,35 +1161,7 @@ span.psw {
 }
 
 
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-} 
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-}
 
-@media (max-width: 600px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-}
-
-@media screen and (max-width: 980px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-} 
 
 
 /* Modal Thông báo */
@@ -1591,7 +1572,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 $(document).ready(function() {
 
 var url = location.protocol;
-if (url == "file:") {
+if (url == "file:khanh") {
 	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
