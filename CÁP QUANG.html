@@ -1078,13 +1078,6 @@ span.psw {
   padding-top: 0px;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  top: 20%;
-  border: 1px solid #888;
-  width:auto; /* Could be more or less, depending on screen size */
-}
 
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
@@ -1092,7 +1085,10 @@ span.psw {
     width: 100%;
   }
   .modal {
-    width: 100%;
+    width: 100%;;
+  }
+  .form {
+    width: 100%;;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1102,12 +1098,18 @@ span.psw {
   .modal {
     width: 100%;
   }
+  .form {
+    width: 100%;;
+  }
 }
 @media only screen and (max-width: 479px) {
   .modal-content {
     width: 100%;
   .modal {
     width: 100%;
+  }
+  .form {
+    width: 100%;;
   }
 }
 
@@ -1161,7 +1163,35 @@ span.psw {
 }
 
 
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+}
 
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+} 
 
 
 /* Modal Thông báo */
@@ -2297,8 +2327,12 @@ ten9.onclick  = function(){
 	Combine();
 }
 
+		
+		
+		
 	 
 </script>
 
-</body>
-</html>
+
+ 
+</body></html>
