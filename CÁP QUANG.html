@@ -765,9 +765,7 @@ a {
 		border-radius: 26px 26px 26px 26px;
 		background: #21618c;	
 
-		width:40%;
-		  display: inline-block;
-		  flex:1;
+		width:100%;
 		  display:flex;
 		  justify-content:center;
 			
@@ -779,9 +777,9 @@ a {
         content: "";
         display: table;
         clear: both;
-	background: #21618c;
+		background: #21618c;
         color:black;
-	border-radius: 26px 26px 26px 26px;
+		border-radius: 26px 26px 26px 26px;
     }
 
     .tab-group li a {
@@ -796,30 +794,30 @@ a {
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
-	border-radius: 26px 26px 26px 26px;
+		border-radius: 26px 26px 26px 26px;
 		
     }
 
     .tab-group li a:hover {
         background: #5dade2;
         color:black;
-	border-radius: 26px 26px 26px 26px;
+		border-radius: 26px 26px 26px 26px;
 
     }
 
     .tab-group .active a {
         background:white;
         color:black;
-	border-radius: 26px 26px 26px 26px;
-	width:170px;
+		border-radius: 26px 26px 26px 26px;
+		 width:120px;
     }
 
     .tab-group .disabble a {
         background: #d6dbdf;
         color:black;
-	border-radius: 26px 26px 26px 26px;
-	width:170px;
-    }
+		border-radius: 26px 26px 26px 26px;
+		 width:120px;
+    }	
     .tab-content>div:last-child {
         display: none;
     }
@@ -1342,12 +1340,10 @@ font-size: 10px;
     <div class="form">
 
 			<div class="tab-group">
-			<div style="background-color:#21618c;">
+
             <li id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
-			</div>
-			<div style="background-color:#21618c;">
-            <li id="C_Pwd" onClick="Delre();" class="tab disabble"><a href="#changepass">ChangePwd</a></li>
-			</div>
+
+            <li id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 			</div>
 			</br>
 
