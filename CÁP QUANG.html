@@ -795,11 +795,11 @@ a {
         cursor: pointer;
         transition: .5s ease;
 		border-radius: 26px 26px 26px 26px;
-		
+		width:200px;
     }
 
     .tab-group li a:hover {
-        background: #5dade2;
+        background:red;
         color:black;
 		border-radius: 26px 26px 26px 26px;
 
@@ -809,15 +809,10 @@ a {
         background:white;
         color:black;
 		border-radius: 26px 26px 26px 26px;
-		 width:120px;
+		 width:200px;
     }
 
-    .tab-group .disabble a {
-        background: #d6dbdf;
-        color:black;
-		border-radius: 26px 26px 26px 26px;
-		 width:120px;
-    }	
+	
     .tab-content>div:last-child {
         display: none;
     }
@@ -868,7 +863,7 @@ a {
     input:focus,
     textarea:focus {
         outline: 5;
-        border-color:red;
+        border-color: white;
     }
 
 	
@@ -1088,13 +1083,62 @@ span.psw {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   border-radius:1% 1% 1% 1%;
-  top: auto;
+  top: 30;
   width: auto%; /* Full width */
   height: auto; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color:  #f8f9f9; /* Fallback color */
   background-color:  #f8f9f9; /* Black w/ opacity */
   padding-top: 0px;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+font-size: 15px;
+.modal-content {
+font-size: 15px;
+    width: 100%;
+  }
+  .modal {
+font-size: 15px;
+    width: 100%;;
+  }
+  .form {
+font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 767px) {
+
+	.modal-content{
+ font-size: 15px;
+    width: 100%;
+  }
+  .modal {
+font-size: 15px;
+    width: 100%;
+  }
+  .form {
+font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 479px) {
+
+.modal-content {
+font-size: 15px;
+    width: 100%;
+  .modal {
+font-size: 15px;
+    width: 100%;
+  }
+  .form {
+font-size: 15px;
+    width: 100%;;
+  }
+}
+
 }
 
 
@@ -1146,58 +1190,33 @@ span.psw {
 
 
 @media (max-width: 600px) {
-
 .modal-content {
-font-size: 10px;
-    width: 100%;
-  }
-  .modal {
-font-size: 10px;
-    width: 100%;
-height: auto; /* Full height */	  
-  }
-  .form {
-font-size: 10px;
-    width: 100%;
-  }	
-	
-
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 }
 
 @media (max-width: 600px) {
-
 .modal-content {
-font-size: 10px;
-    width: 100%;
-  }
-  .modal {
-font-size: 10px;
-    width: 100%;
-height: auto; /* Full height */	  
-  }
-  .form {
-font-size: 10px;
-    width: 100%;
-  }	
-	
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 }
 
 @media screen and (max-width: 980px) {
-
 .modal-content {
-font-size: 10px;
-    width: 100%;
-  }
-  .modal {
-font-size: 10px;
-    width: 100%;
-height: auto; /* Full height */	  
-  }
-  .form {
-font-size: 10px;
-    width: 100%;
-  }	
-	
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 } 
 
 
@@ -1330,23 +1349,23 @@ font-size: 10px;
 		<div class="imgcontainer">
 		
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close">❌</span>
-		  <h2 id="dn" style="font-size: 1em; font-weight: bold"; value=""></h2>
+		  <h2 id="dn" style="font-size: 1.5em; font-weight: bold"; value=""></h2>
 		</div><!-- Modal -->
 
-	<p type = "text" id="ngay"style="background-color:#21618c;"></p>
-	<p type = "text" id="doma" value="" style="background-color:#21618c;"></p>
+	<p type = "text" id="ngay"></p>
+	<p type = "text" id="doma" value=""></p>
 
 
     <div class="form">
 
-			<div class="tab-group">
+			<ul class="tab-group">
 
-            <li id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li style="background: #21618c"; width="200px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
 
-            <li id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
-			</div>
+            <li style="background: #21618c"; width="200px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+			</ul>
+
 			</br>
-
 					<div id="loader"></div>
 					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
 					
@@ -1357,8 +1376,8 @@ font-size: 10px;
 
             <div id="login">
 				<form>	
-				<p type = "text" id = "chon" hidden style="background-color:#21618c;"></p>
-				<p type = "text" id = "combine" hidden style="background-color:#21618c;"></p>
+				<p type = "text" id = "chon"  </p>
+				<p type = "text" id = "combine" </p>
 				</br>
 				
 				<div class="field-wrap">
@@ -1372,18 +1391,18 @@ font-size: 10px;
 				<div class="field username">
                     <div class="field-wrap" autocomplete="off">
                         <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
-			<i class="icon fas fa-user"></i>
+						<i class="icon fas fa-user"></i>
                     </div>
-			</div>
+				</div>
 				
-			<div class="field password">
+				 <div class="field password">
                     <div class="field-wrap">
                         <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
-			<i class="icon fas fa-lock"></i>
+						<i class="icon fas fa-lock"></i>
                     </div>				
-			</div>
+				 </div>
 				 
-			<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
+				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
                 </form>
 
             </div>
@@ -1394,37 +1413,37 @@ font-size: 10px;
 
                 <form>                
 				  
-			<div class="field username">
-			<div class="field-wrap" autocomplete="off">
+				  <div class="field username">
+					<div class="field-wrap" autocomplete="off">
                         <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-			<i class="icon fas fa-user"></i>
+						<i class="icon fas fa-user"></i>
                     </div>
-			</div>
+					</div>
 
 					<div class="field password">
                     <div class="field-wrap">
                         <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-			<i class="icon fas fa-lock"></i>
+						<i class="icon fas fa-lock"></i>
                     </div>
-			</div>
+					</div>
                   
 				
 
                     <div class="field password">
-			<div class="field-wrap" autocomplete="off">
+					<div class="field-wrap" autocomplete="off">
                         <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
-			<i class="icon fas fa-lock"></i>
+						<i class="icon fas fa-lock"></i>
                     </div>
-			</div>
+					</div>
 
                     <div class="field password">
 					<div class="field-wrap">
                         <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
 						<i class="icon fas fa-lock"></i>
                     </div>
-			</div>
+					</div>
 					
-			<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
 
                 </form>
 
