@@ -1102,26 +1102,6 @@ span.psw {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
-    .form {
-		background: #21618c;	
-    }
-    .tab-group {
-		background: #21618c;	
-    } 
-    .tab-group:after {
-		background: #21618c;	
-    } 
-    .tab-group li a {
-		background: #21618c;	
-    }
-    .tab-group .active a {
-		background: #21618c;	
-    }
-    .tab-group .disabble a {
-		background: #21618c;	
-    }
-	
-	
 .modal-content {
 font-size: 10px;
     width: 100%;
@@ -1136,71 +1116,32 @@ font-size: 10px;
   }
 }
 @media only screen and (max-width: 767px) {
-    .form {
-		background: #21618c;	
-    }
-    .tab-group {
-		background: #21618c;	
-    } 
-    .tab-group:after {
-		background: #21618c;	
-    } 
-    .tab-group li a {
-		background: #21618c;	
-    }
-    .tab-group .active a {
-		background: #21618c;	
-    }
-    .tab-group .disabble a {
-		background: #21618c;	
-    }
-	
-	
+
   .modal-content{
- font-size: 10px;
+ font-size: 15px;
     width: 100%;
   }
   .modal {
-font-size: 10px;
+font-size: 15px;
     width: 100%;
   }
   .form {
-font-size: 10px;
+font-size: 15px;
     width: 100%;;
   }
 }
 @media only screen and (max-width: 479px) {
-    .form {
-		background: #21618c;	
-    }
-    .tab-group {
-		background: #21618c;	
-    } 
-    .tab-group:after {
-		background: #21618c;	
-    } 
-    .tab-group li a {
-		background: #21618c;	
-    }
-    .tab-group .active a {
-		background: #21618c;	
-    }
-    .tab-group .disabble a {
-		background: #21618c;	
-    }
-	
-	
 	
 .modal-content {
 
 font-size: 15px;
     width: 100%;
   .modal {
-font-size: 10px;
+font-size: 15px;
     width: 100%;
   }
   .form {
-font-size: 10px;
+font-size: 15px;
     width: 100%;;
   }
 }
@@ -1418,8 +1359,8 @@ font-size: 10px;
 		  <h2 id="dn" style="font-size: 1.5em; font-weight: bold"; value=""></h2>
 		</div><!-- Modal -->
 
-	<p type = "text" id="ngay"></p>
-	<p type = "text" id="doma" value=""></p>
+	<p type = "text" id="ngay"style="background-color:#21618c;"></p>
+	<p type = "text" id="doma" value="" style="background-color:#21618c;"></p>
 
 
     <div class="form">
@@ -1443,8 +1384,8 @@ font-size: 10px;
 
             <div id="login">
 				<form>	
-				<p type = "text" id = "chon" size = "20" </p>
-				<p type = "text" id = "combine" size = "20"</p>
+				<p type = "text" id = "chon" hidden style="background-color:#21618c;"></p>
+				<p type = "text" id = "combine" hidden style="background-color:#21618c;"></p>
 				</br>
 				
 				<div class="field-wrap">
@@ -1458,18 +1399,18 @@ font-size: 10px;
 				<div class="field username">
                     <div class="field-wrap" autocomplete="off">
                         <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
+			<i class="icon fas fa-user"></i>
                     </div>
-				</div>
+			</div>
 				
-				 <div class="field password">
+			<div class="field password">
                     <div class="field-wrap">
                         <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
+			<i class="icon fas fa-lock"></i>
                     </div>				
-				 </div>
+			</div>
 				 
-				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
+			<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
                 </form>
 
             </div>
@@ -1480,37 +1421,37 @@ font-size: 10px;
 
                 <form>                
 				  
-				  <div class="field username">
-					<div class="field-wrap" autocomplete="off">
+			<div class="field username">
+			<div class="field-wrap" autocomplete="off">
                         <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
+			<i class="icon fas fa-user"></i>
                     </div>
-					</div>
+			</div>
 
 					<div class="field password">
                     <div class="field-wrap">
                         <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
+			<i class="icon fas fa-lock"></i>
                     </div>
-					</div>
+			</div>
                   
 				
 
                     <div class="field password">
-					<div class="field-wrap" autocomplete="off">
+			<div class="field-wrap" autocomplete="off">
                         <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
+			<i class="icon fas fa-lock"></i>
                     </div>
-					</div>
+			</div>
 
                     <div class="field password">
 					<div class="field-wrap">
                         <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
 						<i class="icon fas fa-lock"></i>
                     </div>
-					</div>
+			</div>
 					
-				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+			<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
 
                 </form>
 
