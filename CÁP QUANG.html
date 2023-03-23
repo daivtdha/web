@@ -765,7 +765,7 @@ a {
 		border-radius: 26px 26px 26px 26px;
 		background: #21618c;	
 
-		width:100%;
+		width:auto;
 		  display: inline-block;
 		  flex:1;
 		  display:flex;
@@ -811,14 +811,14 @@ a {
         background:white;
         color:black;
 	border-radius: 26px 26px 26px 26px;
-	width:145px;
+	width:120px;
     }
 
     .tab-group .disabble a {
         background: #d6dbdf;
         color:black;
 	border-radius: 26px 26px 26px 26px;
-	width:145px;
+	width:120px;
     }
     .tab-content>div:last-child {
         display: none;
@@ -1365,7 +1365,15 @@ font-size: 15px;
 
     <div class="form">
 
-
+			<div class="tab-group">
+			<div>
+            <li id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+			</div>
+			<div>
+            <li id="C_Pwd" onClick="Delre();" class="tab disabble"><a href="#changepass">ChangePwd</a></li>
+			</div>
+			</div>
+			</br>
 
 					<div id="loader"></div>
 					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
