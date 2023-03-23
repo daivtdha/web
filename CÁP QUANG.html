@@ -1525,7 +1525,137 @@ font-size: 10px;
 </form><!-- Modal -->
 </div>
 
+  <h1 class="main-heading">CÁP QUANG - ĐÀI VT ĐÔNG HÀ</h1>
 
+  <div class="wrap">
+        <ul class="tab-list__list">
+            <li  class="tab-list__item"><a href="#tab-1" class="tab-list__link tab-list__link--is-active">LỊCH TTCQ CÁP QUANG</a></li>
+            <li  class="tab-list__item"><a href="#tab-2" class="tab-list__link">VẬT TƯ DP CÁP QUANG</a></li>
+            <li  class="tab-list__item"><a href="#tab-3" class="tab-list__link">TÀI LIỆU</a></li>
+        </ul>
+		
+        <div class="tab">
+
+		<ul id="tab-1" class="tab__box tab__box--1  tab__box--is-visible">
+                <li class="tab__item">                   
+                   <img id="anh1" src="CapQuangPicture/CapQuang2.png" alt=""> 
+                   <h2 id="ten1" class="tab__heading">LỊCH TTCQ CÁP QUANG</h2>
+             
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh2" src="CapQuangPicture/CapQuang.jpg" alt=""> 
+                   <h2 id="ten2" class="tab__heading">LỊCH CÔNG TÁC CÁP QUANG</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh3" src="CapQuangPicture/CapQuang1.png" alt=""> 
+                   <h2 id="ten3" class="tab__heading"> KPI CÁP QUANG</h2>
+
+                </li>
+
+            </ul>
+
+            <ul id="tab-2" class="tab__box tab__box--1">
+                <li class="tab__item">                   
+                   <img id="anh4" src="CapQuangPicture/CapQuang3.jpg" alt=""> 
+                   <h2 id="ten4" class="tab__heading">VẬT TƯ DP CQ ĐÔNG HÀ</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh5" src="VoTuyen/VatTuDPDHI.png" alt=""> 
+                   <h2 id="ten5" class="tab__heading">VẬT TƯ DP CQ ĐỒNG HỚI</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh6" src="CapQuangPicture/CapQuang4.jpg" alt=""> 
+                   <h2 id="ten6" class="tab__heading">VẬT TƯ DP CQ HUẾ</h2>
+
+                </li>
+
+            </ul>			
+			
+            <ul id="tab-3" class="tab__box tab__box--1">
+                <li class="tab__item">                   
+                   <img id="anh7" src="CapQuangPicture/CongVan.jpg" alt=""> 
+                   <h2 id="ten7" class="tab__heading">SỐ LIỆU SỰ CỐ CÁP QUANG</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh8" src="CapQuangPicture/CongVan.jpg" alt=""> 
+                   <h2 id="ten8" class="tab__heading">SỐ LIỆU ONMS CÁP QUANG</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh9" src="CapQuangPicture/TaiLieu.png" alt=""> 
+                   <h2 id="ten9" class="tab__heading">CÔNG VĂN CÁP QUANG</h2>
+
+                </li>
+
+
+            </ul>
+
+
+
+			</div>    
+    </div>
+
+	
+<div class="overlay" id="dialog-container">
+  <div class="popup">
+  </br>	
+    <p>Bạn có muốn Thoát không ?</p>
+	</br>	
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+<div class="overlay_time" id="dialog_time">
+  <div class="popup_time">
+  </br>	
+    <p>Thời gian lâu không dùng !</p>
+	</br>	
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+    </div>
+  </div>
+</div> 
+
+  <!-- Modal Aleert-->   
+
+
+
+<div class="overlay_Login" id="dialog_Login2">
+  <div class="popup_Login">
+    <p>Đăng nhập OK !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_Login2">OK</button>
+    </div>
+  </div>
+</div> 
+
+
+<div class="modalMess-wrapper">
+  <div class="modalMess">
+    <div class="headMess">
+      <a id="close" class="btn-close trigger" >
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div  class="contentMess">
+        <div class="good-job">
+          <i id="fa" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <h1 id="alert" value="" ></h1>		  	  
+        </div>
+
+	</div>
+			<div>
+			  <button class="btn-login" hidden id="confirm_Login">OK</button>
+			  </br>		  
+			</div>
+  </div>
 		
 	
 <script src="TruyenDanPicture/Droplist.min.js"></script>
