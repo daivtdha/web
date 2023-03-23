@@ -765,8 +765,12 @@ a {
 		border-radius: 26px 26px 26px 26px;
 		background: #21618c;
 		
-		display:inline-block;
+
 		width:100%;
+		  display: inline-block;
+  flex:1;
+  display:flex;
+  justify-content:center;
 			
     }
 
@@ -793,7 +797,7 @@ a {
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
-	border-radius: 26px 26px 26px 26px;
+		border-radius: 26px 26px 26px 26px;
 		
     }
 
@@ -807,15 +811,15 @@ a {
     .tab-group .active a {
         background:white;
         color:black;
-	border-radius: 26px 26px 26px 26px;
-	width:30%;
+		border-radius: 26px 26px 26px 26px;
+		 width:150px;
     }
 
     .tab-group .disabble a {
         background: #d6dbdf;
         color:black;
-	border-radius: 26px 26px 26px 26px;
-	width:30%;
+		border-radius: 26px 26px 26px 26px;
+		 width:150px;
     }	
     .tab-content>div:last-child {
         display: none;
@@ -1367,7 +1371,7 @@ font-size: 15px;
             <li onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
 			</div>
 			<div>
-            <li onClick="Delre();" class="tab disabble"><a href="#changepass">Change</a></li>
+            <li onClick="Delre();" class="tab disabble"><a href="#changepass">ChangePwd</a></li>
 			</div>
 			</div>
 			</br></br>
@@ -1594,7 +1598,7 @@ font-size: 15px;
 			  <button class="btn-login" hidden id="confirm_Login">OK</button>
 			  </br>		  
 			</div>
-  </div>	
+  </div>		
 	
 <script src="TruyenDanPicture/Droplist.min.js"></script>
 <script src="CapQuangPicture/Login.min.js"></script>
