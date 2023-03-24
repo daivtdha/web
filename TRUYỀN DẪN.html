@@ -539,30 +539,39 @@ span.psw {
 /* FORM LOGIN CỦ*/
     .form {
         background: #21618c;
-        padding: 20px;
+        padding: 25px;
         max-width: auto;
 		width: 700px;
         margin: 0px auto;
         font-family:times new roman;
-	border-radius: 5px 5px 5px 5px;	
+	border-radius: 5px 5px 5px 5px;
+	text-align: center;
+	margin:0 auto
         
     }
 
     .tab-group {
         list-style: none;
         padding: 0;
-        margin: 0 0 10px 0;
-		border-radius: 26px 26px 26px 26px;
-		
+        margin: 0 0 0px 0;
+	border-radius: 26px 26px 26px 26px;
+	background: #21618c;	
+
+	width:100%;
+	display:flex;
+	justify-content:center;
+			
     }
 
+	
+	
     .tab-group:after {
         content: "";
         display: table;
         clear: both;
-		background:white;
+	background: #21618c;
         color:black;
-		border-radius: 26px 26px 26px 26px;
+	border-radius: 26px 26px 26px 26px;
     }
 
     .tab-group li a {
@@ -571,27 +580,35 @@ span.psw {
         padding: 1px;
         background: #bfc9ca;
         color:black;
-        font-size: 20px;
+        font-size: 16px;
         float: left;
-        width: 50%;
+
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
 	border-radius: 26px 26px 26px 26px;
-    }
+	width:130px;
+	height: 28px;
+	line-height: 25px;
+     }
 
     .tab-group li a:hover {
         background:white;
         color:black;
 	border-radius: 26px 26px 26px 26px;
+
     }
 
     .tab-group .active a {
-        background:white;
+        background:#fef9e7;
         color:black;
 	border-radius: 26px 26px 26px 26px;
+	width:130px;
+	height: 28px;
+	line-height: 25px;
     }
 
+	
     .tab-content>div:last-child {
         display: none;
     }
@@ -644,6 +661,7 @@ span.psw {
         outline: 5;
         border-color: white;
     }
+
 	
 	
 	
@@ -700,10 +718,9 @@ span.psw {
     .button-block {
         display: block;
         width: 35%;	
-		border-radius: 26px 26px 26px 26px;
+	border-radius: 26px 26px 26px 26px;
 		
     }
-
 
 
 
@@ -803,6 +820,64 @@ span.psw {
   overflow: hidden;
 }
 } 
+
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+ .button {
+	width: 80%;
+	font-size:15px;
+ }
+
+font-size: 15px;
+.modal-content {
+font-size: 15px;
+    width: 100%;
+  }
+  .modal {
+font-size: 15px;
+    width: 100%;;
+  }
+  .form {
+font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 767px) {
+ .button {
+	width: 80%;
+	font-size:15px;
+ }
+	.modal-content{
+ font-size: 15px;
+    width: 100%;
+  }
+  .modal {
+font-size: 15px;
+    width: 100%;
+  }
+  .form {
+font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 479px) {
+ .button {
+	width: 80%;
+	font-size:15px;
+ }
+.modal-content {
+font-size: 15px;
+    width: 100%;
+  .modal {
+font-size: 15px;
+    width: 100%;
+  }
+  .form {
+font-size: 15px;
+    width: 100%;;
+  }
+}
+
+}
 
 
 
