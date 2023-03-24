@@ -788,26 +788,91 @@ span.psw {
 }
 
 
-@media (max-width: 600px) {
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
+
+font-size: 15px;
 .modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-} 
+    font-size: 15px;
+    width: 100%;
+  }
 .modal {
-  width: 100%; /* Full width */
-  height:auto;
-  overflow: hidden;
+    font-size: 15px;
+    width: 100%;;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;;
+  }
 }
+@media only screen and (max-width: 767px) {
+.button {
+	width: 50%;
+	font-size:15px;
+ }
+	.modal-content{
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 479px) {
+.button {
+	width: 50%;
+	font-size:15px;
+ }
+.modal-content {
+    font-size: 15px;
+    width: 100%;
+.modal {
+   font-size: 15px;
+    width: 100%;
+  }
+.form {
+   font-size: 15px;
+    width: 100%;;
+  }
 }
 
-@media (max-width: 768px) {
+}
+
+
+@media (max-width: 600px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+  } 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  }
+}
+
+@media (max-width: 600px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
 .modal-content {
   width:100%; /* Could be more or less, depending on screen size */
 }  
 .modal {
   width: 100%; /* Full width */
-  height:auto;
-  overflow: hidden;
-}
+  height: auto; /* Full height */
+ }
 }
 
 @media screen and (max-width: 980px) {
@@ -816,70 +881,9 @@ span.psw {
 }
 .modal {
   width: 100%; /* Full width */
-  height:auto;
-  overflow: hidden;
+  height: auto; /* Full height */
 }
 } 
-
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
- .button {
-	width: 80%;
-	font-size:15px;
- }
-
-font-size: 15px;
-.modal-content {
-font-size: 15px;
-    width: 100%;
-  }
-  .modal {
-font-size: 15px;
-    width: 100%;;
-  }
-  .form {
-font-size: 15px;
-    width: 100%;;
-  }
-}
-@media only screen and (max-width: 767px) {
- .button {
-	width: 80%;
-	font-size:15px;
- }
-	.modal-content{
- font-size: 15px;
-    width: 100%;
-  }
-  .modal {
-font-size: 15px;
-    width: 100%;
-  }
-  .form {
-font-size: 15px;
-    width: 100%;;
-  }
-}
-@media only screen and (max-width: 479px) {
- .button {
-	width: 80%;
-	font-size:15px;
- }
-.modal-content {
-font-size: 15px;
-    width: 100%;
-  .modal {
-font-size: 15px;
-    width: 100%;
-  }
-  .form {
-font-size: 15px;
-    width: 100%;;
-  }
-}
-
-}
-
-
 
 /* formLogin LOGIN Mới */
 
