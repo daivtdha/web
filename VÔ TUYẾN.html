@@ -1410,9 +1410,9 @@ form input[type="submit"]:hover{
 
   <div class="tabs_wrap">
     <ul>
-      <li data-tabs="trucca" class="active">LỊCH CÔNG TÁC VÔ TUYẾN</li>
-      <li data-tabs="kenhluong" class="">KÊNH LUỒNG VÔ TUYẾN</li>
-      <li data-tabs="vattu" class="">VẬT TƯ VÔ TUYẾN</li>
+      <li data-tabs="trucca" class="active">LỊCH CÔNG TÁC VT</li>
+      <li data-tabs="kenhluong" class="">KÊNH LUỒNG VT</li>
+      <li data-tabs="vattu" class="">VẬT TƯ VT</li>
     </ul>
   </div>
   
@@ -1640,6 +1640,15 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 </script>
 
  <script id="rendered-js">
+	 
+function disableF5(e) { if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault(); };
+
+$(document).ready(function(){
+     $(document).on("keydown", disableF5);
+});
+	 
+window.history.replaceState('','','/');
+	 
 $(document).ready(function () {
 //   $('.modalMess-wrapper').toggleClass('open');
 });
@@ -1658,6 +1667,9 @@ function open_modalMess() {
    return false;
 }
 
+
+	 
+	 
 </script>
 
 <script type="text/javascript">//<![CDATA[
