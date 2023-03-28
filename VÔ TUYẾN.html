@@ -58,9 +58,10 @@ body{
 }
 
 .wrapper .tabs_wrap ul li{
-	width: 250px;
+	width: 200px;
     text-align: center;
-    background: #e9ecf1;
+    background: #85c1e9;
+	font-weight: bold;
     border-right: 1px solid #c1c4c9;
     padding: 13px 15px;
 	cursor: pointer;
@@ -80,10 +81,16 @@ body{
 	border-bottom-right-radius: 25px;
 }
 
-.wrapper .tabs_wrap ul li:hover,
+.wrapper .tabs_wrap ul li:hover{
+	background: #2980b9;
+	color:white;
+	font-weight: bold;
+}
+
 .wrapper .tabs_wrap ul li.active{
-	background: #45b39d;
-	color: #fff;
+	background:#21618c;
+	color:white;
+	font-weight: bold;
 }
 
 .wrapper .container .item_wrap{
@@ -119,8 +126,8 @@ body{
 }
 
 .item_wrap .item_left img{
-	width: 70px;
-	height: 70px;
+	width: 100px;
+	height: 100px;
 	display: block;
 }
 
@@ -350,38 +357,6 @@ body{
 /* End Popup */
 
 
-
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, div, menu, nav, section, summary {
-  display: block;
-}
 
 * {
   -moz-box-sizing: border-box;
@@ -1666,7 +1641,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
  <script id="rendered-js">
 $(document).ready(function () {
-   $('.modalMess-wrapper').toggleClass('open');
+//   $('.modalMess-wrapper').toggleClass('open');
 });
 
 // Close
