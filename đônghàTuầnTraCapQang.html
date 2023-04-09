@@ -192,15 +192,15 @@ thead tr#row3 th::after {
 } 
 
 /* MAKE LEFT COLUMN FIXEZ  https://codepen.io/DanEnglishby/pen/BEaJpB */
-tr > :nth-child(3) {
+tr > :first-child { 
+  background: #85c1e9;
+}
+
+tr > :nth-child(2) {
   position: -webkit-sticky;
   position: sticky; 
-  background: hsl(180, 50%, 70%);
+  background: #85c1e9;
   left: 0; 
-}
-/* don't do this */
-tr > :nth-child(3) {
-box-shadow: inset 0px 1px black;
 }	
 
 /* END TABLE */
