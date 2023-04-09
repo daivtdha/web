@@ -164,7 +164,8 @@ table tr:hover td {
 thead tr#row3 th {
   cursor: pointer;
   font-weight: bold;
-
+	position: sticky;
+	top: 0;
   text-transform: capitalize;
   vertical-align: baseline;
   white-space: nowrap;
@@ -189,6 +190,15 @@ thead tr#row3 th::after {
   content: ' \025B8';
 } 
 
+tr > :nth-child(3) {
+  position: -webkit-sticky;
+  position: sticky; 
+
+  left: 0; 
+}
+/* don't do this */
+tr > :nth-child(3) {
+}	
 
 /* END TABLE */
 
