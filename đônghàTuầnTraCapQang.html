@@ -166,6 +166,7 @@ thead tr#row3 th {
   font-weight: bold;
 	position: sticky;
 	top: 0;
+	background:#006699;
   text-transform: capitalize;
   vertical-align: baseline;
   white-space: nowrap;
@@ -190,14 +191,16 @@ thead tr#row3 th::after {
   content: ' \025B8';
 } 
 
+/* MAKE LEFT COLUMN FIXEZ  https://codepen.io/DanEnglishby/pen/BEaJpB */
 tr > :nth-child(3) {
   position: -webkit-sticky;
   position: sticky; 
-
+  background: hsl(180, 50%, 70%);
   left: 0; 
 }
 /* don't do this */
 tr > :nth-child(3) {
+box-shadow: inset 0px 1px black;
 }	
 
 /* END TABLE */
