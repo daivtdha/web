@@ -62,11 +62,47 @@
 
 
 
- table, td {
-border-collapse: collapse;
-border: 1px solid black;
-padding: 0.5px;
+/* TABLE */
+
+table{
+    border-collapse: collapse;
+	display: block;
+	width:auto;
+	height: 800px;
+	overflow: scroll;
+	margin:0 auto;
+  text-align: left;
+  position: relative;
+	
 }
+
+th {
+	text-align: center;
+	color: white;
+    background-color: #808b96;
+	position: sticky;
+	top: 0;
+}
+
+
+
+table th { /* Multicolored border */
+    border: 1px solid red;
+	text-align: center;
+}
+
+
+table td { /* Multicolored border */
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+	text-align: left;
+}
+
+
+table tr:hover td {
+    background: #85c1e9;
+}
+
 
 tr:nth-child(even) {
 background-color:white;
@@ -80,8 +116,54 @@ text-align: left;
 table tr:hover td {
     background: #85c1e9;
 }  
-  
 
+/* fixed table header and first two columns   https://stackoverflow.com/questions/53499803/make-table-header-and-first-two-columns-fixed  */
+  
+th:first-child {
+  position:sticky;
+  left:0;
+  z-index:20;
+  background-color:#006699;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+}
+
+
+td:first-child {
+  position:sticky;
+  left:0;
+  z-index:20;
+  background-color:white;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+
+}
+
+
+th:nth-child(2)  { 
+position:sticky;
+  left:40px;
+  z-index:20;
+  background-color:#006699;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+  }
+
+td:nth-child(2)  { 
+position:sticky;
+  left:40px;
+  z-index:20;
+  background-color:white;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+  }  
+  
+  
+th:first-child , th:nth-child(2) {
+  z-index:31
+  }
+  
+  
 .sortable th {
   background:#006699;
   color: #fff;
@@ -110,18 +192,7 @@ table tr:hover td {
   content: ' \025B8';
 }  
   
-  
-table {
-display: block;
-width:auto;
-height: 800px;
-overflow: scroll;
-margin:0 auto;
-
-  text-align: left;
-  position: relative;
-
- }
+/* END TABLE */  
 
 .HorizontalTable {
       width: 30%;
@@ -134,17 +205,6 @@ margin:0 auto;
       width:1000px;
       height: 20px;
     }
-
-th {
-	text-align: center;
-	color: white;
-	border: 1px solid black;
-    background-color: #808b96;
-	position: sticky;
-	top: 0;
-}
-
-
 
 
 .pagination {
