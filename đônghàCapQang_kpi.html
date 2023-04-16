@@ -167,7 +167,22 @@ table tr:hover td {
 } 
 
 
+.sortable th:hover {
+  background:#006699;
+  color:white;
+}
 
+.sortable th:hover::after {
+  color: inherit;
+  font-size: 1.2em;
+  content: ' \025B8';
+}
+
+.sortable th::after {
+  font-size: 1.2em;
+  color: transparent;
+  content: ' \025B8';
+} 
 
 /* END TABLE */
 
