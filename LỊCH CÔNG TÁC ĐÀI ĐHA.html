@@ -16,18 +16,14 @@
   
   
 <style>
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
-:root {
-  box-sizing: border-box;
-}
+
 body {
     overscroll-behavior-y: contain;
+	 background: linear-gradient(to right, #21618c,#73c6b6);
 }
     html {
         overflow-y: scroll;
     }
-
-
 
 /* Popup */
 
@@ -46,6 +42,7 @@ body {
   z-index: 10001;
   font-weight: 700;
   text-align: center;
+  font-size:20px;
 }
 
 .overlay {
@@ -79,7 +76,39 @@ body {
   }
 }
 
+.dialog-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height:35px;
+  width: 30%;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
 
+
+
+#btn-show-dialog {
+  background-color:#006699;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:20px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 35px;
+  width: 90px;
+  font-weight: bold;
+}
+
+#btn-show-dialog {border-radius: 12px;}
 
 .popup_Login {
   width: 80%;
@@ -179,44 +208,32 @@ body {
 }
 
 
-.dialog-btn {
-  background-color:#006699;
-  color: white;
-  font-weight: 700;
-  border: 1px solid #44B78B;
-  border-radius: 1px;
-  height: 30px;
-  width: 20%;
-  border-radius: 5px 5px 5px 5px;
-}
-.dialog-btn:hover {
-  background-color:#015249;
-  cursor: pointer;
-}
-
-
-
-#btn-show-dialog {
-  background-color:white;
-  border: none;
-  color:black;
-  padding: 1px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 17px;
-  margin: 3px 1px;
-  cursor: pointer;
-    height: 30px;
-  width: 90px;
-  font-weight: bold;
-  border-radius: 5px 5px 5px 5px;
-}
-
-#btn-show-dialog {border-radius: 12px;}
 
 
 /* End Popup */
+
+
+
+Truyền Dẫn, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
 
 
@@ -251,6 +268,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, div, menu, 
   display: block;
 }
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8f6f3;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 a {
   transition: all .2s linear;
 }
@@ -272,161 +301,250 @@ a {
   font-weight:bold;
 }
 
+.projects-tags {
+  padding: 20px 10px;
+  text-align: center;
+}
+.projects-tags button {
+  display: inline-block;
+  background:#21618c;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 3px;
+  padding: 5px 10px;
+  font-weight:bold;
 
-/* DROP LIST */
-.dropdown {
-  --max-scroll: 8;
-  --text: #3F4656;
-  --border: #2F3545;
-  --borderActive: #23C4F8;
-  --background: #151924;
-  --arrow: #6C7486;
-  --arrowActive: #E4ECFA;
-  --listText: #99A3BA;
-  --listBackground: #F5F9FF;
-  --listActive: #E4ECFA;
-  --listTextActive: #6C7486;
-  --listBorder: none;
-  --textFilled: black;
-  width: auto;
-  position: relative;
+  cursor: pointer;
+  border: 2px 5% 5% 5% 5%;;
+  border-radius:5px 5px 5px 5px;
+}
+.projects-tags button.active {
+  background-color: #fff;
+  color: #333;
+  border: 2px 5% 5% 5% 5%;;
+  border-radius:5% 5% 5% 5%;
 }
 
-.dropdown select {
-  display: none;
+.container {
+  max-width: 1100px;  
+  margin: 0 auto;
 }
-.dropdown > span {
+
+.project {
+  width: 30.333%;
+  float: left;
+  margin: 1%;
+  background-image: linear-gradient(to bottom ,#a2d9ce,#e6f5ff,#fcf3cf, #5dade2);
+  position: center;
+  overflow: hidden;
+  box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.3);
+  font-size: 0;
+  border-radius:2% 2% 2% 2%;
+}
+.project img {
+  max-width: 100%;
+  transition: all .4s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
-  padding: 9px 16px;
-  border-radius: 6px;
-  display: block;
-  position: relative;
-  color: var(--text);
-  border: 1px solid var(--border);
-  background:white;
-  transition: all 0.3s ease;
+  
 }
-.dropdown > span:before, .dropdown > span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  border-radius: 1px;
-  top: 50%;
-  right: 15px;
-  background:black;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before {
-  margin-right: 4px;
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown > span:after {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  max-height: calc(var(--max-scroll) * 42px);
-  top: 42px;
-  left: 0;
-  z-index: 1;
-  right: 0;
-  background: var(--listBackground);
-  border-radius: 6px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform-origin: 0 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-  transform: scale(0.8) translate(0, 4px);
-  border: 1px solid var(--listBorder);
-}
-.dropdown ul li {
-  opacity: 0;
-  transform: translate(6px, 0);
-  transition: all 0.3s ease;
-}
-.dropdown ul li a {
+.project:hover .project-info {
+  bottom: 0;
   cursor: pointer;
-  display: block;
-  padding: 10px 16px;
-  color: var(--listText);
+}
+.project:hover .project-info p {
+  opacity: 1;
+}
+.project:hover img {
+  transform: scale(1.2);
+}
+
+
+.project-info h3 {
+  font-size: 20px;
+  font-family:time;
+  font-weight: bold;
+  line-height: 65px;
+  margin: 10px 0;
+  text-align: center;
+  color:black;
+  
+}
+.project-info p {
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+
+.project-info .project-btn {
+  background: #333;
+  color: #fff;
   text-decoration: none;
-  outline: none;
+  display: block;
+  padding: 2px 5px;
+  font-size: 13px;
+  line-height: 25px;
+  
+}
+.project-info .project-btn:hover {
+  background: #5dade2;
+  color: #333;
+}
+.project-info .fa {
+  margin: 0 5px;
+}
+.project-info .project-btns {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight:bold;
+  //margin-top: 5px;
+}
+.project-info .project-btns li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  .project {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .project {
+    width: 76%;
+    margin: 2% auto;
+    float: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .project {
+    width: 96%;
+  }
+
+  .project-info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+
+
+
+
+
+/* Modal Login Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:  #0e6655;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-weight:bold;
+  border-radius:5% 5% 5% 5%;
+  
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
   position: relative;
-  transition: all 0.3s ease;
-}
-.dropdown ul li a:hover {
-  color: var(--listTextActive);
-}
-.dropdown ul li.active a {
-  color: var(--listTextActive);
-  background: var(--listActive);
 }
 
-.dropdown ul li.active a:before {
-  transform: rotate(45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:after {
-  transform: rotate(-45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
-  --scale: .9;
-  opacity: 1;
-}
-.dropdown ul li:first-child a {
-  border-radius: 6px 6px 0 0;
-}
-.dropdown ul li:last-child a {
-  border-radius: 0 0 6px 6px;
-}
-.dropdown.filled > span {
-  color: var(--textFilled);
-}
-.dropdown.open > span {
-  border-color: var(--borderActive);
-}
-.dropdown.open > span:before, .dropdown.open > span:after {
-  background: var(--arrowActive);
-}
-.dropdown.open > span:before {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown.open > span:after {
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown.open ul {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1) translate(0, 12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-}
-.dropdown.open ul li {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.dropdown.open ul li:nth-child(1) {
-  transition-delay: 80ms;
-}
-.dropdown.open ul li:nth-child(2) {
-  transition-delay: 160ms;
-}
-.dropdown.open ul li:nth-child(3) {
-  transition-delay: 240ms;
-}
-.dropdown.open ul li:nth-child(4) {
-  transition-delay: 320ms;
-}
-.dropdown.open ul li:nth-child(5) {
-  transition-delay: 400ms;
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
 }
 
-/*END  DROP LIST */
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 20;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 30px;
+  padding-bottom: 0px;
+  font-family:times new roman;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% 10%; /* 5% from the top, 15% from the bottom and centered */
+  border: 10px solid #888;
+  width: 100px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
 
 /* FORM LOGIN CỦ*/
     .form {
@@ -616,7 +734,203 @@ a {
 
 
 
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+ .button {
+	width: 80%;
+	font-size:15px;
+ }
+
+font-size: 15px;
+.modal-content {
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 767px) {
+.button {
+	width: 80%;
+	font-size:15px;
+ }
+	.modal-content{
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 479px) {
+.button {
+	width: 80%;
+	font-size:15px;
+ }
+.modal-content {
+    font-size: 15px;
+    width: 100%;
+.modal {
+   font-size: 15px;
+    width: 100%;
+  }
+.form {
+   font-size: 15px;
+    width: 100%;;
+  }
+}
+
+}
+
+
+@media (max-width: 600px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+  } 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  }
+}
+
+@media (max-width: 600px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+} 
+
+
+/* MODAL LOGIN Full-width input fields */
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  width: auto; /* Full width */
+ 
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
+  padding-top: 0;
+  top: 16%;
+  height: 79%;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+
+
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0.1% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 0px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (X) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+}
+
+@media (max-width: 768px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+} 
+
+
+
 /* formLogin LOGIN Mới */
+
 
 form .field{
   width: 100%;
@@ -643,10 +957,10 @@ form .field .field-wrap{
 }
 form input{
   width: 100%;
-  height: 90%;
+  height: 100%;
   outline: none;
   padding: 0 45px;
-  font-size: 15px;
+  font-size: 18px;
   background: white;
   caret-color: #5372F0;
   border-radius: 5px;
@@ -697,7 +1011,7 @@ form .pass-txt{
 }
 
 form input[type="submit"]{
-  height: 45px;
+  height: 40px;
   margin-top: 30px;
   color: #fff;
   padding: 0;
@@ -714,286 +1028,162 @@ form input[type="submit"]:hover{
 /*END formLogin LOGIN Mới */
 
 
-
-/* MODAL LOGIN Full-width input fields */
-
-
-/* Set a style for all buttons */
-button {
-  background-color: #21618c;
-  color: white;
-  padding: 0px 0px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width:100px;
-  font-weight:bold;
-  font-family:times new roman;
-  font-size: 1.2em;
-  border-radius:5% 5% 5% 5%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
+/* DROP LIST */
+.dropdown {
+  --max-scroll: 8;
+  --text: #3F4656;
+  --border: #2F3545;
+  --borderActive: #23C4F8;
+  --background: #151924;
+  --arrow: #6C7486;
+  --arrowActive: #E4ECFA;
+  --listText: #99A3BA;
+  --listBackground: #F5F9FF;
+  --listActive: #E4ECFA;
+  --listTextActive: #6C7486;
+  --listBorder: none;
+  --textFilled: black;
   width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
   position: relative;
 }
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+.dropdown select {
+  display: none;
 }
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  border-radius:1% 1% 1% 1%;
-  top: 30;
-  width: auto%; /* Full width */
-  height: auto; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color:  #f8f9f9; /* Fallback color */
-  background-color:  #f8f9f9; /* Black w/ opacity */
-  padding-top: 0px;
-}
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-
-font-size: 15px;
-.modal-content {
-    font-size: 15px;
-    width: 100%;
-  }
-.modal {
-    font-size: 15px;
-    width: 100%;;
-  }
-.form {
-    font-size: 15px;
-    width: 100%;;
-  }
-}
-@media only screen and (max-width: 767px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}	
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
- .modal-content{
-    font-size: 15px;
-    width: 100%;
-  }
-.modal {
-    font-size: 15px;
-    width: 100%;
-  }
-.form {
-    font-size: 15px;
-    width: 100%;;
-  }
-}
-@media only screen and (max-width: 479px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-    font-size: 15px;
-    width: 200px;
-.modal {
-   font-size: 15px;
-    width: 100%;
-  }
-.form {
-   font-size: 15px;
-    width: 100%;;
-  }
-}
-
-}
-
-
-@media (max-width: 600px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-	
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-  } 
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-  }
-}
-
-@media (max-width: 600px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-}
-
-@media screen and (max-width: 980px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-} 
-
-
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 20px;
-  top: 0;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
+.dropdown > span {
   cursor: pointer;
+  padding: 9px 16px;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background:white;
+  transition: all 0.3s ease;
+}
+.dropdown > span:before, .dropdown > span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 1px;
+  top: 50%;
+  right: 15px;
+  background:black;
+  transition: all 0.3s ease;
+}
+.dropdown > span:before {
+  margin-right: 4px;
+  transform: scale(0.96, 0.8) rotate(50deg);
+}
+.dropdown > span:after {
+  transform: scale(0.96, 0.8) rotate(-50deg);
+}
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  max-height: calc(var(--max-scroll) * 42px);
+  top: 42px;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  background: var(--listBackground);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform-origin: 0 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transform: scale(0.8) translate(0, 4px);
+  border: 1px solid var(--listBorder);
+}
+.dropdown ul li {
+  opacity: 0;
+  transform: translate(6px, 0);
+  transition: all 0.3s ease;
+}
+.dropdown ul li a {
+  cursor: pointer;
+  display: block;
+  padding: 10px 16px;
+  color: var(--listText);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.dropdown ul li a:hover {
+  color: var(--listTextActive);
+}
+.dropdown ul li.active a {
+  color: var(--listTextActive);
+  background: var(--listActive);
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+.dropdown ul li.active a:before {
+  transform: rotate(45deg) scale(var(--scale));
+}
+.dropdown ul li.active a:after {
+  transform: rotate(-45deg) scale(var(--scale));
+}
+.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
+  --scale: .9;
+  opacity: 1;
+}
+.dropdown ul li:first-child a {
+  border-radius: 6px 6px 0 0;
+}
+.dropdown ul li:last-child a {
+  border-radius: 0 0 6px 6px;
+}
+.dropdown.filled > span {
+  color: var(--textFilled);
+}
+.dropdown.open > span {
+  border-color: var(--borderActive);
+}
+.dropdown.open > span:before, .dropdown.open > span:after {
+  background: var(--arrowActive);
+}
+.dropdown.open > span:before {
+  transform: scale(0.96, 0.8) rotate(-50deg);
+}
+.dropdown.open > span:after {
+  transform: scale(0.96, 0.8) rotate(50deg);
+}
+.dropdown.open ul {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translate(0, 12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+}
+.dropdown.open ul li {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.dropdown.open ul li:nth-child(1) {
+  transition-delay: 80ms;
+}
+.dropdown.open ul li:nth-child(2) {
+  transition-delay: 160ms;
+}
+.dropdown.open ul li:nth-child(3) {
+  transition-delay: 240ms;
+}
+.dropdown.open ul li:nth-child(4) {
+  transition-delay: 320ms;
+}
+.dropdown.open ul li:nth-child(5) {
+  transition-delay: 400ms;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
+/*END  DROP LIST */
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-
-  
-}
-
-
-
+	
 /* Modal Thông báo */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -1002,7 +1192,7 @@ font-size: 15px;
   width: 100%;
   height: 100%;
   position: absolute;
-   top:40%; 
+   top:22%; 
   left: 0;
   background: transparent;
   visibility: hidden;
@@ -1013,7 +1203,7 @@ font-size: 15px;
 .modalMess-wrapper.open {
   opacity: 1;
   visibility: visible; 
-  z-index: 10002;
+  z-index: 10001;
 
  
 }
@@ -1040,15 +1230,15 @@ font-size: 15px;
 }
 
 .headMess { 
-  width: auto;
-  height: 30px;
+  width: 100%;
+  height: 45px;
   padding: 2px 15px;
   overflow: hidden;
   background:#e2525c;
 }
 
 .btn-close {
-  font-size: 20px;
+  font-size: 28px;
   display: block;
   float: right;
   color: #fff;
@@ -1061,8 +1251,6 @@ font-size: 15px;
   color:white;
   background:#e2525c;
   cursor: pointer;
-  height:30px;
-  border-radius: 26px 26px 26px 26px;
 }
 
 .contentMess {
@@ -1079,11 +1267,11 @@ font-size: 15px;
 }
 
 .good-job .fa-thumbs-o-up {
-  font-size: 45px;
+  font-size: 50px;
 }
 
 .good-job h1 {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 
