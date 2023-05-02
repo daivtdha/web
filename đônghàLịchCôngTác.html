@@ -149,10 +149,10 @@ table{
     }
 
 	
+	
 th {
-	text-align: center;
 	color: white;
-    	background-color:#006699;
+    background-color:#006699;
 	position: sticky;
 	top: 0;
 	cursor: pointer;
@@ -169,6 +169,58 @@ table td { /* Multicolored border */
     border-color: #f00 #0f0 #00f #f0f;
 	text-align: left;
 }
+
+
+tr:hover td:not(:last-child) {
+  background-color:#85c1e9;
+} 
+
+/* fixed table header and first two columns   https://stackoverflow.com/questions/53499803/make-table-header-and-first-two-columns-fixed  */
+  
+th:first-child {
+  position:sticky;
+  left:0;
+  z-index:20;
+  background-color:#006699;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+}
+
+
+td:first-child {
+  position:sticky;
+  left:0;
+  z-index:20;
+  background-color:white;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+
+}
+
+
+th:nth-child(2)  { 
+position:sticky;
+  left:40px;
+  z-index:20;
+  background-color:#006699;
+    border: 2px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+  }
+
+td:nth-child(2)  { 
+position:sticky;
+  left:40px;
+  z-index:20;
+  background-color: #f8f9f9;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+	text-align: center
+  }  
+  
+  
+th:first-child , th:nth-child(2) {
+  z-index:31
+  }
 
 
 .sortable th {
