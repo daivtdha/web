@@ -75,12 +75,13 @@
       height: 20px;
     }
 
-table {
-  border-collapse: collapse;
-  display: block;
-  overflow-x: scroll;
-  width: auto;
-  margin:0 auto;
+.mytable table {
+    border-collapse: collapse;
+	display: block;
+	width:auto;
+	height: 800px;
+	overflow: scroll;
+	margin:0 auto;
   text-align: left;
   position: relative;
 }	
@@ -132,22 +133,40 @@ table {
 } 
 
 /* fixed table header and first two columns */
-.mytable :first-child, .mytable td:first-child {
+ .mytable th:first-child {
     position: sticky;
     left: 0;
     z-index: 20;
     text-align: center;
     border-right: 1px solid #ddd;
+
 }
 
-.mytable th:nth-child(2), .mytable td:nth-child(2) {
+.mytable th:nth-child(2) {
     position: sticky;
-    left: 38px;
-    z-index: 19;
+    left: 36px;
+    z-index: 20;
     text-align: center;
     border-right: 1px solid #ddd;
 }
 
+.mytable td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 19;
+    text-align: center;
+    border-right: 1px solid #ddd;
+	background-color:white;
+}
+
+.mytable td:nth-child(2) {
+    position: sticky;
+    left: 36px;
+    z-index: 19;
+    text-align: center;
+    border-right: 1px solid #ddd;
+	background-color:white;
+}
 
 /* END TABLE */
 
