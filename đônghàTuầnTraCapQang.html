@@ -129,7 +129,7 @@ input[type=submit] {
       height: 20px;
     }
 
-.mytable table {
+.mytable table{
     border-collapse: collapse;
 	display: block;
 	width:auto;
@@ -138,23 +138,24 @@ input[type=submit] {
 	margin:0 auto;
   text-align: left;
   position: relative;
+	
 }
 
-.mytable th { /* Multicolored border */
+
+.mytable table th { /* Multicolored border */
     border: 1px solid red;
 	text-align: center;
 }
 
 
-.mytable td { /* Multicolored border */
+.mytable table td { /* Multicolored border */
     border: 1px solid;
     border-color: #f00 #0f0 #00f #f0f;
-    text-align: left;
-
+	text-align: left;
 }
 
 
-.mytable tr:hover td {
+.mytable table tr:hover td {
     background: #85c1e9;
 } 
 
@@ -197,6 +198,9 @@ input[type=submit] {
   position:sticky;
   left:0;
   z-index:20;
+  background-color:#006699;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
     text-align: center
 }
 
@@ -204,8 +208,11 @@ input[type=submit] {
 .mytable td:first-child {
   position:sticky;
   left:0;
-  z-index:19;
-  text-align: center
+  z-index:20;
+  background-color:white;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+   text-align: center
 }
 
 
@@ -213,39 +220,45 @@ input[type=submit] {
 position:sticky;
   left:50px;
   z-index:20;
-  text-align: center
+  background-color:#006699;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+    text-align: center
   }
 
 .mytable td:nth-child(2)  { 
 position:sticky;
   left:50px;
-  z-index:19;
-  text-align: center
+  z-index:20;
+  background-color: #f8f9f9;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+    text-align: center
   }  
 
 .mytable thead tr#row3 th:nth-child(3)  { 
 position:sticky;
   left:126px;
   z-index:20;
-  text-align: center
+  background-color:#006699;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+    text-align: center
   }
 
 .mytable td:nth-child(3)  { 
 position:sticky;
   left:126px;
-  z-index:19;
-  text-align: center
+  z-index:20;
+  background-color:white;
+    border: 1px solid;
+    border-color: #f00 #0f0 #00f #f0f;
+    text-align: center
   }  
   
-.mytable tr#row3 td:nth-child(1)  { 
-  background-color:white;
-  } 
-.mytable tr#row3 td:nth-child(2)  { 
-  background-color:white;
+.mytable thead tr#row3 th:first-child , .mytable thead tr#row3 th:nth-child(2), .mytable thead tr#row3 th:nth-child(3) {
+  z-index:31
   }
-.mytable tr#row3 td:nth-child(3)  { 
-  background-color:white;
-  } 	
 /* END TABLE */
 
 
