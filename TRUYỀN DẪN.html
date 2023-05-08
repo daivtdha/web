@@ -1186,12 +1186,16 @@ font-size: 15px;
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .modalMess-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-   top:40%; 
+  position: fixed;
+  top: 0;
   left: 0;
-  background: transparent;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
   visibility: hidden;
   opacity: 0;
   transition: all 0.25s ease-in-out;
@@ -1200,60 +1204,66 @@ font-size: 15px;
 .modalMess-wrapper.open {
   opacity: 1;
   visibility: visible; 
-  z-index: 10002;
-
- 
 }
 
 .modalMess {
   width: 400px;
-  height:auto;
-  display: block;
-  margin: 50% 0 0 -200px;
+  max-height: calc(100vh - 60px); /* chiều cao tối đa của modal */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
- 
-  left: 50%;
   background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
   opacity: 0;
-
-  /* Chuyển động dưới lên */
- /* transition: all 0.5s ease-in-out; */
-  
+  transition: all 0.5s ease-in-out;
 }
 
 .modalMess-wrapper.open .modalMess {
-  margin-top:0px;
   opacity: 1;
 }
 
 .headMess { 
-  width: auto;
+  width: 100%;
   height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e2525c;
   padding: 2px 15px;
-  overflow: hidden;
-  background:#e2525c;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .btn-close {
   font-size: 20px;
-  display: block;
-  float: right;
   color: #fff;
   cursor: pointer;
 }
 
 .btn-login {
-    margin: 0 auto;
-    display: block;
-  color:white;
-  background:#e2525c;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background: #e2525c;
+  border: none;
+  border-radius: 26px;
+  font-size: 16px;
   cursor: pointer;
-  height:30px;
-  border-radius: 26px 26px 26px 26px;
 }
 
 .contentMess {
-  padding: 3%;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .good-job {
@@ -1261,6 +1271,7 @@ font-size: 15px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   color: #e2525c;
 }
+
 .good-job .fa-exclamation-circle {
   font-size: 40px;
 }
@@ -1271,8 +1282,8 @@ font-size: 15px;
 
 .good-job h1 {
   font-size: 18px;
+  margin: 10px 0;
 }
-
 
 
 
