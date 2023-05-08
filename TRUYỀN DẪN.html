@@ -1326,10 +1326,7 @@ font-size: 15px;
   
 }
 
-
-
 /* Modal Thông báo */
-
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .modalMess-wrapper {
@@ -1363,11 +1360,7 @@ font-size: 15px;
   align-items: center;
   position: relative;
   background: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
+border-radius:5px 5px 5px 5px;
 }
 
 .modalMess-wrapper.open .modalMess {
@@ -1390,6 +1383,9 @@ font-size: 15px;
   font-size: 20px;
   color: #fff;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 7px;
 }
 
 .btn-login {
@@ -1431,8 +1427,6 @@ font-size: 15px;
   font-size: 18px;
   margin: 10px 0;
 }
-
-
 
 
 </style>
@@ -1721,19 +1715,14 @@ font-size: 15px;
 
  <script id="rendered-js">
 
-
 $(document).ready(function () {
-// $('.trigger').on('click', function () {
  //  $('.modalMess-wrapper').toggleClass('open');
-//    $('.page-wrapper').toggleClass('blur-it');
-//   return false;
-//  });
 });
 
 // Close
 $(document).ready(function () {
  $('.trigger').on('click', function () {
-    $('.modalMess-wrapper').toggleClass('open');
+    $('.modalMess-wrapper').toggleClass('none');
    return false;
   });
 });
