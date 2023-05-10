@@ -434,7 +434,17 @@ body {
   text-align: center;
 }
 
-
+.overlay_Login {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
 
 @media (min-width: 768px) {
   .popup_Login {
@@ -1692,7 +1702,14 @@ border-radius:5px 5px 5px 5px;
 
   <!-- Modal Aleert-->   
 
-
+<div class="overlay_Login" id="dialog_Login2">
+  <div class="popup_Login">
+    <p>Đăng nhập OK !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_Login2">OK</button>
+    </div>
+  </div>
+</div> 
 
 <div class="modalMess-wrapper">
   <div class="modalMess">
