@@ -1746,10 +1746,24 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 </script>
 
 <script>
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+	  
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
 
+        form.classList.add('was-validated')
+		}, false)
+    }
+	)
+})()
 </script>
-
-
 		
 <script type="text/javascript">//<![CDATA[
 
