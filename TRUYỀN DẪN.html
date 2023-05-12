@@ -1279,8 +1279,8 @@ font-size: 15px;
 /* The Close Button (x) */
 .close {
   position: absolute;
-  right: 20px;
-  top: 0;
+  right: 25px;
+  top: 15;
   color: #000;
   font-size: 18px;
   font-weight: bold;
@@ -1459,12 +1459,11 @@ border-radius:5px 5px 5px 5px;
 
 
 <div id="id01" class="modal">
-  
+	<span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>  
 	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
 			
-		<div class="imgcontainer">
-		
-		  <span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>
+		<div class="imgcontainer">		
+
 		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
 		</div><!-- Modal -->
 
