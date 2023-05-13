@@ -1314,98 +1314,69 @@ form input[type="submit"]:hover{
 
 
 
-    <div class="form">
-<h3 style="color: white;" class="main-heading">ĐĂNG NHẬP LỊCH CÔNG TÁC ĐÀI ĐHA</h3>
-</br>
-			<ul class="tab-group">
-
-            <li style="background: #21618c"; width="130px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
-
-            <li style="background: #21618c"; width="130px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
-			</ul>
-
-			</br>
-					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
-					
-					<div id="loader2"></div>
-					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
-        <div class="tab-content">
-
-
-            <div id="login">
-				<form>	
-				
-					<p type = "text" id = "combine" value="" </p>
-				
-				</br>
-				
-
-				<div class="field username">
-                    <div class="field-wrap" autocomplete="off">
-                        <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
-                    </div>
-				</div>
-				
-				 <div class="field password">
-                    <div class="field-wrap">
-                        <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>				
-				 </div>
-				 
-				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
-                </form>
-
-            </div>
-
-
-
-            <div id="changepass">
-
-                <form>                
-				  
-				  <div class="field username">
-					<div class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
-                    </div>
-					</div>
-
-					<div class="field password">
-                    <div class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>
-					</div>
-                  
-				
-
-                    <div class="field password">
-					<div class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>
-					</div>
-
-                    <div class="field password">
-					<div class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>
-					</div>
-					
-				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
-
-                </form>
-
-            </div>
-
-
-        </div><!-- tab-content -->
-
-    </div> <!-- /form -->
+<div class="form">
+  <h3 style="color: white;" class="main-heading">ĐĂNG NHẬP LỊCH CÔNG TÁC ĐÀI ĐHA</h3>
+  </br>
+  <ul class="tab-group">
+    <li style="background: #21618c"; width="130px"; id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+    <li style="background: #21618c"; width="130px"; id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+  </ul>
+  </br>
+  <div id="loader"></div>
+  <!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
+  <div id="loader2"></div>
+  <p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
+  <div class="tab-content">
+    <div id="login">
+      <form>
+        <p type="text" id="combine" value=""></p>
+        </br>
+        <div class="field username">
+          <div class="field-wrap" autocomplete="off">
+            <input name="username" id="username" type="text" class="form_input" placeholder="Username" autocomplete="off" required>
+            <i class="icon fas fa-user"></i>
+          </div>
+        </div>
+        <div class="field password">
+          <div class="field-wrap">
+            <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off" required>
+            <i class="icon fas fa-lock"></i>
+          </div>
+        </div>
+        <input class="button button-block" type="button" onClick="LoginQL_value(); " value="Đăng Nhập" />
+      </form>
+    </div>
+    <div id="changepass">
+      <form>
+        <div class="field username">
+          <div class="field-wrap" autocomplete="off">
+            <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off" required>
+            <i class="icon fas fa-user"></i>
+          </div>
+        </div>
+        <div class="field password">
+          <div class="field-wrap">
+            <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off" required>
+            <i class="icon fas fa-lock"></i>
+          </div>
+        </div>
+        <div class="field password">
+          <div class="field-wrap" autocomplete="off">
+            <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="New Password" autocomplete="off" required>
+            <i class="icon fas fa-lock"></i>
+          </div>
+        </div>
+        <div class="field password">         
+          <div class="field-wrap">
+            <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm New Password" autocomplete="off" required>
+            <i class="icon fas fa-lock"></i>
+          </div>
+        </div>
+        <input class="button button-block" type="button" onClick="Changepassword_value(); " value="Đổi Password" />
+      </form>
+    </div>
+  </div><!-- tab-content -->
+</div> <!-- /form -->
 
 
 
