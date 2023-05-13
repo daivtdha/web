@@ -4,13 +4,12 @@
 
   <meta charset="UTF-8">
 
-<title>LỊCH CÔNG TÁC - ĐÀI VT ĐÔNG HÀ</title>
+  <title>LỊCH CÔNG TÁC - ĐÀI VT ĐÔNG HÀ</title>
 <link rel="stylesheet" href="TruyenDanPicture/css.css">
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link href="DangNhap/bootstrap.min.css" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,360 +17,23 @@
   
 <style>
 
-
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
-:root {
-  box-sizing: border-box;
-}
-
-*,
-::before,
-::after {
-  box-sizing: inherit;
-  text-decoration: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 99%;
-  padding: 1px;
-  width: 100%;
-  max-width: 100%;
-  background: linear-gradient(to right, #21618c,#73c6b6);
+    overscroll-behavior-y: contain;
+	 background: linear-gradient(to right, #21618c,#73c6b6);
 }
-
-
-
-.footer {
-  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
-  width: 100%;
-  high:auto;
-  text-align: left;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 5px;
-  margin-top: 5px;
-  bottom: 0px;
-}
-
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.footer .footer-left p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-center p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-right p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-
-
-
-.footer .footer-left {
-  width: 33%;
-  padding-right: 5px;
-}
-
-.footer .about {
-  line-height: 20px;
-  color:black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.footer .about span {
-  display: block;
-  color:black;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer .footer-left i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-
-
-.footer .icons a {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  background-color:#0099ff;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 10px;
-  margin-right: 3px;
-
-}
-
-
-.footer .footer-center {
-  width: 25%;
-}
-
-.footer .footer-center i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-.footer .footer-center i.fa-envelope {
-  display: inline-block;
-  font-size: 17px;
-  line-height: 25px;
-  color: #ffffff;
-}
-
-
-.footer .footer-right {
-  width: 35%;
-}
-
-
-
-@media (max-width: 767px) {
-  .footer {
-    font-size: 14px;
-  }
-  .footer .footer-left,
-  .footer .footer-center,
-  .footer .footer-right {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  .footer .footer-center i {
-    margin-left: 3px;
-  }
-}
-
-
-
-/*********** MAIN HEADING **********/
-.main-heading {
-  font-size: 2em;
-  color:white;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  font-weight:bold;
-}
-
-.main-heading::before, .main-heading::after {
-  content: "";
-  height: 0.2em;
-  width: 100%;
-  background-image: linear-gradient(to left, darkorange, transparent);
-  margin-right: 1em;
-}
-
-.main-heading::after {
-  background-image: linear-gradient(to right, darkorange, transparent);
-  margin-left: 1em;
-}
-
-/*********** LINKS **********/
-.tab-list__list {
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.tab-list__link {
-  color: #fff;
-  font-size: 1em;
-  text-transform: uppercase;
-  background-color: #154360;
-  display: block;
-  padding: 1em 1.2em;
-  border-radius: 5px 5px 0 0;
-  transition: all 150ms ease-out;
-  font-weight:bold;
-  border-style:solid;
-  border-color:white;
-}
-
-.tab-list__link--is-active {
-  color: #21618c;
-  background-color: #f2e7cf;
-  background-color: #fff;
-  transform: scaleY(1.0);
-  transform-origin: center bottom;
-}
-
-/*********** TAB CONTAINERS **********/
-.tab {
-  background-color: #f2e7cf;
-  background-color: #fff;
-  border-radius: 0 1px 1px 1px;
-  padding:0em;
-}
-
-
-.tab__box {
-  display: none;
-}
-
-.tab__box--is-visible {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: 5px;
-  justify-content: space-around;
-}
-
-.tab__item {
-  padding: 1.5em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background: #f8f9f9;
-  border-radius:5% 5% 5% 5%;
-  cursor: pointer;
-}
-
-
-.tab__heading {
-  font-size: 1.2em;
-  color:black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight:bold;
-
-}
-
-.tab__icon {
-  font-size: 3em !important;
-  margin: 0.7em 0;
-  color: darkorange;
-}
-
-.tab__para {
-  font-weight: bold;
-  color: #3f4c6b;
-  margin-bottom: 1.5em;
-}
-
-.tab__btn {
-  font-size: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: inherit;
-  padding: 0.6em 1em;
-  border-radius: 1px;
-  border: 0;
-  background: #21618c;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  max-width: 18em;
-  max-high:0.5em;
-  margin: 0 auto;
-}
-
-.tab__btn:hover {
-  background: #5dade2;
-}
-
-.tab__btn:active {
-  transform: translate(1px, 2px);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 38em) {
-  body {
-  font-size: 50%;
-  background: #1b4f72;
-  }
-
-  .wrap {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-  }
-
-  .tab-list__list {
-    flex-direction: column;
-    background-color: #807668;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .tab-list__link {
-    font-size: 0.8em;
-    padding: 1.2em 1em;
-    border-radius: 5px 0 0 5px;
-  }
-
-  .tab-list__link--is-active {
-    transform: scaleX(1.05);
-    transform-origin: right center;
-  }
-
-  .tab {
-    border-radius: 0 3px 3px 0;
-    padding: 1em;
-  }
-}
-
+    html {
+        overflow-y: scroll;
+    }
 
 
 
 /* Popup */
 
 .popup {
-  width: 85%;
+  width: 80%;
   padding: 15px;
   left: 0;
-  margin-left:7%;
+  margin-left: 5%;
   border: 1px solid rgb(1,82,73);
   border-radius: 10px;
   color: rgb(1,82,73);
@@ -381,7 +43,6 @@ body {
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
-  font-size: 13px;
   text-align: center;
 }
 
@@ -405,7 +66,7 @@ body {
 }
 @media (min-width: 992px) {
   .popup {
-    width: 85%;
+    width: 80%;
     margin-left: 25%;
   }
 }
@@ -419,10 +80,10 @@ body {
 
 
 .popup_Login {
-  width: 85%;
+  width: 80%;
   padding: 15px;
   left: 0;
-  margin-left: 7%;
+  margin-left: 5%;
   border: 1px solid rgb(1,82,73);
   border-radius: 10px;
   color: rgb(1,82,73);
@@ -432,11 +93,20 @@ body {
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
-  font-size: 13px;
   text-align: center;
 }
 
-
+.overlay_Login {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
 
 @media (min-width: 768px) {
   .popup_Login {
@@ -446,7 +116,7 @@ body {
 }
 @media (min-width: 992px) {
   .popup_Login {
-    width: 85%;
+    width: 80%;
     margin-left: 25%;
   }
 }
@@ -459,10 +129,10 @@ body {
 	
 
 .popup_time {
-  width: 85%;
+  width: 80%;
   padding: 15px;
   left: 0;
-  margin-left: 7%;
+  margin-left: 5%;
   border: 1px solid rgb(1,82,73);
   border-radius: 10px;
   color: rgb(1,82,73);
@@ -472,7 +142,6 @@ body {
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
-  font-size: 13px	
   text-align: center;
 }
 
@@ -496,7 +165,7 @@ body {
 }
 @media (min-width: 992px) {
   .popup_time {
-    width: 85%;
+    width: 80%;
     margin-left: 25%;
   }
 }
@@ -514,8 +183,8 @@ body {
   font-weight: 700;
   border: 1px solid #44B78B;
   border-radius: 1px;
-  height: 30px;
-  width: 20%;
+  height: 33px;
+  width:115px;
   border-radius: 5px 5px 5px 5px;
 }
 .dialog-btn:hover {
@@ -536,8 +205,8 @@ body {
   font-size: 17px;
   margin: 3px 1px;
   cursor: pointer;
-    height: 30px;
-  width: 90px;
+    height: 35px;
+  width: 110px;
   font-weight: bold;
   border-radius: 5px 5px 5px 5px;
 }
@@ -546,6 +215,29 @@ body {
 
 
 /* End Popup */
+
+
+
+Truyền Dẫn, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
 
 
@@ -580,6 +272,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, div, menu, 
   display: block;
 }
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8f6f3;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 a {
   transition: all .2s linear;
 }
@@ -600,6 +304,732 @@ a {
   color:black;
   font-weight:bold;
 }
+
+.projects-tags {
+  padding: 20px 10px;
+  text-align: center;
+}
+.projects-tags button {
+  display: inline-block;
+  background:#21618c;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 3px;
+  padding: 5px 10px;
+  font-weight:bold;
+
+  cursor: pointer;
+  border: 2px 5% 5% 5% 5%;;
+  border-radius:5px 5px 5px 5px;
+}
+.projects-tags button.active {
+  background-color: #fff;
+  color: #333;
+  border: 2px 5% 5% 5% 5%;;
+  border-radius:5% 5% 5% 5%;
+}
+
+.container {
+  max-width: 1100px;  
+  margin: 0 auto;
+}
+
+.project {
+  width: 30.333%;
+  float: left;
+  margin: 1%;
+  background-image: linear-gradient(to bottom ,#a2d9ce,#e6f5ff,#fcf3cf, #5dade2);
+  position: center;
+  overflow: hidden;
+  box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.3);
+  font-size: 0;
+  border-radius:2% 2% 2% 2%;
+}
+.project img {
+  max-width: 100%;
+  transition: all .4s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  
+}
+.project:hover .project-info {
+  bottom: 0;
+  cursor: pointer;
+}
+.project:hover .project-info p {
+  opacity: 1;
+}
+.project:hover img {
+  transform: scale(1.2);
+}
+
+
+.project-info h3 {
+  font-size: 20px;
+  font-family:time;
+  font-weight: bold;
+  line-height: 65px;
+  margin: 10px 0;
+  text-align: center;
+  color:black;
+  
+}
+.project-info p {
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+
+.project-info .project-btn {
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 2px 5px;
+  font-size: 13px;
+  line-height: 25px;
+  
+}
+.project-info .project-btn:hover {
+  background: #5dade2;
+  color: #333;
+}
+.project-info .fa {
+  margin: 0 5px;
+}
+.project-info .project-btns {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight:bold;
+  //margin-top: 5px;
+}
+.project-info .project-btns li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  .project {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .project {
+    width: 76%;
+    margin: 2% auto;
+    float: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .project {
+    width: 96%;
+  }
+
+  .project-info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+
+
+
+
+
+/* Modal Login Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:  #0e6655;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-weight:bold;
+  border-radius:5% 5% 5% 5%;
+  
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 20;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 30px;
+  padding-bottom: 0px;
+  font-family:times new roman;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% 10%; /* 5% from the top, 15% from the bottom and centered */
+  border: 10px solid #888;
+  width: 100px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+/* FORM LOGIN CỦ*/
+    .form {
+        background: #21618c;
+        padding: 25px;
+        max-width: auto;
+		width: 700px;
+        margin: 0px auto;
+        font-family:times new roman;
+	border-radius: 5px 5px 5px 5px;
+	text-align: center;
+	margin:0 auto
+        
+    }
+
+    .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0px 0;
+	border-radius: 26px 26px 26px 26px;
+	background: #21618c;	
+
+	width:100%;
+	display:flex;
+	justify-content:center;
+			
+    }
+
+	
+	
+    .tab-group:after {
+        content: "";
+        display: table;
+        clear: both;
+	background: #21618c;
+        color:black;
+	border-radius: 26px 26px 26px 26px;
+    }
+
+    .tab-group li a {
+        display: block;
+        text-decoration: none;
+        padding: 1px;
+        background: #bfc9ca;
+        color:black;
+        font-size: 16px;
+        float: left;
+
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+	border-radius: 26px 26px 26px 26px;
+	width:130px;
+	height: 28px;
+	line-height: 25px;
+     }
+
+    .tab-group li a:hover {
+        background:white;
+        color:black;
+	border-radius: 26px 26px 26px 26px;
+
+    }
+
+    .tab-group .active a {
+        background:#fef9e7;
+        color:black;
+	border-radius: 26px 26px 26px 26px;
+	width:130px;
+	height: 28px;
+	line-height: 25px;
+    }
+
+	
+    .tab-content>div:last-child {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        font-weight: 300;
+        margin: 0 0 3px;
+    }
+
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+    }
+
+	
+	
+	
+    label .req {
+        margin: 2px;
+        color: #1ab188;
+    }
+
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+
+    label.active .req {
+        opacity: 0;
+    }
+
+    label.highlight {
+        color: #ffffff;
+    }
+
+    input,
+
+
+    input:focus,
+    textarea:focus {
+        outline: 5;
+        border-color: white;
+    }
+
+	
+	
+	
+    textarea {
+        border: 2px solid #a0b3b0;
+        resize: vertical;
+    }
+
+    .field-wrap {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .top-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .top-row>div {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .top-row>div:last-child {
+        margin: 0;
+    }
+
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 8px 0;
+        font-size: 1rem;
+        font-weight:bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        background:white;
+        color:black;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+	font-family:times new roman;
+	margin: auto;
+	border-radius: 26px 26px 26px 26px;
+	cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus {
+    background: #5dade2;
+    }
+
+    .button-block {
+        display: block;
+        width:180px;	
+	border-radius: 26px 26px 26px 26px;
+		
+    }
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+ .button {
+	width: 80%;
+	font-size:15px;
+ }
+
+font-size: 15px;
+.modal-content {
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 767px) {
+.button {
+	width: 80%;
+	font-size:15px;
+ }
+	.modal-content{
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;;
+  }
+}
+@media only screen and (max-width: 479px) {
+.button {
+	width: 80%;
+	font-size:15px;
+ }
+.modal-content {
+    font-size: 15px;
+    width: 100%;
+.modal {
+   font-size: 15px;
+    width: 100%;
+  }
+.form {
+   font-size: 15px;
+    width: 100%;;
+  }
+}
+
+}
+
+
+@media (max-width: 600px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+  } 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  }
+}
+
+@media (max-width: 600px) {
+ .button {
+	width: 50%;
+	font-size:15px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+} 
+
+
+/* MODAL LOGIN Full-width input fields */
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  width: auto; /* Full width */
+ 
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
+  padding-top: 0;
+  top: 16%;
+  height: 79%;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+
+
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0.1% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 0px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (X) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+}
+
+@media (max-width: 768px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height:auto;
+  overflow: hidden;
+}
+} 
+
+
+
+/* formLogin LOGIN Mới */
+
+
+form .field{
+  width: 100%;
+  margin-bottom: 20px;
+}
+form .field.shake{
+  animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+form .field .field-wrap{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+form input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: white;
+  caret-color: #5372F0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+form .field input:focus,
+form .field.valid input{
+  border-color: #5372F0;
+}
+form .field.shake input,
+form .field.error input{
+  border-color: #dc3545;
+}
+.field .field-wrap i{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.field-wrap .icon{
+  left: 2px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+.field-wrap .error-icon{
+  right: 15px;
+  color: #dc3545;
+}
+form input:focus ~ .icon,
+form .field.valid .icon{
+  color: #5372F0;
+}
+form .field.shake input:focus ~ .icon,
+form .field.error input:focus ~ .icon{
+  color: #bfbfbf;
+}
+form input::placeholder{
+  color: #bfbfbf;
+  font-size: 17px;
+}
+
+form .pass-txt{
+  text-align: left;
+  margin-top: -10px;
+}
+
+form input[type="submit"]{
+  height: 40px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: #5372F0;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+form input[type="submit"]:hover{
+  background: #2c52ed;
+}
+
+/*END formLogin LOGIN Mới */
 
 
 /* DROP LIST */
@@ -757,589 +1187,18 @@ a {
 
 /*END  DROP LIST */
 
-/* FORM LOGIN CỦ*/
-.form {
-  background: white;
-  padding: 25px;
-  max-width: 670px;
-  width: 650px;
-  margin: 0px auto;
-  font-family: times new roman;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom:20px;
-  
-}
-    .tab-group {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0px 0;
-		border-radius: 26px 26px 26px 26px;
-		background:white;	
-		width:100%;
-		display:flex;
-		justify-content:center;
-			
-    }
-
 	
-	
-    .tab-group:after {
-        content: "";
-        display: table;
-        clear: both;
-		background: #21618c;
-        color:black;
-		border-radius: 26px 26px 26px 26px;
-    }
-
-    .tab-group li a {
-        display: block;
-        text-decoration: none;
-        padding: 1px;
-        background: #bfc9ca;
-        color:black;
-        font-size: 16px;
-        float: left;
-        text-align: center;
-        cursor: pointer;
-        transition: .5s ease;
-		border-radius: 26px 26px 26px 26px;
-		width:130px;
-		height: 28px;
-		line-height: 25px;
-     }
-
-    .tab-group li a:hover {
-        background: #3498db;
-        color:white;
-		border-radius: 26px 26px 26px 26px;
-
-    }
-
-    .tab-group .active a {
-        background:#006699;
-        color:white;
-		border-radius: 26px 26px 26px 26px;
-		width:130px;
-		height: 28px;
-		line-height: 25px;
-    }
-
-	
-    .tab-content>div:last-child {
-        display: none;
-    }
-
-    h1 {
-        text-align: center;
-        color: black;
-        font-weight: 300;
-        margin: 0 0 3px;
-    }
-
-    label {
-        position: absolute;
-        transform: translateY(6px);
-        left: 13px;
-        color: rgba(255, 255, 255, 0.5);
-        transition: all 0.25s ease;
-        -webkit-backface-visibility: hidden;
-        pointer-events: none;
-        font-size: 22px;
-    }
-
-	
-	
-	
-    label .req {
-        margin: 2px;
-        color: #1ab188;
-    }
-
-    label.active {
-        transform: translateY(50px);
-        left: 2px;
-        font-size: 14px;
-    }
-
-    label.active .req {
-        opacity: 0;
-    }
-
-    label.highlight {
-        color: #ffffff;
-    }
-
-    input,
-
-
-    input:focus,
-    textarea:focus {
-        outline: 5;
-        border-color: white;
-    }
-
-	
-	
-	
-    textarea {
-        border: 2px solid #a0b3b0;
-        resize: vertical;
-    }
-
-    .field-wrap {
-        position: relative;
-        margin-bottom: 30px;
-    }
-
-    .top-row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    .top-row>div {
-        float: left;
-        width: 48%;
-        margin-right: 4%;
-    }
-
-    .top-row>div:last-child {
-        margin: 0;
-    }
-
-    .button {
-        border: 0;
-        outline: none;
-        border-radius: 0;
-        padding:0px 0;
-        font-size: 1rem;
-        font-weight:bold;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        background:#006699;
-        color:white;
-        transition: all 0.5s ease;
-        -webkit-appearance: none;
-	font-family:times new roman;
-	margin: auto;
-	border-radius: 26px 26px 26px 26px;
-	cursor: pointer;
-    }
-
-    .button:hover,
-    .button:focus {
-    background: #1b4f72;
-    }
-
-    .button-block {
-        display: block;
-        width:250px;
-	height:35px;		
-	border-radius: 26px 26px 26px 26px;
-		
-    }
-
-
-
-/* formLogin LOGIN Mới */
-
-form .field{
-  width: 100%;
-  margin-bottom: 20px;
-}
-form .field.shake{
-  animation: shake 0.3s ease-in-out;
-}
-@keyframes shake {
-  0%, 100%{
-    margin-left: 0px;
-  }
-  20%, 80%{
-    margin-left: -12px;
-  }
-  40%, 60%{
-    margin-left: 12px;
-  }
-}
-form .field .field-wrap{
-  height: 40px;
-  width: 100%;
-  position: relative;
-}
-form input{
-  width: 100%;
-  height: 90%;
-  outline: none;
-  padding: 0 45px;
-  font-size: 15px;
-  background: white;
-  caret-color: #5372F0;
-  border-radius: 5px;
-  border: 1px solid #bfbfbf;
-  border-bottom-width: 2px;
-  transition: all 0.2s ease;
-}
-form .field input:focus,
-form .field.valid input{
-  border-color: #5372F0;
-}
-form .field.shake input,
-form .field.error input{
-  border-color: #dc3545;
-}
-.field .field-wrap i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-.field-wrap .icon{
-  left: 2px;
-  color: #bfbfbf;
-  transition: color 0.2s ease;
-}
-.field-wrap .error-icon{
-  right: 15px;
-  color: #dc3545;
-}
-form input:focus ~ .icon,
-form .field.valid .icon{
-  color: #5372F0;
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-  color: #bfbfbf;
-}
-form input::placeholder{
-  color: #bfbfbf;
-  font-size: 17px;
-}
-
-form .pass-txt{
-  text-align: left;
-  margin-top: -10px;
-}
-
-form input[type="submit"]{
-  height: 35px;
-  margin-top: 30px;
-  color: #fff;
-  padding: 0;
-  border: none;
-  background: #5372F0;
-  cursor: pointer;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-form input[type="submit"]:hover{
-  background: #2c52ed;
-}
-
-/*END formLogin LOGIN Mới */
-
-
-
-/* MODAL LOGIN Full-width input fields */
-
-
-/* Set a style for all buttons */
-button {
-  background-color: #21618c;
-  color: white;
-  padding: 0px 0px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width:100px;
-  font-weight:bold;
-  font-family:times new roman;
-  font-size: 1.2em;
-  border-radius:5% 5% 5% 5%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  border-radius: 1%;
-  top: 30vh;
-  width: auto;
-  max-width: 700px;
-  height: auto;
-  overflow: auto;
-  background-color: #669999;
-  padding-top: 0px;
-  padding-bottom: 30px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: -25px; /* Dịch chuyển form và modal sang trái 25px */
-
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-
-font-size: 15px;
-.modal-content {
-    font-size: 15px;
-    width: 100%;
-  }
-.modal {
-    font-size: 15px;
-    width: 100%;
-  }
-.form {
-    font-size: 15px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}	
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
- .modal-content{
-    font-size: 15px;
-    width: 100%;
-  }
-.modal {
-    font-size: 15px;
-    width: 100%;
-  }
-.form {
-    font-size: 15px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 479px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-    font-size: 15px;
-    width: 200px;
-.modal {
-   font-size: 15px;
-    width: 100%;
-  }
-.form {
-   font-size: 15px;
-    width: 100%;
-  }
-}
-
-}
-
-
-@media (max-width: 600px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-	
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-  } 
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-  }
-}
-
-@media (max-width: 600px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-}
-
-@media screen and (max-width: 980px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-} 
-
-
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 15px;
-  top: 15;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-
-  
-}
-
-
-
 /* Modal Thông báo */
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .modalMess-wrapper {
-  position: fixed;
-  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+   top:40%; 
   left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
+  background: transparent;
   visibility: hidden;
   opacity: 0;
   transition: all 0.25s ease-in-out;
@@ -1348,65 +1207,60 @@ font-size: 15px;
 .modalMess-wrapper.open {
   opacity: 1;
   visibility: visible; 
+  z-index: 10002;
+
+ 
 }
 
 .modalMess {
   width: 400px;
-  max-height: calc(100vh - 60px); /* chiều cao tối đa của modal */
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  height:auto;
+  display: block;
+  margin: 50% 0 0 -200px;
   position: relative;
+ 
+  left: 50%;
   background: #fff;
-border-radius:5px 5px 5px 5px;
+  opacity: 0;
+
+  /* Chuyển động dưới lên */
+ /* transition: all 0.5s ease-in-out; */
+  
 }
 
 .modalMess-wrapper.open .modalMess {
+  margin-top:0px;
   opacity: 1;
 }
 
 .headMess { 
-  width: 100%;
+  width: auto;
   height: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e2525c;
   padding: 2px 15px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  overflow: hidden;
+  background:#e2525c;
 }
 
 .btn-close {
   font-size: 20px;
+  display: block;
+  float: right;
   color: #fff;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 7px;
 }
 
 .btn-login {
-  margin-top: 20px;
-  padding: 5px 10px;
-  color: #fff;
-  background: #e2525c;
-  border: none;
-  border-radius: 26px;
-  font-size: 16px;
+    margin: 0 auto;
+    display: block;
+  color:white;
+  background:#e2525c;
   cursor: pointer;
+  height:30px;
+  border-radius: 26px 26px 26px 26px;
 }
 
 .contentMess {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  padding: 3%;
 }
 
 .good-job {
@@ -1414,7 +1268,6 @@ border-radius:5px 5px 5px 5px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   color: #e2525c;
 }
-
 .good-job .fa-exclamation-circle {
   font-size: 40px;
 }
@@ -1425,21 +1278,10 @@ border-radius:5px 5px 5px 5px;
 
 .good-job h1 {
   font-size: 18px;
-  margin: 10px 0;
 }
 
-@media (max-width: 767px) {
-  .modalMess {
-    width: 90%;
-    max-height: calc(100vh - 60px);
-  }
-}	
+
 	
-/* Thông báo Input */
-
-
-/* End Thông báo Input */
-
 </style>
 
   <script>
@@ -1457,7 +1299,7 @@ border-radius:5px 5px 5px 5px;
 
 </head>
 
-<body translate="no">
+<body translate="no" scroll="no" style="overflow: hidden">
   <div class="header";>
   <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
   <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
@@ -1466,55 +1308,54 @@ border-radius:5px 5px 5px 5px;
 </br>
 &nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Thoát</button>
 </div>  
-  <!-- Modal -->
+</p>
 
+	<p type = "text" id="ngay"></p>
 
-
-	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
-	<p style="color: white;" class="main-heading">ĐĂNG NHẬP LỊCH CÔNG TÁC</p>
-	<input type = "text" id="ngay" value="" hidden </input>
-	<input type = "text" id = "combine" hidden value="" </<input>
 
 
     <div class="form">
-
+<h3 style="color: white;" class="main-heading">ĐĂNG NHẬP LỊCH CÔNG TÁC ĐÀI ĐHA</h3>
+</br>
 			<ul class="tab-group">
 
-            <li style="background: white"; width="135px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
-            <li style="background: white"; width="135px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+            <li style="background: #21618c"; width="130px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+
+            <li style="background: #21618c"; width="130px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 			</ul>
+
+			</br>
 					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
+					
 					<div id="loader2"></div>
 					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
         <div class="tab-content">
 
 
             <div id="login">
-			</br>
-			<form>	
+				<form>	
 				
+					<p type = "text" id = "combine" value="" </p>
 				
+				</br>
+				
+
 				<div class="field username">
-                    <div class="field-wrap">
-                        <input name="username" id="username" type="text" class="form-control"  placeholder="User" required>
-						<i class="icon fas fa-user" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-						Điền User.
-						</div>
+                    <div class="field-wrap" autocomplete="off">
+                        <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
+						<i class="icon fas fa-user"></i>
                     </div>
 				</div>
 				
 				 <div class="field password">
                     <div class="field-wrap">
-                        <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Mật khẩu.
-						</div> 
-					</div>				
+                        <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
+                    </div>				
 				 </div>
-				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
+				 
+				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
                 </form>
 
             </div>
@@ -1522,26 +1363,20 @@ border-radius:5px 5px 5px 5px;
 
 
             <div id="changepass">
-				</br>
+
                 <form>                
 				  
 				  <div class="field username">
 					<div class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="User" required>
-						<i class="icon fas fa-user" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền User.
-						</div> 
-						</div>
+                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+						<i class="icon fas fa-user"></i>
+                    </div>
 					</div>
 
 					<div class="field password">
                     <div class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Mật khẩu hiện tại.
-						</div> 
+                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
                     </div>
 					</div>
                   
@@ -1549,25 +1384,19 @@ border-radius:5px 5px 5px 5px;
 
                     <div class="field password">
 					<div class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Mật khẩu mới.
-						</div>
+                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
                     </div>
 					</div>
 
                     <div class="field password">
 					<div class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền lại Mật khẩu mới.
-						</div>
+                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
                     </div>
-					</div>					
-				 
-				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
+					</div>
+					
+				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
 
                 </form>
 
@@ -1579,18 +1408,17 @@ border-radius:5px 5px 5px 5px;
     </div> <!-- /form -->
 
 
-</form><!-- Modal -->
 
 
-
+	
 <div class="overlay" id="dialog-container">
   <div class="popup">
   </br>	
     <p>Bạn có muốn Thoát không ?</p>
 	</br>	
     <div class="text-right">
-      <button class="dialog-btn btn-cancel" id="cancel" style="width:110px;">Cancel</button>
-      <button class="dialog-btn btn-primary" id="confirm"style="width:110px;">OK</button>
+      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm">OK</button>
     </div>
   </div>
 </div>
@@ -1610,6 +1438,16 @@ border-radius:5px 5px 5px 5px;
 
 
 
+<div class="overlay_Login" id="dialog_Login2">
+  <div class="popup_Login">
+    <p>Đăng nhập OK !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_Login2">OK</button>
+    </div>
+  </div>
+</div> 
+
+
 <div class="modalMess-wrapper">
   <div class="modalMess">
     <div class="headMess">
@@ -1622,25 +1460,34 @@ border-radius:5px 5px 5px 5px;
           <i id="fa" class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <h1 id="alert" value="" ></h1>		  	  
         </div>
-			<div>
-			  <button class="btn-login" id="confirm_Login" style="display:none">OK</button>
-			</div>
-	</div>
 
+	</div>
+			<div>
+			  <button class="btn-login" hidden id="confirm_Login">OK</button>
+			  </br>		  
+			</div>
   </div>	
  </div>
-
-
+ 
 <script src="TruyenDanPicture/Droplist.min.js"></script>
 <script src="CapQuangPicture/Login.min.js"></script>
 
-<script src="DangNhap/bootstrap.bundle.min.js"></script>
 
+
+
+<script>
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
+</script>
+
+
+<script>
+
+
+</script>
 
  <script id="rendered-js">
-
 $(document).ready(function () {
-//  $('.modalMess-wrapper').toggleClass('open');
+ //  $('.modalMess-wrapper').toggleClass('open');
 });
 
 // Close
@@ -1658,36 +1505,9 @@ function open_modalMess() {
 }
 
 </script>
-
-<script>
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
-</script>
-
-
-<script>
-//==========Hàm này check Input Form (Phải có)==============
-(function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-	  
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-		}, false)
-    }
-	)
-})()
-</script>
 		
 <script type="text/javascript">//<![CDATA[
-
-var _0x115681=_0x3f90;(function(_0x487844,_0x4bec51){var _0x9636b9=_0x3f90,_0x42e00c=_0x487844();while(!![]){try{var _0x864700=parseInt(_0x9636b9(0x141))/0x1+-parseInt(_0x9636b9(0x178))/0x2+-parseInt(_0x9636b9(0x157))/0x3+-parseInt(_0x9636b9(0x114))/0x4*(-parseInt(_0x9636b9(0x17c))/0x5)+parseInt(_0x9636b9(0x168))/0x6+-parseInt(_0x9636b9(0x113))/0x7+parseInt(_0x9636b9(0x173))/0x8;if(_0x864700===_0x4bec51)break;else _0x42e00c['push'](_0x42e00c['shift']());}catch(_0x41ab3b){_0x42e00c['push'](_0x42e00c['shift']());}}}(_0x21f0,0x8f972),$(document)[_0x115681(0x177)](function(){var _0x39dbe1=_0x115681,_0x19c152=location['protocol'];if(_0x19c152==_0x39dbe1(0x14a)){var _0x361053=document['getElementById'](_0x39dbe1(0x171));_0x361053[_0x39dbe1(0x14f)][_0x39dbe1(0x139)](_0x361053),close();}else{}}),!function(_0xd551e5){'use strict';_0xd551e5['fn']['idle']=function(_0x597459){var _0x1f41d5=_0x3f90,_0xfc8aac,_0x1e1665,_0x3f3a20={'idle':0xea60,'events':_0x1f41d5(0x15f),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0x48ede8=_0x597459[_0x1f41d5(0x10e)]||!0x1,_0x3b981f=!_0x597459['startAtIdle']||!0x0,_0x10eb52=_0xd551e5[_0x1f41d5(0x167)]({},_0x3f3a20,_0x597459),_0x2ef5de=null;return _0xd551e5(this)['on']('idle:stop',{},function(){var _0x16732c=_0x1f41d5;_0xd551e5(this)[_0x16732c(0x153)](_0x10eb52[_0x16732c(0x138)]),_0x10eb52[_0x16732c(0x150)]=!0x1,_0xfc8aac(_0x2ef5de,_0x10eb52);}),_0xfc8aac=function(_0x2c41b6,_0x18e0ee){var _0x5d989e=_0x1f41d5;return _0x48ede8&&(_0x18e0ee['onActive'][_0x5d989e(0x164)](),_0x48ede8=!0x1),clearTimeout(_0x2c41b6),_0x18e0ee['keepTracking']?_0x1e1665(_0x18e0ee):void 0x0;},_0x1e1665=function(_0x5a1288){var _0x38df3e,_0x7a7a88=_0x5a1288['recurIdleCall']?setInterval:setTimeout;return _0x38df3e=_0x7a7a88(function(){var _0x406e22=_0x3f90;_0x48ede8=!0x0,_0x5a1288[_0x406e22(0x156)][_0x406e22(0x164)]();},_0x5a1288['idle']);},this[_0x1f41d5(0x112)](function(){var _0x15a138=_0x1f41d5;_0x2ef5de=_0x1e1665(_0x10eb52),_0xd551e5(this)['on'](_0x10eb52[_0x15a138(0x138)],function(){_0x2ef5de=_0xfc8aac(_0x2ef5de,_0x10eb52);}),(_0x10eb52['onShow']||_0x10eb52[_0x15a138(0x17b)])&&_0xd551e5(document)['on'](_0x15a138(0x117),function(){var _0x24c428=_0x15a138;document[_0x24c428(0x152)]||document['webkitHidden']||document['mozHidden']||document['msHidden']?_0x3b981f&&(_0x3b981f=!0x1,_0x10eb52[_0x24c428(0x17b)][_0x24c428(0x164)]()):_0x3b981f||(_0x3b981f=!0x0,_0x10eb52[_0x24c428(0x149)]['call']());});});};}(jQuery),$(document)['idle']({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740}));var overlay_timeme=document[_0x115681(0x13b)](_0x115681(0x134)),overlayme=document[_0x115681(0x13b)](_0x115681(0x11a));function Search_dialog_time(){var _0x2213d1=_0x115681;document[_0x2213d1(0x13b)]('dialog_time')==null||document[_0x2213d1(0x13b)](_0x2213d1(0x11a))==null?close():show_dialog_time();}function show_dialog_time(){var _0x20dbae=_0x115681;overlay_timeme['style']['display']=_0x20dbae(0x15d);}document['getElementById'](_0x115681(0x122))['onclick']=function(){confirm_time();};function confirm_time(){var _0xf00cca=_0x115681;close(),overlay_timeme[_0xf00cca(0x17a)][_0xf00cca(0x159)]=_0xf00cca(0x125);}document[_0x115681(0x13b)]('btn-show-dialog')[_0x115681(0x111)]=function(){show_dialog();};var overlayme=document[_0x115681(0x13b)](_0x115681(0x11e));function show_dialog(){var _0x2ff084=_0x115681;overlayme[_0x2ff084(0x17a)][_0x2ff084(0x159)]=_0x2ff084(0x15d);}document['getElementById']('confirm')['onclick']=function(){confirm();};function confirm(){var _0x503803=_0x115681;close(),overlayme[_0x503803(0x17a)][_0x503803(0x159)]=_0x503803(0x125);}document[_0x115681(0x13b)]('cancel')['onclick']=function(){cancel();};function cancel(){var _0x1022ca=_0x115681;overlayme[_0x1022ca(0x17a)][_0x1022ca(0x159)]=_0x1022ca(0x125);}$(document)[_0x115681(0x177)](function(){var _0x55ed32=_0x115681;$(_0x55ed32(0x182))['on'](_0x55ed32(0x129),function(){var _0x32dea1=_0x55ed32;return $('.modalMess-wrapper')[_0x32dea1(0x12b)](_0x32dea1(0x13a)),![];});});function close_window(){close();}document[_0x115681(0x172)](_0x115681(0x140),_0x48379b=>_0x48379b['preventDefault']()),home=function(){var _0x1358ad=_0x115681;location[_0x1358ad(0x10d)]=''+(location['protocol']+'//'+location[_0x1358ad(0x137)]+(location['port']?':'+location[_0x1358ad(0x179)]:''));},window[_0x115681(0x146)]=(function(){var _0x216583=_0x115681;return window[_0x216583(0x170)]||(window['webkitRequestAnimationFrame']||(window[_0x216583(0x18a)]||(window['msRequestAnimationFrame']||(window[_0x216583(0x16e)]||function(_0x53a560){var _0x4433e5=_0x216583;window[_0x4433e5(0x10f)](_0x53a560,0x32);}))));}());var test={'st':![],'el':document[_0x115681(0x128)](_0x115681(0x110)),'rn':function(){var _0x58d240=_0x115681;test['st']=![],console[_0x58d240(0x13c)](test['el']),console['clear'](),document['getElementById'](_0x58d240(0x11a))[_0x58d240(0x184)]=(test['st']===!![]?'open':'')+'.',window[_0x58d240(0x146)](test['rn']);}};test['el'][_0x115681(0x16a)]('id',function(){test['st']=!![];}),test['rn'](),document[_0x115681(0x13b)](_0x115681(0x127))[_0x115681(0x111)]=function(){show_dialog();};var overlayme=document[_0x115681(0x13b)]('dialog-container');function show_dialog(){var _0x2dee05=_0x115681;overlayme[_0x2dee05(0x17a)][_0x2dee05(0x159)]='block';}document[_0x115681(0x13b)](_0x115681(0x17d))[_0x115681(0x111)]=function(){confirm();};function _0x21f0(){var _0x4c3408=['click','which','toggleClass','confirm_Login','combine','#newpassword','length','.html','#fa','val','protocol','dialog_time','getHours','classList','hostname','events','removeChild','open','getElementById','log','ajax','getFullYear','&newpassword=','contextmenu','512989FzNPDs','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6M1JzaDJNM1YxTlpkVWpNS0pWcjQ5QnR0VWhHV1ZYV2s5bjNGb3FJeEZ5a1lmTXJqUzFwSVFpRzJWbjRuYTR1OFJrZy9leGVj','https://www.facebook.com/sharer/sharer.php?u=','result','&username=','requestFrame','ctrlKey','yyyymmddhhmm','onShow','file:','ngay','password','&password=','replaceState','parentNode','keepTracking','#re','hidden','off','class','getMonth','onIdle','860202pPxUsG','lichctdha','display','#cfpassword','keydown','checkValidity','block','Đổi\x20Password\x20OK\x20!','mousemove\x20keydown\x20mousedown\x20touchstart','getSeconds','username','keyCode','?callback=ctrlq&ngay=','call','Mật\x20khẩu\x20phải\x20có\x20ít\x20nhất\x208\x20ký\x20tự!','toolbar=0,status=0,resizable=1,width=626,height=436','extend','1255470uigcMX','Mật\x20khẩu\x20nhập\x20lại\x20không\x20khớp!','__defineGetter__','&action=Changepassword','#oldusername','&action=LoginQL','oRequestAnimationFrame','alert','requestAnimationFrame','login','addEventListener','9179760UHsPsv','Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!','sharer','&combine=','ready','1207732wtVzqN','port','style','onHide','10llkHge','confirm','querySelector','was-validated','yyyymmdd','close','.trigger','.modalMess-wrapper','innerHTML','fromCharCode','cancel','#password','#ngay','?callback=ctrlq&oldpassword=','mozRequestAnimationFrame','GET','#combine','prototype','yyyymmddhhmmss','href','startAtIdle','setTimeout','img','onclick','each','4817652RfMplZ','594556ZbFmwK','toLowerCase','jsonp','visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange','#username','remove','testText','history','Đổi\x20Password\x20NOK\x20!','value','dialog-container','Đăng\x20nhập\x20OK\x20!','getDate','Đổi\x20Password\x20OK,\x20thông\x20tin\x20thay\x20đổi\x20đã\x20gửi\x20về\x20Email\x20!','confirm_time','input[name=\x22username\x22],\x20input[name=\x22password\x22]','#oldpassword','none','toolbar=0,status=0,resizable=1','btn-show-dialog','createElement'];_0x21f0=function(){return _0x4c3408;};return _0x21f0();}function confirm(){var _0x5af3d9=_0x115681;close_window(),overlayme[_0x5af3d9(0x17a)]['display']=_0x5af3d9(0x125);}document[_0x115681(0x13b)](_0x115681(0x186))[_0x115681(0x111)]=function(){cancel();};function _0x3f90(_0x2fb3b0,_0x104770){var _0x21f0dc=_0x21f0();return _0x3f90=function(_0x3f9091,_0x5f1d86){_0x3f9091=_0x3f9091-0x10b;var _0x5b2b73=_0x21f0dc[_0x3f9091];return _0x5b2b73;},_0x3f90(_0x2fb3b0,_0x104770);}function cancel(){var _0x4267eb=_0x115681;overlayme[_0x4267eb(0x17a)][_0x4267eb(0x159)]=_0x4267eb(0x125);}function close_window(){close();}window[_0x115681(0x11b)][_0x115681(0x14e)]('','','/');var script_url=_0x115681(0x142);function LoginQL_value(){var _0x31c07=_0x115681;Date[_0x31c07(0x10b)]['yyyymmdd']=function(){var _0x4ae9eb=_0x31c07,_0x12905b=this[_0x4ae9eb(0x13e)](),_0x51be10=(this[_0x4ae9eb(0x155)]()<0x9?'0':'')+(this[_0x4ae9eb(0x155)]()+0x1),_0x43a704=(this['getDate']()<0xa?'0':'')+this[_0x4ae9eb(0x120)]();return _0x12905b+_0x51be10+_0x43a704;},Date[_0x31c07(0x10b)][_0x31c07(0x148)]=function(){var _0x17655b=_0x31c07,_0x1b7522=this[_0x17655b(0x180)](),_0x48856f=(this['getHours']()<0xa?'0':'')+this[_0x17655b(0x135)](),_0x292b50=(this['getMinutes']()<0xa?'0':'')+this['getMinutes']();return _0x1b7522+_0x48856f+_0x292b50;},Date[_0x31c07(0x10b)][_0x31c07(0x10c)]=function(){var _0x38e660=_0x31c07,_0x3ced02=this[_0x38e660(0x148)](),_0x513f5d=(this[_0x38e660(0x160)]()<0xa?'0':'')+this[_0x38e660(0x160)]();return _0x3ced02+_0x513f5d;};var _0x4e6780=new Date();document[_0x31c07(0x13b)](_0x31c07(0x14b))[_0x31c07(0x11d)]=_0x4e6780[_0x31c07(0x10c)]()['toString'](),document['getElementById'](_0x31c07(0x12d))['value']=_0x31c07(0x158);var _0x87e926=document[_0x31c07(0x17e)]('.needs-validation'),_0x11141b=_0x87e926['querySelectorAll'](_0x31c07(0x123)),_0x2fe14f=!![];for(var _0x504010=0x0;_0x504010<_0x11141b[_0x31c07(0x12f)];_0x504010++){!_0x11141b[_0x504010][_0x31c07(0x15c)]()&&(_0x2fe14f=![]);}if(_0x2fe14f)var _0x5c5447=$(_0x31c07(0x118))['val'](),_0x1630ec=$(_0x31c07(0x187))['val'](),_0x4bdf31=$(_0x31c07(0x188))['val'](),_0x11fb78=$(_0x31c07(0x18c))[_0x31c07(0x132)](),_0x304863=atob(script_url)+_0x31c07(0x163)+_0x4bdf31+_0x31c07(0x14d)+_0x1630ec+_0x31c07(0x145)+_0x5c5447+_0x31c07(0x176)+_0x11fb78+_0x31c07(0x16d),_0x3bebc8=jQuery[_0x31c07(0x13d)]({'crossDomain':!![],'url':_0x304863,'method':_0x31c07(0x18b),'dataType':_0x31c07(0x116)});_0x87e926[_0x31c07(0x136)]['add'](_0x31c07(0x17f));}function ctrlq(_0xf68559){var _0x1083b9=_0x115681;document[_0x1083b9(0x13b)]('password')[_0x1083b9(0x11d)]='';if(_0xf68559[_0x1083b9(0x144)]===_0x1083b9(0x174))return $(_0x1083b9(0x183))[_0x1083b9(0x12b)](_0x1083b9(0x13a)),document[_0x1083b9(0x13b)](_0x1083b9(0x16f))[_0x1083b9(0x184)]=_0x1083b9(0x174),document[_0x1083b9(0x13b)]('confirm_Login')['style'][_0x1083b9(0x159)]=_0x1083b9(0x125),![];else{if(_0xf68559[_0x1083b9(0x144)]===_0x1083b9(0x11c))return $('.modalMess-wrapper')[_0x1083b9(0x12b)](_0x1083b9(0x13a)),document[_0x1083b9(0x13b)](_0x1083b9(0x16f))[_0x1083b9(0x184)]=_0x1083b9(0x11c),document['getElementById'](_0x1083b9(0x12c))[_0x1083b9(0x17a)]['display']='none',![];else{if(_0xf68559[_0x1083b9(0x144)]===_0x1083b9(0x15e))return $(_0x1083b9(0x183))[_0x1083b9(0x12b)]('open'),document[_0x1083b9(0x13b)](_0x1083b9(0x16f))['innerHTML']=_0x1083b9(0x121),document[_0x1083b9(0x13b)](_0x1083b9(0x12c))['style']['display']=_0x1083b9(0x125),![];else{$(_0x1083b9(0x183))[_0x1083b9(0x12b)](_0x1083b9(0x13a)),document[_0x1083b9(0x13b)]('alert')['innerHTML']=_0x1083b9(0x11f),$(_0x1083b9(0x131))['attr'](_0x1083b9(0x154),'fa\x20fa-thumbs-o-up'),document['getElementById']('confirm_Login')['style']['display']=_0x1083b9(0x15d),document[_0x1083b9(0x13b)](_0x1083b9(0x181))[_0x1083b9(0x17a)][_0x1083b9(0x159)]=_0x1083b9(0x125),document[_0x1083b9(0x13b)](_0x1083b9(0x12c))[_0x1083b9(0x111)]=function(){_0xd231da();};function _0xd231da(){var _0x1bd6be=_0x1083b9;$(_0x1bd6be(0x183))[_0x1bd6be(0x12b)](_0x1bd6be(0x13a)),document[_0x1bd6be(0x13b)](_0x1bd6be(0x12c))[_0x1bd6be(0x17a)][_0x1bd6be(0x159)]=_0x1bd6be(0x125),close();var _0x165852=''+(location[_0x1bd6be(0x133)]+'//'+location[_0x1bd6be(0x137)]+(location['port']?':'+location[_0x1bd6be(0x179)]:'')),_0x4a2699=_0x1bd6be(0x130),_0x121d5b=_0x1bd6be(0x126);window[_0x1bd6be(0x13a)](_0x165852+'/'+_0xf68559[_0x1bd6be(0x144)]+_0x4a2699,_0x1bd6be(0x175),_0x121d5b),window[_0x1bd6be(0x11b)][_0x1bd6be(0x14e)]('','','/');}}}}};function Changepassword_value(){var _0x3dbf9e=_0x115681,_0x56b4a3=document[_0x3dbf9e(0x17e)]('.needs-validation'),_0x1365c1=_0x56b4a3['querySelectorAll']('input[name=\x22oldusername\x22],\x20input[name=\x22oldpassword\x22],\x20input[name=\x22newpassword\x22],\x20input[name=\x22cfpassword\x22]'),_0x3a81f0=!![];for(var _0x1b41ee=0x0;_0x1b41ee<_0x1365c1[_0x3dbf9e(0x12f)];_0x1b41ee++){!_0x1365c1[_0x1b41ee][_0x3dbf9e(0x15c)]()&&(_0x3a81f0=![]);}if(_0x3a81f0){var _0x3cb923=$(_0x3dbf9e(0x16c))[_0x3dbf9e(0x132)](),_0x46438a=$(_0x3dbf9e(0x124))[_0x3dbf9e(0x132)](),_0x4ec5b1=$(_0x3dbf9e(0x12e))[_0x3dbf9e(0x132)](),_0x1b401a=$(_0x3dbf9e(0x15a))[_0x3dbf9e(0x132)](),_0x24d1d7=$(_0x3dbf9e(0x18c))[_0x3dbf9e(0x132)](),_0x13de35=_0x4ec5b1['length'];if(_0x13de35<0x8)return $('.modalMess-wrapper')[_0x3dbf9e(0x12b)]('open'),document[_0x3dbf9e(0x13b)](_0x3dbf9e(0x16f))['innerHTML']=_0x3dbf9e(0x165),document[_0x3dbf9e(0x13b)](_0x3dbf9e(0x12c))[_0x3dbf9e(0x17a)][_0x3dbf9e(0x159)]=_0x3dbf9e(0x125),![];if(_0x4ec5b1!==_0x1b401a)return $(_0x3dbf9e(0x183))['toggleClass'](_0x3dbf9e(0x13a)),document[_0x3dbf9e(0x13b)](_0x3dbf9e(0x16f))['innerHTML']=_0x3dbf9e(0x169),document['getElementById']('confirm_Login')[_0x3dbf9e(0x17a)]['display']=_0x3dbf9e(0x125),![];var _0x6fb746=atob(script_url)+_0x3dbf9e(0x189)+_0x46438a+'&oldusername='+_0x3cb923+_0x3dbf9e(0x13f)+_0x4ec5b1+_0x3dbf9e(0x16b),_0x5d9a72=jQuery['ajax']({'crossDodiv':!![],'url':_0x6fb746,'method':_0x3dbf9e(0x18b),'dataType':'jsonp'});document[_0x3dbf9e(0x13b)](_0x3dbf9e(0x161))['value']='',document[_0x3dbf9e(0x13b)](_0x3dbf9e(0x14c))[_0x3dbf9e(0x11d)]='',_0x56b4a3['classList'][_0x3dbf9e(0x119)](_0x3dbf9e(0x17f));}else _0x56b4a3[_0x3dbf9e(0x136)]['add']('was-validated');}function Delre(){var _0x2d7fcf=_0x115681;document['querySelector'](_0x2d7fcf(0x151))['innerHTML']='';}$(document)[_0x115681(0x15b)](function(_0x5663bd){var _0x57787e=_0x115681;if(!((String[_0x57787e(0x185)](_0x5663bd['which'])[_0x57787e(0x115)]()=='s'||_0x5663bd[_0x57787e(0x162)]==0xd)&&_0x5663bd[_0x57787e(0x147)])&&!(_0x5663bd[_0x57787e(0x12a)]==0x13))return!![];return _0x5663bd['preventDefault'](),![];}),shareface=function(){var _0x3c9023=_0x115681;url=_0x3c9023(0x143)+(location[_0x3c9023(0x133)]+'//'+location[_0x3c9023(0x137)]+(location[_0x3c9023(0x179)]?':'+location[_0x3c9023(0x179)]:'')),options=_0x3c9023(0x166),window[_0x3c9023(0x13a)](url,_0x3c9023(0x175),options);};
+var _0x1c3d1e=_0x3638;(function(_0x2b48e7,_0x52df62){var _0x24813f=_0x3638,_0xbed0d7=_0x2b48e7();while(!![]){try{var _0x43b158=-parseInt(_0x24813f(0x172))/0x1*(parseInt(_0x24813f(0x17b))/0x2)+-parseInt(_0x24813f(0x16d))/0x3*(parseInt(_0x24813f(0x126))/0x4)+parseInt(_0x24813f(0x11f))/0x5+parseInt(_0x24813f(0x160))/0x6+parseInt(_0x24813f(0x147))/0x7*(-parseInt(_0x24813f(0x156))/0x8)+-parseInt(_0x24813f(0x164))/0x9+parseInt(_0x24813f(0x131))/0xa;if(_0x43b158===_0x52df62)break;else _0xbed0d7['push'](_0xbed0d7['shift']());}catch(_0x245115){_0xbed0d7['push'](_0xbed0d7['shift']());}}}(_0xf619,0xdf4f5),$(document)['ready'](function(){var _0x29a26b=_0x3638,_0x5b3b0f=location[_0x29a26b(0x128)];if(_0x5b3b0f=='file:'){var _0x9c3f12=document[_0x29a26b(0x173)](_0x29a26b(0x129));_0x9c3f12['parentNode'][_0x29a26b(0x11d)](_0x9c3f12),close();}else{}}),!function(_0x149b62){'use strict';var _0x52cfe8=_0x3638;_0x149b62['fn'][_0x52cfe8(0x167)]=function(_0x4ac80c){var _0x5cba16=_0x52cfe8,_0x5a9b4b,_0x3b53f9,_0x2e5c36={'idle':0xea60,'events':_0x5cba16(0x15f),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0x3c5fce=_0x4ac80c[_0x5cba16(0x10d)]||!0x1,_0x315ca7=!_0x4ac80c[_0x5cba16(0x10d)]||!0x0,_0x489b54=_0x149b62[_0x5cba16(0x141)]({},_0x2e5c36,_0x4ac80c),_0x2a4421=null;return _0x149b62(this)['on'](_0x5cba16(0xfc),{},function(){var _0x41cadc=_0x5cba16;_0x149b62(this)[_0x41cadc(0x152)](_0x489b54[_0x41cadc(0x117)]),_0x489b54[_0x41cadc(0x169)]=!0x1,_0x5a9b4b(_0x2a4421,_0x489b54);}),_0x5a9b4b=function(_0x345f62,_0x210342){var _0x12c11c=_0x5cba16;return _0x3c5fce&&(_0x210342['onActive'][_0x12c11c(0x134)](),_0x3c5fce=!0x1),clearTimeout(_0x345f62),_0x210342['keepTracking']?_0x3b53f9(_0x210342):void 0x0;},_0x3b53f9=function(_0x44b18d){var _0x1fcea3,_0x262ca2=_0x44b18d['recurIdleCall']?setInterval:setTimeout;return _0x1fcea3=_0x262ca2(function(){var _0x1bbb10=_0x3638;_0x3c5fce=!0x0,_0x44b18d[_0x1bbb10(0x14c)][_0x1bbb10(0x134)]();},_0x44b18d['idle']);},this['each'](function(){var _0x539243=_0x5cba16;_0x2a4421=_0x3b53f9(_0x489b54),_0x149b62(this)['on'](_0x489b54['events'],function(){_0x2a4421=_0x5a9b4b(_0x2a4421,_0x489b54);}),(_0x489b54[_0x539243(0x120)]||_0x489b54[_0x539243(0x109)])&&_0x149b62(document)['on']('visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange',function(){var _0x7a6f87=_0x539243;document['hidden']||document[_0x7a6f87(0x14e)]||document['mozHidden']||document[_0x7a6f87(0x107)]?_0x315ca7&&(_0x315ca7=!0x1,_0x489b54['onHide']['call']()):_0x315ca7||(_0x315ca7=!0x0,_0x489b54['onShow'][_0x7a6f87(0x134)]());});});};}(jQuery),$(document)[_0x1c3d1e(0x167)]({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740}));var overlay_timeme=document[_0x1c3d1e(0x173)](_0x1c3d1e(0x11e)),overlayme=document['getElementById'](_0x1c3d1e(0x12a));function Search_dialog_time(){var _0x46f184=_0x1c3d1e;document[_0x46f184(0x173)](_0x46f184(0x11e))==null||document[_0x46f184(0x173)]('testText')==null?close():show_dialog_time();}function show_dialog_time(){var _0x481c37=_0x1c3d1e;overlay_timeme[_0x481c37(0x115)][_0x481c37(0x178)]=_0x481c37(0x118);}document[_0x1c3d1e(0x173)](_0x1c3d1e(0x14d))[_0x1c3d1e(0x111)]=function(){confirm_time();};function _0x3638(_0x457744,_0x236b67){var _0xf61971=_0xf619();return _0x3638=function(_0x363844,_0xda968e){_0x363844=_0x363844-0xfc;var _0x35dc6d=_0xf61971[_0x363844];return _0x35dc6d;},_0x3638(_0x457744,_0x236b67);}function _0xf619(){var _0x191d28=['log','password','webkitRequestAnimationFrame','Chưa\x20nhập\x20lại\x20Password\x20!','Password\x20mới\x20nhập\x20chưa\x20đúng\x20!','31329110NgjIuF','history','ready','call','clear','?callback=ctrlq&ngay=','fa\x20fa-thumbs-o-up','mozRequestAnimationFrame','getSeconds','#re','Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!','toggleClass','#combine','sharer','result','GET','extend','class','?callback=ctrlq&oldpassword=','&combine=','&password=','#cfpassword','10914274Coafjo','yyyymmddhhmm','Đăng\x20nhập\x20OK\x20!','oldusername','__defineGetter__','onIdle','confirm_time','webkitHidden','click','href','yyyymmdd','off','getMonth','cancel','&username=','8SOZubq','confirm','innerHTML','port','val','which','getFullYear','length','prototype','mousemove\x20keydown\x20mousedown\x20touchstart','6939474KJtSvI','https://www.facebook.com/sharer/sharer.php?u=','concat','#fa','14596362NyzOKB','getDate','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6M1JzaDJNM1YxTlpkVWpNS0pWcjQ5QnR0VWhHV1ZYV2s5bjNGb3FJeEZ5a1lmTXJqUzFwSVFpRzJWbjRuYTR1OFJrZy9leGVj','idle','cfpassword','keepTracking','jsonp','getHours','newpassword','3861321HysJvN','#username','none','alert','fromCharCode','27NcnGYk','getElementById','Password\x20tối\x20thiểu\x208\x20ký\x20tự\x20!','&action=Changepassword','lichctdha','Chưa\x20nhập\x20Password\x20!','display','confirm_Login','toolbar=0,status=0,resizable=1,width=626,height=436','47238NcfRRh','username','oRequestAnimationFrame','idle:stop','replaceState','yyyymmddhhmmss','value','requestFrame','.modalMess-wrapper','getMinutes','createElement','requestAnimationFrame','ajax','ctrlKey','msHidden','oldpassword','onHide','contextmenu','dialog-container','toLowerCase','startAtIdle','Chưa\x20nhập\x20Username\x20!','.html','Đổi\x20Password\x20NOK\x20!','onclick','#newpassword','hostname','preventDefault','style','toolbar=0,status=0,resizable=1','events','block','open','&oldusername=','#password','ngay','removeChild','dialog_time','8655035BYlGGT','onShow','#ngay','Chưa\x20nhập\x20Password\x20mới\x20!','attr','setTimeout','btn-show-dialog','4afqXJb','#oldpassword','protocol','login','testText','addEventListener'];_0xf619=function(){return _0x191d28;};return _0xf619();}function confirm_time(){var _0x3f4776=_0x1c3d1e;close(),overlay_timeme['style'][_0x3f4776(0x178)]=_0x3f4776(0x16f);}document[_0x1c3d1e(0x173)](_0x1c3d1e(0x125))[_0x1c3d1e(0x111)]=function(){show_dialog();};var overlayme=document[_0x1c3d1e(0x173)](_0x1c3d1e(0x10b));function show_dialog(){var _0xf53133=_0x1c3d1e;overlayme[_0xf53133(0x115)][_0xf53133(0x178)]=_0xf53133(0x118);}document[_0x1c3d1e(0x173)](_0x1c3d1e(0x157))[_0x1c3d1e(0x111)]=function(){confirm();};function confirm(){var _0x26875e=_0x1c3d1e;close(),overlayme['style'][_0x26875e(0x178)]=_0x26875e(0x16f);}document['getElementById'](_0x1c3d1e(0x154))[_0x1c3d1e(0x111)]=function(){cancel();};function cancel(){var _0x51ac91=_0x1c3d1e;overlayme[_0x51ac91(0x115)][_0x51ac91(0x178)]=_0x51ac91(0x16f);}$(document)[_0x1c3d1e(0x133)](function(){var _0x2ed61d=_0x1c3d1e;$('.trigger')['on'](_0x2ed61d(0x14f),function(){var _0x4b0b7e=_0x2ed61d;return $(_0x4b0b7e(0x101))[_0x4b0b7e(0x13c)]('open'),![];});});function close_window(){close();}document[_0x1c3d1e(0x12b)](_0x1c3d1e(0x10a),_0x142e88=>_0x142e88['preventDefault']()),home=function(){var _0x3f8180=_0x1c3d1e;location[_0x3f8180(0x150)]=''+(location[_0x3f8180(0x128)]+'//'+location['hostname']+(location[_0x3f8180(0x159)]?':'+location['port']:''));},window[_0x1c3d1e(0x100)]=(function(){var _0x4ce269=_0x1c3d1e;return window[_0x4ce269(0x104)]||(window[_0x4ce269(0x12e)]||(window[_0x4ce269(0x138)]||(window['msRequestAnimationFrame']||(window[_0x4ce269(0x17d)]||function(_0x4f009a){var _0x1b2b69=_0x4ce269;window[_0x1b2b69(0x124)](_0x4f009a,0x32);}))));}());var test={'st':![],'el':document[_0x1c3d1e(0x103)]('img'),'rn':function(){var _0x4db71c=_0x1c3d1e;test['st']=![],console[_0x4db71c(0x12c)](test['el']),console[_0x4db71c(0x135)](),document[_0x4db71c(0x173)](_0x4db71c(0x12a))[_0x4db71c(0x158)]=(test['st']===!![]?_0x4db71c(0x119):'')+'.',window[_0x4db71c(0x100)](test['rn']);}};test['el'][_0x1c3d1e(0x14b)]('id',function(){test['st']=!![];}),test['rn'](),document[_0x1c3d1e(0x173)]('btn-show-dialog')['onclick']=function(){show_dialog();};var overlayme=document['getElementById'](_0x1c3d1e(0x10b));function show_dialog(){var _0x5f3e16=_0x1c3d1e;overlayme[_0x5f3e16(0x115)][_0x5f3e16(0x178)]=_0x5f3e16(0x118);}document[_0x1c3d1e(0x173)](_0x1c3d1e(0x157))[_0x1c3d1e(0x111)]=function(){confirm();};function confirm(){var _0x3acc66=_0x1c3d1e;close_window(),overlayme[_0x3acc66(0x115)][_0x3acc66(0x178)]='none';}document['getElementById'](_0x1c3d1e(0x154))[_0x1c3d1e(0x111)]=function(){cancel();};function cancel(){var _0x386b9a=_0x1c3d1e;overlayme[_0x386b9a(0x115)]['display']=_0x386b9a(0x16f);}function close_window(){close();}window[_0x1c3d1e(0x132)][_0x1c3d1e(0xfd)]('','','/');var script_url=_0x1c3d1e(0x166);function LoginQL_value(){var _0x3941bf=_0x1c3d1e;document[_0x3941bf(0x173)]('combine')[_0x3941bf(0xff)]=_0x3941bf(0x176),Date['prototype']['yyyymmdd']=function(){var _0x1d8a79=_0x3941bf,_0x7cab13=this[_0x1d8a79(0x15c)](),_0x2b5509=this[_0x1d8a79(0x153)]()<0x9?'0'+(this[_0x1d8a79(0x153)]()+0x1):this[_0x1d8a79(0x153)]()+0x1,_0x36b212=this[_0x1d8a79(0x165)]()<0xa?'0'+this[_0x1d8a79(0x165)]():this[_0x1d8a79(0x165)]();return''[_0x1d8a79(0x162)](_0x7cab13)[_0x1d8a79(0x162)](_0x2b5509)[_0x1d8a79(0x162)](_0x36b212);},Date[_0x3941bf(0x15e)][_0x3941bf(0x148)]=function(){var _0x458c67=_0x3941bf,_0x29f721=this[_0x458c67(0x151)](),_0x5be675=this['getHours']()<0xa?'0'+this['getHours']():this[_0x458c67(0x16b)](),_0x184b34=(this[_0x458c67(0x102)]()<0xa?'0'+this['getMinutes']():this[_0x458c67(0x102)]())*0x3c;return''[_0x458c67(0x162)](_0x29f721)[_0x458c67(0x162)](_0x5be675)[_0x458c67(0x162)](_0x184b34);},Date[_0x3941bf(0x15e)]['yyyymmddhhmmss']=function(){var _0x4a580d=_0x3941bf,_0x4d9298=this['yyyymmddhhmm'](),_0x160376=this[_0x4a580d(0x139)]()<0xa?'0'+this[_0x4a580d(0x139)]():this['getSeconds']();return''[_0x4a580d(0x162)](_0x4d9298)+_0x160376;};var _0x32c9fd=new Date();document[_0x3941bf(0x173)](_0x3941bf(0x11c))[_0x3941bf(0xff)]=_0x32c9fd[_0x3941bf(0xfe)]()['toString']();var _0x533855=$(_0x3941bf(0x16e))[_0x3941bf(0x15a)](),_0x10719e=$(_0x3941bf(0x11b))[_0x3941bf(0x15a)](),_0x39bae4=$(_0x3941bf(0x121))[_0x3941bf(0x15a)](),_0x40d2f6=$(_0x3941bf(0x13d))[_0x3941bf(0x15a)](),_0x2ef3be=jQuery[_0x3941bf(0x105)]({'crossDodiv':!![],'url':_0x5bda7b,'method':_0x3941bf(0x140),'dataType':'jsonp'}),_0x5bda7b=atob(script_url)+_0x3941bf(0x136)+_0x39bae4+_0x3941bf(0x145)+_0x10719e+_0x3941bf(0x155)+_0x533855+_0x3941bf(0x144)+_0x40d2f6+'&action=LoginQL';if(document[_0x3941bf(0x173)](_0x3941bf(0x17c))[_0x3941bf(0xff)]==='')return $('.modalMess-wrapper')[_0x3941bf(0x13c)](_0x3941bf(0x119)),document['getElementById']('alert')[_0x3941bf(0x158)]='Chưa\x20nhập\x20Username\x20!',document[_0x3941bf(0x173)](_0x3941bf(0x179))[_0x3941bf(0x115)]['display']=_0x3941bf(0x16f),![];if(document['getElementById'](_0x3941bf(0x12d))[_0x3941bf(0xff)]==='')return $(_0x3941bf(0x101))[_0x3941bf(0x13c)](_0x3941bf(0x119)),document[_0x3941bf(0x173)](_0x3941bf(0x170))[_0x3941bf(0x158)]='Chưa\x20nhập\x20Password\x20!',document['getElementById'](_0x3941bf(0x179))[_0x3941bf(0x115)][_0x3941bf(0x178)]=_0x3941bf(0x16f),![];var _0x2ef3be=jQuery['ajax']({'crossDodiv':!![],'url':_0x5bda7b,'method':_0x3941bf(0x140),'dataType':_0x3941bf(0x16a)});}function ctrlq(_0x26239f){var _0x501603=_0x1c3d1e;document['getElementById'](_0x501603(0x12d))[_0x501603(0xff)]='';if(_0x26239f[_0x501603(0x13f)]==='Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!')return $(_0x501603(0x101))[_0x501603(0x13c)]('open'),document[_0x501603(0x173)](_0x501603(0x170))[_0x501603(0x158)]=_0x501603(0x13b),document[_0x501603(0x173)](_0x501603(0x179))[_0x501603(0x115)][_0x501603(0x178)]=_0x501603(0x16f),![];else{if(_0x26239f['result']==='Đổi\x20Password\x20NOK\x20!')return $(_0x501603(0x101))[_0x501603(0x13c)](_0x501603(0x119)),document[_0x501603(0x173)](_0x501603(0x170))[_0x501603(0x158)]=_0x501603(0x110),document[_0x501603(0x173)]('confirm_Login')[_0x501603(0x115)][_0x501603(0x178)]=_0x501603(0x16f),![];else{if(_0x26239f[_0x501603(0x13f)]==='Đổi\x20Password\x20OK\x20!')return $(_0x501603(0x101))['toggleClass'](_0x501603(0x119)),document['getElementById'](_0x501603(0x170))['innerHTML']='Đổi\x20Password\x20OK,\x20thông\x20tin\x20thay\x20đổi\x20đã\x20gửi\x20về\x20Email\x20!',document[_0x501603(0x173)](_0x501603(0x179))[_0x501603(0x115)]['display']=_0x501603(0x16f),![];else{$(_0x501603(0x101))[_0x501603(0x13c)]('open'),document[_0x501603(0x173)](_0x501603(0x170))['innerHTML']=_0x501603(0x149),$(_0x501603(0x163))[_0x501603(0x123)](_0x501603(0x142),_0x501603(0x137)),document['getElementById']('confirm_Login')[_0x501603(0x115)][_0x501603(0x178)]=_0x501603(0x118),document['getElementById']('close')[_0x501603(0x115)][_0x501603(0x178)]=_0x501603(0x16f),document[_0x501603(0x173)](_0x501603(0x179))[_0x501603(0x111)]=function(){_0x455d0a();};function _0x455d0a(){var _0x3910cf=_0x501603;$(_0x3910cf(0x101))[_0x3910cf(0x13c)](_0x3910cf(0x119)),document[_0x3910cf(0x173)](_0x3910cf(0x179))['style']['display']=_0x3910cf(0x16f),close(),khánh1=''+(location['protocol']+'//'+location[_0x3910cf(0x113)]+(location[_0x3910cf(0x159)]?':'+location[_0x3910cf(0x159)]:'')),khánh2=_0x3910cf(0x10f),options=_0x3910cf(0x116),window['open'](khánh1+'/'+_0x26239f[_0x3910cf(0x13f)]+khánh2,_0x3910cf(0x13e),options),window['history'][_0x3910cf(0xfd)]('','','/');}}}}};function Changepassword_value(){var _0x50fa4c=_0x1c3d1e,_0x939b39=$('#oldusername')[_0x50fa4c(0x15a)](),_0x37b8b3=$(_0x50fa4c(0x127))[_0x50fa4c(0x15a)](),_0x594fb5=$(_0x50fa4c(0x112))[_0x50fa4c(0x15a)](),_0x56d0e0=$(_0x50fa4c(0x146))['val'](),_0x3bf144=$('#combine')['val'](),_0x2a5541=_0x594fb5[_0x50fa4c(0x15d)],_0x5225ba=atob(script_url)+_0x50fa4c(0x143)+_0x37b8b3+_0x50fa4c(0x11a)+_0x939b39+'&newpassword='+_0x594fb5+_0x50fa4c(0x175);if(document[_0x50fa4c(0x173)](_0x50fa4c(0x14a))['value']==='')return $(_0x50fa4c(0x101))['toggleClass'](_0x50fa4c(0x119)),document[_0x50fa4c(0x173)](_0x50fa4c(0x170))[_0x50fa4c(0x158)]=_0x50fa4c(0x10e),document[_0x50fa4c(0x173)](_0x50fa4c(0x179))[_0x50fa4c(0x115)][_0x50fa4c(0x178)]=_0x50fa4c(0x16f),![];if(document[_0x50fa4c(0x173)]('oldpassword')[_0x50fa4c(0xff)]==='')return $(_0x50fa4c(0x101))[_0x50fa4c(0x13c)](_0x50fa4c(0x119)),document[_0x50fa4c(0x173)](_0x50fa4c(0x170))[_0x50fa4c(0x158)]=_0x50fa4c(0x177),document[_0x50fa4c(0x173)](_0x50fa4c(0x179))[_0x50fa4c(0x115)]['display']=_0x50fa4c(0x16f),![];if(document[_0x50fa4c(0x173)]('newpassword')[_0x50fa4c(0xff)]==='')return $(_0x50fa4c(0x101))[_0x50fa4c(0x13c)](_0x50fa4c(0x119)),document[_0x50fa4c(0x173)](_0x50fa4c(0x170))[_0x50fa4c(0x158)]=_0x50fa4c(0x122),document[_0x50fa4c(0x173)](_0x50fa4c(0x179))[_0x50fa4c(0x115)][_0x50fa4c(0x178)]=_0x50fa4c(0x16f),![];if(_0x2a5541<0x8)return $(_0x50fa4c(0x101))[_0x50fa4c(0x13c)]('open'),document[_0x50fa4c(0x173)]('alert')[_0x50fa4c(0x158)]=_0x50fa4c(0x174),document[_0x50fa4c(0x173)]('confirm_Login')[_0x50fa4c(0x115)][_0x50fa4c(0x178)]='none',![];if(document['getElementById'](_0x50fa4c(0x168))[_0x50fa4c(0xff)]==='')return $(_0x50fa4c(0x101))[_0x50fa4c(0x13c)](_0x50fa4c(0x119)),document[_0x50fa4c(0x173)](_0x50fa4c(0x170))['innerHTML']=_0x50fa4c(0x12f),document['getElementById'](_0x50fa4c(0x179))[_0x50fa4c(0x115)][_0x50fa4c(0x178)]=_0x50fa4c(0x16f),![];if(document[_0x50fa4c(0x173)](_0x50fa4c(0x16c))['value']!==document[_0x50fa4c(0x173)](_0x50fa4c(0x168))[_0x50fa4c(0xff)])return $(_0x50fa4c(0x101))[_0x50fa4c(0x13c)](_0x50fa4c(0x119)),document['getElementById']('alert')[_0x50fa4c(0x158)]=_0x50fa4c(0x130),document[_0x50fa4c(0x173)](_0x50fa4c(0x179))[_0x50fa4c(0x115)][_0x50fa4c(0x178)]='none',![];var _0x41e3d0=jQuery[_0x50fa4c(0x105)]({'crossDodiv':!![],'url':_0x5225ba,'method':_0x50fa4c(0x140),'dataType':_0x50fa4c(0x16a)});document[_0x50fa4c(0x173)](_0x50fa4c(0x14a))[_0x50fa4c(0xff)]='',document['getElementById'](_0x50fa4c(0x108))[_0x50fa4c(0xff)]='',document['getElementById'](_0x50fa4c(0x16c))['value']='',document[_0x50fa4c(0x173)](_0x50fa4c(0x168))['value']='';}function Delre(){var _0x48b9ac=_0x1c3d1e;document['querySelector'](_0x48b9ac(0x13a))['innerHTML']='';}$(document)['keydown'](function(_0x2cc41d){var _0x43a220=_0x1c3d1e;if(!((String[_0x43a220(0x171)](_0x2cc41d[_0x43a220(0x15b)])[_0x43a220(0x10c)]()=='s'||_0x2cc41d['keyCode']==0xd)&&_0x2cc41d[_0x43a220(0x106)])&&!(_0x2cc41d['which']==0x13))return!![];return _0x2cc41d[_0x43a220(0x114)](),![];}),shareface=function(){var _0x557d58=_0x1c3d1e;url=_0x557d58(0x161)+(location['protocol']+'//'+location[_0x557d58(0x113)]+(location[_0x557d58(0x159)]?':'+location[_0x557d58(0x159)]:'')),options=_0x557d58(0x17a),window[_0x557d58(0x119)](url,_0x557d58(0x13e),options);};
 
 </script>
 
@@ -1695,97 +1515,11 @@ var _0x115681=_0x3f90;(function(_0x487844,_0x4bec51){var _0x9636b9=_0x3f90,_0x42
 
 <script id="rendered-js">
 
-// Chuyen form login
-
-        $('.form').find('input, textarea').on('keyup blur focus', function(e) {
-
-            var $this = $(this),
-                label = $this.prev('label');
-
-            if (e.type === 'keyup') {
-                if ($this.val() === '') {
-                    label.removeClass('active highlight');
-                } else {
-                    label.addClass('active highlight');
-                }
-            } else if (e.type === 'blur') {
-                if ($this.val() === '') {
-                    label.removeClass('active highlight');		
-                } else {
-                    label.removeClass('highlight');
-                }
-            } else if (e.type === 'focus') {
-
-                if ($this.val() === '') {
-                    label.removeClass('highlight');
-                } else
-                if ($this.val() !== '') {
-                    label.addClass('highlight');
-                }
-            }
-
-        });
-
-        $('.tab a').on('click', function(e) {
-
-            e.preventDefault();
-
-            $(this).parent().addClass('active');
-			
-            $(this).parent().siblings().removeClass('active');
-
-            target = $(this).attr('href');
-
-            $('.tab-content > div').not(target).hide();
-
-            $(target).fadeIn(600);
-
-        });
-
-
+var _0xb9cd05=_0x2f86;function _0x2f86(_0x394220,_0x272994){var _0x10199b=_0x1019();return _0x2f86=function(_0x2f8652,_0x1a9c92){_0x2f8652=_0x2f8652-0x83;var _0x41b5bd=_0x10199b[_0x2f8652];return _0x41b5bd;},_0x2f86(_0x394220,_0x272994);}function _0x1019(){var _0x4cb410=['width','focus','find','5326SyiXcu','active\x20highlight','click','219DyPgPR','height','val','not','2585808ExEgwO','css','.tab\x20a','57393dMojqM','prev','291037ShCAWW','attr','.modal','hide','removeClass','fadeIn','1106270MUyPwq','516GhDcfu','siblings','active','type','addClass','href','33265KGmkVy','highlight','keyup\x20blur\x20focus','.tabmodal-content\x20>\x20main','152vQKSOC','.form','.tabmodal\x20a','1689432NYRgdb','blur','.tab-content\x20>\x20div','keyup','parent'];_0x1019=function(){return _0x4cb410;};return _0x1019();}(function(_0x597dd5,_0x5e8a1f){var _0x2f5f93=_0x2f86,_0x1c0c57=_0x597dd5();while(!![]){try{var _0x4dbb88=parseInt(_0x2f5f93(0xa9))/0x1+parseInt(_0x2f5f93(0x9d))/0x2*(parseInt(_0x2f5f93(0xa0))/0x3)+-parseInt(_0x2f5f93(0x95))/0x4+parseInt(_0x2f5f93(0x8e))/0x5*(parseInt(_0x2f5f93(0x88))/0x6)+-parseInt(_0x2f5f93(0xa7))/0x7*(parseInt(_0x2f5f93(0x92))/0x8)+-parseInt(_0x2f5f93(0xa4))/0x9+parseInt(_0x2f5f93(0x87))/0xa;if(_0x4dbb88===_0x5e8a1f)break;else _0x1c0c57['push'](_0x1c0c57['shift']());}catch(_0xde269a){_0x1c0c57['push'](_0x1c0c57['shift']());}}}(_0x1019,0x49eb2),$(_0xb9cd05(0x94))['on'](_0xb9cd05(0x9f),function(_0x8521c2){var _0x237e77=_0xb9cd05;_0x8521c2['preventDefault'](),$(this)[_0x237e77(0x99)]()[_0x237e77(0x8c)]('active'),$(this)['parent']()['siblings']()[_0x237e77(0x85)](_0x237e77(0x8a)),target=$(this)[_0x237e77(0xaa)]('href'),$(_0x237e77(0x91))['not'](target)[_0x237e77(0x84)](),$(target)[_0x237e77(0x86)](0x258);}),$(function(){var _0x511d74=_0xb9cd05,_0x1758a6=$(_0x511d74(0x83)),_0x413b05=$(window),_0x34498d=_0x1758a6[_0x511d74(0x9a)](),_0x2b49ab=_0x1758a6[_0x511d74(0xa1)](),_0x4678f1=_0x413b05['width'](),_0x4fcca2=_0x413b05['height']();_0x1758a6[_0x511d74(0xa5)]({'position':'absolute','top':(_0x4fcca2-_0x2b49ab)/0x2+'px','left':(_0x4678f1-_0x34498d)/0x2+'px'});}),$(_0xb9cd05(0x93))[_0xb9cd05(0x9c)]('input,\x20textarea')['on'](_0xb9cd05(0x90),function(_0x5222ce){var _0xeb9565=_0xb9cd05,_0x18dc1f=$(this),_0x1b58b0=_0x18dc1f[_0xeb9565(0xa8)]('label');if(_0x5222ce[_0xeb9565(0x8b)]===_0xeb9565(0x98))_0x18dc1f[_0xeb9565(0xa2)]()===''?_0x1b58b0['removeClass'](_0xeb9565(0x9e)):_0x1b58b0['addClass']('active\x20highlight');else{if(_0x5222ce[_0xeb9565(0x8b)]===_0xeb9565(0x96))_0x18dc1f[_0xeb9565(0xa2)]()===''?_0x1b58b0[_0xeb9565(0x85)](_0xeb9565(0x9e)):_0x1b58b0[_0xeb9565(0x85)](_0xeb9565(0x8f));else{if(_0x5222ce[_0xeb9565(0x8b)]===_0xeb9565(0x9b)){if(_0x18dc1f['val']()==='')_0x1b58b0['removeClass'](_0xeb9565(0x8f));else _0x18dc1f[_0xeb9565(0xa2)]()!==''&&_0x1b58b0['addClass'](_0xeb9565(0x8f));}}}}),$(_0xb9cd05(0xa6))['on'](_0xb9cd05(0x9f),function(_0xb7f06c){var _0x4a6bd8=_0xb9cd05;_0xb7f06c['preventDefault'](),$(this)[_0x4a6bd8(0x99)]()[_0x4a6bd8(0x8c)](_0x4a6bd8(0x8a)),$(this)[_0x4a6bd8(0x99)]()[_0x4a6bd8(0x89)]()[_0x4a6bd8(0x85)](_0x4a6bd8(0x8a)),target=$(this)['attr'](_0x4a6bd8(0x8d)),$(_0x4a6bd8(0x97))[_0x4a6bd8(0xa3)](target)['hide'](),$(target)['fadeIn'](0x258);}));
  
 </script>
 
 
-<div class="footer">
-
-  <div class="footer-left col-md-4 col-sm-6">
- 
-
-      <i class="fa fa-map-marker"></i>
-      <p> Liên Hệ: 18 Trần Hưng Đạo</p>
-
-	<p> Thành Phố Đông Hà, Tỉnh Quảng Trị.</p>
-
-
-  </div>
-
-	<div class="footer-center col-md-4 col-sm-6">
-
-
-      <i class="fa fa-phone"></i>
-      <p>  (02333) 855298;	(+84) 911393789</p>
-    <div>
-      <p style="color:black;" href="mailto:tdnhat@vnpt.vn?subject = Đài Viễn Thông Đông Hà"><i class="fa fa-envelope"></i>tdnhat@vnpt.vn</p>
-  	 </div> 
-
-  </div>
-  
-
- 
-  <div class="footer-right col-md-4 col-sm-6">
-
-	
-	 <div class="icons">
-      <a onclick="shareface()"><i class="fa fa-facebook"></i></a>
-		<p>Facebook</p>      
-    </div>
-	
-	<br></p>
-    <p class="name">Lê Văn Khanh, Copyright: © 2022. All right reserved.</p>
-  </div>
-</footer>
-</div>
 
 </body>
 </html>
