@@ -40,8 +40,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 99%;
   padding: 1px;
-  width: 99%;
-  max-width: 100%;
+  width: 100%;
   background: linear-gradient(to right, #21618c,#73c6b6);
 }
 
@@ -681,6 +680,8 @@ form input[type="submit"]{
 form input[type="submit"]:hover{
   background: #2c52ed;
 }
+
+
 
 
 /*END formLogin LOGIN Mới */
@@ -1732,6 +1733,37 @@ $(document).keydown(function(event) {
             $(target).fadeIn(600);
 
         });
+
+function adjustModalHeight() {
+  var modal = $('.modal');
+  var content = modal.find('.tab-content');
+
+  // Thiết lập độ cao mặc định cho modal
+  modal.height('auto');
+
+  // Lấy độ cao của nội dung bên trong modal
+  var contentHeight = content.outerHeight();
+
+  // Kiểm tra nếu độ cao nội dung vượt quá một giới hạn nhất định
+  var maxHeight = 500; // Giới hạn độ cao tối đa của modal
+  if (contentHeight > maxHeight) {
+    contentHeight = maxHeight;
+  }
+
+  // Đặt độ cao mới cho modal
+  modal.height(contentHeight);
+}
+
+// Gọi hàm adjustModalHeight khi modal được hiển thị
+$('.modal').on('shown.bs.modal', function() {
+  adjustModalHeight();
+});
+
+// Gọi hàm adjustModalHeight khi nội dung trong modal thay đổi
+$('.tab a').on('click', function(e) {
+  e.preventDefault();
+  adjustModalHeight();
+});
 
  
 </script>
