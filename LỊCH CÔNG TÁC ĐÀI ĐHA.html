@@ -4,7 +4,7 @@
 
   <meta charset="UTF-8">
 
-<title>LỊCH CÔNG TÁC - ĐÀI VT ĐÔNG HÀ</title>
+  <title>LỊCH CÔNG TÁC - ĐÀI VT ĐÔNG HÀ</title>
 <link rel="stylesheet" href="TruyenDanPicture/css.css">
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -40,11 +40,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 99%;
   padding: 1px;
-  width: 100%;
+  width: 99%;
   max-width: 100%;
   background: linear-gradient(to right, #21618c,#73c6b6);
 }
-
 
 
 .footer {
@@ -58,6 +57,12 @@ body {
   padding: 5px;
   margin-top: 5px;
   bottom: 0px;
+ 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  
 }
 
 .footer .footer-left,
@@ -190,179 +195,6 @@ body {
     margin-left: 3px;
   }
 }
-
-
-
-/*********** MAIN HEADING **********/
-.main-heading {
-  font-size: 2em;
-  color:white;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  font-weight:bold;
-}
-
-.main-heading::before, .main-heading::after {
-  content: "";
-  height: 0.2em;
-  width: 100%;
-  background-image: linear-gradient(to left, darkorange, transparent);
-  margin-right: 1em;
-}
-
-.main-heading::after {
-  background-image: linear-gradient(to right, darkorange, transparent);
-  margin-left: 1em;
-}
-
-/*********** LINKS **********/
-.tab-list__list {
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.tab-list__link {
-  color: #fff;
-  font-size: 1em;
-  text-transform: uppercase;
-  background-color: #154360;
-  display: block;
-  padding: 1em 1.2em;
-  border-radius: 5px 5px 0 0;
-  transition: all 150ms ease-out;
-  font-weight:bold;
-  border-style:solid;
-  border-color:white;
-}
-
-.tab-list__link--is-active {
-  color: #21618c;
-  background-color: #f2e7cf;
-  background-color: #fff;
-  transform: scaleY(1.0);
-  transform-origin: center bottom;
-}
-
-/*********** TAB CONTAINERS **********/
-.tab {
-  background-color: #f2e7cf;
-  background-color: #fff;
-  border-radius: 0 1px 1px 1px;
-  padding:0em;
-}
-
-
-.tab__box {
-  display: none;
-}
-
-.tab__box--is-visible {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: 5px;
-  justify-content: space-around;
-}
-
-.tab__item {
-  padding: 1.5em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background: #f8f9f9;
-  border-radius:5% 5% 5% 5%;
-  cursor: pointer;
-}
-
-
-.tab__heading {
-  font-size: 1.2em;
-  color:black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight:bold;
-
-}
-
-.tab__icon {
-  font-size: 3em !important;
-  margin: 0.7em 0;
-  color: darkorange;
-}
-
-.tab__para {
-  font-weight: bold;
-  color: #3f4c6b;
-  margin-bottom: 1.5em;
-}
-
-.tab__btn {
-  font-size: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: inherit;
-  padding: 0.6em 1em;
-  border-radius: 1px;
-  border: 0;
-  background: #21618c;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  max-width: 18em;
-  max-high:0.5em;
-  margin: 0 auto;
-}
-
-.tab__btn:hover {
-  background: #5dade2;
-}
-
-.tab__btn:active {
-  transform: translate(1px, 2px);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 38em) {
-  body {
-  font-size: 50%;
-  background: #1b4f72;
-  }
-
-  .wrap {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-  }
-
-  .tab-list__list {
-    flex-direction: column;
-    background-color: #807668;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .tab-list__link {
-    font-size: 0.8em;
-    padding: 1.2em 1em;
-    border-radius: 5px 0 0 5px;
-  }
-
-  .tab-list__link--is-active {
-    transform: scaleX(1.05);
-    transform-origin: right center;
-  }
-
-  .tab {
-    border-radius: 0 3px 3px 0;
-    padding: 1em;
-  }
-}
-
-
 
 
 /* Popup */
@@ -548,41 +380,6 @@ body {
 /* End Popup */
 
 
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, div, menu, nav, section, summary {
-  display: block;
-}
-
-a {
-  transition: all .2s linear;
-}
  h1 {
   font-size:35px;
   font-family:times new roman;
@@ -602,160 +399,6 @@ a {
 }
 
 
-/* DROP LIST */
-.dropdown {
-  --max-scroll: 8;
-  --text: #3F4656;
-  --border: #2F3545;
-  --borderActive: #23C4F8;
-  --background: #151924;
-  --arrow: #6C7486;
-  --arrowActive: #E4ECFA;
-  --listText: #99A3BA;
-  --listBackground: #F5F9FF;
-  --listActive: #E4ECFA;
-  --listTextActive: #6C7486;
-  --listBorder: none;
-  --textFilled: black;
-  width: auto;
-  position: relative;
-}
-
-.dropdown select {
-  display: none;
-}
-.dropdown > span {
-  cursor: pointer;
-  padding: 9px 16px;
-  border-radius: 6px;
-  display: block;
-  position: relative;
-  color: var(--text);
-  border: 1px solid var(--border);
-  background:white;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before, .dropdown > span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  border-radius: 1px;
-  top: 50%;
-  right: 15px;
-  background:black;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before {
-  margin-right: 4px;
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown > span:after {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  max-height: calc(var(--max-scroll) * 42px);
-  top: 42px;
-  left: 0;
-  z-index: 1;
-  right: 0;
-  background: var(--listBackground);
-  border-radius: 6px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform-origin: 0 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-  transform: scale(0.8) translate(0, 4px);
-  border: 1px solid var(--listBorder);
-}
-.dropdown ul li {
-  opacity: 0;
-  transform: translate(6px, 0);
-  transition: all 0.3s ease;
-}
-.dropdown ul li a {
-  cursor: pointer;
-  display: block;
-  padding: 10px 16px;
-  color: var(--listText);
-  text-decoration: none;
-  outline: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.dropdown ul li a:hover {
-  color: var(--listTextActive);
-}
-.dropdown ul li.active a {
-  color: var(--listTextActive);
-  background: var(--listActive);
-}
-
-.dropdown ul li.active a:before {
-  transform: rotate(45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:after {
-  transform: rotate(-45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
-  --scale: .9;
-  opacity: 1;
-}
-.dropdown ul li:first-child a {
-  border-radius: 6px 6px 0 0;
-}
-.dropdown ul li:last-child a {
-  border-radius: 0 0 6px 6px;
-}
-.dropdown.filled > span {
-  color: var(--textFilled);
-}
-.dropdown.open > span {
-  border-color: var(--borderActive);
-}
-.dropdown.open > span:before, .dropdown.open > span:after {
-  background: var(--arrowActive);
-}
-.dropdown.open > span:before {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown.open > span:after {
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown.open ul {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1) translate(0, 12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-}
-.dropdown.open ul li {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.dropdown.open ul li:nth-child(1) {
-  transition-delay: 80ms;
-}
-.dropdown.open ul li:nth-child(2) {
-  transition-delay: 160ms;
-}
-.dropdown.open ul li:nth-child(3) {
-  transition-delay: 240ms;
-}
-.dropdown.open ul li:nth-child(4) {
-  transition-delay: 320ms;
-}
-.dropdown.open ul li:nth-child(5) {
-  transition-delay: 400ms;
-}
-
-/*END  DROP LIST */
 
 /* FORM LOGIN CỦ*/
 .form {
@@ -1039,6 +682,9 @@ form input[type="submit"]:hover{
   background: #2c52ed;
 }
 
+
+
+
 /*END formLogin LOGIN Mới */
 
 
@@ -1072,26 +718,7 @@ button:hover {
   background-color: #f44336;
 }
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
 
 /* The Modal (background) */
 .modal {
@@ -1099,7 +726,9 @@ span.psw {
   position: fixed;
   z-index: 1;
   border-radius: 1%;
-  top: 30vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: auto;
   max-width: 700px;
   height: auto;
@@ -1109,9 +738,13 @@ span.psw {
   padding-bottom: 30px;
   padding-left: 25px;
   padding-right: 25px;
-  margin-left: -25px; /* Dịch chuyển form và modal sang trái 25px */
-
+  margin-left: -25px;
 }
+
+.modal.show {
+  display: block;
+}
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
@@ -1469,31 +1102,39 @@ border-radius:5px 5px 5px 5px;
   <!-- Modal -->
 
 
+<div id="id01" class="modal">
 
 	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
-	<p style="color: white;" class="main-heading">ĐĂNG NHẬP LỊCH CÔNG TÁC</p>
-	<input type = "text" id="ngay" value="" hidden </input>
-	<input type = "text" id = "combine" hidden value="" </<input>
+			
+		<div class="imgcontainer">		
+
+		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
+		</div><!-- Modal -->
+
+	<p type = "text" id="ngay"></p>
 
 
     <div class="form">
-
+	<p style="color: black;" class="main-heading">ĐĂNG NHẬP LỊCH CÔNG TÁC</p>
 			<ul class="tab-group">
 
             <li style="background: white"; width="135px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+
             <li style="background: white"; width="135px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 			</ul>
-					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
+					<div id="loader"></div>				
 					<div id="loader2"></div>
 					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
         <div class="tab-content">
 
 
             <div id="login">
-			</br>
+
 			<form>	
-				
+
+				<p type = "text" id = "combine"</p>
+
+			
 				
 				<div class="field username">
                     <div class="field-wrap">
@@ -1580,7 +1221,7 @@ border-radius:5px 5px 5px 5px;
 
 
 </form><!-- Modal -->
-
+</div>
 
 
 <div class="overlay" id="dialog-container">
@@ -1589,8 +1230,8 @@ border-radius:5px 5px 5px 5px;
     <p>Bạn có muốn Thoát không ?</p>
 	</br>	
     <div class="text-right">
-      <button class="dialog-btn btn-cancel" id="cancel" style="width:110px;">Cancel</button>
-      <button class="dialog-btn btn-primary" id="confirm"style="width:110px;">OK</button>
+      <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
     </div>
   </div>
 </div>
@@ -1687,7 +1328,365 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 		
 <script type="text/javascript">//<![CDATA[
 
-var _0x5b541b=_0x35cf;(function(_0x1f75f6,_0xc36b26){var _0x50c56f=_0x35cf,_0x21f542=_0x1f75f6();while(!![]){try{var _0x42c675=parseInt(_0x50c56f(0x1ad))/0x1*(parseInt(_0x50c56f(0x1ac))/0x2)+parseInt(_0x50c56f(0x1a0))/0x3*(parseInt(_0x50c56f(0x12d))/0x4)+parseInt(_0x50c56f(0x150))/0x5*(-parseInt(_0x50c56f(0x18a))/0x6)+parseInt(_0x50c56f(0x157))/0x7+parseInt(_0x50c56f(0x13b))/0x8+-parseInt(_0x50c56f(0x165))/0x9+-parseInt(_0x50c56f(0x156))/0xa;if(_0x42c675===_0xc36b26)break;else _0x21f542['push'](_0x21f542['shift']());}catch(_0x370463){_0x21f542['push'](_0x21f542['shift']());}}}(_0x40d7,0x9d87d),$(document)[_0x5b541b(0x180)](function(){var _0x24bd70=_0x5b541b,_0x52c83f=location[_0x24bd70(0x19d)];if(_0x52c83f=='file:'){var _0x57008e=document[_0x24bd70(0x191)](_0x24bd70(0x185));_0x57008e['parentNode'][_0x24bd70(0x153)](_0x57008e),close();}else{}}),!function(_0xdb41fd){'use strict';var _0x58473a=_0x5b541b;_0xdb41fd['fn'][_0x58473a(0x16a)]=function(_0x569811){var _0x26d1c9=_0x58473a,_0x9fc28,_0x462f88,_0x5a1e87={'idle':0xea60,'events':_0x26d1c9(0x189),'onIdle':function(){},'onActive':function(){},'onHide':function(){},'onShow':function(){},'keepTracking':!0x0,'startAtIdle':!0x1,'recurIdleCall':!0x1},_0xece31a=_0x569811[_0x26d1c9(0x186)]||!0x1,_0xde3ddd=!_0x569811['startAtIdle']||!0x0,_0x443bf7=_0xdb41fd[_0x26d1c9(0x15a)]({},_0x5a1e87,_0x569811),_0x49def5=null;return _0xdb41fd(this)['on'](_0x26d1c9(0x144),{},function(){var _0x125069=_0x26d1c9;_0xdb41fd(this)[_0x125069(0x19f)](_0x443bf7[_0x125069(0x192)]),_0x443bf7[_0x125069(0x1a9)]=!0x1,_0x9fc28(_0x49def5,_0x443bf7);}),_0x9fc28=function(_0x503033,_0x3739e6){var _0x10c032=_0x26d1c9;return _0xece31a&&(_0x3739e6[_0x10c032(0x130)][_0x10c032(0x168)](),_0xece31a=!0x1),clearTimeout(_0x503033),_0x3739e6['keepTracking']?_0x462f88(_0x3739e6):void 0x0;},_0x462f88=function(_0x46280c){var _0x52dbf2=_0x26d1c9,_0x55505e,_0xd43a36=_0x46280c[_0x52dbf2(0x15b)]?setInterval:setTimeout;return _0x55505e=_0xd43a36(function(){var _0x57c2fc=_0x52dbf2;_0xece31a=!0x0,_0x46280c['onIdle'][_0x57c2fc(0x168)]();},_0x46280c[_0x52dbf2(0x16a)]);},this['each'](function(){var _0x7f23a2=_0x26d1c9;_0x49def5=_0x462f88(_0x443bf7),_0xdb41fd(this)['on'](_0x443bf7['events'],function(){_0x49def5=_0x9fc28(_0x49def5,_0x443bf7);}),(_0x443bf7[_0x7f23a2(0x13d)]||_0x443bf7['onHide'])&&_0xdb41fd(document)['on'](_0x7f23a2(0x195),function(){var _0x5f121e=_0x7f23a2;document[_0x5f121e(0x161)]||document[_0x5f121e(0x1a3)]||document[_0x5f121e(0x169)]||document['msHidden']?_0xde3ddd&&(_0xde3ddd=!0x1,_0x443bf7[_0x5f121e(0x14d)]['call']()):_0xde3ddd||(_0xde3ddd=!0x0,_0x443bf7[_0x5f121e(0x13d)][_0x5f121e(0x168)]());});});};}(jQuery),$(document)['idle']({'onIdle':function(){Search_dialog_time();},'idle':0x1b7740}));var overlay_timeme=document[_0x5b541b(0x191)](_0x5b541b(0x12b)),overlayme=document[_0x5b541b(0x191)]('testText');function Search_dialog_time(){var _0x5e6e3c=_0x5b541b;document['getElementById']('dialog_time')==null||document['getElementById'](_0x5e6e3c(0x14f))==null?close():show_dialog_time();}function show_dialog_time(){var _0x27381e=_0x5b541b;overlay_timeme[_0x27381e(0x18d)]['display']=_0x27381e(0x199);}document[_0x5b541b(0x191)](_0x5b541b(0x12c))['onclick']=function(){confirm_time();};function confirm_time(){var _0x389553=_0x5b541b;close(),overlay_timeme['style'][_0x389553(0x1a2)]='none';}function _0x35cf(_0x10fb39,_0x1c4488){var _0x40d7e2=_0x40d7();return _0x35cf=function(_0x35cfc2,_0x37d4c6){_0x35cfc2=_0x35cfc2-0x12b;var _0x4ca6b6=_0x40d7e2[_0x35cfc2];return _0x4ca6b6;},_0x35cf(_0x10fb39,_0x1c4488);}document[_0x5b541b(0x191)]('btn-show-dialog')[_0x5b541b(0x183)]=function(){show_dialog();};var overlayme=document[_0x5b541b(0x191)](_0x5b541b(0x140));function show_dialog(){var _0x1e0a67=_0x5b541b;overlayme[_0x1e0a67(0x18d)][_0x1e0a67(0x1a2)]=_0x1e0a67(0x199);}document[_0x5b541b(0x191)](_0x5b541b(0x160))[_0x5b541b(0x183)]=function(){confirm();};function confirm(){var _0x2e8e9c=_0x5b541b;close(),overlayme[_0x2e8e9c(0x18d)][_0x2e8e9c(0x1a2)]=_0x2e8e9c(0x175);}document[_0x5b541b(0x191)]('cancel')[_0x5b541b(0x183)]=function(){cancel();};function cancel(){var _0x53b3b6=_0x5b541b;overlayme[_0x53b3b6(0x18d)][_0x53b3b6(0x1a2)]=_0x53b3b6(0x175);}$(document)[_0x5b541b(0x180)](function(){var _0x46f9fd=_0x5b541b;$(_0x46f9fd(0x131))['on']('click',function(){var _0x47b32e=_0x46f9fd;return $(_0x47b32e(0x179))[_0x47b32e(0x139)](_0x47b32e(0x154)),![];});});function close_window(){close();}document['addEventListener'](_0x5b541b(0x16e),_0x4288f3=>_0x4288f3[_0x5b541b(0x17c)]()),home=function(){var _0x4c46f2=_0x5b541b;location[_0x4c46f2(0x146)]=''+(location[_0x4c46f2(0x19d)]+'//'+location[_0x4c46f2(0x16d)]+(location[_0x4c46f2(0x196)]?':'+location[_0x4c46f2(0x196)]:''));},window[_0x5b541b(0x19b)]=(function(){var _0x51c456=_0x5b541b;return window[_0x51c456(0x164)]||(window[_0x51c456(0x151)]||(window[_0x51c456(0x18c)]||(window[_0x51c456(0x132)]||(window['oRequestAnimationFrame']||function(_0x251876){var _0xc8de62=_0x51c456;window[_0xc8de62(0x1a1)](_0x251876,0x32);}))));}());var test={'st':![],'el':document[_0x5b541b(0x14c)](_0x5b541b(0x133)),'rn':function(){var _0x4dd695=_0x5b541b;test['st']=![],console[_0x4dd695(0x155)](test['el']),console[_0x4dd695(0x18e)](),document['getElementById'](_0x4dd695(0x14f))[_0x4dd695(0x1a8)]=(test['st']===!![]?'open':'')+'.',window[_0x4dd695(0x19b)](test['rn']);}};test['el'][_0x5b541b(0x18f)]('id',function(){test['st']=!![];}),test['rn'](),document[_0x5b541b(0x191)](_0x5b541b(0x1af))[_0x5b541b(0x183)]=function(){show_dialog();};var overlayme=document[_0x5b541b(0x191)]('dialog-container');function _0x40d7(){var _0x36355a=['&newpassword=','toggleClass','checkValidity','328984kkcOfI','toLowerCase','onShow','alert','close','dialog-container','toolbar=0,status=0,resizable=1','#newpassword','history','idle:stop','keydown','href','#fa','&password=','prototype','Đăng\x20nhập\x20OK\x20!','getHours','createElement','onHide','getDate','testText','2505tBOKsg','webkitRequestAnimationFrame','getMinutes','removeChild','open','log','13183250lOfVDq','6715569LtwNLZ','&action=Changepassword','classList','extend','recurIdleCall','&action=LoginQL','was-validated','#cfpassword','input[name=\x22oldusername\x22],\x20input[name=\x22oldpassword\x22],\x20input[name=\x22newpassword\x22],\x20input[name=\x22cfpassword\x22]','confirm','hidden','ajax','Đổi\x20Password\x20NOK\x20!','requestAnimationFrame','3205827oEjxEe','ctrlKey','#re','call','mozHidden','idle','getMonth','getSeconds','hostname','contextmenu','querySelectorAll','result','replaceState','sharer','fa\x20fa-thumbs-o-up','aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6M1JzaDJNM1YxTlpkVWpNS0pWcjQ5QnR0VWhHV1ZYV2s5bjNGb3FJeEZ5a1lmTXJqUzFwSVFpRzJWbjRuYTR1OFJrZy9leGVj','none','confirm_Login','.needs-validation','lichctdha','.modalMess-wrapper','attr','remove','preventDefault','Mật\x20khẩu\x20nhập\x20lại\x20không\x20khớp!','ngay','#combine','ready','Đổi\x20Password\x20OK\x20!','.html','onclick','fromCharCode','login','startAtIdle','querySelector','password','mousemove\x20keydown\x20mousedown\x20touchstart','7302gshZfu','#password','mozRequestAnimationFrame','style','clear','__defineGetter__','class','getElementById','events','&oldusername=','value','visibilitychange\x20webkitvisibilitychange\x20mozvisibilitychange\x20msvisibilitychange','port','jsonp','cancel','block','#oldpassword','requestFrame','yyyymmddhhmm','protocol','?callback=ctrlq&oldpassword=','off','6rqtkwJ','setTimeout','display','webkitHidden','add','#oldusername','yyyymmdd','GET','innerHTML','keepTracking','yyyymmddhhmmss','https://www.facebook.com/sharer/sharer.php?u=','2XTJfqo','909422fSEiCs','username','btn-show-dialog','length','dialog_time','confirm_time','2039156NOiVmC','Đăng\x20nhập\x20sai\x20User\x20Name\x20hoặc\x20Password\x20!','val','onActive','.trigger','msRequestAnimationFrame','img','Mật\x20khẩu\x20phải\x20có\x20ít\x20nhất\x208\x20ký\x20tự!','Đổi\x20Password\x20OK,\x20thông\x20tin\x20thay\x20đổi\x20đã\x20gửi\x20về\x20Email\x20!','which','?callback=ctrlq&ngay='];_0x40d7=function(){return _0x36355a;};return _0x40d7();}function show_dialog(){var _0x473d5b=_0x5b541b;overlayme['style'][_0x473d5b(0x1a2)]='block';}document[_0x5b541b(0x191)](_0x5b541b(0x160))[_0x5b541b(0x183)]=function(){confirm();};function confirm(){var _0x46daf7=_0x5b541b;close_window(),overlayme[_0x46daf7(0x18d)][_0x46daf7(0x1a2)]=_0x46daf7(0x175);}document[_0x5b541b(0x191)](_0x5b541b(0x198))[_0x5b541b(0x183)]=function(){cancel();};function cancel(){var _0x253017=_0x5b541b;overlayme[_0x253017(0x18d)]['display']=_0x253017(0x175);}function close_window(){close();}window[_0x5b541b(0x143)][_0x5b541b(0x171)]('','','/');var script_url=_0x5b541b(0x174);function LoginQL_value(){var _0x42f402=_0x5b541b;Date[_0x42f402(0x149)][_0x42f402(0x1a6)]=function(){var _0x5bdcd9=_0x42f402,_0x3ce084=this['getFullYear'](),_0x2c827d=(this[_0x5bdcd9(0x16b)]()<0x9?'0':'')+(this[_0x5bdcd9(0x16b)]()+0x1),_0x2ec124=(this[_0x5bdcd9(0x14e)]()<0xa?'0':'')+this[_0x5bdcd9(0x14e)]();return _0x3ce084+_0x2c827d+_0x2ec124;},Date[_0x42f402(0x149)][_0x42f402(0x19c)]=function(){var _0x2b45f0=_0x42f402,_0x1d9798=this[_0x2b45f0(0x1a6)](),_0x17db7a=(this[_0x2b45f0(0x14b)]()<0xa?'0':'')+this['getHours'](),_0x1211f7=(this[_0x2b45f0(0x152)]()<0xa?'0':'')+this['getMinutes']();return _0x1d9798+_0x17db7a+_0x1211f7;},Date['prototype']['yyyymmddhhmmss']=function(){var _0x11ae93=_0x42f402,_0x198806=this[_0x11ae93(0x19c)](),_0x4347ee=(this[_0x11ae93(0x16c)]()<0xa?'0':'')+this[_0x11ae93(0x16c)]();return _0x198806+_0x4347ee;};var _0x134c70=new Date();document['getElementById'](_0x42f402(0x17e))[_0x42f402(0x194)]=_0x134c70[_0x42f402(0x1aa)]()['toString'](),document[_0x42f402(0x191)]('combine')[_0x42f402(0x194)]=_0x42f402(0x178);var _0x9f8c0d=document[_0x42f402(0x187)](_0x42f402(0x177)),_0x1eb0ae=_0x9f8c0d[_0x42f402(0x16f)]('input[name=\x22username\x22],\x20input[name=\x22password\x22]'),_0x2492b0=!![];for(var _0x4c5afc=0x0;_0x4c5afc<_0x1eb0ae[_0x42f402(0x1b0)];_0x4c5afc++){!_0x1eb0ae[_0x4c5afc]['checkValidity']()&&(_0x2492b0=![]);}if(_0x2492b0)var _0x2cbe7a=$('#username')['val'](),_0x47f9cf=$(_0x42f402(0x18b))[_0x42f402(0x12f)](),_0x1709ae=$('#ngay')[_0x42f402(0x12f)](),_0x4b25c8=$(_0x42f402(0x17f))['val'](),_0x5bb688=atob(script_url)+_0x42f402(0x137)+_0x1709ae+_0x42f402(0x148)+_0x47f9cf+'&username='+_0x2cbe7a+'&combine='+_0x4b25c8+_0x42f402(0x15c),_0x1163d5=jQuery[_0x42f402(0x162)]({'crossDomain':!![],'url':_0x5bb688,'method':_0x42f402(0x1a7),'dataType':'jsonp'});_0x9f8c0d[_0x42f402(0x159)][_0x42f402(0x1a4)](_0x42f402(0x15d));}function ctrlq(_0x46bae6){var _0x2e76c7=_0x5b541b;document[_0x2e76c7(0x191)](_0x2e76c7(0x188))[_0x2e76c7(0x194)]='';if(_0x46bae6[_0x2e76c7(0x170)]===_0x2e76c7(0x12e))return $(_0x2e76c7(0x179))[_0x2e76c7(0x139)]('open'),document[_0x2e76c7(0x191)](_0x2e76c7(0x13e))[_0x2e76c7(0x1a8)]=_0x2e76c7(0x12e),document[_0x2e76c7(0x191)]('confirm_Login')[_0x2e76c7(0x18d)]['display']=_0x2e76c7(0x175),![];else{if(_0x46bae6['result']===_0x2e76c7(0x163))return $(_0x2e76c7(0x179))[_0x2e76c7(0x139)](_0x2e76c7(0x154)),document[_0x2e76c7(0x191)](_0x2e76c7(0x13e))['innerHTML']=_0x2e76c7(0x163),document[_0x2e76c7(0x191)]('confirm_Login')['style']['display']=_0x2e76c7(0x175),![];else{if(_0x46bae6['result']===_0x2e76c7(0x181))return $(_0x2e76c7(0x179))[_0x2e76c7(0x139)](_0x2e76c7(0x154)),document[_0x2e76c7(0x191)]('alert')['innerHTML']=_0x2e76c7(0x135),document[_0x2e76c7(0x191)](_0x2e76c7(0x176))['style'][_0x2e76c7(0x1a2)]=_0x2e76c7(0x175),![];else{$(_0x2e76c7(0x179))[_0x2e76c7(0x139)](_0x2e76c7(0x154)),document[_0x2e76c7(0x191)](_0x2e76c7(0x13e))['innerHTML']=_0x2e76c7(0x14a),$(_0x2e76c7(0x147))[_0x2e76c7(0x17a)](_0x2e76c7(0x190),_0x2e76c7(0x173)),document['getElementById']('confirm_Login')[_0x2e76c7(0x18d)][_0x2e76c7(0x1a2)]=_0x2e76c7(0x199),document[_0x2e76c7(0x191)](_0x2e76c7(0x13f))[_0x2e76c7(0x18d)][_0x2e76c7(0x1a2)]=_0x2e76c7(0x175),document['getElementById'](_0x2e76c7(0x176))[_0x2e76c7(0x183)]=function(){_0x21b9db();};function _0x21b9db(){var _0x254b7a=_0x2e76c7;$(_0x254b7a(0x179))[_0x254b7a(0x139)](_0x254b7a(0x154)),document['getElementById'](_0x254b7a(0x176))['style'][_0x254b7a(0x1a2)]='none',close(),khánh1=''+(location['protocol']+'//'+location['hostname']+(location[_0x254b7a(0x196)]?':'+location[_0x254b7a(0x196)]:'')),khánh2=_0x254b7a(0x182),options=_0x254b7a(0x141),window['open'](khánh1+'/'+_0x46bae6[_0x254b7a(0x170)]+khánh2,'sharer',options);}}}}};function Changepassword_value(){var _0x2f09d3=_0x5b541b,_0x40007a=document[_0x2f09d3(0x187)](_0x2f09d3(0x177)),_0xace58b=_0x40007a[_0x2f09d3(0x16f)](_0x2f09d3(0x15f)),_0x5d826e=!![];for(var _0x42aeef=0x0;_0x42aeef<_0xace58b['length'];_0x42aeef++){!_0xace58b[_0x42aeef][_0x2f09d3(0x13a)]()&&(_0x5d826e=![]);}if(_0x5d826e){var _0x541f65=$(_0x2f09d3(0x1a5))[_0x2f09d3(0x12f)](),_0x21c112=$(_0x2f09d3(0x19a))[_0x2f09d3(0x12f)](),_0x5398e2=$(_0x2f09d3(0x142))[_0x2f09d3(0x12f)](),_0x3f3ecc=$(_0x2f09d3(0x15e))[_0x2f09d3(0x12f)](),_0x308cb9=$('#combine')[_0x2f09d3(0x12f)](),_0x25818c=_0x5398e2[_0x2f09d3(0x1b0)];if(_0x25818c<0x8)return $('.modalMess-wrapper')['toggleClass'](_0x2f09d3(0x154)),document['getElementById'](_0x2f09d3(0x13e))[_0x2f09d3(0x1a8)]=_0x2f09d3(0x134),document['getElementById'](_0x2f09d3(0x176))[_0x2f09d3(0x18d)][_0x2f09d3(0x1a2)]=_0x2f09d3(0x175),![];if(_0x5398e2!==_0x3f3ecc)return $('.modalMess-wrapper')['toggleClass']('open'),document[_0x2f09d3(0x191)](_0x2f09d3(0x13e))[_0x2f09d3(0x1a8)]=_0x2f09d3(0x17d),document[_0x2f09d3(0x191)](_0x2f09d3(0x176))[_0x2f09d3(0x18d)]['display']=_0x2f09d3(0x175),![];var _0x13fa3b=atob(script_url)+_0x2f09d3(0x19e)+_0x21c112+_0x2f09d3(0x193)+_0x541f65+_0x2f09d3(0x138)+_0x5398e2+_0x2f09d3(0x158),_0x434ca1=jQuery[_0x2f09d3(0x162)]({'crossDodiv':!![],'url':_0x13fa3b,'method':'GET','dataType':_0x2f09d3(0x197)});document[_0x2f09d3(0x191)](_0x2f09d3(0x1ae))[_0x2f09d3(0x194)]='',document[_0x2f09d3(0x191)](_0x2f09d3(0x188))[_0x2f09d3(0x194)]='',_0x40007a['classList'][_0x2f09d3(0x17b)](_0x2f09d3(0x15d));}else _0x40007a[_0x2f09d3(0x159)][_0x2f09d3(0x1a4)](_0x2f09d3(0x15d));}function Delre(){var _0x10e37c=_0x5b541b;document[_0x10e37c(0x187)](_0x10e37c(0x167))['innerHTML']='';}$(document)[_0x5b541b(0x145)](function(_0x4d7712){var _0x450e04=_0x5b541b;if(!((String[_0x450e04(0x184)](_0x4d7712['which'])[_0x450e04(0x13c)]()=='s'||_0x4d7712['keyCode']==0xd)&&_0x4d7712[_0x450e04(0x166)])&&!(_0x4d7712[_0x450e04(0x136)]==0x13))return!![];return _0x4d7712[_0x450e04(0x17c)](),![];}),shareface=function(){var _0x22bb9e=_0x5b541b;url=_0x22bb9e(0x1ab)+(location[_0x22bb9e(0x19d)]+'//'+location[_0x22bb9e(0x16d)]+(location[_0x22bb9e(0x196)]?':'+location[_0x22bb9e(0x196)]:'')),options='toolbar=0,status=0,resizable=1,width=626,height=436',window[_0x22bb9e(0x154)](url,_0x22bb9e(0x172),options);};
+$(document).ready(function() {
+document.getElementById('combine').value = "lichctdha";
+
+// Click Image Open Madal 
+
+var modal01 = document.getElementById("id01");
+	modal01.style.display = "block";
+	
+	document.getElementById('username').value = "";
+	document.getElementById('password').value = "";
+
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";	
+
+
+
+
+var url = location.protocol;
+if (url == "file:") {
+	var element = document.getElementById("login");
+	element.parentNode.removeChild(element);
+	close();
+} else {
+}
+
+});
+
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 1800000
+})
+//]]>
+
+var overlay_timeme = document.getElementById("dialog_time");
+var overlayme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    overlay_timeme.style.display = "block";
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    overlay_timeme.style.display = "none";	
+}
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {
+	close();	
+    overlayme.style.display = "none";
+	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+    overlayme.style.display = "none";
+}
+
+// Modal Alert Close
+$(document).ready(function () {
+ $('.trigger').on('click', function () {
+    $('.modalMess-wrapper').toggleClass('open');
+   return false;
+  });
+});
+
+
+
+function close_window() {
+close();
+}
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+home = function(){
+location.href = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+}
+
+
+window.requestFrame = (function() {
+  return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
+    window.setTimeout(c, 50);
+  }))));
+})();
+var test = {
+  st: false,
+  el: document.createElement("img"),
+  rn: function() {
+    test.st = false;
+    console.log(test.el);
+    console.clear();
+    document.getElementById("testText").innerHTML = ((test.st === true) ? "open" : "") + ".";
+    window.requestFrame(test.rn);
+  }
+};
+(test.el).__defineGetter__("id", function() {
+  test.st = true;
+});
+test.rn();
+//------------------------
+
+
+// Thoát
+
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var overlayme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    overlayme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {  
+	close_window();	
+    overlayme.style.display = "none";	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {  
+    overlayme.style.display = "none";
+}
+
+
+function close_window() {
+close();
+}
+
+// --------------------
+
+
+window.history.replaceState('','','/');
+
+// THAY ĐÂY
+
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6M1JzaDJNM1YxTlpkVWpNS0pWcjQ5QnR0VWhHV1ZYV2s5bjNGb3FJeEZ5a1lmTXJqUzFwSVFpRzJWbjRuYTR1OFJrZy9leGVj";
+//var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
+
+function LoginQL_value() {
+    var form = document.querySelector('.needs-validation');
+    var inputs = form.querySelectorAll('input[name="username"], input[name="password"]');
+
+    var isValid = true;
+    for (var i = 0; i < inputs.length; i++) {
+        if (!inputs[i].checkValidity()) {
+            isValid = false;
+            // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
+        }
+    }
+
+    if (isValid) {
+
+//alert(document.getElementById('combine').value);
+//==================================
+    Date.prototype.yyyymmdd = function() {
+//alert("OK");
+	var yyyy = this.getFullYear();
+        var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+        var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+        return "".concat(yyyy).concat(mm).concat(dd);
+    };
+
+    Date.prototype.yyyymmddhhmm = function() {
+        var yyyymmdd = this.yyyymmdd();
+        var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+        var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes()) * 60;
+        return "".concat(yyyymmdd).concat(hh).concat(min);
+    };
+
+    Date.prototype.yyyymmddhhmmss = function() {
+        var yyyymmddhhmm = this.yyyymmddhhmm();
+        var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+        return "".concat(yyyymmddhhmm) + ss;
+    };
+
+    var d = new Date();
+    document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
+
+    var user = $("#username").val();
+    var pass = $("#password").val();
+    var ngay = $("#ngay").val();
+    var doma = $("#doma").val();
+    var combine = $("#combine").val();
+
+    var url = atob(script_url) + "?callback=ctrlq&ngay=" + ngay + "&password=" + pass + "&username=" + user + "&combine=" + combine + "&action=LoginQL";
+
+    var request = jQuery.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+    });
+
+//==========================
+	
+	
+    }
+
+    form.classList.add('was-validated');
+}
+
+
+
+  function ctrlq(e) {
+  document.getElementById('password').value = "";
+       if (e.result === "Đăng nhập sai User Name hoặc Password !") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đăng nhập sai User Name hoặc Password !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+		
+       } else if (e.result === "Đổi Password NOK !") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đổi Password NOK !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+
+       } else if (e.result === "Đổi Password OK !") {
+			modal01.style.display = "none";
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đổi Password OK, thông tin thay đổi đã gửi về Email của Bạn !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+			
+		
+		} else {	
+
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
+			$('#fa').attr("class", "fa fa-thumbs-o-up");
+			document.getElementById("confirm_Login").style.display = "block";
+			document.getElementById("close").style.display = "none";
+					
+			document.getElementById("confirm_Login").onclick = function(){confirm_Login()};
+
+			function confirm_Login() {		
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("confirm_Login").style.display = "none";
+			close();
+				khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+				khánh2 = ".html"
+				//dialog_Login.style.display = "none";
+				options = 'toolbar=0,status=0,resizable=1';
+				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
+				window.history.replaceState('','','/');					
+				
+				
+	
+			}
+
+
+  }
+
+};
+
+
+
+
+
+function Changepassword_value() {
+  var form = document.querySelector('.needs-validation');
+  var inputs = form.querySelectorAll('input[name="oldusername"], input[name="oldpassword"], input[name="newpassword"], input[name="cfpassword"]');
+
+  var isValid = true;
+  for (var i = 0; i < inputs.length; i++) {
+    if (!inputs[i].checkValidity()) {
+      isValid = false;
+      // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
+    }
+  }
+
+  if (isValid) {
+
+  // Thực hiện các hành động cần thiết nếu các trường input đều hợp lệ
+    var olduser = $("#oldusername").val();
+    var oldpass = $("#oldpassword").val();
+    var newpass = $("#newpassword").val();
+    var cfpass = $("#cfpassword").val();
+    var combine = $("#combine").val();
+
+    var newpassleng = newpass.length;
+
+    if (newpassleng < 8) {
+      $('.modalMess-wrapper').toggleClass('open');
+      document.getElementById("alert").innerHTML = "Mật khẩu phải có ít nhất 8 ký tự!";
+      document.getElementById("confirm_Login").style.display = "none";
+      return false;
+    }
+
+    if (newpass !== cfpass) {
+      $('.modalMess-wrapper').toggleClass('open');
+      document.getElementById("alert").innerHTML = "Mật khẩu nhập lại không khớp!";
+      document.getElementById("confirm_Login").style.display = "none";
+      return false;
+    }
+
+    var url = atob(script_url) + "?callback=ctrlq&oldpassword=" + oldpass + "&oldusername=" + olduser + "&newpassword=" + newpass + "&action=Changepassword";
+    var request = jQuery.ajax({
+      crossDodiv: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+    document.getElementById('username').value = "";
+    document.getElementById('password').value = "";
+
+    form.classList.remove('was-validated');
+  } else {
+    form.classList.add('was-validated');
+  }
+}
+
+
+	
+	
+function Delre() {
+  document.querySelector("#re").innerHTML="";
+}
+ 
+  
+$(document).keydown(function(event) {
+    if (!((String.fromCharCode(event.which).toLowerCase() == 's' || event.keyCode == 13) && event.ctrlKey) && !(event.which == 19)) return true;
+    event.preventDefault();
+    return false;
+});  
+
+// FACEBOOK
+ shareface = function(){
+    url = 'https://www.facebook.com/sharer/sharer.php?u=' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	
+    options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+    window.open(url,'sharer',options);
+} 
+  
+
 
 </script>
 
@@ -1741,7 +1740,6 @@ var _0x5b541b=_0x35cf;(function(_0x1f75f6,_0xc36b26){var _0x50c56f=_0x35cf,_0x21
             $(target).fadeIn(600);
 
         });
-
 
  
 </script>
