@@ -747,7 +747,10 @@ button:hover {
     transform: translate(-50%, -50%);
   }
 }
-
+.modal-content {
+  /* CSS hiện tại của nội dung modal */
+  overflow-y: auto;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
 .modalMess-wrapper {
@@ -1190,7 +1193,7 @@ font-size: 15px;
 
 </head>
 
-<body onload="adjustBodyHeight();">
+<body>
 
  
   <!-- Modal -->
@@ -1496,16 +1499,18 @@ var _0x537208=_0x33f5;(function(_0x285dc8,_0x152e4c){var _0x5c2c4b=_0x33f5,_0x55
 
 
 <script>
-  function adjustBodyHeight() {
-    var modal = document.getElementById('id01');
-    var windowHeight = window.innerHeight;
-    var modalHeight = modal.offsetHeight;
-    var newBodyHeight = Math.max(windowHeight, modalHeight) + 'px';
-    document.body.style.height = newBodyHeight;
+  function handleOrientationChange() {
+    var modalContent = document.querySelector('.modal-content');
+    if (window.innerWidth > window.innerHeight) {
+      modalContent.style.overflowY = 'hidden';
+    } else {
+      modalContent.style.overflowY = 'auto';
+    }
   }
 
-  window.addEventListener('resize', adjustBodyHeight);
+  window.addEventListener('resize', handleOrientationChange);
 </script>
+
 
 
 </body>
