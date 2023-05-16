@@ -742,19 +742,9 @@ button:hover {
 
 @media screen and (orientation: landscape) {
   .modal {
-    max-height: 100vh;
-  }
-}
-
-@media screen and (orientation: landscape) and (max-height: 600px) {
-  .modal {
-    top: 20%;
-  }
-}
-
-@media screen and (orientation: landscape) and (max-height: 400px) {
-  .modal {
-    top: 15%;
+    max-height: calc(100vh - 60px);
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
