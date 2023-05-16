@@ -935,9 +935,10 @@ font-size: 15px;
 
 #btn-Thoat {border-radius: 12px;}
 
-
 /* Modal Thông báo */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
 .modalMess-wrapper {
   position: fixed;
   top: 0;
@@ -979,12 +980,97 @@ font-size: 15px;
 @media (max-height: 600px) {
   .modalMess {
     top: 10%;
+    max-height: 80vh;
   }
 }
 
 @media (max-height: 400px) {
   .modalMess {
     top: 5%;
+    max-height: 90vh;
+  }
+}
+
+.headMess { 
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e2525c;
+  padding: 2px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.btn-close {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 7px;
+}
+
+.dialog-btn {
+  margin: 0;
+  margin-right: 10px;
+  padding: 3px 7px;
+  color: #fff;
+  background: #e2525c;
+  border: none;
+  border-radius: 26px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contentMess {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.good-job {
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #e2525c;
+}
+
+.good-job .fa-exclamation-circle {
+  font-size: 40px;
+}
+
+.good-job .fa-thumbs-o-up {
+  font-size: 45px;
+}
+
+.good-job h1 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .modalMess {
+    width: 90%;
+    max-height: calc(100vh
+    - 60px);
+  }
+}
+
+@media (max-height: 400px) {
+  .modalMess {
+    top: 5%;
+    max-height: 90vh;
   }
 }
 
@@ -1063,7 +1149,24 @@ font-size: 15px;
   }
 }
 
-	
+/* Thêm phần CSS bổ sung sau đây */
+@media screen and (orientation: landscape) {
+  .modalMess {
+    max-height: calc(100vh - 80px);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .modalMess {
+    top: 20%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 400px) {
+  .modalMess {
+    top: 15%;
+  }
+}
 	
 
 </style>
