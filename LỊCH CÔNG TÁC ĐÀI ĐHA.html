@@ -410,9 +410,8 @@ body {
   font-family: times new roman;
   border-radius: 5px;
   text-align: center;
-  margin-top:2px;
-  margin-bottom:20px;
-  
+  margin-top: 2px;
+  margin-bottom: 20px;
 }
     .tab-group {
         list-style: none;
@@ -722,26 +721,41 @@ button:hover {
 
 /* The Modal (background) */
 .modal {
-
   position: fixed;
   z-index: 1;
   border-radius: 1%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  min-height:800px;
+  min-height: 800px;
   width: 100%;
   height: auto;
   overflow: auto;
-  padding-top:55px;
-  padding-bottom:50px;
-  background: linear-gradient(to right, #21618c,#73c6b6);
-  
+  padding-top: 55px;
+  padding-bottom: 50px;
+  background: linear-gradient(to right, #21618c, #73c6b6);
 }
 
 .modal.show {
   display: block;
+}
+
+@media screen and (orientation: landscape) {
+  .modal {
+    max-height: 100vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .modal {
+    top: 20%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 400px) {
+  .modal {
+    top: 15%;
+  }
 }
 
 
