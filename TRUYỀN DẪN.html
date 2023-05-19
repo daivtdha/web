@@ -383,7 +383,7 @@ body {
   text-align: center;
 }
 
-.overlay {
+.Thoat {
   position: fixed;
   width: 100%;
   top: 0;
@@ -433,7 +433,7 @@ body {
   text-align: center;
 }
 
-.overlay_Login {
+.Thoat_Login {
   position: fixed;
   width: 100%;
   top: 0;
@@ -482,7 +482,7 @@ body {
   text-align: center;
 }
 
-.overlay_time {
+.Thoat_time {
   position: fixed;
   width: 100%;
   top: 0;
@@ -1657,11 +1657,10 @@ border-radius:5px 5px 5px 5px;
 
 
 	
-<div class="overlay" id="dialog-container">
+<div class="Thoat" id="dialog-container">
   <div class="popup">
   </br>	
     <p>Bạn có muốn Thoát không ?</p>
-	</br>	
     <div class="text-right">
       <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
       <button class="dialog-btn btn-primary" id="confirm">OK</button>
@@ -1669,11 +1668,10 @@ border-radius:5px 5px 5px 5px;
   </div>
 </div>
 <p id="testText"></p>
-<div class="overlay_time" id="dialog_time">
+<div class="Thoat_time" id="dialog_time">
   <div class="popup_time">
   </br>	
     <p>Thời gian lâu không dùng !</p>
-	</br>	
     <div class="text-right">
       <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
     </div>
@@ -1684,7 +1682,7 @@ border-radius:5px 5px 5px 5px;
 
 
 
-<div class="overlay_Login" id="dialog_Login2">
+<div class="Thoat_Login" id="dialog_Login2">
   <div class="popup_Login">
     <p>Đăng nhập OK !</p>
     <div class="text-right">
@@ -1772,12 +1770,12 @@ $(document).idle({
   onIdle: function(){
 	Search_dialog_time();
   },
-  idle: 1800000
+  idle: 180000
 })
 //]]>
 
-var overlay_timeme = document.getElementById("dialog_time");
-var overlayme = document.getElementById("testText");
+var Thoat_timeme = document.getElementById("dialog_time");
+var Thoatme = document.getElementById("testText");
 function Search_dialog_time(){
 if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
 close();
@@ -1788,34 +1786,34 @@ show_dialog_time();
 
 
 function show_dialog_time() {
-    overlay_timeme.style.display = "block";
+    Thoat_timeme.style.display = "block";
 }
 
 document.getElementById("confirm_time").onclick = function(){confirm_time()};
 function confirm_time() {
 	close();	
-    overlay_timeme.style.display = "none";	
+    Thoat_timeme.style.display = "none";	
 }
 
 
 // Thoát
 document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
-var overlayme = document.getElementById("dialog-container");
+var Thoatme = document.getElementById("dialog-container");
 
 function show_dialog() {
-    overlayme.style.display = "block";
+    Thoatme.style.display = "block";
 }
 
 document.getElementById("confirm").onclick = function(){confirm()};
 function confirm() {
 	close();	
-    overlayme.style.display = "none";
+    Thoatme.style.display = "none";
 	
 }
 
 document.getElementById("cancel").onclick = function(){cancel()};
 function cancel() {
-    overlayme.style.display = "none";
+    Thoatme.style.display = "none";
 }
 
 // Modal Alert Close
@@ -1866,21 +1864,21 @@ test.rn();
 // Thoát
 
 document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
-var overlayme = document.getElementById("dialog-container");
+var Thoatme = document.getElementById("dialog-container");
 
 function show_dialog() {
-    overlayme.style.display = "block";
+    Thoatme.style.display = "block";
 }
 
 document.getElementById("confirm").onclick = function(){confirm()};
 function confirm() {  
 	close_window();	
-    overlayme.style.display = "none";	
+    Thoatme.style.display = "none";	
 }
 
 document.getElementById("cancel").onclick = function(){cancel()};
 function cancel() {  
-    overlayme.style.display = "none";
+    Thoatme.style.display = "none";
 }
 
 
@@ -2002,7 +2000,10 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 		
 		} else {	
 
-
+			//dialog_Login.style.display = "block";
+			
+			
+			// Icon.classList.toggle('fa fa-thumbs-o-up');
 			modal01.style.display = "none";
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
@@ -2367,7 +2368,7 @@ var ten2 = document.getElementById("ten2");
 anh2.onclick  = function(){
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
 	//document.getElementById("chon").value = "trucca";
 	//document.getElementById("khuvuc").value = "dha";
 	document.getElementById("combine").value = "truccadhi";
