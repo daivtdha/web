@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
@@ -1735,7 +1733,8 @@ font-size: 15px;
 <div class="Thoat" id="dialog-container">
   <div class="popup">
   </br>	
-    <p>Bạn có muốn Thoát không ?</p>	
+    <p>Bạn có muốn Thoát không ?</p>
+      </br>
     <div class="text-right">
       <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
       <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
@@ -1814,84 +1813,6 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <script>
 
-// Selecting necessary DOM elements
-const captchaTextBox = document.querySelector(".captch_box input");
-const refreshButton = document.querySelector(".refresh_button");
-const captchaInputBox = document.querySelector(".captch_input input");
-const message = document.querySelector(".message");
-const submitButton = document.querySelector(".button");
-
-// Variable to store generated captcha
-let captchaText = null;
-
-// Function to generate captcha
-const generateCaptcha = () => {
-  const randomString = Math.random().toString(36).substring(2, 7);
-  const randomStringArray = randomString.split("");
-  const changeString = randomStringArray.map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char));
-  captchaText = changeString.join("   ");
-  captchaTextBox.value = captchaText;
-  console.log(captchaText);
-};
-
-const refreshBtnClick = () => {
-  generateCaptcha();
-  captchaInputBox.value = "";
-  captchaKeyUpValidate();
-};
-
-const captchaKeyUpValidate = () => {
-  //Toggle submit button disable class based on captcha input field.
-  submitButton.classList.toggle("disabled", !captchaInputBox.value);
-
-  if (!captchaInputBox.value) message.classList.remove("active");
-};
-
-// Function to validate the entered captcha
-const submitBtnClick = () => {
-  captchaText = captchaText
-    .split("")
-    .filter((char) => char !== " ")
-    .join("");
-  message.classList.add("active");
-  // Check if the entered captcha text is correct or not
-  if (captchaInputBox.value !== captchaText) {
-      message.innerText = "Kiểm tra lại nhập mã Captcha.";
-    message.style.color = "#FF2525";
-  
-
-  } else {
-    message.innerText = "Captcha đúng, bấm tiếp để Đăng Nhập.";
-    message.style.color = "#826afb";
-  }
-};
-
-// Add event listeners for the refresh button, captchaInputBox, submit button
-refreshButton.addEventListener("click", refreshBtnClick);
-captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
-submitButton.addEventListener("click", submitBtnClick);
-
-// Generate a captcha when the page loads
-generateCaptcha(); 
-
-//==========Hàm này check Input Form (Phải có)==============
-(function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-	  
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-		}, false)
-    }
-	)
-})()
 </script>
 
 
