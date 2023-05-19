@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link href="DangNhap/bootstrap.min.css" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -247,7 +246,7 @@ body {
   color: #21618c;
   background-color: #f2e7cf;
   background-color: #fff;
-  transform: scaleY(1.0);
+  transform: scaleY(1.1);
   transform-origin: center bottom;
 }
 
@@ -434,7 +433,17 @@ body {
   text-align: center;
 }
 
-
+.overlay_Login {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
 
 @media (min-width: 768px) {
   .popup_Login {
@@ -756,15 +765,15 @@ a {
 
 /* FORM LOGIN CỦ*/
     .form {
-        background:white;
+        background: #21618c;
         padding: 25px;
         max-width: auto;
 		width: 700px;
         margin: 0px auto;
         font-family:times new roman;
-		border-radius: 5px 5px 5px 5px;
-		text-align: center;
-		margin:0 auto
+	border-radius: 5px 5px 5px 5px;
+	text-align: center;
+	margin:0 auto
         
     }
 
@@ -772,11 +781,12 @@ a {
         list-style: none;
         padding: 0;
         margin: 0 0 0px 0;
-		border-radius: 26px 26px 26px 26px;
-		background:white;	
-		width:100%;
-		display:flex;
-		justify-content:center;
+	border-radius: 26px 26px 26px 26px;
+	background: #21618c;	
+
+	width:100%;
+	display:flex;
+	justify-content:center;
 			
     }
 
@@ -786,9 +796,9 @@ a {
         content: "";
         display: table;
         clear: both;
-		background: #21618c;
+	background: #21618c;
         color:black;
-		border-radius: 26px 26px 26px 26px;
+	border-radius: 26px 26px 26px 26px;
     }
 
     .tab-group li a {
@@ -799,29 +809,30 @@ a {
         color:black;
         font-size: 16px;
         float: left;
+
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
-		border-radius: 26px 26px 26px 26px;
-		width:130px;
-		height: 28px;
-		line-height: 25px;
+	border-radius: 26px 26px 26px 26px;
+	width:130px;
+	height: 28px;
+	line-height: 25px;
      }
 
     .tab-group li a:hover {
-        background: #3498db;
-        color:white;
-		border-radius: 26px 26px 26px 26px;
+        background:white;
+        color:black;
+	border-radius: 26px 26px 26px 26px;
 
     }
 
     .tab-group .active a {
-        background:#006699;
-        color:white;
-		border-radius: 26px 26px 26px 26px;
-		width:130px;
-		height: 28px;
-		line-height: 25px;
+        background:#fef9e7;
+        color:black;
+	border-radius: 26px 26px 26px 26px;
+	width:130px;
+	height: 28px;
+	line-height: 25px;
     }
 
 	
@@ -1021,7 +1032,7 @@ form .pass-txt{
 }
 
 form input[type="submit"]{
-  height: 35px;
+  height: 45px;
   margin-top: 30px;
   color: #fff;
   padding: 0;
@@ -1099,12 +1110,9 @@ span.psw {
   width: auto%; /* Full width */
   height: auto; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #669999; /* Fallback color */
-  background-color:#006699; /* Black w/ opacity */
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
   padding-top: 0px;
-  padding-bottom:30px;
-  padding-left:30px;
-  padding-right:30px;
 }
 
 
@@ -1423,10 +1431,7 @@ border-radius:5px 5px 5px 5px;
   margin: 10px 0;
 }
 
-/* Thông báo Input */
 
-
-/* End Thông báo Input */
 
 </style>
 
@@ -1459,12 +1464,12 @@ border-radius:5px 5px 5px 5px;
 
 <div id="id01" class="modal">
   
-	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
-			
+	  <form class="modal-content animate" action="/action_page.php" method="post">
+	  
 		<div class="imgcontainer">
 		
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close">❌</span>
-		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
+		  <h2 id="dn" style="font-size: 1em; font-weight: bold"; value=""></h2>
 		</div><!-- Modal -->
 
 	<p type = "text" id="ngay"></p>
@@ -1475,24 +1480,27 @@ border-radius:5px 5px 5px 5px;
 
 			<ul class="tab-group">
 
-            <li style="background: white"; width="130px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li style="background: #21618c"; width="130px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
 
-            <li style="background: white"; width="130px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+            <li style="background: #21618c"; width="130px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 			</ul>
+
+			</br>
 					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
+					
 					<div id="loader2"></div>
 					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
         <div class="tab-content">
 
 
             <div id="login">
-
-			<form>	
+				<form>	
 				<p type = "text" id = "chon"  </p>
 				<p type = "text" id = "combine" </p>
 				<p id="chonlog" type = "text" value=""</p>
-
+				</br>
+				
 				<div id="khuvuc1" class="field-wrap">
 				  <select  id="khuvuc" class="dropdown" placeholder="Please choose">
 					<option value="dha" selected="selected">Đông hà</option>
@@ -1500,28 +1508,22 @@ border-radius:5px 5px 5px 5px;
 					<option value="hue" >Huế</option>				   
 				  </select>
 				</div>
-			
-				
+
 				<div class="field username">
-                    <div class="field-wrap">
-                        <input name="username" id="username" type="text" class="form-control"  placeholder="Username" required>
-						<i class="icon fas fa-user" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Username.
-						</div>
+                    <div class="field-wrap" autocomplete="off">
+                        <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
+						<i class="icon fas fa-user"></i>
                     </div>
 				</div>
 				
 				 <div class="field password">
                     <div class="field-wrap">
-                        <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Password.
-						</div> 
-					</div>				
+                        <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
+                    </div>				
 				 </div>
-				<input class="button button-block" type = "submit" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
+				 
+				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
                 </form>
 
             </div>
@@ -1529,26 +1531,20 @@ border-radius:5px 5px 5px 5px;
 
 
             <div id="changepass">
-				</br>
+
                 <form>                
 				  
 				  <div class="field username">
 					<div class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="Username" required>
-						<i class="icon fas fa-user" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Username.
-						</div> 
-						</div>
+                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+						<i class="icon fas fa-user"></i>
+                    </div>
 					</div>
 
 					<div class="field password">
                     <div class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Password" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Password hiện tại.
-						</div> 
+                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
                     </div>
 					</div>
                   
@@ -1556,25 +1552,19 @@ border-radius:5px 5px 5px 5px;
 
                     <div class="field password">
 					<div class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="NewPassword" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền Password mới.
-						</div>
+                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
                     </div>
 					</div>
 
                     <div class="field password">
 					<div class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Confirm NewPassword" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Điền lại Password mới.
-						</div>
+                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
+						<i class="icon fas fa-lock"></i>
                     </div>
-					</div>					
-				 
-				<input class="button button-block" type = "submit" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+					</div>
+					
+				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
 
                 </form>
 
@@ -1589,7 +1579,7 @@ border-radius:5px 5px 5px 5px;
 </form><!-- Modal -->
 </div>
 
-		
+
   <h1 class="main-heading">TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</h1>
 
   <div class="wrap">
@@ -1694,6 +1684,15 @@ border-radius:5px 5px 5px 5px;
 
 
 
+<div class="overlay_Login" id="dialog_Login2">
+  <div class="popup_Login">
+    <p>Đăng nhập OK !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_Login2">OK</button>
+    </div>
+  </div>
+</div> 
+
 <div class="modalMess-wrapper">
   <div class="modalMess">
     <div class="headMess">
@@ -1714,11 +1713,9 @@ border-radius:5px 5px 5px 5px;
   </div>	
  </div>
 
-
+ 
 <script src="TruyenDanPicture/Droplist.min.js"></script>
 <script src="CapQuangPicture/Login.min.js"></script>
-
-<script src="DangNhap/bootstrap.bundle.min.js"></script>
 
 
  <script id="rendered-js">
@@ -1749,23 +1746,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
 <script>
-(function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-	  
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
 
-        form.classList.add('was-validated')
-		}, false)
-    }
-	)
-})()
+
 </script>
 
 
@@ -1920,6 +1902,8 @@ var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6czZWUD
 
   function LoginQL_value() {
 
+
+
 Date.prototype.yyyymmdd = function() {
   var yyyy = this.getFullYear();
   var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
@@ -1959,6 +1943,9 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
       method: "GET",
       dataType: "jsonp"
     });
+
+
+
 	
     var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+ "&combine="+combine+"&action=LoginQL";
 
@@ -2015,10 +2002,7 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 		
 		} else {	
 
-			//dialog_Login.style.display = "block";
-			
-			
-			// Icon.classList.toggle('fa fa-thumbs-o-up');
+
 			modal01.style.display = "none";
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
@@ -2357,14 +2341,6 @@ var anh1 = document.getElementById("anh1");
 var ten1 = document.getElementById("ten1");
 anh1.onclick  = function(){
 
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";	
-	
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	//document.getElementById("dn").innerHTML = "";
@@ -2375,14 +2351,6 @@ anh1.onclick  = function(){
 	//Combine();
 }
 ten1.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-	
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
@@ -2397,17 +2365,9 @@ ten1.onclick  = function(){
 var anh2 = document.getElementById("anh2");
 var ten2 = document.getElementById("ten2");
 anh2.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
 	//document.getElementById("chon").value = "trucca";
 	//document.getElementById("khuvuc").value = "dha";
 	document.getElementById("combine").value = "truccadhi";
@@ -2415,14 +2375,6 @@ anh2.onclick  = function(){
 	//Combine();
 }
 ten2.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
@@ -2437,14 +2389,6 @@ ten2.onclick  = function(){
 var anh3 = document.getElementById("anh3");
 var ten3 = document.getElementById("ten3");
 anh3.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
@@ -2455,14 +2399,6 @@ anh3.onclick  = function(){
 	//Combine();
 }
 ten3.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
@@ -2477,14 +2413,6 @@ ten3.onclick  = function(){
 var anh4 = document.getElementById("anh4");
 var ten4 = document.getElementById("ten4");
 anh4.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
@@ -2493,14 +2421,6 @@ anh4.onclick  = function(){
 	//Combine();
 }
 ten4.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
@@ -2513,14 +2433,6 @@ ten4.onclick  = function(){
 var anh5 = document.getElementById("anh5");
 var ten5 = document.getElementById("ten5");
 anh5.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
@@ -2529,14 +2441,6 @@ anh5.onclick  = function(){
 	//Combine();
 }
 ten5.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
@@ -2548,14 +2452,6 @@ ten5.onclick  = function(){
 var anh6 = document.getElementById("anh6");
 var ten6 = document.getElementById("ten6");
 anh6.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUẾ";
@@ -2564,14 +2460,6 @@ anh6.onclick  = function(){
 	//Combine();
 }
 ten6.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUE";
@@ -2585,14 +2473,6 @@ ten6.onclick  = function(){
 var anh7 = document.getElementById("anh7");
 var ten7 = document.getElementById("ten7");
 anh7.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
@@ -2601,14 +2481,6 @@ anh7.onclick  = function(){
 	//Combine();
 }
 ten7.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
@@ -2621,14 +2493,6 @@ ten7.onclick  = function(){
 var anh8 = document.getElementById("anh8");
 var ten8 = document.getElementById("ten8");
 anh8.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
@@ -2637,14 +2501,6 @@ anh8.onclick  = function(){
 	//Combine();
 }
 ten8.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
@@ -2656,14 +2512,6 @@ ten8.onclick  = function(){
 var anh9 = document.getElementById("anh9");
 var ten9 = document.getElementById("ten9");
 anh9.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM TD";
@@ -2672,14 +2520,6 @@ anh9.onclick  = function(){
 	//Combine();
 }
 ten9.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
