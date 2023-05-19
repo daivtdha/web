@@ -68,7 +68,7 @@
 
 /* TABLE */
 
-.mytable table{
+.mytable table {
     border-collapse: collapse;
 	display: block;
 	width:auto;
@@ -77,126 +77,90 @@
 	margin:0 auto;
   text-align: left;
   position: relative;
+}	
 	
-}
-
-.mytable th {
-	text-align: center;
-	color: white;
-    background-color: #808b96;
-	position: sticky;
-	top: 0;
-}
-
-
-
-.mytable table th { /* Multicolored border */
+.mytable th { /* Multicolored border */
     border: 1px solid red;
-	text-align: center;
+    text-align: center;
 }
 
-
-.mytable table td { /* Multicolored border */
+.mytable td { /* Multicolored border */
     border: 1px solid;
     border-color: #f00 #0f0 #00f #f0f;
-	text-align: left;
+    text-align: left;
 }
 
-
-.mytable table tr:hover td {
+.mytable tr:hover td {
     background: #85c1e9;
+} 
+
+.mytable th {
+    cursor: pointer;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    background: #154360;
+    color:white;
+    text-transform: capitalize;
+    vertical-align: baseline;
+    white-space: nowrap;
+    padding: 1px;
+    border: 1px solid red;
 }
 
-
-.mytable tr:nth-child(even) {
-	background-color:white;
-	text-align: left;
-  }
-.mytable tr:nth-child(odd) {
-	background-color:white;
-	text-align: left;
-  } 
-
-.mytable table tr:hover td {
-    background: #85c1e9;
-}  
-
-/* fixed table header and first two columns   https://stackoverflow.com/questions/53499803/make-table-header-and-first-two-columns-fixed  */
-  
-.mytable th:first-child {
-  position:sticky;
-  left:0;
-  z-index:20;
-  background-color:#006699;
-    border: 2px solid;
-    border-color: #f00 #0f0 #00f #f0f;
+.mytable th:hover {
+    color:white;
+    cursor: pointer;
 }
 
+.mytable th:hover::after {
+    color: white;
+    font-size: 1.2em;
+    content: ' \025B8';
+}
+
+.mytable th::after {
+    font-size: 1.2em;
+    color: transparent;
+    content: ' \025B8';
+} 
+
+/* fixed table header and first two columns */
+ .mytable th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 20;
+    text-align: center;
+    border-right: 1px solid #ddd;
+
+}
+
+.mytable th:nth-child(2) {
+    position: sticky;
+    left: 35px;
+    z-index: 20;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
 
 .mytable td:first-child {
-  position:sticky;
-  left:0;
-  z-index:20;
-  background-color:white;
-    border: 2px solid;
-    border-color: #f00 #0f0 #00f #f0f;
-
+    position: sticky;
+    left: 0;
+    z-index: 19;
+    text-align: center;
+    border-right: 1px solid #ddd;
+	background-color:white;
 }
 
-
-.mytable th:nth-child(2)  { 
-position:sticky;
-  left:40px;
-  z-index:20;
-  background-color:#006699;
-    border: 2px solid;
-    border-color: #f00 #0f0 #00f #f0f;
-  }
-
-.mytable td:nth-child(2)  { 
-position:sticky;
-  left:40px;
-  z-index:20;
-  background-color:white;
-    border: 2px solid;
-    border-color: #f00 #0f0 #00f #f0f;
-  }  
-  
-  
-.mytable th:first-child , th:nth-child(2) {
-  z-index:31
-  }
-  
-  
-.sortable th {
-  background:#006699;
-  color: #fff;
-  cursor: pointer;
-  font-weight: normal;
-  text-align: left;
-  text-transform: capitalize;
-  vertical-align: baseline;
-  white-space: nowrap;
-   padding: 7px;
+.mytable td:nth-child(2) {
+    position: sticky;
+    left: 35px;
+    z-index: 19;
+    text-align: center;
+    border-right: 1px solid #ddd;
+	background-color:white;
 }
 
-.sortable th:hover {
-  color:white;
-  cursor: pointer;
-}
-
-.sortable th:hover::after {
-  color: inherit;
-  font-size: 1.2em;
-  content: ' \025B8';
-}
-
-.sortable th::after {
-  font-size: 1.2em;
-  color: transparent;
-  content: ' \025B8';
-}  
-  
 /* END TABLE */  
 
 
