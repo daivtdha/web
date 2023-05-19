@@ -1541,12 +1541,13 @@ font-size: 15px;
 
 
 <div id="id01" class="modal">
-	<span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>  
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close">❌</span>  
 	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
-			
-		<div class="imgcontainer">		
+	  
+		<div class="imgcontainer">
+		
 
-		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
+		  
 		</div><!-- Modal -->
 
 	<p type = "text" id="ngay"></p>
@@ -1554,27 +1555,30 @@ font-size: 15px;
 
 
     <div class="form">
-
+<h2 id="dn" style="background:white; font-size: 1em; font-weight: bold"; value=""></h2>
 			<ul class="tab-group">
 
-            <li style="background: white"; width="135px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li style="background:white"; width="130px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
 
-            <li style="background: white"; width="135px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+            <li style="background:white"; width="130px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 			</ul>
+
+			</br>
 					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
+					
 					<div id="loader2"></div>
 					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
         <div class="tab-content">
 
 
             <div id="login">
-
-			<form>	
+				<form>	
 				<p type = "text" id = "chon"  </p>
 				<p type = "text" id = "combine" </p>
 				<p id="chonlog" type = "text" value=""</p>
-
+				</br>
+				
 				<div id="khuvuc1" class="field-wrap">
 				  <select  id="khuvuc" class="dropdown" placeholder="Please choose">
 					<option value="dha" selected="selected">Đông hà</option>
@@ -1582,14 +1586,13 @@ font-size: 15px;
 					<option value="hue" >Huế</option>				   
 				  </select>
 				</div>
-			
-				
+
 				<div class="field username">
                     <div class="field-wrap">
                         <input name="username" id="username" type="text" class="form-control"  placeholder="User" required>
 						<i class="icon fas fa-user" style="left:10px;"></i>
 						<div class="invalid-feedback" style="text-align: left;">
-						Điền User.
+						Chưa điền User.
 						</div>
                     </div>
 				</div>
@@ -1599,7 +1602,7 @@ font-size: 15px;
                         <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
 						<i class="icon fas fa-lock" style="left:10px;"></i>
 						<div class="invalid-feedback" style="text-align: left;">
-							Điền Mật khẩu.
+							Chưa điền Mật khẩu.
 						</div> 
 					</div>				
 				 </div>
@@ -1620,9 +1623,14 @@ font-size: 15px;
 					  </div>
 					</div>
 
-				 <input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
+
+
+				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
                 </form>
 
+				
+				
+				
             </div>
 
 
@@ -1636,7 +1644,7 @@ font-size: 15px;
                         <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="User" required>
 						<i class="icon fas fa-user" style="left:10px;"></i>
 						<div class="invalid-feedback" style="text-align: left;">
-							Điền User.
+							Chưa điền User.
 						</div> 
 						</div>
 					</div>
@@ -1646,7 +1654,7 @@ font-size: 15px;
                         <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu" required>
 						<i class="icon fas fa-lock" style="left:10px;"></i>
 						<div class="invalid-feedback" style="text-align: left;">
-							Điền Mật khẩu hiện tại.
+							Chưa điền Mật khẩu hiện tại.
 						</div> 
                     </div>
 					</div>
@@ -1658,7 +1666,7 @@ font-size: 15px;
                         <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
 						<i class="icon fas fa-lock" style="left:10px;"></i>
 						<div class="invalid-feedback" style="text-align: left;">
-							Điền Mật khẩu mới.
+							Chưa điền Mật khẩu mới.
 						</div>
                     </div>
 					</div>
@@ -1668,13 +1676,12 @@ font-size: 15px;
                         <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
 						<i class="icon fas fa-lock" style="left:10px;"></i>
 						<div class="invalid-feedback" style="text-align: left;">
-							Điền lại Mật khẩu mới.
+							Chưa điền lại Mật khẩu mới.
 						</div>
                     </div>
 					</div>					
-
-					
-				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
+				 
+				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
 
                 </form>
 
@@ -1846,7 +1853,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
 <script>
-//==========Check Input Captchar (Phải có)==============
+
 // Selecting necessary DOM elements
 const captchaTextBox = document.querySelector(".captch_box input");
 const refreshButton = document.querySelector(".refresh_button");
@@ -1930,9 +1937,18 @@ generateCaptcha();
 <script type="text/javascript">//<![CDATA[
 
 $(document).ready(function() {
+	
+	document.getElementById('username').value = "";
+	document.getElementById('password').value = "";
+
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";	
+
 
 var url = location.protocol;
-if (url == "file:") {
+if (url == "file:khanh") {
 	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
@@ -1951,8 +1967,8 @@ $(document).idle({
 })
 //]]>
 
-var overlay_timeme = document.getElementById("dialog_time");
-var overlayme = document.getElementById("testText");
+var Thoat_timeme = document.getElementById("dialog_time");
+var Thoatme = document.getElementById("testText");
 function Search_dialog_time(){
 if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
 close();
@@ -1963,34 +1979,34 @@ show_dialog_time();
 
 
 function show_dialog_time() {
-    overlay_timeme.style.display = "block";
+    Thoat_timeme.style.display = "block";
 }
 
 document.getElementById("confirm_time").onclick = function(){confirm_time()};
 function confirm_time() {
 	close();	
-    overlay_timeme.style.display = "none";	
+    Thoat_timeme.style.display = "none";	
 }
 
 
 // Thoát
 document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
-var overlayme = document.getElementById("dialog-container");
+var Thoatme = document.getElementById("dialog-container");
 
 function show_dialog() {
-    overlayme.style.display = "block";
+    Thoatme.style.display = "block";
 }
 
 document.getElementById("confirm").onclick = function(){confirm()};
 function confirm() {
 	close();	
-    overlayme.style.display = "none";
+    Thoatme.style.display = "none";
 	
 }
 
 document.getElementById("cancel").onclick = function(){cancel()};
 function cancel() {
-    overlayme.style.display = "none";
+    Thoatme.style.display = "none";
 }
 
 // Modal Alert Close
@@ -2041,21 +2057,21 @@ test.rn();
 // Thoát
 
 document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
-var overlayme = document.getElementById("dialog-container");
+var Thoatme = document.getElementById("dialog-container");
 
 function show_dialog() {
-    overlayme.style.display = "block";
+    Thoatme.style.display = "block";
 }
 
 document.getElementById("confirm").onclick = function(){confirm()};
 function confirm() {  
 	close_window();	
-    overlayme.style.display = "none";	
+    Thoatme.style.display = "none";	
 }
 
 document.getElementById("cancel").onclick = function(){cancel()};
 function cancel() {  
-    overlayme.style.display = "none";
+    Thoatme.style.display = "none";
 }
 
 
@@ -2064,8 +2080,6 @@ close();
 }
 
 // --------------------
-
-
 
 
 window.history.replaceState('','','/');
@@ -2146,6 +2160,7 @@ function LoginQL_value() {
 
 
 
+
   function ctrlq(e) {
   document.getElementById('password').value = "";
        if (e.result === "Đăng nhập sai User Name hoặc Password !") {
@@ -2170,31 +2185,25 @@ function LoginQL_value() {
 		
 		} else {	
 
-			//dialog_Login.style.display = "block";
-			
-			
-			// Icon.classList.toggle('fa fa-thumbs-o-up');
-			modal01.style.display = "none";
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
 			$('#fa').attr("class", "fa fa-thumbs-o-up");
 			document.getElementById("confirm_Login").style.display = "block";
 			document.getElementById("close").style.display = "none";
-					
 			document.getElementById("confirm_Login").onclick = function(){confirm_Login()};
 
 			function confirm_Login() {		
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("confirm_Login").style.display = "none";
-			close();
+			
 				khánh1 = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
 				khánh2 = ".html"
 				//dialog_Login.style.display = "none";
 				options = 'toolbar=0,status=0,resizable=1';
 				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
-				window.history.replaceState('','','/');				
+				window.history.replaceState('','','/');					
 				
-				
+				close();
 	
 			}
 
@@ -2202,6 +2211,7 @@ function LoginQL_value() {
   }
 
 };
+
 
 
 
@@ -2230,7 +2240,7 @@ function Changepassword_value() {
 
     if (newpassleng < 8) {
       $('.modalMess-wrapper').toggleClass('open');
-      document.getElementById("alert").innerHTML = "Mật khẩu phải có ít nhất 8 ký tự!";
+      document.getElementById("alert").innerHTML = "Mật khẩu mới phải có ít nhất 8 ký tự!";
       document.getElementById("confirm_Login").style.display = "none";
       return false;
     }
@@ -2279,7 +2289,7 @@ $(document).keydown(function(event) {
 	
     options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
     window.open(url,'sharer',options);
-} 
+}
   
 
 
@@ -2288,7 +2298,6 @@ $(document).keydown(function(event) {
 
 
 <script id="rendered-js">
-
 let ul = document.querySelector('.tab-list__list');
 let links = document.querySelectorAll('.tab-list__link');
 let tabs = document.querySelectorAll('.tab__box');
@@ -2492,14 +2501,6 @@ var anh1 = document.getElementById("anh1");
 var ten1 = document.getElementById("ten1");
 anh1.onclick  = function(){
 
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";	
-	
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	//document.getElementById("dn").innerHTML = "";
@@ -2510,14 +2511,6 @@ anh1.onclick  = function(){
 	//Combine();
 }
 ten1.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-	
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
@@ -2532,14 +2525,6 @@ ten1.onclick  = function(){
 var anh2 = document.getElementById("anh2");
 var ten2 = document.getElementById("ten2");
 anh2.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
@@ -2550,14 +2535,6 @@ anh2.onclick  = function(){
 	//Combine();
 }
 ten2.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
@@ -2572,14 +2549,6 @@ ten2.onclick  = function(){
 var anh3 = document.getElementById("anh3");
 var ten3 = document.getElementById("ten3");
 anh3.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
@@ -2590,14 +2559,6 @@ anh3.onclick  = function(){
 	//Combine();
 }
 ten3.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
@@ -2612,14 +2573,6 @@ ten3.onclick  = function(){
 var anh4 = document.getElementById("anh4");
 var ten4 = document.getElementById("ten4");
 anh4.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
@@ -2628,14 +2581,6 @@ anh4.onclick  = function(){
 	//Combine();
 }
 ten4.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
@@ -2648,14 +2593,6 @@ ten4.onclick  = function(){
 var anh5 = document.getElementById("anh5");
 var ten5 = document.getElementById("ten5");
 anh5.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
@@ -2664,14 +2601,6 @@ anh5.onclick  = function(){
 	//Combine();
 }
 ten5.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
@@ -2683,14 +2612,6 @@ ten5.onclick  = function(){
 var anh6 = document.getElementById("anh6");
 var ten6 = document.getElementById("ten6");
 anh6.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUẾ";
@@ -2699,14 +2620,6 @@ anh6.onclick  = function(){
 	//Combine();
 }
 ten6.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUE";
@@ -2720,14 +2633,6 @@ ten6.onclick  = function(){
 var anh7 = document.getElementById("anh7");
 var ten7 = document.getElementById("ten7");
 anh7.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
@@ -2736,14 +2641,6 @@ anh7.onclick  = function(){
 	//Combine();
 }
 ten7.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
@@ -2756,14 +2653,6 @@ ten7.onclick  = function(){
 var anh8 = document.getElementById("anh8");
 var ten8 = document.getElementById("ten8");
 anh8.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
@@ -2772,14 +2661,6 @@ anh8.onclick  = function(){
 	//Combine();
 }
 ten8.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
@@ -2791,14 +2672,6 @@ ten8.onclick  = function(){
 var anh9 = document.getElementById("anh9");
 var ten9 = document.getElementById("ten9");
 anh9.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM TD";
@@ -2807,14 +2680,6 @@ anh9.onclick  = function(){
 	//Combine();
 }
 ten9.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
