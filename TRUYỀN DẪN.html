@@ -1804,23 +1804,7 @@ const captchaKeyUpValidate = () => {
 };
 
 // Function to validate the entered captcha
-const submitBtnClick = () => {
-  captchaText = captchaText
-    .split("")
-    .filter((char) => char !== " ")
-    .join("");
-  message.classList.add("active");
-  // Check if the entered captcha text is correct or not
-  if (captchaInputBox.value !== captchaText) {
-      message.innerText = "Kiểm tra lại nhập mã Captcha.";
-    message.style.color = "#FF2525";
-  
 
-  } else {
-    message.innerText = "Captcha đúng, bấm tiếp để Đăng Nhập.";
-    message.style.color = "#826afb";
-  }
-};
 
 // Add event listeners for the refresh button, captchaInputBox, submit button
 refreshButton.addEventListener("click", refreshBtnClick);
@@ -1870,7 +1854,7 @@ $(document).idle({
   onIdle: function(){
 	Search_dialog_time();
   },
-  idle: 1800000
+  idle: 180000
 })
 //]]>
 
@@ -1989,6 +1973,8 @@ close();
 // --------------------
 
 
+
+
 window.history.replaceState('','','/');
 
 // THAY ĐÂY
@@ -1996,68 +1982,83 @@ window.history.replaceState('','','/');
 var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6czZWUDA5Z21vckhSRTNDZ2cwRnlZdGR0VnZFWGlkWFE4SUN4Mk10d1pVeHRwNW51T0t4dGc1ckthZEN4d0FtWURYUS9leGVj";
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
-function LoginQL_value() {
-    var form = document.querySelector('.needs-validation');
-    var inputs = form.querySelectorAll('input[name="username"], input[name="password"]');
+  function LoginQL_value() {
 
-    var isValid = true;
-    for (var i = 0; i < inputs.length; i++) {
-        if (!inputs[i].checkValidity()) {
-            isValid = false;
-            // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
-        }
-    }
 
-    if (isValid) {
-//==================================
-    Date.prototype.yyyymmdd = function() {
-//alert("OK");
-	var yyyy = this.getFullYear();
-        var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
-        var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
-        return "".concat(yyyy).concat(mm).concat(dd);
-    };
 
-    Date.prototype.yyyymmddhhmm = function() {
-        var yyyymmdd = this.yyyymmdd();
-        var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
-        var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes()) * 60;
-        return "".concat(yyyymmdd).concat(hh).concat(min);
-    };
+Date.prototype.yyyymmdd = function() {
+  var yyyy = this.getFullYear();
+  var mm = this.getMonth() < 9 ? "0" + (this.getMonth() + 1) : (this.getMonth() + 1); // getMonth() is zero-based
+  var dd = this.getDate() < 10 ? "0" + this.getDate() : this.getDate();
+  return "".concat(yyyy).concat(mm).concat(dd);
+};
 
-    Date.prototype.yyyymmddhhmmss = function() {
-        var yyyymmddhhmm = this.yyyymmddhhmm();
-        var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
-        return "".concat(yyyymmddhhmm) + ss;
-    };
+Date.prototype.yyyymmddhhmm = function() {
+  var yyyymmdd = this.yyyymmdd();
+  var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
+  var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
+  return "".concat(yyyymmdd).concat(hh).concat(min);
+};
 
-    var d = new Date();
-    document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
+Date.prototype.yyyymmddhhmmss = function() {
+  var yyyymmddhhmm = this.yyyymmddhhmm();
+  var ss = this.getSeconds() < 10 ? "0" + this.getSeconds() : this.getSeconds();
+  return "".concat(yyyymmddhhmm)+ss;
+};
 
-    var user = $("#username").val();
-    var pass = $("#password").val();
-    var ngay = $("#ngay").val();
-    var doma = $("#doma").val();
-    var combine = $("#combine").val();
+var d = new Date();
+document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 
-    var url = atob(script_url) + "?callback=ctrlq&ngay=" + ngay + "&password=" + pass + "&username=" + user + "&doma=" + doma + "&combine=" + combine + "&action=LoginQL";
+
+	var user=$("#username").val();
+	var pass= $("#password").val();
+	var ngay= $("#ngay").val();
+	var doma= $("#doma").val();
+	var combine= $("#combine").val();
+		
+    //var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Updatetime";
+  
 
     var request = jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
     });
 
-//==========================
+
+
 	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+ "&combine="+combine+"&action=LoginQL";
+
+	if (document.getElementById('username').value === "") {
+		$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+		document.getElementById("alert").innerHTML = "Chưa nhập Username !";
+		document.getElementById("confirm_Login").style.display = "none";
+		return false;
 	
-    }
+	}	
+	
+	if (document.getElementById('password').value === "") {
+		$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+		document.getElementById("alert").innerHTML = "Chưa nhập Password !";
+		document.getElementById("confirm_Login").style.display = "none";
+		return false;
+	
+	}
+	
 
-    form.classList.add('was-validated');
-}
+	
+    var request = jQuery.ajax({
+      crossDodiv: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
 
 
+  }
 
   function ctrlq(e) {
   document.getElementById('password').value = "";
@@ -2083,6 +2084,7 @@ function LoginQL_value() {
 		
 		} else {	
 
+
 			modal01.style.display = "none";
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
@@ -2101,7 +2103,7 @@ function LoginQL_value() {
 				//dialog_Login.style.display = "none";
 				options = 'toolbar=0,status=0,resizable=1';
 				window.open(khánh1 + "/" + e.result + khánh2,'sharer',options);				
-				window.history.replaceState('','','/');					
+				window.history.replaceState('','','/');				
 				
 				
 	
@@ -2117,59 +2119,78 @@ function LoginQL_value() {
 
 
 function Changepassword_value() {
-  var form = document.querySelector('.needs-validation');
-  var inputs = form.querySelectorAll('input[name="oldusername"], input[name="oldpassword"], input[name="newpassword"], input[name="cfpassword"]');
+//alert(document.getElementById("combine").value);
+	var olduser=$("#oldusername").val();
+	var oldpass= $("#oldpassword").val();
+	var newpass= $("#newpassword").val();
+	var cfpass= $("#cfpassword").val();
+	var combine= $("#combine").val();
+	
+	var newpassleng = newpass.length;
+	
+    //var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&combine="+combine+"&action=Changepassword";
+	var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
 
-  var isValid = true;
-  for (var i = 0; i < inputs.length; i++) {
-    if (!inputs[i].checkValidity()) {
-      isValid = false;
-      // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
-    }
-  }
+	if (document.getElementById('oldusername').value === "") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Chưa nhập Username !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+	
+	}	
+	
+	if (document.getElementById('oldpassword').value === "") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Chưa nhập Password !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+	
+	}
 
-  if (isValid) {
-    // Thực hiện các hành động cần thiết nếu các trường input đều hợp lệ
-    var olduser = $("#oldusername").val();
-    var oldpass = $("#oldpassword").val();
-    var newpass = $("#newpassword").val();
-    var cfpass = $("#cfpassword").val();
-    var combine = $("#combine").val();
+	if (document.getElementById('newpassword').value === "") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Chưa nhập Password mới !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+	
+	}
+	if(newpassleng < 8) {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Password tối thiểu 8 ký tự !";
+			document.getElementById("confirm_Login").style.display = "none";			
+		return false;
+}
+	
+	
+	if (document.getElementById('cfpassword').value === "") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Chưa nhập lại Password !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+	
+	}
 
-    var newpassleng = newpass.length;
+	if (document.getElementById('newpassword').value !== document.getElementById('cfpassword').value) {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Password mới nhập chưa đúng !";
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+	
+	}
+	
 
-    if (newpassleng < 8) {
-      $('.modalMess-wrapper').toggleClass('open');
-      document.getElementById("alert").innerHTML = "Mật khẩu phải có ít nhất 8 ký tự!";
-      document.getElementById("confirm_Login").style.display = "none";
-      return false;
-    }
-
-    if (newpass !== cfpass) {
-      $('.modalMess-wrapper').toggleClass('open');
-      document.getElementById("alert").innerHTML = "Mật khẩu nhập lại không khớp!";
-      document.getElementById("confirm_Login").style.display = "none";
-      return false;
-    }
-
-    var url = atob(script_url) + "?callback=ctrlq&oldpassword=" + oldpass + "&oldusername=" + olduser + "&newpassword=" + newpass + "&action=Changepassword";
-    var request = jQuery.ajax({
+    var request = jQuery.ajax({	
       crossDodiv: true,
-      url: url,
+      url: url ,
       method: "GET",
       dataType: "jsonp"
+	  
     });
-
-    document.getElementById('username').value = "";
-    document.getElementById('password').value = "";
-
-    form.classList.remove('was-validated');
-  } else {
-    form.classList.add('was-validated');
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";	
   }
-}
-
-
 	
 	
 function Delre() {
@@ -2402,14 +2423,6 @@ var anh1 = document.getElementById("anh1");
 var ten1 = document.getElementById("ten1");
 anh1.onclick  = function(){
 
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";	
-	
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	//document.getElementById("dn").innerHTML = "";
@@ -2420,14 +2433,6 @@ anh1.onclick  = function(){
 	//Combine();
 }
 ten1.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-	
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
@@ -2442,14 +2447,6 @@ ten1.onclick  = function(){
 var anh2 = document.getElementById("anh2");
 var ten2 = document.getElementById("ten2");
 anh2.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
@@ -2460,14 +2457,6 @@ anh2.onclick  = function(){
 	//Combine();
 }
 ten2.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
@@ -2482,14 +2471,6 @@ ten2.onclick  = function(){
 var anh3 = document.getElementById("anh3");
 var ten3 = document.getElementById("ten3");
 anh3.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
@@ -2500,14 +2481,6 @@ anh3.onclick  = function(){
 	//Combine();
 }
 ten3.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
@@ -2522,14 +2495,6 @@ ten3.onclick  = function(){
 var anh4 = document.getElementById("anh4");
 var ten4 = document.getElementById("ten4");
 anh4.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
@@ -2538,14 +2503,6 @@ anh4.onclick  = function(){
 	//Combine();
 }
 ten4.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
@@ -2558,14 +2515,6 @@ ten4.onclick  = function(){
 var anh5 = document.getElementById("anh5");
 var ten5 = document.getElementById("ten5");
 anh5.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
@@ -2574,14 +2523,6 @@ anh5.onclick  = function(){
 	//Combine();
 }
 ten5.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
@@ -2593,14 +2534,6 @@ ten5.onclick  = function(){
 var anh6 = document.getElementById("anh6");
 var ten6 = document.getElementById("ten6");
 anh6.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUẾ";
@@ -2609,14 +2542,6 @@ anh6.onclick  = function(){
 	//Combine();
 }
 ten6.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUE";
@@ -2630,14 +2555,6 @@ ten6.onclick  = function(){
 var anh7 = document.getElementById("anh7");
 var ten7 = document.getElementById("ten7");
 anh7.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
@@ -2646,14 +2563,6 @@ anh7.onclick  = function(){
 	//Combine();
 }
 ten7.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
@@ -2666,14 +2575,6 @@ ten7.onclick  = function(){
 var anh8 = document.getElementById("anh8");
 var ten8 = document.getElementById("ten8");
 anh8.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
@@ -2682,14 +2583,6 @@ anh8.onclick  = function(){
 	//Combine();
 }
 ten8.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
@@ -2701,14 +2594,6 @@ ten8.onclick  = function(){
 var anh9 = document.getElementById("anh9");
 var ten9 = document.getElementById("ten9");
 anh9.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM TD";
@@ -2717,14 +2602,6 @@ anh9.onclick  = function(){
 	//Combine();
 }
 ten9.onclick  = function(){
-	document.getElementById('username').value = "";
-	document.getElementById('password').value = "";
-
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";
-
 	modal01.style.display = "block";
 	document.getElementById("khuvuc1").style.display = "none";
 	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
@@ -2763,9 +2640,9 @@ Lo.onclick  = function(){
 
 
       <i class="fa fa-phone"></i>
-      <p>  (02333) 855298;	(+84) 911393789</p>
+      <p> (+84) 916 468 333</p>
     <div>
-      <p style="color:black;" href="mailto:tdnhat@vnpt.vn?subject = Đài Viễn Thông Đông Hà"><i class="fa fa-envelope"></i>tdnhat@vnpt.vn</p>
+      <p style="color:black;" href="mailto:tramvtdha@vnpt.vn?subject = Đài Viễn Thông Đông Hà"><i class="fa fa-envelope"></i>tramvtdha@vnpt.vn</p>
   	 </div> 
 
   </div>
