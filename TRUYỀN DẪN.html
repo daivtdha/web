@@ -1994,6 +1994,7 @@ Date.prototype.yyyymmdd = function() {
 };
 
 Date.prototype.yyyymmddhhmm = function() {
+//alert("OK");
   var yyyymmdd = this.yyyymmdd();
   var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
   var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
