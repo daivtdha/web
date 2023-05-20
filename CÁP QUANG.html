@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<link href="DangNhap/bootstrap.min.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
@@ -35,15 +35,14 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 99%;
-  padding:1px;
+  padding: 1px;
   width: 99%;
-  max-width:97%;
+  max-width: 100%;
   background: linear-gradient(to right, #21618c,#73c6b6);
 }
-
 
 
 
@@ -231,21 +230,23 @@ body {
 
 .tab-list__link {
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
   text-transform: uppercase;
-  background-color: #807668;
+  background-color:#807668;
   display: block;
-  padding: 1em 1.5em;
+  padding: 1em 1.2em;
   border-radius: 5px 5px 0 0;
   transition: all 150ms ease-out;
   font-weight:bold;
+  border-style:solid;
+  border-color:white;
 }
 
 .tab-list__link--is-active {
-  color: #3f4c6b;
+  color: #21618c;
   background-color: #f2e7cf;
   background-color: #fff;
-  transform: scaleY(1.1);
+  transform: scaleY(1.0);
   transform-origin: center bottom;
 }
 
@@ -254,7 +255,7 @@ body {
   background-color: #f2e7cf;
   background-color: #fff;
   border-radius: 0 1px 1px 1px;
-  padding: 0em;  /****Lệnh này ah****/
+  padding:0em;
 }
 
 
@@ -276,6 +277,7 @@ body {
   flex-direction: column;
   background: #f8f9f9;
   border-radius:5% 5% 5% 5%;
+  cursor: pointer;
 }
 
 
@@ -285,6 +287,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight:bold;
+
 }
 
 .tab__icon {
@@ -304,19 +307,19 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   font-family: inherit;
-  padding: 0.8em 1.5em;
+  padding: 0.6em 1em;
   border-radius: 1px;
   border: 0;
-  background-image: linear-gradient(to bottom,#e6f5ff,#eaeded,#1b2631);
+  background: #21618c;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   cursor: pointer;
   max-width: 18em;
-  max-high: 1em;
+  max-high:0.5em;
   margin: 0 auto;
 }
 
 .tab__btn:hover {
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #5dade2;
 }
 
 .tab__btn:active {
@@ -360,13 +363,14 @@ body {
 
 
 
+
 /* Popup */
 
 .popup {
-  width: 80%;
+  width: 85%;
   padding: 15px;
   left: 0;
-  margin-left: 5%;
+  margin-left:7%;
   border: 1px solid rgb(1,82,73);
   border-radius: 10px;
   color: rgb(1,82,73);
@@ -376,6 +380,7 @@ body {
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -399,7 +404,7 @@ body {
 }
 @media (min-width: 992px) {
   .popup {
-    width: 80%;
+    width: 85%;
     margin-left: 25%;
   }
 }
@@ -413,10 +418,10 @@ body {
 
 
 .popup_Login {
-  width: 80%;
+  width: 85%;
   padding: 15px;
   left: 0;
-  margin-left: 5%;
+  margin-left: 7%;
   border: 1px solid rgb(1,82,73);
   border-radius: 10px;
   color: rgb(1,82,73);
@@ -426,20 +431,11 @@ body {
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
+  font-size: 13px;
   text-align: center;
 }
 
-.Thoat_Login {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  z-index: 10000;
-  display :none;
-}
+
 
 @media (min-width: 768px) {
   .popup_Login {
@@ -449,7 +445,7 @@ body {
 }
 @media (min-width: 992px) {
   .popup_Login {
-    width: 80%;
+    width: 85%;
     margin-left: 25%;
   }
 }
@@ -462,10 +458,10 @@ body {
 	
 
 .popup_time {
-  width: 80%;
+  width: 85%;
   padding: 15px;
   left: 0;
-  margin-left: 5%;
+  margin-left: 7%;
   border: 1px solid rgb(1,82,73);
   border-radius: 10px;
   color: rgb(1,82,73);
@@ -475,6 +471,7 @@ body {
   box-shadow: 5px 5px 5px #000;
   z-index: 10001;
   font-weight: 700;
+  font-size: 13px	
   text-align: center;
 }
 
@@ -498,7 +495,7 @@ body {
 }
 @media (min-width: 992px) {
   .popup_time {
-    width: 80%;
+    width: 85%;
     margin-left: 25%;
   }
 }
@@ -606,16 +603,16 @@ a {
 
 /* DROP LIST */
 .dropdown {
-  --max-scroll: 8;
+  --max-scroll: 4;
   --text: #3F4656;
-  --border: #2F3545;
+  --border:black;
   --borderActive: #23C4F8;
   --background: #151924;
   --arrow: #6C7486;
   --arrowActive: #E4ECFA;
   --listText: #99A3BA;
-  --listBackground: #F5F9FF;
-  --listActive: #E4ECFA;
+  --listBackground: #f2f4f4;
+  --listActive: #95a5a6;
   --listTextActive: #6C7486;
   --listBorder: none;
   --textFilled: black;
@@ -635,7 +632,7 @@ a {
   color: var(--text);
   border: 1px solid var(--border);
   background:white;
-  transition: all 0.3s ease;
+
 }
 .dropdown > span:before, .dropdown > span:after {
   content: "";
@@ -673,9 +670,7 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
   transform-origin: 0 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-  transform: scale(0.8) translate(0, 4px);
-  border: 1px solid var(--listBorder);
+
 }
 .dropdown ul li {
   opacity: 0;
@@ -685,7 +680,7 @@ a {
 .dropdown ul li a {
   cursor: pointer;
   display: block;
-  padding: 10px 16px;
+  padding: 10px 10px;
   color: var(--listText);
   text-decoration: none;
   outline: none;
@@ -710,27 +705,7 @@ a {
   --scale: .9;
   opacity: 1;
 }
-.dropdown ul li:first-child a {
-  border-radius: 6px 6px 0 0;
-}
-.dropdown ul li:last-child a {
-  border-radius: 0 0 6px 6px;
-}
-.dropdown.filled > span {
-  color: var(--textFilled);
-}
-.dropdown.open > span {
-  border-color: var(--borderActive);
-}
-.dropdown.open > span:before, .dropdown.open > span:after {
-  background: var(--arrowActive);
-}
-.dropdown.open > span:before {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown.open > span:after {
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
+
 .dropdown.open ul {
   opacity: 1;
   visibility: visible;
@@ -741,48 +716,32 @@ a {
   opacity: 1;
   transform: translate(0, 0);
 }
-.dropdown.open ul li:nth-child(1) {
-  transition-delay: 80ms;
-}
-.dropdown.open ul li:nth-child(2) {
-  transition-delay: 160ms;
-}
-.dropdown.open ul li:nth-child(3) {
-  transition-delay: 240ms;
-}
-.dropdown.open ul li:nth-child(4) {
-  transition-delay: 320ms;
-}
-.dropdown.open ul li:nth-child(5) {
-  transition-delay: 400ms;
-}
 
 /*END  DROP LIST */
 
 /* FORM LOGIN CỦ*/
-    .form {
-        background: #21618c;
-        padding: 25px;
-        max-width: auto;
-		width: 700px;
-        margin: 0px auto;
-        font-family:times new roman;
-	border-radius: 5px 5px 5px 5px;
-	text-align: center;
-	margin:0 auto
-        
-    }
-
+.form {
+  background: white;
+  padding: 25px;
+  max-width: 670px;
+  width: 650px;
+  margin: 0px auto;
+  font-family: times new roman;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom:20px;
+  
+}
     .tab-group {
         list-style: none;
         padding: 0;
         margin: 0 0 0px 0;
-	border-radius: 26px 26px 26px 26px;
-	background: #21618c;	
-
-	width:100%;
-	display:flex;
-	justify-content:center;
+		border-radius: 26px 26px 26px 26px;
+		background:white;	
+		width:100%;
+		display:flex;
+		justify-content:center;
 			
     }
 
@@ -792,9 +751,9 @@ a {
         content: "";
         display: table;
         clear: both;
-	background: #21618c;
+		background: #21618c;
         color:black;
-	border-radius: 26px 26px 26px 26px;
+		border-radius: 26px 26px 26px 26px;
     }
 
     .tab-group li a {
@@ -805,30 +764,29 @@ a {
         color:black;
         font-size: 16px;
         float: left;
-
         text-align: center;
         cursor: pointer;
-        transition: .1s ease;
-	border-radius: 26px 26px 26px 26px;
-	width:130px;
-	height: 28px;
-	line-height: 25px;
+        transition: .5s ease;
+		border-radius: 26px 26px 26px 26px;
+		width:130px;
+		height: 28px;
+		line-height: 25px;
      }
 
     .tab-group li a:hover {
-        background:white;
-        color:black;
-	border-radius: 26px 26px 26px 26px;
+        background: #3498db;
+        color:white;
+		border-radius: 26px 26px 26px 26px;
 
     }
 
     .tab-group .active a {
-        background:#fef9e7;
-        color:black;
-	border-radius: 26px 26px 26px 26px;
-	width:130px;
-	height: 28px;
-	line-height: 25px;
+        background:#006699;
+        color:white;
+		border-radius: 26px 26px 26px 26px;
+		width:130px;
+		height: 28px;
+		line-height: 25px;
     }
 
 	
@@ -848,7 +806,7 @@ a {
         transform: translateY(6px);
         left: 13px;
         color: rgba(255, 255, 255, 0.5);
-        transition: all 0.1s ease;
+        transition: all 0.25s ease;
         -webkit-backface-visibility: hidden;
         pointer-events: none;
         font-size: 22px;
@@ -918,13 +876,13 @@ a {
         border: 0;
         outline: none;
         border-radius: 0;
-        padding: 8px 0;
+        padding:0px 0;
         font-size: 1rem;
         font-weight:bold;
         text-transform: uppercase;
         letter-spacing: .1em;
-        background:white;
-        color:black;
+        background:#006699;
+        color:white;
         transition: all 0.5s ease;
         -webkit-appearance: none;
 	font-family:times new roman;
@@ -935,12 +893,13 @@ a {
 
     .button:hover,
     .button:focus {
-    background: #5dade2;
+    background: #1b4f72;
     }
 
     .button-block {
         display: block;
-        width: 35%;	
+        width:250px;
+	height:35px;		
 	border-radius: 26px 26px 26px 26px;
 		
     }
@@ -1028,7 +987,7 @@ form .pass-txt{
 }
 
 form input[type="submit"]{
-  height: 45px;
+  height: 35px;
   margin-top: 30px;
   color: #fff;
   padding: 0;
@@ -1098,19 +1057,23 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  border-radius:1% 1% 1% 1%;
-  top: 40%;
-  width: auto%; /* Full width */
-  height: auto; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color:  #f8f9f9; /* Fallback color */
-  background-color:  #f8f9f9; /* Black w/ opacity */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  border-radius: 1%;
+  top: 30vh;
+  width: auto;
+  max-width: 700px;
+  height: auto;
+  overflow: auto;
+  background-color: #669999;
   padding-top: 0px;
-}
+  padding-bottom: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: -25px; /* Dịch chuyển form và modal sang trái 25px */
 
+}
 
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
@@ -1139,11 +1102,11 @@ font-size: 15px;
   }
 .modal {
     font-size: 15px;
-    width: 100%;;
+    width: 100%;
   }
 .form {
     font-size: 15px;
-    width: 100%;;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1174,7 +1137,7 @@ font-size: 15px;
   }
 .form {
     font-size: 15px;
-    width: 100%;;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -1204,7 +1167,7 @@ font-size: 15px;
   }
 .form {
    font-size: 15px;
-    width: 100%;;
+    width: 100%;
   }
 }
 
@@ -1281,8 +1244,8 @@ font-size: 15px;
 /* The Close Button (x) */
 .close {
   position: absolute;
-  right: 20px;
-  top: 0;
+  right: 15px;
+  top: 15;
   color: #000;
   font-size: 18px;
   font-weight: bold;
@@ -1328,6 +1291,25 @@ font-size: 15px;
 /* Modal Thông báo */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+
+.modalMess {
+  max-height: calc(100vh - 60px);
+}
+
+@media (max-height: 600px) {
+  .modalMess {
+    top: 10%;
+  }
+}
+
+@media (max-height: 400px) {
+  .modalMess {
+    top: 5%;
+  }
+}
+
+
+
 .modalMess-wrapper {
   position: fixed;
   top: 0;
@@ -1351,20 +1333,22 @@ font-size: 15px;
 
 .modalMess {
   width: 400px;
-  max-height: calc(100vh - 60px); /* chiều cao tối đa của modal */
+  max-height: calc(100vh - 60px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
-border-radius:5px 5px 5px 5px;
+  border-radius: 5px;
+  padding-bottom: 10px;
 }
 
-.modalMess-wrapper.open .modalMess {
-  opacity: 1;
-}
+
 
 .headMess { 
   width: 100%;
@@ -1376,6 +1360,7 @@ border-radius:5px 5px 5px 5px;
   padding: 2px 15px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  
 }
 
 .btn-close {
@@ -1385,11 +1370,13 @@ border-radius:5px 5px 5px 5px;
   position: absolute;
   top: 0;
   right: 7px;
+  padding-bottom: 3px;
 }
 
-.btn-login {
-  margin-top: 20px;
-  padding: 10px 20px;
+.dialog-btn {
+  margin: 0;
+  margin-right: 10px;
+  padding: 3px 7px;
   color: #fff;
   background: #e2525c;
   border: none;
@@ -1405,7 +1392,7 @@ border-radius:5px 5px 5px 5px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 5px;
 }
 
 .good-job {
@@ -1427,6 +1414,54 @@ border-radius:5px 5px 5px 5px;
   margin: 10px 0;
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .modalMess {
+    width: 90%;
+    max-height: calc(100vh - 60px);
+  }
+}
+	
+
+
+
+/* Captchar */
+.field.captch_box {
+  display: flex;
+  align-items: center;
+   margin-top: 10px; /* Thu hẹp khoảng cách trên */
+}
+.field.captch_input {
+  margin-bottom: 10px; /* Thu hẹp khoảng cách dưới */
+}
+
+.field.captch_box .input_field.captch_box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.field.captch_box .input_field.captch_box input[type="text"] {
+  flex: 1;
+  height: 35px;
+}
+
+
+.refresh_button {
+  margin-left: 10px;
+  background: #826afb;
+  height: 33px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}	
 
 </style>
 
@@ -1458,13 +1493,12 @@ border-radius:5px 5px 5px 5px;
 
 
 <div id="id01" class="modal">
-  
-	  <form class="modal-content animate" action="/action_page.php" method="post">
-	  
-		<div class="imgcontainer">
-		
-		  <span onclick="document.getElementById('id01').style.display='none'" class="close">❌</span>
-		  <h2 id="dn" style="font-size: 1em; font-weight: bold"; value=""></h2>
+	<span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>  
+	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
+			
+		<div class="imgcontainer">		
+
+		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
 		</div><!-- Modal -->
 
 	<p type = "text" id="ngay"></p>
@@ -1475,71 +1509,97 @@ border-radius:5px 5px 5px 5px;
 
 			<ul class="tab-group">
 
-            <li style="background: #21618c"; width="130px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+            <li style="background: white"; width="135px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
 
-            <li style="background: #21618c"; width="130px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+            <li style="background: white"; width="135px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
 			</ul>
-
-			</br>
 					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
-					
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
 					<div id="loader2"></div>
 					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
         <div class="tab-content">
 
 
             <div id="login">
-				<form>	
-				<p type = "text" id = "chon"  </p>
-				<P type = "text" id = "combine" </p>
-				<p id="chonlog" type = "text" value=""</p>
-				</br>
-				
-				<div class="field-wrap">
-				  <select  id="khuvuc" class="dropdown" placeholder="Please choose">
-					<option value="dha" selected="selected">Đông hà</option>
-					<option value="dhi">Đồng hới</option>
-					<option value="hue" >Huế</option>				   
-				  </select>
-				</div>
 
+			<form>	
+
+				<p type = "text" id = "chon"  </p>
+				<p type = "text" id = "combine" </p>
+				<p id="chonlog" type = "text" value=""</p>
+
+				
+	
+				
 				<div class="field username">
-                    <div class="field-wrap" autocomplete="off">
-                        <input name="username" id="username" type="text" class="form_input"  placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
+                    <div class="field-wrap">
+                        <input name="username" id="username" type="text" class="form-control"  placeholder="User" required>
+						<i class="icon fas fa-user" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+						Chưa điền User.
+						</div>
                     </div>
 				</div>
 				
 				 <div class="field password">
                     <div class="field-wrap">
-                        <input name="password" id="password" type="password" class="form_input" placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
-                    </div>				
+                        <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu.
+						</div> 
+					</div>				
 				 </div>
-				 
-				<input class="button button-block" type = "button" onClick="LoginQL_value(); " value = "Đăng Nhập" /></input>
+
+					<div  class="field captch_input">
+					  <div class="input_field captch_input">
+						<input  type="text" style="height: 33px;" placeholder="Nhập Captcha" class="form-control" required>				
+					  </div>
+					  <div  class="message" style="text-align: left; color: #FF2525;">Nhập mã Captcha dưới vào.</div>
+					</div>
+					
+					<div  class="field captch_box">
+					  <div class="input_field captch_box">
+						<input  type="text" value="" disabled />
+						<button hidden class="refresh_button">
+						  <i  class="fa-solid fa-rotate-right"></i>
+						</button>
+					  </div>
+					</div>
+
+
+
+				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
                 </form>
 
+				
+				
+				
             </div>
 
 
 
             <div id="changepass">
-
+				</br>
                 <form>                
 				  
 				  <div class="field username">
 					<div class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
-						<i class="icon fas fa-user"></i>
-                    </div>
+                        <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="User" required>
+						<i class="icon fas fa-user" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền User.
+						</div> 
+						</div>
 					</div>
 
 					<div class="field password">
                     <div class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
+                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu hiện tại.
+						</div> 
                     </div>
 					</div>
                   
@@ -1547,19 +1607,25 @@ border-radius:5px 5px 5px 5px;
 
                     <div class="field password">
 					<div class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
+                        <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu mới.
+						</div>
                     </div>
 					</div>
 
                     <div class="field password">
 					<div class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
-						<i class="icon fas fa-lock"></i>
+                        <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền lại Mật khẩu mới.
+						</div>
                     </div>
-					</div>
-					
-				<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+					</div>					
+				 
+				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
 
                 </form>
 
@@ -1588,56 +1654,55 @@ border-radius:5px 5px 5px 5px;
 
 		<ul id="tab-1" class="tab__box tab__box--1  tab__box--is-visible">
                 <li class="tab__item">                   
-                   <img id="anh1" src="CapQuangPicture/CapQuang2.png" alt=""> 
-                   <h2 id="ten1" class="tab__heading">LỊCH TTCQ CÁP QUANG</h2>
-             
+                   <img id="anh1" src="CapQuangPicture/BieuDo.jpg" alt=""> 
+                   <h2 id="ten1" class="tab__heading"> KPI CÁP QUANG ĐÀI ĐHA</h2>
+                </li>
+				<li class="tab__item">                   
+                   <img id="anh2" src="CapQuangPicture/CapQuang1.jpg" alt=""> 
+                   <h2 id="ten2" class="tab__heading">LỊCH TTCQ CÁP QUANG ĐHA</h2>             
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh2" src="CapQuangPicture/CapQuang.jpg" alt=""> 
-                   <h2 id="ten2" class="tab__heading">LỊCH CÔNG TÁC CÁP QUANG</h2>
-
+                   <img id="anh3" src="CapQuangPicture/CapQuang10.jpg" alt=""> 
+                   <h2 id="ten3" class="tab__heading">LỊCH TTCQ CÁP QUANG ĐHI</h2>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh3" src="CapQuangPicture/CapQuang1.png" alt=""> 
-                   <h2 id="ten3" class="tab__heading"> KPI CÁP QUANG</h2>
-
+                   <img id="anh4" src="CapQuangPicture/CapQuang11.png" alt=""> 
+                   <h2 id="ten4" class="tab__heading">LỊCH TTCQ CÁP QUANG HUẾ</h2>
                 </li>
+
 
             </ul>
 
             <ul id="tab-2" class="tab__box tab__box--1">
                 <li class="tab__item">                   
-                   <img id="anh4" src="CapQuangPicture/CapQuang3.jpg" alt=""> 
-                   <h2 id="ten4" class="tab__heading">VẬT TƯ DP CQ ĐÔNG HÀ</h2>
-
+                   <img id="anh5" src="CapQuangPicture/CapQuang3.jpg" alt=""> 
+                   <h2 id="ten5" class="tab__heading">VẬT TƯ DP CQ ĐÔNG HÀ</h2>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh5" src="VoTuyen/VatTuDPDHI.png" alt=""> 
-                   <h2 id="ten5" class="tab__heading">VẬT TƯ DP CQ ĐỒNG HỚI</h2>
-
+                   <img id="anh6" src="CapQuangPicture/CapQuang4.png" alt=""> 
+                   <h2 id="ten6" class="tab__heading">VẬT TƯ DP CQ ĐỒNG HỚI</h2>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh6" src="CapQuangPicture/CapQuang4.jpg" alt=""> 
-                   <h2 id="ten6" class="tab__heading">VẬT TƯ DP CQ HUẾ</h2>
-
+                   <img id="anh7" src="CapQuangPicture/CapQuang9.jpg" alt=""> 
+                   <h2 id="ten7" class="tab__heading">VẬT TƯ DP CQ HUẾ</h2>
                 </li>
 
             </ul>			
 			
             <ul id="tab-3" class="tab__box tab__box--1">
                 <li class="tab__item">                   
-                   <img id="anh7" src="CapQuangPicture/CongVan.jpg" alt=""> 
-                   <h2 id="ten7" class="tab__heading">SỐ LIỆU SỰ CỐ CÁP QUANG</h2>
-
-                </li>
-                <li class="tab__item">                   
                    <img id="anh8" src="CapQuangPicture/CongVan.jpg" alt=""> 
-                   <h2 id="ten8" class="tab__heading">SỐ LIỆU ONMS CÁP QUANG</h2>
+                   <h2 id="ten8" class="tab__heading">SỐ LIỆU SỰ CỐ CÁP QUANG</h2>
 
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh9" src="CapQuangPicture/TaiLieu.png" alt=""> 
-                   <h2 id="ten9" class="tab__heading">CÔNG VĂN CÁP QUANG</h2>
+                   <img id="anh9" src="CapQuangPicture/CongVan.jpg" alt=""> 
+                   <h2 id="ten9" class="tab__heading">SỐ LIỆU ONMS CÁP QUANG</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh10" src="CapQuangPicture/TaiLieu.png" alt=""> 
+                   <h2 id="ten10" class="tab__heading">CÔNG VĂN CÁP QUANG</h2>
 
                 </li>
 
@@ -1656,17 +1721,16 @@ border-radius:5px 5px 5px 5px;
     <p>Bạn có muốn Thoát không ?</p>
 	</br>	
     <div class="text-right">
-      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
-      <button class="dialog-btn btn-primary" id="confirm">OK</button>
+      <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
     </div>
   </div>
 </div>
 <p id="testText"></p>
 <div class="Thoat_time" id="dialog_time">
-  <div class="popup_time">
+  <div class="popup">
   </br>	
     <p>Thời gian lâu không dùng !</p>
-	</br>	
     <div class="text-right">
       <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
     </div>
@@ -1675,16 +1739,6 @@ border-radius:5px 5px 5px 5px;
 
   <!-- Modal Aleert-->   
 
-
-
-<div class="Thoat_Login" id="dialog_Login2">
-  <div class="popup_Login">
-    <p>Đăng nhập OK !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_Login2">OK</button>
-    </div>
-  </div>
-</div> 
 
 
 <div class="modalMess-wrapper">
@@ -1699,18 +1753,17 @@ border-radius:5px 5px 5px 5px;
           <i id="fa" class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <h1 id="alert" value="" ></h1>		  	  
         </div>
-
-	</div>
 			<div>
-			  <button class="btn-login" hidden id="confirm_Login">OK</button>
-			  </br>		  
+			  <button class="dialog-btn btn-primary" id="confirm_Login" style="display:none;width:100px;">OK</button>
 			</div>
+	</div>
+
   </div>	
  </div>
  
 <script src="TruyenDanPicture/Droplist.min.js"></script>
 <script src="CapQuangPicture/Login.min.js"></script>
-
+<script src="DangNhap/bootstrap.bundle.min.js"></script>
 
  <script id="rendered-js">
 
@@ -1738,6 +1791,87 @@ function open_modalMess() {
 eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
 </script>
 
+<script>
+
+// Selecting necessary DOM elements
+const captchaTextBox = document.querySelector(".captch_box input");
+const refreshButton = document.querySelector(".refresh_button");
+const captchaInputBox = document.querySelector(".captch_input input");
+const message = document.querySelector(".message");
+const submitButton = document.querySelector(".button");
+
+// Variable to store generated captcha
+let captchaText = null;
+
+// Function to generate captcha
+const generateCaptcha = () => {
+  const randomString = Math.random().toString(36).substring(2, 7);
+  const randomStringArray = randomString.split("");
+  const changeString = randomStringArray.map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char));
+  captchaText = changeString.join("   ");
+  captchaTextBox.value = captchaText;
+  console.log(captchaText);
+};
+
+const refreshBtnClick = () => {
+  generateCaptcha();
+  captchaInputBox.value = "";
+  captchaKeyUpValidate();
+};
+
+const captchaKeyUpValidate = () => {
+  //Toggle submit button disable class based on captcha input field.
+  submitButton.classList.toggle("disabled", !captchaInputBox.value);
+
+  if (!captchaInputBox.value) message.classList.remove("active");
+};
+
+// Function to validate the entered captcha
+const submitBtnClick = () => {
+  captchaText = captchaText
+    .split("")
+    .filter((char) => char !== " ")
+    .join("");
+  message.classList.add("active");
+  // Check if the entered captcha text is correct or not
+  if (captchaInputBox.value !== captchaText) {
+      message.innerText = "Kiểm tra lại nhập mã Captcha.";
+    message.style.color = "#FF2525";
+  
+
+  } else {
+    message.innerText = "Captcha đúng, bấm tiếp để Đăng Nhập.";
+    message.style.color = "#826afb";
+  }
+};
+
+// Add event listeners for the refresh button, captchaInputBox, submit button
+refreshButton.addEventListener("click", refreshBtnClick);
+captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
+submitButton.addEventListener("click", submitBtnClick);
+
+// Generate a captcha when the page loads
+generateCaptcha(); 
+
+//==========Hàm này check Input Form (Phải có)==============
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+	  
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+		}, false)
+    }
+	)
+})()
+</script>
 
  <script id="rendered-js">
 
@@ -1765,7 +1899,13 @@ function open_modalMess() {
 <script type="text/javascript">//<![CDATA[
 
 $(document).ready(function() {
+	document.getElementById('username').value = "";
+	document.getElementById('password').value = "";
 
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";
 var url = location.protocol;
 if (url == "file:khanh") {
 	var element = document.getElementById("login");
@@ -1910,8 +2050,24 @@ window.history.replaceState('','','/');
 var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4OHRYcmw1NDd3VkRoQ1k0VWMwNUZmeTFCQWRhSjlaX3I1M09TQUtrWDI5eUdITWJfSHd0dFdiRmY3SG1hV0lnOEtVdy9leGVj";
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
-  function LoginQL_value() {
+function LoginQL_value() {
+  var form = document.querySelector('.needs-validation');
+  var inputs = form.querySelectorAll('input[name="username"], input[name="password"]');
+  var captchaInputBox = document.querySelector('.captch_input input');
 
+  var isValid = true;
+  for (var i = 0; i < inputs.length; i++) {
+    if (!inputs[i].checkValidity()) {
+      isValid = false;
+      // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
+    }
+  }
+
+  var captchaText = captchaInputBox.value.trim().replace(/\s+/g, ''); // Lấy giá trị captcha đã nhập và loại bỏ khoảng trắng
+
+  if (isValid && message.innerText == "Captcha đúng, bấm tiếp để Đăng Nhập." && captchaText === captchaText) {
+//    alert("OK");
+    generateCaptcha();
 
 
 Date.prototype.yyyymmdd = function() {
@@ -1944,37 +2100,8 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 	var doma= $("#doma").val();
 	var combine= $("#combine").val();
 		
-    //var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Updatetime";
-  
 
-    var request = jQuery.ajax({
-      crossDodiv: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-
-
-	
     var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+ "&combine="+combine+"&action=LoginQL";
-
-	if (document.getElementById('username').value === "") {
-		$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-		document.getElementById("alert").innerHTML = "Chưa nhập Username !";
-		document.getElementById("confirm_Login").style.display = "none";
-		return false;
-	
-	}	
-	
-	if (document.getElementById('password').value === "") {
-		$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-		document.getElementById("alert").innerHTML = "Chưa nhập Password !";
-		document.getElementById("confirm_Login").style.display = "none";
-		return false;
-	
-	}
-	
 
 	
     var request = jQuery.ajax({
@@ -1985,8 +2112,11 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 	  
     });
 
-
   }
+
+  form.classList.add('was-validated');
+}
+	
 
   function ctrlq(e) {
   document.getElementById('password').value = "";
@@ -2005,7 +2135,7 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
        } else if (e.result === "Đổi Password OK !") {
 			modal01.style.display = "none";
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Đổi Password OK, thông tin thay đổi đã gửi về Email !";
+			document.getElementById("alert").innerHTML = "Đổi Password OK, thông tin thay đổi đã gửi về Email của Bạn !";
 			document.getElementById("confirm_Login").style.display = "none";
 			return false;
 			
@@ -2050,78 +2180,57 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 
 
 function Changepassword_value() {
-//alert(document.getElementById("combine").value);
-	var olduser=$("#oldusername").val();
-	var oldpass= $("#oldpassword").val();
-	var newpass= $("#newpassword").val();
-	var cfpass= $("#cfpassword").val();
-	var combine= $("#combine").val();
-	
-	var newpassleng = newpass.length;
-	
-    //var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&combine="+combine+"&action=Changepassword";
-	var url = atob(script_url)+"?callback=ctrlq&oldpassword="+oldpass+"&oldusername="+olduser+"&newpassword="+newpass+"&action=Changepassword";
+  var form = document.querySelector('.needs-validation');
+  var inputs = form.querySelectorAll('input[name="oldusername"], input[name="oldpassword"], input[name="newpassword"], input[name="cfpassword"]');
 
-	if (document.getElementById('oldusername').value === "") {
-			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Chưa nhập Username !";
-			document.getElementById("confirm_Login").style.display = "none";
-			return false;
-	
-	}	
-	
-	if (document.getElementById('oldpassword').value === "") {
-			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Chưa nhập Password !";
-			document.getElementById("confirm_Login").style.display = "none";
-			return false;
-	
-	}
+  var isValid = true;
+  for (var i = 0; i < inputs.length; i++) {
+    if (!inputs[i].checkValidity()) {
+      isValid = false;
+      // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
+    }
+  }
 
-	if (document.getElementById('newpassword').value === "") {
-			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Chưa nhập Password mới !";
-			document.getElementById("confirm_Login").style.display = "none";
-			return false;
-	
-	}
-	if(newpassleng < 8) {
-			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Password tối thiểu 8 ký tự !";
-			document.getElementById("confirm_Login").style.display = "none";			
-		return false;
-}
-	
-	
-	if (document.getElementById('cfpassword').value === "") {
-			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Chưa nhập lại Password !";
-			document.getElementById("confirm_Login").style.display = "none";
-			return false;
-	
-	}
+  if (isValid) {
+    // Thực hiện các hành động cần thiết nếu các trường input đều hợp lệ
+    var olduser = $("#oldusername").val();
+    var oldpass = $("#oldpassword").val();
+    var newpass = $("#newpassword").val();
+    var cfpass = $("#cfpassword").val();
+    var combine = $("#combine").val();
 
-	if (document.getElementById('newpassword').value !== document.getElementById('cfpassword').value) {
-			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-			document.getElementById("alert").innerHTML = "Password mới nhập chưa đúng !";
-			document.getElementById("confirm_Login").style.display = "none";
-			return false;
-	
-	}
-	
+    var newpassleng = newpass.length;
 
-    var request = jQuery.ajax({	
+    if (newpassleng < 8) {
+      $('.modalMess-wrapper').toggleClass('open');
+      document.getElementById("alert").innerHTML = "Mật khẩu mới phải có ít nhất 8 ký tự!";
+      document.getElementById("confirm_Login").style.display = "none";
+      return false;
+    }
+
+    if (newpass !== cfpass) {
+      $('.modalMess-wrapper').toggleClass('open');
+      document.getElementById("alert").innerHTML = "Mật khẩu nhập lại không khớp!";
+      document.getElementById("confirm_Login").style.display = "none";
+      return false;
+    }
+
+    var url = atob(script_url) + "?callback=ctrlq&oldpassword=" + oldpass + "&oldusername=" + olduser + "&newpassword=" + newpass + "&action=Changepassword";
+    var request = jQuery.ajax({
       crossDodiv: true,
-      url: url ,
+      url: url,
       method: "GET",
       dataType: "jsonp"
-	  
     });
-	document.getElementById('oldusername').value = "";
-	document.getElementById('oldpassword').value = "";
-	document.getElementById('newpassword').value = "";
-	document.getElementById('cfpassword').value = "";	
+
+    document.getElementById('username').value = "";
+    document.getElementById('password').value = "";
+
+    form.classList.remove('was-validated');
+  } else {
+    form.classList.add('was-validated');
   }
+}
 	
 	
 function Delre() {
@@ -2356,17 +2465,17 @@ anh1.onclick  = function(){
 
 	modal01.style.display = "block";
 	//document.getElementById("dn").innerHTML = "";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TTCQ CQ";
-	document.getElementById("chon").value = "ttcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP KPI CQ ĐÀI ĐHA";
+	document.getElementById("combine").value = "kpicqdha";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+	//Combine();
 }
 ten1.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TTCQ CQ";
-	document.getElementById("chon").value = "ttcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP KPI CQ ĐÀI ĐHA";
+	document.getElementById("combine").value = "kpicqdha";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+	//Combine();
 }
 
 
@@ -2376,17 +2485,16 @@ var anh2 = document.getElementById("anh2");
 var ten2 = document.getElementById("ten2");
 anh2.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CT";
-	document.getElementById("chon").value = "lichcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH TTCQ CQ ĐHA";
+	document.getElementById("combine").value = "ttcqdha";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+
 }
 ten2.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CT";
-	document.getElementById("chon").value = "lichcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH TTCQ CQ ĐHA";
+	document.getElementById("combine").value = "ttcqdha";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 
 
@@ -2394,17 +2502,15 @@ var anh3 = document.getElementById("anh3");
 var ten3 = document.getElementById("ten3");
 anh3.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP KPI CQ";
-	document.getElementById("chon").value = "kpicq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH TTCQ CQ ĐHI";
+	document.getElementById("combine").value = "ttcqdhi";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 ten3.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP KPI CQ";
-	document.getElementById("chon").value = "kpicq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH TTCQ CQ ĐHI";
+	document.getElementById("combine").value = "ttcqdhi";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 
 //====================
@@ -2412,17 +2518,15 @@ var anh4 = document.getElementById("anh4");
 var ten4 = document.getElementById("ten4");
 anh4.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHA";
-	document.getElementById("chon").value = "vtdpcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH TTCQ CQ HUẾ";
+	document.getElementById("combine").value = "ttcqhue";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 ten4.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHA";
-	document.getElementById("chon").value = "vtdpcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH TTCQ CQ HUẾ";
+	document.getElementById("combine").value = "ttcqhue";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 
 
@@ -2430,51 +2534,46 @@ var anh5 = document.getElementById("anh5");
 var ten5 = document.getElementById("ten5");
 anh5.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHI";
-	document.getElementById("chon").value = "vtdpcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHA";
+	document.getElementById("combine").value = "vtdpcqdha";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+
 }
 ten5.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHI";
-	document.getElementById("chon").value = "vtdpcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHA";
+	document.getElementById("combine").value = "vtdpcqdha";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 
 var anh6 = document.getElementById("anh6");
 var ten6 = document.getElementById("ten6");
 anh6.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ HUẾ";
-	document.getElementById("chon").value = "vtdpcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHI";
+	document.getElementById("combine").value = "vtdpcqdhi";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 ten6.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ HUẾ";
-	document.getElementById("chon").value = "vtdpcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ ĐHI";
+	document.getElementById("combine").value = "vtdpcqdhi";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 
 var anh7 = document.getElementById("anh7");
 var ten7 = document.getElementById("ten7");
 anh7.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP SỰ CỐ CQ";
-	document.getElementById("chon").value = "sccq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ HUẾ";
+	document.getElementById("combine").value = "vtdpcqhue";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 ten7.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP SỰ CỐ CQ";
-	document.getElementById("chon").value = "sccq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP CQ HUẾ";
+	document.getElementById("combine").value = "vtdpcqhue";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
 }
 
 
@@ -2482,34 +2581,52 @@ var anh8 = document.getElementById("anh8");
 var ten8 = document.getElementById("ten8");
 anh8.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP ONMS CQ";
-	document.getElementById("chon").value = "onmscq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP SỐ LIỆU SỰ CỐ CQ ĐHA";
+	document.getElementById("combine").value = "sccq";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+	
 }
 ten8.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP ONMS CQ";
-	document.getElementById("chon").value = "onmscq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP SỐ LIỆU SỰ CỐ CQ ĐHA";
+	document.getElementById("combine") = "sccq";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+	
 }
+
 
 var anh9 = document.getElementById("anh9");
 var ten9 = document.getElementById("ten9");
 anh9.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CV CQ";
-	document.getElementById("chon").value = "cvcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP ONMS CQ";
+	document.getElementById("combine").value = "onmscq";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+
 }
 ten9.onclick  = function(){
 	modal01.style.display = "block";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CV CQ";
-	document.getElementById("chon").value = "cvcq";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP ONMS CQ";
+	document.getElementById("combine").value = "onmscq";
 	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	Combine();
+
+}
+
+var anh10 = document.getElementById("anh10");
+var ten10 = document.getElementById("ten10");
+anh10.onclick  = function(){
+	modal01.style.display = "block";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CV CQ";
+	document.getElementById("combine").value = "cvcq";
+	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
+
+}
+ten10.onclick  = function(){
+	modal01.style.display = "block";
+	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CV CQ";
+	document.getElementById("combine").value = "cvcq";
+	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
+
 }
 
 		
