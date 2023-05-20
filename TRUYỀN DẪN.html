@@ -1815,7 +1815,23 @@ const captchaKeyUpValidate = () => {
 };
 
 // Function to validate the entered captcha
+const submitBtnClick = () => {
+  captchaText = captchaText
+    .split("")
+    .filter((char) => char !== " ")
+    .join("");
+  message.classList.add("active");
+  // Check if the entered captcha text is correct or not
+  if (captchaInputBox.value !== captchaText) {
+      message.innerText = "Kiểm tra lại nhập mã Captcha.";
+    message.style.color = "#FF2525";
+  
 
+  } else {
+    message.innerText = "Captcha đúng, bấm tiếp để Đăng Nhập.";
+    message.style.color = "#826afb";
+  }
+};
 
 // Add event listeners for the refresh button, captchaInputBox, submit button
 refreshButton.addEventListener("click", refreshBtnClick);
@@ -1848,7 +1864,13 @@ generateCaptcha();
 <script type="text/javascript">//<![CDATA[
 
 $(document).ready(function() {
+	document.getElementById('username').value = "";
+	document.getElementById('password').value = "";
 
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";
 var url = location.protocol;
 if (url == "file:khanh") {
 	var element = document.getElementById("login");
@@ -1994,7 +2016,23 @@ var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4OHRYcm
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
   function LoginQL_value() {
+  var form = document.querySelector('.needs-validation');
+  var inputs = form.querySelectorAll('input[name="username"], input[name="password"]');
+  var captchaInputBox = document.querySelector('.captch_input input');
 
+  var isValid = true;
+  for (var i = 0; i < inputs.length; i++) {
+    if (!inputs[i].checkValidity()) {
+      isValid = false;
+      // Hiển thị thông báo lỗi hoặc thực hiện các hành động khác tùy ý
+    }
+  }
+
+  var captchaText = captchaInputBox.value.trim().replace(/\s+/g, ''); // Lấy giá trị captcha đã nhập và loại bỏ khoảng trắng
+
+  if (isValid && message.innerText == "Captcha đúng, bấm tiếp để Đăng Nhập." && captchaText === captchaText) {
+//    alert("OK");
+    generateCaptcha();
 
 
 Date.prototype.yyyymmdd = function() {
@@ -2027,37 +2065,8 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 	var doma= $("#doma").val();
 	var combine= $("#combine").val();
 		
-    //var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+"&action=Updatetime";
-  
 
-    var request = jQuery.ajax({
-      crossDodiv: true,
-      url: url ,
-      method: "GET",
-      dataType: "jsonp"
-    });
-
-
-
-	
     var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&password="+pass+ "&username="+user+ "&doma="+doma+ "&combine="+combine+"&action=LoginQL";
-
-	if (document.getElementById('username').value === "") {
-		$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-		document.getElementById("alert").innerHTML = "Chưa nhập Username !";
-		document.getElementById("confirm_Login").style.display = "none";
-		return false;
-	
-	}	
-	
-	if (document.getElementById('password').value === "") {
-		$('.modalMess-wrapper').toggleClass('open'); // Moi them	
-		document.getElementById("alert").innerHTML = "Chưa nhập Password !";
-		document.getElementById("confirm_Login").style.display = "none";
-		return false;
-	
-	}
-	
 
 	
     var request = jQuery.ajax({
@@ -2068,8 +2077,11 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 	  
     });
 
-
   }
+
+  form.classList.add('was-validated');
+}
+	
 
   function ctrlq(e) {
   document.getElementById('password').value = "";
