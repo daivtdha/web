@@ -1990,7 +1990,7 @@ window.history.replaceState('','','/');
 
 // THAY ĐÂY
 
-var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6czZWUDA5Z21vckhSRTNDZ2cwRnlZdGR0VnZFWGlkWFE4SUN4Mk10d1pVeHRwNW51T0t4dGc1ckthZEN4d0FtWURYUS9leGVj";
+var script_url = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4OHRYcmw1NDd3VkRoQ1k0VWMwNUZmeTFCQWRhSjlaX3I1M09TQUtrWDI5eUdITWJfSHd0dFdiRmY3SG1hV0lnOEtVdy9leGVj";
 //var script_url2 = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3WS11eWZTU1pUcjVxNzZzX1ZmeGhKcjhVM2JxSlRMRFZ2T2hKcUNrUDJKT2h4dlBZL2V4ZWM=";
 
   function LoginQL_value() {
@@ -2005,7 +2005,6 @@ Date.prototype.yyyymmdd = function() {
 };
 
 Date.prototype.yyyymmddhhmm = function() {
-//alert("OK");
   var yyyymmdd = this.yyyymmdd();
   var hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
   var min = (this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes())*60;
@@ -2096,7 +2095,10 @@ document.getElementById("ngay").value = d.yyyymmddhhmmss().toString();
 		
 		} else {	
 
-
+			//dialog_Login.style.display = "block";
+			
+			
+			// Icon.classList.toggle('fa fa-thumbs-o-up');
 			modal01.style.display = "none";
 			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
 			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
