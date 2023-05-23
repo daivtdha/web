@@ -549,15 +549,6 @@ body {
 
 
 
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 caption, th, td {
   text-align: left;
   font-weight: normal;
@@ -602,160 +593,7 @@ a {
 }
 
 
-/* DROP LIST */
-.dropdown {
-  --max-scroll: 8;
-  --text: #3F4656;
-  --border: #2F3545;
-  --borderActive: #23C4F8;
-  --background: #151924;
-  --arrow: #6C7486;
-  --arrowActive: #E4ECFA;
-  --listText: #99A3BA;
-  --listBackground: #F5F9FF;
-  --listActive: #E4ECFA;
-  --listTextActive: #6C7486;
-  --listBorder: none;
-  --textFilled: black;
-  width: auto;
-  position: relative;
-}
 
-.dropdown select {
-  display: none;
-}
-.dropdown > span {
-  cursor: pointer;
-  padding: 9px 16px;
-  border-radius: 6px;
-  display: block;
-  position: relative;
-  color: var(--text);
-  border: 1px solid var(--border);
-  background:white;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before, .dropdown > span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  border-radius: 1px;
-  top: 50%;
-  right: 15px;
-  background:black;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before {
-  margin-right: 4px;
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown > span:after {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  max-height: calc(var(--max-scroll) * 42px);
-  top: 42px;
-  left: 0;
-  z-index: 1;
-  right: 0;
-  background: var(--listBackground);
-  border-radius: 6px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform-origin: 0 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-  transform: scale(0.8) translate(0, 4px);
-  border: 1px solid var(--listBorder);
-}
-.dropdown ul li {
-  opacity: 0;
-  transform: translate(6px, 0);
-  transition: all 0.3s ease;
-}
-.dropdown ul li a {
-  cursor: pointer;
-  display: block;
-  padding: 10px 16px;
-  color: var(--listText);
-  text-decoration: none;
-  outline: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.dropdown ul li a:hover {
-  color: var(--listTextActive);
-}
-.dropdown ul li.active a {
-  color: var(--listTextActive);
-  background: var(--listActive);
-}
-
-.dropdown ul li.active a:before {
-  transform: rotate(45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:after {
-  transform: rotate(-45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
-  --scale: .9;
-  opacity: 1;
-}
-.dropdown ul li:first-child a {
-  border-radius: 6px 6px 0 0;
-}
-.dropdown ul li:last-child a {
-  border-radius: 0 0 6px 6px;
-}
-.dropdown.filled > span {
-  color: var(--textFilled);
-}
-.dropdown.open > span {
-  border-color: var(--borderActive);
-}
-.dropdown.open > span:before, .dropdown.open > span:after {
-  background: var(--arrowActive);
-}
-.dropdown.open > span:before {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown.open > span:after {
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown.open ul {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1) translate(0, 12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-}
-.dropdown.open ul li {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.dropdown.open ul li:nth-child(1) {
-  transition-delay: 80ms;
-}
-.dropdown.open ul li:nth-child(2) {
-  transition-delay: 160ms;
-}
-.dropdown.open ul li:nth-child(3) {
-  transition-delay: 240ms;
-}
-.dropdown.open ul li:nth-child(4) {
-  transition-delay: 320ms;
-}
-.dropdown.open ul li:nth-child(5) {
-  transition-delay: 400ms;
-}
-
-/*END  DROP LIST */
 
 /* FORM LOGIN CỦ*/
 .form {
@@ -769,7 +607,7 @@ a {
   text-align: center;
   margin-top: 15px;
   margin-bottom:20px;
-  
+  top:40%;
 }
     .tab-group {
         list-style: none;
@@ -1097,21 +935,16 @@ span.psw {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   border-radius: 1%;
-  top: 30vh;
-  width: auto;
-  max-width: 700px;
-  height: auto;
-  overflow: auto;
-  background-color: #669999;
-  padding-top: 0px;
-  padding-bottom: 30px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: -25px; /* Dịch chuyển form và modal sang trái 25px */
-
+  top: 90%; /* Đưa modal lên cao hơn trên màn hình */
+  width: 40%; /* Đặt chiều rộng modal là 40% */
+  max-width: 900px;
+background-color: #669999;
+width: 52%;
+ 
 }
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
