@@ -677,6 +677,667 @@ a {
 }
 .dropdown ul li {
   opacity: 0;
+<style>
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 99%;
+  padding: 1px;
+  width: 99%;
+  max-width: 100%;
+  background: linear-gradient(to right, #21618c,#73c6b6);
+}
+
+
+
+.footer {
+  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+  width: 100%;
+  high:auto;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 5px;
+  bottom: 0px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer .footer-left p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-right p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+
+
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 5px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .footer-left i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+
+
+.footer .icons a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color:#0099ff;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 10px;
+  margin-right: 3px;
+
+}
+
+
+.footer .footer-center {
+  width: 25%;
+}
+
+.footer .footer-center i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+
+.footer .footer-right {
+  width: 35%;
+}
+
+
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+}
+
+
+
+/*********** MAIN HEADING **********/
+.main-heading {
+  font-size: 2em;
+  color:white;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight:bold;
+}
+
+.main-heading::before, .main-heading::after {
+  content: "";
+  height: 0.2em;
+  width: 100%;
+  background-image: linear-gradient(to left, darkorange, transparent);
+  margin-right: 1em;
+}
+
+.main-heading::after {
+  background-image: linear-gradient(to right, darkorange, transparent);
+  margin-left: 1em;
+}
+
+/*********** LINKS **********/
+.tab-list__list {
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.tab-list__link {
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: #154360;
+  display: block;
+  padding: 1em 1.2em;
+  border-radius: 5px 5px 0 0;
+  transition: all 150ms ease-out;
+  font-weight:bold;
+  border-style:solid;
+  border-color:white;
+}
+
+.tab-list__link--is-active {
+  color: #21618c;
+  background-color: #f2e7cf;
+  background-color: #fff;
+  transform: scaleY(1.0);
+  transform-origin: center bottom;
+}
+
+/*********** TAB CONTAINERS **********/
+.tab {
+  background-color: #f2e7cf;
+  background-color: #fff;
+  border-radius: 0 1px 1px 1px;
+  padding:0em;
+}
+
+
+.tab__box {
+  display: none;
+}
+
+.tab__box--is-visible {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-gap: 5px;
+  justify-content: space-around;
+}
+
+.tab__item {
+  padding: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9f9;
+  border-radius:5% 5% 5% 5%;
+  cursor: pointer;
+}
+
+
+.tab__heading {
+  font-size: 1.2em;
+  color:black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight:bold;
+
+}
+
+.tab__icon {
+  font-size: 3em !important;
+  margin: 0.7em 0;
+  color: darkorange;
+}
+
+.tab__para {
+  font-weight: bold;
+  color: #3f4c6b;
+  margin-bottom: 1.5em;
+}
+
+.tab__btn {
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 0.6em 1em;
+  border-radius: 1px;
+  border: 0;
+  background: #21618c;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  max-width: 18em;
+  max-high:0.5em;
+  margin: 0 auto;
+}
+
+.tab__btn:hover {
+  background: #5dade2;
+}
+
+.tab__btn:active {
+  transform: translate(1px, 2px);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 38em) {
+  body {
+  font-size: 50%;
+  background: #1b4f72;
+  }
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .tab-list__list {
+    flex-direction: column;
+    background-color: #807668;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .tab-list__link {
+    font-size: 0.8em;
+    padding: 1.2em 1em;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .tab-list__link--is-active {
+    transform: scaleX(1.05);
+    transform-origin: right center;
+  }
+
+  .tab {
+    border-radius: 0 3px 3px 0;
+    padding: 1em;
+  }
+}
+
+
+
+
+/* Popup */
+
+.popup {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left:7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+.Thoat {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.popup_Login {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left: 7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+  .popup_Login {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_Login {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_Login {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}	
+	
+
+.popup_time {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left: 7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px	
+  text-align: center;
+}
+
+.Thoat_time {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_time {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_time {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_time {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+.dialog-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 1px;
+  height: 30px;
+  width: 20%;
+  border-radius: 5px 5px 5px 5px;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+
+
+#btn-show-dialog {
+  background-color:white;
+  border: none;
+  color:black;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 30px;
+  width: 90px;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#btn-show-dialog {border-radius: 12px;}
+
+
+/* End Popup */
+
+
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, div, menu, nav, section, summary {
+  display: block;
+}
+
+a {
+  transition: all .2s linear;
+}
+ h1 {
+  font-size:35px;
+  font-family:times new roman;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+  font-weight:bold;
+}
+
+ h2 {
+  font-size:30px;
+  font-family:times new roman;
+  
+  text-align: center;
+  color:black;
+  font-weight:bold;
+}
+
+
+/* DROP LIST */
+.dropdown {
+  --max-scroll: 8;
+  --text: #3F4656;
+  --border: #2F3545;
+  --borderActive: #23C4F8;
+  --background: #151924;
+  --arrow: #6C7486;
+  --arrowActive: #E4ECFA;
+  --listText: #99A3BA;
+  --listBackground: #F5F9FF;
+  --listActive: #E4ECFA;
+  --listTextActive: #6C7486;
+  --listBorder: none;
+  --textFilled: black;
+  width: auto;
+  position: relative;
+}
+
+.dropdown select {
+  display: none;
+}
+.dropdown > span {
+  cursor: pointer;
+  padding: 9px 16px;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background:white;
+  transition: all 0.3s ease;
+}
+.dropdown > span:before, .dropdown > span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 1px;
+  top: 50%;
+  right: 15px;
+  background:black;
+  transition: all 0.3s ease;
+}
+.dropdown > span:before {
+  margin-right: 4px;
+  transform: scale(0.96, 0.8) rotate(50deg);
+}
+.dropdown > span:after {
+  transform: scale(0.96, 0.8) rotate(-50deg);
+}
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  max-height: calc(var(--max-scroll) * 42px);
+  top: 42px;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  background: var(--listBackground);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform-origin: 0 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transform: scale(0.8) translate(0, 4px);
+  border: 1px solid var(--listBorder);
+}
+.dropdown ul li {
+  opacity: 0;
   transform: translate(6px, 0);
   transition: all 0.3s ease;
 }
@@ -1104,7 +1765,7 @@ span.psw {
   height: auto;
   overflow: auto;
   background-color: #669999;
-  padding: 10px 25px 30px;
+  padding: 7px 20px 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1517,7 +2178,7 @@ font-size: 15px;
 </head>
 
 <body translate="no">
-  <script language=JavaScript>m='%20%20%3Cdiv%20class%3D%22header%22%3B%3E%0A%20%20%3C%21--%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%22/Banner%20DHA%20New.png%22%20/%3E%20%20--%3E%0A%20%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%20%20%22https%3A//www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%2520DHA%2520New.png%3Fraw%3D1%22%20/%3E%20%20%20%0A%20%20%3C/div%3E%0A%3Cdiv%3E%0A%3C/br%3E%0A%26nbsp%3B%26nbsp%3B%26nbsp%3B%3Cbutton%20id%3D%22btn-show-dialog%22%3ETho%E1t%3C/button%3E%0A%3C/div%3E%20%20%0A%20%20%3C%21--%20Modal%20--%3E%0A%0A%0A%3Cdiv%20id%3D%22id01%22%20class%3D%22modal%22%3E%0A%09%3Cspan%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27none%27%22%20class%3D%22close%22%3E%u274E%3C/span%3E%20%20%0A%09%20%20%3Cform%20class%3D%22needs-validation%22%20novalidate%20action%3D%22/action_page.php%22%20method%3D%22post%22%3E%20%0A%09%09%09%0A%09%09%3Cdiv%20class%3D%22imgcontainer%22%3E%09%09%0A%0A%09%09%20%20%3Ch2%20id%3D%22dn%22%20style%3D%22font-size%3A%201em%3B%20color%3A%20white%3B%20font-weight%3A%20bold%22%3B%20value%3D%22%22%3E%3C/h2%3E%0A%09%09%3C/div%3E%3C%21--%20Modal%20--%3E%0A%0A%09%3Cp%20type%20%3D%20%22text%22%20id%3D%22ngay%22%3E%3C/p%3E%0A%09%3Cp%20type%20%3D%20%22text%22%20id%3D%22doma%22%20value%3D%22%22%3E%3C/p%3E%0A%0A%0A%20%20%20%20%3Cdiv%20class%3D%22form%22%3E%0A%0A%09%09%09%3Cul%20class%3D%22Log-group%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20style%3D%22background%3A%20white%22%3B%20width%3D%22135px%22%3B%20%20id%3D%22Lo%22%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22Log%20activeLog%22%3E%3Ca%20href%3D%22%23login%22%3ELogin%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20style%3D%22background%3A%20white%22%3B%20width%3D%22135px%22%3B%20%20id%3D%22C_Pwd%22%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22log%22%3E%3Ca%20href%3D%22%23changepass%22%3EChangePwd%3C/a%3E%3C/li%3E%0A%09%09%09%3C/ul%3E%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader%22%3E%3C/div%3E%0A%09%09%09%09%09%3C%21--%3Cp%20align%3D%22center%22%20id%3D%22re%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%3E%3C/p%3E--%3E%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader2%22%3E%3C/div%3E%0A%09%09%09%09%09%3Cp%20align%3D%22center%22%20id%3D%22repas%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%20hidden%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22Log-content%22%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22login%22%3E%0A%0A%09%09%09%3Cform%3E%09%0A%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22chon%22%20%20%3C/p%3E%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22combine%22%20%3C/p%3E%0A%09%09%09%09%3Cp%20id%3D%22chonlog%22%20type%20%3D%20%22text%22%20value%3D%22%22%3C/p%3E%0A%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20id%3D%22khuvuc1%22%20class%3D%22field-wrap%22%3E%0A%09%09%09%09%20%20%3Cselect%20%20id%3D%22khuvuc%22%20class%3D%22dropdown%22%20placeholder%3D%22Please%20choose%22%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dha%22%20selected%3D%22selected%22%3E%u0110%F4ng%20h%E0%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dhi%22%3E%u0110%u1ED3ng%20h%u1EDBi%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22hue%22%20%3EHu%u1EBF%3C/option%3E%09%09%09%09%20%20%20%0A%09%09%09%09%20%20%3C/select%3E%0A%09%09%09%09%3C/div%3E%09%09%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20class%3D%22field%20username%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22username%22%20id%3D%22username%22%20type%3D%22text%22%20class%3D%22form-control%22%20%20placeholder%3D%22User%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20User.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%3C/div%3E%0A%09%09%09%09%0A%09%09%09%09%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22password%22%20id%3D%22password%22%20type%3D%22password%22%20class%3D%22form-control%22%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%09%09%09%09%09%3C/div%3E%09%09%09%09%0A%09%09%09%09%20%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20%20class%3D%22field%20captch_input%22%3E%0A%09%09%09%09%09%20%20%3Cdiv%20class%3D%22input_field%20captch_input%22%3E%0A%09%09%09%09%09%09%3Cinput%20%20type%3D%22text%22%20style%3D%22height%3A%2033px%3B%22%20placeholder%3D%22Nh%u1EADp%20Captcha%22%20class%3D%22form-control%22%20required%3E%09%09%09%09%0A%09%09%09%09%09%20%20%3C/div%3E%0A%09%09%09%09%09%20%20%3Cdiv%20%20class%3D%22message%22%20style%3D%22text-align%3A%20left%3B%20color%3A%20%23FF2525%3B%22%3ENh%u1EADp%20m%E3%20Captcha%20d%u01B0%u1EDBi%20v%E0o.%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20%20class%3D%22field%20captch_box%22%3E%0A%09%09%09%09%09%20%20%3Cdiv%20class%3D%22input_field%20captch_box%22%3E%0A%09%09%09%09%09%09%3Cinput%20%20type%3D%22text%22%20value%3D%22%22%20disabled%20/%3E%0A%09%09%09%09%09%09%3Cbutton%20hidden%20class%3D%22refresh_button%22%3E%0A%09%09%09%09%09%09%20%20%3Ci%20%20class%3D%22fa-solid%20fa-rotate-right%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3C/button%3E%0A%09%09%09%09%09%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%0A%0A%09%09%09%09%20%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20id%3D%22dangnhap%22%20onClick%3D%22LoginQL_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u0103ng%20Nh%u1EADp%22%20style%3D%22width%3A%20210px%3B%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22changepass%22%3E%0A%09%09%09%09%3C/br%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%20%20%0A%09%09%09%09%20%20%3Cdiv%20class%3D%22field%20username%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldusername%22%20id%3D%22oldusername%22%20type%3D%22text%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22User%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20User.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%09%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldpassword%22%20id%3D%22oldpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u%20hi%u1EC7n%20t%u1EA1i.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22newpassword%22%20id%3D%22newpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%20m%u1EDBi%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u%20m%u1EDBi.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22cfpassword%22%20id%3D%22cfpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%20m%u1EDBi%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20l%u1EA1i%20M%u1EADt%20kh%u1EA9u%20m%u1EDBi.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%09%09%09%09%09%0A%09%09%09%09%20%0A%09%09%09%09%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20id%3D%22doipass%22%20onClick%3D%22Changepassword_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u1ED5i%20Password%22%20style%3D%22width%3A%20210px%3B%22%3E%3C/input%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%20%20%20%20%20%20%20%20%3C/div%3E%3C%21--%20tab-content%20--%3E%0A%0A%20%20%20%20%3C/div%3E%20%3C%21--%20/form%20--%3E%0A%0A%0A%3C/form%3E%3C%21--%20Modal%20--%3E%0A%3C/div%3E%0A%0A%09%09%0A%20%20%3Ch1%20class%3D%22main-heading%22%3ETRUY%u1EC0N%20D%u1EAAN%20%u0110%C0I%20VT%20%u0110%D4NG%20H%C0%3C/h1%3E%0A%0A%20%20%3Cdiv%20class%3D%22wrap%22%3E%0A%20%20%20%20%20%20%20%20%3Cul%20class%3D%22tab-list__list%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-1%22%20class%3D%22tab-list__link%20tab-list__link--is-active%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%C0I%20%u0110%D4NG%20H%C0%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-2%22%20class%3D%22tab-list__link%22%3EV%u1EACT%20T%u01AF%20DP%20TRUY%u1EC0N%20D%u1EAAN%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-3%22%20class%3D%22tab-list__link%22%3ET%C0I%20LI%u1EC6U%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3C/ul%3E%0A%09%09%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tab%22%3E%0A%0A%09%09%3Cul%20id%3D%22tab-1%22%20class%3D%22tab__box%20tab__box--1%20%20tab__box--is-visible%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh1%22%20src%3D%22TruyenDanPicture/TrucCaDHA.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten1%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%D4NG%20H%C0%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh2%22%20src%3D%22TruyenDanPicture/TrucCaDHI.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten2%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%u1ED2NG%20H%u1EDAI%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh3%22%20src%3D%22TruyenDanPicture/TrucCaHUE.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten3%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20HU%u1EBE%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20id%3D%22tab-2%22%20class%3D%22tab__box%20tab__box--1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh4%22%20src%3D%22TruyenDanPicture/VatTuDPDHA.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten4%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20%u0110%D4NG%20H%C0%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh5%22%20src%3D%22TruyenDanPicture/VatTuDPDHI.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten5%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20%u0110%u1ED2NG%20H%u1EDAI%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh6%22%20src%3D%22TruyenDanPicture/VatTuDPHUE.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten6%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20HU%u1EBE%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%09%09%09%0A%09%09%09%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20id%3D%22tab-3%22%20class%3D%22tab__box%20tab__box--1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh7%22%20src%3D%22TruyenDanPicture/CongVan.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten7%22%20class%3D%22tab__heading%22%3EC%D4NG%20V%u0102N%20K%u1EF6%20THU%u1EACT%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh8%22%20src%3D%22TruyenDanPicture/TaiLieu.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten8%22%20class%3D%22tab__heading%22%3ET%C0I%20LI%u1EC6U%20TD%20-%20IP%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh9%22%20src%3D%22TruyenDanPicture/TracNghiem.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten9%22%20class%3D%22tab__heading%22%3ETR%u1EAEC%20NGHI%u1EC6M%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%0A%0A%09%09%09%3C/div%3E%20%20%20%20%0A%20%20%20%20%3C/div%3E%0A%0A%0A%0A%09%0A%3Cdiv%20class%3D%22Thoat%22%20id%3D%22dialog-container%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3EB%u1EA1n%20c%F3%20mu%u1ED1n%20Tho%E1t%20kh%F4ng%20%3F%3C/p%3E%09%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-cancel%22%20id%3D%22cancel%22%20style%3D%22width%3A100px%3B%22%3ECancel%3C/button%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm%22style%3D%22width%3A100px%3B%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cp%20id%3D%22testText%22%3E%3C/p%3E%0A%3Cdiv%20class%3D%22Thoat_time%22%20id%3D%22dialog_time%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3ETh%u1EDDi%20gian%20l%E2u%20kh%F4ng%20d%F9ng%20%21%3C/p%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_time%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%20%0A%0A%20%20%3C%21--%20Modal%20Aleert--%3E%20%20%20%0A%0A%0A%0A%3Cdiv%20class%3D%22modalMess-wrapper%22%3E%0A%20%20%3Cdiv%20class%3D%22modalMess%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22headMess%22%3E%0A%20%20%20%20%20%20%3Ca%20id%3D%22close%22%20class%3D%22btn-close%20trigger%22%20%3E%0A%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-times%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20%20class%3D%22contentMess%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22good-job%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20id%3D%22fa%22%20class%3D%22fa%20fa-exclamation-circle%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ch1%20id%3D%22alert%22%20value%3D%22%22%20%3E%3C/h1%3E%09%09%20%20%09%20%20%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%3Cdiv%3E%0A%09%09%09%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_Login%22%20style%3D%22display%3Anone%3Bwidth%3A100px%3B%22%3EOK%3C/button%3E%0A%09%09%09%3C/div%3E%0A%09%3C/div%3E%0A%0A%20%20%3C/div%3E%09%0A%20%3C/div%3E';d=unescape(m);document.write(d);</script>
+ <script language=JavaScript>m='%20%20%3Cdiv%20class%3D%22header%22%3B%3E%0A%20%20%3C%21--%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%22/Banner%20DHA%20New.png%22%20/%3E%20%20--%3E%0A%20%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%20%20%22https%3A//www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%2520DHA%2520New.png%3Fraw%3D1%22%20/%3E%20%20%20%0A%20%20%3C/div%3E%0A%3Cdiv%3E%0A%3C/br%3E%0A%26nbsp%3B%26nbsp%3B%26nbsp%3B%3Cbutton%20id%3D%22btn-show-dialog%22%3ETho%E1t%3C/button%3E%0A%3C/div%3E%20%20%0A%20%20%3C%21--%20Modal%20--%3E%0A%0A%0A%3Cdiv%20id%3D%22id01%22%20class%3D%22modal%22%3E%0A%09%3Cspan%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27none%27%22%20class%3D%22close%22%3E%u274E%3C/span%3E%20%20%0A%09%20%20%3Cform%20class%3D%22needs-validation%22%20novalidate%20action%3D%22/action_page.php%22%20method%3D%22post%22%3E%20%0A%09%09%09%0A%09%09%3Cdiv%20class%3D%22imgcontainer%22%3E%09%09%0A%0A%09%09%20%20%3Ch2%20id%3D%22dn%22%20style%3D%22font-size%3A%201em%3B%20color%3A%20white%3B%20font-weight%3A%20bold%3B%20padding%3A%205px%22%20value%3D%22%22%3E%3C/h2%3E%0A%09%09%3C/div%3E%3C%21--%20Modal%20--%3E%0A%0A%09%3Cp%20type%20%3D%20%22text%22%20id%3D%22ngay%22%3E%3C/p%3E%0A%09%3Cp%20type%20%3D%20%22text%22%20id%3D%22doma%22%20value%3D%22%22%3E%3C/p%3E%0A%0A%0A%20%20%20%20%3Cdiv%20class%3D%22form%22%3E%0A%0A%09%09%09%3Cul%20class%3D%22Log-group%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20style%3D%22background%3A%20white%3B%20width%3A135px%3B%22%20%20id%3D%22Lo%22%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22Log%20active%22%3E%3Ca%20href%3D%22%23login%22%3ELogin%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20style%3D%22background%3A%20white%3B%20width%3A135px%3B%22%20%20%20id%3D%22C_Pwd%22%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22Log%22%3E%3Ca%20href%3D%22%23changepass%22%3EChangePwd%3C/a%3E%3C/li%3E%0A%09%09%09%3C/ul%3E%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader%22%3E%3C/div%3E%0A%09%09%09%09%09%3C%21--%3Cp%20align%3D%22center%22%20id%3D%22re%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%3E%3C/p%3E--%3E%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader2%22%3E%3C/div%3E%0A%09%09%09%09%09%3Cp%20align%3D%22center%22%20id%3D%22repas%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%20hidden%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22Log-content%22%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22login%22%3E%0A%0A%09%09%09%3Cform%3E%09%0A%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22chon%22%20%20%3C/p%3E%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22combine%22%20%3C/p%3E%0A%09%09%09%09%3Cp%20id%3D%22chonlog%22%20type%20%3D%20%22text%22%20value%3D%22%22%3C/p%3E%0A%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20id%3D%22khuvuc1%22%20class%3D%22field-wrap%22%3E%0A%09%09%09%09%20%20%3Cselect%20%20id%3D%22khuvuc%22%20class%3D%22dropdown%22%20placeholder%3D%22Please%20choose%22%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dha%22%20selected%3D%22selected%22%3E%u0110%F4ng%20h%E0%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dhi%22%3E%u0110%u1ED3ng%20h%u1EDBi%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22hue%22%20%3EHu%u1EBF%3C/option%3E%09%09%09%09%20%20%20%0A%09%09%09%09%20%20%3C/select%3E%0A%09%09%09%09%3C/div%3E%09%09%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20class%3D%22field%20username%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22username%22%20id%3D%22username%22%20type%3D%22text%22%20class%3D%22form-control%22%20%20placeholder%3D%22User%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20User.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%3C/div%3E%0A%09%09%09%09%0A%09%09%09%09%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22password%22%20id%3D%22password%22%20type%3D%22password%22%20class%3D%22form-control%22%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%09%09%09%09%09%3C/div%3E%09%09%09%09%0A%09%09%09%09%20%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20%20class%3D%22field%20captch_input%22%3E%0A%09%09%09%09%09%20%20%3Cdiv%20class%3D%22input_field%20captch_input%22%3E%0A%09%09%09%09%09%09%3Cinput%20%20type%3D%22text%22%20style%3D%22height%3A%2033px%3B%22%20placeholder%3D%22Nh%u1EADp%20Captcha%22%20class%3D%22form-control%22%20required%3E%09%09%09%09%0A%09%09%09%09%09%20%20%3C/div%3E%0A%09%09%09%09%09%20%20%3Cdiv%20%20class%3D%22message%22%20style%3D%22text-align%3A%20left%3B%20color%3A%20%23FF2525%3B%22%3ENh%u1EADp%20m%E3%20Captcha%20d%u01B0%u1EDBi%20v%E0o.%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20%20class%3D%22field%20captch_box%22%3E%0A%09%09%09%09%09%20%20%3Cdiv%20class%3D%22input_field%20captch_box%22%3E%0A%09%09%09%09%09%09%3Cinput%20%20type%3D%22text%22%20value%3D%22%22%20disabled%20/%3E%0A%09%09%09%09%09%09%3Cbutton%20hidden%20class%3D%22refresh_button%22%3E%0A%09%09%09%09%09%09%20%20%3Ci%20%20class%3D%22fa-solid%20fa-rotate-right%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3C/button%3E%0A%09%09%09%09%09%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%0A%0A%09%09%09%09%20%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20id%3D%22dangnhap%22%20onClick%3D%22LoginQL_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u0103ng%20Nh%u1EADp%22%20style%3D%22width%3A%20210px%3B%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22changepass%22%3E%0A%09%09%09%09%3C/br%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%20%20%0A%09%09%09%09%20%20%3Cdiv%20class%3D%22field%20username%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldusername%22%20id%3D%22oldusername%22%20type%3D%22text%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22User%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20User.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%09%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldpassword%22%20id%3D%22oldpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u%20hi%u1EC7n%20t%u1EA1i.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22newpassword%22%20id%3D%22newpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%20m%u1EDBi%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u%20m%u1EDBi.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22cfpassword%22%20id%3D%22cfpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%20m%u1EDBi%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20l%u1EA1i%20M%u1EADt%20kh%u1EA9u%20m%u1EDBi.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%09%09%09%09%09%0A%09%09%09%09%20%0A%09%09%09%09%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20id%3D%22doipass%22%20onClick%3D%22Changepassword_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u1ED5i%20Password%22%20style%3D%22width%3A%20210px%3B%22%3E%3C/input%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%20%20%20%20%20%20%20%20%3C/div%3E%3C%21--%20tab-content%20--%3E%0A%0A%20%20%20%20%3C/div%3E%20%3C%21--%20/form%20--%3E%0A%0A%0A%3C/form%3E%3C%21--%20Modal%20--%3E%0A%3C/div%3E%0A%0A%09%09%0A%20%20%3Ch1%20class%3D%22main-heading%22%3ETRUY%u1EC0N%20D%u1EAAN%20%u0110%C0I%20VT%20%u0110%D4NG%20H%C0%3C/h1%3E%0A%0A%20%20%3Cdiv%20class%3D%22wrap%22%3E%0A%20%20%20%20%20%20%20%20%3Cul%20class%3D%22tab-list__list%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-1%22%20class%3D%22tab-list__link%20tab-list__link--is-active%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%C0I%20%u0110%D4NG%20H%C0%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-2%22%20class%3D%22tab-list__link%22%3EV%u1EACT%20T%u01AF%20DP%20TRUY%u1EC0N%20D%u1EAAN%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-3%22%20class%3D%22tab-list__link%22%3ET%C0I%20LI%u1EC6U%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3C/ul%3E%0A%09%09%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tab%22%3E%0A%0A%09%09%3Cul%20id%3D%22tab-1%22%20class%3D%22tab__box%20tab__box--1%20%20tab__box--is-visible%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh1%22%20src%3D%22TruyenDanPicture/TrucCaDHA.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten1%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%D4NG%20H%C0%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh2%22%20src%3D%22TruyenDanPicture/TrucCaDHI.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten2%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%u1ED2NG%20H%u1EDAI%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh3%22%20src%3D%22TruyenDanPicture/TrucCaHUE.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten3%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20HU%u1EBE%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20id%3D%22tab-2%22%20class%3D%22tab__box%20tab__box--1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh4%22%20src%3D%22TruyenDanPicture/VatTuDPDHA.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten4%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20%u0110%D4NG%20H%C0%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh5%22%20src%3D%22TruyenDanPicture/VatTuDPDHI.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten5%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20%u0110%u1ED2NG%20H%u1EDAI%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh6%22%20src%3D%22TruyenDanPicture/VatTuDPHUE.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten6%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20HU%u1EBE%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%09%09%09%0A%09%09%09%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20id%3D%22tab-3%22%20class%3D%22tab__box%20tab__box--1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh7%22%20src%3D%22TruyenDanPicture/CongVan.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten7%22%20class%3D%22tab__heading%22%3EC%D4NG%20V%u0102N%20K%u1EF6%20THU%u1EACT%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh8%22%20src%3D%22TruyenDanPicture/TaiLieu.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten8%22%20class%3D%22tab__heading%22%3ET%C0I%20LI%u1EC6U%20TD%20-%20IP%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh9%22%20src%3D%22TruyenDanPicture/TracNghiem.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten9%22%20class%3D%22tab__heading%22%3ETR%u1EAEC%20NGHI%u1EC6M%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%0A%0A%09%09%09%3C/div%3E%20%20%20%20%0A%20%20%20%20%3C/div%3E%0A%0A%0A%0A%09%0A%3Cdiv%20class%3D%22Thoat%22%20id%3D%22dialog-container%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3EB%u1EA1n%20c%F3%20mu%u1ED1n%20Tho%E1t%20kh%F4ng%20%3F%3C/p%3E%09%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-cancel%22%20id%3D%22cancel%22%20style%3D%22width%3A100px%3B%22%3ECancel%3C/button%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm%22style%3D%22width%3A100px%3B%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cp%20id%3D%22testText%22%3E%3C/p%3E%0A%3Cdiv%20class%3D%22Thoat_time%22%20id%3D%22dialog_time%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3ETh%u1EDDi%20gian%20l%E2u%20kh%F4ng%20d%F9ng%20%21%3C/p%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_time%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%20%0A%0A%20%20%3C%21--%20Modal%20Aleert--%3E%20%20%20%0A%0A%0A%0A%3Cdiv%20class%3D%22modalMess-wrapper%22%3E%0A%20%20%3Cdiv%20class%3D%22modalMess%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22headMess%22%3E%0A%20%20%20%20%20%20%3Ca%20id%3D%22close%22%20class%3D%22btn-close%20trigger%22%20%3E%0A%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-times%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20%20class%3D%22contentMess%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22good-job%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20id%3D%22fa%22%20class%3D%22fa%20fa-exclamation-circle%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ch1%20id%3D%22alert%22%20value%3D%22%22%20%3E%3C/h1%3E%09%09%20%20%09%20%20%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%3Cdiv%3E%0A%09%09%09%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_Login%22%20style%3D%22display%3Anone%3Bwidth%3A100px%3B%22%3EOK%3C/button%3E%0A%09%09%09%3C/div%3E%0A%09%3C/div%3E%0A%0A%20%20%3C/div%3E%09%0A%20%3C/div%3E';d=unescape(m);document.write(d);</script>
 
 <script src="TruyenDanPicture/Droplist.min.js"></script>
 <script src="CapQuangPicture/Login.min.js"></script>
@@ -1546,7 +2207,7 @@ var _0x44d6c=_0x3ce3;(function(_0x4b7b93,_0x3a3e0c){var _0x1b372b=_0x3ce3,_0x1ac
 
 <script id="rendered-js">
 
-var _0x472643=_0x49d5;(function(_0x1f3640,_0x2456f0){var _0x4aacf5=_0x49d5,_0x2441b8=_0x1f3640();while(!![]){try{var _0x41ba1a=parseInt(_0x4aacf5(0x20f))/0x1*(-parseInt(_0x4aacf5(0x200))/0x2)+-parseInt(_0x4aacf5(0x205))/0x3+-parseInt(_0x4aacf5(0x1b8))/0x4*(-parseInt(_0x4aacf5(0x209))/0x5)+-parseInt(_0x4aacf5(0x1db))/0x6+parseInt(_0x4aacf5(0x213))/0x7*(-parseInt(_0x4aacf5(0x1e8))/0x8)+parseInt(_0x4aacf5(0x1e7))/0x9*(-parseInt(_0x4aacf5(0x1f0))/0xa)+-parseInt(_0x4aacf5(0x1ed))/0xb*(-parseInt(_0x4aacf5(0x202))/0xc);if(_0x41ba1a===_0x2456f0)break;else _0x2441b8['push'](_0x2441b8['shift']());}catch(_0x4500eb){_0x2441b8['push'](_0x2441b8['shift']());}}}(_0x1dd7,0xc1289));let ul=document[_0x472643(0x1d6)](_0x472643(0x1ef)),links=document[_0x472643(0x1e3)]('.tab-list__link'),tabs=document[_0x472643(0x1e3)](_0x472643(0x20c));ul[_0x472643(0x1ba)](_0x472643(0x1bb),_0x33db3d=>{var _0x546084=_0x472643;_0x33db3d['target']['classList'][_0x546084(0x1e1)](_0x546084(0x1b6))&&!_0x33db3d[_0x546084(0x1ec)][_0x546084(0x210)][_0x546084(0x1e1)]('tab-list__link--is-active')&&(_0x33db3d[_0x546084(0x1d3)](),links[_0x546084(0x1cd)]((_0x13ce52,_0x23d13c)=>{var _0x1c966b=_0x546084;_0x13ce52['classList'][_0x1c966b(0x208)]('tab-list__link--is-active'),tabs[_0x23d13c]['classList'][_0x1c966b(0x208)]('tab__box--is-visible'),_0x33db3d[_0x1c966b(0x1ec)][_0x1c966b(0x210)][_0x1c966b(0x217)](_0x1c966b(0x1de)),_0x33db3d[_0x1c966b(0x1ec)][_0x1c966b(0x1dc)](_0x1c966b(0x1d7))[_0x1c966b(0x1f9)](0x1)===tabs[_0x23d13c]['getAttribute']('id')&&tabs[_0x23d13c][_0x1c966b(0x210)]['add']('tab__box--is-visible');}));}),$('.tabmodal\x20a')['on']('click',function(_0x121d8e){var _0x5366e7=_0x472643;_0x121d8e['preventDefault'](),$(this)[_0x5366e7(0x1c5)]()['addClass'](_0x5366e7(0x1dd)),$(this)[_0x5366e7(0x1c5)]()['siblings']()['removeClass']('active'),target=$(this)[_0x5366e7(0x1d1)]('href'),$(_0x5366e7(0x1e2))['not'](target)[_0x5366e7(0x204)](),$(target)[_0x5366e7(0x1f7)](0x258);}),$(_0x472643(0x1f3))[_0x472643(0x1c4)](_0x472643(0x1c2))['on'](_0x472643(0x1fb),function(_0x2a9f86){var _0x5b6c36=_0x472643,_0x4aaeca=$(this),_0x18c816=_0x4aaeca[_0x5b6c36(0x1d0)](_0x5b6c36(0x1ee));if(_0x2a9f86[_0x5b6c36(0x1fd)]==='keyup')_0x4aaeca['val']()===''?_0x18c816['removeClass'](_0x5b6c36(0x1f8)):_0x18c816[_0x5b6c36(0x1bc)]('active\x20highlight');else{if(_0x2a9f86['type']===_0x5b6c36(0x1cf))_0x4aaeca[_0x5b6c36(0x1df)]()===''?_0x18c816[_0x5b6c36(0x1ca)](_0x5b6c36(0x1f8)):_0x18c816[_0x5b6c36(0x1ca)](_0x5b6c36(0x1cc));else{if(_0x2a9f86['type']===_0x5b6c36(0x1da)){if(_0x4aaeca[_0x5b6c36(0x1df)]()==='')_0x18c816[_0x5b6c36(0x1ca)](_0x5b6c36(0x1cc));else _0x4aaeca[_0x5b6c36(0x1df)]()!==''&&_0x18c816[_0x5b6c36(0x1bc)](_0x5b6c36(0x1cc));}}}}),$(_0x472643(0x1c7))['on'](_0x472643(0x1bb),function(_0x281d2b){var _0x90cf0=_0x472643;_0x281d2b[_0x90cf0(0x1d3)](),$(this)[_0x90cf0(0x1c5)]()[_0x90cf0(0x1bc)](_0x90cf0(0x1dd)),$(this)[_0x90cf0(0x1c5)]()[_0x90cf0(0x214)]()[_0x90cf0(0x1ca)](_0x90cf0(0x1dd)),target=$(this)['attr']('href'),$(_0x90cf0(0x1e5))[_0x90cf0(0x1eb)](target)['hide'](),$(target)[_0x90cf0(0x1f7)](0x258);});var modal01=document[_0x472643(0x1c1)](_0x472643(0x203)),chonlog=document[_0x472643(0x1c1)]('chonlog'),anh1=document[_0x472643(0x1c1)](_0x472643(0x1c8)),ten1=document[_0x472643(0x1c1)](_0x472643(0x1c3));anh1[_0x472643(0x1ea)]=function(){var _0x72c64c=_0x472643;modal01['style'][_0x72c64c(0x1d9)]=_0x72c64c(0x218),document[_0x72c64c(0x1c1)]('khuvuc1')['style'][_0x72c64c(0x1d9)]=_0x72c64c(0x1fc),document[_0x72c64c(0x1c1)]('dn')[_0x72c64c(0x1cb)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHA',document[_0x72c64c(0x1c1)](_0x72c64c(0x215))[_0x72c64c(0x20a)]=_0x72c64c(0x1bf),document['getElementById'](_0x72c64c(0x1ce))[_0x72c64c(0x20a)]=document[_0x72c64c(0x1c1)]('dn')[_0x72c64c(0x1cb)];},ten1['onclick']=function(){var _0x46bfe6=_0x472643;modal01[_0x46bfe6(0x1d8)][_0x46bfe6(0x1d9)]='block',document[_0x46bfe6(0x1c1)]('khuvuc1')[_0x46bfe6(0x1d8)][_0x46bfe6(0x1d9)]=_0x46bfe6(0x1fc),document[_0x46bfe6(0x1c1)]('dn')[_0x46bfe6(0x1cb)]=_0x46bfe6(0x1c0),document[_0x46bfe6(0x1c1)](_0x46bfe6(0x1ce))[_0x46bfe6(0x20a)]=document[_0x46bfe6(0x1c1)]('dn')[_0x46bfe6(0x1cb)],document['getElementById']('combine')[_0x46bfe6(0x20a)]=_0x46bfe6(0x1bf);};var anh2=document['getElementById']('anh2'),ten2=document[_0x472643(0x1c1)]('ten2');anh2[_0x472643(0x1ea)]=function(){var _0x5d04cc=_0x472643;modal01['style'][_0x5d04cc(0x1d9)]=_0x5d04cc(0x218),document[_0x5d04cc(0x1c1)](_0x5d04cc(0x216))[_0x5d04cc(0x1d8)][_0x5d04cc(0x1d9)]=_0x5d04cc(0x1fc),document[_0x5d04cc(0x1c1)]('dn')[_0x5d04cc(0x1cb)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI',document[_0x5d04cc(0x1c1)](_0x5d04cc(0x215))['value']=_0x5d04cc(0x1f4),document[_0x5d04cc(0x1c1)]('chonlog')[_0x5d04cc(0x20a)]=document[_0x5d04cc(0x1c1)]('dn')['innerHTML'];},ten2[_0x472643(0x1ea)]=function(){var _0xd0cf6c=_0x472643;modal01[_0xd0cf6c(0x1d8)]['display']='block',document[_0xd0cf6c(0x1c1)](_0xd0cf6c(0x216))[_0xd0cf6c(0x1d8)][_0xd0cf6c(0x1d9)]=_0xd0cf6c(0x1fc),document[_0xd0cf6c(0x1c1)]('dn')['innerHTML']=_0xd0cf6c(0x1f6),document[_0xd0cf6c(0x1c1)](_0xd0cf6c(0x215))['value']=_0xd0cf6c(0x1f4),document[_0xd0cf6c(0x1c1)](_0xd0cf6c(0x1ce))[_0xd0cf6c(0x20a)]=document['getElementById']('dn')[_0xd0cf6c(0x1cb)];};var anh3=document[_0x472643(0x1c1)](_0x472643(0x1f2)),ten3=document[_0x472643(0x1c1)]('ten3');anh3[_0x472643(0x1ea)]=function(){var _0x2f550e=_0x472643;modal01[_0x2f550e(0x1d8)][_0x2f550e(0x1d9)]=_0x2f550e(0x218),document[_0x2f550e(0x1c1)](_0x2f550e(0x216))[_0x2f550e(0x1d8)][_0x2f550e(0x1d9)]=_0x2f550e(0x1fc),document[_0x2f550e(0x1c1)]('dn')[_0x2f550e(0x1cb)]=_0x2f550e(0x1e0),document[_0x2f550e(0x1c1)](_0x2f550e(0x215))[_0x2f550e(0x20a)]='truccahue',document[_0x2f550e(0x1c1)](_0x2f550e(0x1ce))[_0x2f550e(0x20a)]=document[_0x2f550e(0x1c1)]('dn')['innerHTML'];},ten3[_0x472643(0x1ea)]=function(){var _0x3f03b1=_0x472643;modal01[_0x3f03b1(0x1d8)][_0x3f03b1(0x1d9)]=_0x3f03b1(0x218),document[_0x3f03b1(0x1c1)](_0x3f03b1(0x216))[_0x3f03b1(0x1d8)]['display']=_0x3f03b1(0x1fc),document[_0x3f03b1(0x1c1)]('dn')[_0x3f03b1(0x1cb)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ',document[_0x3f03b1(0x1c1)](_0x3f03b1(0x215))[_0x3f03b1(0x20a)]='truccahue',document['getElementById'](_0x3f03b1(0x1ce))[_0x3f03b1(0x20a)]=document[_0x3f03b1(0x1c1)]('dn')[_0x3f03b1(0x1cb)];};var anh4=document[_0x472643(0x1c1)](_0x472643(0x1c9)),ten4=document[_0x472643(0x1c1)](_0x472643(0x1e9));anh4[_0x472643(0x1ea)]=function(){var _0x32da91=_0x472643;modal01[_0x32da91(0x1d8)][_0x32da91(0x1d9)]=_0x32da91(0x218),document[_0x32da91(0x1c1)](_0x32da91(0x216))[_0x32da91(0x1d8)]['display']='none',document[_0x32da91(0x1c1)]('dn')[_0x32da91(0x1cb)]='ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA',document[_0x32da91(0x1c1)](_0x32da91(0x215))[_0x32da91(0x20a)]=_0x32da91(0x1e4),document['getElementById'](_0x32da91(0x1ce))[_0x32da91(0x20a)]=document[_0x32da91(0x1c1)]('dn')[_0x32da91(0x1cb)];},ten4['onclick']=function(){var _0x393d9d=_0x472643;modal01[_0x393d9d(0x1d8)]['display']=_0x393d9d(0x218),document[_0x393d9d(0x1c1)](_0x393d9d(0x216))[_0x393d9d(0x1d8)][_0x393d9d(0x1d9)]='none',document[_0x393d9d(0x1c1)]('dn')['innerHTML']=_0x393d9d(0x1b7),document['getElementById'](_0x393d9d(0x215))['value']=_0x393d9d(0x1e4),document['getElementById'](_0x393d9d(0x1ce))[_0x393d9d(0x20a)]=document[_0x393d9d(0x1c1)]('dn')[_0x393d9d(0x1cb)];};var anh5=document[_0x472643(0x1c1)](_0x472643(0x207)),ten5=document[_0x472643(0x1c1)](_0x472643(0x1d5));anh5[_0x472643(0x1ea)]=function(){var _0x4e26c0=_0x472643;modal01[_0x4e26c0(0x1d8)][_0x4e26c0(0x1d9)]=_0x4e26c0(0x218),document[_0x4e26c0(0x1c1)](_0x4e26c0(0x216))[_0x4e26c0(0x1d8)]['display']=_0x4e26c0(0x1fc),document['getElementById']('dn')[_0x4e26c0(0x1cb)]=_0x4e26c0(0x20b),document[_0x4e26c0(0x1c1)](_0x4e26c0(0x215))[_0x4e26c0(0x20a)]='vattudhi',document[_0x4e26c0(0x1c1)](_0x4e26c0(0x1ce))[_0x4e26c0(0x20a)]=document[_0x4e26c0(0x1c1)]('dn')[_0x4e26c0(0x1cb)];},ten5['onclick']=function(){var _0x53c344=_0x472643;modal01['style'][_0x53c344(0x1d9)]=_0x53c344(0x218),document[_0x53c344(0x1c1)](_0x53c344(0x216))['style'][_0x53c344(0x1d9)]=_0x53c344(0x1fc),document[_0x53c344(0x1c1)]('dn')['innerHTML']=_0x53c344(0x20b),document['getElementById'](_0x53c344(0x215))['value']=_0x53c344(0x1d2),document[_0x53c344(0x1c1)](_0x53c344(0x1ce))['value']=document['getElementById']('dn')['innerHTML'];};function _0x1dd7(){var _0x1e780d=['ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHA','getElementById','input,\x20textarea','ten1','find','parent','anh8','.Log\x20a','anh1','anh4','removeClass','innerHTML','highlight','forEach','chonlog','blur','prev','attr','vattudhi','preventDefault','ten8','ten5','querySelector','href','style','display','focus','7237482fHZSUz','getAttribute','active','tab-list__link--is-active','val','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ','contains','.tabmodal-content\x20>\x20main','querySelectorAll','vattudha','.Log-content\x20>\x20div','vattuhue','261063wExnlh','824riKOUC','ten4','onclick','not','target','11mFZZtv','label','.tab-list__list','300ZbuFMh','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUẾ','anh3','.form','truccadhi','anh7','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI','fadeIn','active\x20highlight','slice','congvantd','keyup\x20blur\x20focus','none','type','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUE','ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD','2WTljpu','ten7','58626384kvIhnf','id01','hide','1895070hkwQPB','ĐĂNG\x20NHẬP\x20CÔNG\x20VĂN\x20TD','anh5','remove','1845805pZShkS','value','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHI','.tab__box','ten6','tracnghiemtd','976586sbaLBM','classList','anh9','ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM','52927ANRKTy','siblings','combine','khuvuc1','add','block','ĐỔI\x20PASSWORD\x20ĐĂNG\x20NHẬP','tab-list__link','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA','4spuuOQ','C_Pwd','addEventListener','click','addClass','ten9','tailieutd','truccadha'];_0x1dd7=function(){return _0x1e780d;};return _0x1dd7();}var anh6=document[_0x472643(0x1c1)]('anh6'),ten6=document[_0x472643(0x1c1)](_0x472643(0x20d));anh6['onclick']=function(){var _0x12ebed=_0x472643;modal01[_0x12ebed(0x1d8)][_0x12ebed(0x1d9)]=_0x12ebed(0x218),document[_0x12ebed(0x1c1)](_0x12ebed(0x216))[_0x12ebed(0x1d8)][_0x12ebed(0x1d9)]='none',document[_0x12ebed(0x1c1)]('dn')['innerHTML']=_0x12ebed(0x1f1),document['getElementById'](_0x12ebed(0x215))['value']=_0x12ebed(0x1e6),document['getElementById'](_0x12ebed(0x1ce))[_0x12ebed(0x20a)]=document[_0x12ebed(0x1c1)]('dn')[_0x12ebed(0x1cb)];},ten6[_0x472643(0x1ea)]=function(){var _0x11a892=_0x472643;modal01[_0x11a892(0x1d8)][_0x11a892(0x1d9)]=_0x11a892(0x218),document['getElementById'](_0x11a892(0x216))[_0x11a892(0x1d8)][_0x11a892(0x1d9)]='none',document[_0x11a892(0x1c1)]('dn')[_0x11a892(0x1cb)]=_0x11a892(0x1fe),document[_0x11a892(0x1c1)](_0x11a892(0x215))[_0x11a892(0x20a)]=_0x11a892(0x1e6),document['getElementById'](_0x11a892(0x1ce))['value']=document['getElementById']('dn')[_0x11a892(0x1cb)];};var anh7=document[_0x472643(0x1c1)](_0x472643(0x1f5)),ten7=document['getElementById'](_0x472643(0x201));anh7['onclick']=function(){var _0x2348fe=_0x472643;modal01[_0x2348fe(0x1d8)][_0x2348fe(0x1d9)]=_0x2348fe(0x218),document['getElementById'](_0x2348fe(0x216))[_0x2348fe(0x1d8)]['display']=_0x2348fe(0x1fc),document[_0x2348fe(0x1c1)]('dn')[_0x2348fe(0x1cb)]=_0x2348fe(0x206),document[_0x2348fe(0x1c1)](_0x2348fe(0x215))[_0x2348fe(0x20a)]=_0x2348fe(0x1fa),document['getElementById'](_0x2348fe(0x1ce))[_0x2348fe(0x20a)]=document['getElementById']('dn')[_0x2348fe(0x1cb)];},ten7['onclick']=function(){var _0xab94f4=_0x472643;modal01[_0xab94f4(0x1d8)][_0xab94f4(0x1d9)]=_0xab94f4(0x218),document['getElementById'](_0xab94f4(0x216))[_0xab94f4(0x1d8)][_0xab94f4(0x1d9)]=_0xab94f4(0x1fc),document[_0xab94f4(0x1c1)]('dn')[_0xab94f4(0x1cb)]=_0xab94f4(0x206),document[_0xab94f4(0x1c1)](_0xab94f4(0x215))[_0xab94f4(0x20a)]=_0xab94f4(0x1fa),document[_0xab94f4(0x1c1)](_0xab94f4(0x1ce))['value']=document[_0xab94f4(0x1c1)]('dn')[_0xab94f4(0x1cb)];};var anh8=document[_0x472643(0x1c1)](_0x472643(0x1c6)),ten8=document[_0x472643(0x1c1)](_0x472643(0x1d4));anh8[_0x472643(0x1ea)]=function(){var _0x71e5ed=_0x472643;modal01[_0x71e5ed(0x1d8)][_0x71e5ed(0x1d9)]='block',document[_0x71e5ed(0x1c1)](_0x71e5ed(0x216))[_0x71e5ed(0x1d8)][_0x71e5ed(0x1d9)]=_0x71e5ed(0x1fc),document['getElementById']('dn')['innerHTML']=_0x71e5ed(0x1ff),document[_0x71e5ed(0x1c1)](_0x71e5ed(0x215))['value']='tailieutd',document[_0x71e5ed(0x1c1)](_0x71e5ed(0x1ce))[_0x71e5ed(0x20a)]=document[_0x71e5ed(0x1c1)]('dn')['innerHTML'];},ten8[_0x472643(0x1ea)]=function(){var _0x22c44e=_0x472643;modal01[_0x22c44e(0x1d8)][_0x22c44e(0x1d9)]=_0x22c44e(0x218),document[_0x22c44e(0x1c1)]('khuvuc1')['style'][_0x22c44e(0x1d9)]='none',document['getElementById']('dn')[_0x22c44e(0x1cb)]='ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD',document[_0x22c44e(0x1c1)](_0x22c44e(0x215))['value']=_0x22c44e(0x1be),document['getElementById'](_0x22c44e(0x1ce))['value']=document[_0x22c44e(0x1c1)]('dn')[_0x22c44e(0x1cb)];};var anh9=document['getElementById'](_0x472643(0x211)),ten9=document[_0x472643(0x1c1)](_0x472643(0x1bd));anh9[_0x472643(0x1ea)]=function(){var _0x14760d=_0x472643;modal01['style'][_0x14760d(0x1d9)]='block',document['getElementById'](_0x14760d(0x216))['style']['display']=_0x14760d(0x1fc),document[_0x14760d(0x1c1)]('dn')[_0x14760d(0x1cb)]='ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM\x20TD',document[_0x14760d(0x1c1)](_0x14760d(0x215))[_0x14760d(0x20a)]=_0x14760d(0x20e),document['getElementById'](_0x14760d(0x1ce))[_0x14760d(0x20a)]=document[_0x14760d(0x1c1)]('dn')[_0x14760d(0x1cb)];},ten9[_0x472643(0x1ea)]=function(){var _0x3765ab=_0x472643;modal01['style'][_0x3765ab(0x1d9)]=_0x3765ab(0x218),document[_0x3765ab(0x1c1)](_0x3765ab(0x216))['style']['display']='none',document[_0x3765ab(0x1c1)]('dn')[_0x3765ab(0x1cb)]=_0x3765ab(0x212),document[_0x3765ab(0x1c1)](_0x3765ab(0x215))[_0x3765ab(0x20a)]=_0x3765ab(0x20e),document[_0x3765ab(0x1c1)](_0x3765ab(0x1ce))['value']=document[_0x3765ab(0x1c1)]('dn')[_0x3765ab(0x1cb)];};var C_Pwd=document[_0x472643(0x1c1)](_0x472643(0x1b9));function _0x49d5(_0x2bc927,_0x4e9d4c){var _0x1dd767=_0x1dd7();return _0x49d5=function(_0x49d523,_0x493252){_0x49d523=_0x49d523-0x1b5;var _0x376f08=_0x1dd767[_0x49d523];return _0x376f08;},_0x49d5(_0x2bc927,_0x4e9d4c);}C_Pwd[_0x472643(0x1ea)]=function(){var _0x53b039=_0x472643;document['getElementById']('dn')['innerHTML']=_0x53b039(0x1b5);};var Lo=document['getElementById']('Lo');Lo[_0x472643(0x1ea)]=function(){var _0x4e0936=_0x472643;document[_0x4e0936(0x1c1)]('dn')[_0x4e0936(0x1cb)]=document[_0x4e0936(0x1c1)](_0x4e0936(0x1ce))[_0x4e0936(0x20a)];};
+var _0x58d2dc=_0x49b7;(function(_0x116f73,_0x3213e1){var _0x376da4=_0x49b7,_0x554992=_0x116f73();while(!![]){try{var _0x381cc2=-parseInt(_0x376da4(0x151))/0x1+parseInt(_0x376da4(0x161))/0x2+-parseInt(_0x376da4(0x14d))/0x3*(-parseInt(_0x376da4(0x166))/0x4)+-parseInt(_0x376da4(0x173))/0x5+parseInt(_0x376da4(0x146))/0x6+parseInt(_0x376da4(0x17f))/0x7+parseInt(_0x376da4(0x193))/0x8;if(_0x381cc2===_0x3213e1)break;else _0x554992['push'](_0x554992['shift']());}catch(_0x49d911){_0x554992['push'](_0x554992['shift']());}}}(_0x4dca,0x90a80));let ul=document['querySelector'](_0x58d2dc(0x147)),links=document[_0x58d2dc(0x178)]('.tab-list__link'),tabs=document[_0x58d2dc(0x178)](_0x58d2dc(0x13d));ul[_0x58d2dc(0x16e)]('click',_0x747311=>{var _0x1df818=_0x58d2dc;_0x747311[_0x1df818(0x14a)][_0x1df818(0x15d)][_0x1df818(0x15b)](_0x1df818(0x164))&&!_0x747311[_0x1df818(0x14a)][_0x1df818(0x15d)][_0x1df818(0x15b)](_0x1df818(0x184))&&(_0x747311[_0x1df818(0x13a)](),links[_0x1df818(0x175)]((_0x4a65cf,_0x4e0051)=>{var _0x1d05a7=_0x1df818;_0x4a65cf['classList'][_0x1d05a7(0x169)](_0x1d05a7(0x184)),tabs[_0x4e0051][_0x1d05a7(0x15d)][_0x1d05a7(0x169)](_0x1d05a7(0x18d)),_0x747311['target'][_0x1d05a7(0x15d)][_0x1d05a7(0x14b)](_0x1d05a7(0x184)),_0x747311[_0x1d05a7(0x14a)][_0x1d05a7(0x14f)](_0x1d05a7(0x183))[_0x1d05a7(0x159)](0x1)===tabs[_0x4e0051][_0x1d05a7(0x14f)]('id')&&tabs[_0x4e0051][_0x1d05a7(0x15d)]['add'](_0x1d05a7(0x18d));}));}),$(_0x58d2dc(0x15c))['on'](_0x58d2dc(0x152),function(_0xcc74d){var _0x581212=_0x58d2dc;_0xcc74d[_0x581212(0x13a)](),$(this)[_0x581212(0x174)]()[_0x581212(0x163)](_0x581212(0x162)),$(this)['parent']()[_0x581212(0x17a)]()[_0x581212(0x13e)]('active'),target=$(this)[_0x581212(0x16c)](_0x581212(0x183)),$(_0x581212(0x194))[_0x581212(0x144)](target)[_0x581212(0x145)](),$(target)[_0x581212(0x182)](0x258);}),$(_0x58d2dc(0x142))['find'](_0x58d2dc(0x17c))['on'](_0x58d2dc(0x18c),function(_0x20c104){var _0x3f1fe3=_0x58d2dc,_0x42455b=$(this),_0x355074=_0x42455b[_0x3f1fe3(0x150)](_0x3f1fe3(0x14e));if(_0x20c104['type']===_0x3f1fe3(0x168))_0x42455b[_0x3f1fe3(0x167)]()===''?_0x355074[_0x3f1fe3(0x13e)](_0x3f1fe3(0x154)):_0x355074[_0x3f1fe3(0x163)]('active\x20highlight');else{if(_0x20c104['type']===_0x3f1fe3(0x13c))_0x42455b[_0x3f1fe3(0x167)]()===''?_0x355074[_0x3f1fe3(0x13e)]('active\x20highlight'):_0x355074[_0x3f1fe3(0x13e)](_0x3f1fe3(0x156));else{if(_0x20c104['type']===_0x3f1fe3(0x171)){if(_0x42455b[_0x3f1fe3(0x167)]()==='')_0x355074[_0x3f1fe3(0x13e)]('highlight');else _0x42455b[_0x3f1fe3(0x167)]()!==''&&_0x355074['addClass'](_0x3f1fe3(0x156));}}}}),$(_0x58d2dc(0x18f))['on']('click',function(_0x1f4d33){var _0x168555=_0x58d2dc;_0x1f4d33['preventDefault'](),$(this)[_0x168555(0x174)]()[_0x168555(0x163)](_0x168555(0x162)),$(this)[_0x168555(0x174)]()['siblings']()[_0x168555(0x13e)](_0x168555(0x162)),target=$(this)[_0x168555(0x16c)](_0x168555(0x183)),$(_0x168555(0x13b))[_0x168555(0x144)](target)['hide'](),$(target)[_0x168555(0x182)](0x258);});var modal01=document[_0x58d2dc(0x14c)](_0x58d2dc(0x141)),chonlog=document['getElementById'](_0x58d2dc(0x158)),anh1=document[_0x58d2dc(0x14c)](_0x58d2dc(0x187)),ten1=document['getElementById'](_0x58d2dc(0x179));anh1['onclick']=function(){var _0x5d963b=_0x58d2dc;modal01['style']['display']='block',document[_0x5d963b(0x14c)](_0x5d963b(0x15a))[_0x5d963b(0x181)][_0x5d963b(0x190)]='none',document[_0x5d963b(0x14c)]('dn')[_0x5d963b(0x17e)]=_0x5d963b(0x192),document[_0x5d963b(0x14c)](_0x5d963b(0x153))[_0x5d963b(0x165)]=_0x5d963b(0x16d),document['getElementById'](_0x5d963b(0x158))[_0x5d963b(0x165)]=document[_0x5d963b(0x14c)]('dn')[_0x5d963b(0x17e)];},ten1[_0x58d2dc(0x148)]=function(){var _0x23a984=_0x58d2dc;modal01[_0x23a984(0x181)]['display']=_0x23a984(0x186),document[_0x23a984(0x14c)](_0x23a984(0x15a))[_0x23a984(0x181)][_0x23a984(0x190)]=_0x23a984(0x188),document['getElementById']('dn')[_0x23a984(0x17e)]=_0x23a984(0x192),document[_0x23a984(0x14c)]('chonlog')['value']=document[_0x23a984(0x14c)]('dn')[_0x23a984(0x17e)],document[_0x23a984(0x14c)](_0x23a984(0x153))[_0x23a984(0x165)]=_0x23a984(0x16d);};var anh2=document[_0x58d2dc(0x14c)]('anh2'),ten2=document['getElementById'](_0x58d2dc(0x16f));anh2['onclick']=function(){var _0x3de253=_0x58d2dc;modal01[_0x3de253(0x181)][_0x3de253(0x190)]='block',document[_0x3de253(0x14c)]('khuvuc1')['style']['display']=_0x3de253(0x188),document[_0x3de253(0x14c)]('dn')[_0x3de253(0x17e)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI',document[_0x3de253(0x14c)]('combine')[_0x3de253(0x165)]=_0x3de253(0x155),document[_0x3de253(0x14c)](_0x3de253(0x158))[_0x3de253(0x165)]=document[_0x3de253(0x14c)]('dn')['innerHTML'];},ten2[_0x58d2dc(0x148)]=function(){var _0x45b775=_0x58d2dc;modal01[_0x45b775(0x181)][_0x45b775(0x190)]=_0x45b775(0x186),document[_0x45b775(0x14c)](_0x45b775(0x15a))[_0x45b775(0x181)][_0x45b775(0x190)]=_0x45b775(0x188),document[_0x45b775(0x14c)]('dn')['innerHTML']=_0x45b775(0x189),document[_0x45b775(0x14c)]('combine')[_0x45b775(0x165)]=_0x45b775(0x155),document[_0x45b775(0x14c)]('chonlog')[_0x45b775(0x165)]=document['getElementById']('dn')[_0x45b775(0x17e)];};var anh3=document['getElementById'](_0x58d2dc(0x180)),ten3=document['getElementById']('ten3');function _0x4dca(){var _0x2c9f6e=['ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHA','154640EbbilR','.tabmodal-content\x20>\x20main','preventDefault','.Log-content\x20>\x20div','blur','.tab__box','removeClass','anh6','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ','id01','.form','truccahue','not','hide','5911668QuwwUE','.tab-list__list','onclick','ten9','target','add','getElementById','213pkXIcH','label','getAttribute','prev','514471fhfumG','click','combine','active\x20highlight','truccadhi','highlight','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHI','chonlog','slice','khuvuc1','contains','.tabmodal\x20a','classList','anh8','vattudha','ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD','445532BCJTup','active','addClass','tab-list__link','value','31652wdXjdm','val','keyup','remove','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA','tailieutd','attr','truccadha','addEventListener','ten2','ĐĂNG\x20NHẬP\x20CÔNG\x20VĂN\x20TD','focus','vattuhue','5135505gzGLaz','parent','forEach','ten7','C_Pwd','querySelectorAll','ten1','siblings','anh5','input,\x20textarea','ten4','innerHTML','2414209HnkCgv','anh3','style','fadeIn','href','tab-list__link--is-active','anh4','block','anh1','none','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI','ten6','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUE','keyup\x20blur\x20focus','tab__box--is-visible','ten8','.Log\x20a','display','vattudhi'];_0x4dca=function(){return _0x2c9f6e;};return _0x4dca();}function _0x49b7(_0x12ce38,_0x3e037e){var _0x4dca9a=_0x4dca();return _0x49b7=function(_0x49b766,_0xbffe3c){_0x49b766=_0x49b766-0x13a;var _0x4743e5=_0x4dca9a[_0x49b766];return _0x4743e5;},_0x49b7(_0x12ce38,_0x3e037e);}anh3['onclick']=function(){var _0x2422b9=_0x58d2dc;modal01[_0x2422b9(0x181)][_0x2422b9(0x190)]='block',document[_0x2422b9(0x14c)](_0x2422b9(0x15a))[_0x2422b9(0x181)][_0x2422b9(0x190)]=_0x2422b9(0x188),document['getElementById']('dn')['innerHTML']=_0x2422b9(0x140),document[_0x2422b9(0x14c)]('combine')[_0x2422b9(0x165)]=_0x2422b9(0x143),document[_0x2422b9(0x14c)](_0x2422b9(0x158))[_0x2422b9(0x165)]=document['getElementById']('dn')[_0x2422b9(0x17e)];},ten3['onclick']=function(){var _0x5d5fd6=_0x58d2dc;modal01[_0x5d5fd6(0x181)]['display']=_0x5d5fd6(0x186),document['getElementById'](_0x5d5fd6(0x15a))[_0x5d5fd6(0x181)][_0x5d5fd6(0x190)]=_0x5d5fd6(0x188),document[_0x5d5fd6(0x14c)]('dn')[_0x5d5fd6(0x17e)]=_0x5d5fd6(0x140),document[_0x5d5fd6(0x14c)](_0x5d5fd6(0x153))[_0x5d5fd6(0x165)]=_0x5d5fd6(0x143),document[_0x5d5fd6(0x14c)](_0x5d5fd6(0x158))[_0x5d5fd6(0x165)]=document[_0x5d5fd6(0x14c)]('dn')['innerHTML'];};var anh4=document[_0x58d2dc(0x14c)](_0x58d2dc(0x185)),ten4=document['getElementById'](_0x58d2dc(0x17d));anh4[_0x58d2dc(0x148)]=function(){var _0x154ca7=_0x58d2dc;modal01[_0x154ca7(0x181)][_0x154ca7(0x190)]=_0x154ca7(0x186),document['getElementById']('khuvuc1')['style'][_0x154ca7(0x190)]=_0x154ca7(0x188),document['getElementById']('dn')[_0x154ca7(0x17e)]=_0x154ca7(0x16a),document[_0x154ca7(0x14c)](_0x154ca7(0x153))['value']=_0x154ca7(0x15f),document[_0x154ca7(0x14c)](_0x154ca7(0x158))[_0x154ca7(0x165)]=document['getElementById']('dn')[_0x154ca7(0x17e)];},ten4[_0x58d2dc(0x148)]=function(){var _0x4042a3=_0x58d2dc;modal01[_0x4042a3(0x181)][_0x4042a3(0x190)]=_0x4042a3(0x186),document[_0x4042a3(0x14c)](_0x4042a3(0x15a))[_0x4042a3(0x181)][_0x4042a3(0x190)]=_0x4042a3(0x188),document[_0x4042a3(0x14c)]('dn')[_0x4042a3(0x17e)]='ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA',document[_0x4042a3(0x14c)](_0x4042a3(0x153))['value']=_0x4042a3(0x15f),document[_0x4042a3(0x14c)](_0x4042a3(0x158))['value']=document['getElementById']('dn')[_0x4042a3(0x17e)];};var anh5=document[_0x58d2dc(0x14c)](_0x58d2dc(0x17b)),ten5=document[_0x58d2dc(0x14c)]('ten5');anh5[_0x58d2dc(0x148)]=function(){var _0x3273a6=_0x58d2dc;modal01['style'][_0x3273a6(0x190)]=_0x3273a6(0x186),document['getElementById'](_0x3273a6(0x15a))[_0x3273a6(0x181)][_0x3273a6(0x190)]=_0x3273a6(0x188),document[_0x3273a6(0x14c)]('dn')[_0x3273a6(0x17e)]=_0x3273a6(0x157),document[_0x3273a6(0x14c)]('combine')[_0x3273a6(0x165)]=_0x3273a6(0x191),document['getElementById'](_0x3273a6(0x158))[_0x3273a6(0x165)]=document[_0x3273a6(0x14c)]('dn')['innerHTML'];},ten5[_0x58d2dc(0x148)]=function(){var _0x25bb0e=_0x58d2dc;modal01[_0x25bb0e(0x181)]['display']='block',document[_0x25bb0e(0x14c)]('khuvuc1')[_0x25bb0e(0x181)]['display']=_0x25bb0e(0x188),document['getElementById']('dn')[_0x25bb0e(0x17e)]='ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHI',document[_0x25bb0e(0x14c)]('combine')[_0x25bb0e(0x165)]='vattudhi',document['getElementById'](_0x25bb0e(0x158))[_0x25bb0e(0x165)]=document['getElementById']('dn')[_0x25bb0e(0x17e)];};var anh6=document[_0x58d2dc(0x14c)](_0x58d2dc(0x13f)),ten6=document['getElementById'](_0x58d2dc(0x18a));anh6['onclick']=function(){var _0x6505fb=_0x58d2dc;modal01[_0x6505fb(0x181)]['display']=_0x6505fb(0x186),document[_0x6505fb(0x14c)](_0x6505fb(0x15a))[_0x6505fb(0x181)][_0x6505fb(0x190)]=_0x6505fb(0x188),document[_0x6505fb(0x14c)]('dn')['innerHTML']='ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUẾ',document[_0x6505fb(0x14c)](_0x6505fb(0x153))[_0x6505fb(0x165)]=_0x6505fb(0x172),document[_0x6505fb(0x14c)](_0x6505fb(0x158))['value']=document['getElementById']('dn')[_0x6505fb(0x17e)];},ten6[_0x58d2dc(0x148)]=function(){var _0x817c06=_0x58d2dc;modal01['style'][_0x817c06(0x190)]=_0x817c06(0x186),document[_0x817c06(0x14c)](_0x817c06(0x15a))['style'][_0x817c06(0x190)]='none',document[_0x817c06(0x14c)]('dn')['innerHTML']=_0x817c06(0x18b),document[_0x817c06(0x14c)](_0x817c06(0x153))[_0x817c06(0x165)]=_0x817c06(0x172),document['getElementById'](_0x817c06(0x158))[_0x817c06(0x165)]=document['getElementById']('dn')[_0x817c06(0x17e)];};var anh7=document[_0x58d2dc(0x14c)]('anh7'),ten7=document[_0x58d2dc(0x14c)](_0x58d2dc(0x176));anh7['onclick']=function(){var _0x3d3f80=_0x58d2dc;modal01[_0x3d3f80(0x181)][_0x3d3f80(0x190)]='block',document[_0x3d3f80(0x14c)](_0x3d3f80(0x15a))[_0x3d3f80(0x181)][_0x3d3f80(0x190)]=_0x3d3f80(0x188),document[_0x3d3f80(0x14c)]('dn')[_0x3d3f80(0x17e)]=_0x3d3f80(0x170),document[_0x3d3f80(0x14c)]('combine')[_0x3d3f80(0x165)]='congvantd',document[_0x3d3f80(0x14c)]('chonlog')[_0x3d3f80(0x165)]=document[_0x3d3f80(0x14c)]('dn')[_0x3d3f80(0x17e)];},ten7['onclick']=function(){var _0x552e7a=_0x58d2dc;modal01[_0x552e7a(0x181)][_0x552e7a(0x190)]=_0x552e7a(0x186),document[_0x552e7a(0x14c)](_0x552e7a(0x15a))[_0x552e7a(0x181)][_0x552e7a(0x190)]=_0x552e7a(0x188),document['getElementById']('dn')['innerHTML']=_0x552e7a(0x170),document[_0x552e7a(0x14c)](_0x552e7a(0x153))[_0x552e7a(0x165)]='congvantd',document[_0x552e7a(0x14c)]('chonlog')[_0x552e7a(0x165)]=document['getElementById']('dn')[_0x552e7a(0x17e)];};var anh8=document[_0x58d2dc(0x14c)](_0x58d2dc(0x15e)),ten8=document[_0x58d2dc(0x14c)](_0x58d2dc(0x18e));anh8[_0x58d2dc(0x148)]=function(){var _0x9b3aa0=_0x58d2dc;modal01[_0x9b3aa0(0x181)][_0x9b3aa0(0x190)]=_0x9b3aa0(0x186),document[_0x9b3aa0(0x14c)](_0x9b3aa0(0x15a))[_0x9b3aa0(0x181)]['display']=_0x9b3aa0(0x188),document[_0x9b3aa0(0x14c)]('dn')[_0x9b3aa0(0x17e)]=_0x9b3aa0(0x160),document[_0x9b3aa0(0x14c)](_0x9b3aa0(0x153))[_0x9b3aa0(0x165)]=_0x9b3aa0(0x16b),document['getElementById']('chonlog')['value']=document['getElementById']('dn')['innerHTML'];},ten8[_0x58d2dc(0x148)]=function(){var _0x41cbe4=_0x58d2dc;modal01['style'][_0x41cbe4(0x190)]=_0x41cbe4(0x186),document[_0x41cbe4(0x14c)](_0x41cbe4(0x15a))[_0x41cbe4(0x181)]['display']=_0x41cbe4(0x188),document['getElementById']('dn')[_0x41cbe4(0x17e)]='ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD',document[_0x41cbe4(0x14c)](_0x41cbe4(0x153))[_0x41cbe4(0x165)]=_0x41cbe4(0x16b),document['getElementById'](_0x41cbe4(0x158))[_0x41cbe4(0x165)]=document[_0x41cbe4(0x14c)]('dn')[_0x41cbe4(0x17e)];};var anh9=document[_0x58d2dc(0x14c)]('anh9'),ten9=document[_0x58d2dc(0x14c)](_0x58d2dc(0x149));anh9[_0x58d2dc(0x148)]=function(){var _0x3d6030=_0x58d2dc;modal01[_0x3d6030(0x181)][_0x3d6030(0x190)]='block',document[_0x3d6030(0x14c)](_0x3d6030(0x15a))['style'][_0x3d6030(0x190)]='none',document['getElementById']('dn')[_0x3d6030(0x17e)]='ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM\x20TD',document[_0x3d6030(0x14c)]('combine')[_0x3d6030(0x165)]='tracnghiemtd',document[_0x3d6030(0x14c)](_0x3d6030(0x158))['value']=document[_0x3d6030(0x14c)]('dn')['innerHTML'];},ten9['onclick']=function(){var _0x55a350=_0x58d2dc;modal01[_0x55a350(0x181)][_0x55a350(0x190)]=_0x55a350(0x186),document[_0x55a350(0x14c)](_0x55a350(0x15a))[_0x55a350(0x181)][_0x55a350(0x190)]=_0x55a350(0x188),document['getElementById']('dn')[_0x55a350(0x17e)]='ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM',document[_0x55a350(0x14c)](_0x55a350(0x153))[_0x55a350(0x165)]='tracnghiemtd',document[_0x55a350(0x14c)](_0x55a350(0x158))[_0x55a350(0x165)]=document[_0x55a350(0x14c)]('dn')[_0x55a350(0x17e)];};var C_Pwd=document[_0x58d2dc(0x14c)](_0x58d2dc(0x177));C_Pwd['onclick']=function(){var _0xc9b850=_0x58d2dc;document[_0xc9b850(0x14c)]('dn')[_0xc9b850(0x17e)]='ĐỔI\x20PASSWORD\x20ĐĂNG\x20NHẬP';};var Lo=document[_0x58d2dc(0x14c)]('Lo');Lo[_0x58d2dc(0x148)]=function(){var _0x53c8d2=_0x58d2dc;document[_0x53c8d2(0x14c)]('dn')[_0x53c8d2(0x17e)]=document[_0x53c8d2(0x14c)](_0x53c8d2(0x158))[_0x53c8d2(0x165)];};
 	 
 </script>
 
