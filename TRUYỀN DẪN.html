@@ -549,6 +549,15 @@ body {
 
 
 
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 caption, th, td {
   text-align: left;
   font-weight: normal;
@@ -593,7 +602,160 @@ a {
 }
 
 
+/* DROP LIST */
+.dropdown {
+  --max-scroll: 8;
+  --text: #3F4656;
+  --border: #2F3545;
+  --borderActive: #23C4F8;
+  --background: #151924;
+  --arrow: #6C7486;
+  --arrowActive: #E4ECFA;
+  --listText: #99A3BA;
+  --listBackground: #F5F9FF;
+  --listActive: #E4ECFA;
+  --listTextActive: #6C7486;
+  --listBorder: none;
+  --textFilled: black;
+  width: auto;
+  position: relative;
+}
 
+.dropdown select {
+  display: none;
+}
+.dropdown > span {
+  cursor: pointer;
+  padding: 9px 16px;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background:white;
+  transition: all 0.3s ease;
+}
+.dropdown > span:before, .dropdown > span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 1px;
+  top: 50%;
+  right: 15px;
+  background:black;
+  transition: all 0.3s ease;
+}
+.dropdown > span:before {
+  margin-right: 4px;
+  transform: scale(0.96, 0.8) rotate(50deg);
+}
+.dropdown > span:after {
+  transform: scale(0.96, 0.8) rotate(-50deg);
+}
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  max-height: calc(var(--max-scroll) * 42px);
+  top: 42px;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  background: var(--listBackground);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform-origin: 0 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transform: scale(0.8) translate(0, 4px);
+  border: 1px solid var(--listBorder);
+}
+.dropdown ul li {
+  opacity: 0;
+  transform: translate(6px, 0);
+  transition: all 0.3s ease;
+}
+.dropdown ul li a {
+  cursor: pointer;
+  display: block;
+  padding: 10px 16px;
+  color: var(--listText);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.dropdown ul li a:hover {
+  color: var(--listTextActive);
+}
+.dropdown ul li.active a {
+  color: var(--listTextActive);
+  background: var(--listActive);
+}
+
+.dropdown ul li.active a:before {
+  transform: rotate(45deg) scale(var(--scale));
+}
+.dropdown ul li.active a:after {
+  transform: rotate(-45deg) scale(var(--scale));
+}
+.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
+  --scale: .9;
+  opacity: 1;
+}
+.dropdown ul li:first-child a {
+  border-radius: 6px 6px 0 0;
+}
+.dropdown ul li:last-child a {
+  border-radius: 0 0 6px 6px;
+}
+.dropdown.filled > span {
+  color: var(--textFilled);
+}
+.dropdown.open > span {
+  border-color: var(--borderActive);
+}
+.dropdown.open > span:before, .dropdown.open > span:after {
+  background: var(--arrowActive);
+}
+.dropdown.open > span:before {
+  transform: scale(0.96, 0.8) rotate(-50deg);
+}
+.dropdown.open > span:after {
+  transform: scale(0.96, 0.8) rotate(50deg);
+}
+.dropdown.open ul {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translate(0, 12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+}
+.dropdown.open ul li {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.dropdown.open ul li:nth-child(1) {
+  transition-delay: 80ms;
+}
+.dropdown.open ul li:nth-child(2) {
+  transition-delay: 160ms;
+}
+.dropdown.open ul li:nth-child(3) {
+  transition-delay: 240ms;
+}
+.dropdown.open ul li:nth-child(4) {
+  transition-delay: 320ms;
+}
+.dropdown.open ul li:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+/*END  DROP LIST */
 
 /* FORM LOGIN CỦ*/
 .form {
@@ -607,9 +769,9 @@ a {
   text-align: center;
   margin-top: 15px;
   margin-bottom:20px;
-  top:40%;
+  
 }
-    .tab-group {
+    .Log-group {
         list-style: none;
         padding: 0;
         margin: 0 0 0px 0;
@@ -623,16 +785,16 @@ a {
 
 	
 	
-    .tab-group:after {
+    .Log-group:after {
         content: "";
-        display: table;
+        display: Logle;
         clear: both;
 		background: #21618c;
         color:black;
 		border-radius: 26px 26px 26px 26px;
     }
 
-    .tab-group li a {
+    .Log-group li a {
         display: block;
         text-decoration: none;
         padding: 1px;
@@ -649,14 +811,14 @@ a {
 		line-height: 25px;
      }
 
-    .tab-group li a:hover {
+    .Log-group li a:hover {
         background: #3498db;
         color:white;
 		border-radius: 26px 26px 26px 26px;
 
     }
 
-    .tab-group .active a {
+    .Log-group .active a {
         background:#006699;
         color:white;
 		border-radius: 26px 26px 26px 26px;
@@ -666,7 +828,7 @@ a {
     }
 
 	
-    .tab-content>div:last-child {
+    .Log-content>div:last-child {
         display: none;
     }
 
@@ -734,7 +896,7 @@ a {
 
     .top-row:after {
         content: "";
-        display: table;
+        display: Logle;
         clear: both;
     }
 
@@ -947,6 +1109,8 @@ span.psw {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
 .modalMess-wrapper {
@@ -1353,8 +1517,287 @@ font-size: 15px;
 </head>
 
 <body translate="no">
-<script language=JavaScript>m='%20%20%3Cdiv%20class%3D%22header%22%3B%3E%0A%20%20%3Cimg%20style%3D%22%20width%3A%20100%25%3B%22%20src%3D%22/Banner%20DHA%20New.png%22%20/%3E%20%20%0A%20%20%3C/div%3E%0A%3Cdiv%3E%0A%3C/br%3E%0A%26nbsp%3B%26nbsp%3B%26nbsp%3B%3Cbutton%20id%3D%22btn-show-dialog%22%3ETho%E1t%3C/button%3E%0A%3C/div%3E%20%20%0A%20%20%3C%21--%20Modal%20--%3E%0A%0A%0A%3Cdiv%20id%3D%22id01%22%20class%3D%22modal%22%3E%0A%09%3Cspan%20onclick%3D%22document.getElementById%28%27id01%27%29.style.display%3D%27none%27%22%20class%3D%22close%22%3E%u274E%3C/span%3E%20%20%0A%09%20%20%3Cform%20class%3D%22needs-validation%22%20novalidate%20action%3D%22/action_page.php%22%20method%3D%22post%22%3E%20%0A%09%09%09%0A%09%09%3Cdiv%20class%3D%22imgcontainer%22%3E%09%09%0A%0A%09%09%20%20%3Ch2%20id%3D%22dn%22%20style%3D%22font-size%3A%201em%3B%20color%3A%20white%3B%20font-weight%3A%20bold%22%3B%20value%3D%22%22%3E%3C/h2%3E%0A%09%09%3C/div%3E%3C%21--%20Modal%20--%3E%0A%0A%09%3Cp%20type%20%3D%20%22text%22%20id%3D%22ngay%22%3E%3C/p%3E%0A%09%3Cp%20type%20%3D%20%22text%22%20id%3D%22doma%22%20value%3D%22%22%3E%3C/p%3E%0A%0A%0A%20%20%20%20%3Cdiv%20class%3D%22form%22%3E%0A%0A%09%09%09%3Cul%20class%3D%22tab-group%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20style%3D%22background%3A%20white%22%3B%20width%3D%22135px%22%3B%20%20id%3D%22Lo%22%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22tab%20active%22%3E%3Ca%20href%3D%22%23login%22%3ELogin%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20style%3D%22background%3A%20white%22%3B%20width%3D%22135px%22%3B%20%20id%3D%22C_Pwd%22%20onClick%3D%22Delre%28%29%3B%22%20class%3D%22tab%22%3E%3Ca%20href%3D%22%23changepass%22%3EChangePwd%3C/a%3E%3C/li%3E%0A%09%09%09%3C/ul%3E%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader%22%3E%3C/div%3E%0A%09%09%09%09%09%3C%21--%3Cp%20align%3D%22center%22%20id%3D%22re%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%3E%3C/p%3E--%3E%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20id%3D%22loader2%22%3E%3C/div%3E%0A%09%09%09%09%09%3Cp%20align%3D%22center%22%20id%3D%22repas%22%20style%3D%22font-size%3A%201.5em%3B%20color%3A%20black%3B%22%20hidden%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tab-content%22%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22login%22%3E%0A%0A%09%09%09%3Cform%3E%09%0A%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22chon%22%20%20%3C/p%3E%0A%09%09%09%09%3Cp%20type%20%3D%20%22text%22%20id%20%3D%20%22combine%22%20%3C/p%3E%0A%09%09%09%09%3Cp%20id%3D%22chonlog%22%20type%20%3D%20%22text%22%20value%3D%22%22%3C/p%3E%0A%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20id%3D%22khuvuc1%22%20class%3D%22field-wrap%22%3E%0A%09%09%09%09%20%20%3Cselect%20%20id%3D%22khuvuc%22%20class%3D%22dropdown%22%20placeholder%3D%22Please%20choose%22%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dha%22%20selected%3D%22selected%22%3E%u0110%F4ng%20h%E0%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22dhi%22%3E%u0110%u1ED3ng%20h%u1EDBi%3C/option%3E%0A%09%09%09%09%09%3Coption%20value%3D%22hue%22%20%3EHu%u1EBF%3C/option%3E%09%09%09%09%20%20%20%0A%09%09%09%09%20%20%3C/select%3E%0A%09%09%09%09%3C/div%3E%09%09%0A%09%09%09%09%0A%09%09%09%09%3Cdiv%20class%3D%22field%20username%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22username%22%20id%3D%22username%22%20type%3D%22text%22%20class%3D%22form-control%22%20%20placeholder%3D%22User%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20User.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%3C/div%3E%0A%09%09%09%09%0A%09%09%09%09%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22password%22%20id%3D%22password%22%20type%3D%22password%22%20class%3D%22form-control%22%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%09%09%09%09%09%3C/div%3E%09%09%09%09%0A%09%09%09%09%20%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20%20class%3D%22field%20captch_input%22%3E%0A%09%09%09%09%09%20%20%3Cdiv%20class%3D%22input_field%20captch_input%22%3E%0A%09%09%09%09%09%09%3Cinput%20%20type%3D%22text%22%20style%3D%22height%3A%2033px%3B%22%20placeholder%3D%22Nh%u1EADp%20Captcha%22%20class%3D%22form-control%22%20required%3E%09%09%09%09%0A%09%09%09%09%09%20%20%3C/div%3E%0A%09%09%09%09%09%20%20%3Cdiv%20%20class%3D%22message%22%20style%3D%22text-align%3A%20left%3B%20color%3A%20%23FF2525%3B%22%3ENh%u1EADp%20m%E3%20Captcha%20d%u01B0%u1EDBi%20v%E0o.%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%0A%09%09%09%09%09%3Cdiv%20%20class%3D%22field%20captch_box%22%3E%0A%09%09%09%09%09%20%20%3Cdiv%20class%3D%22input_field%20captch_box%22%3E%0A%09%09%09%09%09%09%3Cinput%20%20type%3D%22text%22%20value%3D%22%22%20disabled%20/%3E%0A%09%09%09%09%09%09%3Cbutton%20hidden%20class%3D%22refresh_button%22%3E%0A%09%09%09%09%09%09%20%20%3Ci%20%20class%3D%22fa-solid%20fa-rotate-right%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3C/button%3E%0A%09%09%09%09%09%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%0A%0A%09%09%09%09%20%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20id%3D%22dangnhap%22%20onClick%3D%22LoginQL_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u0103ng%20Nh%u1EADp%22%20style%3D%22width%3A%20210px%3B%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22changepass%22%3E%0A%09%09%09%09%3C/br%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%20%20%0A%09%09%09%09%20%20%3Cdiv%20class%3D%22field%20username%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldusername%22%20id%3D%22oldusername%22%20type%3D%22text%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22User%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-user%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20User.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%09%09%09%09%09%09%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%09%09%09%09%09%3Cdiv%20class%3D%22field%20password%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22oldpassword%22%20id%3D%22oldpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u%20hi%u1EC7n%20t%u1EA1i.%0A%09%09%09%09%09%09%3C/div%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%09%09%09%09%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%20autocomplete%3D%22off%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22newpassword%22%20id%3D%22newpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%20m%u1EDBi%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20M%u1EADt%20kh%u1EA9u%20m%u1EDBi.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20password%22%3E%0A%09%09%09%09%09%3Cdiv%20class%3D%22field-wrap%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20name%3D%22cfpassword%22%20id%3D%22cfpassword%22%20type%3D%22password%22%20class%3D%22form-control%22%20autofocus%20placeholder%3D%22M%u1EADt%20kh%u1EA9u%20m%u1EDBi%22%20required%3E%0A%09%09%09%09%09%09%3Ci%20class%3D%22icon%20fas%20fa-lock%22%20style%3D%22left%3A10px%3B%22%3E%3C/i%3E%0A%09%09%09%09%09%09%3Cdiv%20class%3D%22invalid-feedback%22%20style%3D%22text-align%3A%20left%3B%22%3E%0A%09%09%09%09%09%09%09Ch%u01B0a%20%u0111i%u1EC1n%20l%u1EA1i%20M%u1EADt%20kh%u1EA9u%20m%u1EDBi.%0A%09%09%09%09%09%09%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%09%09%09%09%3C/div%3E%09%09%09%09%09%0A%09%09%09%09%20%0A%09%09%09%09%3Cinput%20class%3D%22button%20button-block%22%20type%20%3D%20%22button%22%20id%3D%22doipass%22%20onClick%3D%22Changepassword_value%28%29%3B%20%22%20value%20%3D%20%22%u0110%u1ED5i%20Password%22%20style%3D%22width%3A%20210px%3B%22%3E%3C/input%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%20%20%20%20%20%20%20%20%3C/div%3E%3C%21--%20tab-content%20--%3E%0A%0A%20%20%20%20%3C/div%3E%20%3C%21--%20/form%20--%3E%0A%0A%0A%3C/form%3E%3C%21--%20Modal%20--%3E%0A%3C/div%3E%0A%0A%09%09%0A%20%20%3Ch1%20class%3D%22main-heading%22%3ETRUY%u1EC0N%20D%u1EAAN%20%u0110%C0I%20VT%20%u0110%D4NG%20H%C0%3C/h1%3E%0A%0A%20%20%3Cdiv%20class%3D%22wrap%22%3E%0A%20%20%20%20%20%20%20%20%3Cul%20class%3D%22tab-list__list%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-1%22%20class%3D%22tab-list__link%20tab-list__link--is-active%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%C0I%20%u0110%D4NG%20H%C0%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-2%22%20class%3D%22tab-list__link%22%3EV%u1EACT%20T%u01AF%20DP%20TRUY%u1EC0N%20D%u1EAAN%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20%20class%3D%22tab-list__item%22%3E%3Ca%20href%3D%22%23tab-3%22%20class%3D%22tab-list__link%22%3ET%C0I%20LI%u1EC6U%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%3C/ul%3E%0A%09%09%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tab%22%3E%0A%0A%09%09%3Cul%20id%3D%22tab-1%22%20class%3D%22tab__box%20tab__box--1%20%20tab__box--is-visible%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh1%22%20src%3D%22TruyenDanPicture/TrucCaDHA.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten1%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%D4NG%20H%C0%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh2%22%20src%3D%22TruyenDanPicture/TrucCaDHI.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten2%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20%u0110%u1ED2NG%20H%u1EDAI%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh3%22%20src%3D%22TruyenDanPicture/TrucCaHUE.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten3%22%20class%3D%22tab__heading%22%3EL%u1ECACH%20PH%C2N%20CA%20HU%u1EBE%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20id%3D%22tab-2%22%20class%3D%22tab__box%20tab__box--1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh4%22%20src%3D%22TruyenDanPicture/VatTuDPDHA.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten4%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20%u0110%D4NG%20H%C0%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh5%22%20src%3D%22TruyenDanPicture/VatTuDPDHI.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten5%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20%u0110%u1ED2NG%20H%u1EDAI%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh6%22%20src%3D%22TruyenDanPicture/VatTuDPHUE.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten6%22%20class%3D%22tab__heading%22%3EV%u1EACT%20T%u01AF%20DP%20HU%u1EBE%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%09%09%09%0A%09%09%09%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20id%3D%22tab-3%22%20class%3D%22tab__box%20tab__box--1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh7%22%20src%3D%22TruyenDanPicture/CongVan.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten7%22%20class%3D%22tab__heading%22%3EC%D4NG%20V%u0102N%20K%u1EF6%20THU%u1EACT%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh8%22%20src%3D%22TruyenDanPicture/TaiLieu.png%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten8%22%20class%3D%22tab__heading%22%3ET%C0I%20LI%u1EC6U%20TD%20-%20IP%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22tab__item%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22anh9%22%20src%3D%22TruyenDanPicture/TracNghiem.jpg%22%20alt%3D%22%22%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20id%3D%22ten9%22%20class%3D%22tab__heading%22%3ETR%u1EAEC%20NGHI%u1EC6M%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%0A%0A%09%09%09%3C/div%3E%20%20%20%20%0A%20%20%20%20%3C/div%3E%0A%0A%0A%0A%09%0A%3Cdiv%20class%3D%22Thoat%22%20id%3D%22dialog-container%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3EB%u1EA1n%20c%F3%20mu%u1ED1n%20Tho%E1t%20kh%F4ng%20%3F%3C/p%3E%09%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-cancel%22%20id%3D%22cancel%22%20style%3D%22width%3A100px%3B%22%3ECancel%3C/button%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm%22style%3D%22width%3A100px%3B%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cp%20id%3D%22testText%22%3E%3C/p%3E%0A%3Cdiv%20class%3D%22Thoat_time%22%20id%3D%22dialog_time%22%3E%0A%20%20%3Cdiv%20class%3D%22popup%22%3E%0A%20%20%3C/br%3E%09%0A%20%20%20%20%3Cp%3ETh%u1EDDi%20gian%20l%E2u%20kh%F4ng%20d%F9ng%20%21%3C/p%3E%0A%20%20%20%20%3Cdiv%20class%3D%22text-right%22%3E%0A%20%20%20%20%20%20%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_time%22%3EOK%3C/button%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%20%0A%0A%20%20%3C%21--%20Modal%20Aleert--%3E%20%20%20%0A%0A%0A%0A%3Cdiv%20class%3D%22modalMess-wrapper%22%3E%0A%20%20%3Cdiv%20class%3D%22modalMess%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22headMess%22%3E%0A%20%20%20%20%20%20%3Ca%20id%3D%22close%22%20class%3D%22btn-close%20trigger%22%20%3E%0A%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-times%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20%20class%3D%22contentMess%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22good-job%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20id%3D%22fa%22%20class%3D%22fa%20fa-exclamation-circle%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ch1%20id%3D%22alert%22%20value%3D%22%22%20%3E%3C/h1%3E%09%09%20%20%09%20%20%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%09%3Cdiv%3E%0A%09%3Cbutton%20class%3D%22dialog-btn%20btn-primary%22%20id%3D%22confirm_Login%22%20style%3D%22display%3Anone%3Bwidth%3A100px%3B%22%3EOK%3C/button%3E%0A%09%3C/div%3E%0A%09%3C/div%3E%0A%0A%20%20%3C/div%3E%09%0A%20%3C/div%3E';d=unescape(m);document.write(d);</script>
+  <div class="header";>
+  <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
+  <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
+  </div>
+<div>
+</br>
+&nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Thoát</button>
+</div>  
+  <!-- Modal -->
 
+
+<div id="id01" class="modal">
+	<span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>  
+	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
+			
+		<div class="imgcontainer">		
+
+		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
+		</div><!-- Modal -->
+
+	<p type = "text" id="ngay"></p>
+	<p type = "text" id="doma" value=""></p>
+
+
+    <div class="form">
+
+			<ul class="Log-group">
+
+            <li style="background: white"; width="135px";  id="Lo" onClick="Delre();" class="Log active"><a href="#login">Login</a></li>
+
+            <li style="background: white"; width="135px";  id="C_Pwd" onClick="Delre();" class="Log"><a href="#changepass">ChangePwd</a></li>
+			</ul>
+					<div id="loader"></div>
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
+					<div id="loader2"></div>
+					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
+        <div class="Log-content">
+
+
+            <div id="login">
+
+			<form>	
+
+				<p type = "text" id = "chon"  </p>
+				<p type = "text" id = "combine" </p>
+				<p id="chonlog" type = "text" value=""</p>
+
+				
+	
+				
+				<div class="field username">
+                    <div class="field-wrap">
+                        <input name="username" id="username" type="text" class="form-control"  placeholder="User" required>
+						<i class="icon fas fa-user" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+						Chưa điền User.
+						</div>
+                    </div>
+				</div>
+				
+				 <div class="field password">
+                    <div class="field-wrap">
+                        <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu.
+						</div> 
+					</div>				
+				 </div>
+
+					<div  class="field captch_input">
+					  <div class="input_field captch_input">
+						<input  type="text" style="height: 33px;" placeholder="Nhập Captcha" class="form-control" required>				
+					  </div>
+					  <div  class="message" style="text-align: left; color: #FF2525;">Nhập mã Captcha dưới vào.</div>
+					</div>
+					
+					<div  class="field captch_box">
+					  <div class="input_field captch_box">
+						<input  type="text" value="" disabled />
+						<button hidden class="refresh_button">
+						  <i  class="fa-solid fa-rotate-right"></i>
+						</button>
+					  </div>
+					</div>
+
+
+
+				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
+                </form>
+
+				
+				
+				
+            </div>
+
+
+
+            <div id="changepass">
+				</br>
+                <form>                
+				  
+				  <div class="field username">
+					<div class="field-wrap" autocomplete="off">
+                        <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="User" required>
+						<i class="icon fas fa-user" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền User.
+						</div> 
+						</div>
+					</div>
+
+					<div class="field password">
+                    <div class="field-wrap">
+                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu hiện tại.
+						</div> 
+                    </div>
+					</div>
+                  
+				
+
+                    <div class="field password">
+					<div class="field-wrap" autocomplete="off">
+                        <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu mới.
+						</div>
+                    </div>
+					</div>
+
+                    <div class="field password">
+					<div class="field-wrap">
+                        <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền lại Mật khẩu mới.
+						</div>
+                    </div>
+					</div>					
+				 
+				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
+
+                </form>
+
+            </div>
+
+
+        </div><!-- Log-content -->
+
+    </div> <!-- /form -->
+
+
+</form><!-- Modal -->
+</div>
+
+		
+  <h1 class="main-heading">TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</h1>
+
+  <div class="wrap">
+        <ul class="tab-list__list">
+            <li  class="tab-list__item"><a href="#tab-1" class="tab-list__link tab-list__link--is-active">LỊCH PHÂN CA ĐÀI ĐÔNG HÀ</a></li>
+            <li  class="tab-list__item"><a href="#tab-2" class="tab-list__link">VẬT TƯ DP TRUYỀN DẪN</a></li>
+            <li  class="tab-list__item"><a href="#tab-3" class="tab-list__link">TÀI LIỆU</a></li>
+        </ul>
+		
+        <div class="tab">
+
+		<ul id="tab-1" class="tab__box tab__box--1  tab__box--is-visible">
+                <li class="tab__item">                   
+                   <img id="anh1" src="TruyenDanPicture/TrucCaDHA.jpg" alt=""> 
+                   <h2 id="ten1" class="tab__heading">LỊCH PHÂN CA ĐÔNG HÀ</h2>
+             
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh2" src="TruyenDanPicture/TrucCaDHI.png" alt=""> 
+                   <h2 id="ten2" class="tab__heading">LỊCH PHÂN CA ĐỒNG HỚI</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh3" src="TruyenDanPicture/TrucCaHUE.jpg" alt=""> 
+                   <h2 id="ten3" class="tab__heading">LỊCH PHÂN CA HUẾ</h2>
+
+                </li>
+
+            </ul>
+
+            <ul id="tab-2" class="tab__box tab__box--1">
+                <li class="tab__item">                   
+                   <img id="anh4" src="TruyenDanPicture/VatTuDPDHA.png" alt=""> 
+                   <h2 id="ten4" class="tab__heading">VẬT TƯ DP ĐÔNG HÀ</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh5" src="TruyenDanPicture/VatTuDPDHI.png" alt=""> 
+                   <h2 id="ten5" class="tab__heading">VẬT TƯ DP ĐỒNG HỚI</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh6" src="TruyenDanPicture/VatTuDPHUE.jpg" alt=""> 
+                   <h2 id="ten6" class="tab__heading">VẬT TƯ DP HUẾ</h2>
+
+                </li>
+
+            </ul>			
+			
+            <ul id="tab-3" class="tab__box tab__box--1">
+                <li class="tab__item">                   
+                   <img id="anh7" src="TruyenDanPicture/CongVan.jpg" alt=""> 
+                   <h2 id="ten7" class="tab__heading">CÔNG VĂN KỶ THUẬT</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh8" src="TruyenDanPicture/TaiLieu.png" alt=""> 
+                   <h2 id="ten8" class="tab__heading">TÀI LIỆU TD - IP</h2>
+
+                </li>
+                <li class="tab__item">                   
+                   <img id="anh9" src="TruyenDanPicture/TracNghiem.jpg" alt=""> 
+                   <h2 id="ten9" class="tab__heading">TRẮC NGHIỆM</h2>
+
+                </li>
+
+
+            </ul>
+
+
+
+			</div>    
+    </div>
+
+
+
+	
+<div class="Thoat" id="dialog-container">
+  <div class="popup">
+  </br>	
+    <p>Bạn có muốn Thoát không ?</p>	
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+<div class="Thoat_time" id="dialog_time">
+  <div class="popup">
+  </br>	
+    <p>Thời gian lâu không dùng !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+    </div>
+  </div>
+</div> 
+
+  <!-- Modal Aleert-->   
+
+
+
+<div class="modalMess-wrapper">
+  <div class="modalMess">
+    <div class="headMess">
+      <a id="close" class="btn-close trigger" >
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div  class="contentMess">
+        <div class="good-job">
+          <i id="fa" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <h1 id="alert" value="" ></h1>		  	  
+        </div>
+			<div>
+			  <button class="dialog-btn btn-primary" id="confirm_Login" style="display:none;width:100px;">OK</button>
+			</div>
+	</div>
+
+  </div>	
+ </div>
 
 <script src="TruyenDanPicture/Droplist.min.js"></script>
 <script src="CapQuangPicture/Login.min.js"></script>
@@ -1383,7 +1826,7 @@ var _0x44d6c=_0x3ce3;(function(_0x4b7b93,_0x3a3e0c){var _0x1b372b=_0x3ce3,_0x1ac
 
 <script id="rendered-js">
 
-var _0x13b0f4=_0x4e6c;(function(_0x29ca8b,_0x11b4f1){var _0x4e4d27=_0x4e6c,_0x47dd0d=_0x29ca8b();while(!![]){try{var _0x42d9ca=-parseInt(_0x4e4d27(0x137))/0x1+parseInt(_0x4e4d27(0x105))/0x2+-parseInt(_0x4e4d27(0x118))/0x3+-parseInt(_0x4e4d27(0x132))/0x4+parseInt(_0x4e4d27(0x101))/0x5*(-parseInt(_0x4e4d27(0xed))/0x6)+parseInt(_0x4e4d27(0xfa))/0x7+parseInt(_0x4e4d27(0x109))/0x8;if(_0x42d9ca===_0x11b4f1)break;else _0x47dd0d['push'](_0x47dd0d['shift']());}catch(_0x620644){_0x47dd0d['push'](_0x47dd0d['shift']());}}}(_0x2229,0xf2bdf));let ul=document[_0x13b0f4(0x135)]('.tab-list__list'),links=document[_0x13b0f4(0x13e)](_0x13b0f4(0xfe)),tabs=document[_0x13b0f4(0x13e)](_0x13b0f4(0x11b));ul['addEventListener'](_0x13b0f4(0x11c),_0x17b37=>{var _0x32c17b=_0x13b0f4;_0x17b37['target'][_0x32c17b(0xfb)][_0x32c17b(0xf0)](_0x32c17b(0xeb))&&!_0x17b37['target'][_0x32c17b(0xfb)][_0x32c17b(0xf0)](_0x32c17b(0xf2))&&(_0x17b37[_0x32c17b(0x111)](),links[_0x32c17b(0x13b)]((_0x3303f6,_0x263a31)=>{var _0x1548d=_0x32c17b;_0x3303f6['classList'][_0x1548d(0xe4)](_0x1548d(0xf2)),tabs[_0x263a31][_0x1548d(0xfb)][_0x1548d(0xe4)](_0x1548d(0x116)),_0x17b37[_0x1548d(0x11e)][_0x1548d(0xfb)][_0x1548d(0x10a)]('tab-list__link--is-active'),_0x17b37['target'][_0x1548d(0xe3)](_0x1548d(0x128))[_0x1548d(0x107)](0x1)===tabs[_0x263a31]['getAttribute']('id')&&tabs[_0x263a31][_0x1548d(0xfb)][_0x1548d(0x10a)](_0x1548d(0x116));}));}),$(_0x13b0f4(0xea))['on']('click',function(_0x10eee3){var _0x3cead1=_0x13b0f4;_0x10eee3[_0x3cead1(0x111)](),$(this)[_0x3cead1(0xe7)]()['addClass'](_0x3cead1(0xe9)),$(this)[_0x3cead1(0xe7)]()[_0x3cead1(0x12d)]()[_0x3cead1(0x114)](_0x3cead1(0xe9)),target=$(this)[_0x3cead1(0x106)](_0x3cead1(0x128)),$(_0x3cead1(0x122))[_0x3cead1(0x129)](target)['hide'](),$(target)[_0x3cead1(0x10c)](0x258);}),$('.form')['find']('input,\x20textarea')['on'](_0x13b0f4(0x112),function(_0xc57d39){var _0x203a08=_0x13b0f4,_0x338b6b=$(this),_0x4c7351=_0x338b6b[_0x203a08(0x102)]('label');if(_0xc57d39[_0x203a08(0x13c)]===_0x203a08(0x108))_0x338b6b[_0x203a08(0x138)]()===''?_0x4c7351['removeClass'](_0x203a08(0x124)):_0x4c7351[_0x203a08(0x100)]('active\x20highlight');else{if(_0xc57d39['type']===_0x203a08(0xf7))_0x338b6b['val']()===''?_0x4c7351[_0x203a08(0x114)](_0x203a08(0x124)):_0x4c7351['removeClass'](_0x203a08(0x11a));else{if(_0xc57d39[_0x203a08(0x13c)]===_0x203a08(0xf5)){if(_0x338b6b[_0x203a08(0x138)]()==='')_0x4c7351['removeClass']('highlight');else _0x338b6b[_0x203a08(0x138)]()!==''&&_0x4c7351[_0x203a08(0x100)](_0x203a08(0x11a));}}}}),$(_0x13b0f4(0x103))['on'](_0x13b0f4(0x11c),function(_0x2cf691){var _0x5a9f65=_0x13b0f4;_0x2cf691[_0x5a9f65(0x111)](),$(this)[_0x5a9f65(0xe7)]()['addClass']('active'),$(this)[_0x5a9f65(0xe7)]()[_0x5a9f65(0x12d)]()[_0x5a9f65(0x114)](_0x5a9f65(0xe9)),target=$(this)['attr'](_0x5a9f65(0x128)),$(_0x5a9f65(0x12a))[_0x5a9f65(0x129)](target)[_0x5a9f65(0xff)](),$(target)[_0x5a9f65(0x10c)](0x258);});var modal01=document[_0x13b0f4(0x125)](_0x13b0f4(0xe8)),chonlog=document[_0x13b0f4(0x125)](_0x13b0f4(0xf8)),anh1=document[_0x13b0f4(0x125)](_0x13b0f4(0x12f)),ten1=document['getElementById'](_0x13b0f4(0xf4));anh1[_0x13b0f4(0xe2)]=function(){var _0x41cc5e=_0x13b0f4;modal01['style'][_0x41cc5e(0x121)]=_0x41cc5e(0x127),document[_0x41cc5e(0x125)](_0x41cc5e(0x140))[_0x41cc5e(0x110)][_0x41cc5e(0x121)]=_0x41cc5e(0x12c),document[_0x41cc5e(0x125)]('dn')['innerHTML']=_0x41cc5e(0xee),document[_0x41cc5e(0x125)](_0x41cc5e(0x120))['value']='truccadha',document[_0x41cc5e(0x125)]('chonlog')['value']=document[_0x41cc5e(0x125)]('dn')[_0x41cc5e(0xfd)];},ten1[_0x13b0f4(0xe2)]=function(){var _0x1460cc=_0x13b0f4;modal01[_0x1460cc(0x110)][_0x1460cc(0x121)]=_0x1460cc(0x127),document[_0x1460cc(0x125)](_0x1460cc(0x140))[_0x1460cc(0x110)]['display']=_0x1460cc(0x12c),document[_0x1460cc(0x125)]('dn')['innerHTML']=_0x1460cc(0xee),document[_0x1460cc(0x125)](_0x1460cc(0xf8))['value']=document['getElementById']('dn')[_0x1460cc(0xfd)],document[_0x1460cc(0x125)](_0x1460cc(0x120))[_0x1460cc(0x117)]=_0x1460cc(0x130);};var anh2=document[_0x13b0f4(0x125)](_0x13b0f4(0xf9)),ten2=document['getElementById'](_0x13b0f4(0x10d));function _0x4e6c(_0xa9af3e,_0x5225d8){var _0x2229a9=_0x2229();return _0x4e6c=function(_0x4e6c9d,_0x578362){_0x4e6c9d=_0x4e6c9d-0xe1;var _0x57d593=_0x2229a9[_0x4e6c9d];return _0x57d593;},_0x4e6c(_0xa9af3e,_0x5225d8);}anh2['onclick']=function(){var _0x48a2aa=_0x13b0f4;modal01[_0x48a2aa(0x110)][_0x48a2aa(0x121)]='block',document[_0x48a2aa(0x125)]('khuvuc1')[_0x48a2aa(0x110)]['display']=_0x48a2aa(0x12c),document[_0x48a2aa(0x125)]('dn')[_0x48a2aa(0xfd)]=_0x48a2aa(0xef),document[_0x48a2aa(0x125)](_0x48a2aa(0x120))[_0x48a2aa(0x117)]=_0x48a2aa(0xe5),document['getElementById'](_0x48a2aa(0xf8))[_0x48a2aa(0x117)]=document[_0x48a2aa(0x125)]('dn')[_0x48a2aa(0xfd)];},ten2[_0x13b0f4(0xe2)]=function(){var _0xa82e78=_0x13b0f4;modal01[_0xa82e78(0x110)][_0xa82e78(0x121)]='block',document[_0xa82e78(0x125)](_0xa82e78(0x140))[_0xa82e78(0x110)]['display']=_0xa82e78(0x12c),document[_0xa82e78(0x125)]('dn')['innerHTML']=_0xa82e78(0xef),document['getElementById'](_0xa82e78(0x120))[_0xa82e78(0x117)]=_0xa82e78(0xe5),document[_0xa82e78(0x125)](_0xa82e78(0xf8))[_0xa82e78(0x117)]=document[_0xa82e78(0x125)]('dn')['innerHTML'];};var anh3=document[_0x13b0f4(0x125)](_0x13b0f4(0xf3)),ten3=document['getElementById']('ten3');anh3[_0x13b0f4(0xe2)]=function(){var _0x4e67b2=_0x13b0f4;modal01[_0x4e67b2(0x110)][_0x4e67b2(0x121)]=_0x4e67b2(0x127),document[_0x4e67b2(0x125)](_0x4e67b2(0x140))['style'][_0x4e67b2(0x121)]=_0x4e67b2(0x12c),document['getElementById']('dn')[_0x4e67b2(0xfd)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ',document[_0x4e67b2(0x125)]('combine')['value']=_0x4e67b2(0x133),document['getElementById']('chonlog')['value']=document[_0x4e67b2(0x125)]('dn')[_0x4e67b2(0xfd)];},ten3[_0x13b0f4(0xe2)]=function(){var _0x2b592d=_0x13b0f4;modal01[_0x2b592d(0x110)]['display']=_0x2b592d(0x127),document[_0x2b592d(0x125)](_0x2b592d(0x140))[_0x2b592d(0x110)][_0x2b592d(0x121)]=_0x2b592d(0x12c),document[_0x2b592d(0x125)]('dn')['innerHTML']=_0x2b592d(0x12e),document['getElementById'](_0x2b592d(0x120))['value']='truccahue',document['getElementById']('chonlog')['value']=document[_0x2b592d(0x125)]('dn')[_0x2b592d(0xfd)];};var anh4=document[_0x13b0f4(0x125)](_0x13b0f4(0xec)),ten4=document[_0x13b0f4(0x125)]('ten4');anh4[_0x13b0f4(0xe2)]=function(){var _0x1dae76=_0x13b0f4;modal01[_0x1dae76(0x110)][_0x1dae76(0x121)]=_0x1dae76(0x127),document[_0x1dae76(0x125)]('khuvuc1')[_0x1dae76(0x110)][_0x1dae76(0x121)]=_0x1dae76(0x12c),document[_0x1dae76(0x125)]('dn')[_0x1dae76(0xfd)]=_0x1dae76(0x11f),document[_0x1dae76(0x125)]('combine')[_0x1dae76(0x117)]=_0x1dae76(0x10f),document[_0x1dae76(0x125)](_0x1dae76(0xf8))[_0x1dae76(0x117)]=document['getElementById']('dn')['innerHTML'];},ten4['onclick']=function(){var _0x1d718e=_0x13b0f4;modal01[_0x1d718e(0x110)]['display']=_0x1d718e(0x127),document[_0x1d718e(0x125)](_0x1d718e(0x140))['style']['display']=_0x1d718e(0x12c),document[_0x1d718e(0x125)]('dn')['innerHTML']=_0x1d718e(0x11f),document[_0x1d718e(0x125)](_0x1d718e(0x120))[_0x1d718e(0x117)]=_0x1d718e(0x10f),document[_0x1d718e(0x125)](_0x1d718e(0xf8))[_0x1d718e(0x117)]=document['getElementById']('dn')['innerHTML'];};var anh5=document['getElementById'](_0x13b0f4(0x10e)),ten5=document[_0x13b0f4(0x125)]('ten5');anh5[_0x13b0f4(0xe2)]=function(){var _0x50a9ad=_0x13b0f4;modal01['style']['display']=_0x50a9ad(0x127),document['getElementById'](_0x50a9ad(0x140))[_0x50a9ad(0x110)]['display']=_0x50a9ad(0x12c),document[_0x50a9ad(0x125)]('dn')[_0x50a9ad(0xfd)]='ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHI',document[_0x50a9ad(0x125)](_0x50a9ad(0x120))[_0x50a9ad(0x117)]=_0x50a9ad(0xf6),document[_0x50a9ad(0x125)](_0x50a9ad(0xf8))[_0x50a9ad(0x117)]=document[_0x50a9ad(0x125)]('dn')[_0x50a9ad(0xfd)];},ten5[_0x13b0f4(0xe2)]=function(){var _0x508dbf=_0x13b0f4;modal01[_0x508dbf(0x110)][_0x508dbf(0x121)]=_0x508dbf(0x127),document[_0x508dbf(0x125)]('khuvuc1')[_0x508dbf(0x110)][_0x508dbf(0x121)]='none',document[_0x508dbf(0x125)]('dn')[_0x508dbf(0xfd)]=_0x508dbf(0x13f),document[_0x508dbf(0x125)]('combine')[_0x508dbf(0x117)]='vattudhi',document[_0x508dbf(0x125)]('chonlog')['value']=document[_0x508dbf(0x125)]('dn')[_0x508dbf(0xfd)];};var anh6=document[_0x13b0f4(0x125)](_0x13b0f4(0x12b)),ten6=document[_0x13b0f4(0x125)]('ten6');anh6[_0x13b0f4(0xe2)]=function(){var _0x253ef2=_0x13b0f4;modal01[_0x253ef2(0x110)][_0x253ef2(0x121)]=_0x253ef2(0x127),document[_0x253ef2(0x125)](_0x253ef2(0x140))[_0x253ef2(0x110)][_0x253ef2(0x121)]=_0x253ef2(0x12c),document['getElementById']('dn')[_0x253ef2(0xfd)]=_0x253ef2(0x126),document[_0x253ef2(0x125)](_0x253ef2(0x120))[_0x253ef2(0x117)]=_0x253ef2(0x119),document[_0x253ef2(0x125)](_0x253ef2(0xf8))[_0x253ef2(0x117)]=document[_0x253ef2(0x125)]('dn')[_0x253ef2(0xfd)];},ten6[_0x13b0f4(0xe2)]=function(){var _0x1f126a=_0x13b0f4;modal01[_0x1f126a(0x110)][_0x1f126a(0x121)]=_0x1f126a(0x127),document[_0x1f126a(0x125)](_0x1f126a(0x140))[_0x1f126a(0x110)][_0x1f126a(0x121)]=_0x1f126a(0x12c),document[_0x1f126a(0x125)]('dn')['innerHTML']=_0x1f126a(0x113),document[_0x1f126a(0x125)](_0x1f126a(0x120))['value']=_0x1f126a(0x119),document['getElementById'](_0x1f126a(0xf8))['value']=document['getElementById']('dn')[_0x1f126a(0xfd)];};var anh7=document['getElementById'](_0x13b0f4(0x11d)),ten7=document[_0x13b0f4(0x125)](_0x13b0f4(0x136));anh7[_0x13b0f4(0xe2)]=function(){var _0x2b2ace=_0x13b0f4;modal01[_0x2b2ace(0x110)][_0x2b2ace(0x121)]=_0x2b2ace(0x127),document[_0x2b2ace(0x125)](_0x2b2ace(0x140))[_0x2b2ace(0x110)][_0x2b2ace(0x121)]=_0x2b2ace(0x12c),document['getElementById']('dn')['innerHTML']=_0x2b2ace(0x10b),document[_0x2b2ace(0x125)](_0x2b2ace(0x120))[_0x2b2ace(0x117)]=_0x2b2ace(0xfc),document[_0x2b2ace(0x125)](_0x2b2ace(0xf8))['value']=document[_0x2b2ace(0x125)]('dn')['innerHTML'];},ten7[_0x13b0f4(0xe2)]=function(){var _0xb39cec=_0x13b0f4;modal01[_0xb39cec(0x110)][_0xb39cec(0x121)]=_0xb39cec(0x127),document[_0xb39cec(0x125)](_0xb39cec(0x140))[_0xb39cec(0x110)][_0xb39cec(0x121)]=_0xb39cec(0x12c),document[_0xb39cec(0x125)]('dn')[_0xb39cec(0xfd)]=_0xb39cec(0x10b),document[_0xb39cec(0x125)](_0xb39cec(0x120))[_0xb39cec(0x117)]=_0xb39cec(0xfc),document[_0xb39cec(0x125)](_0xb39cec(0xf8))[_0xb39cec(0x117)]=document[_0xb39cec(0x125)]('dn')[_0xb39cec(0xfd)];};var anh8=document['getElementById'](_0x13b0f4(0x134)),ten8=document['getElementById'](_0x13b0f4(0xe6));anh8['onclick']=function(){var _0x1c54f0=_0x13b0f4;modal01[_0x1c54f0(0x110)][_0x1c54f0(0x121)]=_0x1c54f0(0x127),document[_0x1c54f0(0x125)](_0x1c54f0(0x140))[_0x1c54f0(0x110)]['display']=_0x1c54f0(0x12c),document['getElementById']('dn')[_0x1c54f0(0xfd)]=_0x1c54f0(0x123),document['getElementById'](_0x1c54f0(0x120))[_0x1c54f0(0x117)]='tailieutd',document['getElementById']('chonlog')[_0x1c54f0(0x117)]=document['getElementById']('dn')[_0x1c54f0(0xfd)];},ten8[_0x13b0f4(0xe2)]=function(){var _0x4b90aa=_0x13b0f4;modal01[_0x4b90aa(0x110)][_0x4b90aa(0x121)]='block',document[_0x4b90aa(0x125)](_0x4b90aa(0x140))['style']['display']=_0x4b90aa(0x12c),document[_0x4b90aa(0x125)]('dn')['innerHTML']=_0x4b90aa(0x123),document['getElementById'](_0x4b90aa(0x120))[_0x4b90aa(0x117)]=_0x4b90aa(0x139),document[_0x4b90aa(0x125)]('chonlog')['value']=document[_0x4b90aa(0x125)]('dn')[_0x4b90aa(0xfd)];};var anh9=document['getElementById'](_0x13b0f4(0x13d)),ten9=document[_0x13b0f4(0x125)](_0x13b0f4(0xe1));anh9[_0x13b0f4(0xe2)]=function(){var _0x3d0215=_0x13b0f4;modal01[_0x3d0215(0x110)][_0x3d0215(0x121)]=_0x3d0215(0x127),document[_0x3d0215(0x125)](_0x3d0215(0x140))[_0x3d0215(0x110)][_0x3d0215(0x121)]=_0x3d0215(0x12c),document[_0x3d0215(0x125)]('dn')['innerHTML']=_0x3d0215(0xf1),document['getElementById'](_0x3d0215(0x120))[_0x3d0215(0x117)]='tracnghiemtd',document['getElementById']('chonlog')[_0x3d0215(0x117)]=document[_0x3d0215(0x125)]('dn')[_0x3d0215(0xfd)];},ten9[_0x13b0f4(0xe2)]=function(){var _0x43c96d=_0x13b0f4;modal01[_0x43c96d(0x110)][_0x43c96d(0x121)]=_0x43c96d(0x127),document[_0x43c96d(0x125)](_0x43c96d(0x140))[_0x43c96d(0x110)][_0x43c96d(0x121)]=_0x43c96d(0x12c),document[_0x43c96d(0x125)]('dn')[_0x43c96d(0xfd)]=_0x43c96d(0x115),document[_0x43c96d(0x125)](_0x43c96d(0x120))[_0x43c96d(0x117)]=_0x43c96d(0x104),document['getElementById'](_0x43c96d(0xf8))[_0x43c96d(0x117)]=document[_0x43c96d(0x125)]('dn')[_0x43c96d(0xfd)];};function _0x2229(){var _0x41d132=['tab-list__link','anh4','6TvLmpV','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHA','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI','contains','ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM\x20TD','tab-list__link--is-active','anh3','ten1','focus','vattudhi','blur','chonlog','anh2','7081921KBLaUj','classList','congvantd','innerHTML','.tab-list__link','hide','addClass','5878045oxITYN','prev','.tab\x20a','tracnghiemtd','2098388pUBAZl','attr','slice','keyup','21298624lYkmqO','add','ĐĂNG\x20NHẬP\x20CÔNG\x20VĂN\x20TD','fadeIn','ten2','anh5','vattudha','style','preventDefault','keyup\x20blur\x20focus','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUE','removeClass','ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM','tab__box--is-visible','value','2587089LtUOKN','vattuhue','highlight','.tab__box','click','anh7','target','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA','combine','display','.tabmodal-content\x20>\x20main','ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD','active\x20highlight','getElementById','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUẾ','block','href','not','.tab-content\x20>\x20div','anh6','none','siblings','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ','anh1','truccadha','C_Pwd','3737504KkBPLQ','truccahue','anh8','querySelector','ten7','756606YaFhbv','val','tailieutd','ĐỔI\x20PASSWORD\x20ĐĂNG\x20NHẬP','forEach','type','anh9','querySelectorAll','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHI','khuvuc1','ten9','onclick','getAttribute','remove','truccadhi','ten8','parent','id01','active','.tabmodal\x20a'];_0x2229=function(){return _0x41d132;};return _0x2229();}var C_Pwd=document[_0x13b0f4(0x125)](_0x13b0f4(0x131));C_Pwd['onclick']=function(){var _0x1446fc=_0x13b0f4;document[_0x1446fc(0x125)]('dn')[_0x1446fc(0xfd)]=_0x1446fc(0x13a);};var Lo=document[_0x13b0f4(0x125)]('Lo');Lo[_0x13b0f4(0xe2)]=function(){var _0x59e826=_0x13b0f4;document[_0x59e826(0x125)]('dn')[_0x59e826(0xfd)]=document[_0x59e826(0x125)](_0x59e826(0xf8))[_0x59e826(0x117)];};
+var _0x472643=_0x49d5;(function(_0x1f3640,_0x2456f0){var _0x4aacf5=_0x49d5,_0x2441b8=_0x1f3640();while(!![]){try{var _0x41ba1a=parseInt(_0x4aacf5(0x20f))/0x1*(-parseInt(_0x4aacf5(0x200))/0x2)+-parseInt(_0x4aacf5(0x205))/0x3+-parseInt(_0x4aacf5(0x1b8))/0x4*(-parseInt(_0x4aacf5(0x209))/0x5)+-parseInt(_0x4aacf5(0x1db))/0x6+parseInt(_0x4aacf5(0x213))/0x7*(-parseInt(_0x4aacf5(0x1e8))/0x8)+parseInt(_0x4aacf5(0x1e7))/0x9*(-parseInt(_0x4aacf5(0x1f0))/0xa)+-parseInt(_0x4aacf5(0x1ed))/0xb*(-parseInt(_0x4aacf5(0x202))/0xc);if(_0x41ba1a===_0x2456f0)break;else _0x2441b8['push'](_0x2441b8['shift']());}catch(_0x4500eb){_0x2441b8['push'](_0x2441b8['shift']());}}}(_0x1dd7,0xc1289));let ul=document[_0x472643(0x1d6)](_0x472643(0x1ef)),links=document[_0x472643(0x1e3)]('.tab-list__link'),tabs=document[_0x472643(0x1e3)](_0x472643(0x20c));ul[_0x472643(0x1ba)](_0x472643(0x1bb),_0x33db3d=>{var _0x546084=_0x472643;_0x33db3d['target']['classList'][_0x546084(0x1e1)](_0x546084(0x1b6))&&!_0x33db3d[_0x546084(0x1ec)][_0x546084(0x210)][_0x546084(0x1e1)]('tab-list__link--is-active')&&(_0x33db3d[_0x546084(0x1d3)](),links[_0x546084(0x1cd)]((_0x13ce52,_0x23d13c)=>{var _0x1c966b=_0x546084;_0x13ce52['classList'][_0x1c966b(0x208)]('tab-list__link--is-active'),tabs[_0x23d13c]['classList'][_0x1c966b(0x208)]('tab__box--is-visible'),_0x33db3d[_0x1c966b(0x1ec)][_0x1c966b(0x210)][_0x1c966b(0x217)](_0x1c966b(0x1de)),_0x33db3d[_0x1c966b(0x1ec)][_0x1c966b(0x1dc)](_0x1c966b(0x1d7))[_0x1c966b(0x1f9)](0x1)===tabs[_0x23d13c]['getAttribute']('id')&&tabs[_0x23d13c][_0x1c966b(0x210)]['add']('tab__box--is-visible');}));}),$('.tabmodal\x20a')['on']('click',function(_0x121d8e){var _0x5366e7=_0x472643;_0x121d8e['preventDefault'](),$(this)[_0x5366e7(0x1c5)]()['addClass'](_0x5366e7(0x1dd)),$(this)[_0x5366e7(0x1c5)]()['siblings']()['removeClass']('active'),target=$(this)[_0x5366e7(0x1d1)]('href'),$(_0x5366e7(0x1e2))['not'](target)[_0x5366e7(0x204)](),$(target)[_0x5366e7(0x1f7)](0x258);}),$(_0x472643(0x1f3))[_0x472643(0x1c4)](_0x472643(0x1c2))['on'](_0x472643(0x1fb),function(_0x2a9f86){var _0x5b6c36=_0x472643,_0x4aaeca=$(this),_0x18c816=_0x4aaeca[_0x5b6c36(0x1d0)](_0x5b6c36(0x1ee));if(_0x2a9f86[_0x5b6c36(0x1fd)]==='keyup')_0x4aaeca['val']()===''?_0x18c816['removeClass'](_0x5b6c36(0x1f8)):_0x18c816[_0x5b6c36(0x1bc)]('active\x20highlight');else{if(_0x2a9f86['type']===_0x5b6c36(0x1cf))_0x4aaeca[_0x5b6c36(0x1df)]()===''?_0x18c816[_0x5b6c36(0x1ca)](_0x5b6c36(0x1f8)):_0x18c816[_0x5b6c36(0x1ca)](_0x5b6c36(0x1cc));else{if(_0x2a9f86['type']===_0x5b6c36(0x1da)){if(_0x4aaeca[_0x5b6c36(0x1df)]()==='')_0x18c816[_0x5b6c36(0x1ca)](_0x5b6c36(0x1cc));else _0x4aaeca[_0x5b6c36(0x1df)]()!==''&&_0x18c816[_0x5b6c36(0x1bc)](_0x5b6c36(0x1cc));}}}}),$(_0x472643(0x1c7))['on'](_0x472643(0x1bb),function(_0x281d2b){var _0x90cf0=_0x472643;_0x281d2b[_0x90cf0(0x1d3)](),$(this)[_0x90cf0(0x1c5)]()[_0x90cf0(0x1bc)](_0x90cf0(0x1dd)),$(this)[_0x90cf0(0x1c5)]()[_0x90cf0(0x214)]()[_0x90cf0(0x1ca)](_0x90cf0(0x1dd)),target=$(this)['attr']('href'),$(_0x90cf0(0x1e5))[_0x90cf0(0x1eb)](target)['hide'](),$(target)[_0x90cf0(0x1f7)](0x258);});var modal01=document[_0x472643(0x1c1)](_0x472643(0x203)),chonlog=document[_0x472643(0x1c1)]('chonlog'),anh1=document[_0x472643(0x1c1)](_0x472643(0x1c8)),ten1=document[_0x472643(0x1c1)](_0x472643(0x1c3));anh1[_0x472643(0x1ea)]=function(){var _0x72c64c=_0x472643;modal01['style'][_0x72c64c(0x1d9)]=_0x72c64c(0x218),document[_0x72c64c(0x1c1)]('khuvuc1')['style'][_0x72c64c(0x1d9)]=_0x72c64c(0x1fc),document[_0x72c64c(0x1c1)]('dn')[_0x72c64c(0x1cb)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHA',document[_0x72c64c(0x1c1)](_0x72c64c(0x215))[_0x72c64c(0x20a)]=_0x72c64c(0x1bf),document['getElementById'](_0x72c64c(0x1ce))[_0x72c64c(0x20a)]=document[_0x72c64c(0x1c1)]('dn')[_0x72c64c(0x1cb)];},ten1['onclick']=function(){var _0x46bfe6=_0x472643;modal01[_0x46bfe6(0x1d8)][_0x46bfe6(0x1d9)]='block',document[_0x46bfe6(0x1c1)]('khuvuc1')[_0x46bfe6(0x1d8)][_0x46bfe6(0x1d9)]=_0x46bfe6(0x1fc),document[_0x46bfe6(0x1c1)]('dn')[_0x46bfe6(0x1cb)]=_0x46bfe6(0x1c0),document[_0x46bfe6(0x1c1)](_0x46bfe6(0x1ce))[_0x46bfe6(0x20a)]=document[_0x46bfe6(0x1c1)]('dn')[_0x46bfe6(0x1cb)],document['getElementById']('combine')[_0x46bfe6(0x20a)]=_0x46bfe6(0x1bf);};var anh2=document['getElementById']('anh2'),ten2=document[_0x472643(0x1c1)]('ten2');anh2[_0x472643(0x1ea)]=function(){var _0x5d04cc=_0x472643;modal01['style'][_0x5d04cc(0x1d9)]=_0x5d04cc(0x218),document[_0x5d04cc(0x1c1)](_0x5d04cc(0x216))[_0x5d04cc(0x1d8)][_0x5d04cc(0x1d9)]=_0x5d04cc(0x1fc),document[_0x5d04cc(0x1c1)]('dn')[_0x5d04cc(0x1cb)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI',document[_0x5d04cc(0x1c1)](_0x5d04cc(0x215))['value']=_0x5d04cc(0x1f4),document[_0x5d04cc(0x1c1)]('chonlog')[_0x5d04cc(0x20a)]=document[_0x5d04cc(0x1c1)]('dn')['innerHTML'];},ten2[_0x472643(0x1ea)]=function(){var _0xd0cf6c=_0x472643;modal01[_0xd0cf6c(0x1d8)]['display']='block',document[_0xd0cf6c(0x1c1)](_0xd0cf6c(0x216))[_0xd0cf6c(0x1d8)][_0xd0cf6c(0x1d9)]=_0xd0cf6c(0x1fc),document[_0xd0cf6c(0x1c1)]('dn')['innerHTML']=_0xd0cf6c(0x1f6),document[_0xd0cf6c(0x1c1)](_0xd0cf6c(0x215))['value']=_0xd0cf6c(0x1f4),document[_0xd0cf6c(0x1c1)](_0xd0cf6c(0x1ce))[_0xd0cf6c(0x20a)]=document['getElementById']('dn')[_0xd0cf6c(0x1cb)];};var anh3=document[_0x472643(0x1c1)](_0x472643(0x1f2)),ten3=document[_0x472643(0x1c1)]('ten3');anh3[_0x472643(0x1ea)]=function(){var _0x2f550e=_0x472643;modal01[_0x2f550e(0x1d8)][_0x2f550e(0x1d9)]=_0x2f550e(0x218),document[_0x2f550e(0x1c1)](_0x2f550e(0x216))[_0x2f550e(0x1d8)][_0x2f550e(0x1d9)]=_0x2f550e(0x1fc),document[_0x2f550e(0x1c1)]('dn')[_0x2f550e(0x1cb)]=_0x2f550e(0x1e0),document[_0x2f550e(0x1c1)](_0x2f550e(0x215))[_0x2f550e(0x20a)]='truccahue',document[_0x2f550e(0x1c1)](_0x2f550e(0x1ce))[_0x2f550e(0x20a)]=document[_0x2f550e(0x1c1)]('dn')['innerHTML'];},ten3[_0x472643(0x1ea)]=function(){var _0x3f03b1=_0x472643;modal01[_0x3f03b1(0x1d8)][_0x3f03b1(0x1d9)]=_0x3f03b1(0x218),document[_0x3f03b1(0x1c1)](_0x3f03b1(0x216))[_0x3f03b1(0x1d8)]['display']=_0x3f03b1(0x1fc),document[_0x3f03b1(0x1c1)]('dn')[_0x3f03b1(0x1cb)]='ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ',document[_0x3f03b1(0x1c1)](_0x3f03b1(0x215))[_0x3f03b1(0x20a)]='truccahue',document['getElementById'](_0x3f03b1(0x1ce))[_0x3f03b1(0x20a)]=document[_0x3f03b1(0x1c1)]('dn')[_0x3f03b1(0x1cb)];};var anh4=document[_0x472643(0x1c1)](_0x472643(0x1c9)),ten4=document[_0x472643(0x1c1)](_0x472643(0x1e9));anh4[_0x472643(0x1ea)]=function(){var _0x32da91=_0x472643;modal01[_0x32da91(0x1d8)][_0x32da91(0x1d9)]=_0x32da91(0x218),document[_0x32da91(0x1c1)](_0x32da91(0x216))[_0x32da91(0x1d8)]['display']='none',document[_0x32da91(0x1c1)]('dn')[_0x32da91(0x1cb)]='ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA',document[_0x32da91(0x1c1)](_0x32da91(0x215))[_0x32da91(0x20a)]=_0x32da91(0x1e4),document['getElementById'](_0x32da91(0x1ce))[_0x32da91(0x20a)]=document[_0x32da91(0x1c1)]('dn')[_0x32da91(0x1cb)];},ten4['onclick']=function(){var _0x393d9d=_0x472643;modal01[_0x393d9d(0x1d8)]['display']=_0x393d9d(0x218),document[_0x393d9d(0x1c1)](_0x393d9d(0x216))[_0x393d9d(0x1d8)][_0x393d9d(0x1d9)]='none',document[_0x393d9d(0x1c1)]('dn')['innerHTML']=_0x393d9d(0x1b7),document['getElementById'](_0x393d9d(0x215))['value']=_0x393d9d(0x1e4),document['getElementById'](_0x393d9d(0x1ce))[_0x393d9d(0x20a)]=document[_0x393d9d(0x1c1)]('dn')[_0x393d9d(0x1cb)];};var anh5=document[_0x472643(0x1c1)](_0x472643(0x207)),ten5=document[_0x472643(0x1c1)](_0x472643(0x1d5));anh5[_0x472643(0x1ea)]=function(){var _0x4e26c0=_0x472643;modal01[_0x4e26c0(0x1d8)][_0x4e26c0(0x1d9)]=_0x4e26c0(0x218),document[_0x4e26c0(0x1c1)](_0x4e26c0(0x216))[_0x4e26c0(0x1d8)]['display']=_0x4e26c0(0x1fc),document['getElementById']('dn')[_0x4e26c0(0x1cb)]=_0x4e26c0(0x20b),document[_0x4e26c0(0x1c1)](_0x4e26c0(0x215))[_0x4e26c0(0x20a)]='vattudhi',document[_0x4e26c0(0x1c1)](_0x4e26c0(0x1ce))[_0x4e26c0(0x20a)]=document[_0x4e26c0(0x1c1)]('dn')[_0x4e26c0(0x1cb)];},ten5['onclick']=function(){var _0x53c344=_0x472643;modal01['style'][_0x53c344(0x1d9)]=_0x53c344(0x218),document[_0x53c344(0x1c1)](_0x53c344(0x216))['style'][_0x53c344(0x1d9)]=_0x53c344(0x1fc),document[_0x53c344(0x1c1)]('dn')['innerHTML']=_0x53c344(0x20b),document['getElementById'](_0x53c344(0x215))['value']=_0x53c344(0x1d2),document[_0x53c344(0x1c1)](_0x53c344(0x1ce))['value']=document['getElementById']('dn')['innerHTML'];};function _0x1dd7(){var _0x1e780d=['ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHA','getElementById','input,\x20textarea','ten1','find','parent','anh8','.Log\x20a','anh1','anh4','removeClass','innerHTML','highlight','forEach','chonlog','blur','prev','attr','vattudhi','preventDefault','ten8','ten5','querySelector','href','style','display','focus','7237482fHZSUz','getAttribute','active','tab-list__link--is-active','val','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20HUẾ','contains','.tabmodal-content\x20>\x20main','querySelectorAll','vattudha','.Log-content\x20>\x20div','vattuhue','261063wExnlh','824riKOUC','ten4','onclick','not','target','11mFZZtv','label','.tab-list__list','300ZbuFMh','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUẾ','anh3','.form','truccadhi','anh7','ĐĂNG\x20NHẬP\x20LỊCH\x20CA\x20ĐHI','fadeIn','active\x20highlight','slice','congvantd','keyup\x20blur\x20focus','none','type','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20HUE','ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD','2WTljpu','ten7','58626384kvIhnf','id01','hide','1895070hkwQPB','ĐĂNG\x20NHẬP\x20CÔNG\x20VĂN\x20TD','anh5','remove','1845805pZShkS','value','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHI','.tab__box','ten6','tracnghiemtd','976586sbaLBM','classList','anh9','ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM','52927ANRKTy','siblings','combine','khuvuc1','add','block','ĐỔI\x20PASSWORD\x20ĐĂNG\x20NHẬP','tab-list__link','ĐĂNG\x20NHẬP\x20VTDP\x20TD\x20ĐHA','4spuuOQ','C_Pwd','addEventListener','click','addClass','ten9','tailieutd','truccadha'];_0x1dd7=function(){return _0x1e780d;};return _0x1dd7();}var anh6=document[_0x472643(0x1c1)]('anh6'),ten6=document[_0x472643(0x1c1)](_0x472643(0x20d));anh6['onclick']=function(){var _0x12ebed=_0x472643;modal01[_0x12ebed(0x1d8)][_0x12ebed(0x1d9)]=_0x12ebed(0x218),document[_0x12ebed(0x1c1)](_0x12ebed(0x216))[_0x12ebed(0x1d8)][_0x12ebed(0x1d9)]='none',document[_0x12ebed(0x1c1)]('dn')['innerHTML']=_0x12ebed(0x1f1),document['getElementById'](_0x12ebed(0x215))['value']=_0x12ebed(0x1e6),document['getElementById'](_0x12ebed(0x1ce))[_0x12ebed(0x20a)]=document[_0x12ebed(0x1c1)]('dn')[_0x12ebed(0x1cb)];},ten6[_0x472643(0x1ea)]=function(){var _0x11a892=_0x472643;modal01[_0x11a892(0x1d8)][_0x11a892(0x1d9)]=_0x11a892(0x218),document['getElementById'](_0x11a892(0x216))[_0x11a892(0x1d8)][_0x11a892(0x1d9)]='none',document[_0x11a892(0x1c1)]('dn')[_0x11a892(0x1cb)]=_0x11a892(0x1fe),document[_0x11a892(0x1c1)](_0x11a892(0x215))[_0x11a892(0x20a)]=_0x11a892(0x1e6),document['getElementById'](_0x11a892(0x1ce))['value']=document['getElementById']('dn')[_0x11a892(0x1cb)];};var anh7=document[_0x472643(0x1c1)](_0x472643(0x1f5)),ten7=document['getElementById'](_0x472643(0x201));anh7['onclick']=function(){var _0x2348fe=_0x472643;modal01[_0x2348fe(0x1d8)][_0x2348fe(0x1d9)]=_0x2348fe(0x218),document['getElementById'](_0x2348fe(0x216))[_0x2348fe(0x1d8)]['display']=_0x2348fe(0x1fc),document[_0x2348fe(0x1c1)]('dn')[_0x2348fe(0x1cb)]=_0x2348fe(0x206),document[_0x2348fe(0x1c1)](_0x2348fe(0x215))[_0x2348fe(0x20a)]=_0x2348fe(0x1fa),document['getElementById'](_0x2348fe(0x1ce))[_0x2348fe(0x20a)]=document['getElementById']('dn')[_0x2348fe(0x1cb)];},ten7['onclick']=function(){var _0xab94f4=_0x472643;modal01[_0xab94f4(0x1d8)][_0xab94f4(0x1d9)]=_0xab94f4(0x218),document['getElementById'](_0xab94f4(0x216))[_0xab94f4(0x1d8)][_0xab94f4(0x1d9)]=_0xab94f4(0x1fc),document[_0xab94f4(0x1c1)]('dn')[_0xab94f4(0x1cb)]=_0xab94f4(0x206),document[_0xab94f4(0x1c1)](_0xab94f4(0x215))[_0xab94f4(0x20a)]=_0xab94f4(0x1fa),document[_0xab94f4(0x1c1)](_0xab94f4(0x1ce))['value']=document[_0xab94f4(0x1c1)]('dn')[_0xab94f4(0x1cb)];};var anh8=document[_0x472643(0x1c1)](_0x472643(0x1c6)),ten8=document[_0x472643(0x1c1)](_0x472643(0x1d4));anh8[_0x472643(0x1ea)]=function(){var _0x71e5ed=_0x472643;modal01[_0x71e5ed(0x1d8)][_0x71e5ed(0x1d9)]='block',document[_0x71e5ed(0x1c1)](_0x71e5ed(0x216))[_0x71e5ed(0x1d8)][_0x71e5ed(0x1d9)]=_0x71e5ed(0x1fc),document['getElementById']('dn')['innerHTML']=_0x71e5ed(0x1ff),document[_0x71e5ed(0x1c1)](_0x71e5ed(0x215))['value']='tailieutd',document[_0x71e5ed(0x1c1)](_0x71e5ed(0x1ce))[_0x71e5ed(0x20a)]=document[_0x71e5ed(0x1c1)]('dn')['innerHTML'];},ten8[_0x472643(0x1ea)]=function(){var _0x22c44e=_0x472643;modal01[_0x22c44e(0x1d8)][_0x22c44e(0x1d9)]=_0x22c44e(0x218),document[_0x22c44e(0x1c1)]('khuvuc1')['style'][_0x22c44e(0x1d9)]='none',document['getElementById']('dn')[_0x22c44e(0x1cb)]='ĐĂNG\x20NHẬP\x20TAI\x20LIỆU\x20TD',document[_0x22c44e(0x1c1)](_0x22c44e(0x215))['value']=_0x22c44e(0x1be),document['getElementById'](_0x22c44e(0x1ce))['value']=document[_0x22c44e(0x1c1)]('dn')[_0x22c44e(0x1cb)];};var anh9=document['getElementById'](_0x472643(0x211)),ten9=document[_0x472643(0x1c1)](_0x472643(0x1bd));anh9[_0x472643(0x1ea)]=function(){var _0x14760d=_0x472643;modal01['style'][_0x14760d(0x1d9)]='block',document['getElementById'](_0x14760d(0x216))['style']['display']=_0x14760d(0x1fc),document[_0x14760d(0x1c1)]('dn')[_0x14760d(0x1cb)]='ĐĂNG\x20NHẬP\x20TRẮC\x20NGHIỆM\x20TD',document[_0x14760d(0x1c1)](_0x14760d(0x215))[_0x14760d(0x20a)]=_0x14760d(0x20e),document['getElementById'](_0x14760d(0x1ce))[_0x14760d(0x20a)]=document[_0x14760d(0x1c1)]('dn')[_0x14760d(0x1cb)];},ten9[_0x472643(0x1ea)]=function(){var _0x3765ab=_0x472643;modal01['style'][_0x3765ab(0x1d9)]=_0x3765ab(0x218),document[_0x3765ab(0x1c1)](_0x3765ab(0x216))['style']['display']='none',document[_0x3765ab(0x1c1)]('dn')[_0x3765ab(0x1cb)]=_0x3765ab(0x212),document[_0x3765ab(0x1c1)](_0x3765ab(0x215))[_0x3765ab(0x20a)]=_0x3765ab(0x20e),document[_0x3765ab(0x1c1)](_0x3765ab(0x1ce))['value']=document[_0x3765ab(0x1c1)]('dn')[_0x3765ab(0x1cb)];};var C_Pwd=document[_0x472643(0x1c1)](_0x472643(0x1b9));function _0x49d5(_0x2bc927,_0x4e9d4c){var _0x1dd767=_0x1dd7();return _0x49d5=function(_0x49d523,_0x493252){_0x49d523=_0x49d523-0x1b5;var _0x376f08=_0x1dd767[_0x49d523];return _0x376f08;},_0x49d5(_0x2bc927,_0x4e9d4c);}C_Pwd[_0x472643(0x1ea)]=function(){var _0x53b039=_0x472643;document['getElementById']('dn')['innerHTML']=_0x53b039(0x1b5);};var Lo=document['getElementById']('Lo');Lo[_0x472643(0x1ea)]=function(){var _0x4e0936=_0x472643;document[_0x4e0936(0x1c1)]('dn')[_0x4e0936(0x1cb)]=document[_0x4e0936(0x1c1)](_0x4e0936(0x1ce))[_0x4e0936(0x20a)];};
 	 
 </script>
 
