@@ -10,7 +10,7 @@ $(document).ready(function() {
 	document.getElementById('newpassword').value = "";
 	document.getElementById('cfpassword').value = "";
 var url = location.protocol;
-if (url == "file:khanh") {
+if (url == "file:") {
 	var element = document.getElementById("login");
 	element.parentNode.removeChild(element);
 	close();
