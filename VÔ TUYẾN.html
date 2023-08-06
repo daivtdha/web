@@ -4,14 +4,9 @@
 
   <meta charset="UTF-8">
 
-  <title>TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</title>
-<link rel="stylesheet" href="TruyenDanPicture/css.css">
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>ĐÀI VT ĐÔNG HÀ - VÔ TUYẾN</title>
 
-<link href="DangNhap/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
@@ -20,796 +15,61 @@
 
 
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
-:root {
-  box-sizing: border-box;
-}
-
-*,
-::before,
-::after {
-  box-sizing: inherit;
-  text-decoration: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 99%;
-  padding: 1px;
-  width: 99%;
-  max-width: 100%;
-  background: linear-gradient(to right, #21618c,#73c6b6);
-}
-
-
-
-.footer {
-  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
-  width: 100%;
-  high:auto;
-  text-align: left;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 5px;
-  margin-top: 5px;
-  bottom: 0px;
-}
-
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.footer .footer-left p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-center p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-right p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-
-
-
-.footer .footer-left {
-  width: 33%;
-  padding-right: 5px;
-}
-
-.footer .about {
-  line-height: 20px;
-  color:black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.footer .about span {
-  display: block;
-  color:black;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer .footer-left i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-
-
-.footer .icons a {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  background-color:#0099ff;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 10px;
-  margin-right: 3px;
-
-}
-
-
-.footer .footer-center {
-  width: 25%;
-}
-
-.footer .footer-center i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-.footer .footer-center i.fa-envelope {
-  display: inline-block;
-  font-size: 17px;
-  line-height: 25px;
-  color: #ffffff;
-}
-
-
-.footer .footer-right {
-  width: 35%;
-}
-
-
-
-@media (max-width: 767px) {
-  .footer {
-    font-size: 14px;
-  }
-  .footer .footer-left,
-  .footer .footer-center,
-  .footer .footer-right {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  .footer .footer-center i {
-    margin-left: 3px;
-  }
-}
-
-
-
-/*********** MAIN HEADING **********/
-.main-heading {
-  font-size: 2em;
-  color:white;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  font-weight:bold;
-}
-
-.main-heading::before, .main-heading::after {
-  content: "";
-  height: 0.2em;
-  width: 100%;
-  background-image: linear-gradient(to left, darkorange, transparent);
-  margin-right: 1em;
-}
-
-.main-heading::after {
-  background-image: linear-gradient(to right, darkorange, transparent);
-  margin-left: 1em;
-}
-
-/*********** LINKS **********/
-.tab-list__list {
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.tab-list__link {
-  color: #fff;
-  font-size: 1em;
-  text-transform: uppercase;
-  background-color: #154360;
-  display: block;
-  padding: 1em 1.2em;
-  border-radius: 5px 5px 0 0;
-  transition: all 150ms ease-out;
-  font-weight:bold;
-  border-style:solid;
-  border-color:white;
-}
-
-.tab-list__link--is-active {
-  color: #21618c;
-  background-color: #f2e7cf;
-  background-color: #fff;
-  transform: scaleY(1.0);
-  transform-origin: center bottom;
-}
-
-/*********** TAB CONTAINERS **********/
-.tab {
-  background-color: #f2e7cf;
-  background-color: #fff;
-  border-radius: 0 1px 1px 1px;
-  padding:0em;
-}
-
-
-.tab__box {
-  display: none;
-}
-
-.tab__box--is-visible {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: 5px;
-  justify-content: space-around;
-}
-
-.tab__item {
-  padding: 1.5em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  background: #f8f9f9;
-  border-radius:5% 5% 5% 5%;
-  cursor: pointer;
-}
-
-
-.tab__heading {
-  font-size: 1.2em;
-  color:black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight:bold;
-
-}
-
-.tab__icon {
-  font-size: 3em !important;
-  margin: 0.7em 0;
-  color: darkorange;
-}
-
-.tab__para {
-  font-weight: bold;
-  color: #3f4c6b;
-  margin-bottom: 1.5em;
-}
-
-.tab__btn {
-  font-size: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: inherit;
-  padding: 0.6em 1em;
-  border-radius: 1px;
-  border: 0;
-  background: #21618c;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  max-width: 18em;
-  max-high:0.5em;
-  margin: 0 auto;
-}
-
-.tab__btn:hover {
-  background: #5dade2;
-}
-
-.tab__btn:active {
-  transform: translate(1px, 2px);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 38em) {
-  body {
-  font-size: 50%;
-  background: #1b4f72;
-  }
-
-  .wrap {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-  }
-
-  .tab-list__list {
-    flex-direction: column;
-    background-color: #807668;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .tab-list__link {
-    font-size: 0.8em;
-    padding: 1.2em 1em;
-    border-radius: 5px 0 0 5px;
-  }
-
-  .tab-list__link--is-active {
-    transform: scaleX(1.05);
-    transform-origin: right center;
-  }
-
-  .tab {
-    border-radius: 0 3px 3px 0;
-    padding: 1em;
-  }
-}
-
-
-
-
-/* Popup */
-
-.popup {
-  width: 85%;
-  padding: 15px;
-  left: 0;
-  margin-left:7%;
-  border: 1px solid rgb(1,82,73);
-  border-radius: 10px;
-  color: rgb(1,82,73);
-  background: white;
-  position: absolute;
-  top: 25%;
-  box-shadow: 5px 5px 5px #000;
-  z-index: 10001;
-  font-weight: 700;
-  font-size: 13px;
-  text-align: center;
-}
-
-.Thoat {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  z-index: 10000;
-  display :none;
-}
-
-@media (min-width: 768px) {
-  .popup {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup {
-    width: 85%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
-
-
-
-.popup_Login {
-  width: 85%;
-  padding: 15px;
-  left: 0;
-  margin-left: 7%;
-  border: 1px solid rgb(1,82,73);
-  border-radius: 10px;
-  color: rgb(1,82,73);
-  background: white;
-  position: absolute;
-  top: 25%;
-  box-shadow: 5px 5px 5px #000;
-  z-index: 10001;
-  font-weight: 700;
-  font-size: 13px;
-  text-align: center;
-}
-
-
-
-@media (min-width: 768px) {
-  .popup_Login {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_Login {
-    width: 85%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_Login {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}	
-	
-
-.popup_time {
-  width: 85%;
-  padding: 15px;
-  left: 0;
-  margin-left: 7%;
-  border: 1px solid rgb(1,82,73);
-  border-radius: 10px;
-  color: rgb(1,82,73);
-  background: white;
-  position: absolute;
-  top: 25%;
-  box-shadow: 5px 5px 5px #000;
-  z-index: 10001;
-  font-weight: 700;
-  font-size: 13px	
-  text-align: center;
-}
-
-.Thoat_time {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  z-index: 10000;
-  display :none;
-}
-
-@media (min-width: 768px) {
-  .popup_time {
-    width: 66.66666666%;
-    margin-left: 16.666666%;
-  }
-}
-@media (min-width: 992px) {
-  .popup_time {
-    width: 85%;
-    margin-left: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .popup_time {
-    width: 33.33333%;
-    margin-left: 33.33333%;
-  }
-}
-
-
-.dialog-btn {
-  margin: 0;
-  margin-right: 10px;
-  
-  color: #fff;
-  background: #e2525c;
-  border: none;
-  border-radius: 26px;
-  font-size: 16px;
-  cursor: pointer;
-  height: 30px;
-  width: 20%;
-  border-radius: 26px;
-  
-}
-.dialog-btn:hover {
-  background-color:#154360;
-  cursor: pointer;
-}
-
-
-
-#btn-show-dialog {
-  background-color:white;
-  border: none;
-  color:black;
-  padding: 1px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 17px;
-  margin: 3px 1px;
-  cursor: pointer;
-    height: 30px;
-  width: 90px;
-  font-weight: bold;
-  border-radius: 5px 5px 5px 5px;
-}
-
-#btn-show-dialog {border-radius: 12px;}
-
-
-/* End Popup */
-
-
-a {
-  transition: all .2s linear;
-}
- h1 {
-  font-size:35px;
-  font-family:times new roman;
-  font-weight: bold;
-  text-align: center;
-  color:black;
-  font-weight:bold;
-}
-
- h2 {
-  font-size:30px;
-  font-family:times new roman;
-  
-  text-align: center;
-  color:black;
-  font-weight:bold;
-}
-
-
-/* DROP LIST */
-.dropdown {
-  --max-scroll: 8;
-  --text: #3F4656;
-  --border: #2F3545;
-  --borderActive: #23C4F8;
-  --background: #151924;
-  --arrow: #6C7486;
-  --arrowActive: #E4ECFA;
-  --listText: #99A3BA;
-  --listBackground: #F5F9FF;
-  --listActive: #E4ECFA;
-  --listTextActive: #6C7486;
-  --listBorder: none;
-  --textFilled: black;
-  width: auto;
-  position: relative;
-}
-
-.dropdown select {
-  display: none;
-}
-.dropdown > span {
-  cursor: pointer;
-  padding: 9px 16px;
-  border-radius: 6px;
-  display: block;
-  position: relative;
-  color: var(--text);
-  border: 1px solid var(--border);
-  background:white;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before, .dropdown > span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  border-radius: 1px;
-  top: 50%;
-  right: 15px;
-  background:black;
-  transition: all 0.3s ease;
-}
-.dropdown > span:before {
-  margin-right: 4px;
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown > span:after {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  max-height: calc(var(--max-scroll) * 42px);
-  top: 42px;
-  left: 0;
-  z-index: 1;
-  right: 0;
-  background: var(--listBackground);
-  border-radius: 6px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform-origin: 0 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-  transform: scale(0.8) translate(0, 4px);
-  border: 1px solid var(--listBorder);
-}
-.dropdown ul li {
-  opacity: 0;
-  transform: translate(6px, 0);
-  transition: all 0.3s ease;
-}
-.dropdown ul li a {
-  cursor: pointer;
-  display: block;
-  padding: 10px 16px;
-  color: var(--listText);
-  text-decoration: none;
-  outline: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.dropdown ul li a:hover {
-  color: var(--listTextActive);
-}
-.dropdown ul li.active a {
-  color: var(--listTextActive);
-  background: var(--listActive);
-}
-
-.dropdown ul li.active a:before {
-  transform: rotate(45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:after {
-  transform: rotate(-45deg) scale(var(--scale));
-}
-.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
-  --scale: .9;
-  opacity: 1;
-}
-.dropdown ul li:first-child a {
-  border-radius: 6px 6px 0 0;
-}
-.dropdown ul li:last-child a {
-  border-radius: 0 0 6px 6px;
-}
-.dropdown.filled > span {
-  color: var(--textFilled);
-}
-.dropdown.open > span {
-  border-color: var(--borderActive);
-}
-.dropdown.open > span:before, .dropdown.open > span:after {
-  background: var(--arrowActive);
-}
-.dropdown.open > span:before {
-  transform: scale(0.96, 0.8) rotate(-50deg);
-}
-.dropdown.open > span:after {
-  transform: scale(0.96, 0.8) rotate(50deg);
-}
-.dropdown.open ul {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1) translate(0, 12px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
-}
-.dropdown.open ul li {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.dropdown.open ul li:nth-child(1) {
-  transition-delay: 80ms;
-}
-.dropdown.open ul li:nth-child(2) {
-  transition-delay: 160ms;
-}
-.dropdown.open ul li:nth-child(3) {
-  transition-delay: 240ms;
-}
-.dropdown.open ul li:nth-child(4) {
-  transition-delay: 320ms;
-}
-.dropdown.open ul li:nth-child(5) {
-  transition-delay: 400ms;
-}
-
-/*END  DROP LIST */
-
-/* FORM LOGIN CỦ*/
-.form {
-  background: white;
-  padding: 25px;
-  max-width: 670px;
-  width: 650px;
-  margin: 0px auto;
-  font-family: times new roman;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom:20px;
-  
-}
-    .Log-group {
+/* FORM LOGIN */
+    .form {
+        background: #f8f9f9;
+        padding: 40px;
+        max-width: auto;
+        margin: 40px auto;
+        font-family:times new roman;
+        
+    }
+
+    .tabmodal-group {
         list-style: none;
         padding: 0;
-        margin: 0 0 0px 0;
-		border-radius: 26px 26px 26px 26px;
-		background:white;	
-		width:100%;
-		display:flex;
-		justify-content:center;
-			
+        margin: 0 0 40px 0;
     }
 
-	
-	
-    .Log-group:after {
+    .tabmodal-group:after {
         content: "";
-        display: Logle;
+        display: tabmodalle;
         clear: both;
-		background: #21618c;
-        color:black;
-		border-radius: 26px 26px 26px 26px;
     }
 
-    .Log-group li a {
+    .tabmodal-group li a {
         display: block;
         text-decoration: none;
         padding: 1px;
-        background: #bfc9ca;
-        color:black;
-        font-size: 16px;
+        background: rgba(160, 179, 176, 0.25);
+        color: #a0b3b0;
+        font-size: 20px;
         float: left;
+        width: 50%;
         text-align: center;
         cursor: pointer;
         transition: .5s ease;
-		border-radius: 26px 26px 26px 26px;
-		width:130px;
-		height: 28px;
-		line-height: 25px;
-     }
-
-    .Log-group li a:hover {
-        background: #3498db;
-        color:white;
-		border-radius: 26px 26px 26px 26px;
-
     }
 
-    .Log-group .active a {
-        background:#006699;
-        color:white;
-		border-radius: 26px 26px 26px 26px;
-		width:130px;
-		height: 28px;
-		line-height: 25px;
+    .tabmodal-group li a:hover {
+        background:#1f618d;
+        color: #ffffff;
     }
 
-	
-    .Log-content>div:last-child {
+    .tabmodal-group .active a {
+        background: #0e6655;
+        color: #ffffff;
+    }
+
+    .tabmodal-content>main:last-child {
         display: none;
     }
 
     h1 {
         text-align: center;
-        color: black;
+        color: #ffffff;
         font-weight: 300;
-        margin: 0 0 3px;
+        margin: 0 0 40px;
     }
 
     label {
@@ -823,9 +83,6 @@ a {
         font-size: 22px;
     }
 
-	
-	
-	
     label .req {
         margin: 2px;
         color: #1ab188;
@@ -846,17 +103,26 @@ a {
     }
 
     input,
-
+    textarea {
+        font-size: 17px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px 10px;
+        background: none;
+        background-image: none;
+        border: 1px solid #a0b3b0;
+        color: black;
+        border-radius: 0;
+        transition: border-color .25s ease, box-shadow .25s ease;
+    }
 
     input:focus,
     textarea:focus {
-        outline: 5;
-        border-color: white;
+        outline: 0;
+        border-color: #1ab188;
     }
 
-	
-	
-	
     textarea {
         border: 2px solid #a0b3b0;
         resize: vertical;
@@ -869,17 +135,17 @@ a {
 
     .top-row:after {
         content: "";
-        display: Logle;
+        display: tabmodalle;
         clear: both;
     }
 
-    .top-row>div {
+    .top-row>main {
         float: left;
         width: 48%;
         margin-right: 4%;
     }
 
-    .top-row>div:last-child {
+    .top-row>main:last-child {
         margin: 0;
     }
 
@@ -887,132 +153,32 @@ a {
         border: 0;
         outline: none;
         border-radius: 0;
-        padding:0px 0;
-        font-size: 1rem;
+        padding: 8px 0;
+        font-size: 1.2rem;
         font-weight:bold;
         text-transform: uppercase;
         letter-spacing: .1em;
-        background:#006699;
-        color:white;
+        background: #0e6655;
+        color: #ffffff;
         transition: all 0.5s ease;
         -webkit-appearance: none;
-	font-family:times new roman;
-	margin: auto;
-	border-radius: 26px 26px 26px 26px;
-	cursor: pointer;
     }
 
     .button:hover,
     .button:focus {
-    background: #1b4f72;
+        background: #1f618d;
     }
 
     .button-block {
         display: block;
-        width:250px;
-	height:35px;		
-	border-radius: 26px 26px 26px 26px;
-		
+        width: 100%;
     }
 
+    .forgot {
+        margin-top: -20px;
+        text-align: right;
+    }
 
-
-/* formLogin LOGIN Mới */
-
-form .field{
-  width: 100%;
-  margin-bottom: 20px;
-}
-form .field.shake{
-  animation: shake 0.3s ease-in-out;
-}
-@keyframes shake {
-  0%, 100%{
-    margin-left: 0px;
-  }
-  20%, 80%{
-    margin-left: -12px;
-  }
-  40%, 60%{
-    margin-left: 12px;
-  }
-}
-form .field .field-wrap{
-  height: 40px;
-  width: 100%;
-  position: relative;
-}
-form input{
-  width: 100%;
-  height: 90%;
-  outline: none;
-  padding: 0 45px;
-  font-size: 15px;
-  background: white;
-  caret-color: #5372F0;
-  border-radius: 5px;
-  border: 1px solid #bfbfbf;
-  border-bottom-width: 2px;
-  transition: all 0.2s ease;
-}
-form .field input:focus,
-form .field.valid input{
-  border-color: #5372F0;
-}
-form .field.shake input,
-form .field.error input{
-  border-color: #dc3545;
-}
-.field .field-wrap i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-.field-wrap .icon{
-  left: 2px;
-  color: #bfbfbf;
-  transition: color 0.2s ease;
-}
-.field-wrap .error-icon{
-  right: 15px;
-  color: #dc3545;
-}
-form input:focus ~ .icon,
-form .field.valid .icon{
-  color: #5372F0;
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-  color: #bfbfbf;
-}
-form input::placeholder{
-  color: #bfbfbf;
-  font-size: 17px;
-}
-
-form .pass-txt{
-  text-align: left;
-  margin-top: -10px;
-}
-
-form input[type="submit"]{
-  height: 35px;
-  margin-top: 30px;
-  color: #fff;
-  padding: 0;
-  border: none;
-  background: #5372F0;
-  cursor: pointer;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-form input[type="submit"]:hover{
-  background: #2c52ed;
-}
-
-/*END formLogin LOGIN Mới */
 
 
 
@@ -1021,9 +187,9 @@ form input[type="submit"]:hover{
 
 /* Set a style for all buttons */
 button {
-  background-color: #21618c;
+  background-color: #04AA6D;
   color: white;
-  padding: 0px 0px;
+  padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -1068,195 +234,34 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  border-radius: 1%;
-  width: auto;
-  max-width: 700px;
-  height: auto;
-  overflow: auto;
-  background-color: #669999;
-  padding: 7px 20px 30px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-
-font-size: 15px;
-.modal-content {
-    font-size: 15px;
-    width: 100%;
-  }
-.modal {
-    font-size: 15px;
-    width: 100%;
-  }
-.form {
-    font-size: 15px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}	
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
- .modal-content{
-    font-size: 15px;
-    width: 100%;
-  }
-.modal {
-    font-size: 15px;
-    width: 100%;
-  }
-.form {
-    font-size: 15px;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 479px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-    font-size: 15px;
-    width: 200px;
-.modal {
-   font-size: 15px;
-    width: 100%;
-  }
-.form {
-   font-size: 15px;
-    width: 100%;
-  }
-}
-
-}
-
-
-@media (max-width: 600px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-	
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-  } 
-.modal {
-  width: 100%; /* Full width */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  border-radius:1% 1% 1% 1%;
+  top: 30;
+  width: 60%; /* Full width */
   height: auto; /* Full height */
-  }
+  overflow: auto; /* Enable scroll if needed */
+  background-color:  #f8f9f9; /* Fallback color */
+  background-color:  #f8f9f9; /* Black w/ opacity */
+  padding-top: 0px;
 }
 
-@media (max-width: 600px) {
-.modalMess-wrapper {
-  width: 100%;
-  top:40%;
-}
-.good-job h1 {
-  font-size: 10px;
-}
-.modalMess {
-  width:200px;
-}
-.tab-list__link {
-  font-size:7px;
-} 
-.button {
-	width: 50%;
-	font-size:14px;
- }
+/* Modal Content/Box */
 .modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}  
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
+  background-color: #fefefe;
+  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width:auto; /* Could be more or less, depending on screen size */
 }
-}
-
-@media screen and (max-width: 980px) {
-.modal-content {
-  width:100%; /* Could be more or less, depending on screen size */
-}
-.modal {
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-}
-} 
-
-
 
 /* The Close Button (x) */
 .close {
   position: absolute;
-  right: 15px;
-  top: 15;
+  right: 25px;
+  top: 0;
   color: #000;
-  font-size: 18px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -1291,176 +296,239 @@ font-size: 15px;
   .cancelbtn {
      width: 100%;
   }
-
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
   
 }
 
 
-
-/* Modal Thông báo */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-
-.modalMess {
-  max-height: calc(100vh - 60px);
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+} 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 }
 
-@media (max-height: 600px) {
-  .modalMess {
-    top: 10%;
-  }
+@media (max-width: 600px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
 }
 
-@media (max-height: 400px) {
-  .modalMess {
-    top: 5%;
-  }
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+} 
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
+:root {
+  box-sizing: border-box;
 }
 
-
-
-.modalMess-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.25s ease-in-out;
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.modalMess-wrapper.open {
-  opacity: 1;
-  visibility: visible; 
+body {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 99%;
+  padding:1px;
+  width: 99%;
+  max-width:97%;
+  background: linear-gradient(to right, #73c6b6, #5499c7);
 }
 
-.modalMess {
-  width: 400px;
-  max-height: calc(100vh - 60px);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border-radius: 5px;
-  padding-bottom: 10px;
-}
-
-
-
-.headMess { 
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e2525c;
-  padding: 2px 15px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  
-}
-
-.btn-close {
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 7px;
-  padding-bottom: 3px;
-}
-
-
-
-.contentMess {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
-
-.good-job {
+/*********** MAIN HEADING **********/
+.main-heading {
+  font-size: 2em;
+  color:white;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
   text-align: center;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  color: #e2525c;
-}
-
-.good-job .fa-exclamation-circle {
-  font-size: 40px;
-}
-
-.good-job .fa-thumbs-o-up {
-  font-size: 45px;
-}
-
-.good-job h1 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.button-wrapper {
+  margin: 15px 0;
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  align-items: center;
+  white-space: nowrap;
+  font-weight:bold;
 }
 
-@media (max-width: 767px) {
-  .modalMess {
-    width: 90%;
-    max-height: calc(100vh - 60px);
+.main-heading::before, .main-heading::after {
+  content: "";
+  height: 0.2em;
+  width: 100%;
+  background-image: linear-gradient(to left, darkorange, transparent);
+  margin-right: 1em;
+}
+
+.main-heading::after {
+  background-image: linear-gradient(to right, darkorange, transparent);
+  margin-left: 1em;
+}
+
+/*********** LINKS **********/
+.tab-list__list {
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.tab-list__link {
+  color: #fff;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  background-color: #807668;
+  display: block;
+  padding: 1em 1.5em;
+  border-radius: 5px 5px 0 0;
+  transition: all 150ms ease-out;
+  font-weight:bold;
+}
+
+.tab-list__link--is-active {
+  color: #3f4c6b;
+  background-color: #f2e7cf;
+  background-color: #fff;
+  transform: scaleY(1.1);
+  transform-origin: center bottom;
+}
+
+/*********** TAB CONTAINERS **********/
+.tab {
+  background-color: #f2e7cf;
+  background-color: #fff;
+  border-radius: 0 1px 1px 1px;
+  padding: 1.5em;
+}
+
+
+.tab__box {
+  display: none;
+}
+
+.tab__box--is-visible {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-gap: 5px;
+  justify-content: space-around;
+}
+
+.tab__item {
+  padding: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9f9;
+  border-radius:5% 5% 5% 5%;
+}
+
+
+.tab__heading {
+  font-size: 1.2em;
+  color:black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight:bold;
+}
+
+.tab__icon {
+  font-size: 3em !important;
+  margin: 0.7em 0;
+  color: darkorange;
+}
+
+.tab__para {
+  font-weight: bold;
+  color: #3f4c6b;
+  margin-bottom: 1.5em;
+}
+
+.tab__btn {
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 0.8em 1.5em;
+  border-radius: 1px;
+  border: 0;
+  background-image: linear-gradient(to bottom,#e6f5ff,#eaeded,#1b2631);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  max-width: 18em;
+  max-high: 1em;
+  margin: 0 auto;
+}
+
+.tab__btn:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+.tab__btn:active {
+  transform: translate(1px, 2px);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 38em) {
+  body {
+  font-size: 50%;
+  background: #1b4f72;
+  }
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .tab-list__list {
+    flex-direction: column;
+    background-color: #807668;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .tab-list__link {
+    font-size: 0.8em;
+    padding: 1.2em 1em;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .tab-list__link--is-active {
+    transform: scaleX(1.05);
+    transform-origin: right center;
+  }
+
+  .tab {
+    border-radius: 0 3px 3px 0;
+    padding: 1em;
   }
 }
-	
 
 
 
-/* Captchar */
-.field.captch_box {
-  display: flex;
-  align-items: center;
-   margin-top: 10px; /* Thu hẹp khoảng cách trên */
-}
-.field.captch_input {
-  margin-bottom: 10px; /* Thu hẹp khoảng cách dưới */
-}
-
-.field.captch_box .input_field.captch_box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.field.captch_box .input_field.captch_box input[type="text"] {
-  flex: 1;
-  height: 35px;
-}
-
-
-.refresh_button {
-  margin-left: 10px;
-  background: #826afb;
-  height: 33px;
-  width: 30px;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-}	
 
 </style>
 
@@ -1484,234 +552,183 @@ font-size: 15px;
   <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
   <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
   </div>
-<div>
-</br>
-&nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Home</button>
-</div>  
-  <!-- Modal -->
+
+<!-- Modal -->
+
+<main id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <main class="imgcontainer">
 	
-
-<div id="id01" class="modal">
-	<span onclick="document.getElementById('id01').style.display='none'" class="close">❎</span>  
-	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
-			
-		<div class="imgcontainer">		
-
-		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold; padding: 5px" value=""></h2>
-		</div><!-- Modal -->
-
-	<p type = "text" id="ngay"></p>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	  <h2 style="font-size: 1.5em; font-weight: bold";>ĐĂNG NHẬP VT</h2>
+    </main><!-- Modal -->
 
 
+    <main class="form">
 
-    <div class="form">
+        <ul class="tabmodal-group">
 
-			<ul class="Log-group">
+            <li onClick="Delre();" class="tabmodal active"><a href="#login">Login</a></li>
+            <li onClick="Delre();" class="tabmodal"><a href="#changepass">ChangePwd</a></li>
 
-            <li style="background: white; width:135px;"  id="Lo" onClick="Delre();" class="Log active"><a href="#login">Login</a></li>
-
-            <li style="background: white; width:135px;"   id="C_Pwd" onClick="Delre();" class="Log"><a href="#changepass">ChangePwd</a></li>
-			</ul>
-					<div id="loader"></div>
-					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->					
-					<div id="loader2"></div>
-					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
-        <div class="Log-content">
-
-
-            <div id="login">
-
-			<form>	
-
-				<p type = "text" id = "chon"  </p>
-				<p type = "text" id = "combine" </p>
-				<p id="chonlog" type = "text" value=""</p>
-
-				
-				<div id="khuvuc1" class="field-wrap">
-				  <select  id="khuvuc" class="dropdown" placeholder="Please choose">
-					<option value="dha" selected="selected">Đông hà</option>
-					<option value="dhi">Đồng hới</option>
-					<option value="hue" >Huế</option>				   
-				  </select>
-				</div>		
-				
-				<div class="field username">
-                    <div class="field-wrap">
-                        <input name="username" id="username" type="text" class="form-control"  placeholder="User" required>
-						<i class="icon fas fa-user" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-						Chưa điền User.
-						</div>
-                    </div>
-				</div>
-				
-				 <div class="field password">
-                    <div class="field-wrap">
-                        <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Chưa điền Mật khẩu.
-						</div> 
-					</div>				
-				 </div>
-
-					<div  class="field captch_input">
-					  <div class="input_field captch_input">
-						<input  type="text" style="height: 33px;" placeholder="Nhập Captcha" class="form-control" required>				
-					  </div>
-					  <div  class="message" style="text-align: left; color: #FF2525;">Nhập mã Captcha dưới vào.</div>
-					</div>
+        </ul>
+					<main id="loader"></main>
+					<!--<p align="center" id="re" style="font-size: 1.5em; color: black;"></p>-->
 					
-					<div  class="field captch_box">
-					  <div class="input_field captch_box">
-						<input  type="text" value="" disabled />
-						<button hidden class="refresh_button">
-						  <i  class="fa-solid fa-rotate-right"></i>
-						</button>
-					  </div>
-					</div>
+					<main id="loader2"></main>
+					<p align="center" id="repas" style="font-size: 1.5em; color: black;"></p>
+        <main class="tabmodal-content">
 
 
+            <main id="login">
 
-				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
-                </form>
+    <form>
+
+
+                    <main class="field-wrap" autocomplete="off">
+                        <input name="username" id="username" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </main>
+
+
+                    <main class="field-wrap">
+                        <input name="password" id="password" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </main>
 
 				
-				
-				
-            </div>
 
-
-
-            <div id="changepass">
-				</br>
-                <form>                
-				  
-				  <div class="field username">
-					<div class="field-wrap" autocomplete="off">
-                        <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="User" required>
-						<i class="icon fas fa-user" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Chưa điền User.
-						</div> 
-						</div>
-					</div>
-
-					<div class="field password">
-                    <div class="field-wrap">
-                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Chưa điền Mật khẩu hiện tại.
-						</div> 
-                    </div>
-					</div>
-                  
-				
-
-                    <div class="field password">
-					<div class="field-wrap" autocomplete="off">
-                        <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Chưa điền Mật khẩu mới.
-						</div>
-                    </div>
-					</div>
-
-                    <div class="field password">
-					<div class="field-wrap">
-                        <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
-						<i class="icon fas fa-lock" style="left:10px;"></i>
-						<div class="invalid-feedback" style="text-align: left;">
-							Chưa điền lại Mật khẩu mới.
-						</div>
-                    </div>
-					</div>					
-				 
-				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
+					<input class="button button-block" type = "button" onClick="Login_value(); " value = "Đăng Nhập" /></input>
 
                 </form>
 
-            </div>
+            </main>
 
 
-        </div><!-- tab-content -->
 
-    </div> <!-- /form -->
+            <main id="changepass">
+
+                <form>
+
+                  <main class="top-row">
+
+				  <main class="field-wrap" autocomplete="off">
+                        <input name="oldusername" id="oldusername" type="text" class="form_input" autofocus placeholder="Username" autocomplete="off">
+                    </main>
+
+                    <main class="field-wrap">
+                        <input name="oldpassword" id="oldpassword" type="password" class="form_input" autofocus placeholder="Password" autocomplete="off">
+                    </main>
+                  </main>
+
+                    <main class="field-wrap" autocomplete="off">
+                        <input name="newpassword" id="newpassword" type="password" class="form_input" autofocus placeholder="NewPassword" autocomplete="off">
+                    </main>
+
+
+                    <main class="field-wrap">
+                        <input name="cfpassword" id="cfpassword" type="password" class="form_input" autofocus placeholder="Confirm NewPassword" autocomplete="off">
+                    </main>
+
+
+
+					<input class="button button-block" type = "button" onClick="Changepassword_value(); " value = "Đổi Password" /></input>
+
+                </form>
+
+            </main>
+
+
+        </main><!-- tabmodal-content -->
+
+    </main> <!-- /form -->
 
 
 </form><!-- Modal -->
-</div>
+</main>
 
-		
-  <h1 class="main-heading">TRUYỀN DẪN ĐÀI VT ĐÔNG HÀ</h1>
 
-  <div class="wrap">
+  <h1 class="main-heading">VÔ TUYẾN ĐÀI VT ĐÔNG HÀ</h1>
+    <div class="wrap">
         <ul class="tab-list__list">
-            <li  class="tab-list__item"><a href="#tab-1" class="tab-list__link tab-list__link--is-active">LỊCH PHÂN CA ĐÀI ĐÔNG HÀ</a></li>
-            <li  class="tab-list__item"><a href="#tab-2" class="tab-list__link">VẬT TƯ DP TRUYỀN DẪN</a></li>
-            <li  class="tab-list__item"><a href="#tab-3" class="tab-list__link">TÀI LIỆU</a></li>
+            <li class="tab-list__item"><a href="#tab-1" class="tab-list__link tab-list__link--is-active">LỊCH CÔNG VIỆC</a></li>
+            <li class="tab-list__item"><a href="#tab-2" class="tab-list__link">VẬT TƯ DỰ PHÒNG</a></li>
+            <li class="tab-list__item"><a href="#tab-3" class="tab-list__link">TÀI LIỆU</a></li>
         </ul>
-		
         <div class="tab">
 
 		<ul id="tab-1" class="tab__box tab__box--1  tab__box--is-visible">
                 <li class="tab__item">                   
-                   <img id="anh1" src="TruyenDanPicture/TrucCaDHA.jpg" alt=""> 
-                   <h2 id="ten1" class="tab__heading">LỊCH PHÂN CA ĐÔNG HÀ</h2>
-             
+                   <img src="VoTuyen/LichDHA.jpg" alt=""> 
+                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐÔNG HÀ</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
+                   
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh2" src="TruyenDanPicture/TrucCaDHI.png" alt=""> 
-                   <h2 id="ten2" class="tab__heading">LỊCH PHÂN CA ĐỒNG HỚI</h2>
-
+                   <img src="VoTuyen/LichDHI.png" alt=""> 
+                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐỒNG HỚI</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh3" src="TruyenDanPicture/TrucCaHUE.jpg" alt=""> 
-                   <h2 id="ten3" class="tab__heading">LỊCH PHÂN CA HUẾ</h2>
-
+                   <img src="VoTuyen/LichHUE.jpg" alt=""> 
+                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT HUẾ</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
 
             </ul>
 
             <ul id="tab-2" class="tab__box tab__box--1">
                 <li class="tab__item">                   
-                   <img id="anh4" src="TruyenDanPicture/VatTuDPDHA.png" alt=""> 
-                   <h2 id="ten4" class="tab__heading">VẬT TƯ DP ĐÔNG HÀ</h2>
-
+                   <img src="VoTuyen/VatTuDPDHA.png" alt=""> 
+                   <h2 class="tab__heading">VẬT TƯ DP VT ĐÔNG HÀ</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh5" src="TruyenDanPicture/VatTuDPDHI.png" alt=""> 
-                   <h2 id="ten5" class="tab__heading">VẬT TƯ DP ĐỒNG HỚI</h2>
-
+                   <img src="VoTuyen/VatTuDPDHI.png" alt=""> 
+                   <h2 class="tab__heading">VẬT TƯ DP VT ĐỒNG HỚI</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh6" src="TruyenDanPicture/VatTuDPHUE.jpg" alt=""> 
-                   <h2 id="ten6" class="tab__heading">VẬT TƯ DP HUẾ</h2>
-
+                   <img src="VoTuyen/VatTuDPHUE.jpg" alt=""> 
+                   <h2 class="tab__heading">VẬT TƯ DP VT HUẾ</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
 
             </ul>			
 			
             <ul id="tab-3" class="tab__box tab__box--1">
                 <li class="tab__item">                   
-                   <img id="anh7" src="TruyenDanPicture/CongVan.jpg" alt=""> 
-                   <h2 id="ten7" class="tab__heading">CÔNG VĂN KỶ THUẬT</h2>
-
+                   <img src="VoTuyen/CongVan.jpg" alt=""> 
+                   <h2 class="tab__heading">CÔNG VĂN VÔ TUYẾN</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh8" src="TruyenDanPicture/TaiLieu.png" alt=""> 
-                   <h2 id="ten8" class="tab__heading">TÀI LIỆU TD - IP</h2>
-
+                   <img src="VoTuyen/TaiLieu.png" alt=""> 
+                   <h2 class="tab__heading">TÀI LIỆU VÔ TUYẾN</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
                 <li class="tab__item">                   
-                   <img id="anh9" src="TruyenDanPicture/TracNghiem.jpg" alt=""> 
-                   <h2 id="ten9" class="tab__heading">TRẮC NGHIỆM</h2>
-
+                   <img src="VoTuyen/TaiLieu.png" alt=""> 
+                   <h2 class="tab__heading">TRẮC NGHIỆM VÔ TUYẾN</h2>
+                  <div class="text-center">
+					<button type="submit2" onclick="document.getElementById('id01').style.display='block'">Login</button>
+				  </div>
                 </li>
-
 
             </ul>
 
@@ -1722,510 +739,20 @@ font-size: 15px;
 
 
 
-	
-<div class="Thoat" id="dialog-container">
-  <div class="popup">
-  </br>	
-    <p>Bạn có muốn về Trang chủ không ?</p>	
-    <div class="text-right">
-      <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
-      <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
-    </div>
-  </div>
-</div>
-<p id="testText"></p>
-<div class="Thoat_time" id="dialog_time">
-  <div class="popup">
-  </br>	
-    <p>Thời gian lâu không dùng !</p>
-    <div class="text-right">
-      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
-    </div>
-  </div>
-</div> 
-
-  <!-- Modal Aleert-->   
-
-
-
-<div class="modalMess-wrapper">
-  <div class="modalMess">
-    <div class="headMess">
-      <a id="close" class="btn-close trigger" >
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </a>
-    </div>
-    <div  class="contentMess">
-        <div class="good-job">
-          <i id="fa" class="fa fa-exclamation-circle" aria-hidden="true"></i>
-          <h1 id="alert" value="" ></h1>		  	  
-        </div>
-			<div>
-			  <button class="dialog-btn btn-primary" id="confirm_Login" style="display:none;width:100px;">OK</button>
-			</div>
-	</div>
-
-  </div>	
- </div>
-
-
-<script src="TruyenDanPicture/Droplist.min.js"></script>
-<script src="CapQuangPicture/Login.min.js"></script>
-
-<script src="DangNhap/bootstrap.bundle.min.js"></script>
-<script src="LinkGG.js"></script>
-
-
- <script id="rendered-js">
-
-$(document).ready(function () {
-//  $('.modalMess-wrapper').toggleClass('open');
-});
-
-// Close
-$(document).ready(function () {
- $('.trigger').on('click', function () {
-    $('.modalMess-wrapper').toggleClass('none');
-   return false;
-  });
-});
-
-// OPen
-function open_modalMess() {
-    $('.modalMess-wrapper').toggleClass('open');
-   return false;
-}
-
-</script>
-
-<script>
-//eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
-</script>
-
-<script>
-
-// Selecting necessary DOM elements
-const captchaTextBox = document.querySelector(".captch_box input");
-const refreshButton = document.querySelector(".refresh_button");
-const captchaInputBox = document.querySelector(".captch_input input");
-const message = document.querySelector(".message");
-const submitButton = document.querySelector(".button");
-
-// Variable to store generated captcha
-let captchaText = null;
-
-// Function to generate captcha
-const generateCaptcha = () => {
-  const randomString = Math.random().toString(36).substring(2, 7);
-  const randomStringArray = randomString.split("");
-  const changeString = randomStringArray.map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char));
-  captchaText = changeString.join("   ");
-  captchaTextBox.value = captchaText;
-  console.log(captchaText);
-};
-
-const refreshBtnClick = () => {
-  generateCaptcha();
-  captchaInputBox.value = "";
-  captchaKeyUpValidate();
-};
-
-const captchaKeyUpValidate = () => {
-  //Toggle submit button disable class based on captcha input field.
-  submitButton.classList.toggle("disabled", !captchaInputBox.value);
-
-  if (!captchaInputBox.value) message.classList.remove("active");
-};
-
-// Function to validate the entered captcha
-const submitBtnClick = () => {
-  captchaText = captchaText
-    .split("")
-    .filter((char) => char !== " ")
-    .join("");
-  message.classList.add("active");
-  // Check if the entered captcha text is correct or not
-  if (captchaInputBox.value !== captchaText) {
-      message.innerText = "Kiểm tra lại nhập mã Captcha.";
-    message.style.color = "#FF2525";
-  
-
-  } else {
-    message.innerText = "Captcha đúng, bấm tiếp để Đăng Nhập.";
-    message.style.color = "#826afb";
-  }
-};
-
-// Add event listeners for the refresh button, captchaInputBox, submit button
-refreshButton.addEventListener("click", refreshBtnClick);
-captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
-submitButton.addEventListener("click", submitBtnClick);
-
-// Generate a captcha when the page loads
-generateCaptcha(); 
-
-//==========Hàm này check Input Form (Phải có)==============
-(function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-	  
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-		}, false)
-    }
-	)
-})()
-</script>
-		
 <script id="rendered-js">
+function _0x2e23(){var _0x52311b=['input,\x20textarea','hide','392kxxdBB','.tab-content\x20>\x20main','active\x20highlight','31619BDVjkI','href','active','36666012bEaVSE','focus','replaceState','parent','9905632ESMpuH','history','keyup','90388VGvkrM','8hqfZFz','fadeIn','val','3zpVnad','type','removeClass','132dCEovY','2777170SXBqpN','3962548yKjrgD','45TdvQpt','266780DImoBi','highlight','siblings','.tab\x20a','addClass','click','attr'];_0x2e23=function(){return _0x52311b;};return _0x2e23();}function _0x279a(_0x4b7120,_0x5285c9){var _0x2e2326=_0x2e23();return _0x279a=function(_0x279a0a,_0x5e3b1c){_0x279a0a=_0x279a0a-0xf9;var _0x33f03a=_0x2e2326[_0x279a0a];return _0x33f03a;},_0x279a(_0x4b7120,_0x5285c9);}var _0x2439b3=_0x279a;(function(_0x572024,_0x241c8f){var _0x7ecce=_0x279a,_0x18b3f1=_0x572024();while(!![]){try{var _0x4f288e=parseInt(_0x7ecce(0x110))/0x1*(parseInt(_0x7ecce(0x10f))/0x2)+parseInt(_0x7ecce(0x113))/0x3*(parseInt(_0x7ecce(0x118))/0x4)+parseInt(_0x7ecce(0xf9))/0x5*(-parseInt(_0x7ecce(0x116))/0x6)+parseInt(_0x7ecce(0x105))/0x7*(-parseInt(_0x7ecce(0x102))/0x8)+parseInt(_0x7ecce(0x119))/0x9*(-parseInt(_0x7ecce(0x117))/0xa)+-parseInt(_0x7ecce(0x10c))/0xb+parseInt(_0x7ecce(0x108))/0xc;if(_0x4f288e===_0x241c8f)break;else _0x18b3f1['push'](_0x18b3f1['shift']());}catch(_0xf7572d){_0x18b3f1['push'](_0x18b3f1['shift']());}}}(_0x2e23,0xb09e4),window[_0x2439b3(0x10d)][_0x2439b3(0x10a)]('','','/'),$('.form')['find'](_0x2439b3(0x100))['on']('keyup\x20blur\x20focus',function(_0x1f1892){var _0x13f325=_0x2439b3,_0x5e9d8a=$(this),_0x5f38f4=_0x5e9d8a['prev']('label');if(_0x1f1892[_0x13f325(0x114)]===_0x13f325(0x10e))_0x5e9d8a[_0x13f325(0x112)]()===''?_0x5f38f4['removeClass'](_0x13f325(0x104)):_0x5f38f4['addClass'](_0x13f325(0x104));else{if(_0x1f1892[_0x13f325(0x114)]==='blur')_0x5e9d8a[_0x13f325(0x112)]()===''?_0x5f38f4[_0x13f325(0x115)](_0x13f325(0x104)):_0x5f38f4[_0x13f325(0x115)](_0x13f325(0xfa));else{if(_0x1f1892['type']===_0x13f325(0x109)){if(_0x5e9d8a['val']()==='')_0x5f38f4[_0x13f325(0x115)]('highlight');else _0x5e9d8a[_0x13f325(0x112)]()!==''&&_0x5f38f4[_0x13f325(0xfd)](_0x13f325(0xfa));}}}}),$(_0x2439b3(0xfc))['on'](_0x2439b3(0xfe),function(_0x572ffc){var _0xc8bd82=_0x2439b3;_0x572ffc['preventDefault'](),$(this)[_0xc8bd82(0x10b)]()[_0xc8bd82(0xfd)](_0xc8bd82(0x107)),$(this)[_0xc8bd82(0x10b)]()[_0xc8bd82(0xfb)]()[_0xc8bd82(0x115)](_0xc8bd82(0x107)),target=$(this)[_0xc8bd82(0xff)](_0xc8bd82(0x106)),$(_0xc8bd82(0x103))['not'](target)[_0xc8bd82(0x101)](),$(target)[_0xc8bd82(0x111)](0x258);}));
 
-let ul = document.querySelector('.tab-list__list');
-let links = document.querySelectorAll('.tab-list__link');
-let tabs = document.querySelectorAll('.tab__box');
+</script>
 
-ul.addEventListener('click', e => {
-  //only apply js if tab isn't already the active one
-  if (e.target.classList.contains('tab-list__link') && !e.target.classList.contains('tab-list__link--is-active')) {
-    e.preventDefault();
-    //loop through all links and divs and remove the active/visible classes
-    links.forEach((el, idx) => {
-      el.classList.remove('tab-list__link--is-active');
-      tabs[idx].classList.remove('tab__box--is-visible');
-      //add the active class to the clicked link
-      e.target.classList.add('tab-list__link--is-active');
-      //if the active link's href attribute matches the div's id attribute (slicing out the #) apply the visible class to that div
-      if (e.target.getAttribute('href').slice(1) === tabs[idx].getAttribute('id')) {
-        tabs[idx].classList.add('tab__box--is-visible');
-      }
-    });
-  }
-});
+<script id="rendered-js">
+const _0xe5e7ce=_0x43e5;(function(_0x5f061b,_0x4b7090){const _0x5c2822=_0x43e5,_0x8831b4=_0x5f061b();while(!![]){try{const _0x2c8714=parseInt(_0x5c2822(0x1a0))/0x1+-parseInt(_0x5c2822(0x197))/0x2*(-parseInt(_0x5c2822(0x19a))/0x3)+-parseInt(_0x5c2822(0x18c))/0x4+parseInt(_0x5c2822(0x194))/0x5*(-parseInt(_0x5c2822(0x190))/0x6)+parseInt(_0x5c2822(0x196))/0x7+parseInt(_0x5c2822(0x192))/0x8+-parseInt(_0x5c2822(0x18d))/0x9*(parseInt(_0x5c2822(0x193))/0xa);if(_0x2c8714===_0x4b7090)break;else _0x8831b4['push'](_0x8831b4['shift']());}catch(_0x485350){_0x8831b4['push'](_0x8831b4['shift']());}}}(_0x3407,0x1b344));let ul=document[_0xe5e7ce(0x19b)](_0xe5e7ce(0x199)),links=document[_0xe5e7ce(0x19e)](_0xe5e7ce(0x18e)),tabs=document[_0xe5e7ce(0x19e)]('.tab__box');function _0x43e5(_0x483193,_0x5d139c){const _0x340766=_0x3407();return _0x43e5=function(_0x43e523,_0x1bc0fb){_0x43e523=_0x43e523-0x18c;let _0x217a9f=_0x340766[_0x43e523];return _0x217a9f;},_0x43e5(_0x483193,_0x5d139c);}function _0x3407(){const _0x305c01=['2943wbiqiQ','.tab-list__link','slice','52932jhJHzC','href','555392nNNXYd','6890WFPZqP','115oTssXg','contains','634571npcDOw','2LbRSxM','addEventListener','.tab-list__list','561261NIzPLV','querySelector','tab-list__link--is-active','classList','querySelectorAll','getAttribute','200296cHbFYA','target','add','tab__box--is-visible','preventDefault','forEach','31292vdUwgY'];_0x3407=function(){return _0x305c01;};return _0x3407();}ul[_0xe5e7ce(0x198)]('click',_0xb02621=>{const _0x3822fa=_0xe5e7ce;_0xb02621[_0x3822fa(0x1a1)]['classList'][_0x3822fa(0x195)]('tab-list__link')&&!_0xb02621[_0x3822fa(0x1a1)][_0x3822fa(0x19d)][_0x3822fa(0x195)](_0x3822fa(0x19c))&&(_0xb02621[_0x3822fa(0x1a4)](),links[_0x3822fa(0x1a5)]((_0x54a831,_0x4c576d)=>{const _0x5ac3a7=_0x3822fa;_0x54a831[_0x5ac3a7(0x19d)]['remove'](_0x5ac3a7(0x19c)),tabs[_0x4c576d]['classList']['remove']('tab__box--is-visible'),_0xb02621[_0x5ac3a7(0x1a1)][_0x5ac3a7(0x19d)][_0x5ac3a7(0x1a2)](_0x5ac3a7(0x19c)),_0xb02621[_0x5ac3a7(0x1a1)][_0x5ac3a7(0x19f)](_0x5ac3a7(0x191))[_0x5ac3a7(0x18f)](0x1)===tabs[_0x4c576d][_0x5ac3a7(0x19f)]('id')&&tabs[_0x4c576d][_0x5ac3a7(0x19d)][_0x5ac3a7(0x1a2)](_0x5ac3a7(0x1a3));}));});
+    </script>  
+<script src="VoTuyen/Login.min.js"></script>
+<script id="rendered-js">
+function _0x586e(){var _0x20ae16=['focus','not','siblings','1207992Hfyoyf','active','width','2112496LSjoaY','hide','blur','removeClass','534457wUnsdk','type','keyup','height','40ypZQTf','.modal','145230wVqodE','350092xbdFvT','.tabmodal\x20a','fadeIn','highlight','label','val','6hLeGLY','839502BrcUke','absolute','1252173fZJgpN','find','2EyTttc','preventDefault','addClass','href','prev','parent','click','.form','active\x20highlight'];_0x586e=function(){return _0x20ae16;};return _0x586e();}var _0x11878c=_0x5d31;function _0x5d31(_0xd667e,_0x812d77){var _0x586ee=_0x586e();return _0x5d31=function(_0x5d315f,_0x42b5ea){_0x5d315f=_0x5d315f-0xac;var _0x231a29=_0x586ee[_0x5d315f];return _0x231a29;},_0x5d31(_0xd667e,_0x812d77);}(function(_0x575a33,_0x6eb721){var _0x38c01e=_0x5d31,_0x51e10b=_0x575a33();while(!![]){try{var _0x12fb75=parseInt(_0x38c01e(0xb6))/0x1*(parseInt(_0x38c01e(0xd0))/0x2)+-parseInt(_0x38c01e(0xb4))/0x3+-parseInt(_0x38c01e(0xc2))/0x4+parseInt(_0x38c01e(0xcf))/0x5+parseInt(_0x38c01e(0xb1))/0x6*(-parseInt(_0x38c01e(0xc9))/0x7)+parseInt(_0x38c01e(0xc5))/0x8+parseInt(_0x38c01e(0xb2))/0x9*(parseInt(_0x38c01e(0xcd))/0xa);if(_0x12fb75===_0x6eb721)break;else _0x51e10b['push'](_0x51e10b['shift']());}catch(_0x10b90b){_0x51e10b['push'](_0x51e10b['shift']());}}}(_0x586e,0x35d9c),$(_0x11878c(0xbd))[_0x11878c(0xb5)]('input,\x20textarea')['on']('keyup\x20blur\x20focus',function(_0xd13cd){var _0x139365=_0x11878c,_0x194baf=$(this),_0x2cdb89=_0x194baf[_0x139365(0xba)](_0x139365(0xaf));if(_0xd13cd[_0x139365(0xca)]===_0x139365(0xcb))_0x194baf[_0x139365(0xb0)]()===''?_0x2cdb89['removeClass']('active\x20highlight'):_0x2cdb89[_0x139365(0xb8)](_0x139365(0xbe));else{if(_0xd13cd[_0x139365(0xca)]===_0x139365(0xc7))_0x194baf[_0x139365(0xb0)]()===''?_0x2cdb89[_0x139365(0xc8)](_0x139365(0xbe)):_0x2cdb89[_0x139365(0xc8)](_0x139365(0xae));else{if(_0xd13cd['type']===_0x139365(0xbf)){if(_0x194baf[_0x139365(0xb0)]()==='')_0x2cdb89[_0x139365(0xc8)](_0x139365(0xae));else _0x194baf['val']()!==''&&_0x2cdb89[_0x139365(0xb8)](_0x139365(0xae));}}}}),$(_0x11878c(0xac))['on'](_0x11878c(0xbc),function(_0x345a28){var _0x45b776=_0x11878c;_0x345a28[_0x45b776(0xb7)](),$(this)[_0x45b776(0xbb)]()[_0x45b776(0xb8)](_0x45b776(0xc3)),$(this)[_0x45b776(0xbb)]()[_0x45b776(0xc1)]()['removeClass'](_0x45b776(0xc3)),target=$(this)['attr'](_0x45b776(0xb9)),$('.tabmodal-content\x20>\x20main')[_0x45b776(0xc0)](target)[_0x45b776(0xc6)](),$(target)[_0x45b776(0xad)](0x258);}),$(function(){var _0x1b7977=_0x11878c,_0x42ccd2=$(_0x1b7977(0xce)),_0x562d29=$(window),_0xd34a88=_0x42ccd2[_0x1b7977(0xc4)](),_0x24b3b2=_0x42ccd2['height'](),_0xe7c21c=_0x562d29['width'](),_0x50b219=_0x562d29[_0x1b7977(0xcc)]();_0x42ccd2['css']({'position':_0x1b7977(0xb3),'top':(_0x50b219-_0x24b3b2)/0x2+'px','left':(_0xe7c21c-_0xd34a88)/0x2+'px'});}));
 
-//https://ordinarycoders.com/blog/article/custom-user-login-forms
-
-
-$('.tabmodal a').on('click', function (e) {
-
-  e.preventDefault();
-
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-
-  target = $(this).attr('href');
-
-  $('.tabmodal-content > main').not(target).hide();
-
-  $(target).fadeIn(600);
-
-});
-
-
-// Chuyen form login
-
-        $('.form').find('input, textarea').on('keyup blur focus', function(e) {
-
-            var $this = $(this),
-                label = $this.prev('label');
-
-            if (e.type === 'keyup') {
-                if ($this.val() === '') {
-                    label.removeClass('active highlight');
-                } else {
-                    label.addClass('active highlight');
-                }
-            } else if (e.type === 'blur') {
-                if ($this.val() === '') {
-                    label.removeClass('active highlight');		
-                } else {
-                    label.removeClass('highlight');
-                }
-            } else if (e.type === 'focus') {
-
-                if ($this.val() === '') {
-                    label.removeClass('highlight');
-                } else
-                if ($this.val() !== '') {
-                    label.addClass('highlight');
-                }
-            }
-
-        });
-
-        $('.Log a').on('click', function(e) {
-
-            e.preventDefault();
-
-            $(this).parent().addClass('active');
-			
-            $(this).parent().siblings().removeClass('active');
-
-            target = $(this).attr('href');
-
-            $('.Log-content > div').not(target).hide();
-
-            $(target).fadeIn(600);
-
-        });
-
-
-
-
-
-// Click Image Open Madal 
-
-var modal01 = document.getElementById("id01");
-var chonlog = document.getElementById("chonlog");
-
-var anh1 = document.getElementById("anh1");
-var ten1 = document.getElementById("ten1");
-anh1.onclick  = function(){
-
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	//document.getElementById("dn").innerHTML = "";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
-	document.getElementById("combine").value ="truccadha";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	
-	//Combine();
-}
-ten1.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHA";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	document.getElementById("combine").value ="truccadha";
-	//Combine();
-}
-
-
-
-
-var anh2 = document.getElementById("anh2");
-var ten2 = document.getElementById("ten2");
-anh2.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
-	//document.getElementById("chon").value = "trucca";
-	//document.getElementById("khuvuc").value = "dha";
-	document.getElementById("combine").value = "truccadhi";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten2.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA ĐHI";
-	//document.getElementById("chon").value = "trucca";
-	//document.getElementById("khuvuc").value = "dhi";
-	document.getElementById("combine").value = "truccadhi";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-
-var anh3 = document.getElementById("anh3");
-var ten3 = document.getElementById("ten3");
-anh3.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
-	//document.getElementById("chon").value = "trucca";
-	//document.getElementById("khuvuc").value = "dhi";
-	document.getElementById("combine").value = "truccahue";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten3.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP LỊCH CA HUẾ";
-	//document.getElementById("chon").value = "trucca";
-	//document.getElementById("khuvuc").value = "dhi";
-	document.getElementById("combine").value = "truccahue";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-//====================
-var anh4 = document.getElementById("anh4");
-var ten4 = document.getElementById("ten4");
-anh4.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
-	document.getElementById("combine").value = "vattudha";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten4.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHA";
-	document.getElementById("combine").value = "vattudha";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-
-var anh5 = document.getElementById("anh5");
-var ten5 = document.getElementById("ten5");
-anh5.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
-	document.getElementById("combine").value = "vattudhi";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten5.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD ĐHI";
-	document.getElementById("combine").value = "vattudhi";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-var anh6 = document.getElementById("anh6");
-var ten6 = document.getElementById("ten6");
-anh6.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUẾ";
-	document.getElementById("combine").value = "vattuhue";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten6.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP VTDP TD HUE";
-	document.getElementById("combine").value = "vattuhue";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-
-
-var anh7 = document.getElementById("anh7");
-var ten7 = document.getElementById("ten7");
-anh7.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
-	document.getElementById("combine").value = "congvantd";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten7.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP CÔNG VĂN TD";
-	document.getElementById("combine").value = "congvantd";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-
-var anh8 = document.getElementById("anh8");
-var ten8 = document.getElementById("ten8");
-anh8.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
-	document.getElementById("combine").value = "tailieutd";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten8.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TAI LIỆU TD";
-	document.getElementById("combine").value = "tailieutd";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-var anh9 = document.getElementById("anh9");
-var ten9 = document.getElementById("ten9");
-anh9.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM TD";
-	document.getElementById("combine").value = "tracnghiemtd";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-ten9.onclick  = function(){
-	modal01.style.display = "block";
-	document.getElementById("khuvuc1").style.display = "none";
-	document.getElementById('dn').innerHTML = "ĐĂNG NHẬP TRẮC NGHIỆM";
-	document.getElementById("combine").value = "tracnghiemtd";
-	document.getElementById("chonlog").value = document.getElementById('dn').innerHTML;
-	//Combine();
-}
-
-		
-var C_Pwd = document.getElementById("C_Pwd");
-C_Pwd.onclick  = function(){
-	document.getElementById('dn').innerHTML = "ĐỔI PASSWORD ĐĂNG NHẬP";
-}		
-var Lo = document.getElementById("Lo");
-Lo.onclick  = function(){
-	document.getElementById('dn').innerHTML = document.getElementById('chonlog').value;
-}		
-	 
 </script>
 
 
-<div class="footer">
-
-  <div class="footer-left col-md-4 col-sm-6">
  
-
-      <i class="fa fa-map-marker"></i>
-      <p> Liên Hệ: 18 Trần Hưng Đạo</p>
-
-	<p> Thành Phố Đông Hà, Tỉnh Quảng Trị.</p>
-
-
-  </div>
-
-	<div class="footer-center col-md-4 col-sm-6">
-
-
-      <i class="fa fa-phone"></i>
-      <p> (+84) 916 468 333</p>
-    <div>
-      <p style="color:black;" href="mailto:tramvtdha@vnpt.vn?subject = Đài Viễn Thông Đông Hà"><i class="fa fa-envelope"></i>tramvtdha@vnpt.vn</p>
-  	 </div> 
-
-  </div>
-  
-
- 
-  <div class="footer-right col-md-4 col-sm-6">
-
-	
-	 <div class="icons">
-      <a onclick="shareface()"><i class="fa fa-facebook"></i></a>
-		<p>Facebook</p>      
-    </div>
-	
-	<br></p>
-    <p class="name">Lê Văn Khanh, Copyright: © 2022. All right reserved.</p>
-  </div>
-</footer>
-</div>
-
-</body>
-</html>
+</body></html>
