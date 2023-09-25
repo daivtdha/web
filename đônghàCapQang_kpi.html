@@ -1264,12 +1264,11 @@ select {
 }
 
 	/* Thêm CSS để thiết lập màu nền cho biểu đồ và ảnh */
-	#chart-container,
-	#image-container {
-	background-color: white;
-	width: 650px;
-	height: 680px;
-	}
+#chart-container {
+    overflow-x: auto; /* Thanh cuộn ngang tự động hiển thị khi cần thiết */
+    overflow-y: hidden; /* Ẩn thanh cuộn dọc */
+}
+
 /* End Biểu đồ*/
 		
 </style>
@@ -1364,9 +1363,10 @@ select {
 </div>
 <div align="center">
     <!-- Thêm container cho biểu đồ và ảnh -->
-    <div id="chart-container">
-        <canvas id="myChart"></canvas>
-    </div>
+<div id="chart-container" style="min-height: 300px;">
+    <canvas id="myChart" width="100" height="100"></canvas>
+</div>
+
     <select onchange="changeChart(this.value)">
         <option value="bar">Biểu đồ Cột dọc</option>
         <option value="line">Biểu đồ Đường</option>
