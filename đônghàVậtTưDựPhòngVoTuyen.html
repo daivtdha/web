@@ -1,0 +1,2765 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VẬT TƯ VÔ TUYẾN ĐÀI ĐHA</title>
+
+<link rel="stylesheet" href="data/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Navigation/Navigation.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/ag-grid-community/styles/ag-grid.css">
+<link rel="stylesheet" href="https://unpkg.com/ag-grid-community/styles/ag-theme-alpine.css">
+<script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.noStyle.js"></script>
+<script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.noStyle.js"></script>
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+<head>
+<style>
+
+/* suggested */
+
+* {
+  box-sizing: border-box;
+}
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+/* End suggested */
+
+
+.button {
+  background-color:#006699;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 3px 1px;
+  cursor: pointer;
+  
+}
+
+.button1 {border-radius: 10em;}
+
+
+
+
+ body {
+ font-family: Times New Roman;
+ overscroll-behavior-y: contain;                 /* https://usefulangle.com/post/278/html-disable-pull-to-refresh-with-css */
+    /* font-family: sans-serif; */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+    color: #666;
+    font: 90%/180% Arial, Helvetica, sans-serif;
+    width:100%;
+    max-width:100%;
+    margin: 0 auto;
+	
+	background-image:white);
+}
+
+/* TABLE */
+.HorizontalTable {
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y:hidden;
+    }
+
+.HorizontalTable {height: 20px; }
+.Horizontal {
+      width:6000px; /* Thay đổi mở rộng màn hình của thanh trượt */
+      height: 20px;
+    }
+
+
+
+.footer {
+ background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 5px;
+  
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 5px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 20px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color:#0099ff;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 10px;
+  margin-right: 3px;
+
+}
+
+
+
+
+.footer .footer-center {
+  width: 25%;
+}
+
+.footer .footer-center i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+
+
+
+.footer .footer-right {
+  width: 35%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer h2 span {
+  color: #0099ff;
+}
+
+.footer .menu {
+  color:black;
+  margin: 0px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #0099ff;
+}
+
+.footer .name {
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+
+.input1 {border-radius: 12px;}
+
+fieldset {
+
+background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+
+display: block;
+
+left: 0;
+max-width:100%;
+
+}
+
+fieldset:focus-within {
+  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+
+}
+
+
+
+legend{
+width:250px;
+height:28px;
+text-align: center;
+font-size: 16px; 
+font-weight:  bold;
+color: white;
+padding: 2px 2px ;
+
+box-shadow: 0 0 0 2px #ddd;
+font: time new roman;
+ background-color: #006699;
+border-radius: 10em;
+}
+
+
+
+
+
+
+form .question {
+  position: relative;
+  padding: 10px 4px;
+  display:inline-block;
+}
+form .question:first-of-type {
+  padding-top: 0;
+}
+form .question:last-of-type {
+  padding-bottom: 0;
+}
+form .question label {
+  transform-origin: left center;
+  color: #0e3753;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 8px 17px;
+  display: block;
+  position: absolute;
+  margin-top: -35px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+	
+
+
+@media (max-width: 380px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+
+  .question .id {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum2 {
+	width:122px;
+	min-height:40px;
+	}
+.question .Colum3 {
+	width:122px;
+	min-height:40px;
+	}
+
+.question .Colum4 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum5 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum6 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum7 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum8 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum9 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum10 {
+	width:122px;
+	min-height:40px;
+	}
+.question .Colum11 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum12 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum13 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum14 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum15 {
+	width:122px;
+	min-height:40px;
+	}	
+
+ .question .Colum16 {
+	width:122px;
+	min-height:40px;
+	} 
+
+}
+
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+
+  .question .id {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum2 {
+	width:152px;
+	min-height:40px;
+	}
+.question .Colum3 {
+	width:152px;
+	min-height:40px;
+	}
+
+.question .Colum4 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum5 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum6 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum7 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum8 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum9 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum10 {
+	width:152px;
+	min-height:40px;
+	}
+.question .Colum11 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum12 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum13 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum14 {
+	width:152px;
+	min-height:40px;
+	}
+ .question .Colum15 {
+	width:152px;
+	min-height:40px;
+	}	
+
+ .question .Colum16 {
+	width:152px;
+	min-height:40px;
+	} 
+	
+}
+
+
+
+.popup {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.dialog-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+
+
+#btn-show-dialog {
+  background-color:#006699;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 30px;
+  width: 90px;
+  font-weight: bold;
+}
+
+#btn-show-dialog {border-radius: 12px;}
+
+
+
+
+.popup_time {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_time {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_time {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_time {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_time {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.popup_update {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_update {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_update {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_update {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_update {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.update-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.update-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+/* TRANS */
+
+.popup_trans {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_trans {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_trans {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_trans {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_trans {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.trans-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.trans-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+/*END TRANS */
+
+
+.popup_insert {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_insert {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_insert {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_insert {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_insert {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.insert-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.insert-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+.popup_delete {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_delete {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_delete {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_delete {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_delete {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.delete-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.delete-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+
+.popup_id {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_id {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_id {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_id {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_id {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+.popup_result {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_result {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_result {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_result {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_result {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.id-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.id-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+
+/* Lịch */
+
+.datepicker-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  display: none;
+  padding: 4px;
+  margin-top: 1px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+
+/* End Lịch */
+
+
+/* Thay đổi */
+.header img {
+	margin-bottom:1px; /* Giảm khoảng cách dưới hình ảnh */
+}
+
+.header p {
+	margin-top: 1px; /* Giảm khoảng cách trên đoạn văn */
+	margin-bottom:1px; /* Giảm khoảng cách dưới đoạn văn */
+}
+
+.header button {
+	margin-top:1px; /* Giảm khoảng cách trên nút */
+}
+
+/* Thay đổi question2 */
+.question2 p {
+    margin: 1px 0; /* Giảm khoảng cách giữa các phần tử p */
+}
+
+.question2 input {
+    margin: 1px 1px; /* Giảm khoảng cách giữa các nút input */
+}
+
+
+.container div {
+    margin-bottom: 1px; /* Giảm khoảng cách giữa các phần tử div */
+}
+
+.container textarea {
+    margin-bottom: 1px; /* Giảm khoảng cách dưới ô textarea */
+}
+
+.container .pagination {
+    margin-top: 1px; /* Giảm khoảng cách trên phần phân trang */
+    margin-bottom: 1px; /* Giảm khoảng cách dưới phần phân trang */
+}
+
+.container button {
+    margin-top: 1px; /* Giảm khoảng cách trên nút */
+}
+
+.container p {
+    margin:7px 0; /* Giảm khoảng cách giữa các phần tử p */
+}
+
+
+/* Tô màu tìm kiếm */
+#searchInput {
+    width: 150px;
+    height: 23px;
+    border-radius: 26px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#count {
+font-weight: bold;
+}
+.highlight {
+    background-color: yellow;
+}
+/* End Tô màu tìm kiếm */
+
+/* Kẻ chỉ dữ liệu */
+.ag-theme-alpine .ag-cell, 
+.ag-theme-alpine .ag-header-cell {
+    border: 0.7px solid #ccc;
+}
+.ag-header {
+    background-color: #f0f8ff; /* Màu xanh nhạt */
+    /* Các thiết lập khác */
+}
+
+/* Đảm bảo phần phân trang luôn hiển thị ở giữa trang */
+.ag-theme-alpine .ag-paging-panel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            z-index: 1;
+}
+
+/* Căn chỉnh lưới bên dưới phân trang */
+        .ag-theme-alpine .ag-root-wrapper {
+            padding-top: 40px; /* Điều chỉnh cho phù hợp với chiều cao của phân trang */
+        }
+
+        /* Ẩn phần "to of" trong phân trang */
+        .ag-theme-alpine .ag-paging-panel .ag-paging-row-summary-panel {
+            display: none;
+}
+
+/* Tính năng thay đổi độ cao dòng */
+.ag-row-resize-handle {
+    position: absolute;
+    width: 100%;
+    height: 1.5px; /* Đổi chiều cao để phù hợp với thiết kế */
+    cursor: row-resize;
+    background-color: #f0f0f0; /* Màu nền của điều khiển kéo thả */
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
+
+/* Thay đổi độ cao Input filter */
+
+.ag-input-wrapper input[type="text"] {
+    height: 23px !important; /* Điều chỉnh độ cao mong muốn */
+}
+/* End Thay đổi độ cao Input filter */
+
+/* End Tính năng thay đổi độ cao dòng */
+	
+
+/* End Kẻ chỉ dữ liệu */
+
+/* Tiến trình tải dữ liệu */
+
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
+.lds-spinner {
+  color: currentColor;
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; /* giảm kích thước width */
+  height: 40px; /* giảm kích thước height */
+  z-index: 1000; /* Ensure spinner is on top */
+}
+.lds-spinner div {
+  transform-origin: 20px 20px; /* giảm kích thước origin */
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 1.6px; /* giảm kích thước top */
+  left: 18.4px; /* giảm kích thước left */
+  width: 3.2px; /* giảm kích thước width */
+  height: 8.8px; /* giảm kích thước height */
+  border-radius: 20%;
+  background: currentColor;
+}
+.lds-spinner div:nth-child(1) { transform: rotate(0deg); animation-delay: -1.1s; }
+.lds-spinner div:nth-child(2) { transform: rotate(30deg); animation-delay: -1s; }
+.lds-spinner div:nth-child(3) { transform: rotate(60deg); animation-delay: -0.9s; }
+.lds-spinner div:nth-child(4) { transform: rotate(90deg); animation-delay: -0.8s; }
+.lds-spinner div:nth-child(5) { transform: rotate(120deg); animation-delay: -0.7s; }
+.lds-spinner div:nth-child(6) { transform: rotate(150deg); animation-delay: -0.6s; }
+.lds-spinner div:nth-child(7) { transform: rotate(180deg); animation-delay: -0.5s; }
+.lds-spinner div:nth-child(8) { transform: rotate(210deg); animation-delay: -0.4s; }
+.lds-spinner div:nth-child(9) { transform: rotate(240deg); animation-delay: -0.3s; }
+.lds-spinner div:nth-child(10) { transform: rotate(270deg); animation-delay: -0.2s; }
+.lds-spinner div:nth-child(11) { transform: rotate(300deg); animation-delay: -0.1s; }
+.lds-spinner div:nth-child(12) { transform: rotate(330deg); animation-delay: 0s; }
+
+@keyframes lds-spinner {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+/* End Tiến trình tải dữ liệu */
+
+
+/* Thay đổi */
+		
+</style>
+
+</head>
+
+
+<body oncontextmenu="return false">
+
+<!-- Thay đổi  -->
+<div class="header";>
+  <!-- <img style=" width: 100%;" src="/Banner DHA New.png" />  -->
+  <img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />   
+&nbsp;&nbsp;&nbsp;&nbsp;<button id="btn-show-dialog">Thoát</button>
+<p align="center" style="font-size: 1.8em; color: #000099; font-weight: bold">VẬT TƯ VÔ TUYẾN ĐÀI ĐHA</p>
+</div>
+<!-- Thay đổi  -->
+
+<div class="Thoat" id="dialog-container">
+  <div class="popup">
+    <p>Bạn có muốn Thoát không ?</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+
+<div class="Thoat_time" id="dialog_time">
+  <div class="popup_time">
+    <p>Bạn phải Đăng nhập lại !!</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_update" id="update-container">
+  <div class="popup_update">
+    <p>Bạn muốn Cập nhật không ?</p>
+    <div class="text-right">
+      <button class="update-btn btn-cancel" id="cancel_update">Cancel</button>
+      <button class="update-btn btn-primary" id="confirm_update">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_insert" id="insert-container">
+  <div class="popup_insert">
+    <p>Bạn có Thêm dòng số liệu không ?</p>
+    <div class="text-right">
+      <button class="insert-btn btn-cancel" id="cancel_insert">Cancel</button>
+      <button class="insert-btn btn-primary" id="confirm_insert">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_delete" id="delete-container">
+  <div class="popup_delete">
+    <p>Bạn muốn Xóa dòng số liệu không này ?</p>
+    <div class="text-right">
+      <button class="delete-btn btn-cancel" id="cancel_delete">Cancel</button>
+      <button class="delete-btn btn-primary" id="confirm_delete">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_id" id="id-container">
+  <div class="popup_id">
+    <p type = "text" id="id_alert" value=""></p>
+    <div class="text-right">
+      <button class="id-btn btn-primary" id="confirm_id">OK</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="Thoat_result" id="dialog_result">
+  <div class="popup_result">
+    <p id="id_result" value=""></p>
+    <div id="id_result1" class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_result1">OK</button>
+    </div>
+
+    <div id="id_result2" class="text-right">
+	  <button class="dialog-btn btn-primary" id="confirm_result2">OK</button>
+    </div>	
+	
+ </div>
+</div>
+
+
+<form>
+<fieldset>
+<legend id ="legend" align="center"> Bảng cập nhật   </legend>
+
+<P></p>
+
+<div class="input" align="left">
+
+<div align="right"><input class="input1"  name ="capnhatVattuVoTuyenDHA" id="capnhatVattuVoTuyenDHA" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="" readonly hidden></div>
+
+
+
+<div class="question">
+    <label>STT</label>
+    <textarea class="id" type="text" name="id" id="id" style="height:30px"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã ĐV QL</label>
+    <textarea class="Colum2" type="date" name="Colum2" id="Colum2" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Số thẻ</label>
+    <textarea class="Colum3" type="text" name="Colum3" id="Colum3" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Tên thẻ</label>
+    <textarea class="Colum4" type="text" name="Colum4" id="Colum4" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã DA</label>
+    <textarea class="Colum5" type="text" name="Colum5" id="Colum5" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Loại TS</label>
+    <textarea class="Colum6" type="text" name="Colum6" id="Colum6" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Giá trị</label>
+    <textarea class="Colum7" type="text" name="Colum7" id="Colum7" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã ID</label>
+    <textarea class="Colum8" type="text" name="Colum8" id="Colum8" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Chi tiết</label>
+    <textarea class="Colum9" type="text" name="Colum9" id="Colum9" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Số lượng</label>
+    <textarea class="Colum10" type="text" name="Colum10" id="Colum10" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã VT</label>
+    <textarea class="Colum11" type="text" name="Colum11" id="Colum11" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Nước SX</label>
+    <textarea class="Colum12" type="text" name="Colum12" id="Colum12" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Năm SX</label>
+    <textarea class="Colum13" type="text" name="Colum13" id="Colum13" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Ngày SD</label>
+    <textarea class="Colum14" type="text" name="Colum14" id="Colum14" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Part number</label>
+    <textarea class="Colum15" type="text" name="Colum15" id="Colum15" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Serial number</label>
+    <textarea class="Colum16" type="text" name="Colum16" id="Colum16" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Địa điểm LĐ</label>
+    <textarea class="Colum17" type="text" name="Colum17" id="Colum17" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã SD</label>
+    <textarea class="Colum18" type="text" name="Colum18" id="Colum18" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Tình trạng</label>
+    <textarea class="Colum19" type="text" name="Colum19" id="Colum19" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã ĐV SD</label>
+    <textarea class="Colum20" type="text" name="Colum20" id="Colum20" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Tên ĐV SD</label>
+    <textarea class="Colum21" type="text" name="Colum21" id="Colum21" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã ban</label>
+    <textarea class="Colum22" type="text" name="Colum22" id="Colum22" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Tên ban</label>
+    <textarea class="Colum23" type="text" name="Colum23" id="Colum23" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã CSHT</label>
+    <textarea class="Colum24" type="text" name="Colum24" id="Colum24" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Tên CSHT</label>
+    <textarea class="Colum25" type="text" name="Colum25" id="Colum25" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Mã người QL</label>
+    <textarea class="Colum26" type="text" name="Colum26" id="Colum26" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Tên QL</label>
+    <textarea class="Colum27" type="text" name="Colum27" id="Colum27" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>QR Code</label>
+    <textarea class="Colum28" type="text" name="Colum28" id="Colum28" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>GT QR code</label>
+    <textarea class="Colum29" type="text" name="Colum29" id="Colum29" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Barcode</label>
+    <textarea class="Colum30" type="text" name="Colum30" id="Colum30" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+<div class="question">
+    <label>Ghi chú</label>
+    <textarea class="Colum31" type="text" name="Colum31" id="Colum31" style="height:30px" spellcheck="false"></textarea>
+</div>
+
+
+  
+<div class="question2" align="center">
+<p type = "text" id="ngay" readonly></p>
+<p type = "text" id="ngay2" value="" readonly></p>
+
+
+	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold" hidden></p>
+	
+	
+	<input type="button" class="button button1" id="btn-show-insert" value="Nhập mới" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
+	<input type="button" class="button button1" id="btn-show-update" value="Cập nhật" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>	
+	<input type="button" class="button button1" id="btn-show-delete" value="Xóa" style="width:110px; height:30px; font-size: 15; font-weight: bold"/>
+
+	
+	
+</div>
+</div>
+</fieldset>
+
+</form>
+
+<div align="center" class="container">
+
+
+            <!-- Nội dung của bạn trong phần này -->
+
+            <div id="spinner" class="lds-spinner" style="display: none;">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+<p align="center">
+<div class="form-group">
+<input type="text" id="searchInput" placeholder="Tìm kiếm...">
+<span id="count"></span>&nbsp;
+
+
+  <select id="exp" name="Excel">
+    <option selected="selected" value="Excel" disabled="disabled">Excel</option>
+    <option value="exp1">Excel opt</option>
+    <option value="exp2">Excel full</option>
+  </select>
+</div>
+
+</p>
+
+<div class="HorizontalTable">
+<div class="Horizontal"></div>
+</div>		
+</div>
+
+<div id="showData" class="ag-theme-alpine" style="height: 400px; width: 100%;"></div>
+<div id="loader"></div>
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script src="Export_Excel_Color/Export_Excel_Color.min.js"></script>
+<script src="LinkGG.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
+
+
+	
+<script>
+//https://stackoverflow.com/questions/8100770/auto-scaling-inputtype-text-to-width-of-value
+function resizeInput() {
+    $(this).attr('size', $(this).val().length);
+}
+
+$('input[type="text"]')
+    // event handler
+    .keyup(resizeInput)
+    // resize on page load
+    .each(resizeInput);
+	
+	
+	
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()	
+	
+</script>
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 1800000
+  //idle: 3600000
+})
+//]]>
+
+
+var Thoat_timeme = document.getElementById("dialog_time");
+var Thoatme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    Thoat_timeme.style.display = "block";}
+document.getElementById("confirm_time").onclick = function(){Thoatconfirm_value()};
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var Thoatme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    Thoatme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){Thoatconfirm_value()};
+
+function Thoatconfirm_value() {	
+ 
+	var ngaylog= $("#ngaylog").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngaylog="+ngaylog +"&action=Thoatconfirm";	  
+  
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+
+	  });
+
+	close();	
+    Thoatme.style.display = "none";	
+  }	
+
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+
+    Thoatme.style.display = "none";
+}
+
+
+function close_window() {
+	close();	
+}
+// ---------------------------
+
+
+//OK--------
+ 
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+
+
+
+$(document).ready(function() {
+
+Readtime_value();
+
+ var url = location.protocol;
+
+ if (url == "file:khanh") {
+	close();
+		var element = document.getElementById("mytable");
+		var element3 = document.getElementById("update");
+		element.parentNode.removeChild(element);
+		element.parentNode.removeChild(element3);
+			
+
+	}
+
+});
+
+
+
+
+// ----------------------
+
+  function ctrlq(e) {
+
+document.getElementById("ngay").value = e.result;
+//alert(document.getElementById("ngay").value);
+//alert(document.getElementById("combine").value);
+let text = document.getElementById("ngay").value;
+	if (text == "Quathoigian") {
+
+			document.getElementById("id-container").style.display = "block";
+			document.getElementById("id_alert").innerHTML = "Vui lòng thực hiện lại đăng nhập !";	
+
+			document.getElementById("confirm_id").onclick = function(){confirm_id()};
+			function confirm_id() {
+				document.getElementById("id-container").style.display = "none";	
+				//close();
+			}
+	}
+
+	if (text.indexOf("đã")> 0) {
+			readDataVattuVoTuyenDHA_value();
+			dialog_result.style.display = "block";
+			document.getElementById("id_result").innerHTML = text;
+			document.getElementById("id_result1").style.display = "block";
+			document.getElementById("id_result2").style.display = "none";				
+
+			} else if (text.indexOf("quyền") > 0 ) {
+			dialog_result.style.display = "block";
+			document.getElementById("id_result").innerHTML = text;
+			document.getElementById("id_result1").style.display = "block";
+			document.getElementById("id_result2").style.display = "none";
+			
+			} else if (text.indexOf("lòng") > 0 ) {
+				dialog_result.style.display = "block";
+				document.getElementById("id_result").innerHTML = text;
+				document.getElementById("id_result1").style.display = "none";
+				document.getElementById("id_result2").style.display = "block";
+				
+				close();
+				
+			} else {
+  
+	}
+
+
+if (document.getElementById("ngay").value == "") {
+	close();
+ } else {
+	 ChangeID();
+}
+	
+	$("#re").html(e.result);
+	$("#re").css("visibility","visible");
+
+ }
+	var Thoat_resultme1 = document.getElementById("dialog_result");
+	document.getElementById("confirm_result1").onclick = function(){confirm_result1()};
+	function confirm_result1() {		
+		Thoat_resultme1.style.display = "none";		
+	}
+
+	var Thoat_resultme2 = document.getElementById("dialog_result"); 
+	document.getElementById("confirm_result2").onclick = function(){confirm_result2()};
+	function confirm_result2() {		
+		Thoat_resultme2.style.display = "none";
+			close();
+	}
+ 
+ 
+function Readtime_value() {
+				// Lấy giá trị từ localStorage
+	//var idngaylog = localStorage.getItem('part2');
+	var idngaylog = "202406052231200623233434434545";	
+				//alert(savedPart2); // Hiển thị giá trị đã lưu trữ trong localStorage
+ 
+	var ngay= $("#ngay").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&idngaylog=" + idngaylog +"&action=Readtime";	  
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+
+	  });	
+	//localStorage.removeItem('part2');
+}	
+
+
+window.onload = function(){
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+//window.history.replaceState('','','/');  
+  
+};
+ 
+
+	
+	
+	
+function getPart1(str) {        // Lấy chuổi trái của "ngay"
+    return str.split(' ')[0];
+}
+		
+function getPart2(str) {        // Lấy chuổi phải của "ngay"
+    return str.split(' ')[1];
+}
+
+function ChangeID() {
+	document.getElementById("capnhatVattuVoTuyenDHA").value = getPart2(document.getElementById("ngay").value);   // Lấy chuổi phải của "ngay"
+	// Đổi Value ngày: gán giá trị 'ngay' cho 'ngay2' sau dó đổi ngay2 thành 'ngaylog'
+	if (document.getElementById('ngay2')) {
+	document.getElementById("ngay2").value = getPart1(document.getElementById("ngay").value); // Lấy chuổi trái của "ngay"
+	document.getElementById('ngay2').id = 'ngaylog';
+	document.getElementById('capnhatVattuVoTuyenDHA').id = 'combine';
+
+	//CheckNgaylog_value();
+
+	if (document.getElementById("combine").value == "vattuvotuyendha" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "vattuvotuyendhi" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "vattuvotuyenhue" && document.getElementById("combine").value !== "" ) {
+	document.getElementById('legend').innerHTML = "BẢNG CẬP NHẬT VT";
+	readDataVattuVoTuyenDHA_value();
+	checkAndShowReminder(); // Gọi hàm kiểm tra nhắc nhở lưu file cuối tháng
+	}
+			
+
+	}
+}
+
+
+//-----------------------UPDATE--------------------
+
+document.getElementById("btn-show-update").onclick = function(){show_update()};
+var Thoat_updateme = document.getElementById("update-container");
+
+function show_update() {
+
+	if (document.getElementById('id').value === "" || document.getElementById('id').value < 0) {
+//	 alert("id OK"); Hãy chọn một id !
+		Thoat_updateme.style.display = "none";
+		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Hãy chọn một dòng để cập nhật !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+	
+			return false;
+	}
+
+	Thoat_updateme.style.display = "block";
+
+}
+
+
+document.getElementById("confirm_update").onclick = function(){confirm_update()};
+function confirm_update() {
+  cancel_update();
+  var combineValue = document.getElementById("combine").value;
+  if (combineValue === "") {
+    return false; // Thoát ngay nếu giá trị combine trống
+  } else {
+  //alert("Update");
+    updateVattuVoTuyenDHA_value();
+  }
+}
+
+function showErrorMessage(message) {
+  document.getElementById("id-container").style.display = "block";
+  document.getElementById("id_alert").innerHTML = message;
+
+  document.getElementById("confirm_id").onclick = function () {
+    document.getElementById("id-container").style.display = "none";
+  };
+}
+
+// Hàm để tìm vị trí dòng chứa giá trị id trong bảng
+function findRowIndexById(table, id) {
+  for (var i = 1; i < table.rows.length; i++) {
+    var row = table.rows[i];
+    if (row.cells[0].innerText.trim() === id) {
+      return i; // Trả về chỉ số dòng (vị trí) nếu tìm thấy id
+    }
+  }
+  return -1; // Trả về -1 nếu không tìm thấy id trong bảng
+}
+
+
+
+function confirm_update_Test() {
+  Thoat_updateme.style.display = "none";
+
+  var table = document.getElementById('mytable');
+  var idToFind = document.getElementById('id').value; // Giá trị id cần tìm
+  var rowIndex = findRowIndexById(table, idToFind);
+
+  if (rowIndex === -1) {
+    alert('Không tìm thấy id trong bảng!');
+    return;
+  }
+
+  var row = table.rows[rowIndex];
+  alert('Dòng thứ ' + (rowIndex + 1) + ': ' + row.cells[2].innerText);
+}
+
+
+document.getElementById("cancel_update").onclick = function(){cancel_update()};
+function cancel_update() { 
+    Thoat_updateme.style.display = "none";
+}
+
+//------------------INSERT-------------------
+document.getElementById("btn-show-insert").onclick = function(){show_insert()};
+var Thoat_insertme = document.getElementById("insert-container");
+
+function show_insert() {
+    Thoat_insertme.style.display = "block";
+}
+
+
+document.getElementById("confirm_insert").onclick = function(){confirm_insert()};
+function confirm_insert() {
+
+if (document.getElementById("combine").value == "vattuvotuyendha" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "vattuvotuyendhi" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "vattuvotuyenhue" && document.getElementById("combine").value !== "" ) {
+	insertVattuVoTuyenDHA_value();
+	//readDataVattuVoTuyenDHA_value();
+
+} else {
+		Thoat_insertme.style.display = "none";
+  		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Chọn Trạm đang đăng nhập để thêm số liệu !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+		return false;
+}	
+Thoat_insertme.style.display = "none";    	
+}
+
+document.getElementById("cancel_insert").onclick = function(){cancel_insert()};
+function cancel_insert() { 
+    Thoat_insertme.style.display = "none";
+}
+
+//---DELETE---
+
+document.getElementById("btn-show-delete").onclick = function(){show_delete()};
+var Thoat_deleteme = document.getElementById("delete-container");
+
+function show_delete() {
+
+	if (document.getElementById('id').value === "" || document.getElementById('id').value < 0 ) {
+	// alert("OK");
+		Thoat_deleteme.style.display = "none";	
+		document.getElementById("id-container").style.display = "block";
+		document.getElementById("id_alert").innerHTML = "Hãy chọn một dòng muốn xóa !";	
+
+		document.getElementById("confirm_id").onclick = function(){confirm_id()};
+		function confirm_id() {
+			document.getElementById("id-container").style.display = "none";	
+		}
+
+			return false;
+	}
+		Thoat_deleteme.style.display = "block";
+
+}
+
+
+document.getElementById("confirm_delete").onclick = function(){confirm_delete()};
+
+function confirm_delete() {
+
+  cancel_delete();
+  var combineValue = document.getElementById("combine").value;
+  if (combineValue === "") {
+    return false; // Thoát ngay nếu giá trị combine trống
+
+  } else {
+    deleteVattuVoTuyenDHA_value();
+  }
+	
+}
+
+document.getElementById("cancel_delete").onclick = function(){cancel_delete()};
+function cancel_delete() { 
+    Thoat_deleteme.style.display = "none";
+}
+
+// THAY
+
+
+function updateVattuVoTuyenDHA_value() {
+    $("#re").css("visibility", "hidden");
+    document.getElementById("loader").style.visibility = "visible";
+
+    var ngaylog = $("#ngaylog").val();
+    var combine = $("#combine").val();
+    var id = $("#id").val();
+    var Colum2 = $("#Colum2").val();
+    var Colum3 = $("#Colum3").val();
+    var Colum4 = $("#Colum4").val();
+    var Colum5 = $("#Colum5").val();
+    var Colum6 = $("#Colum6").val();
+    var Colum7 = $("#Colum7").val();
+    var Colum8 = $("#Colum8").val();
+    var Colum9 = $("#Colum9").val();
+
+    var Colum10 = $("#Colum10").val();
+    var Colum11 = $("#Colum11").val();
+    var Colum12 = $("#Colum12").val();
+    var Colum13 = $("#Colum13").val();
+    var Colum14 = $("#Colum14").val();
+    var Colum15 = $("#Colum15").val();
+    var Colum16 = $("#Colum16").val();
+    var Colum17 = $("#Colum17").val();
+    var Colum18 = $("#Colum18").val();
+    var Colum19 = $("#Colum19").val();  // Value to check
+    var Colum20 = $("#Colum20").val();
+    var Colum21 = $("#Colum21").val();
+    var Colum22 = $("#Colum22").val();
+    var Colum23 = $("#Colum23").val();
+    var Colum24 = $("#Colum24").val();
+    var Colum25 = $("#Colum25").val();
+    var Colum26 = $("#Colum26").val();
+    var Colum27 = $("#Colum27").val();
+    var Colum28 = $("#Colum28").val();
+    var Colum29 = $("#Colum29").val();
+    var Colum30 = $("#Colum30").val();
+    var Colum31 = $("#Colum31").val();
+    var Colum32 = $("#Colum32").val();
+    var Colum33 = $("#Colum33").val();
+
+    var url = atob(script_url) + "?callback=ctrlq&id=" + id + "&Colum2=" + Colum2 + "&Colum3=" + Colum3 + "&Colum4=" + Colum4 + "&Colum5=" + Colum5 + "&Colum6=" + Colum6 + "&Colum7=" + Colum7 + "&Colum8=" + Colum8 + "&Colum9=" + Colum9 + "&Colum10=" + Colum10 + "&Colum11=" + Colum11 + "&Colum12=" + Colum12 + "&Colum13=" + Colum13 + "&Colum14=" + Colum14 + "&Colum15=" + Colum15 + "&Colum16=" + Colum16 + "&Colum17=" + Colum17 + "&Colum18=" + Colum18 + "&Colum19=" + Colum19 + "&Colum20=" + Colum20 + "&Colum21=" + Colum21 + "&Colum22=" + Colum22 + "&Colum23=" + Colum23 + "&Colum24=" + Colum24 + "&Colum25=" + Colum25 + "&Colum26=" + Colum26 + "&Colum27=" + Colum27 + "&Colum28=" + Colum28 + "&Colum29=" + Colum29 + "&Colum30=" + Colum30 + "&Colum31=" + Colum31 + "&Colum32=" + Colum32 + "&Colum33=" + Colum33 + "&ngaylog=" + ngaylog + "&combine=" + combine + "&action=updateVattuVoTuyenDHA";
+
+    var request = jQuery.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+    });
+
+    document.getElementById("id").value = "";
+    // readDataVattuVoTuyenDHA();
+}
+
+
+  
+function deleteVattuVoTuyenDHA_value(){
+
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+      var Colum2 = $("#Colum2").val();
+      var Colum3 = $("#Colum3").val();
+      var Colum4 = $("#Colum4").val();
+      var Colum5 = $("#Colum5").val();
+      var Colum6 = $("#Colum6").val();
+      var Colum7 = $("#Colum7").val();
+      var Colum8 = $("#Colum8").val();
+      var Colum9 = $("#Colum9").val();
+
+      var Colum10 = $("#Colum10").val();
+      var Colum11 = $("#Colum11").val();
+      var Colum12 = $("#Colum12").val();
+      var Colum13 = $("#Colum13").val();
+      var Colum14 = $("#Colum14").val();
+      var Colum15 = $("#Colum15").val();
+      var Colum16 = $("#Colum16").val();
+      var Colum17 = $("#Colum17").val();
+      var Colum18 = $("#Colum18").val();
+      var Colum19 = $("#Colum19").val();
+      var Colum20 = $("#Colum20").val();
+      var Colum21 = $("#Colum21").val();
+      var Colum22 = $("#Colum22").val();
+      var Colum23 = $("#Colum23").val();
+      var Colum24 = $("#Colum24").val();
+      var Colum25 = $("#Colum25").val();
+      var Colum26 = $("#Colum26").val();
+      var Colum27 = $("#Colum27").val();
+      var Colum28 = $("#Colum18").val();
+      var Colum29 = $("#Colum29").val();
+      var Colum30 = $("#Colum30").val();
+      var Colum31 = $("#Colum31").val();
+      var Colum32 = $("#Colum32").val();
+      var Colum33 = $("#Colum33").val();
+      var Colum34 = $("#Colum34").val();
+      var Colum35 = $("#Colum35").val();
+      var Colum36 = $("#Colum36").val();
+      var Colum37 = $("#Colum37").val();
+      var Colum38 = $("#Colum38").val();
+      var Colum39 = $("#Colum39").val();
+      var Colum40 = $("#Colum40").val();
+      var Colum41 = $("#Colum41").val();
+
+
+    //var url = atob(script_url)+"?callback=ctrlq&id="+id +"&Colum2="+Colum2  +"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=deleteVattuVoTuyenDHA";
+var url = atob(script_url) + "?callback=ctrlq&id=" + id + "&Colum2=" + Colum2 + "&Colum3=" + Colum3 + "&Colum4=" + Colum4 + "&Colum5=" + Colum5 + "&Colum6=" + Colum6 + "&Colum7=" + Colum7 + "&Colum8=" + Colum8 + "&Colum9=" + Colum9 + "&Colum10=" + Colum10 + "&Colum11=" + Colum11 + "&Colum12=" + Colum12 + "&Colum13=" + Colum13 + "&Colum14=" + Colum14 + "&Colum15=" + Colum15 + "&Colum16=" + Colum16 + "&Colum17=" + Colum17 + "&Colum18=" + Colum18 + "&Colum19=" + Colum19 + "&Colum20=" + Colum20 + "&Colum21=" + Colum21 + "&Colum22=" + Colum22 + "&Colum23=" + Colum23 + "&Colum24=" + Colum24 + "&Colum25=" + Colum25 + "&Colum26=" + Colum26 + "&Colum27=" + Colum27 + "&Colum28=" + Colum28 + "&Colum29=" + Colum29 + "&Colum30=" + Colum30 + "&Colum31=" + Colum31 + "&Colum32=" + Colum32 + "&Colum33=" + Colum33 + "&Colum34=" + Colum34 + "&Colum35=" + Colum35 + "&Colum36=" + Colum36 + "&Colum37=" + Colum37 + "&Colum38=" + Colum38 + "&Colum39=" + Colum39 + "&Colum40=" + Colum40 + "&Colum41=" + Colum41 + "&ngaylog=" + ngaylog + "&combine=" + combine + "&action=deleteVattuVoTuyenDHA"; 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+document.getElementById("id").value = "";
+}
+  
+
+ 
+  
+function insertVattuVoTuyenDHA_value(){
+
+	$("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+	
+	
+	var ngaylog= $("#ngaylog").val();
+	var combine= $("#combine").val();
+	
+	var id= $("#id").val();
+      var Colum2 = $("#Colum2").val();
+      var Colum3 = $("#Colum3").val();
+      var Colum4 = $("#Colum4").val();
+      var Colum5 = $("#Colum5").val();
+      var Colum6 = $("#Colum6").val();
+      var Colum7 = $("#Colum7").val();
+      var Colum8 = $("#Colum8").val();
+      var Colum9 = $("#Colum9").val();
+      var Colum10 = $("#Colum10").val();
+      var Colum11 = $("#Colum11").val();
+      var Colum12 = $("#Colum12").val();
+      var Colum13 = $("#Colum13").val();
+      var Colum14 = $("#Colum14").val();
+      var Colum15 = $("#Colum15").val();
+      var Colum16 = $("#Colum16").val();
+      var Colum17 = $("#Colum17").val();
+      var Colum18 = $("#Colum18").val();
+      var Colum19 = $("#Colum19").val();
+      var Colum20 = $("#Colum20").val();
+      var Colum21 = $("#Colum21").val();
+      var Colum22 = $("#Colum22").val();
+      var Colum23 = $("#Colum23").val();
+      var Colum24 = $("#Colum24").val();
+      var Colum25 = $("#Colum25").val();
+      var Colum26 = $("#Colum26").val();
+      var Colum27 = $("#Colum27").val();
+      var Colum28 = $("#Colum18").val();
+      var Colum29 = $("#Colum29").val();
+      var Colum30 = $("#Colum30").val();
+      var Colum31 = $("#Colum31").val();
+      var Colum32 = $("#Colum32").val();
+      var Colum33 = $("#Colum33").val();
+      var Colum34 = $("#Colum34").val();
+      var Colum35 = $("#Colum35").val();
+      var Colum36 = $("#Colum36").val();
+      var Colum37 = $("#Colum37").val();
+      var Colum38 = $("#Colum38").val();
+      var Colum39 = $("#Colum39").val();
+      var Colum40 = $("#Colum40").val();
+      var Colum41 = $("#Colum41").val();
+	
+
+    //var url = atob(script_url)+"?callback=ctrlq&id="+id +"&Colum2="+Colum2  +"&Colum3="+Colum3+"&Colum4="+Colum4+"&Colum5="+Colum5+"&Colum6="+Colum6+"&Colum7="+Colum7+"&Colum8="+Colum8  +"&Colum9="+Colum9 +  "&ngaylog="+ngaylog+ "&combine="+combine+"&action=insertVattuVoTuyenDHA";
+var url = atob(script_url) + "?callback=ctrlq&id=" + id + "&Colum2=" + Colum2 + "&Colum3=" + Colum3 + "&Colum4=" + Colum4 + "&Colum5=" + Colum5 + "&Colum6=" + Colum6 + "&Colum7=" + Colum7 + "&Colum8=" + Colum8 + "&Colum9=" + Colum9 + "&Colum10=" + Colum10 + "&Colum11=" + Colum11 + "&Colum12=" + Colum12 + "&Colum13=" + Colum13 + "&Colum14=" + Colum14 + "&Colum15=" + Colum15 + "&Colum16=" + Colum16 + "&Colum17=" + Colum17 + "&Colum18=" + Colum18 + "&Colum19=" + Colum19 + "&Colum20=" + Colum20 + "&Colum21=" + Colum21 + "&Colum22=" + Colum22 + "&Colum23=" + Colum23 + "&Colum24=" + Colum24 + "&Colum25=" + Colum25 + "&Colum26=" + Colum26 + "&Colum27=" + Colum27 + "&Colum28=" + Colum28 + "&Colum29=" + Colum29 + "&Colum30=" + Colum30 + "&Colum31=" + Colum31 + "&Colum32=" + Colum32 + "&Colum33=" + Colum33 + "&Colum34=" + Colum34 + "&Colum35=" + Colum35 + "&Colum36=" + Colum36 + "&Colum37=" + Colum37 + "&Colum38=" + Colum38 + "&Colum39=" + Colum39 + "&Colum40=" + Colum40 + "&Colum41=" + Colum41 + "&ngaylog=" + ngaylog + "&combine=" + combine + "&action=insertVattuVoTuyenDHA"; 
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+	  
+    });
+
+	document.getElementById("id").value = "";
+	document.getElementById("Colum2").value = "";
+	document.getElementById("Colum3").value = "";
+	document.getElementById("Colum4").value = "";
+	document.getElementById("Colum5").value = "";
+	document.getElementById("Colum6").value = "";
+	document.getElementById("Colum7").value = "";
+	document.getElementById("Colum8").value = "";
+	document.getElementById("Colum9").value = "";
+	//alert("Mới");
+  }
+
+ //---------------------------------------------------------------- 
+function readDataVattuVoTuyenDHA_value() {
+    var ngaylog = $("#ngaylog").val();
+
+    if (document.getElementById("combine").value == "") {
+        document.getElementById("id-container").style.display = "block";
+        document.getElementById("id_alert").innerHTML = "Hãy đăng nhập!";
+        document.getElementById("confirm_id").onclick = function() {
+            document.getElementById("id-container").style.display = "none";
+        };
+        return false;
+    } else {
+        $("#re").css("visibility", "hidden");
+
+        var url = atob(script_url) + "?action=readVattuVoTuyenDHA&ngaylog=" + ngaylog;
+
+        document.getElementById("spinner").style.display = "block"; // Hiển thị spinner
+
+        $.getJSON(url, function(json) {
+            var columnDefs = [
+                //{ field: "exclude", checkboxSelection: true, width: 50, pinned: 'left' },
+			    { headerName: "STT", field: "ID", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, pinned: 'left', checkboxSelection: true },
+                { headerName: "Mã đơn vị quản lý", field: "Colum2", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 200 },
+                { headerName: "Số thẻ", field: "Colum3", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 150 },
+                { headerName: "Tên thẻ", field: "Colum4", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 200 },
+                { headerName: "Mã DA đầu tư", field: "Colum5", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 150 },
+                { headerName: "Loại tài sản", field: "Colum6", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "Giá trị", field: "Colum7", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "Mã số", field: "Colum8", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 180 },
+                { headerName: "Tên chi tiết", field: "Colum9", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 250 },
+                { headerName: "Số lượng", field: "Colum10", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "Mã nhóm Vật tư", field: "Colum11", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 130 },
+                { headerName: "Nước SX", field: "Colum12", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 120 },
+                { headerName: "Năm SX", field: "Colum13", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "Ngày đưa vào sử dụng", field: "Colum14", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 120 },
+                { headerName: "Part number", field: "Colum15", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 180 },
+                { headerName: "Serial number", field: "Colum16", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110 },
+                { headerName: "Địa điểm lắp đặt", field: "Colum17", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 220 },
+                { headerName: "Mã tình trạng sử dụng", field: "Colum18", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 80 },
+                { headerName: "Tên tình trạng", field: "Colum19", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 140 },
+                { headerName: "Mã đơn vị sử dụng", field: "Colum20", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110 },
+                { headerName: "Tên đơn vị sử dụng", field: "Colum21", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 200 },
+                { headerName: "Mã phòng ban", field: "Colum22", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 130 },
+                { headerName: "Tên phòng ban", field: "Colum23", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 130 },
+                { headerName: "Mã CSHT", field: "Colum24", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 150 },
+                { headerName: "Tên CSHT", field: "Colum25", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 230 },
+                { headerName: "Mã người quản lý", field: "Colum26", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "Tên người quản lý", field: "Colum27", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "QR Code", field: "Colum28", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 },
+                { headerName: "Giá trị QR code", field: "Colum29", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 130 },
+                { headerName: "Barcode", field: "Colum30", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 150 },
+                { headerName: "Ghi chú", field: "Colum31", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 220 },
+                { headerName: "Ngày cập nhật", field: "Colum32", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110 },
+                { headerName: "Người cập nhật", field: "Colum33", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100 }
+            ];
+
+			var defaultColDef = {
+				wrapText: true,
+				autoHeight: true,  // Tự động điều chỉnh chiều cao
+				//headerHeight: 300,
+			};
+
+	var gridOptions = {
+		columnDefs: columnDefs,
+		rowData: json.records,
+		pagination: true,
+		paginationPageSize: 200,
+		paginationPageSizeSelector: [10, 20, 30,50, 100, 200, 500, 90000],
+		defaultColDef: {
+			//resizable: true,
+			//initialWidth: 200,
+			wrapHeaderText: true,
+			headerHeight: 30,
+			filter: true,
+			floatingFilter: true,
+		},
+		sideBar: {
+			toolPanels: [
+				{
+					id: 'columns',
+					labelDefault: 'Columns',
+					labelKey: 'columns',
+					iconKey: 'columns',
+					toolPanel: 'agColumnsToolPanel',
+					toolPanelParams: {
+						suppressRowGroups: true,
+						suppressValues: true,
+						suppressPivots: true,
+						suppressPivotMode: true
+					}
+				}
+			],
+			defaultToolPanel: 'columns',
+			position: 'left',
+			defaultToolPanel: null	//Nếu muốn hiển thị Menu khi mở file thì xóa dòng này
+		},
+
+    // Chọn Check box get dòng vào Input text
+		//onRowClicked: function(event) {
+		//    fillInputFields(event.data);
+		//},
+	
+                onSelectionChanged: function(event) {
+                    var selectedRows = gridOptions.api.getSelectedRows();
+                    if (selectedRows.length > 0) {
+                        fillInputFields(selectedRows[0]);
+                        } else {
+							clearInputFields(); // Xóa các ô nhập liệu nếu không có hàng nào được chọn
+						}
+                },	
+	
+    // End Chọn Check box get dòng vào Input text
+	
+			floatingFilter: true, // Bật floating filter cho tất cả các cột
+
+			// LocaleText để dịch các nhãn sang tiếng Việt
+			//https://embed.plnkr.co/plunk/6c1AAJgoiFHDlgLP
+			localeText: {
+				// Các nhãn cho bộ lọc văn bản
+				contains: 'Lọc nội dung',
+				notContains: 'Lọc Không chứa nội dung',
+				equals: 'Lọc Bằng',
+				notEqual: 'Lọc Không bằng',
+				startsWith: 'Lọc Bắt đầu với',
+				endsWith: 'Lọc Kết thúc với',
+				blank: 'Lọc Trống',
+				notBlank: 'Lọc Không trống',
+				
+				sortAscending: 'Sắp xếp tăng dần',
+				sortDescending: 'Sắp xếp giảm dần',
+				andCondition: 'Và',
+				orCondition: 'Hoặc',
+				page: 'trang',
+				of: 'của',
+				size: 'Số',	
+				clearSort: 'Bỏ sắp xếp',			
+				pinColumn: 'Ghim cột',
+				pinLeft: 'Ghim bên trái',
+				pinRight: 'Ghim bên phải',
+				noPin: 'Không ghim',
+				autosizeThisColumn: 'Điều chỉnh độ rộng cột này',
+				autosizeAllColumns: 'Điều chỉnh độ rộng tất cả các cột',
+				chooseColumn: 'Chọn cột',
+				resetColumn: 'Reset cột',
+                    from: 'Từ',
+                    title: 'Tiêu đề',
+                    delete: 'Xóa',
+                    view: 'Lượt xem',
+                    searchOoo: 'Tìm kiếm...',
+                    reset: 'Cài đặt lại',
+                    loadingOoo: 'Tải...',
+                    // enterprise
+                    pinColumn: 'Cột Ghim',
+                    pinLeft: 'Ghim bên trái',
+                    pinRight: 'Ghim bên phải',
+                    noPin: 'Hủy ghim',
+                    none: 'Không',
+                    // enterprise menu pinning
+                    sum: 'Tổng',
+                    min: 'Tối thiểu',
+                    max: 'Tối đa',
+                    // enterprise menu aggregation and status panel
+                    avg: 'Bình thường',
+                    count: 'Đếm',
+                    average: 'Bình thường',
+                    sum: 'Tổng',
+                    min: 'Tối thiểu',
+                    max: 'Tối đa',
+                    total: 'Toàn bộ',
+                    value: 'Giá trị',
+                    // standard menu
+                    copy: 'Sao chép',
+                    // standard menu export
+                    csvExport: 'Xuất CSV',
+                    excelExport: 'Xuất Excel',
+                    count: 'Đếm',
+                    average: 'Bình thường',
+                    // tool panel
+                    columns: 'Lọc Cột',
+                    filters: 'Lọc',
+                    rowGroupColumnsEmptyMessage: 'Không có cột nhóm',
+                    copy: 'Sao chép',
+                    copyWithHeaders: 'Sao chép với tiêu đề'
+				}
+		};
+
+
+            var eGridDiv = document.querySelector('#showData');
+            eGridDiv.innerHTML = ''; // Xóa nội dung trước đó
+
+            // Tạo div mới cho ag-Grid
+            var agGridDiv = document.createElement('div');
+            agGridDiv.style.width = '100%';
+            agGridDiv.style.height = '600px';
+            agGridDiv.className = 'ag-theme-alpine';
+            eGridDiv.appendChild(agGridDiv);
+            new agGrid.Grid(agGridDiv, gridOptions);
+
+
+		// Tính năng thay đổi độ cao dòng
+		var gridOptions;		
+				var startY, startHeight, currentRowIndex;
+
+				document.addEventListener('mousedown', function(event) {
+					if (event.target.classList.contains('ag-row-resize-handle')) {
+						startY = event.clientY;
+						currentRowIndex = event.target.parentElement.getAttribute('row-index');
+						startHeight = gridOptions.api.getRowNode(currentRowIndex).rowHeight;
+						document.addEventListener('mousemove', onMouseMove);
+						document.addEventListener('mouseup', onMouseUp);
+					}
+				});
+
+				function onMouseMove(event) {
+					var newHeight = startHeight + (event.clientY - startY);
+					if (newHeight > 20) { // Đảm bảo chiều cao tối thiểu là 20px
+						gridOptions.api.getRowNode(currentRowIndex).setRowHeight(newHeight);
+						gridOptions.api.onRowHeightChanged();
+					}
+				}
+
+				function onMouseUp() {
+					document.removeEventListener('mousemove', onMouseMove);
+					document.removeEventListener('mouseup', onMouseUp);
+				}
+
+				function createResizeHandle() {
+					var resizeHandle = document.createElement('div');
+					resizeHandle.className = 'ag-row-resize-handle';
+					return resizeHandle;
+				}
+
+				function addResizeHandles() {
+					var rows = document.querySelectorAll('.ag-row');
+					rows.forEach(function(row) {
+						if (!row.querySelector('.ag-row-resize-handle')) {
+							row.appendChild(createResizeHandle());
+						}
+					});
+				}
+				addResizeHandles();
+				// End Tính năng thay đổi độ cao dòng	
+				
+		// Hàm tìm kiếm
+		function highlightSearchText(params) {
+			var cellValue = params.value ? params.value.toString() : '';
+			var searchValue = document.getElementById('searchInput').value.toUpperCase();
+			var matchCount = 0; // Biến đếm số lần xuất hiện trong mỗi ô
+
+			if (!searchValue || searchValue === '') {
+				return cellValue;
+			}
+
+			var index = cellValue.toUpperCase().indexOf(searchValue);
+
+			if (index >= 0) {
+				var highlightedText = '';
+				while (index >= 0) {
+					matchCount++;
+					highlightedText += cellValue.substring(0, index) +
+						'<span class="highlight">' + cellValue.substring(index, index + searchValue.length) + '</span>';
+					cellValue = cellValue.substring(index + searchValue.length);
+					index = cellValue.toUpperCase().indexOf(searchValue);
+				}
+				highlightedText += cellValue; // Thêm phần còn lại của ô sau khi đã tìm kiếm
+				return highlightedText;
+			}
+			return cellValue;
+		}
+
+		// Thêm sự kiện input cho ô tìm kiếm
+		document.getElementById('searchInput').addEventListener('input', function() {
+			var searchText = this.value.toUpperCase();
+			gridOptions.api.setQuickFilter(searchText);
+
+			// Thực hiện tô màu lại sau khi thay đổi giá trị tìm kiếm
+			setTimeout(function() {
+				gridOptions.api.refreshCells({ force: true });
+			}, 0);
+
+			updateCount();
+		});
+
+		// Hàm cập nhật số lượng kết quả tìm kiếm
+		function updateCount() {
+			var searchValue = document.getElementById('searchInput').value.toUpperCase();
+			var totalMatches = 0;
+			var totalStringMatches = 0;
+
+			gridOptions.api.forEachNode(function(node) {
+				var rowMatched = false;
+				for (var key in node.data) {
+					if (node.data.hasOwnProperty(key)) {
+						var cellValue = node.data[key] ? node.data[key].toString().toUpperCase() : '';
+						if (cellValue.indexOf(searchValue) >= 0) {
+							rowMatched = true;
+							totalStringMatches++;
+						}
+					}
+				}
+				if (rowMatched) {
+					totalMatches++;
+				}
+			});
+
+			if (searchValue) {
+				document.getElementById('count').innerText = totalMatches + ' dòng, ' + totalStringMatches + ' chuỗi';
+			} else {
+				document.getElementById('count').innerText = '';
+			}
+		}
+
+		// Khởi tạo lưới ag-Grid
+		document.addEventListener('DOMContentLoaded', function() {
+			var gridDiv = document.querySelector('#myGrid');
+			new agGrid.Grid(gridDiv, gridOptions);
+			updateCount();
+		});
+		// End Hàm tìm kiếm
+
+
+
+            // Hàm để xuất dữ liệu ra Excel
+			document.getElementById('exp').addEventListener('change', function() {
+			var selectedOption = document.getElementById('exp').value;					
+					if (selectedOption === 'exp1') {					
+						gridOptions.api.exportDataAsExcel();
+						document.getElementById('exp').value = 'Excel';						
+					} else if (selectedOption === 'exp2') {
+						exportToExcel(gridOptions, columnDefs);
+						document.getElementById('exp').value = 'Excel';
+					}        
+			});
+			
+            async function exportToExcel(gridOptions, columnDefs) {
+                document.getElementById("spinner").style.visibility = "block";
+
+                try {
+                    const workbook = new ExcelJS.Workbook();
+
+                    // Lấy ngày hiện tại
+                    const today = new Date();
+                    const day = String(today.getDate()).padStart(2, '0');
+                    const month = String(today.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+                    const year = today.getFullYear();
+                    const formattedDate = `${day}.${month}.${year}`;
+
+                    // Tạo tên sheet động
+                    const sheetName = `VT_VoTuyen_${formattedDate}`;
+
+                    // Tạo worksheet với tên động
+                    const worksheet = workbook.addWorksheet(sheetName);
+
+                    // Thêm hàng tiêu đề
+                    worksheet.addRow(['']);
+                    worksheet.mergeCells("A1:AG1");
+                    worksheet.getCell("A1").value = 'VẬT TƯ VÔ TUYẾN ĐÀI ĐÔNG HÀ';
+
+                    // Thêm hàng tiêu đề dữ liệu
+                    const header = columnDefs.map(colDef => colDef.headerName);
+                    worksheet.addRow(header);
+
+                    // Thêm các hàng dữ liệu
+                    gridOptions.api.forEachNodeAfterFilter(node => {
+                        const row = columnDefs.map(colDef => node.data[colDef.field]);
+                        worksheet.addRow(row);
+                    });
+
+                    // Canh lề giữa cho cột A từ A2 xuống
+                    worksheet.getColumn(1).alignment = { horizontal: 'center', vertical: 'middle' };
+
+                    // Áp dụng đường viền cho tất cả các ô
+                    worksheet.eachRow({ includeEmpty: true }, function(row, rowNumber) {
+                        row.eachCell({ includeEmpty: true }, function(cell) {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' }
+                            };
+                            // Đặt phông chữ cho tất cả các ô
+                            cell.font = { name: 'Times New Roman' };
+                        });
+                    });
+
+                    // Thêm tiêu đề chính
+                    const titleStyle = {
+                        font: { name: 'Times New Roman', bold: true },
+                        alignment: { horizontal: 'center', vertical: 'middle' }
+                    };
+                    worksheet.getCell("A1").style = titleStyle;
+
+                    // Canh lề giữa, tô đậm và tô màu xanh nhạt cho hàng tiêu đề dữ liệu
+                    const headerRow = worksheet.getRow(2); // Hàng tiêu đề dữ liệu nằm ở hàng 2
+                    headerRow.eachCell({ includeEmpty: true }, function(cell) {
+                        cell.font = { name: 'Times New Roman', bold: true };
+                        cell.alignment = { horizontal: 'center', vertical: 'middle' };
+                        cell.fill = {
+                            type: 'pattern',
+                            pattern: 'solid',
+                            fgColor: { argb: 'FFB2DFFB' } // Mã màu xanh nhạt
+                        };
+                    });
+
+                    // Tạo tên tập tin
+                    const filename = `${sheetName}.xlsx`;
+
+                    // Ghi tập tin Excel
+                    const buffer = await workbook.xlsx.writeBuffer();
+                    const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename;
+                    a.click();
+
+                    // Đặt lại trạng thái hiển thị của spinner
+                    document.getElementById("spinner").style.display = "none"; // Ẩn spinner sau khi tải dữ liệu xong
+                } catch (error) {
+                    console.error('Có lỗi xảy ra khi xuất dữ liệu:', error);
+                    document.getElementById("spinner").style.display = "none"; // Ẩn spinner sau khi tải dữ liệu xong
+                }
+            }
+
+            document.getElementById("spinner").style.display = "none"; // Ẩn spinner sau khi tải dữ liệu xong
+
+        });
+    }
+}
+
+$(function(){
+      $(".HorizontalTable").scroll(function(){
+        $(".ag-body-horizontal-scroll-viewport").scrollLeft($(".HorizontalTable").scrollLeft());
+      });
+      $(".ag-body-horizontal-scroll-viewport").scroll(function(){
+        $(".HorizontalTable").scrollLeft($(".ag-body-horizontal-scroll-viewport").scrollLeft());
+      });
+});	
+
+function fillInputFields(data) {
+    document.getElementById('id').value = data.ID || '';
+    document.getElementById('Colum2').value = data.Colum2 || '';
+    document.getElementById('Colum3').value = data.Colum3 || '';
+    document.getElementById('Colum4').value = data.Colum4 || '';
+    document.getElementById('Colum5').value = data.Colum5 || '';
+    document.getElementById('Colum6').value = data.Colum6 || '';
+    document.getElementById('Colum7').value = data.Colum7 || '';
+    document.getElementById('Colum8').value = data.Colum8 || '';
+    document.getElementById('Colum9').value = data.Colum9 || '';
+    document.getElementById('Colum10').value = data.Colum10 || '';
+    document.getElementById('Colum11').value = data.Colum11 || '';
+    document.getElementById('Colum12').value = data.Colum12 || '';
+    document.getElementById('Colum13').value = data.Colum13 || '';
+    document.getElementById('Colum14').value = data.Colum14 || '';
+    document.getElementById('Colum15').value = data.Colum15 || '';
+    document.getElementById('Colum16').value = data.Colum16 || '';
+    document.getElementById('Colum17').value = data.Colum17 || '';
+    document.getElementById('Colum18').value = data.Colum18 || '';
+    document.getElementById('Colum19').value = data.Colum19 || '';
+    document.getElementById('Colum20').value = data.Colum20 || '';
+    document.getElementById('Colum21').value = data.Colum21 || '';
+    document.getElementById('Colum22').value = data.Colum22 || '';
+    document.getElementById('Colum23').value = data.Colum23 || '';
+    document.getElementById('Colum24').value = data.Colum24 || '';
+    document.getElementById('Colum25').value = data.Colum25 || '';
+    document.getElementById('Colum26').value = data.Colum26 || '';
+    document.getElementById('Colum27').value = data.Colum27 || '';
+    document.getElementById('Colum28').value = data.Colum28 || '';
+    document.getElementById('Colum29').value = data.Colum29 || '';
+    document.getElementById('Colum30').value = data.Colum30 || '';
+    document.getElementById('Colum31').value = data.Colum31 || '';
+	//https://stackblitz.com/edit/angular-w6b3cg-cxz5rk?file=index.html
+	//https://stackoverflow.com/questions/24804500/can-you-have-scrollbars-in-both-parallel-sides-of-a-div
+}
+
+function clearInputFields() {
+    document.getElementById('Colum2').value = '';
+    document.getElementById('Colum3').value = '';
+    document.getElementById('Colum4').value = '';
+    document.getElementById('Colum5').value = '';
+    document.getElementById('Colum6').value = '';
+    document.getElementById('Colum7').value = '';
+    document.getElementById('Colum8').value = '';
+    document.getElementById('Colum9').value = '';
+    document.getElementById('Colum10').value = '';
+    document.getElementById('Colum11').value = '';
+    document.getElementById('Colum12').value = '';
+    document.getElementById('Colum13').value = '';
+    document.getElementById('Colum14').value = '';
+    document.getElementById('Colum15').value = '';
+    document.getElementById('Colum16').value = '';
+    document.getElementById('Colum17').value = '';
+    document.getElementById('Colum18').value = '';
+    document.getElementById('Colum19').value = '';
+    document.getElementById('Colum20').value = '';
+    document.getElementById('Colum21').value = '';
+    document.getElementById('Colum22').value = '';
+    document.getElementById('Colum23').value = '';
+    document.getElementById('Colum24').value = '';
+    document.getElementById('Colum25').value = '';
+    document.getElementById('Colum26').value = '';
+    document.getElementById('Colum27').value = '';
+    document.getElementById('Colum28').value = '';
+    document.getElementById('Colum29').value = '';
+    document.getElementById('Colum30').value = '';
+    document.getElementById('Colum31').value = '';
+}
+
+</script>
+
+
+	
+<div class="footer">
+
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span></span> Liên Hệ: 18 Trần Hưng Đạo<span> </span> Thành Phố Đông Hà, Tỉnh Quảng Trị</p>
+    </div>
+	<div>
+      <i class="fa fa-phone"></i>
+      <p> (02333) 855298</p>
+      <p> (+84) 911393789</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a style="color:black;" href="mailto:tdnhat@vnpt.vn?subject = To Trưởng đài ĐHA">tdnhat@vnpt.vn</a></p>
+    </div>
+  </div>
+  
+
+ 
+  <div class="footer-right col-md-4 col-sm-6">
+
+    <p class="menu">
+	
+      <a onclick="home()" > Trang Chủ</a> |
+      <a href="#"> Website Đài Đông Hà</a> |
+    </p>
+
+    <p class="name"> Lê Văn Khanh Copyright © 2021. All right reserved.</p>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
