@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+
+  <title>ĐÀI VT ĐÔNG HÀ - VÔ TUYẾN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="VoTuyen/normalize.min.css">
+
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 99%;
+  padding:1px;
+  width: 99%;
+  max-width:97%;
+  background: linear-gradient(to right, #73c6b6, #5499c7);
+}
+
+/*********** MAIN HEADING **********/
+.main-heading {
+  font-size: 2em;
+  color:white;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight:bold;
+}
+
+.main-heading::before, .main-heading::after {
+  content: "";
+  height: 0.2em;
+  width: 100%;
+  background-image: linear-gradient(to left, darkorange, transparent);
+  margin-right: 1em;
+}
+
+.main-heading::after {
+  background-image: linear-gradient(to right, darkorange, transparent);
+  margin-left: 1em;
+}
+
+/*********** LINKS **********/
+.tab-list__list {
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.tab-list__link {
+  color: #fff;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  background-color: #807668;
+  display: block;
+  padding: 1em 1.5em;
+  border-radius: 5px 5px 0 0;
+  transition: all 150ms ease-out;
+  font-weight:bold;
+}
+
+.tab-list__link--is-active {
+  color: #3f4c6b;
+  background-color: #f2e7cf;
+  background-color: #fff;
+  transform: scaleY(1.1);
+  transform-origin: center bottom;
+}
+
+/*********** TAB CONTAINERS **********/
+.tab {
+  background-color: #f2e7cf;
+  background-color: #fff;
+  border-radius: 0 1px 1px 1px;
+  padding: 1.5em;
+}
+
+.tab__box {
+  display: none;
+}
+
+.tab__box--is-visible {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-gap: 10px;
+  justify-content: space-around;
+}
+
+.tab__item {
+  padding: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab__heading {
+  font-size: 1.2em;
+  color:black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight:bold;
+}
+
+.tab__icon {
+  font-size: 3em !important;
+  margin: 0.7em 0;
+  color: darkorange;
+}
+
+.tab__para {
+  font-weight: bold;
+  color: #3f4c6b;
+  margin-bottom: 1.5em;
+}
+
+.tab__btn {
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 0.8em 1.5em;
+  border-radius: 1px;
+  border: 0;
+  background-image: linear-gradient(to bottom,#e6f5ff,#eaeded,#1b2631);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  max-width: 18em;
+  max-high: 1em;
+  margin: 0 auto;
+}
+
+.tab__btn:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+.tab__btn:active {
+  transform: translate(1px, 2px);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 38em) {
+  body {
+  font-size: 50%;
+  background: #1b4f72;
+  }
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .tab-list__list {
+    flex-direction: column;
+    background-color: #807668;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .tab-list__link {
+    font-size: 0.8em;
+    padding: 1.2em 1em;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .tab-list__link--is-active {
+    transform: scaleX(1.05);
+    transform-origin: right center;
+  }
+
+  .tab {
+    border-radius: 0 3px 3px 0;
+    padding: 1em;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <h1 class="main-heading">VÔ TUYẾN ĐÀI VT ĐÔNG HÀ</h1>
+    <div class="wrap">
+        <ul class="tab-list__list">
+            <li class="tab-list__item"><a href="#tab-1" class="tab-list__link tab-list__link--is-active">LỊCH CÔNG VIỆC</a></li>
+            <li class="tab-list__item"><a href="#tab-2" class="tab-list__link">VẬT TƯ DỰ PHÒNG</a></li>
+            <li class="tab-list__item"><a href="#tab-3" class="tab-list__link">TÀI LIỆU</a></li>
+        </ul>
+        <div class="tab">
+
+		<ul id="tab-1" class="tab__box tab__box--1  tab__box--is-visible">
+                <li class="tab__item">                   
+                   <img src="VoTuyen/LichDHA.jpg" alt=""> 
+                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐÔNG HÀ</h2>
+		   <button class="tab__btn">Xem</button>
+                   
+                </li>
+                <li class="tab__item">                   
+                   <img src="VoTuyen/LichDHI.png" alt=""> 
+                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT ĐỒNG HỚI</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+                <li class="tab__item">                   
+                   <img src="VoTuyen/LichHUE.jpg" alt=""> 
+                   <h2 class="tab__heading">LỊCH CÔNG VIỆC VT HUẾ</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+
+            </ul>
+
+            <ul id="tab-2" class="tab__box tab__box--1">
+                <li class="tab__item">                   
+                   <img src="VoTuyen/VatTuDPDHA.png" alt=""> 
+                   <h2 class="tab__heading">VẬT TƯ DP VT ĐÔNG HÀ</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+                <li class="tab__item">                   
+                   <img src="VoTuyen/VatTuDPDHI.png" alt=""> 
+                   <h2 class="tab__heading">VẬT TƯ DP VT ĐỒNG HỚI</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+                <li class="tab__item">                   
+                   <img src="VoTuyen/VatTuDPHUE.jpg" alt=""> 
+                   <h2 class="tab__heading">VẬT TƯ DP VT HUẾ</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+
+            </ul>			
+			
+            <ul id="tab-3" class="tab__box tab__box--1">
+                <li class="tab__item">                   
+                   <img src="VoTuyen/CongVan.jpg" alt=""> 
+                   <h2 class="tab__heading">CÔNG VĂN VÔ TUYẾN</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+                <li class="tab__item">                   
+                   <img src="VoTuyen/TaiLieu.png" alt=""> 
+                   <h2 class="tab__heading">TÀI LIỆU VÔ TUYẾN</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+                <li class="tab__item">                   
+                   <img src="VoTuyen/TaiLieu.png" alt=""> 
+                   <h2 class="tab__heading">TRẮC NGHIỆM VÔ TUYẾN</h2>
+                   <button class="tab__btn">Xem</button>
+                </li>
+
+            </ul>
+
+
+
+			</div>    
+    </div>
+    <script src="VoTuyen/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  
+      <script id="rendered-js">
+let ul = document.querySelector('.tab-list__list');
+let links = document.querySelectorAll('.tab-list__link');
+let tabs = document.querySelectorAll('.tab__box');
+
+ul.addEventListener('click', e => {
+  //only apply js if tab isn't already the active one
+  if (e.target.classList.contains('tab-list__link') && !e.target.classList.contains('tab-list__link--is-active')) {
+    e.preventDefault();
+    //loop through all links and divs and remove the active/visible classes
+    links.forEach((el, idx) => {
+      el.classList.remove('tab-list__link--is-active');
+      tabs[idx].classList.remove('tab__box--is-visible');
+      //add the active class to the clicked link
+      e.target.classList.add('tab-list__link--is-active');
+      //if the active link's href attribute matches the div's id attribute (slicing out the #) apply the visible class to that div
+      if (e.target.getAttribute('href').slice(1) === tabs[idx].getAttribute('id')) {
+        tabs[idx].classList.add('tab__box--is-visible');
+      }
+    });
+  }
+});
+//# sourceURL=pen.js
+    </script>
+
+</body>
+</html>
