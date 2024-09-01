@@ -356,12 +356,12 @@ form .question label {
   pointer-events: none;
 }
 
-
-
-	
-
-
 @media (max-width: 380px) {
+  .question {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .question .id,
   .question .Colum2,
   .question .Colum3,
@@ -393,11 +393,13 @@ form .question label {
   .question .Colum29,
   .question .Colum30,
   .question .Colum31 {
-    width: 45%; /* Giảm chiều rộng để đảm bảo hai phần tử trên cùng một dòng */
+    flex-basis: 48%; /* Chiếm 48% chiều rộng */
+    max-width: 48%;  /* Đảm bảo không vượt quá 48% */
     min-height: 40px;
     margin-bottom: 10px;
   }
 }
+
 
 
 @media (max-width: 600px) {
