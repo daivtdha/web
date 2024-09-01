@@ -393,14 +393,12 @@ form .question label {
   .question .Colum29,
   .question .Colum30,
   .question .Colum31 {
-    flex-basis: 48%; /* Chiếm 48% chiều rộng */
-    max-width: 48%;  /* Đảm bảo không vượt quá 48% */
+    flex-basis: 48%;
+    max-width: 48%;
     min-height: 40px;
     margin-bottom: 10px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   .question {
@@ -439,11 +437,13 @@ form .question label {
   .question .Colum29,
   .question .Colum30,
   .question .Colum31 {
-    width: 40%; /* Chia mỗi textarea thành 48% chiều rộng */
+    flex-basis: 48%;
+    max-width: 48%;
     min-height: 40px;
     margin-bottom: 10px;
   }
 }
+
 
 
 .popup {
