@@ -1436,6 +1436,36 @@ font-weight: bold;
 }
 /* End Thoát bằng Icon Home */
 
+/* Màu nền và chữ cho header */
+.ag-theme-alpine .ag-header {
+    background-color: #d5d8dc; /* Màu nền cho header */
+    font-weight: bold;
+}
+
+/* Màu nền và chữ cho floating filter (ô tìm kiếm) */
+.ag-theme-alpine .ag-floating-filter {
+    background-color: #d5d8dc; /* Màu nền cho ô tìm kiếm */
+    color: black; /* Màu chữ cho ô tìm kiếm */
+}
+
+/* Màu nền cho các cột pinned với 20% vàng nhạt ở phía trên */
+.ag-theme-alpine .ag-row-pinned .ag-cell {
+    background: linear-gradient(180deg, #fbeee6, #ffffff, #ffffff 100%) !important; /* Vàng nhạt chiếm 20% phía trên, phần còn lại là màu trắng */
+}
+
+/* Loại bỏ hover cho pinned rows */
+.ag-theme-alpine .ag-row-pinned:hover .ag-cell {
+    background: linear-gradient(180deg, #fbeee6, #ffffff, #ffffff 100%) !important; /* Duy trì màu nền khi hover */
+}
+
+/* Loại bỏ hiệu ứng hover hoàn toàn trên pinned rows */
+.ag-theme-alpine .ag-row-hover.ag-row-pinned {
+    pointer-events: none !important;
+}
+
+/* End Màu nền và chữ cho header */
+
+	
 /* Thay đổi */
 		
 </style>
