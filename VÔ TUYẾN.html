@@ -334,13 +334,19 @@ body {
   background: #1b4f72;
   }
 
-  .wrap {
+
+/*ĐẶT ĐỘ RỘNG GIỮA CỘT HIỂN THỊ LIST TRONG DI ĐỘNG*/	
+    /*.wrap {
     display: grid;
     /*grid-template-columns: 2fr 6fr; Độ rộng Tab cho Di động*/    
     /*grid-template-columns: minmax(auto, 2fr) minmax(0, 6fr);*/ 
-    grid-template-columns: minmax(150px, 2fr) minmax(0, 6fr);
-  }
-
+    /*grid-template-columns: minmax(50px, 2fr) minmax(0, 6fr);*/
+  }*/
+.wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px; /* khoảng cách giữa các cột */
+}
   .tab-list__list {
     flex-direction: column;
     background-color: #807668;
