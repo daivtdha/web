@@ -336,11 +336,17 @@ body {
 
 
 
-					/*ĐẶT ĐỘ RỘNG GIỮA CỘT HIỂN THỊ LIST TRONG DI ĐỘNG*/	
+	/*ĐẶT ĐỘ RỘNG GIỮA CỘT HIỂN THỊ LIST TRONG DI ĐỘNG*/	
+	    /*.wrap {
+	    display: grid;
+	    /*grid-template-columns: 2fr 6fr; Độ rộng Tab cho Di động*/    
+	    /*grid-template-columns: minmax(auto, 2fr) minmax(0, 6fr);*/ 
+	    /*grid-template-columns: minmax(50px, 2fr) minmax(0, 6fr);*/
+	  }*/	
 	
 .wrap {
 display: grid;
-  grid-template-columns: 2.2fr 5.8fr;
+  grid-template-columns: 3fr 5fr;
 }
   .tab-list__list {
     flex-direction: column;
