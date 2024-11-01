@@ -336,7 +336,8 @@ body {
 
   .wrap {
     display: grid;
-    grid-template-columns: 2fr 6fr;
+    /*grid-template-columns: 2fr 6fr; Độ rộng Tab cho Di động*/    
+    grid-template-columns: minmax(auto, 2fr) minmax(0, 6fr);
   }
 
   .tab-list__list {
