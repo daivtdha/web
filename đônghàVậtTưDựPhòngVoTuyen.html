@@ -20,9 +20,21 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="function _0x57fa(_0x5ab3a9,_0x419eb0){var _0x55218a=_0x5521();return _0x57fa=function(_0x57fa95,_0x2267c1){_0x57fa95=_0x57fa95-0x13d;var _0x55abcd=_0x55218a[_0x57fa95];return _0x55abcd;},_0x57fa(_0x5ab3a9,_0x419eb0);}var _0xe10a8e=_0x57fa;function _0x5521(){var _0x5025cb=['1012311tyTRVV','preventDefault','2603188UmXFGv','URL','18eyJflV','304079nkBCan','history','popstate','addEventListener','1282580tNpDao','10311504fbRtvE','onload','contextmenu','717248iTHrnX','88615IRzHIn','pushState'];_0x5521=function(){return _0x5025cb;};return _0x5521();}(function(_0x436561,_0x1280a1){var _0x19f8a3=_0x57fa,_0x770bc3=_0x436561();while(!![]){try{var _0x41bc36=-parseInt(_0x19f8a3(0x146))/0x1+-parseInt(_0x19f8a3(0x13e))/0x2+parseInt(_0x19f8a3(0x141))/0x3+-parseInt(_0x19f8a3(0x14a))/0x4+parseInt(_0x19f8a3(0x13f))/0x5*(-parseInt(_0x19f8a3(0x145))/0x6)+-parseInt(_0x19f8a3(0x143))/0x7+parseInt(_0x19f8a3(0x14b))/0x8;if(_0x41bc36===_0x1280a1)break;else _0x770bc3['push'](_0x770bc3['shift']());}catch(_0x122b3a){_0x770bc3['push'](_0x770bc3['shift']());}}}(_0x5521,0x35376),window[_0xe10a8e(0x14c)]=function(){var _0x1b23da=_0xe10a8e;document[_0x1b23da(0x149)](_0x1b23da(0x13d),_0x1f8c5a=>_0x1f8c5a[_0x1b23da(0x142)]()),history[_0x1b23da(0x140)](null,null,document[_0x1b23da(0x144)]),window[_0x1b23da(0x149)](_0x1b23da(0x148),function(){var _0x593ec6=_0x1b23da;history[_0x593ec6(0x140)](null,null,document[_0x593ec6(0x144)]);}),window[_0x1b23da(0x147)]['replaceState']('','','/');});"></script>
+
 	
   <script>
+
+window.onload = function(){
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+window.history.replaceState('','','/');  
+  
+};	  
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
   }
