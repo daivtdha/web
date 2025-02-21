@@ -109,7 +109,7 @@ input[type=submit] {
 .button1 {border-radius: 10em;}
 
 .button:hover {
-  background-color: #1c9bf3; /* #566573; */
+  background-color:  #1c9bf3; /* #566573; */
   cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ input[type=submit] {
 /* Thêm cho Button */
 
 .container {
-    width: 100%;
+    width: 98%;
     display: flex;
     justify-content: center; /* Căn giữa nội dung */
 }
@@ -125,7 +125,7 @@ input[type=submit] {
 .button-container {
     display: flex;
     align-items: center;
-    width: 98%;
+    width: 100%;
     max-width: 600px; /* Điều chỉnh độ rộng tối đa */
 }
 
@@ -146,7 +146,7 @@ input[type=submit] {
 
 .button {
     width: 70px;
-    height: 28px;
+    height:28px;
     font-size: 13px;
     font-weight: bold;
     text-align: center;
@@ -161,7 +161,6 @@ input[type=submit] {
 
 
 /* End Thêm cho Button */
-
 
  body {
  font-family: Times New Roman;
@@ -369,7 +368,7 @@ legend{
 width:250px;
 height:28px;
 text-align: center;
-font-size: 16px; 
+font-size: 15px; 
 font-weight:  bold;
 color: white;
 padding: 2px 2px ;
@@ -762,7 +761,7 @@ form .question label {
 }
 
 .dialog-btn {
-  background-color:#808b96;
+  background-color:#006699; /* #808b96; */
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -771,7 +770,7 @@ form .question label {
   width: 30%;
 }
 .dialog-btn:hover {
-  background-color: #566573;
+  background-color:#1c9bf3; /* #566573; */
   cursor: pointer;
 }
 
@@ -897,7 +896,7 @@ form .question label {
 }
 
 .update-btn {
-  background-color:#808b96;
+  background-color:#006699; /* #808b96; */
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -906,22 +905,7 @@ form .question label {
   width: 30%;
 }
 .update-btn:hover {
-  background-color: #566573;
-  cursor: pointer;
-}
-
-
-.update-btn {
-  background-color:#808b96;
-  color: white;
-  font-weight: 700;
-  border: 1px solid #44B78B;
-  border-radius: 10px;
-  height: 30px;
-  width: 30%;
-}
-.update-btn:hover {
-  background-color: #566573;
+  background-color:#006699; /* #566573; */
   cursor: pointer;
 }
 
@@ -1034,7 +1018,8 @@ form .question label {
     width: 33.33333%;
     margin-left: 33.33333%;
   }
-}	
+}
+
 /* TRANS */
 
 .popup_trans {
@@ -1151,7 +1136,7 @@ form .question label {
 }
 
 .insert-btn {
-  background-color:#808b96;
+  background-color:#006699; /* #808b96; */
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -1160,7 +1145,7 @@ form .question label {
   width: 30%;
 }
 .insert-btn:hover {
-  background-color:#566573;
+  background-color:#1c9bf3; /* #566573; */
   cursor: pointer;
 }
 
@@ -1213,7 +1198,7 @@ form .question label {
 }
 
 .delete-btn {
-  background-color:#808b96;
+  background-color:#006699; /* #808b96; */
   color: white;
   font-weight: 700;
   border: 1px solid #44B78B;
@@ -1222,7 +1207,7 @@ form .question label {
   width: 30%;
 }
 .delete-btn:hover {
-  background-color:#566573;
+  background-color:#1c9bf3; /* #566573; */
   cursor: pointer;
 }
 
@@ -1336,7 +1321,7 @@ form .question label {
   width: 30%;
 }
 .id-btn:hover {
-  background-color:#1c9bf3; /*#566573; */
+  background-color:  #1c9bf3; /*#566573; */
   cursor: pointer;
 }
 
@@ -1606,6 +1591,7 @@ font-weight: bold;
     padding: 2px 5px !important; /* Giảm padding trong ô */
 }
 
+		
 /* End wrap text row pin */
 
 /* Thoát bằng Icon Home */
@@ -1618,6 +1604,7 @@ font-weight: bold;
     color: #000; /* Đặt màu cho icon SVG hoặc Font Awesome */
 }
 /* End Thoát bằng Icon Home */
+
 
 /* Màu nền và chữ cho header */
 .ag-theme-alpine .ag-header {
@@ -1641,18 +1628,23 @@ font-weight: bold;
     background: linear-gradient(180deg, #fbeee6, #ffffff, #ffffff 100%) !important; /* Duy trì màu nền khi hover */
 }
 
+/* Loại bỏ hiệu ứng hover hoàn toàn trên pinned rows */
+/* .ag-theme-alpine .ag-row-hover.ag-row-pinned { */
+/*     pointer-events: none !important; */
+/* } */
+
 
 
 /* End Màu nền và chữ cho header */
-	
+
 /* Luôn hiển thị Munu trên header */
 .ag-header-cell-menu-button {
-    display: flex !important; 
-    opacity: 1 !important;
+    opacity: 1 !important;  /* Luôn hiển thị icon */
     visibility: visible !important;
-    pointer-events: auto !important; /* Cho phép bấm vào */
+    display: flex !important;
 }
-	
+
+
 /* Thay đổi */
 		
 </style>
