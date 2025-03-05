@@ -24,18 +24,24 @@
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
   
 <style>
+html, body {
+  background: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+  background-attachment: fixed; /* Giữ gradient cố định tránh hiệu ứng nhấp nháy */
+}
+
 
 .footer {
-  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+  
   width: 100%;
-  high:auto;
+  height: auto;
   text-align: left;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 16px;
   padding: 5px;
   margin-top: 5px;
-  bottom: 0px;
+  bottom: 0;
+  position: fixed;
 }
 
 .footer .footer-left,
