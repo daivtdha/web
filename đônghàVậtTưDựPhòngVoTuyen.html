@@ -1673,11 +1673,17 @@ font-weight: bold;
 <!-- End Lịch Ag-grid --------->
 
 <script>
-history.pushState(null, document.title, location.href);
-window.addEventListener('popstate', function (event)
-{
-  history.pushState(null, document.title, location.href);
+
+// Khi vào trang dữ liệu sau khi đăng nhập
+history.pushState(null, null, location.href);
+
+window.addEventListener("popstate", function (event) {
+    var confirmLeave = confirm("Bạn không còn ở trang dữ liệu nữa!");
+    if (!confirmLeave) {
+        history.pushState(null, null, location.href); // Đẩy lại trang dữ liệu vào history
+    }
 });
+	
 	
 </script>	
 <script>
