@@ -1673,13 +1673,11 @@ font-weight: bold;
 <!-- End Lịch Ag-grid --------->
 
 <script>
-window.addEventListener("popstate", function (event) {
-    var confirmBack = confirm("Bạn muốn quay lại?");
-    if (!confirmBack) {
-        history.pushState(null, null, location.href); // Giữ trang hiện tại, ngăn quay lại
-    }
+history.pushState(null, document.title, location.href);
+window.addEventListener('popstate', function (event)
+{
+  history.pushState(null, document.title, location.href);
 });
-history.pushState(null, null, location.href); // Đẩy trạng thái vào history
 	
 </script>	
 <script>
