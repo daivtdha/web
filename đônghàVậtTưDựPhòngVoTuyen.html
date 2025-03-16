@@ -25,12 +25,6 @@
 
 	
   <script>
-document.addEventListener("touchmove", function (event) {
-    if (window.scrollY === 0) {
-        event.preventDefault();
-    }
-}, { passive: false });
-
 	  
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
@@ -39,7 +33,7 @@ document.addEventListener("touchmove", function (event) {
 <head>
 <style>
 html, body {
-    overscroll-behavior: contain;
+  overscroll-behavior: none;
 }
 
 /* suggested */
