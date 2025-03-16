@@ -24,7 +24,14 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 	
-  <script>	  
+  <script>
+document.addEventListener("touchmove", function (event) {
+    if (window.scrollY === 0) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+	  
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
   }
