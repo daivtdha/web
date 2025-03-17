@@ -6,15 +6,15 @@
     <title>Chặn Nút Back</title>
     <script>
         function backPressed() {
-            alert("OK, Bạn đã bấm nút Back!");
+            alert("🔙 Bạn đã bấm nút Back!");
         }
 
         function disableBackButton() {
-            console.log(" Đã chặn nút Back");
+            console.log("📌 Đã chặn nút Back");
             history.pushState(null, "", location.href);
 
             window.onpopstate = function () {
-                console.log(" Phát hiện bấm Back");
+                console.log("⚠️ Phát hiện bấm Back");
                 backPressed(); // Gọi hàm khi người dùng bấm Back
                 history.pushState(null, "", location.href); // Ngăn quay lại
             };
@@ -22,6 +22,11 @@
 
         window.onload = function() {
             disableBackButton();
+        };
+
+        // Phát hiện đóng trang hoặc back bằng cách làm mới
+        window.onbeforeunload = function() {
+            return "Bạn có chắc chắn muốn rời trang không?";
         };
     </script>
 </head>
