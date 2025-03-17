@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chặn Nút Back</title>
     <script>
+        function backPressed() {
+            alert("OK, Bạn đã bấm nút Back!");
+        }
+
         function disableBackButton() {
+            console.log(" Đã chặn nút Back");
             history.pushState(null, "", location.href);
-            alert("Đã chặn nút Back!");
 
             window.onpopstate = function () {
-                alert("Bạn không thể quay lại!");
-                history.pushState(null, "", location.href);
+                console.log(" Phát hiện bấm Back");
+                backPressed(); // Gọi hàm khi người dùng bấm Back
+                history.pushState(null, "", location.href); // Ngăn quay lại
             };
         }
 
-        window.onload = disableBackButton;
-        window.onpageshow = function(evt) {
-            if (evt.persisted) {
-                alert("Trang tải từ cache, chặn Back!");
-                disableBackButton();
-            }
+        window.onload = function() {
+            disableBackButton();
         };
     </script>
 </head>
-<body onload="disableBackButton();">
-    <h1>Trang Test Chặn Back</h1>
-    <p>Thử nhấn "Back" trên trình duyệt và kiểm tra alert.</p>
-    <p><a href="https://www.google.com/">Nhấn vào đây để đi đến Google</a></p>
+<body>
+    <h1>🚀 Test Chặn Nút Back</h1>
+    <p>🔹 Nếu bạn bấm "Back", sẽ có alert thông báo.</p>
+    <p><a href="https://www.google.com/">🌍 Đi đến Google</a></p>
 </body>
 </html>
