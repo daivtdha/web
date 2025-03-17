@@ -651,13 +651,14 @@ form .question label {
   .footer .footer-center i {
     margin-left: 3px;
   }
-  .question { /* Màn hình nhỏ hơn 380px (Điện thoại nhỏ) sẽ hiển thị 2 cột */
+  .question { /* Màn hình nhỏ hơn 380px (Điện thoại nhỏ) sẽ hiển thị 1 cột */
     width: 100%;
   }
 }
 
 
-@media (max-width: 600px) {
+
+@media (max-width: 600px) and (orientation: portrait) {
   .footer {
     font-size: 14px;
   }
@@ -672,11 +673,16 @@ form .question label {
   .footer .footer-center i {
     margin-left: 3px;
   } 
-  .question { /* Màn hình nhỏ hơn 600px (Tablet & Mobile) sẽ hiển thị 2 cột */
+  .question { /* Điện thoại dọc (chiều rộng dưới 600px) hiển thị 2 cột */
     width: calc(50% - 10px);
   }	
 }
-
+/* Điện thoại xoay ngang (chiều rộng dưới 900px nhưng lớn hơn 600px) hiển thị 3 cột */
+@media (max-width: 900px) and (orientation: landscape) {
+  .question {
+    width: calc(33.33% - 10px);
+  }
+}
 
 .popup {
   width: 80%;
