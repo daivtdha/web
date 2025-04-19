@@ -1,0 +1,4260 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PL UCCQ ĐÀI ĐHA</title>
+
+<link rel="stylesheet" href="data/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Navigation/Navigation.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">	
+<link rel="stylesheet" href="Ag-Grid-js\ag-grid.css">
+<link rel="stylesheet" href="Ag-Grid-js\ag-theme-alpine.css">
+<script src="Ag-Grid-js\enterprise31_2_1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+<script src="D3-JS\D3.js"></script>
+	
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+<head>
+<style>
+html, body {
+   overscroll-behavior: none;
+}
+/* suggested */
+
+* {
+  box-sizing: border-box;
+}
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 13px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+/* End suggested */
+
+
+.button {
+  background-color: #006699; /* #808b96 ; */
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+.button1 {border-radius: 10em;}
+
+.button:hover {
+  background-color:  #1c9bf3; /* #566573; */
+  cursor: pointer;
+}
+
+
+/* Thêm cho Button */
+
+.container {
+    width: 98%;
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Điều chỉnh độ rộng tối đa */
+}
+
+.home-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto; /* Căn trái */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+    justify-content: center; /* Căn giữa */
+    flex-grow: 1;
+}
+
+.button {
+    width: 70px;
+    height:28px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hometext {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+/* End Thêm cho Button */
+
+ body {
+ font-family: Times New Roman;
+ overscroll-behavior-y: contain;                 /* https://usefulangle.com/post/278/html-disable-pull-to-refresh-with-css */
+    /* font-family: sans-serif; */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+    color: #666;
+    font: 90%/180% Arial, Helvetica, sans-serif;
+    width:100%;
+    max-width:100%;
+    margin: 0 auto;
+	
+	background-image:white);
+}
+
+/* TABLE */
+.HorizontalTable {
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y:hidden;
+    }
+
+.HorizontalTable {height: 20px; }
+.Horizontal {
+      width:7400px; /* Thay đổi mở rộng màn hình của thanh trượt */
+      height: 20px;
+    }
+
+
+
+.footer {
+ background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 5px;
+  
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 5px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 20px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color:#0099ff;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 10px;
+  margin-right: 3px;
+
+}
+
+
+
+
+.footer .footer-center {
+  width: 25%;
+}
+
+.footer .footer-center i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+
+
+
+.footer .footer-right {
+  width: 35%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer h2 span {
+  color: #0099ff;
+}
+
+.footer .menu {
+  color:black;
+  margin: 0px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #0099ff;
+}
+
+.footer .name {
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+
+.input1 {border-radius: 12px;}
+
+fieldset {
+
+background-image: linear-gradient(to bottom right, #f8f9f9 , #f8f9f9);
+
+display: block;
+
+left: 0;
+max-width:100%;
+
+}
+
+fieldset:focus-within {
+  background-image: linear-gradient(to bottom right, #f8f9f9 ,  #d5d8dc ,#ffffb3);
+
+}
+
+
+
+legend{
+width:250px;
+height:28px;
+text-align: center;
+font-size: 15px; 
+font-weight:  bold;
+color: white;
+padding: 2px 2px ;
+
+box-shadow: 0 0 0 2px #ddd;
+font: time new roman;
+ background-color:#006699; /* #808b96; */
+border-radius: 10em;
+}
+
+
+
+
+
+
+form .question {
+  position: relative;
+  padding: 10px 4px;
+  display:inline-block;
+}
+form .question:first-of-type {
+  padding-top: 0;
+}
+form .question:last-of-type {
+  padding-bottom: 0;
+}
+form .question label {
+  transform-origin: left center;
+  color: #0e3753;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 8px 17px;
+  display: block;
+  position: absolute;
+  margin-top: -35px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+	
+
+
+@media (max-width: 380px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+
+  .question .id {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum2 {
+	width:122px;
+	min-height:40px;
+	}
+.question .Colum3 {
+	width:122px;
+	min-height:40px;
+	}
+
+.question .Colum4 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum5 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum6 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum7 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum8 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum9 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum10 {
+	width:122px;
+	min-height:40px;
+	}
+.question .Colum11 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum12 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum13 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum14 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum15 {
+	width:122px;
+	min-height:40px;
+	}	
+
+ .question .Colum16 {
+	width:122px;
+	min-height:40px;
+	} 
+
+.question .Colum17 {
+	width:122px;
+	min-height:40px;
+	}
+
+.question .Colum18 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum19 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum20 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum21 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum22 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum23 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum24 {
+	width:122px;
+	min-height:40px;
+	}
+.question .Colum25 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum26 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum27 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum28 {
+	width:122px;
+	min-height:40px;
+	}
+ .question .Colum29 {
+	width:122px;
+	min-height:40px;
+	}	
+
+ .question .Colum30 {
+	width:122px;
+	min-height:40px;
+	} 	
+ .question .Colum31 {
+	width:122px;
+	min-height:40px;
+	}	
+	
+}
+
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+
+.question .id {
+	width:140px;
+	min-height:40px;
+	}
+.question .Colum2 {
+	width:140px;
+	min-height:40px;
+	}
+.question .Colum3 {
+	width:140px;
+	min-height:40px;
+	}
+
+.question .Colum4 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum5 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum6 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum7 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum8 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum9 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum10 {
+	width:140px;
+	min-height:40px;
+	}
+.question .Colum11 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum12 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum13 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum14 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum15 {
+	width:140px;
+	min-height:40px;
+	}	
+
+ .question .Colum16 {
+	width:140px;
+	min-height:40px;
+	} 
+
+.question .Colum17 {
+	width:140px;
+	min-height:40px;
+	}
+.question .Colum18 {
+	width:140px;
+	min-height:40px;
+	}
+.question .Colum19 {
+	width:140px;
+	min-height:40px;
+	}
+
+.question .Colum20 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum21 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum22 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum23 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum24 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum25 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum26 {
+	width:140px;
+	min-height:40px;
+	}
+.question .Colum27 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum28 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum29 {
+	width:140px;
+	min-height:40px;
+	}
+ .question .Colum30 {
+	width:140px;
+	min-height:31px;
+	}
+ .question .Colum31 {
+	width:140px;
+	min-height:40px;
+	}	
+	
+}
+
+
+.popup {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.dialog-btn {
+  background-color:#006699; /* #808b96; */
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.dialog-btn:hover {
+  background-color:#1c9bf3; /* #566573; */
+  cursor: pointer;
+}
+
+
+
+#btn-show-dialog {
+  background-color:#808b96;
+  border: none;
+  color:white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 30px;
+  width: 90px;
+  font-weight: bold;
+}
+
+#btn-show-dialog {border-radius: 12px;}
+
+
+
+
+.popup_time {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_time {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_time {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_time {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_time {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.popup_update {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_update {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_update {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_update {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_update {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.update-btn {
+  background-color:#006699; /* #808b96; */
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.update-btn:hover {
+  background-color:#006699; /* #566573; */
+  cursor: pointer;
+}
+
+
+.popup_updateExcel {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_updateExcel {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_updateExcel {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_updateExcel {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_updateExcel {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.updateExcel-btn {
+  background-color:#808b96;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.updateExcel-btn:hover {
+  background-color: #566573;
+  cursor: pointer;
+}
+
+.popup_resultExcel {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_resultExcel {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_resultExcel {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_resultExcel {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_resultExcel {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+/* TRANS */
+
+.popup_trans {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_trans {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_trans {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_trans {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_trans {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.trans-btn {
+  background-color:#808b96;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.trans-btn:hover {
+  background-color:#566573;
+  cursor: pointer;
+}
+
+/*END TRANS */
+
+
+.popup_insert {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_insert {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_insert {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_insert {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_insert {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.insert-btn {
+  background-color:#006699; /* #808b96; */
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.insert-btn:hover {
+  background-color:#1c9bf3; /* #566573; */
+  cursor: pointer;
+}
+
+.popup_delete {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_delete {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_delete {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_delete {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_delete {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+.delete-btn {
+  background-color:#006699; /* #808b96; */
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.delete-btn:hover {
+  background-color:#1c9bf3; /* #566573; */
+  cursor: pointer;
+}
+
+
+.popup_id {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 15%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_id {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_id {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_id {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_id {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+.popup_result {
+  width: 80%;
+  padding: 15px;
+  left: 0;
+  margin-left: 5%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Thoat_result {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_result {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_result {
+    width: 80%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_result {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.id-btn {
+  background-color:#006699; /* #808b96; */
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 10px;
+  height: 30px;
+  width: 30%;
+}
+.id-btn:hover {
+  background-color:  #1c9bf3; /*#566573; */
+  cursor: pointer;
+}
+
+
+/* Lịch */
+
+.datepicker-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  display: none;
+  padding: 4px;
+  margin-top: 1px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+
+/* End Lịch */
+
+
+/* Thay đổi */
+.header img {
+	margin-bottom:1px; /* Giảm khoảng cách dưới hình ảnh */
+}
+
+.header p {
+	margin-top: 1px; /* Giảm khoảng cách trên đoạn văn */
+	margin-bottom:1px; /* Giảm khoảng cách dưới đoạn văn */
+}
+
+.header button {
+	margin-top:1px; /* Giảm khoảng cách trên nút */
+}
+
+/* Thay đổi question2 */
+.question2 p {
+    margin: 1px 0; /* Giảm khoảng cách giữa các phần tử p */
+}
+
+.question2 input {
+    margin: 1px 1px; /* Giảm khoảng cách giữa các nút input */
+}
+
+
+.container div {
+    margin-bottom: 1px; /* Giảm khoảng cách giữa các phần tử div */
+}
+
+.container textarea {
+    margin-bottom: 1px; /* Giảm khoảng cách dưới ô textarea */
+}
+
+.container .pagination {
+    margin-top: 1px; /* Giảm khoảng cách trên phần phân trang */
+    margin-bottom: 1px; /* Giảm khoảng cách dưới phần phân trang */
+}
+
+.container button {
+    margin-top: 1px; /* Giảm khoảng cách trên nút */
+}
+
+.container p {
+    margin:5px 0; /* Giảm khoảng cách giữa các phần tử p */
+}
+
+
+/* Tô màu tìm kiếm */
+#filterText {
+    width: 120px;
+    height: 23px;
+    border-radius: 26px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#count {
+font-weight: bold;
+}
+.highlight {
+    background-color: yellow;
+}
+/* End Tô màu tìm kiếm */
+
+/* Kẻ chỉ dữ liệu */
+.ag-theme-alpine .ag-cell, 
+.ag-theme-alpine .ag-header-cell {
+    border: 0.7px solid #ccc;
+}
+.ag-header {
+    background-color: #f0f8ff; /* Màu xanh nhạt */
+    /* Các thiết lập khác */
+}
+
+/* Đảm bảo phần phân trang luôn hiển thị ở giữa trang */
+.ag-theme-alpine .ag-paging-panel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            z-index: 1;
+}
+
+/* Căn chỉnh lưới bên dưới phân trang */
+        .ag-theme-alpine .ag-root-wrapper {
+            padding-top: 45px; /* Điều chỉnh cho phù hợp với chiều cao của phân trang */
+        }
+
+        /* Ẩn phần "to of" trong phân trang */
+        .ag-theme-alpine .ag-paging-panel .ag-paging-row-summary-panel {
+            display: none;
+}
+
+/* Tính năng thay đổi độ cao dòng */
+.ag-row-resize-handle {
+    position: absolute;
+    width: 100%;
+    height: 1.5px; /* Đổi chiều cao để phù hợp với thiết kế */
+    cursor: row-resize;
+    background-color: #f0f0f0; /* Màu nền của điều khiển kéo thả */
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
+/* End Tính năng thay đổi độ cao dòng */
+
+/* Thay đổi độ cao Input filter */
+
+.ag-input-wrapper input[type="text"] {
+    height: 23px !important; /* Điều chỉnh độ cao mong muốn */
+}
+/* End Thay đổi độ cao Input filter */
+
+/* Nút Reset */
+        .reset-button {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color:#006699; /* #85929e; */
+            color: white;
+            cursor: pointer;
+            font-size: 12px; /* Điều chỉnh kích thước biểu tượng */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reset-button:hover {
+            background-color:#1c9bf3; /* #566573; */
+        }
+
+        .reset-button .fa {
+            margin: 0; /* Đảm bảo không có khoảng cách xung quanh biểu tượng */
+        }
+/* End Nút Reset */	
+
+/* End Kẻ chỉ dữ liệu */
+
+/* Tiến trình tải dữ liệu */
+
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
+.lds-spinner {
+  color: currentColor;
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; /* giảm kích thước width */
+  height: 40px; /* giảm kích thước height */
+  z-index: 1000; /* Ensure spinner is on top */
+}
+.lds-spinner div {
+  transform-origin: 20px 20px; /* giảm kích thước origin */
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 1.6px; /* giảm kích thước top */
+  left: 18.4px; /* giảm kích thước left */
+  width: 3.2px; /* giảm kích thước width */
+  height: 8.8px; /* giảm kích thước height */
+  border-radius: 20%;
+  background: currentColor;
+}
+.lds-spinner div:nth-child(1) { transform: rotate(0deg); animation-delay: -1.1s; }
+.lds-spinner div:nth-child(2) { transform: rotate(30deg); animation-delay: -1s; }
+.lds-spinner div:nth-child(3) { transform: rotate(60deg); animation-delay: -0.9s; }
+.lds-spinner div:nth-child(4) { transform: rotate(90deg); animation-delay: -0.8s; }
+.lds-spinner div:nth-child(5) { transform: rotate(120deg); animation-delay: -0.7s; }
+.lds-spinner div:nth-child(6) { transform: rotate(150deg); animation-delay: -0.6s; }
+.lds-spinner div:nth-child(7) { transform: rotate(180deg); animation-delay: -0.5s; }
+.lds-spinner div:nth-child(8) { transform: rotate(210deg); animation-delay: -0.4s; }
+.lds-spinner div:nth-child(9) { transform: rotate(240deg); animation-delay: -0.3s; }
+.lds-spinner div:nth-child(10) { transform: rotate(270deg); animation-delay: -0.2s; }
+.lds-spinner div:nth-child(11) { transform: rotate(300deg); animation-delay: -0.1s; }
+.lds-spinner div:nth-child(12) { transform: rotate(330deg); animation-delay: 0s; }
+
+@keyframes lds-spinner {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+/* End Tiến trình tải dữ liệu */
+
+/* Upload File */
+
+#fileUpload {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-flex; /* Thay đổi thành flexbox */
+    background-color: transparent;
+    height: 23px;
+    color: black;
+    padding: 2px 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    transition: background-color 0.3s ease;
+
+    /* Căn giữa nội dung theo chiều dọc và ngang */
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Hiệu ứng hover */
+.custom-file-upload:hover {
+    background-color: lightgray;
+}
+
+/* End Upload File */
+
+/* wrap text row pin */
+        .wrap-text-cell {
+            white-space: normal !important; /* Đảm bảo ô có thể gói dòng */
+        }
+        
+		/* Border màu cho các ô của hàng pin */
+        .red-border-cell {
+            border: 1px solid #c0392b !important;
+        }
+
+.ag-row-pinned .wrap-text-cell {
+/*  font-size: 10px !important; */ /* Giảm kích thước chữ */
+    line-height: 1.5 !important; /* Giảm khoảng cách giữa các dòng */
+    padding: 2px 5px !important; /* Giảm padding trong ô */
+}
+
+		
+/* End wrap text row pin */
+
+/* Thoát bằng Icon Home */
+#btn-show-Thoat i, 
+#btn-show-Thoat img,
+#btn-show-Thoat svg {
+	cursor: pointer;
+    width: 24px;
+    height: 24px;
+    color: #000; /* Đặt màu cho icon SVG hoặc Font Awesome */
+}
+/* End Thoát bằng Icon Home */
+
+
+/* Màu nền và chữ cho header */
+.ag-theme-alpine .ag-header {
+    background-color:#a9cce3; /* Màu nền cho header */
+    font-weight: bold;
+}
+
+/* Màu nền và chữ cho floating filter (ô tìm kiếm) */
+.ag-theme-alpine .ag-floating-filter {
+    background-color: #d5d8dc; /* Màu nền cho ô tìm kiếm */
+    color: black; /* Màu chữ cho ô tìm kiếm */
+}
+
+/* Màu nền cho các cột pinned với 20% vàng nhạt ở phía trên */
+.ag-theme-alpine .ag-row-pinned .ag-cell {
+    background: linear-gradient(180deg, #fbeee6,#d6eaf8, #ffffff 100%) !important; /* Xanh nhạt chiếm 20% phía trên, phần còn lại là màu trắng */
+}
+
+/* Loại bỏ hover cho pinned rows */
+.ag-theme-alpine .ag-row-pinned:hover .ag-cell {
+    background: linear-gradient(180deg, #fbeee6, #ffffff, #ffffff 100%) !important; /* Duy trì màu nền khi hover */
+}
+
+/* Loại bỏ hiệu ứng hover hoàn toàn trên pinned rows */
+/* .ag-theme-alpine .ag-row-hover.ag-row-pinned { */
+/*     pointer-events: none !important; */
+/* } */
+
+
+
+/* End Màu nền và chữ cho header */
+
+/* Luôn hiển thị Munu trên header */
+.ag-header-cell-menu-button {
+    opacity: 1 !important;  /* Luôn hiển thị icon */
+    visibility: visible !important;
+    display: flex !important;
+}
+
+
+/* Thay đổi */
+        .highlight {
+            background-color: yellow;
+        }
+
+
+/* D3.LS Table */
+
+    .node-table {
+      border-collapse: collapse;
+      font-family: monospace;
+      font-size: 10px;
+      width:auto;
+
+    }
+    .node-table td, .node-table th {
+      border: 1px solid #333;
+      padding: 1px 3px;
+      
+    }
+    .node-table .header {
+      font-weight: bold;
+	  font-size: 12px;
+      background-color: #f39c12;
+	  text-align: center;
+    }
+    .node-table .first-col {
+      font-weight: bold;
+	  text-align: center;
+	  font-size: 12px;
+	  background-color: #f7dc6f; /* tùy chọn: nền nhạt hơn cho dễ nhìn */
+	  }
+	.node-table tr:nth-child(2) {
+	  font-weight: bold;
+	  text-align: center;
+	  font-size: 12px;
+	  background-color: #f7dc6f; /* tùy chọn: nền nhạt hơn cho dễ nhìn */
+	}
+	.node-table tr:nth-child(10) {
+	  font-weight: bold;
+	  text-align: center;
+	  font-size: 12px;
+	  background-color: #f7dc6f; /* tùy chọn: nền nhạt hơn cho dễ nhìn */
+	}
+
+	
+</style>
+
+</head>
+
+
+<body oncontextmenu="return false">
+
+<!-- Thay đổi  -->
+<div class="header";>
+ <!--   <img style=" width: 100%;" src="/Banner DHA New.png" />    --> 
+<img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />
+</div>
+
+
+<div class="Thoat" id="dialog-container">
+  <div class="popup">
+    <p>Bạn có muốn Thoát không ?</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+
+<div class="Thoat_time" id="dialog_time">
+  <div class="popup_time">
+    <p>Bạn phải Đăng nhập lại !!</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_update" id="update-container">
+  <div class="popup_update">
+	<p type = "text" id="id_Up" value=""></p>
+    <div class="text-right">
+      <button class="update-btn btn-cancel" id="cancel_update">Cancel</button>
+      <button class="update-btn btn-primary" id="confirm_update">OK</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="Thoat_insert" id="insert-container">
+  <div class="popup_insert">
+	<p type = "text" id="id_Ins" value=""></p>
+    <div class="text-right">
+      <button class="insert-btn btn-cancel" id="cancel_insert">Cancel</button>
+      <button class="insert-btn btn-primary" id="confirm_insert">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_delete" id="delete-container">
+  <div class="popup_delete">
+	<p type = "text" id="id_Del" value=""></p>
+    <div class="text-right">
+      <button class="delete-btn btn-cancel" id="cancel_delete">Cancel</button>
+      <button class="delete-btn btn-primary" id="confirm_delete">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_id" id="id-container">
+  <div class="popup_id">
+    <p type = "text" id="id_alert" value=""></p>
+    <div class="text-right">
+      <button class="id-btn btn-primary" id="confirm_id">OK</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="Thoat_result" id="dialog_result">
+  <div class="popup_result">
+    <p id="id_result" value=""></p>
+    <div id="id_result1" class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_result1">OK</button>
+    </div>
+
+    <div id="id_result2" class="text-right">
+	  <button class="dialog-btn btn-primary" id="confirm_result2">OK</button>
+    </div>	
+
+    <div id="id_result3" class="text-right">
+	  <button class="dialog-btn btn-primary" id="confirm_result3">OK</button>
+    </div>
+	
+    <div id="id_result4" class="text-right">
+	  <button class="dialog-btn btn-primary" id="confirm_result4">OK</button>
+    </div>
+	
+ </div>
+</div>
+
+
+<div class="Thoat_updateExcel" id="updateExcel-container">
+  <div class="popup_updateExcel">
+	<p type = "text" id="id_UpExcel" value=""></p>
+    <div class="text-right">
+      <button class="update-btn btn-cancel" id="cancel_updateExcel">Cancel</button>
+      <button class="update-btn btn-primary" id="confirm_updateExcel">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="Thoat_resultExcel" id="dialog_resultExcel">
+  <div class="popup_result">
+    <p id="id_resultExcel_1" value=""></p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_resultExcel">OK</button>
+    </div>	
+ </div>
+</div>
+
+
+<!-- VẼ SƠ ĐỒ D3.JS -->
+<svg></svg>
+
+<div id="input" hidden readonly>
+	<div align="right"><input class="input1"  name ="capnhatpaucDHA" id="capnhatpaucDHA" style="width:100px; height:26px; text-align: center; margin-right:40px; font-weight: bold; color: #ff0000" value="" ></div>
+    <textarea id="id"></textarea>
+</div>
+
+ 
+<div class="question2" align="center" hidden readonly>
+<input type = "text" id="ngay"  ></input>
+<input type = "text" id="ngay2" value=""  ></input>
+
+	<p align="center" id="re" style="font-size: 1.2em; color: red; font-weight: bold" ></p>
+</div>
+
+
+
+
+
+<form>
+ <textarea id="output" style="width: 100%; height: 100px;"  hidden readonly></textarea>
+		
+		
+
+<fieldset>
+    <legend id="legend" align="center"></legend>
+            <!-- Nội dung của bạn trong phần này -->
+
+            <div id="spinner" class="lds-spinner" style="display: none;">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    <div class="container">
+        <div class="button-container">
+            <!-- Nút Home (căn trái) -->
+            <span id="btn-show-Thoat"  class="home-button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 16 16">
+				<path fill="#006699" fill-rule="evenodd" d="M8 3.293l6 6V14.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V10.5a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V9.293l6-6z"/>
+				<path fill="#006699" fill-rule="evenodd" d="M7.5 1.793l-7 7A.5.5 0 0 0 1 9.5h14a.5.5 0 0 0 .354-.854l-7-7a.5.5 0 0 0-.707 0z"/>
+			</svg>
+
+				
+                <span class="hometext">
+				<div style="font-size:11px; color:#006699; font-weight: bold;">Home</div>
+				</span>
+
+            </span>
+
+            <!-- Các nút khác (căn giữa) -->
+            <div class="button-group">	
+				<input type="button" class="button button1" id="btn-show-update" value="Cập nhật"/>
+                <input type="button" class="button button1" id="btn-show-insert" value="Nhập mới"/>
+                <input type="button" class="button button1" id="btn-show-delete" value="Xóa"/>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+</form>
+
+
+
+
+
+<div class="HorizontalTable">
+<div class="Horizontal"></div>
+</div>
+
+</p>
+<div class="form-group" align="center">
+<input type="text" id="filterText" oninput="externalFilterChanged()" placeholder="Tìm kiếm...">
+<span id="count"></span>&nbsp;
+
+     <button id="resetFilterButton" class="reset-button">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+    </button> 
+
+&nbsp;<label for="fileUpload" class="custom-file-upload">Browse</label>
+<input type="file" id="fileUpload" />
+&nbsp;<button onclick="insertpaucDHAExcel_value()">Up File</button>
+
+
+&nbsp;  <select id="exp" name="Excel">
+    <option selected="selected" value="Excel" disabled="disabled">Xuất Excel</option>
+    <option value="exp1">Excel opt</option>
+    <option value="exp2">Excel full</option>
+	<option value="exp3">Mẫu Upload</option>
+  </select>	
+</div>
+		
+</div>
+
+<div id="showData" class="ag-theme-alpine" style="height: 700px; width: 100%;"></div>
+<div id="loader"></div>
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script src="Export_Excel_Color/Export_Excel_Color.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+<script src="LinkGG.js"></script>
+
+<!-- Lịch củ --------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
+<!-- End Lịch củ --------->
+
+<!-- Lịch Ag-grid --------->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- End Lịch Ag-grid --------->
+
+
+
+<script>
+//https://stackoverflow.com/questions/8100770/auto-scaling-inputtype-text-to-width-of-value
+function resizeInput() {
+    $(this).attr('size', $(this).val().length);
+}
+
+$('input[type="text"]')
+    // event handler
+    .keyup(resizeInput)
+    // resize on page load
+    .each(resizeInput);
+	
+	
+	
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()	
+	
+</script>
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+//---ÔK--------
+window.onload = function(){
+
+		//===Tạo Colum2 đến Colum67 Textarea====
+		const container = document.getElementById('input'); // container là <div id="input">
+		let rowDiv = document.createElement('div'); // dòng đầu tiên
+		for (let i = 2; i <= 67; i++) {
+		  const textarea = document.createElement('textarea');
+		  textarea.id = 'Colum' + i;
+		  textarea.style.height = '30px';
+		  textarea.style.margin = '2px'; // thêm khoảng cách nhỏ
+		  rowDiv.appendChild(textarea);
+
+		  // Nếu đã đủ 20 textarea, thì thêm dòng vào container và bắt đầu dòng mới
+		  if ((i - 1) % 20 === 0) {
+			container.appendChild(rowDiv);
+			rowDiv = document.createElement('div'); // tạo dòng mới
+		  }
+		}
+		// Đừng quên thêm dòng cuối cùng nếu còn textarea
+		if (rowDiv.children.length > 0) {
+		  container.appendChild(rowDiv);
+		}
+		//===End Tạo Colum2 đến Colum67 Textarea====
+
+
+	document.addEventListener('contextmenu', event => event.preventDefault());
+	history.pushState(null, null, document.URL);
+	window.addEventListener('popstate', function () {
+		history.pushState(null, null, document.URL);
+	});
+	window.history.replaceState('','','/'); 
+};
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  //idle: 1800000
+  idle: 3600000
+})
+//]]>
+
+
+var Thoat_timeme = document.getElementById("dialog_time");
+var Thoatme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    Thoat_timeme.style.display = "block";}
+document.getElementById("confirm_time").onclick = function(){Thoatconfirm_value()};
+
+// Thoát
+document.getElementById("btn-show-Thoat").onclick = function(){show_dialog()};
+var Thoatme = document.getElementById("dialog-container");
+
+function show_dialog() {
+    Thoatme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){Thoatconfirm_value()};
+
+function Thoatconfirm_value() {	
+ //alert("Thoát trang");
+	var ngaylog= $("#ngaylog").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngaylog="+ngaylog +"&action=Thoatconfirm";	  
+//alert(ngaylog);  
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+
+	  });
+   setTimeout(function() {
+	//close();
+	window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+    Thoatme.style.display = "none";	
+   }, 500); // Thay đổi giá trị 2000 nếu bạn cần độ trễ khác
+}	
+//Chạy hàm thoát khi bấm nút Back của sổ trình duyệt Browse
+window.addEventListener("popstate", function (event) {
+    //Thoatconfirm_value();
+});
+//Chạy hàm thoát khi Close Tab hoặc đóng của sổ trình duyệt Browse
+window.addEventListener("beforeunload", function (event) {
+	Thoatconfirm_value();
+    //event.preventDefault(); // Bắt buộc trên Chrome, Edge, Firefox
+});
+window.addEventListener("pagehide", function() {
+    Thoatconfirm_value();
+});
+document.addEventListener("visibilitychange", function () {
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (document.visibilityState === "hidden" && isSafari) {
+        Thoatme.style.display = "block";
+    }
+});
+
+ 
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+
+    Thoatme.style.display = "none";
+}
+
+function close_window() {
+	close();	
+}
+
+// ---------------------------
+
+
+//OK--------
+ 
+document.addEventListener('contextmenu', event => event.preventDefault());
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
+
+
+
+$(document).ready(function() {
+
+Readtime_value();
+
+ var url = location.protocol;
+
+ if (url == "file:KHANH") {
+	close();
+
+	} else {
+			//==== Lịch ====
+	$('.Colum14').datepicker({
+          format: 'dd/mm/yyyy',
+          autoclose: true,
+          todayHighlight: true,
+          language: 'vi'
+        }).on('changeDate', function(e) {
+          $('#Colum14').val(
+            (e.date.getDate()<10 ? '0' : '') + e.date.getDate() + '/' +
+            ((e.date.getMonth()+1)<10 ? '0' : '') + (e.date.getMonth()+1) + '/' +
+            e.date.getFullYear()
+          );
+        });
+
+		//====End Lịch ====
+	}
+
+});
+
+
+
+// ----------------------
+
+  function ctrlq(e) {
+
+			document.getElementById("ngay").value = e.result;
+			//alert(document.getElementById("ngay").value);
+			//alert(document.getElementById("combine").value);
+			let text = document.getElementById("ngay").value;
+				// Lấy 12 chử cuối để kiểm tra
+				let word = text.split(/\s+/); 	// Sử dụng biểu thức chính quy để tách chuỗi theo khoảng trắng	
+				// Lấy 9 chử tính từ cuối cùng
+				let String = word.slice(-15); 		
+				// Kết hợp lại thành một chuỗi
+				let StringLast = String.join(" ");
+
+
+			if (text == "Quathoigian") {
+
+					document.getElementById("id-container").style.display = "block";
+					document.getElementById("id_alert").innerHTML = "Vui lòng thực hiện lại đăng nhập !";
+					
+					document.getElementById("confirm_id").onclick = function(){confirm_id()};
+					function confirm_id() {
+						Thoatconfirm_value();
+					}
+			}
+
+			if (StringLast.indexOf("Cập")> 0) {
+
+					let words = StringLast.split(/\s+/); 	// Sử dụng biểu thức chính quy để tách chuỗi theo khoảng trắng	
+					let lastTenWords = words.slice(-6); 		
+					let resultString = lastTenWords.join(" ");
+
+					dialog_result.style.display = "block";
+					document.getElementById("id_result").innerHTML = resultString;
+					document.getElementById("id_result1").style.display = "block"; //id_result1 chạy Cập nhật
+					document.getElementById("id_result2").style.display = "none"; //id_result2 chạy Thêm
+					document.getElementById("id_result3").style.display = "none"; //id_result3 chạy Xóa
+					document.getElementById("id_result4").style.display = "none"; //id_result4 Thông báo trùng
+					
+					} else if (StringLast.indexOf("Nhập")> 0) {
+
+					let words = StringLast.split(/\s+/); 	// Sử dụng biểu thức chính quy để tách chuỗi theo khoảng trắng	
+					let lastTenWords = words.slice(-11); 		
+					let resultString = lastTenWords.join(" ");
+
+					dialog_result.style.display = "block";
+					document.getElementById("id_result").innerHTML = resultString;
+					document.getElementById("id_result1").style.display = "none";
+					document.getElementById("id_result2").style.display = "block";					
+					document.getElementById("id_result3").style.display = "none";					
+					document.getElementById("id_result4").style.display = "none";	
+					
+					} else if (StringLast.indexOf("Xóa")> 0) {
+
+					let words = StringLast.split(/\s+/); 	// Sử dụng biểu thức chính quy để tách chuỗi theo khoảng trắng	
+					let lastTenWords = words.slice(-5); 		
+					let resultString = lastTenWords.join(" ");
+
+					dialog_result.style.display = "block";
+					document.getElementById("id_result").innerHTML = resultString + ". STT đã được đánh lại mới.";
+					document.getElementById("id_result1").style.display = "none";
+					document.getElementById("id_result2").style.display = "none";
+					document.getElementById("id_result3").style.display = "block";
+					document.getElementById("id_result4").style.display = "none";
+					
+					} else if (StringLast.indexOf("trùng")> 0 || StringLast.indexOf("tồn")> 0) {
+
+					let words = StringLast.split(/\s+/); 	// Sử dụng biểu thức chính quy để tách chuỗi theo khoảng trắng	
+					// Lấy 9 chử tính từ cuối cùng
+					let lastTenWords = words.slice(-11); 		
+					// Kết hợp lại thành một chuỗi
+					let resultString = lastTenWords.join(" ");
+
+					dialog_result.style.display = "block";
+					document.getElementById("id_result").innerHTML = resultString;
+					document.getElementById("id_result1").style.display = "none";
+					document.getElementById("id_result2").style.display = "none";
+					document.getElementById("id_result3").style.display = "none";
+					document.getElementById("id_result4").style.display = "block";	
+
+			} else if (text.indexOf("quyền") > 0 ) {
+				dialog_result.style.display = "block";
+				document.getElementById("id_result").innerHTML = text;
+				document.getElementById("id_result1").style.display = "block";
+				document.getElementById("id_result2").style.display = "none";
+				document.getElementById("id_result3").style.display = "none";
+				document.getElementById("id_result4").style.display = "none";
+				//alert("quyền");			
+			} else if (text.indexOf("lòng") > 0 ) {
+					dialog_result.style.display = "block";
+					document.getElementById("id_result").innerHTML = text;
+					document.getElementById("id_result1").style.display = "none";
+					document.getElementById("id_result2").style.display = "block";
+					document.getElementById("id_result3").style.display = "none";
+					document.getElementById("id_result4").style.display = "none";
+
+					document.getElementById("id_result2").onclick = function(){confirm_id2()};
+					function confirm_id2() {
+						document.getElementById("dialog_result").style.display = "none";
+						Thoatconfirm_value();
+					}					
+//				alert("lòng");	
+					
+				} else {
+	  
+		}
+
+
+	var Thoat_confirm_result4 = document.getElementById("confirm_result4"); //id_result4 Thông báo trùng khi thêm dữ liệu
+	document.getElementById("confirm_result4").onclick = function(){confirm_result4()};
+	function confirm_result4() {		
+		dialog_result.style.display = "none";
+	}
+	
+		
+	if (document.getElementById("ngay").value == "") {
+	 } else {
+		 ChangeID();
+	}
+		
+		$("#re").html(e.result);
+		$("#re").css("visibility","visible");
+
+	 }
+	var Thoat_resultme1 = document.getElementById("dialog_result");
+	document.getElementById("confirm_result1").onclick = function(){confirm_result1()};
+	function confirm_result1() {		
+		Thoat_resultme1.style.display = "none";		
+	}
+
+	var Thoat_resultme2 = document.getElementById("dialog_result"); 
+	document.getElementById("confirm_result2").onclick = function(){confirm_result2()};
+	function confirm_result2() {		
+		Thoat_resultme2.style.display = "none";
+			//close(); //Không bật clóe
+	}
+ 
+ 
+function Readtime_value() {
+				// Lấy giá trị từ localStorage
+	//var idngaylog = localStorage.getItem('part2');
+	var idngaylog = "55202743475031212121290634348042";	
+	//alert(savedPart2); // Hiển thị giá trị đã lưu trữ trong localStorage
+ 
+	var ngay= $("#ngay").val();	
+    var url = atob(script_url)+"?callback=ctrlq&ngay="+ngay+ "&idngaylog=" + idngaylog +"&action=Readtime";	  
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+
+	  });	
+	localStorage.removeItem('part2');
+	//alert(savedPart2); // Hiển thị giá trị đã lưu trữ trong localStorage
+}	
+
+
+	
+	
+function getPart1(str) {        // Lấy chuổi trái của "ngay"
+    return str.split(' ')[0];
+}
+		
+function getPart2(str) {        // Lấy chuổi phải của "ngay"
+    return str.split(' ')[1];
+}
+
+function ChangeID() {
+	document.getElementById("capnhatpaucDHA").value = getPart2(document.getElementById("ngay").value);   // Lấy chuổi phải của "ngay"
+	// Đổi Value ngày: gán giá trị 'ngay' cho 'ngay2' sau dó đổi ngay2 thành 'ngaylog'
+	if (document.getElementById('ngay2')) {
+	document.getElementById("ngay2").value = getPart1(document.getElementById("ngay").value); // Lấy chuổi trái của "ngay"
+	document.getElementById('ngay2').id = 'ngaylog';
+	document.getElementById('capnhatpaucDHA').id = 'combine';
+
+	//CheckNgaylog_value();
+
+//==== CHÚ Ý: CHUỔI combine LÀ CHỬ THƯỜNG KHÔNG VIÊT HOA paucdha=====
+	if (document.getElementById("combine").value == "paucdha" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "paucdhi" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "pauchue" && document.getElementById("combine").value !== "" ) {
+	document.getElementById('legend').innerHTML = "CẬP NHẬT PAUC CQ ĐÀI ĐHA";
+	readDatapaucDHA_value();
+	//checkAndShowReminder(); // Gọi hàm kiểm tra nhắc nhở lưu file cuối tháng
+	}
+			
+
+	}
+}
+
+
+//-----------------------UPDATE--------------------
+
+document.getElementById("btn-show-update").onclick = function(){show_update()}; // Không sử dụng nữa
+var Thoat_updateme = document.getElementById("update-container");
+
+function show_update() {
+
+    // Thực hiện các thao tác sau một khoảng thời gian (ví dụ: 2 giây)
+    setTimeout(function() {
+	document.getElementById("id_Up").innerHTML = "Bạn muốn Cập nhật dòng thứ: " + document.getElementById("id").value + " không ? " ;
+	// Kiểm tra điều kiện và thực hiện các thao tác liên quan
+        if (document.getElementById('id').value === "" || document.getElementById('id').value < 0) {
+            // Ẩn container cập nhật và hiển thị cảnh báo ID
+            Thoat_updateme.style.display = "none";
+            document.getElementById("id-container").style.display = "block";
+			
+            document.getElementById("id_alert").innerHTML = "Hãy chọn một dòng để cập nhật !";
+
+            // Xử lý khi xác nhận ID
+            document.getElementById("confirm_id").onclick = function() {
+                document.getElementById("id-container").style.display = "none";
+            };
+
+            return false;
+        }
+
+        // Hiển thị container cập nhật
+        Thoat_updateme.style.display = "block";
+    }, 1000); // Thay đổi giá trị 2000 nếu bạn cần độ trễ khác
+}
+
+
+
+document.getElementById("confirm_update").onclick = function(){confirm_update()};
+function confirm_update() {
+  cancel_update();
+  var combineValue = document.getElementById("combine").value;
+  if (combineValue === "") {
+    return false; // Thoát ngay nếu giá trị combine trống
+  } else {
+   setTimeout(function() {
+//  alert("Chạy hàm updatepaucDHA_value");
+    updatepaucDHA_value(); 
+   }, 500); // Thay đổi giá trị 2000 nếu bạn cần độ trễ khác
+  }
+}
+
+document.getElementById("cancel_update").onclick = function(){cancel_update()};
+function cancel_update() { 
+    Thoat_updateme.style.display = "none";
+}
+
+//------------------INSERT-------------------
+document.getElementById("btn-show-insert").onclick = function() {
+    show_insert();
+};
+
+var Thoat_insertme = document.getElementById("insert-container");
+
+function show_insert() {
+    setTimeout(function() {
+        // Sử dụng === để so sánh giá trị thay vì gán giá trị
+        if (document.getElementById('Colum2').value === "") {
+            Thoat_insertme.style.display = "none";
+            document.getElementById("id-container").style.display = "block";
+            document.getElementById("id_alert").innerHTML = "Chưa nhập Trạm."; 
+			
+				document.getElementById("confirm_id").onclick = function(){confirm_id()};
+				function confirm_id() {
+					document.getElementById("id-container").style.display = "none";	
+				}
+				return false
+				
+			} else {
+            document.getElementById("id_Ins").innerHTML = "Bạn muốn Nhập thêm mới dòng dữ liệu này không ?";
+            Thoat_insertme.style.display = "block";
+        }
+    }, 1000); 
+}
+
+
+
+document.getElementById("confirm_insert").onclick = function(){confirm_insert()};
+function confirm_insert() {
+Thoat_insertme.style.display = "none";
+		if (document.getElementById("combine").value == "paucdha" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "truccadhi" && document.getElementById("combine").value !== ""  || document.getElementById("combine").value == "truccahue" && document.getElementById("combine").value !== "" ) {
+			insertpaucDHA_value();			
+		} else {
+				Thoat_insertme.style.display = "none";
+				document.getElementById("id-container").style.display = "block";
+
+				document.getElementById("id_alert").innerHTML = "Chọn Trạm đang đăng nhập để thêm số liệu !";	
+
+				document.getElementById("confirm_id").onclick = function(){confirm_id()};
+				function confirm_id() {
+					document.getElementById("id-container").style.display = "none";	
+				}
+				return false;
+		}	
+		Thoat_insertme.style.display = "none";    	
+}
+
+document.getElementById("cancel_insert").onclick = function(){cancel_insert()};
+function cancel_insert() { 
+    Thoat_insertme.style.display = "none";
+}
+
+//---DELETE---
+
+document.getElementById("btn-show-delete").onclick = function(){show_delete()};
+var Thoat_deleteme = document.getElementById("delete-container");
+
+function show_delete() {
+    setTimeout(function() {
+	document.getElementById("id_Del").innerHTML = "Bạn muốn Xóa dòng thứ " + document.getElementById("id").value + " không ? " ;
+		if (document.getElementById('id').value === "" || document.getElementById('id').value < 0 ) {
+		// alert("OK");
+			Thoat_deleteme.style.display = "none";	
+			document.getElementById("id-container").style.display = "block";
+			document.getElementById("id_alert").innerHTML = "Hãy chọn một dòng muốn xóa !";	
+
+			document.getElementById("confirm_id").onclick = function(){confirm_id()};
+			function confirm_id() {
+				document.getElementById("id-container").style.display = "none";	
+			}
+
+				return false;
+		}
+			Thoat_deleteme.style.display = "block";
+    }, 500); // Thay đổi giá trị 2000 nếu bạn cần độ trễ khác
+}
+
+
+document.getElementById("confirm_delete").onclick = function(){confirm_delete()};
+
+function confirm_delete() {
+
+  cancel_delete();
+  var combineValue = document.getElementById("combine").value;
+  if (combineValue === "") {
+    return false; // Thoát ngay nếu giá trị combine trống
+
+  } else {
+  //alert("Xóa");
+    deletepaucDHA_value();
+  }
+	
+}
+
+document.getElementById("cancel_delete").onclick = function(){cancel_delete()};
+function cancel_delete() { 
+    Thoat_deleteme.style.display = "none";
+}
+
+// THAY
+
+
+function updatepaucDHA_value() {
+    $("#re").css("visibility", "hidden");
+    document.getElementById("loader").style.visibility = "visible";
+
+    var ngaylog = $("#ngaylog").val();
+    var combine = $("#combine").val();
+    var id = $("#id").val();
+
+    // Tạo chuỗi URL động với các cột Colum2 đến Colum67
+    var url = atob(script_url) + "?callback=ctrlq&id=" + id;
+
+    for (let i = 2; i <= 67; i++) {
+        let value = $('#Colum' + i).val();
+        url += "&Colum" + i + "=" + encodeURIComponent(value);
+    }
+    url += "&ngaylog=" + encodeURIComponent(ngaylog) + "&combine=" + encodeURIComponent(combine) + "&action=updatepaucDHA";
+
+    // Gửi request
+    var request = $.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+    });
+
+    // Xóa dữ liệu sau khi gửi
+    document.getElementById("id").value = "";
+    for (let i = 2; i <= 67; i++) {
+        document.getElementById("Colum" + i).value = "";
+    }
+}
+
+
+function deletepaucDHA_value() {
+    $("#re").css("visibility", "hidden");
+    document.getElementById("loader").style.visibility = "visible";
+
+    var ngaylog = $("#ngaylog").val();
+    var combine = $("#combine").val();
+    var id = $("#id").val();
+
+    // Tạo chuỗi URL động với các cột Colum2 đến Colum67
+    var url = atob(script_url) + "?callback=ctrlq&id=" + id;
+
+    for (let i = 2; i <= 67; i++) {
+        let value = $('#Colum' + i).val();
+        url += "&Colum" + i + "=" + encodeURIComponent(value);
+    }
+    url += "&ngaylog=" + encodeURIComponent(ngaylog) + "&combine=" + encodeURIComponent(combine) + "&action=deletepaucDHA";
+
+    // Gửi request
+    var request = $.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+    });
+
+    // Xóa dữ liệu sau khi gửi
+    document.getElementById("id").value = "";
+    for (let i = 2; i <= 67; i++) {
+        document.getElementById("Colum" + i).value = "";
+    }
+}
+
+  
+function insertpaucDHA_value() {
+    $("#re").css("visibility", "hidden");
+    document.getElementById("loader").style.visibility = "visible";
+
+    var ngaylog = $("#ngaylog").val();
+    var combine = $("#combine").val();
+    var id = $("#id").val();
+
+    // Tạo chuỗi URL động với các cột Colum2 đến Colum67
+    var url = atob(script_url) + "?callback=ctrlq&id=" + id;
+
+    for (let i = 2; i <= 67; i++) {
+        let value = $('#Colum' + i).val();
+        url += "&Colum" + i + "=" + encodeURIComponent(value);
+    }
+    url += "&ngaylog=" + encodeURIComponent(ngaylog) + "&combine=" + encodeURIComponent(combine) + "&action=insertpaucDHA";
+
+    // Gửi request
+    var request = $.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+    });
+
+    // Xóa dữ liệu sau khi gửi
+    document.getElementById("id").value = "";
+    for (let i = 2; i <= 67; i++) {
+        document.getElementById("Colum" + i).value = "";
+    }
+}
+ 
+
+//------------------------Upload File-----------------------------
+
+
+document.getElementById("fileUpload").addEventListener("change", function () {
+    const label = document.querySelector(".custom-file-upload");
+    label.textContent = this.files.length > 0 ? this.files[0].name : "Browse";
+});
+
+async function insertpaucDHAExcel_value() {
+    const fileUpload = document.getElementById("fileUpload").files[0];
+
+    if (!fileUpload) {
+        alert("Hãy chọn File Excel để Upload!");
+        return false;
+    }
+
+    const Thoat_Upload = document.getElementById("updateExcel-container");
+    Thoat_Upload.style.display = "block";
+    //sendBegin();
+    document.getElementById("id_UpExcel").innerHTML = "Bạn muốn Upload dữ liệu từ file Excel không?";
+
+    document.getElementById("cancel_updateExcel").onclick = () => {
+        Thoat_Upload.style.display = "none";
+    };
+
+    document.getElementById("confirm_updateExcel").onclick = async () => {
+        Thoat_Upload.style.display = "none";
+        const reader = new FileReader();
+        reader.onload = async (e) => {
+            const data = e.target.result;
+            const workbook = XLSX.read(data, { type: 'binary' });
+            const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+            const excelData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
+
+            const nonEmptyRows = excelData.filter(row => row.some(cell => cell !== undefined && cell !== null && cell !== ''));
+            const totalRows = nonEmptyRows.length;
+
+            if (totalRows <= 1) {
+                alert("File Excel không có dữ liệu!");
+                return false;
+            }
+
+            const dataRows = nonEmptyRows.slice(1);
+            document.getElementById("output").value = JSON.stringify(dataRows);
+            
+            await sendData(); // Gửi dữ liệu sau khi có dataExcel
+        };
+
+        reader.readAsBinaryString(fileUpload); // Đọc file Excel
+    };
+}
+
+
+async function sendData() {
+    const ngaylog = document.getElementById("ngaylog").value;
+    const combine = document.getElementById("combine").value;
+    const dataExcel = document.getElementById("output").value; // Lấy dữ liệu Excel
+
+    // Tạo đối tượng dữ liệu để gửi
+    const postData = {
+        ngaylog: ngaylog,
+        combine: combine,
+        dataExcel: dataExcel,
+        action: "insertpaucDHAExcel"
+    };
+
+    try {
+        // Gửi yêu cầu AJAX với phương thức POST
+        const response = await jQuery.ajax({
+            url: atob(script_url), // Chuyển URL từ base64
+            method: "POST",
+            data: postData,
+            dataType: "text" // Chờ đợi phản hồi dưới dạng văn bản
+        });
+
+	// Phân tích cú pháp phản hồi từ server
+	const result = JSON.parse(response); // Phân tích cú pháp phản hồi JSON
+
+	// Hiển thị thông báo kết quả từ server
+	document.getElementById("output").value = result.result;
+
+	let textExcel = result.result; // Gán giá trị từ server vào biến textExcel
+	// Kiểm tra xem thông báo có chứa từ "Upload" không
+	if (textExcel.indexOf("Upload") > 0) {
+
+		// Tách chuỗi thành mảng các từ bằng cách sử dụng biểu thức chính quy
+		let words = textExcel.split(/\s+/); 		
+		// Lấy 10 từ cuối cùng
+		let lastTenWords = words.slice(-18); 		
+		// Kết hợp lại thành một chuỗi
+		let resultString = lastTenWords.join(" "); 
+		
+		// Hiển thị hộp thoại và chuỗi kết quả
+		document.getElementById("dialog_resultExcel").style.display = "block"; // Hiển thị hộp thoại
+		document.getElementById("id_resultExcel_1").innerHTML = resultString; // Hiển thị chuỗi đã xử lý
+	}
+       
+    } catch (error) {
+        alert("Có lỗi xảy ra khi gửi dữ liệu: " + error.message); // Hiển thị lỗi nếu có
+    }
+}
+
+//======HÀM OK=======
+
+
+	
+ //---------------------------------------------------------------- 
+
+//--- Cấu hình Lịch Ag-grid ngôn ngữ tiếng Việt cho jQuery UI Datepicker----
+// Cấu hình Datepicker ngôn ngữ tiếng Việt
+$.datepicker.regional['vi'] = {
+    closeText: 'Đóng',
+    prevText: '&#x3C;Trước',
+    nextText: 'Tiếp&#x3E;',
+    currentText: 'Hôm nay',
+    monthNames: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6',
+        'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+    monthNamesShort: ['Th1', 'Th2', 'Th3', 'Th4', 'Th5', 'Th6', 'Th7', 'Th8', 'Th9', 'Th10', 'Th11', 'Th12'],
+    dayNames: ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'],
+    dayNamesShort: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+    dayNamesMin: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+    weekHeader: 'Tuần',
+    dateFormat: 'dd/mm/yy',
+    firstDay: 0,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+};
+$.datepicker.setDefaults($.datepicker.regional['vi']);
+
+// Định nghĩa DatepickerEditor cho ag-Grid
+function DatepickerEditor() {}
+
+DatepickerEditor.prototype.init = function(params) {
+    this.params = params;
+    this.oldValue = params.value; // Lưu giá trị cũ
+
+    this.eInput = document.createElement('input');
+    this.eInput.type = 'text';
+    this.eInput.value = params.value || '';
+    this.eInput.style.width = '100%';
+
+    $(this.eInput).datepicker({
+        dateFormat: 'dd/mm/yy',
+        showButtonPanel: true,
+        closeText: 'Đóng',
+        currentText: 'Hôm nay',
+        onSelect: () => params.stopEditing(),
+        beforeShow: (input, inst) => {
+            setTimeout(() => {
+                var buttonPane = $(inst.dpDiv).find(".ui-datepicker-buttonpane");
+
+                // Thêm nút "Hôm nay"
+                if (buttonPane.find('.ui-datepicker-current').length === 0) {
+                    var btnToday = $('<button>', {
+                        text: 'Hôm nay',
+                        click: () => {
+                            var today = new Date();
+                            var formattedDate = $.datepicker.formatDate('dd/mm/yy', today);
+                            $(input).val(formattedDate).change();
+                            params.stopEditing();
+                            $(input).datepicker("hide");
+                        }
+                    }).addClass('ui-datepicker-current ui-state-default ui-priority-primary ui-corner-all');
+                    buttonPane.append(btnToday);
+                }
+
+                // Thêm nút "Đóng"
+                if (buttonPane.find('.ui-datepicker-close').length === 0) {
+                    var btnClose = $('<button>', {
+                        text: 'Đóng',
+                        click: () => {
+                            $(input).datepicker("hide");
+                            params.stopEditing();
+                        }
+                    }).addClass('ui-datepicker-close ui-state-default ui-priority-secondary ui-corner-all');
+                    buttonPane.append(btnClose);
+                }
+            }, 1);
+        }
+    });
+
+    this.eInput.focus();
+};
+
+// Trả về giao diện của input
+DatepickerEditor.prototype.getGui = function() {
+    return this.eInput;
+};
+
+// Hiển thị Datepicker ngay khi input xuất hiện
+DatepickerEditor.prototype.afterGuiAttached = function() {
+    this.eInput.focus();
+    $(this.eInput).datepicker("show");
+};
+
+// Lấy giá trị ngày đã chọn với kiểm tra định dạng
+DatepickerEditor.prototype.getValue = function() {
+    var value = this.eInput.value.trim();
+
+    // Kiểm tra định dạng dd/mm/yyyy bằng regex
+    var dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+
+    if (dateRegex.test(value)) {
+        return value; // Hợp lệ, trả về giá trị mới
+    } else {
+        alert("⚠️ Ngày nhập không đúng định dạng dd/mm/yyyy!");
+        return this.oldValue; // Không hợp lệ, giữ nguyên giá trị cũ
+    }
+};
+
+// Hủy Datepicker khi không cần thiết nữa
+DatepickerEditor.prototype.destroy = function() {
+    $(this.eInput).datepicker("destroy");
+};
+
+// Xác định Datepicker là một popup
+DatepickerEditor.prototype.isPopup = function() {
+    return true;
+};
+//---End Cấu hình Lịch Ag-grid ngôn ngữ tiếng Việt cho jQuery UI Datepicker----
+ 
+function readDatapaucDHA_value() {
+    var ngaylog = $("#ngaylog").val();
+
+    if (document.getElementById("combine").value == "") {
+        document.getElementById("id-container").style.display = "block";
+        document.getElementById("id_alert").innerHTML = "Hãy đăng nhập!";
+        document.getElementById("confirm_id").onclick = function() {
+            document.getElementById("id-container").style.display = "none";
+        };
+        return false;
+    } else {
+        $("#re").css("visibility", "hidden");
+
+        var url = atob(script_url)+"?action=readpaucDHA&ngaylog=" + ngaylog;
+
+        document.getElementById("spinner").style.display = "block"; // Hiển thị spinner
+
+        $.getJSON(url, function(json) {
+            var columnDefs = [
+
+			    { headerName: "STT", field: "ID", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 90, pinned: 'left', checkboxSelection: true, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Tên Trạm", field: "Colum2", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "ID Trạm nguồn", field: "Colum3", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "ID Trạm đích", field: "Colum4", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Lớp của Node", field: "Colum5", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Khoảng cách Node", field: "Colum6", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 120, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Hướng", field: "Colum7", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 120, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Tên TB", field: "Colum8", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "Cáp SD", field: "Colum9", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "UT1", field: "Colum10", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "UT2", field: "Colum11", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+
+                { headerName: "Tên TB 1", field: "Colum12", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum13", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT1", field: "Colum14", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT2", field: "Colum15", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Tên TB 2", field: "Colum16", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum17", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT1", field: "Colum18", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT2", field: "Colum19", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Tên TB 3", field: "Colum20", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum21", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT1", field: "Colum22", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT2", field: "Colum23", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Tên TB 4", field: "Colum24", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum25", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT1", field: "Colum26", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT2", field: "Colum27", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Tên TB 5", field: "Colum28", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum29", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },								
+                { headerName: "Cáp UT1", field: "Colum30", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT2", field: "Colum31", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Tên TB 6", field: "Colum32", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum33", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT1", field: "Colum34", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp UT2", field: "Colum35", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },	
+				
+                { headerName: "Hướng", field: "Colum36", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 120, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "Col37-No", field: "Colum37", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "Col38-No", field: "Colum38", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "Col39-No", field: "Colum39", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "Tên TB", field: "Colum40", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "Cáp SD", field: "Colum41", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "UT1", field: "Colum42", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },
+                { headerName: "UT2", field: "Colum43", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned}, hide: true, suppressColumnsToolPanel: true },					
+
+                { headerName: "Tên TB 1", field: "Colum44", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum45", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT1", field: "Colum46", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT2", field: "Colum47", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Tên TB 2", field: "Colum48", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum49", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT1", field: "Colum50", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },	
+
+                { headerName: "UT2", field: "Colum51", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Tên TB 3", field: "Colum52", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum53", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT1", field: "Colum54", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT2", field: "Colum55", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Tên TB 4", field: "Colum56", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum57", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+
+                { headerName: "UT1", field: "Colum58", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT2", field: "Colum59", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Tên TB 5", field: "Colum60", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum61", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT1", field: "Colum62", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT2", field: "Colum63", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Tên TB 6", field: "Colum64", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 110, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Cáp SD", field: "Colum65", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT1", field: "Colum66", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "UT2", field: "Colum67", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, editable: params => params.node.rowPinned, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Người Update", field: "Colum68", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned} },
+                { headerName: "Ngày Update", field: "Colum69", cellRenderer: highlightSearchText, filter: 'agTextColumnFilter', width: 100, valueGetter: getValue, valueSetter: setValue, cellEditor: 'agLargeTextCellEditor', cellClass: params => {return params.node.rowPinned ? 'wrap-text-cell' : '';}, cellClassRules: {'red-border-cell': params => params.node.rowPinned} }				
+				];
+            var pinnedRowData = [{
+                //ID: '',
+                Colum2: '', Colum3: '',Colum4: '',Colum5: '',Colum6: '',Colum7: '',Colum8: '', Colum9: '',Colum10: '',Colum11: '',Colum12: '',Colum13: '',Colum14: '', Colum15: '',Colum16: '',Colum17: '',Colum18: '',Colum19: '',Colum20: '', Colum21: '',Colum22: '',Colum23: '',Colum24: '',Colum25: '',Colum26: '', Colum27: '',Colum27: '',Colum28: '',Colum29: '',Colum30: '',Colum31: '', Colum32: '',Colum33: '',Colum34: '',Colum35: '',Colum36: '',Colum37: '', Colum38: '',Colum39: '',Colum40: '',Colum41: '',Colum42: '',Colum43: '', Colum44: '',Colum45: '',Colum46: '',Colum47: '',Colum48: '',Colum49: '', Colum50: '',Colum51: '',Colum52: '',Colum53: '',Colum54: '',Colum55: '', Colum56: '',Colum57: '',Colum58: '',Colum59: '',Colum60: '',Colum61: '', Colum62: '',Colum63: '',Colum64: '',Colum65: '',Colum66: '',Colum67: '',Colum68: '',Colum69: ''
+            }];
+
+            var gridOptions = {
+                columnDefs: columnDefs,
+                rowData: json.records,
+				
+				getRowHeight: params => {
+				if (params.node.rowPinned) {
+					return 60; // Đặt chiều cao cho pinned row
+				}
+					//return 30; // Chiều cao mặc định cho các row khác
+				},
+				
+				pinnedTopRowData: pinnedRowData,
+				singleClickEdit: true,    // Cho phép chỉnh sửa bằng một lần nhấp
+                pagination: true,
+                paginationPageSize: 12,
+                paginationPageSizeSelector: [12, 20, 30, 50, 100, 200, 500, 90000],
+
+                defaultColDef: {
+                    floatingFilter: true,
+					wrapHeaderText: true,					
+					resizable: true,
+					wrapText: false, // Không wrap text cho dữ liệu thường
+					autoHeight: true, // Cho phép tự điều chỉnh chiều cao khi có wrap text
+					suppressMenuHide: false
+					//suppressMenuHide: false // Hiển thị menu cột khi nhấn vào icon menu
+                },
+				
+                onGridReady: function() {  // Sự kiện nút "Reset"
+				drawChart();				// Gọi hàm vẽ Chart
+				document.getElementById('resetFilterButton').addEventListener('click', function () {
+				gridOptions.api.setFilterModel(null); // Xóa tất cả các bộ lọc hiện tại
+					gridOptions.api.onFilterChanged(); // Kích hoạt cập nhật bộ lọc
+					
+					// Xóa bộ đếm kết quả tìm kiếm
+					document.getElementById('filterText').value = '';
+					filterText = '';
+					document.getElementById('count').innerText = '';
+					var searchText = this.value.toUpperCase();
+					gridOptions.api.setQuickFilter(searchText);
+
+					// Bỏ chọn checkbox
+                    gridOptions.api.forEachNode(function(node) {
+                        node.setSelected(false);
+                    });				
+					unhideAllColumns();
+					// Cập nhật lại giao diện lưới
+					gridOptions.api.closeToolPanel(); // Ẩn ToolPanel Chọn cột
+					setTimeout(function() {
+						gridOptions.api.refreshCells({ force: true });
+					}, 0);	
+
+				});
+
+                addResizeHandles();
+
+//---- VẼ SO ĐỒ ECHART-----------
+
+// Hàm lấy dữ liệu từ ag-Grid
+function parseDataFromAgGrid(gridOptions) {
+  var rowData = [];
+  gridOptions.api.forEachNode(function (node) {
+    rowData.push(node.data); // Lấy dữ liệu của mỗi hàng
+  });
+
+//  if (rowData.length === 0) {
+//    alert("Không có dữ liệu để vẽ biểu đồ!");
+//    return;
+//  }
+
+  const nodes = [];
+  const links = [];
+
+  // --- Tìm các layer duy nhất ---
+  const layerSet = new Set();
+  rowData.forEach(data => {
+    const layer = data.Colum5 ? data.Colum5.trim() : '';
+    if (layer) layerSet.add(layer);
+  });
+
+  const sortedLayers = Array.from(layerSet).sort(); // Sắp xếp theo thứ tự tăng
+  const layerSpacing = 450; // Khoảng cách giữa các layer (tuỳ chỉnh)
+  const layerY = {};
+
+  // --- Tính toạ độ Y dựa trên số layer ---
+  sortedLayers.forEach((layer, index) => {
+    layerY[layer] = 100 + index * layerSpacing;
+  });
+
+  rowData.forEach(data => {
+    const label = data.Colum2 ? data.Colum2.trim() : '';
+    const id = data.Colum3 ? data.Colum3.trim() : '';
+    const target = data.Colum4 ? data.Colum4.trim() : '';
+    const layer = data.Colum5 ? data.Colum5.trim() : '';
+    const x = data.Colum6 ? +data.Colum6 : 0;
+
+    const cellData = [];
+    for (let i = 4; i <= 67; i++) {
+      const colName = `Colum${i}`;
+      if (data[colName]) {
+        cellData.push(data[colName]);
+      } else {
+        cellData.push("");
+      }
+    }
+
+    const parsedData = [];
+    for (let i = 0; i < cellData.length; i += 4) {
+      const rowSlice = cellData.slice(i, i + 4);
+      if (rowSlice.length === 4) {
+        parsedData.push(rowSlice);
+      }
+    }
+
+    const y = layerY[layer] || 0;
+
+    const node = { id, x, y, label, data: parsedData };
+    nodes.push(node);
+
+    if (target) {
+      const targets = target.split(",").map(t => t.trim());
+      targets.forEach(t => {
+        links.push({ source: id, target: t });
+      });
+    }
+  });
+
+  return { nodes, links };
+}
+
+// Hàm vẽ biểu đồ sau khi lấy dữ liệu từ ag-Grid
+function drawChart() {
+  const svg = d3.select("svg");
+  const width = 400; // Độ rộng bảng node
+
+  // Lấy dữ liệu từ ag-Grid
+  const { nodes, links } = parseDataFromAgGrid(gridOptions);
+
+  // Định nghĩa mũi tên cho đường nối
+svg.append("defs").append("marker")
+  .attr("id", "arrow")
+  .attr("viewBox", "0 0 10 10")
+  .attr("refX", 9) //Dịch chuyển dấu mũi tên
+  .attr("refY", 5)
+  .attr("markerWidth", 6)
+  .attr("markerHeight", 6)
+  .attr("orient", "auto")
+  .append("path")
+  .attr("d", "M 0 0 L 10 5 L 0 10 z")
+  .attr("fill", "#666");
+
+// Hàm vẽ đường nối giữa các node
+function getEdgePoint(source, target, heightSource, heightTarget) {
+  const dx = target.x - source.x;
+  const dy = target.y - source.y;
+  const angle = Math.atan2(dy, dx);
+  const sx = source.x + width / 2 + (width / 2) * Math.cos(angle);
+  const sy = source.y + heightSource / 2 + (heightSource / 2 - 5) * Math.sin(angle);
+  //const tx = target.x + width / 2 - (width / 2 - 5) * Math.cos(angle);
+  const tx = target.x + width / 2 - (width / 2 ) * Math.cos(angle);
+  //const ty = target.y + heightTarget / 2 - (heightTarget / 2 - 5) * Math.sin(angle);
+  const ty = target.y + heightTarget / 2 - (heightTarget / 2 ) * Math.sin(angle);
+  return { sx, sy, tx, ty };
+}
+
+// Tạo các node
+const nodeGroup = svg.selectAll("g.node")
+  .data(nodes)
+  .enter()
+  .append("g")
+  .attr("class", "node")
+  .attr("transform", d => `translate(${d.x},${d.y})`);
+
+nodeGroup.append("text")
+  .attr("x", width / 2)
+  .attr("y", -8)
+  .attr("text-anchor", "middle")
+  .attr("font-size", "14px")
+  .attr("font-weight", "bold")
+  .text(d => d.label);
+
+nodeGroup.append("rect")
+  .attr("width", width)
+  .attr("fill", "#fff")
+  .attr("stroke", "#000");
+
+// Gắn foreignObject chứa bảng dữ liệu của từng node
+const fo = nodeGroup.append("foreignObject")
+  .attr("width", width)
+  .append("xhtml:div")
+  .style("width", width + "px")
+  .style("display", "inline-block")
+  .style("overflow", "visible")
+  .html(function(d) {
+    let html = "<table class='node-table'>";
+    for (let i = 0; i < d.data.length; i++) {
+      const row = d.data[i];
+      const titleCell = row.find(cell => typeof cell === 'string' && cell.includes("Hướng"));
+
+      if (titleCell) {
+        // Nếu dòng chứa 1 ô có "Hướng", hiển thị dòng tiêu đề
+        html += "<tr><td colspan='4' class='header'>" + titleCell + "</td></tr>";
+      } else {
+        // Ngược lại, hiển thị dòng dữ liệu bình thường
+        //html += "<tr>";
+        //row.forEach(function(cell, j) {
+        //  html += "<td class='" + (j === 0 ? "first-col" : "") + "'>" + cell + "</td>";
+        //});
+        //html += "</tr>";
+
+		//html += "<tr>";
+		//row.forEach(function(cell, j) {
+		//  const width = j === 0 ? "60px" : j === 1 ? "90px" : j === 2 ? "130px" : "180px";
+		//  html += "<td style='width:" + width + "; border:1px solid #ccc; padding:4px;' class='" + (j === 0 ? "first-col" : "") + "'>" + cell + "</td>";
+		//});
+		//html += "</tr>";
+
+		html += "<tr>";
+		row.forEach(function(cell, j) {
+		  const width = j === 0 ? "50px" : j === 1 ? "100px" : j === 2 ? "130px" : "200px"; //Thay đổi độ rộng cột
+		  html += "<td style='width:" + width + "; border:1px solid #ccc; padding:4px; line-height:1.2;' class='" + (j === 0 ? "first-col" : "") + "'>" + cell + "</td>";
+		});
+		html += "</tr>";
+		
+		
+      }
+    }
+    html += "</table>";
+    return html;
+  });
+
+
+
+// Sau khi render xong, tính toán lại chiều cao thực tế
+setTimeout(() => {
+  let maxX = 0, maxY = 0;
+  const levelMinHeightMap = new Map(); // Lưu chiều cao nhỏ nhất theo từng level
+
+  // Cập nhật chiều cao thực tế và tìm maxX, maxY, đồng thời lưu minHeight theo level
+  nodeGroup.each(function (d) {
+    const group = d3.select(this);
+    const foreignDiv = group.select("foreignObject > div").node();
+    const realHeight = foreignDiv.getBoundingClientRect().height;
+
+    group.select("rect").attr("height", realHeight);
+    group.select("foreignObject").attr("height", realHeight);
+
+    const width = +group.select("rect").attr("width");
+    const nodeRight = d.x + width;
+    const nodeBottom = d.y + realHeight;
+
+    maxX = Math.max(maxX, nodeRight);
+    maxY = Math.max(maxY, nodeBottom);
+
+    // Cập nhật chiều cao nhỏ nhất cho mỗi level
+    const level = d.level;
+    if (!levelMinHeightMap.has(level)) {
+      levelMinHeightMap.set(level, realHeight);
+    } else {
+      const currentMin = levelMinHeightMap.get(level);
+      levelMinHeightMap.set(level, Math.min(currentMin, realHeight));
+    }
+  });
+
+  // Cập nhật kích thước SVG có thêm padding
+  svg.attr("width", maxX + 200).attr("height", maxY + 150);
+
+  // Vẽ các liên kết
+  links.forEach(link => {
+    const sourceNode = nodes.find(n => n.id === link.source);
+    const targetNode = nodes.find(n => n.id === link.target);
+    const sourceGroup = nodeGroup.filter(d => d.id === sourceNode.id);
+    const targetGroup = nodeGroup.filter(d => d.id === targetNode.id);
+
+    const h1 = +sourceGroup.select("foreignObject").attr("height");
+    const h2 = +targetGroup.select("foreignObject").attr("height");
+    const w1 = +sourceGroup.select("rect").attr("width");
+    const w2 = +targetGroup.select("rect").attr("width");
+
+    // Chiều cao tối thiểu của các lớp (nếu có)
+    const minHSource = levelMinHeightMap.get(sourceNode.level) || h1;
+    const minHTarget = levelMinHeightMap.get(targetNode.level) || h2;
+
+    const halfMinHSource = minHSource / 2;
+    const halfMinHTarget = minHTarget / 2;
+
+    const sxCenter = sourceNode.x + w1 / 2;
+    const syTop = sourceNode.y;
+    const syBottom = sourceNode.y + h1;
+
+    const txCenter = targetNode.x + w2 / 2;
+    const tyTop = targetNode.y;
+    const tyBottom = targetNode.y + h2;
+
+    const isBSNtoDHI = sourceNode.label.includes("Trạm BSN") && targetNode.label.includes("Trạm ĐHI");
+    const isALItoHUE =
+      (sourceNode.label.includes("Trạm ALI") && targetNode.label.includes("Trạm HUE")) ||
+      (sourceNode.label.includes("Trạm HUE") && targetNode.label.includes("Trạm ALI"));
+
+    if (isBSNtoDHI) {
+      const sx = sourceNode.x + w1;
+      const sy = sourceNode.y + halfMinHSource;
+      const tx = targetNode.x + w2;
+      const ty = targetNode.y + halfMinHTarget;
+      const midX = Math.max(sx, tx) + 50;
+
+      svg.append("path")
+        .attr("d", `M ${sx} ${sy} L ${midX} ${sy} L ${midX} ${ty} L ${tx} ${ty}`)
+        .attr("stroke", "#000")
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("marker-end", "url(#arrow)");
+
+    } else if (isALItoHUE) {
+      const fromNode = sourceNode.label.includes("Trạm HUE") ? sourceNode : targetNode;
+      const toNode = fromNode === sourceNode ? targetNode : sourceNode;
+
+      const fromGroup = fromNode === sourceNode ? sourceGroup : targetGroup;
+      const toGroup = toNode === sourceNode ? sourceGroup : targetGroup;
+
+      const hFrom = +fromGroup.select("foreignObject").attr("height");
+      const hTo = +toGroup.select("foreignObject").attr("height");
+
+      const minHFrom = levelMinHeightMap.get(fromNode.level) || hFrom;
+      const minHTo = levelMinHeightMap.get(toNode.level) || hTo;
+
+      const sx = toNode.x;
+      const sy = toNode.y + minHTo / 2;
+      const tx = fromNode.x;
+      const ty = fromNode.y + minHFrom / 2;
+      const midX = Math.min(sx, tx) - 50;
+
+      svg.append("path")
+        .attr("d", `M ${tx} ${ty} L ${midX} ${ty} L ${midX} ${sy} L ${sx} ${sy}`)
+        .attr("stroke", "#000")
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("marker-end", "url(#arrow)");
+
+    } else if (sourceNode.level < targetNode.level) {
+      const fromX = sourceNode.x + w1 / 2;
+      const fromY = sourceNode.y + h1;
+      const toX = targetNode.x + w2 / 2;
+      const toY = targetNode.y;
+      const midY = (fromY + toY) / 2;
+
+      svg.append("path")
+        .attr("d", `M ${fromX} ${fromY} L ${fromX} ${midY} L ${toX} ${midY} L ${toX} ${toY}`)
+        .attr("stroke", "#000")
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("marker-end", "url(#arrow)");
+
+    } else if (sourceNode.level > targetNode.level) {
+      const fromX = sourceNode.x + w1 / 2;
+      const fromY = sourceNode.y;
+      const toX = targetNode.x + w2 / 2;
+      const toY = targetNode.y + h2;
+      const midY = (fromY + toY) / 2;
+
+      svg.append("path")
+        .attr("d", `M ${fromX} ${fromY} L ${fromX} ${midY} L ${toX} ${midY} L ${toX} ${toY}`)
+        .attr("stroke", "#000")
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("marker-end", "url(#arrow)");
+
+    } else {
+      const sy = sourceNode.y + halfMinHSource;
+      const ty = targetNode.y + halfMinHTarget;
+      const sxLeft = sourceNode.x;
+      const sxRight = sourceNode.x + w1;
+      const txLeft = targetNode.x;
+      const txRight = targetNode.x + w2;
+
+      if (Math.abs(sourceNode.y - targetNode.y) < 20) {
+        const isLeftToRight = sourceNode.x <= targetNode.x;
+        const sx = isLeftToRight ? sxRight : sxLeft;
+        const tx = isLeftToRight ? txLeft : txRight;
+
+        svg.append("line")
+          .attr("x1", sx)
+          .attr("y1", sy)
+          .attr("x2", tx)
+          .attr("y2", sy)
+          .attr("stroke", "#000")
+          .attr("stroke-width", 2)
+          .attr("marker-end", "url(#arrow)");
+      } else {
+        const fromX = sourceNode.x + w1 / 2;
+        const toX = targetNode.x + w2 / 2;
+        const fromIsAbove = sourceNode.y < targetNode.y;
+
+        const startY = fromIsAbove ? syBottom : syTop;
+        const endY = fromIsAbove ? tyTop : tyBottom;
+        const midY = (startY + endY) / 2;
+
+        svg.append("path")
+          .attr("d", `M ${fromX} ${startY} L ${fromX} ${midY} L ${toX} ${midY} L ${toX} ${endY}`)
+          .attr("stroke", "#000")
+          .attr("stroke-width", 2)
+          .attr("fill", "none")
+          .attr("marker-end", "url(#arrow)");
+      }
+    }
+  });
+}, 100);
+
+}
+
+//---- END VẼ SO ĐỒ HIGHT CHART-----------
+				
+				
+		//-------- Cập nhật dữ liệu từ Google về của hàm UPDATE và cập nhật vào Ag-----------
+// Danh sách các nút cần thêm sự kiện
+//['confirm_result1', 'confirm_result2', 'confirm_result3'].forEach(id => {
+['id_result1', 'id_result2', 'id_result3'].forEach(id => {
+  document.getElementById(id).addEventListener('click', function () {
+    // Ẩn dialog khi bấm nút
+    dialog_result.style.display = "none";
+
+    const reUpdate = document.getElementById("ngay").value;
+
+    // Biểu thức chính quy cho các thao tác xóa, cập nhật, và chèn
+    const deletePattern = /xoadulieu (\[.*?\])/ig;
+    const updatePattern = /capnhatdulieu (\[.*?\])/ig;
+	//const updatePattern = /capnhatdulieu (\[.*?\])/ig;
+    const insertPattern = /themdulieu (\[.*?\])/ig;
+
+    // Hàm trích xuất dữ liệu từ chuỗi đầu vào
+    const extractData = (pattern, dataString) => {
+      const results = [];
+      for (const match of dataString.matchAll(pattern)) {
+        //try {
+          results.push(JSON.parse(match[1])); // Parse JSON
+        //} catch (error) {
+          //alert("Dữ liệu không đúng định dạng JSON: " + match[1]);
+        //}
+      }
+      return results;
+    };
+
+    // Trích xuất dữ liệu xóa, cập nhật, và chèn
+    const deleteDataArray = extractData(deletePattern, reUpdate);
+    const updateDataArray = extractData(updatePattern, reUpdate);
+    const insertDataArray = extractData(insertPattern, reUpdate);
+
+    // Gọi hàm xử lý xóa, cập nhật và chèn nếu có dữ liệu
+    if (deleteDataArray.length > 0 || updateDataArray.length > 0 || insertDataArray.length > 0) {
+      processExcelData(deleteDataArray, updateDataArray, insertDataArray);
+    }
+  });
+});
+
+
+
+	
+		//-------- End Cập nhật dữ liệu từ Google về của hàm INSERT và cập nhật vào Ag-----------
+
+		//-------- Cập nhật dữ liệu từ Google về của hàm UPLOAD EXCEL và cập nhật vào Ag-----------	
+
+		document.getElementById('confirm_resultExcel').addEventListener('click', function () {
+			// Ẩn dialog khi bấm nút
+		    document.getElementById("dialog_resultExcel").style.display = "none";
+
+
+//		});
+				
+//document.getElementById('ExcelTest').addEventListener('click', function () {
+    // Ẩn dialog khi bấm nút
+//    document.getElementById("dialog_resultExcel").style.display = "none";
+
+    // Lấy dữ liệu từ ô input và loại bỏ khoảng trắng dư thừa
+    let output = document.getElementById("output").value.trim();
+
+    // Biểu thức chính quy cho các thao tác xóa, cập nhật, và chèn
+    const deletePattern = /xoadulieu (\[.*?\])/ig;
+    const updatePattern = /capnhatdulieu (\[.*?\])/ig;
+    const insertPattern = /themdulieu (\[.*?\])/ig;
+
+    // Hàm trích xuất dữ liệu từ chuỗi đầu vào
+    const extractData = (pattern, dataString) => {
+        const results = [];
+        for (const match of dataString.matchAll(pattern)) {
+            try {
+                results.push(JSON.parse(match[1])); // Parse JSON
+            } catch (error) {
+                alert("Dữ liệu không đúng định dạng");
+            }
+        }
+        return results;
+    };
+
+    // Trích xuất dữ liệu xóa, cập nhật, và chèn
+    const deleteDataArray = extractData(deletePattern, output);
+    const updateDataArray = extractData(updatePattern, output);
+    const insertDataArray = extractData(insertPattern, output);
+
+    // Gọi hàm xử lý xóa, cập nhật và chèn
+    if (deleteDataArray.length > 0 || updateDataArray.length > 0 || insertDataArray.length > 0) {
+        processExcelData(deleteDataArray, updateDataArray, insertDataArray);
+    }
+});
+
+//-------- End Cập nhật dữ liệu từ Google về của hàm UPLOAD EXCEL và cập nhật vào Ag-----------	
+
+// Hàm xử lý dữ liệu xóa, cập nhật, và chèn
+	function processExcelData(deleteDataArray, updateDataArray, insertDataArray) {
+		// Xử lý dữ liệu xóa
+	if (deleteDataArray.length > 0) {
+		let rowsToDelete = []; // Mảng chứa các dòng cần xóa
+
+		gridOptions.api.forEachNode((node, index) => {
+			//console.log(`🔍 Kiểm tra hàng ${index + 1} - ID: ${node.data.ID}`); // Debug
+
+			// Duyệt từng phần tử trong deleteDataArray để so sánh ID
+			for (let deleteData of deleteDataArray) {
+				for (let data of deleteData) {
+					//if (node.data && String(node.data.ID) === String(data.ID)) {
+					if (node.data && String(node.data.Colum2) === String(data.Colum2)) {
+						rowsToDelete.push(node.data); // Thêm vào danh sách xóa
+						//console.log(`🗑️ Đánh dấu xóa hàng ${index + 1} - ID: ${data.ID}`);
+					}
+				}
+			}
+		});
+
+		if (rowsToDelete.length > 0) {
+			// Xóa các dòng trực tiếp khỏi lưới
+			gridOptions.api.applyTransaction({ remove: rowsToDelete });
+
+			//alert(`✅ Đã xóa ${rowsToDelete.length} hàng`);
+
+			// Đánh lại số thứ tự sau khi xóa
+			setTimeout(() => {
+				reindexGrid(); // Đảm bảo chạy sau khi grid đã xóa xong
+			}, 0);
+		} else {
+			//alert("❌ Không tìm thấy hàng nào để xóa.");
+		}
+	}
+
+
+		// Xử lý dữ liệu cập nhật
+		updateDataArray.forEach(updateData => {
+			updateData.forEach(data => {
+				UpdateToAg(data); // Gọi hàm cập nhật cho từng hàng
+			});
+		});
+
+		// Xử lý dữ liệu chèn
+		insertDataArray.forEach(insertData => {
+			insertData.forEach(data => {
+				InsertToAg(data); // Gọi hàm chèn mới cho từng hàng
+			});
+		});
+
+		// Làm mới giao diện grid
+		gridOptions.api.refreshCells({ force: true });
+		//alert("Đã xử lý dữ liệu xóa, cập nhật và chèn.");
+	}
+
+
+function DelToAg2(rowsToDelete) {
+		gridOptions.api.applyTransaction({ remove: rowsToDelete });
+
+		// Làm mới giao diện ngay lập tức
+		gridOptions.api.refreshCells({ force: true });
+	}
+
+	function reindexGrid() {
+		const allData = [];
+		gridOptions.api.forEachNode((node) => {
+			allData.push(node.data);
+		});
+
+		// Đánh lại số thứ tự (ID) bắt đầu từ 1
+		for (let i = 0; i < allData.length; i++) {
+			allData[i].ID = i + 1;
+		}
+
+		// Cập nhật lại dữ liệu vào grid
+		gridOptions.api.setRowData(allData);
+
+		// Làm mới giao diện để hiển thị thay đổi
+		setTimeout(function () {
+			gridOptions.api.refreshCells({ force: true });
+		}, 0);
+	}
+
+//========================================================================
+			//Update dữ liệu dòng lấy về từ Google về vào Ag
+			function UpdateToAg(data) {
+				// Tìm dòng dựa trên ID (giả sử ID là chỉ số dòng + 1)
+				const rowNode = gridOptions.api.getRowNode(data.ID - 1);
+
+				if (rowNode) {
+					// Tạo một bản sao dữ liệu cũ
+					const updatedData = { ...rowNode.data };
+
+					// Cập nhật các cột từ Colum2 đến Colum67
+					for (let i = 2; i <= 67; i++) {
+						const colKey = 'Colum' + i;
+						updatedData[colKey] = data[colKey] || '';
+					}
+
+					// Cập nhật dữ liệu mới vào dòng
+					rowNode.setData(updatedData);
+
+				} else {
+					alert("Không tìm thấy dòng STT " + data.ID);
+				}
+
+				// Làm mới giao diện để hiển thị thay đổi
+				setTimeout(function () {
+					gridOptions.api.refreshCells({ force: true });
+					drawChart(); // Gọi hàm vẽ biểu đồ nếu cần
+				}, 0);
+			}
+
+
+				//------End Update dữ liệu dòng lấy về từ Google về vào Ag
+
+			//----- InsertToAg - Thêm dữ liệu dòng mới vào từ Google về vào cuối Ag
+				function InsertToAg(data) {
+					// Lấy tổng số dòng hiện tại
+					var totalRows = gridOptions.api.getDisplayedRowCount();
+
+					// Tạo dữ liệu mới từ các giá trị của hàng trả về từ Google
+					var newData = {
+						ID: data.ID
+					};
+
+					// Tự động thêm các cột từ Colum2 đến Colum67
+					for (let i = 2; i <= 67; i++) {
+						const colKey = 'Colum' + i;
+						newData[colKey] = data[colKey] || '';
+					}
+
+					//console.log('Dữ liệu dòng mới:', newData); // Kiểm tra dữ liệu của dòng mới
+
+					// Thêm dòng mới vào lưới, tại vị trí cuối cùng
+					gridOptions.api.applyTransaction({
+						add: [newData],
+						addIndex: totalRows // Thêm vào vị trí cuối cùng
+					});
+
+					// Làm mới lưới sau khi thêm
+					gridOptions.api.refreshCells({ force: true });
+
+					// Làm mới giao diện để hiển thị thay đổi
+					setTimeout(function () {
+						gridOptions.api.refreshCells({ force: true });
+					}, 0);
+				}
+
+
+			//----- End InsertToAg - Thêm dữ liệu dòng mới vào từ Google vào cuối Ag
+
+
+			//----- End DelToAg - Xóa dòng dữ liệu từ lấy Google trong Ag
+			function DelToAg(data) {
+			  // Xóa các dòng được chọn
+			  gridOptions.api.applyTransaction({ remove: data });
+
+			  // Lấy lại tất cả các dòng sau khi xóa
+			  var allData = [];
+			  gridOptions.api.forEachNode(function (node) {
+				allData.push(node.data);
+			  });
+
+			  // Đánh lại STT (ID) cho tất cả các dòng
+			  for (var i = 0; i < allData.length; i++) {
+				allData[i].ID = i + 1; // STT bắt đầu từ 1
+			  }
+
+			  // Nạp lại dữ liệu vào grid sau khi cập nhật STT
+			  gridOptions.api.setRowData(allData);
+
+			  // Làm mới bảng
+			  gridOptions.api.refreshCells({ force: true });
+
+			}
+			//----- End DelToAg - Xóa dòng dữ liệu từ lấy Google trong Ag
+//=======================================================================================			
+function UpdateToAg2(data) {
+		let isUpdated = false;
+
+		// Kiểm tra dữ liệu trong lưới
+		gridOptions.api.forEachNode((node, index) => {
+			console.log(`Hàng ${index + 1} - ID: ${node.data.ID}`); // Debug ID
+
+			//if (node.data && String(node.data.ID) === String(data.ID)) { 
+			if (node.data && String(node.data.Colum2) === String(data.Colum2)) { 
+				Object.assign(node.data, data); // Cập nhật dữ liệu vào hàng hiện tại
+				isUpdated = true;
+				gridOptions.api.refreshCells({ rowNodes: [node] }); // Làm mới hàng sau khi cập nhật
+			}
+		});
+
+		//if (isUpdated) {
+		//	alert(`✅ Đã cập nhật dữ liệu cho ID: ${data.ID}`);
+		//} else {
+		//	alert(`❌ Không tìm thấy hàng với ID: ${data.ID} để cập nhật.`);
+		//}
+	}
+
+
+
+function InsertToAg2(data) {
+    // Kiểm tra nếu node hợp lệ trước khi truy cập `node.data`
+    let isNewRow = true; // Mặc định là thêm hàng mới
+
+    gridOptions.api.forEachNode((node) => {
+        if (String(node.data.Colum16) === String(data.Colum16)) {
+            isNewRow = false; // Nếu tìm thấy dòng có Colum16 trùng, không thêm mới
+        }
+    });
+
+    if (isNewRow) {
+        const rowCount = gridOptions.api.getDisplayedRowCount();
+        data.ID = rowCount + 1; // Tạo ID mới dựa trên số lượng hàng hiện tại
+        gridOptions.api.applyTransaction({ add: [data] });
+        //alert(`Đã chèn dữ liệu mới với ID: ${data.ID}`);
+    }
+}
+
+
+//-------- End Cập nhật dữ liệu từ Google về của hàm UPLOAD EXCEL, XÓA, CẬP NHẬT, THÊM và cập nhật vào Ag-----------	
+
+		
+			
+				//Lấy dữ liệu vào Tecell Row pin khi bấm nút Update, Delete, Insert khi chọn Check box
+				document.getElementById('btn-show-update').addEventListener('click', function () {									
+									var pinnedRows = gridOptions.api.getPinnedTopRow(0);
+									if (pinnedRows) {						
+										GetInput(pinnedRows.data);	// Lấy dữ liệu từ Cell row pin vào Textare					
+									}
+				});	
+				document.getElementById('btn-show-delete').addEventListener('click', function () {					
+					var pinnedRows = gridOptions.api.getPinnedTopRow(0);
+					if (pinnedRows) {						
+						GetInput(pinnedRows.data); // Lấy dữ liệu từ Cell row pin vào Textare
+					}
+				});		
+				//Lấy dữ liệu vào Cell Row pin vào Textare khi bấm nút Update, Delete, Insert
+				document.getElementById('btn-show-insert').addEventListener('click', function () {
+					var pinnedRows = gridOptions.api.getPinnedTopRow(0);
+					if (pinnedRows) {
+						GetInput(pinnedRows.data); // Lấy dữ liệu từ Cell row pin vào Textare
+					}
+				});				
+				// End Thêm sự kiện cho nút 'btn-show-insert'
+				
+				// Thêm sự kiện cho nút 'UNHIDE COLUNM'
+				//document.getElementById('btn-show-unhide').addEventListener('click', function () {
+
+				function unhideAllColumns() {
+				gridOptions.columnApi.setColumnsVisible([
+					'ID', 'Colum2', 'Colum3', 'Colum4', 'Colum5', 'Colum6', 'Colum7',
+					'Colum8', 'Colum9', 'Colum10'
+				], true);
+				//reset thứ tự cột về mặc định
+				gridOptions.columnApi.resetColumnState();
+				}
+
+				//});
+
+			
+				// Thêm sự kiện cho nút 'resetFilterButton'
+				document.getElementById('resetFilterButton').addEventListener('click', function () {
+					// Xóa dữ liệu của dòng pinned row
+					var pinnedRows = gridOptions.api.getPinnedTopRow(0);
+					clearInputFields();
+				});				
+				// End Thêm sự kiện cho nút 'resetFilterButton'
+
+				// Thêm sự kiện cho nút cancel_update để xóa Textarea
+				document.getElementById('cancel_update').addEventListener('click', function () {
+					clearInputFields2();
+				});
+
+				// Thêm sự kiện cho nút cancel_delete để xóa Textarea
+				document.getElementById('cancel_delete').addEventListener('click', function () {
+					clearInputFields2();
+				});
+
+				// Thêm sự kiện cho nút cancel_insert để xóa Textarea
+				document.getElementById('cancel_insert').addEventListener('click', function () {
+					clearInputFields2();
+				});
+
+
+		},
+                sideBar: {
+                    toolPanels: [
+                        {
+                            id: 'columns',
+                            labelDefault: 'Columns',
+                            labelKey: 'columns',
+                            iconKey: 'columns',
+                            toolPanel: 'agColumnsToolPanel',
+                            toolPanelParams: {
+								suppressRowGroups: true,     // ❌ Ẩn phần Row Groups
+								suppressValues: true,        // ❌ Ẩn phần Values
+								suppressPivots: true,        // ❌ Ẩn phần Pivot
+								suppressPivotMode: true      // ❌ Ẩn nút gạt Pivot mode
+                            }
+                        }
+                    ],
+                    defaultToolPanel: 'columns',
+                    position: 'left',
+                    defaultToolPanel: null // Nếu muốn hiển thị Menu khi mở file thì xóa dòng này
+                },
+                floatingFilter: true,
+                isExternalFilterPresent: isExternalFilterPresent, 
+                doesExternalFilterPass: doesExternalFilterPass,
+				//------------Chọn check box-------------------------
+                onSelectionChanged: function(event) {
+                    var selectedRows = gridOptions.api.getSelectedRows();
+                    if (selectedRows.length > 0) {
+                        fillInputFields(selectedRows[0]); //Get dữ liệu cho cell Row pin khi Check box
+                    } else {
+                        clearInputFields(); // Xóa dữ liệu cell Row pin khi bỏ Check box
+                    }
+                },
+				//------------End Chọn check box-------------------------
+                localeText: {
+					autosizeThiscolumn: "Điều chỉnh độ rộng cột này",
+                    contains: 'Lọc nội dung',
+                    notContains: 'Lọc Không chứa nội dung',
+                    equals: 'Lọc Bằng',
+                    notEqual: 'Lọc Không bằng',
+                    startsWith: 'Lọc Bắt đầu với',
+                    endsWith: 'Lọc Kết thúc với',
+                    blank: 'Lọc Trống',
+                    notBlank: 'Lọc Không trống',
+                    sortAscending: 'Sắp xếp tăng dần',
+                    sortDescending: 'Sắp xếp giảm dần',
+                    andCondition: 'và',
+                    orCondition: 'hoặc',
+                    page: 'tr',
+                    of: 'của',
+                    size: 'Số',
+                    clearSort: 'Bỏ sắp xếp',
+                    pinColumn: 'Ghim cột',
+					columns: 'Chọn Cột',
+                    pinLeft: 'Ghim bên trái',
+                    pinRight: 'Ghim bên phải',
+                    autosizeAllColumns: 'Điều chỉnh độ rộng tất cả các cột',
+                    chooseColumn: 'Chọn cột',
+					resetColumns: 'Reset Chọn cột',
+                    from: 'Từ',
+                    title: 'Tiêu đề',
+                    delete: 'Xóa',
+                    view: 'Lượt xem',
+                    searchOoo: 'Tìm kiếm...',
+                    reset: 'Cài đặt lại',
+                    loadingOoo: 'Tải...',
+                    noPin: 'Hủy ghim',
+                    none: 'Không',
+                    sum: 'Tổng',
+                    min: 'Tối thiểu',
+                    max: 'Tối đa',
+                    avg: 'Bình thường',
+                    count: 'Đếm',
+                    filterOoo: 'Bộ lọc...',
+                    lessThan: 'Ít hơn',
+                    greaterThan: 'Lớn hơn',
+                    lessThanOrEqual: 'Ít hơn hoặc bằng',
+                    greaterThanOrEqual: 'Lớn hơn hoặc bằng',
+                    inRange: 'Trong khoảng',
+					copy: 'Sao Chép',
+					ctrlC: 'Ctrl+C',
+					ctrlX: 'Ctrl+X',
+					copyWithHeaders: 'Sao Chép Kèm Tiêu Đề',
+					copyWithGroupHeaders: 'Sao Chép Kèm Tiêu Đề Nhóm',
+					cut: 'Cắt',
+					paste: 'Dán',
+					ctrlV: 'Ctrl+V',
+					export: 'Xuất',
+					csvExport: 'Xuất CSV',
+					excelExport: 'Xuất Excel',
+					columnFilter: 'Bộ Lọc Cột',
+					columnChooser: 'Chọn Cột',
+					sortAscending: 'Sắp Xếp Tăng Dần',
+					sortDescending: 'Sắp Xếp Giảm Dần',
+					sortUnSort: 'Xóa Sắp Xếp'
+                }
+            };
+
+            var eGridDiv = document.querySelector('#showData');
+            eGridDiv.innerHTML = ''; // Xóa nội dung trước đó		
+			//------------Tìm kiếm-----------------------------------
+		//https://www.ag-grid.com/archive/27.0.0/javascript-data-grid/filter-external/
+        var filterText = '';
+        function isExternalFilterPresent() {
+            return filterText !== '';
+        }
+        function externalFilterChanged() {
+            filterText = document.getElementById('filterText').value;
+            gridOptions.api.onFilterChanged();
+        }
+		function doesExternalFilterPass(node) {
+			for (let key in node.data) {
+				if (node.data[key] && node.data[key].toString().toLowerCase().includes(filterText.toLowerCase())) {
+					return true;
+				}
+			}
+			return false;
+		}
+
+
+
+
+		// Hàm tìm kiếm
+		function highlightSearchText(params) {
+			var cellValue = params.value ? params.value.toString() : '';
+			var searchValue = document.getElementById('filterText').value.toUpperCase();
+			var matchCount = 0; // Biến đếm số lần xuất hiện trong mỗi ô
+
+			if (!searchValue || searchValue === '') {
+				return cellValue;
+			}
+
+			var index = cellValue.toUpperCase().indexOf(searchValue);
+
+			if (index >= 0) {
+				var highlightedText = '';
+				while (index >= 0) {
+					matchCount++;
+					highlightedText += cellValue.substring(0, index) +
+						'<span class="highlight">' + cellValue.substring(index, index + searchValue.length) + '</span>';
+					cellValue = cellValue.substring(index + searchValue.length);
+					index = cellValue.toUpperCase().indexOf(searchValue);
+				}
+				highlightedText += cellValue; // Thêm phần còn lại của ô sau khi đã tìm kiếm
+				return highlightedText;
+			}
+			return cellValue;
+		}
+
+		// Thêm sự kiện input cho ô tìm kiếm
+		document.getElementById('filterText').addEventListener('input', function() {
+			var searchText = this.value.toUpperCase();
+			gridOptions.api.setQuickFilter(searchText);
+
+			// Thực hiện tô màu lại sau khi thay đổi giá trị tìm kiếm
+			setTimeout(function() {
+				gridOptions.api.refreshCells({ force: true });
+			}, 0);
+
+			updateCount();
+		});
+
+
+		// Hàm cập nhật số lượng kết quả tìm kiếm
+		function updateCount() {
+			var searchValue = document.getElementById('filterText').value.toUpperCase();
+			var totalMatches = 0;
+			var totalStringMatches = 0;
+
+			gridOptions.api.forEachNode(function(node) {
+				var rowMatched = false;
+				for (var key in node.data) {
+					if (node.data.hasOwnProperty(key)) {
+						var cellValue = node.data[key] ? node.data[key].toString().toUpperCase() : '';
+						if (cellValue.indexOf(searchValue) >= 0) {
+							rowMatched = true;
+							totalStringMatches++;
+						}
+					}
+				}
+				if (rowMatched) {
+					totalMatches++;
+				}
+			});
+
+			if (searchValue) {
+				document.getElementById('count').innerText = totalMatches + ' dòng, ' + totalStringMatches + ' Kq';
+			} else {
+				document.getElementById('count').innerText = '';
+			}
+		}		
+		
+		//------------End Tìm kiếm-----------------------------------
+
+		//---------------Row pin-----------------
+
+		function getValue(params) {
+                if (params.node.rowPinned) {
+                    return pinnedRowData[0][params.colDef.field] || '';
+                }
+                return params.data[params.colDef.field];
+            }
+
+            function setValue(params) {
+                if (params.node.rowPinned) {
+                    pinnedRowData[0][params.colDef.field] = params.newValue;
+                    return true;
+                }
+                return false;
+            }
+
+			function fillInputFields(data) { // Get dữ liệu cho cell Row pin khi Check box
+				if (Array.isArray(pinnedRowData) && pinnedRowData.length > 0) {
+					// Cập nhật dữ liệu cho hàng ghim
+					pinnedRowData[0].ID = data.ID || '';
+					for (let i = 2; i <= 69; i++) {
+						pinnedRowData[0]['Colum' + i] = data['Colum' + i] || '';
+					}
+
+					// Cập nhật lại dữ liệu trong bảng
+					setTimeout(function() {
+						gridOptions.api.refreshCells({ force: true });
+					}, 0);
+				}
+			}
+
+
+			function clearInputFields() {  // Xóa dữ liệu cell Row pin khi bỏ Check box
+				if (Array.isArray(pinnedRowData) && pinnedRowData.length > 0) {
+					pinnedRowData[0].ID = '';
+					for (let i = 2; i <= 69; i++) {
+						pinnedRowData[0]['Colum' + i] = '';
+					}
+
+					// Cập nhật lại dữ liệu trong bảng
+					setTimeout(function() {
+						gridOptions.api.refreshCells({ force: true });
+						clearInputFields2();  // Xóa dữ liệu Textarea khi bỏ Check box
+					}, 0);
+				}
+			}
+		
+		//---------------End Row pin-----------------
+		//---------------Get Textarea từ Row pin-----------------
+
+			function GetInput(data) {   // Lấy ID từ cell Row pin vào Textarea khi bấm nút Update, Delete, Thêm
+				// Đóng Textarea Pinrow
+				if (gridOptions.api) {
+					gridOptions.api.stopEditing();
+				}
+
+				// Lấy dữ liệu từ cell Row pin vào Textarea
+				if (Array.isArray(pinnedRowData) && pinnedRowData.length > 0) {
+					document.getElementById('id').value = data.ID || '';
+					for (let i = 2; i <= 67; i++) {
+						const colId = 'Colum' + i;
+						const textarea = document.getElementById(colId);
+						if (textarea) {
+							textarea.value = pinnedRowData[0][colId] || '';
+						}
+					}
+
+					// Cập nhật lại dữ liệu trong bảng
+					setTimeout(function() {
+						gridOptions.api.refreshCells({ force: true });
+					}, 0);
+				}
+			}
+		
+
+
+			
+		var eGridDiv = document.querySelector('#showData');
+            new agGrid.Grid(eGridDiv, gridOptions);
+
+            document.getElementById("spinner").style.display = "none"; // Ẩn spinner khi dữ liệu đã tải xong
+            document.getElementById('filterText').addEventListener('input', externalFilterChanged);
+			
+		//---- Tính năng thay đổi độ cao dòng-----------
+		var gridOptions;		
+				var startY, startHeight, currentRowIndex;
+
+				document.addEventListener('mousedown', function(event) {
+					if (event.target.classList.contains('ag-row-resize-handle')) {
+						startY = event.clientY;
+						currentRowIndex = event.target.parentElement.getAttribute('row-index');
+						startHeight = gridOptions.api.getRowNode(currentRowIndex).rowHeight;
+						document.addEventListener('mousemove', onMouseMove);
+						document.addEventListener('mouseup', onMouseUp);
+					}
+				});
+
+				function onMouseMove(event) {
+					var newHeight = startHeight + (event.clientY - startY);
+					if (newHeight > 20) { // Đảm bảo chiều cao tối thiểu là 20px
+						gridOptions.api.getRowNode(currentRowIndex).setRowHeight(newHeight);
+						gridOptions.api.onRowHeightChanged();
+					}
+				}
+
+				function onMouseUp() {
+					document.removeEventListener('mousemove', onMouseMove);
+					document.removeEventListener('mouseup', onMouseUp);
+				}
+
+				function createResizeHandle() {
+					var resizeHandle = document.createElement('div');
+					resizeHandle.className = 'ag-row-resize-handle';
+					return resizeHandle;
+				}
+
+				function addResizeHandles() {
+					var rows = document.querySelectorAll('.ag-row');
+					rows.forEach(function(row) {
+						if (!row.querySelector('.ag-row-resize-handle')) {
+							row.appendChild(createResizeHandle());
+						}
+					});
+				}
+				addResizeHandles();
+			//---- End Tính năng thay đổi độ cao dòng-----------
+	
+			//---------- Hàm để xuất dữ liệu ra Excel-----------
+document.getElementById('exp').addEventListener('change', function() {
+    var expSelect = document.getElementById('exp');
+    var selectedOption = expSelect.value;
+
+    if (selectedOption === 'exp1') {
+        gridOptions.api.exportDataAsExcel();
+        expSelect.value = 'Excel'; // Đặt lại giá trị về 'Excel'
+    } else if (selectedOption === 'exp2') {
+        exportToExcel(gridOptions, columnDefs);
+        expSelect.value = 'Excel'; // Đặt lại giá trị về 'Excel'
+    } else if (selectedOption === 'exp3') {
+        exportTemplateExcel(columnDefs); // Xuất mẫu Excel
+        expSelect.value = 'Excel'; // Đặt lại giá trị về 'Excel'
+    }
+});
+
+// Hàm xuất dữ liệu Excel đầy đủ
+async function exportToExcel(gridOptions, columnDefs) {
+    try {
+        const workbook = new ExcelJS.Workbook();
+
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        const formattedDate = `${day}.${month}.${year}`;
+
+        const sheetName = `VT_VoTuyen_${formattedDate}`;
+        const worksheet = workbook.addWorksheet(sheetName);
+
+        const header = columnDefs.map(colDef => colDef.headerName);
+        worksheet.addRow(header);
+
+        gridOptions.api.forEachNodeAfterFilter(node => {
+            const row = columnDefs.map(colDef => node.data[colDef.field]);
+            worksheet.addRow(row);
+        });
+
+        worksheet.getColumn(1).alignment = { horizontal: 'center', vertical: 'middle' };
+
+        worksheet.eachRow({ includeEmpty: true }, function(row) {
+            row.eachCell({ includeEmpty: true }, function(cell) {
+                cell.border = {
+                    top: { style: 'thin' },
+                    left: { style: 'thin' },
+                    bottom: { style: 'thin' },
+                    right: { style: 'thin' }
+                };
+                cell.font = { name: 'Times New Roman' };
+            });
+        });
+
+        const headerRow = worksheet.getRow(1);
+        headerRow.eachCell({ includeEmpty: true }, function(cell) {
+            cell.font = { name: 'Times New Roman', bold: true };
+            cell.alignment = { horizontal: 'center', vertical: 'middle' };
+            cell.fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFB2DFFB' }
+            };
+        });
+
+        const filename = `${sheetName}.xlsx`;
+        const buffer = await workbook.xlsx.writeBuffer();
+
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        const isIPhone = /iPhone/.test(navigator.userAgent);
+
+        if (isSafari && isIPhone) {
+            const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            saveAs(blob, filename);
+        } else {
+            const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+        }
+
+    } catch (error) {
+        console.error('Có lỗi xảy ra khi xuất dữ liệu:', error);
+    }
+}
+
+// Hàm xuất mẫu Excel (chỉ dòng tiêu đề và dòng với giá trị 'Temp', cell đầu tiên là 1)
+async function exportTemplateExcel(columnDefs) {
+    try {
+        const workbook = new ExcelJS.Workbook();
+
+        const sheetName = `MauExcel_Upload`;
+        const worksheet = workbook.addWorksheet(sheetName);
+
+        // Thêm dòng tiêu đề
+        const header = columnDefs.map(colDef => colDef.headerName);
+        worksheet.addRow(header);
+
+        // Thêm dòng thứ 2 với cell đầu tiên là '1' và các cell còn lại là 'Temp'
+        const tempRow = columnDefs.map((_, index) => (index === 0 ? 1 : 'Temp'));
+        worksheet.addRow(tempRow);
+
+        // Định dạng các cell
+        worksheet.eachRow({ includeEmpty: true }, function(row) {
+            row.eachCell({ includeEmpty: true }, function(cell) {
+                cell.border = {
+                    top: { style: 'thin' },
+                    left: { style: 'thin' },
+                    bottom: { style: 'thin' },
+                    right: { style: 'thin' }
+                };
+                cell.font = { name: 'Times New Roman' };
+            });
+        });
+
+        const headerRow = worksheet.getRow(1);
+        headerRow.eachCell({ includeEmpty: true }, function(cell) {
+            cell.font = { name: 'Times New Roman', bold: true };
+            cell.alignment = { horizontal: 'center', vertical: 'middle' };
+            cell.fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFB2DFFB' }
+            };
+        });
+
+        const filename = `${sheetName}.xlsx`;
+        const buffer = await workbook.xlsx.writeBuffer();
+
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        const isIPhone = /iPhone/.test(navigator.userAgent);
+
+        if (isSafari && isIPhone) {
+            const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            saveAs(blob, filename);
+        } else {
+            const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+        }
+
+    } catch (error) {
+        console.error('Có lỗi xảy ra khi xuất mẫu Excel:', error);
+    }
+}
+
+
+			//----------End Hàm để xuất dữ liệu ra Excel-----------
+		
+        });
+    }
+}
+
+
+
+
+$(function(){
+      $(".HorizontalTable").scroll(function(){
+        $(".ag-body-horizontal-scroll-viewport").scrollLeft($(".HorizontalTable").scrollLeft());
+      });
+      $(".ag-body-horizontal-scroll-viewport").scroll(function(){
+        $(".HorizontalTable").scrollLeft($(".ag-body-horizontal-scroll-viewport").scrollLeft());
+      });
+});	
+
+
+function clearInputFields2() { // Xóa dữ liệu Textarea
+    document.getElementById('id').value = '';
+    for (let i = 2; i <= 67; i++) {
+        const colId = 'Colum' + i;
+        const textarea = document.getElementById(colId);
+        if (textarea) {
+            textarea.value = '';
+        }
+    }
+}
+
+
+
+</script>
+
+
+	
+<div class="footer">
+
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span></span> Liên Hệ: 18 Trần Hưng Đạo<span> </span> Thành Phố Đông Hà, Tỉnh Quảng Trị</p>
+    </div>
+	<div>
+      <i class="fa fa-phone"></i>
+      <p> (02333) 855298</p>
+      <p> (+84) 911393789</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a style="color:black;" href="mailto:tdnhat@vnpt.vn?subject = To Trưởng đài ĐHA">tdnhat@vnpt.vn</a></p>
+    </div>
+  </div>
+  
+
+ 
+  <div class="footer-right col-md-4 col-sm-6">
+
+    <p class="menu">
+	
+      <a onclick="home()" > Trang Chủ</a> |
+      <a href="#"> Website Đài Đông Hà</a> |
+    </p>
+
+    <p class="name"> Lê Văn Khanh Copyright © 2021. All right reserved.</p>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
