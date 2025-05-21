@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+
+  <title>CÂY TỔ CHỨC</title>
+<link rel="stylesheet" href="TruyenDanPicture/css.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="DangNhap/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+<style>
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 99%;
+  padding: 1px;
+  width: 100%;
+  background: linear-gradient(to right, #21618c,#73c6b6);
+  min-height:400px;
+  height:auto;
+}
+
+/* Popup */
+
+.popup {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left:7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+.Thoat {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+
+.popup_Login {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left: 7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+  .popup_Login {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_Login {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_Login {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}	
+	
+
+.popup_time {
+  width: 85%;
+  padding: 15px;
+  left: 0;
+  margin-left: 7%;
+  border: 1px solid rgb(1,82,73);
+  border-radius: 10px;
+  color: rgb(1,82,73);
+  background: white;
+  position: absolute;
+  top: 25%;
+  box-shadow: 5px 5px 5px #000;
+  z-index: 10001;
+  font-weight: 700;
+  font-size: 13px	
+  text-align: center;
+}
+
+.Thoat_time {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 10000;
+  display :none;
+}
+
+@media (min-width: 768px) {
+  .popup_time {
+    width: 66.66666666%;
+    margin-left: 16.666666%;
+  }
+}
+@media (min-width: 992px) {
+  .popup_time {
+    width: 85%;
+    margin-left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .popup_time {
+    width: 33.33333%;
+    margin-left: 33.33333%;
+  }
+}
+
+
+.dialog-btn {
+  background-color:#006699;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #44B78B;
+  border-radius: 1px;
+  height: 30px;
+  width: 20%;
+  border-radius: 5px 5px 5px 5px;
+}
+.dialog-btn:hover {
+  background-color:#015249;
+  cursor: pointer;
+}
+
+/* End Popup */
+
+/* Nút Home */
+#btn-show-dialog {  
+  border: none;
+  color: black;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  width: 70px;
+  align-items: center;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+
+}
+.header-bar {
+  display: flex;
+  justify-content: flex-start; /* canh trái */
+  align-items: flex-start;
+  padding: 1px;
+  margin-top: 10px;
+}
+.home-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hometext {
+  font-size: 11px;
+  color: #006699;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.home-button i {
+  font-size: 25px;
+  color: white;
+}
+
+/* End Nút Home */
+
+
+.footer {
+  background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
+  width: 100%;
+  height: auto;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 5px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10010;
+}
+
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer .footer-left p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-right p {
+  display: inline-block;
+  color:black;
+  vertical-align: middle;
+  margin: 0;
+}
+
+
+
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 5px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .footer-left i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+
+
+.footer .icons a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color:#0099ff;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 10px;
+  margin-right: 3px;
+
+}
+
+
+.footer .footer-center {
+  width: 25%;
+}
+
+.footer .footer-center i {
+  background-color:#0099ff;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  margin: 10px 3px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+
+.footer .footer-right {
+  width: 35%;
+}
+
+
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .footer .footer-center i {
+    margin-left: 3px;
+  }
+}
+
+
+
+
+
+ h1 {
+  font-size:35px;
+  font-family:times new roman;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+  font-weight:bold;
+}
+
+ h2 {
+  font-size:30px;
+  font-family:times new roman;
+  
+  text-align: center;
+  color:black;
+  font-weight:bold;
+}
+
+
+
+/* FORM LOGIN CỦ*/
+.form {
+  background: white;
+  padding: 25px;
+  max-width: 670px;
+  width: 650px;
+  margin: 0px auto;
+  font-family: times new roman;
+  border-radius: 5px;
+  text-align: center;
+  margin-top:2px;
+  margin-bottom:20px;
+  
+}
+    .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0px 0;
+		border-radius: 26px 26px 26px 26px;
+		background:white;	
+		width:100%;
+		display:flex;
+		justify-content:center;
+			
+    }
+
+	
+	
+    .tab-group:after {
+        content: "";
+        display: table;
+        clear: both;
+		background: #21618c;
+        color:black;
+		border-radius: 26px 26px 26px 26px;
+    }
+
+    .tab-group li a {
+        display: block;
+        text-decoration: none;
+        padding: 1px;
+        background: #bfc9ca;
+        color:black;
+        font-size: 16px;
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+		border-radius: 26px 26px 26px 26px;
+		width:130px;
+		height: 28px;
+		line-height: 25px;
+     }
+
+    .tab-group li a:hover {
+        background: #3498db;
+        color:white;
+		border-radius: 26px 26px 26px 26px;
+
+    }
+
+    .tab-group .active a {
+        background:#006699;
+        color:white;
+		border-radius: 26px 26px 26px 26px;
+		width:130px;
+		height: 28px;
+		line-height: 25px;
+    }
+
+	
+    .tab-content>div:last-child {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        font-weight: 300;
+        margin: 0 0 3px;
+    }
+
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+    }
+
+	
+	
+	
+    label .req {
+        margin: 2px;
+        color: #1ab188;
+    }
+
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+    }
+
+    label.active .req {
+        opacity: 0;
+    }
+
+    label.highlight {
+        color: #ffffff;
+    }
+
+    input,
+
+
+    input:focus,
+    textarea:focus {
+        outline: 5;
+        border-color: white;
+    }
+
+	
+	
+	
+    textarea {
+        border: 2px solid #a0b3b0;
+        resize: vertical;
+    }
+
+    .field-wrap {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .top-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .top-row>div {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .top-row>div:last-child {
+        margin: 0;
+    }
+
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding:0px 0;
+        font-size: 1rem;
+        font-weight:bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        background:#006699;
+        color:white;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+	font-family:times new roman;
+	margin: auto;
+	border-radius: 26px 26px 26px 26px;
+	cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus {
+    background: #1b4f72;
+    }
+
+    .button-block {
+        display: block;
+        width:250px;
+	height:35px;		
+	border-radius: 26px 26px 26px 26px;
+		
+    }
+
+
+
+/* formLogin LOGIN Mới */
+
+form .field{
+  width: 100%;
+  margin-bottom: 20px;
+}
+form .field.shake{
+  animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+form .field .field-wrap{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+form input{
+  width: 100%;
+  height: 90%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 15px;
+  background: white;
+  caret-color: #5372F0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+form .field input:focus,
+form .field.valid input{
+  border-color: #5372F0;
+}
+form .field.shake input,
+form .field.error input{
+  border-color: #dc3545;
+}
+.field .field-wrap i{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.field-wrap .icon{
+  left: 2px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+.field-wrap .error-icon{
+  right: 15px;
+  color: #dc3545;
+}
+form input:focus ~ .icon,
+form .field.valid .icon{
+  color: #5372F0;
+}
+form .field.shake input:focus ~ .icon,
+form .field.error input:focus ~ .icon{
+  color: #bfbfbf;
+}
+form input::placeholder{
+  color: #bfbfbf;
+  font-size: 17px;
+}
+
+form .pass-txt{
+  text-align: left;
+  margin-top: -10px;
+}
+
+form input[type="submit"]{
+  height: 35px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: #5372F0;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+form input[type="submit"]:hover{
+  background: #2c52ed;
+}
+
+
+
+
+/*END formLogin LOGIN Mới */
+
+
+
+/* MODAL LOGIN Full-width input fields */
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #21618c;
+  color: white;
+  padding: 0px 0px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width:100px;
+  font-weight:bold;
+  font-family:times new roman;
+  font-size: 1.2em;
+  border-radius:5% 5% 5% 5%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+/* The Modal (background) */
+
+
+.modal.show {
+  display: block;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+.modalMess-wrapper {
+  width: 100%;
+  top:40%;
+}
+.good-job h1 {
+  font-size: 10px;
+}
+.modalMess {
+  width:200px;
+}
+
+.button {
+	width: 50%;
+	font-size:14px;
+ }
+
+font-size: 15px;
+.modal-content {
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+.modalMess-wrapper {
+  width: 100%;
+  top:40%;
+}
+.good-job h1 {
+  font-size: 10px;
+}
+.modalMess {
+  width:200px;
+}	
+
+.button {
+	width: 50%;
+	font-size:14px;
+ }
+ .modal-content{
+    font-size: 15px;
+    width: 100%;
+  }
+.modal {
+    font-size: 15px;
+    width: 100%;
+  }
+.form {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 479px) {
+.modalMess-wrapper {
+  width: 100%;
+  top:40%;
+}
+.good-job h1 {
+  font-size: 10px;
+}
+.modalMess {
+  width:200px;
+}
+
+.button {
+	width: 50%;
+	font-size:14px;
+ }
+.modal-content {
+    font-size: 15px;
+    width: 200px;
+.modal {
+   font-size: 15px;
+    width: 100%;
+  }
+.form {
+   font-size: 15px;
+    width: 100%;
+  }
+}
+
+}
+
+
+@media (max-width: 600px) {
+.modalMess-wrapper {
+  width: 100%;
+  top:40%;
+}
+.good-job h1 {
+  font-size: 10px;
+}
+.modalMess {
+  width:200px;
+}
+	
+
+.button {
+	width: 50%;
+	font-size:14px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+  } 
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  }
+}
+
+@media (max-width: 600px) {
+.modalMess-wrapper {
+  width: 100%;
+  top:40%;
+}
+.good-job h1 {
+  font-size: 10px;
+}
+.modalMess {
+  width:200px;
+}
+
+.button {
+	width: 50%;
+	font-size:14px;
+ }
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}  
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+}
+
+@media screen and (max-width: 980px) {
+.modal-content {
+  width:100%; /* Could be more or less, depending on screen size */
+}
+.modal {
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+}
+} 
+
+
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+#btn-Thoat {
+  background-color:white;
+  border: none;
+  color:black;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 3px 1px;
+  cursor: pointer;
+    height: 30px;
+  width: 90px;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#btn-Thoat {border-radius: 12px;}
+
+
+/* Modal Thông báo */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+.modalMess {
+  max-height: calc(100vh - 60px);
+}
+
+@media (max-height: 600px) {
+  .modalMess {
+    top: 10%;
+  }
+}
+
+@media (max-height: 400px) {
+  .modalMess {
+    top: 5%;
+  }
+}
+
+
+
+.modalMess-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.modalMess-wrapper.open {
+  opacity: 1;
+  visibility: visible; 
+}
+
+.modalMess {
+  width: 400px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+
+
+.headMess { 
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #21618c; /* #e2525c; */
+  padding: 2px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
+}
+
+.btn-close {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 7px;
+  padding-bottom: 3px;
+}
+
+.dialog-btn {
+  margin: 0;
+  margin-right: 10px;
+  padding: 3px 7px;
+  color: #fff;
+  background: #21618c; /* #e2525c; */
+  border: none;
+  border-radius: 26px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contentMess {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.good-job {
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #138d75; /* #e2525c; */
+}
+
+.good-job .fa-exclamation-circle {
+  font-size: 40px;
+}
+
+.good-job .fa-thumbs-o-up {
+  font-size: 45px;
+}
+
+.good-job h1 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .modalMess {
+    width: 90%;
+    max-height: calc(100vh - 60px);
+  }
+}
+	
+
+
+
+/* Captchar */
+.field.captch_box {
+  display: flex;
+  align-items: center;
+   margin-top: 10px; /* Thu hẹp khoảng cách trên */
+}
+.field.captch_input {
+  margin-bottom: 10px; /* Thu hẹp khoảng cách dưới */
+}
+
+.field.captch_box .input_field.captch_box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.field.captch_box .input_field.captch_box input[type="text"] {
+  flex: 1;
+  height: 35px;
+}
+
+
+.refresh_button {
+  margin-left: 10px;
+  background: #826afb;
+  height: 33px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}	
+
+
+
+.header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  /* max-height: 150px; Hoặc giá trị phù hợp */
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body onload="adjustBodyHeight();">
+
+<div class="header";>
+<!--   <img style=" width: 100%;" src="/Banner DHA New.png" /> -->
+<img style=" width: 100%;" src=  "https://www.dropbox.com/s/5yhuhsz9q5g18s1/Banner%20DHA%20New.png?raw=1" />
+</p>
+</div>
+  <!-- Modal -->
+
+
+<div class="header-bar">
+  <!-- Nút Home (trái) -->
+  <span id="btn-show-dialog" class="home-button">
+    <i class="fas fa-home" style="font-size: 25px; color: white;"></i>
+    <span class="hometext" style="font-size:11px; color:white; font-weight: bold;">Home</span>
+  </span>
+</div>
+
+
+<div id="id01" class="modal">
+
+	  <form class="needs-validation" novalidate action="/action_page.php" method="post"> 
+			
+		<div class="imgcontainer">		
+
+		  <h2 id="dn" style="font-size: 1em; color: white; font-weight: bold"; value=""></h2>
+		</div><!-- Modal -->
+
+	<p type = "text" id="ngay"></p>
+
+
+    <div class="form">
+	<p style="color: black; font-weight:bold;" class="main-heading">ĐĂNG NHẬP CÂY TỔ CHỨC</p>
+			<ul class="tab-group">
+
+            <li style="background: white"; width="135px";  id="Lo" onClick="Delre();" class="tab active"><a href="#login">Login</a></li>
+
+            <li style="background: white"; width="135px";  id="C_Pwd" onClick="Delre();" class="tab"><a href="#changepass">ChangePwd</a></li>
+			</ul>
+					<div id="loader"></div>				
+					<div id="loader2"></div>
+					<p align="center" id="repas" style="font-size: 1.5em; color: black;" hidden></p>
+        <div class="tab-content">
+
+
+            <div id="login">
+
+			<form>	
+
+				<p type = "text" id = "combine"</p>			
+				
+				<div class="field username">
+                    <div class="field-wrap">
+                        <input name="username" id="username" type="text" class="form-control"  placeholder="User" required>
+						<i class="icon fas fa-user" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+						Chưa điền User.
+						</div>
+                    </div>
+				</div>
+				
+				 <div class="field password">
+                    <div class="field-wrap">
+                        <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu.
+						</div> 
+					</div>				
+				 </div>
+
+					<div  class="field captch_input">
+					  <div class="input_field captch_input">
+						<input id="captcha" type="text" style="height: 33px;" placeholder="Nhập mã dưới" class="form-control" required>				
+					  </div>
+					  <div id="capalert" class="message" style="text-align: left; color: #FF2525;">Nhập mã dưới vào.</div>
+					</div>
+					
+					<div  class="field captch_box">
+					  <div class="input_field captch_box">
+						<input  type="text" value="" disabled />
+						<button hidden class="refresh_button">
+						  <i  class="fa-solid fa-rotate-right"></i>
+						</button>
+					  </div>
+					</div>
+
+
+
+				 <input class="button button-block" type = "button" id="dangnhap" onClick="LoginQL_value(); " value = "Đăng Nhập" style="width: 210px;"></input>
+                </form>
+
+				
+				
+				
+            </div>
+
+
+
+            <div id="changepass">
+				</br>
+                <form>                
+				  
+				  <div class="field username">
+					<div class="field-wrap" autocomplete="off">
+                        <input name="oldusername" id="oldusername" type="text" class="form-control" autofocus placeholder="User" required>
+						<i class="icon fas fa-user" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền User.
+						</div> 
+						</div>
+					</div>
+
+					<div class="field password">
+                    <div class="field-wrap">
+                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu hiện tại.
+						</div> 
+                    </div>
+					</div>
+                  
+				
+
+                    <div class="field password">
+					<div class="field-wrap" autocomplete="off">
+                        <input name="newpassword" id="newpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền Mật khẩu mới.
+						</div>
+                    </div>
+					</div>
+
+                    <div class="field password">
+					<div class="field-wrap">
+                        <input name="cfpassword" id="cfpassword" type="password" class="form-control" autofocus placeholder="Mật khẩu mới" required>
+						<i class="icon fas fa-lock" style="left:10px;"></i>
+						<div class="invalid-feedback" style="text-align: left;">
+							Chưa điền lại Mật khẩu mới.
+						</div>
+                    </div>
+					</div>					
+				 
+				<input class="button button-block" type = "button" id="doipass" onClick="Changepassword_value(); " value = "Đổi Password" style="width: 210px;"></input>
+
+                </form>
+
+            </div>
+
+
+        </div><!-- tab-content -->
+
+    </div> <!-- /form -->
+
+
+</form> <!-- /form -->
+
+
+</div><!-- Modal -->
+
+
+  <!-- Modal Aleert-->   
+
+
+
+<div class="Thoat" id="dialog-container">
+  <div class="popup">
+  </br>	
+    <p>Bạn có muốn Thoát không ?</p>	
+    <div class="text-right">
+      <button class="dialog-btn btn-cancel" id="cancel" style="width:100px;">Cancel</button>
+      <button class="dialog-btn btn-primary" id="confirm"style="width:100px;">OK</button>
+    </div>
+  </div>
+</div>
+<p id="testText"></p>
+<div class="Thoat_time" id="dialog_time">
+  <div class="popup">
+  </br>	
+    <p>Thời gian lâu không dùng !</p>
+    <div class="text-right">
+      <button class="dialog-btn btn-primary" id="confirm_time">OK</button>
+    </div>
+  </div>
+</div> 
+
+  <!-- Modal Aleert-->   
+
+
+
+<div class="modalMess-wrapper">
+  <div class="modalMess">
+    <div class="headMess">
+      <a id="close" class="btn-close trigger" >
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div  class="contentMess">
+        <div class="good-job">
+          <i id="fa" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <h1 id="alert" value="" ></h1>		  	  
+        </div>
+			<div>
+			  <button class="dialog-btn btn-primary"" id="confirm_Login" style="display:none; width:100px;">OK</button>
+			</div>
+	</div>
+
+  </div>	
+ </div>
+
+
+
+<script src="TruyenDanPicture/Droplist.min.js"></script>
+<script src="CapQuangPicture/Login.min.js"></script>
+<script src="LinkGG.js"></script>
+
+<script src="DangNhap/bootstrap.bundle.min.js"></script>
+
+<script src="CryptoJS/Crypto-js.4.1.1.min.js"></script>
+<script src="CryptoJS/Crypto-Funtion.js"></script>
+
+ <script id="rendered-js">
+
+$(document).ready(function () {
+//  $('.modalMess-wrapper').toggleClass('open');
+});
+
+// Close
+$(document).ready(function () {
+ $('.trigger').on('click', function () {
+    $('.modalMess-wrapper').toggleClass('none');
+   return false;
+  });
+});
+
+// OPen
+function open_modalMess() {
+    $('.modalMess-wrapper').toggleClass('open');
+   return false;
+}
+
+</script>
+
+
+<script>
+//eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(r(){\'s t\';3 0={4:5,1:6};3 9=u;3 i=(4,1)=>{2.v(w x(\'j\',{a:{4,1}}))};3 b=({7=k}={})=>{3 c=2.y-2.z>9;3 d=2.A-2.B>9;8(!(d&&c)&&((2.e&&2.e.l&&2.e.l.C)||c||d)){8((!0.4||0.1!==1)&&7){D()}0.4=k;0.1=1}m{8(0.4&&7){i(5,6)}0.4=5;0.1=6}};b({7:5});E(b,F);8(G f!==\'6\'&&f.n){f.n=0}m{2.0=0}})();3 H=o.p(\'#0-I\');3 g=o.p(\'#0-1\');g.q=2.0.1?2.0.1:\'\';2.J(\'j\',h=>{g.q=h.a.1?h.a.1:\'\'});',46,46,'devtools|orientation|window|const|isOpen|false|undefined|emitEvents|if|threshold|detail|div|widthThreshold|heightThreshold|Firebug|module|orientationElement|event|emitEvent|devtoolschange|true|chrome|else|exports|document|querySelector|textContent|function|use|strict|160|dispatchEvent|new|CustomEvent|outerWidth|innerWidth|outerHeight|innerHeight|isInitialized|close|setInterval|500|typeof|stateElement|state|addEventListener'.split('|'),0,{}))
+</script>
+
+
+<script>
+
+// Selecting necessary DOM elements
+const captchaTextBox = document.querySelector(".captch_box input");
+const refreshButton = document.querySelector(".refresh_button");
+const captchaInputBox = document.querySelector(".captch_input input");
+const message = document.querySelector(".message");
+const submitButton = document.querySelector(".button");
+
+// Variable to store generated captcha
+let captchaText = null;
+
+// Function to generate captcha
+const generateCaptcha = () => {
+  const randomString = Math.random().toString(36).substring(2, 7);
+  const randomStringArray = randomString.split("");
+  const changeString = randomStringArray.map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char));
+  captchaText = changeString.join("   ");
+  captchaTextBox.value = captchaText;
+  console.log(captchaText);
+};
+
+const refreshBtnClick = () => {
+  generateCaptcha();
+  captchaInputBox.value = "";
+  captchaKeyUpValidate();
+};
+
+const captchaKeyUpValidate = () => {
+  //Toggle submit button disable class based on captcha input field.
+  submitButton.classList.toggle("disabled", !captchaInputBox.value);
+
+  if (!captchaInputBox.value) message.classList.remove("active");
+};
+
+// Function to validate the entered captcha
+const submitBtnClick = () => {
+  captchaText = captchaText
+    .split("")
+    .filter((char) => char !== " ")
+    .join("");
+  message.classList.add("active");
+
+  if (captchaInputBox.value !== captchaText) {
+    message.innerText = "Nhập sai mã dưới.";
+    message.style.color = "#FF2525";
+  } else {
+    message.innerText = "Ok, Please wait..";
+    message.style.color = "#826afb";
+
+    // 🔹 Khi nhập đúng captcha, tự động gọi hàm LoginQL_value() để gửi yêu cầu đăng nhập
+    setTimeout(() => {
+      LoginQL_value();
+    }, 200); // Đợi 0.2 giây để hiển thị thông báo trước khi gửi request
+  }
+};
+
+
+// Add event listeners for the refresh button, captchaInputBox, submit button
+refreshButton.addEventListener("click", refreshBtnClick);
+captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
+submitButton.addEventListener("click", submitBtnClick);
+
+// Generate a captcha when the page loads
+generateCaptcha(); 
+
+//==========Hàm này check Input Form (Phải có)==============
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+	  
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+		}, false)
+    }
+	)
+})()
+</script>
+		
+<script type="text/javascript">//<![CDATA[
+
+$(document).ready(function() {
+document.getElementById('combine').value = "giaphachi";
+
+// Click Image Open Madal 
+
+var modal01 = document.getElementById("id01");
+	modal01.style.display = "block";
+	
+	document.getElementById('username').value = "";
+	document.getElementById('password').value = "";
+
+	document.getElementById('oldusername').value = "";
+	document.getElementById('oldpassword').value = "";
+	document.getElementById('newpassword').value = "";
+	document.getElementById('cfpassword').value = "";	
+
+
+var url = location.protocol;
+if (url == "file:KHANH") {
+	var element = document.getElementById("login");
+	element.parentNode.removeChild(element);
+	close();
+} else {
+}
+
+});
+
+!function(n){"use strict";n.fn.idle=function(e){var t,i,o={idle:6e4,events:"mousemove keydown mousedown touchstart",onIdle:function(){},onActive:function(){},onHide:function(){},onShow:function(){},keepTracking:!0,startAtIdle:!1,recurIdleCall:!1},c=e.startAtIdle||!1,d=!e.startAtIdle||!0,l=n.extend({},o,e),u=null;return n(this).on("idle:stop",{},function(){n(this).off(l.events),l.keepTracking=!1,t(u,l)}),t=function(n,e){return c&&(e.onActive.call(),c=!1),clearTimeout(n),e.keepTracking?i(e):void 0},i=function(n){var e,t=n.recurIdleCall?setInterval:setTimeout;return e=t(function(){c=!0,n.onIdle.call()},n.idle)},this.each(function(){u=i(l),n(this).on(l.events,function(){u=t(u,l)}),(l.onShow||l.onHide)&&n(document).on("visibilitychange webkitvisibilitychange mozvisibilitychange msvisibilitychange",function(){document.hidden||document.webkitHidden||document.mozHidden||document.msHidden?d&&(d=!1,l.onHide.call()):d||(d=!0,l.onShow.call())})})}}(jQuery);
+
+$(document).idle({
+  onIdle: function(){
+	Search_dialog_time();
+  },
+  idle: 1800000
+})
+//]]>
+
+var Thoat_timeme = document.getElementById("dialog_time");
+var Thoatme = document.getElementById("testText");
+function Search_dialog_time(){
+if (document.getElementById("dialog_time")==null || document.getElementById("testText")==null) {
+close();
+} else {
+show_dialog_time();
+}
+}
+
+
+function show_dialog_time() {
+    Thoat_timeme.style.display = "block";
+}
+
+document.getElementById("confirm_time").onclick = function(){confirm_time()};
+function confirm_time() {
+	close();	
+    Thoat_timeme.style.display = "none";	
+}
+
+
+// Thoát
+document.getElementById("btn-show-dialog").onclick = function(){show_dialog()};
+var Thoatme = document.getElementById("dialog-container");
+
+function show_dialog() {
+window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+    //Thoatme.style.display = "block";
+}
+
+document.getElementById("confirm").onclick = function(){confirm()};
+function confirm() {
+	//close();	
+    Thoatme.style.display = "none";
+	window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+	
+}
+
+document.getElementById("cancel").onclick = function(){cancel()};
+function cancel() {
+    Thoatme.style.display = "none";
+}
+
+// Modal Alert Close
+$(document).ready(function () {
+ $('.trigger').on('click', function () {
+    $('.modalMess-wrapper').toggleClass('open');
+   return false;
+  });
+});
+
+
+
+function close_window() {
+close();
+}
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+home = function(){
+//location.href = '' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+window.location.href = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+}
+
+
+window.requestFrame = (function() {
+  return window.requestAnimationFrame || (window.webkitRequestAnimationFrame || (window.mozRequestAnimationFrame || (window.msRequestAnimationFrame || (window.oRequestAnimationFrame || function(c) {
+    window.setTimeout(c, 50);
+  }))));
+})();
+var test = {
+  st: false,
+  el: document.createElement("img"),
+  rn: function() {
+    test.st = false;
+    console.log(test.el);
+    console.clear();
+    document.getElementById("testText").innerHTML = ((test.st === true) ? "open" : "") + ".";
+    window.requestFrame(test.rn);
+  }
+};
+(test.el).__defineGetter__("id", function() {
+  test.st = true;
+});
+test.rn();
+//------------------------
+
+
+
+window.history.replaceState('','','/');
+
+
+function LoginQL_value() {
+    var form = document.querySelector('.needs-validation');
+    var inputs = form.querySelectorAll('input[name="username"], input[name="password"]');
+    var captchaInputBox = document.querySelector('.captch_input input');
+
+    var isValid = true;
+    for (var i = 0; i < inputs.length; i++) {
+        if (!inputs[i].checkValidity()) {
+            isValid = false;
+        }
+    }
+
+		var captchaInputValue = captchaInputBox.value.trim().replace(/\s+/g, '');
+		var captchaGenerated = captchaText.replace(/\s+/g, '');
+
+		if (isValid && message.innerText == "Ok, Please wait.." && captchaInputValue === captchaGenerated) {
+        generateCaptcha();
+
+        var user = $("#username").val();
+        var pass = $("#password").val();
+        var ngay = $("#ngay").val();
+		
+		var combine= $("#combine").val();
+		var time = d.yyyymmddhhmmss().toString();
+        //var combine = "vattuvotuyendha"; // Mã cố định
+
+
+        var khoa = "1234567890123456"; // Khóa AES (Cố định với GAS)
+        //var khoaHMAC = "abcdef1234567890"; // 🔑 Khóa HMAC bí mật (Giống trên GAS)
+		//var khoaHMAC = combine; // 🔑 Khóa HMAC bí mật (Giống trên GAS)
+		var khoaHMAC = time; // 🔑 Khóa HMAC bí mật (Giống trên GAS)
+
+        // 🔐 Mã hóa username và password bằng AES-CBC
+        var userMaHoa = maHoaAES_CBC(user, khoa);
+        var passMaHoa = maHoaAES_CBC(pass, khoa);
+		
+		// 🔐 Tạo HMAC SHA-256 từ dữ liệu đã mã hóa
+        var dataToSign = userMaHoa + passMaHoa + combine;
+        var hmac = taoHMAC_SHA256(dataToSign, khoaHMAC);
+
+        var url = atob(script_url) + "?callback=ctrlq&ngay=" + ngay +
+            "&password=" + encodeURIComponent(passMaHoa) + 
+            "&username=" + encodeURIComponent(userMaHoa) +
+            "&combine=" + combine + 
+            "&time=" + time + 
+            "&hmac=" + encodeURIComponent(hmac) + // 📌 Gửi HMAC lên server
+            "&action=LoginQL";
+
+        var request = jQuery.ajax({
+            crossDomain: true,
+            url: url,
+            method: "GET",
+            dataType: "jsonp"
+        });
+    }
+
+    form.classList.add('was-validated');
+}
+
+function Changepassword_value() {
+    var form = document.querySelector('.needs-validation');
+    var inputs = form.querySelectorAll('input[name="oldusername"], input[name="oldpassword"], input[name="newpassword"], input[name="cfpassword"]');
+
+    var isValid = true;
+    for (var i = 0; i < inputs.length; i++) {
+        if (!inputs[i].checkValidity()) {
+            isValid = false;
+        }
+    }
+
+    if (isValid) {
+        var olduser = $("#oldusername").val();
+        var oldpass = $("#oldpassword").val();
+        var newpass = $("#newpassword").val();
+        var cfpass = $("#cfpassword").val();
+		
+        var combine = $("#combine").val();
+		var time = d.yyyymmddhhmmss().toString();
+		//var combine = "vattuvotuyendha"; // Mã cố định
+
+        var newpassleng = newpass.length;
+
+        if (newpassleng < 8) {
+            $('.modalMess-wrapper').toggleClass('open');
+            document.getElementById("alert").innerHTML = "Mật khẩu mới phải có ít nhất 8 ký tự!";
+			$('#fa').addClass("fa-exclamation-circle");
+			document.getElementById("close").style.display = "block";
+            document.getElementById("confirm_Login").style.display = "none";
+            return false;
+        }
+
+        if (newpass !== cfpass) {
+            $('.modalMess-wrapper').toggleClass('open');
+			$('#fa').addClass("fa-exclamation-circle");
+			document.getElementById("close").style.display = "block";
+            document.getElementById("alert").innerHTML = "Mật khẩu nhập lại không khớp!";
+            document.getElementById("confirm_Login").style.display = "none";
+            return false;
+        }
+
+        var khoaAES = "1234567890123456"; // 🔐 Khóa AES (Giống với GAS)
+        //var khoaHMAC = "abcdef1234567890"; // 🔑 Khóa HMAC (Giống với GAS)
+		//var khoaHMAC = combine; // 🔑 Khóa HMAC (Giống với GAS)
+		var khoaHMAC = time; // 🔑 Khóa HMAC (Giống với GAS)
+
+        // 🔐 Mã hóa mật khẩu cũ và mới bằng AES-CBC
+        var oldpassMaHoa = maHoaAES_CBC(oldpass, khoaAES);
+        var newpassMaHoa = maHoaAES_CBC(newpass, khoaAES);
+
+        // 🔐 Tạo HMAC từ dữ liệu mã hóa
+        var dataToSign = oldpassMaHoa + newpassMaHoa + combine;
+        var hmac = taoHMAC_SHA256(dataToSign, khoaHMAC);
+
+        var url = atob(script_url) +
+            "?callback=ctrlq&oldpassword=" + encodeURIComponent(oldpassMaHoa) +
+            "&oldusername=" + encodeURIComponent(olduser) +
+            "&newpassword=" + encodeURIComponent(newpassMaHoa) +
+            "&combine=" + combine +
+            "&time=" + time +
+            "&hmac=" + encodeURIComponent(hmac) + // 📌 Gửi HMAC lên server
+            "&action=Changepassword";
+
+        var request = jQuery.ajax({
+            crossDomain: true,
+            url: url,
+            method: "GET",
+            dataType: "jsonp"
+        });
+
+        document.getElementById('username').value = "";
+        document.getElementById('password').value = "";
+
+        form.classList.remove('was-validated');
+    } else {
+        form.classList.add('was-validated');
+    }
+}
+
+
+  function ctrlq(e) {
+			var str = e.result;
+			var parts = str.split(" "); // Tách chuỗi thành mảng các phần tử bằng khoảng trắng
+			var part1 = parts[0];
+			var part2 = parts.slice(1).join(" ");
+			
+			localStorage.setItem('part2', part2);
+			var savedPart2 = localStorage.getItem('part2');			
+			document.getElementById('username').value = "";
+			document.getElementById('password').value = "";
+       if (part1 === "SaiPassword!") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đăng nhập sai UserName hoặc Password !";
+			document.getElementById("captcha").value = "";
+			document.getElementById("capalert").innerHTML = '<span style="color: #FF2525;">Nhập mã dưới vào.</span>';
+			document.getElementById("confirm_Login").style.display = "none";
+			return false;
+		
+       } else if (part1 === "DoiPasswordNok") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them
+			$('#fa').addClass("fa-exclamation-circle");
+			document.getElementById("close").style.display = "block";			
+			document.getElementById("alert").innerHTML = "Đổi Password NOK !";
+			document.getElementById("confirm_Login").style.display = "none";
+			document.getElementById('oldusername').value = "";
+			document.getElementById('oldpassword').value = "";
+			document.getElementById('newpassword').value = "";
+			document.getElementById('cfpassword').value = "";
+			return false;
+
+       } else if (part1 === "DoiPasswordOk") {
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đổi Password OK, đã gửi về Email của Bạn !";
+			document.getElementById("confirm_Login").style.display = "none";
+			document.getElementById('oldusername').value = "";
+			document.getElementById('oldpassword').value = "";
+			document.getElementById('newpassword').value = "";
+			document.getElementById('cfpassword').value = "";
+			return false;
+			
+		
+		} else {	
+
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("alert").innerHTML = "Đăng nhập OK !";
+			$('#fa').attr("class", "fa fa-thumbs-o-up");
+			document.getElementById("confirm_Login").style.display = "block";
+			document.getElementById("close").style.display = "none";
+
+			document.getElementById("confirm_Login").onclick = function(){Loginconfirm_value()};
+
+			function Loginconfirm_value() {		
+			document.getElementById("captcha").value = "";
+			document.getElementById("capalert").innerHTML = '<span style="color: #FF2525;">Nhập mã dưới vào.</span>';			
+			$('.modalMess-wrapper').toggleClass('open'); // Moi them	
+			document.getElementById("confirm_Login").style.display = "none";
+			khánh1 = '' + (location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : ''));
+			khánh2 = ".html";
+			let url = khánh1 + "/" + part1 + khánh2;
+			// Mở cửa sổ mới tại cửa sổ hiện tại
+			window.location.href = url;
+			}			
+  }
+
+};
+	
+	
+function Delre() {
+  document.querySelector("#re").innerHTML="";
+}
+ 
+  
+$(document).keydown(function(event) {
+    if (!((String.fromCharCode(event.which).toLowerCase() == 's' || event.keyCode == 13) && event.ctrlKey) && !(event.which == 19)) return true;
+    event.preventDefault();
+    return false;
+});  
+
+// FACEBOOK
+ shareface = function(){
+    url = 'https://www.facebook.com/sharer/sharer.php?u=' + (location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: ''));
+	
+    options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+    window.open(url,'sharer',options);
+} 
+
+</script>
+
+
+
+<script id="rendered-js">
+
+// Chuyen form login
+
+        $('.form').find('input, textarea').on('keyup blur focus', function(e) {
+
+            var $this = $(this),
+                label = $this.prev('label');
+
+            if (e.type === 'keyup') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.addClass('active highlight');
+                }
+            } else if (e.type === 'blur') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');		
+                } else {
+                    label.removeClass('highlight');
+                }
+            } else if (e.type === 'focus') {
+
+                if ($this.val() === '') {
+                    label.removeClass('highlight');
+                } else
+                if ($this.val() !== '') {
+                    label.addClass('highlight');
+                }
+            }
+
+        });
+
+        $('.tab a').on('click', function(e) {
+
+            e.preventDefault();
+
+            $(this).parent().addClass('active');
+			
+            $(this).parent().siblings().removeClass('active');
+
+            target = $(this).attr('href');
+
+            $('.tab-content > div').not(target).hide();
+
+            $(target).fadeIn(600);
+
+        });
+
+function adjustModalHeight() {
+  var modal = $('.modal');
+  var content = modal.find('.tab-content');
+
+  // Thiết lập độ cao mặc định cho modal
+  modal.height('auto');
+
+  // Lấy độ cao của nội dung bên trong modal
+  var contentHeight = content.outerHeight();
+
+  // Kiểm tra nếu độ cao nội dung vượt quá một giới hạn nhất định
+  var maxHeight = 500; // Giới hạn độ cao tối đa của modal
+  if (contentHeight > maxHeight) {
+    contentHeight = maxHeight;
+  }
+
+  // Đặt độ cao mới cho modal
+  modal.height(contentHeight);
+}
+
+// Gọi hàm adjustModalHeight khi modal được hiển thị
+$('.modal').on('shown.bs.modal', function() {
+  adjustModalHeight();
+});
+
+// Gọi hàm adjustModalHeight khi nội dung trong modal thay đổi
+$('.tab a').on('click', function(e) {
+  e.preventDefault();
+  adjustModalHeight();
+});
+
+ 
+</script>
+
+
+
+
+</body>
+</html>
