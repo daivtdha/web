@@ -1828,10 +1828,10 @@ font-weight: bold;
 
 	@media (max-width: 768px) {
 	  .text-effect {
-		width: 100%;
-		font-size: 12px;
+		font-size: 12px !important;
 	  }
 	}
+
 	.text-effect{
 		color: #fff6a9;
 		font-family: 'Dancing Script', cursive;
@@ -1883,7 +1883,7 @@ font-weight: bold;
 	  display: flex;
 	  flex-wrap: wrap;
 	  justify-content: space-between;
-	  padding: 5px;
+	  padding: 2px;
 	  box-sizing: border-box;
 	  width: 100%;
 	  color: white;
@@ -1903,24 +1903,32 @@ font-weight: bold;
 
 
 	@media (max-width: 768px) {
-	  .box
-	  .title {
+	    .title {
 		width: 100%;
 		margin: 10px 0;
 		line-height: 1em;
+		margin-top: 4px;
 	  }
 	}
-
+	@media (max-width: 768px) {
+	  .box {
+		width: 100%;
+		margin: 10px 0;
+		line-height: 1em;
+		margin-top: 4px;
+		text-align: left;
+	  }
+	}
     .title {
       font-weight: bold;
       font-size: 12px;
       text-align: center;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       color: #ffff66;
       background: linear-gradient(to right, #b3ffb3, #ccffff);
-      color: #003300;
-      border-radius: 1px;
-      padding: 1px 1px;
+      color: red;
+      border-radius: 8px;
+   
     }
 
     .content {
