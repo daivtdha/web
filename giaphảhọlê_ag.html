@@ -1830,7 +1830,7 @@ font-weight: bold;
 	.text-effect{
 		color: #fff6a9;
 		font-family: 'Dancing Script', cursive;
-		font-size: 40px;
+		font-size: 30px;
 		font-weight: 600;
 		text-align: center;
 		text-transform: capitalize;
@@ -1841,7 +1841,7 @@ font-weight: bold;
 		background: #0b3861;
 		width: 100%;
 		margin: 0;
-		padding: 20px 0;
+		padding: 10px 0;
 
 
 	}
@@ -1873,47 +1873,56 @@ font-weight: bold;
 
 /* Banner Header */
 
-    .banner {
-      width: 100%;
-      height: 190px;
-      background: linear-gradient(to right, #2b78e4, #3c8dbc);
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      color: white;
-      box-sizing: border-box;
+
+	.banner {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	  padding: 5px;
+	  box-sizing: border-box;
+	  width: 100%;
+	  color: white;
+	  box-sizing: border-box;
 	  margin-top: 0px;
-    }
+	}
 
 	.box {
-	  width: 32%;
+	  width: 33%;
 	  background-color: #0b3861;
 	  border-radius: 10px;
-	  padding: 10px;
+	  padding: 5px;
 	  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 	  display: flex;
 	  flex-direction: column;
 	}
 
 
+	@media (max-width: 768px) {
+	  .box
+	  .title {
+		width: 100%;
+		margin: 10px 0;
+	  }
+	}
+
     .title {
       font-weight: bold;
-      font-size: 16px;
+      font-size: 12px;
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
       color: #ffff66;
       background: linear-gradient(to right, #b3ffb3, #ccffff);
       color: #003300;
-      border-radius: 8px;
-      padding: 2px 6px;
+      border-radius: 1px;
+      padding: 1px 1px;
     }
 
     .content {
-      font-size: 13px;
+      font-size: 12px;
       text-align: justify;
-      line-height: 1.3em;
+      line-height: 1em;
     }
-/* End Banner Header */	
+/* End Banner Header */
 	
 /* Hiệu ứng node */
   .node.fade  { opacity: 0.12; }
