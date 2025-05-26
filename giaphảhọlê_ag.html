@@ -1844,7 +1844,7 @@ font-weight: bold;
 		text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
 		position: relative;
 		animation: animate 2s ease-in-out infinite;
-		background: #0b3861;
+		background:black;
 		width: 100%;
 		margin: 0;
 		padding: 10px 0;
@@ -1879,65 +1879,81 @@ font-weight: bold;
 
 /* Banner Header */
 
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0px;
+  background: #fefcf7;
+}
 
-	.banner {
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: space-between;
-	  padding: 2px;
-	  box-sizing: border-box;
-	  width: 100%;
-	  color: white;
-	  box-sizing: border-box;
-	  margin-top: 0px;
-	}
+.box {
+  width: 33%;
+  background-color: #fffdf5;
+  border-radius: 12px;
+  padding: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 5px solid #d4af37;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+}
 
-	.box {
-	  width: 33%;
-	  background-color: #0b3861;
-	  border-radius: 10px;
-	  padding: 5px;
-	  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-	  display: flex;
-	  flex-direction: column;
-	}
+/* Viền vàng kép */
+.box::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid #f3e2a9;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #b22222;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #fff8dc, #ffe4b5);
+  border-radius: 5px;
+  padding: 2px;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.content {
+  font-size: 12px;
+  text-align: justify;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%;
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
 
 
-	@media (max-width: 768px) {
-	    .title {
-		width: 100%;
-		margin: 10px 0;
-		line-height: 1em;
-		margin-top: 2px;
-	  }
-	}
-	@media (max-width: 768px) {
-	  .box {
-		width: 100%;
-		margin: 10px 0;
-		line-height: 1em;
-		margin-top: 1px;
-		text-align: left;
-		margin-bottom: 1px;
-	  }
-	}
-    .title {
-      font-weight: bold;
-      font-size: 12px;
-      text-align: center;
-      margin-bottom: 4px;
-      color: #ffff66;
-      background: linear-gradient(to right, #b3ffb3, #ccffff);
-      color: red;
-      border-radius: 8px;
-   
-    }
-
-    .content {
-      font-size: 12px;
-      text-align: justify;
-      line-height: 1em;
-    }
 /* End Banner Header */
 	
 /* Hiệu ứng node */
