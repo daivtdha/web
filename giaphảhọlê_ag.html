@@ -1938,19 +1938,42 @@ font-weight: bold;
   color: #333;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
+@media (max-width: 768px) and (orientation: portrait) {
   .box {
     width: 100%;
     padding: 5px;
     font-size: 13px;
-    margin-top: 1px;
-    margin-bottom: 1px;
+	margin-top: 1px;
+	margin-bottom: 1px;
   }
 
   .title {
     font-size: 16px;
-    margin-top: 1px;
-    margin-bottom: 5px;
+	margin-top: 1px;
+	margin-bottom: 5px;
+  }
+
+  .content {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+}
+
+/* Giao diện cho điện thoại ngang (iPhone 15 landscape) */
+@media (max-width: 980px) and (orientation: landscape) {
+  .box {
+    width: 33%;
+    padding: 5px;
+    font-size: 13px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+  }
+
+  .title {
+    font-size: 16px;
+	margin-top: 1px;
+	margin-bottom: 5px;
   }
 
   .content {
