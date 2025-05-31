@@ -1951,20 +1951,26 @@ font-weight: bold;
   color: #333;
 }
 
-/* @media (max-width: 768px) { */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Dọc: stack dọc, mỗi box chiếm 100% */
 @media (max-width: 768px) and (orientation: portrait) {
   .box {
     width: 100%;
     padding: 5px;
     font-size: 13px;
-	margin-top: 1px;
-	margin-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    box-sizing: border-box;
   }
 
   .title {
     font-size: 16px;
-	margin-top: 1px;
-	margin-bottom: 5px;
+    margin-top: 1px;
+    margin-bottom: 5px;
   }
 
   .content {
@@ -1973,20 +1979,26 @@ font-weight: bold;
   }
 }
 
-/* Giao diện cho điện thoại ngang (iPhone 15 landscape) */
+/* Ngang: xếp ngang, mỗi box chiếm 33% */
 @media (max-width: 980px) and (orientation: landscape) {
+  .banner {
+    display: flex;
+    flex-direction: row;
+  }
+
   .box {
-    width: 33%;
+    width: 33.33%;
     padding: 5px;
     font-size: 13px;
-	margin-top: 1px;
-	margin-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    box-sizing: border-box;
   }
 
   .title {
     font-size: 16px;
-	margin-top: 1px;
-	margin-bottom: 5px;
+    margin-top: 1px;
+    margin-bottom: 5px;
   }
 
   .content {
@@ -1994,6 +2006,7 @@ font-weight: bold;
     line-height: 1.2;
   }
 }
+
 
 /* End Banner Header */
 
