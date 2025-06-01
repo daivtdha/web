@@ -1888,87 +1888,44 @@ font-weight: bold;
 	}
 
 /* End Chử hiệu ứng */
+
 /* Chử hiệu ứng 2 */
 
 
 .neon-container {
     width: 100%;
-    height: 40px;
+    height: 60px;
     background-color: black; /* tạo nền đen riêng */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-	margin: 5;
 }
 
-.neon {
-   
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    overflow: hidden;
-    filter: brightness(200%);
-}
 
 .text {
-    background-color: black;
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    font-family: sans-serif;
-    position: relative;
-    user-select: none;
-	margin-top: 7px;
-	margin-bottom: 5px;
+  color: rgba(255,0,0,0.1);
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-size: cover;
+  background-image: url(https://cdn-images-1.medium.com/max/2000/1*Jalb56N34pBIGCjQULtW3A.jpeg);
+  -webkit-background-clip: text;
+  animation: background-text-animation 50s linear infinite;
+}
+@keyframes background-text-animation {
+  0%{
+    background-position: left 0px top 50%;
+  }
+  50%{
+    background-position: left 1500px top 50%;
+  }
+  100%{
+    background-position: left 0px top 50%;
+  }
 }
 
-.text::before {
-    content: attr(data-text);
-    position: absolute;
-    color: white;
-    filter: blur(0.05em);
-    mix-blend-mode: difference;
-}
-
-.gradient {
-    position: absolute;
-    background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    mix-blend-mode: multiply;
-}
-
-.spotlight {
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(
-            circle,
-            white,
-            transparent 25%
-        ) center / 25% 25%,
-        radial-gradient(
-            circle,
-            white,
-            black 25%
-        ) center / 12.5% 12.5%;
-    animation: light 10s linear infinite;
-    mix-blend-mode: color-dodge;
-}
-
-@keyframes light {
-    to {
-        transform: translate(50%, 50%);
-    }
-}
-
-/* End Chử hiệu ứng 2 */
+/* End Chử hiệu ứng 2 */	
 
 /* Banner Header */
 
