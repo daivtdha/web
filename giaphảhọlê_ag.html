@@ -2016,7 +2016,7 @@ font-weight: bold;
 
 
 /* Background header */
-	
+
 /* Banner Header */
 
 .banner {
@@ -2078,23 +2078,20 @@ font-weight: bold;
   color: #333;
 }
 
-
-
-/* Dọc: stack dọc, mỗi box chiếm 100% */
+/* @media (max-width: 768px) { */
 @media (max-width: 768px) and (orientation: portrait) {
   .box {
     width: 100%;
     padding: 5px;
     font-size: 13px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    box-sizing: border-box;
+	margin-top: 1px;
+	margin-bottom: 1px;
   }
 
   .title {
     font-size: 16px;
-    margin-top: 1px;
-    margin-bottom: 5px;
+	margin-top: 1px;
+	margin-bottom: 5px;
   }
 
   .content {
@@ -2103,26 +2100,20 @@ font-weight: bold;
   }
 }
 
-/* Ngang: xếp ngang, mỗi box chiếm 33% */
+/* Giao diện cho điện thoại ngang (iPhone 15 landscape) */
 @media (max-width: 980px) and (orientation: landscape) {
-  .banner {
-    display: flex;
-    flex-direction: row;
-  }
-
   .box {
-    width: 33.33%;
+    width: 33%;
     padding: 5px;
     font-size: 13px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    box-sizing: border-box;
+	margin-top: 1px;
+	margin-bottom: 1px;
   }
 
   .title {
     font-size: 16px;
-    margin-top: 1px;
-    margin-bottom: 5px;
+	margin-top: 1px;
+	margin-bottom: 5px;
   }
 
   .content {
@@ -2130,13 +2121,13 @@ font-weight: bold;
     line-height: 1.2;
   }
 }
-
 
 /* End Banner Header */
 
 /* Hiệu ứng node */
   .node.fade  { opacity: 0.12; }
   .link.fade  { opacity: 0.08; }
+
 #btnRefresh {
   background:#f39c12;
   color: white;
@@ -2145,12 +2136,15 @@ font-weight: bold;
 }
 #btnRefresh:hover {
   background-color: #b22222;
-}
-	
+}  
+  
  #familyTree {
-  /* background-image: url('https://taimienphi.vn/tmp/cf/Images/dip/2023/10/30/khung-vien-word-1.jpg');
-  background-repeat: repeat; */
+ /*  background-image: url('https://gitiho.com/caches/p_medium_large//uploads/338054/images/image_32-hinh-nen-powerpoint-trong-dong.jpg');
+  background-repeat: no-repeat; /* 
 } 
+
+
+
 </style>
 
 </head>
