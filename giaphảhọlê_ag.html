@@ -202,156 +202,84 @@ input[type=submit] {
     }
 
 
+/* Footer */
 
 .footer {
- background-image: linear-gradient(to bottom right, #5dade2 ,#ffffb3, #5dade2 ,#ffffb3 ,#ffffb3);
-
   width: 100%;
-  text-align: left;
   font-family: sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 5px;
-  margin-top: 5px;
-  
+  box-sizing: border-box;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
-  display: inline-block;
-  vertical-align: top;
+/* Phần giữa */
+.footer-middle {
+  background-color: #abb2b9;
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 5px;
 }
 
-
-
-
-.footer .footer-left {
-  width: 33%;
-  padding-right: 5px;
-}
-
-.footer .about {
-  line-height: 20px;
-  color:black;
-  font-size: 16px;
-  font-weight: bold;
+.footer-col {
+  flex: 1 1 30%;
+  min-width: 200px;
   margin: 0;
 }
 
-.footer .about span {
-  display: block;
-  color:black;
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  color: black;
+  padding: 2px 0;
 }
 
-.footer .icons {
-  margin-top: 20px;
+.footer-item i {
+  color: #007acc;
+  font-size: 16px;
+  min-width: 18px;
 }
 
-.footer .icons a {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  background-color:#0099ff;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 10px;
-  margin-right: 3px;
-
-}
-
-
-
-
-.footer .footer-center {
-  width: 25%;
-}
-
-.footer .footer-center i {
-  background-color:#0099ff;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 10px;
-  margin: 10px 3px;
-  vertical-align: middle;
-}
-
-.footer .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 25px;
-  color: #ffffff;
-}
-
-.footer .footer-center p {
-  display: inline-block;
-  color:black;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer .footer-center p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
-}
-
-.footer .footer-center p a {
-  color: #0099ff;
+.footer-item a {
+  color: black;
   text-decoration: none;
 }
 
-
-
-
-.footer .footer-right {
-  width: 35%;
-}
-
-.footer h2 {
-  color: #ffffff;
-  font-size: 26px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer h2 span {
-  color: #0099ff;
-}
-
-.footer .menu {
-  color:black;
-  margin: 0px 0 12px;
-  padding: 0;
-}
-
-.footer .menu a {
-  display: inline-block;
-  line-height: 1.0;
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer .menu a:hover {
-  color: #0099ff;
-}
-
-.footer .name {
-  color:black;
-  font-size: 14px;
+/* Phần dưới */
+.footer-bottom {
+  background-color: #2e3b4e;
+  padding: 1px 1px;
+  text-align: center;
+  font-size: 13px;
   font-weight: bold;
-  margin: 0;
+  color: white;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-middle {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-item {
+    justify-content: center;
+  }
+}
+
+
+/* End Footer */
 
 
 
@@ -2237,37 +2165,33 @@ const _0x43da22=_0x21de;(function(_0x54407a,_0xbef290){const _0x3672d4=_0x21de,_
 </script>
 
 
-	
 <div class="footer">
 
-  <div class="footer-center col-md-4 col-sm-6">
-    <div>
-      <i class="fa fa-map-marker"></i>
-      <p><span></span> Liên Hệ: 79 Huỳnh Thúc Kháng<span> </span> Thành Phố Đông Hà, Tỉnh Quảng Trị</p>
-    </div>
-	<div>
-      <i class="fa fa-phone"></i>
-      <p> (+84) 916468333</p>
-    </div>
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p><a style="color:black;" href="mailto:khanhvtn@gmail.com?subject = To LV Khanh">khanhvtn@gmail.com</a></p>
-    </div>
+	<div class="footer-middle">
+	  <div class="footer-col">
+		<div class="footer-item">
+		  <i class="fa fa-map-marker"></i>
+		  <span>Trang Website: Tạo cây gia phả họ tộc</span>
+		</div>
+	  </div>
+
+	  <div class="footer-col">
+		<div class="footer-item">
+		  <i class="fa fa-phone"></i>
+		  <span>(+84) 916468333</span>
+		</div>
+	  </div>
+
+	  <div class="footer-col">
+		<div class="footer-item">
+		  <i class="fa fa-envelope"></i>
+		  <a href="mailto:khanhvtn@gmail.com">khanhvtn@gmail.com</a>
+		</div>
+	  </div>
+	</div>
+  <div class="footer-bottom">
+    <p class="copyright">Lê Văn Khanh Copyright © 2025. All right reserved.</p>
   </div>
-  
-
- 
-  <div class="footer-right col-md-4 col-sm-6">
-
-    <p class="menu">
-	
-      <a onclick="home()" > Trang Chủ</a> |
-      <a href="#"> Website: Gia Phả</a> |
-    </p>
-
-    <p class="name"> Lê Văn Khanh Copyright © 2025. All right reserved.</p>
-  </div>
-</footer>
 </div>
 
 </body>
