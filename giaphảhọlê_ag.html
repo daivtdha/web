@@ -292,39 +292,45 @@ input[type=submit] {
 
 
 /* Responsive */
+/* === RESPONSIVE CHO MÀN HÌNH NHỎ === */
 @media (max-width: 768px) {
   .footer-middle {
     flex-direction: column;
     text-align: center;
-    gap: 4px; /* Giảm khoảng cách giữa các cột */
-    padding: 4px 0; /* Giảm padding nếu cần */
+    gap: 6px;
+    padding: 5px 6px;
   }
 
-  .footer-col {
+  .footer-col,
+  .footer-col.first {
     flex: 1 1 100%;
     text-align: center;
-    margin: 2px 0; /* Giảm margin giữa các cột */
+    min-width: unset;
+    margin: 2px 0;
   }
 
   .footer-item {
     justify-content: center;
-    font-size: 13px; /* Giảm kích cỡ font nếu muốn */
-    gap: 6px; /* Giảm khoảng cách giữa icon và text */
-    line-height: 1.2; /* Giảm chiều cao dòng */
+    font-size: 13px;
+    gap: 6px;
+    line-height: 1.3;
+    flex-wrap: nowrap;
+    text-align: left;
   }
 
   .footer-item i {
-    font-size: 14px; /* Giảm kích thước icon */
+    font-size: 14px;
+    min-width: 14px;
+    margin-top: 2px;
   }
 
-  .footer-item span, .footer-item a {
+  .footer-item span,
+  .footer-item a {
     margin: 0;
     padding: 0;
+    display: inline;
   }
 }
-
-
-
 /* End Footer */
 
 
