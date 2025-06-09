@@ -213,112 +213,94 @@ input[type=submit] {
 
 /* Footer */
 
-.footer {
-  width: 100%;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-}
+    .footer {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-/* Phần trên (thêm mới để phân biệt) */
-.footer-top {
-  background-color: white;
-  color: #2e3b4e;
-  text-align: center;
-  padding: 5px 10px;
-  font-weight: bold;
-  font-size: 16px;
-}
+    .footer-middle {
+      background-color: #2e3b4e;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: left;
+      gap: 10px;
+      color: white;
+    }
 
-/* Cột đầu tiên rộng hơn */
-.footer-col.first {
-  flex: 2 1 35%;
-}
+    .footer-col {
+      flex: 1 1 30%;
+      min-width: 0;
+      margin: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
-/* Phần giữa */
-.footer-middle {
-  background-color: #2e3b4e;
-  padding: 5px 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: left;
-  gap: 5px;
-  color: white;
-}
+    .footer-col.first {
+      flex: 2 1 35%;
+    }
 
-.footer-col {
-  flex: 1 1 30%;
-  min-width: 200px;
-  margin: 0;
-}
+    .footer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      color: white;
+      padding: 4px 0;
+    }
 
-.footer-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: white;
-  padding: 2px 0;
-  align-items: flex-start; /* icon canh đầu dòng */
-}
+    .footer-item i {
+      color: #66ccff;
+      font-size: 16px;
+      min-width: 18px;
+      margin-top: 2px;
+    }
 
-.footer-item i {
-  color: #66ccff;
-  font-size: 16px;
-  min-width: 18px;
-  margin-top: 2px; /* căn icon cùng dòng nếu cần */
-}
+    .footer-item span,
+    .footer-item a {
+      display: inline-block;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      color: white;
+      text-decoration: none;
+      line-height: 1.4;
+    }
 
-.footer-item a {
-  color: white;
-  text-decoration: none;
-}
+    .footer-bottom {
+      background-color: #1c2735;
+      padding: 8px 10px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: bold;
+      color: white;
+    }
 
+    /* === RESPONSIVE CHO MÀN NHỎ === */
+    @media (max-width: 768px) {
+      .footer-middle {
+        flex-direction: column;
+        text-align: center;
+      }
 
-/* Phần dưới */
-.footer-bottom {
-  background-color: #1c2735; /* hoặc giữ nguyên #2e3b4e nếu bạn muốn */
-  padding: 2px 10px;          /* giảm padding để hạ chiều cao */
-  text-align: center;
-  font-size: 12px;            /* giảm kích cỡ chữ nếu cần */
-  line-height: 16px;          /* đảm bảo không bị cao quá */
-  font-weight: bold;
-  color: white;
-}
+      .footer-col,
+      .footer-col.first {
+        flex: 1 1 100%;
+        text-align: center;
+      }
 
-
-
-/* Responsive */
-/* === RESPONSIVE CHO MÀN HÌNH NHỎ === */
-@media (max-width: 768px) {
-  .footer-middle {
-    flex-direction: column;
-    padding: 5px 10px;
-    text-align: center;
-  }
-
-  .footer-col,
-  .footer-col.first {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .footer-item {
-    justify-content: center;
-    text-align: left;
-    gap: 6px;
-    font-size: 13px;
-    line-height: 1.3;
-    word-break: break-word;
-  }
-
-  .footer-item i {
-    font-size: 14px;
-  }
-}
+      .footer-item {
+        justify-content: center;
+        text-align: left;
+        gap: 6px;
+        font-size: 13px;
+      }
+    }
 /* End Footer */
 
 
