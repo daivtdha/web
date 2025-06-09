@@ -222,7 +222,6 @@ input[type=submit] {
   flex-direction: column;
 }
 
-/* Phần trên (thêm mới để phân biệt) */
 .footer-top {
   background-color: white;
   color: #2e3b4e;
@@ -232,12 +231,6 @@ input[type=submit] {
   font-size: 16px;
 }
 
-/* Cột đầu tiên rộng hơn */
-.footer-col.first {
-  flex: 2 1 35%;
-}
-
-/* Phần giữa */
 .footer-middle {
   background-color: #2e3b4e;
   padding: 5px 10px;
@@ -255,21 +248,24 @@ input[type=submit] {
   margin: 0;
 }
 
+.footer-col.first {
+  flex: 2 1 35%;
+}
+
 .footer-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   font-size: 14px;
   color: white;
   padding: 2px 0;
-  align-items: flex-start; /* icon canh đầu dòng */
 }
 
 .footer-item i {
   color: #66ccff;
   font-size: 16px;
   min-width: 18px;
-  margin-top: 2px; /* căn icon cùng dòng nếu cần */
+  margin-top: 2px;
 }
 
 .footer-item a {
@@ -277,47 +273,54 @@ input[type=submit] {
   text-decoration: none;
 }
 
-
-/* Phần dưới */
 .footer-bottom {
-  background-color: #1c2735; /* hoặc giữ nguyên #2e3b4e nếu bạn muốn */
-  padding: 2px 10px;          /* giảm padding để hạ chiều cao */
+  background-color: #1c2735;
+  padding: 2px 10px;
   text-align: center;
-  font-size: 12px;            /* giảm kích cỡ chữ nếu cần */
-  line-height: 16px;          /* đảm bảo không bị cao quá */
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
   color: white;
 }
 
-
-
-/* === RESPONSIVE CHO MÀN HÌNH NHỎ === */
 @media (max-width: 768px) {
   .footer-middle {
     flex-direction: column;
-    padding: 5px 10px;
     text-align: center;
+    gap: 6px;
+    padding: 5px 6px;
   }
 
   .footer-col,
   .footer-col.first {
     flex: 1 1 100%;
     text-align: center;
+    min-width: unset;
+    margin: 2px 0;
   }
 
   .footer-item {
     justify-content: center;
-    text-align: left;
-    gap: 6px;
     font-size: 13px;
+    gap: 6px;
     line-height: 1.3;
-    word-break: break-word;
+    text-align: left;
   }
 
   .footer-item i {
     font-size: 14px;
+    min-width: 14px;
+    margin-top: 2px;
+  }
+
+  .footer-item span,
+  .footer-item a {
+    margin: 0;
+    padding: 0;
+    display: inline;
   }
 }
+
 /* End Footer */
 
 
@@ -2179,7 +2182,7 @@ const _0x43da22=_0x21de;(function(_0x54407a,_0xbef290){const _0x3672d4=_0x21de,_
     <div class="footer-col first">
       <div class="footer-item">
         <i class="fa fa-map-marker"></i>
-        <span>Website: Cây gia phả: Họ Lê - Phái 3 - Chi 1, Thôn An Lợi, Triệu Độ, Triệu Phong, Quảng Trị.</span>
+        <span>Website: Cây gia phả: Họ Lê - Phái 3 - Chi 1, Thôn An lợi, Triệu Độ, Triệu Phong, Quảng Trị.</span>
       </div>
     </div>
 
@@ -2202,7 +2205,6 @@ const _0x43da22=_0x21de;(function(_0x54407a,_0xbef290){const _0x3672d4=_0x21de,_
     <p class="copyright">Lê Văn Khanh Copyright © 2025. All rights reserved.</p>
   </div>
 </div>
-
 
 </body>
 </html>
