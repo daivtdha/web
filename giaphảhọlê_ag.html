@@ -2291,34 +2291,23 @@ form .nhaplieu input:not(:placeholder-shown) + label {
 
 /* @media (max-width: 768px) { */
 @media (max-width: 768px) and (orientation: portrait) {
-  #nhaplieu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
-  form .nhaplieu {
-    width: 48%; /* chia đôi, chừa khoảng cách */
-    margin-bottom: 8px;
-    position: relative;
-  }
+	#nhaplieu {
+	  width: 100%;
+	}
 
-  form .nhaplieu textarea,
-  form .nhaplieu input {
-    width: 100%; /* chiếm trọn khối .nhaplieu */
-  }
+	form .nhaplieu textarea {
+	  width: 150px;
+	}	
+	
+	#Colum_2 {
+	  width: 150px;
+	}
 
-  .form-buttons {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .form-buttons button {
-    padding: 4px 10px;
-    font-size: 12px;
-  }
+	.form-buttons button {
+	  padding: 4px 10px;
+	  font-size: 12px;
+	}	
 }
 
 /* Giao diện cho điện thoại ngang (iPhone 15 landscape) */
