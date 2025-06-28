@@ -2455,6 +2455,14 @@ form .nhaplieu select:focus {
   .tagify {
     width: 100% !important;
   }
+/* Nhản Colum_6 100% */	
+form .nhaplieu.tagify-wrapper {
+  width: 100%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
+  position: relative;        /* ✅ Đảm bảo label absolute căn theo đây */
+  display: flex;             /* ✅ Có thể giúp canh chỉnh nội dung nếu cần */
+  flex-direction: column;    /* ✅ Các con nằm dọc */
+}
+	
  #Colum_7 {
     width: 100%;
   }  
