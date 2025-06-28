@@ -2461,17 +2461,19 @@ form .nhaplieu.tagify-wrapper {
   white-space: nowrap;
 }
 	
- #Colum_7 {
+  #Colum_7 {
     width: 100%;
-  } 
+    position: relative; /* Để dropdown định vị theo đúng thẻ cha này */
+  }
+
   #dropdown7 {
-    width: 100% !important;         /* ✅ Chiếm toàn bộ chiều ngang */
-    left: 0 !important;             /* ✅ Căn trái nếu cần */
+    width: 100%;
     max-width: 100%;
+    left: 0;
+    position: absolute;
+    top: 100%;
   }
-  .tags-container {
-    width: 100%;                    /* ✅ Đảm bảo thẻ cha đúng kích thước */
-  }
+ }
 	
   /* ✅ select cũng chiếm toàn bộ khối giống textarea */
   form .nhaplieu select {
