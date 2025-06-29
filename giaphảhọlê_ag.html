@@ -2377,12 +2377,10 @@ form .nhaplieu select:focus {
 .label-fixed {
   position: absolute;
   left: 50%;
-  top: -8px;
+  top: -3px;
   font-size: 11px;
   color: #888;
-  background: white;
-  pointer-events: none;
-  
+  pointer-events: none;  
   z-index: 1;
   background: transparent;
 }
@@ -2467,15 +2465,15 @@ form .nhaplieu select:focus {
 }
 
 .dropdown-list div:nth-child(odd) {
-  background-color: #d4eaf9;
+  background-color: #aed6f1;
+
 }
 .dropdown-list div:nth-child(even) {
-  background-color: #aed6f1;
+  background-color: #d4eaf9;
 }
 .dropdown-list div:hover {
   background-color: #cceeff;
 }
-
 
 /* END SELECT_7 */	
 
@@ -2541,14 +2539,15 @@ form .nhaplieu.tagify-wrapper {
   width: 47%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
   white-space: nowrap;
 }
-	
-  #Colum_7 {
-    width: 100%;
-  }
-  #dropdown7 {
-    width: 100%;
-  }
 
+/* ✅ Select_7 cũng chiếm 100% */	
+  .tags-wrapper,
+  .tags-container,
+  #Colum_7,
+  #dropdown7 {
+    width: 100% !important;
+  }
+ 
 	
   /* ✅ Select_4 cũng chiếm 100% */
   .gender-wrapper {
