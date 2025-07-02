@@ -2162,6 +2162,7 @@ font-weight: bold;
   width: 79%;
   max-height: 90%;
   overflow-y: auto;
+  overflow-x: hidden; /* ✅ Ngăn scroll ngang */
   border: 2px solid #ff4a56;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   z-index: 999;
@@ -2169,6 +2170,8 @@ font-weight: bold;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  box-sizing: border-box;
+  max-width: 100vw; /* ✅ Ngăn form vượt màn hình */
 }
 
 form#nhaplieu {
@@ -2181,7 +2184,9 @@ form#nhaplieu {
 /* --- FORM ITEM --- */
 form .nhaplieu {
   position: relative;
-  padding: 5px 0 5px; /* giảm khoảng cách hàng */
+  padding: 5px 0 5px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* --- INPUT / TEXTAREA / SELECT --- */
@@ -2189,9 +2194,10 @@ form .nhaplieu textarea,
 form .nhaplieu input,
 form .nhaplieu select {
   width: 200px;
+  max-width: 100%; /* ✅ Không vượt khối cha */
   padding: 2px 6px;
   border: 1px solid #ff4a56;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 100;
   letter-spacing: 0.01em;
   color: #000;
@@ -2201,15 +2207,15 @@ form .nhaplieu select {
   box-sizing: border-box;
   resize: none;
   appearance: none;
+  overflow-x: hidden;
 }
 
 /* --- LABEL chung --- */
 form .nhaplieu label {
   position: absolute;
-  left: 50%;                        /* Canh giữa theo chiều ngang */
-  top: 3;                           /* Cạnh trên của form field */
-  transform: translate(-50%, -50%); /* Dịch lên giữa đường viền trên */
-  
+  left: 50%;
+  top: 3;
+  transform: translate(-50%, -50%);
   color: #888;
   font-size: 12px;
   font-weight: 500;
@@ -2219,7 +2225,6 @@ form .nhaplieu label {
   transition: all 0.2s ease-in-out;
 }
 
-
 /* --- Khi focus hoặc có nội dung thì label nổi lên --- */
 form .nhaplieu textarea:focus ~ label,
 form .nhaplieu textarea:not(:placeholder-shown) ~ label,
@@ -2227,9 +2232,9 @@ form .nhaplieu input:focus + label,
 form .nhaplieu input:not(:placeholder-shown) + label,
 form .nhaplieu select:focus + label,
 form .nhaplieu select:not([value=""]) + label {
-  left: 50%;                        /* Canh giữa theo chiều ngang */
-  top: -2px;                           /* Cạnh trên của form field */
-  transform: translate(-50%, -50%); /* Dịch lên giữa đường viền trên */
+  left: 50%;
+  top: -2px;
+  transform: translate(-50%, -50%);
   font-size: 11px;
   color: #ff4a56;
   background: white;
@@ -2238,9 +2243,9 @@ form .nhaplieu select:not([value=""]) + label {
 form .nhaplieu textarea:focus,
 form .nhaplieu input:focus,
 form .nhaplieu select:focus {
-  outline: none;              /* Bỏ viền xanh */
-  box-shadow: none;           /* Bỏ hiệu ứng đổ bóng khi focus */
-  border-color: #ff4a56;      /* Giữ hoặc đặt lại viền mong muốn */
+  outline: none;
+  box-shadow: none;
+  border-color: #ff4a56;
 }
 
 /* --- Ẩn thanh cuộn textarea --- */
@@ -2254,16 +2259,15 @@ textarea {
   box-sizing: border-box;
   resize: none;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
-/* --- End Ẩn thanh cuộn textarea --- */
-	
-/* Colum_2 */	
+
+/* Colum_2 */
 #Colum_2 {
   width: 200px;
   height: 30px;
-}	
-/* End Colum_2 */
-	
+}
+
 /* SELECT_4 */
 .gender-wrapper {
   position: relative;
@@ -2279,9 +2283,9 @@ textarea {
   box-sizing: border-box;
   background: #fff;
   cursor: pointer;
+  max-width: 100%;
 }
 
-/* Dropdown */
 #dropdown4 {
   display: none;
   position: absolute;
@@ -2292,6 +2296,7 @@ textarea {
   border: 1px solid #ccc;
   z-index: 999;
   font-size: 11px;
+  box-sizing: border-box;
 }
 
 #dropdown4 div {
@@ -2310,15 +2315,11 @@ textarea {
   background-color: #cceeff;
 }
 
-/* END SELECT_4 */
-
-/* SELECT_6 */
-
-/* --- TAGIFY (Colum_6) --- */
+/* --- TAGIFY Colum_6 --- */
 .nhaplieu.tagify-wrapper label {
   position: absolute;
-  left: 50%;                        /* Canh giữa theo chiều ngang */
-  top: 1px;                           /* Cạnh trên của form field */
+  left: 50%;
+  top: 1px;
   font-size: 11px;
   background: #fff;
   padding: 0 6px;
@@ -2328,17 +2329,15 @@ textarea {
   transition: all 0.2s ease-in-out;
 }
 
-/* ✅ TAGIFY CHUẨN HOÁ (Colum_6) */
 #Colum_6.tagify,
 .tagify {
   width: 200px;
   min-height: 30px;
   max-height: 60px;
-
   font-size: 11px;
   line-height: 16px;
   box-sizing: border-box;
-  overflow-y: auto;                 /* Cho phép cuộn */
+  overflow-y: auto;
   overflow-x: hidden;
   border: 1px solid #ff4a56;
   background-color: white;
@@ -2346,9 +2345,9 @@ textarea {
   flex-wrap: wrap;
   align-items: center;
   gap: 1px;
+  max-width: 100%;
 }
 
-/* ✅ Input bên trong Tagify */
 .tagify__input {
   order: -1;
   width: 100%;
@@ -2356,95 +2355,69 @@ textarea {
   line-height: 30px !important;
   padding: 0 6px !important;
   margin: 0 !important;
-  border-bottom: 1.5px solid #ccc;/* ✅ Viền dưới */ 
+  border-bottom: 1.5px solid #ccc;
   box-shadow: none !important;
   background: none !important;
   flex: 1;
 }
 
-/* ✅ Tag item */
 .tagify__tag {
-  width: 200px;
+  width: 100%;
   margin: 1px 0;
 }
 
-/* ✅ Dropdown gợi ý */
 .tagify__dropdown__item {
-	font-size: 11px;
-}
-
-
-
-/* ✅ Khi revert về textarea (Colum_6) */
-textarea#Colum_6 {
-  min-height: 30px;
-  height: 30px;
   font-size: 11px;
-  padding: 1px 6px;
-  box-sizing: border-box;
-  line-height: 30px;
-  resize: none;
 }
 
-/* END SELECT_6 */
-
-/* SELECT_7 */
-
+/* Colum_7 */
 .tags-wrapper {
   position: relative;
   width: 200px;
+  max-width: 100%;
 }
 
-/* Label nằm ngoài, đặt cố định */
 .label-fixed {
   position: absolute;
   left: 50%;
   top: -3px;
   font-size: 11px;
   color: #888;
-  pointer-events: none;  
+  pointer-events: none;
   z-index: 1;
   background: transparent;
 }
 
-
-/* Khi có nội dung (focus hoặc đã có tag) */
 .tags-wrapper.has-content .label-fixed {
   top: -8px;
-  left: 50%; 
-  color: #ff4a56; /* Màu đỏ */
+  left: 50%;
+  color: #ff4a56;
   font-size: 11px;
 }
 
-
-/* Khi focus hoặc có nội dung thì đẩy label lên */
 #Colum_7:focus ~ .label-fixed,
-#Colum_7:not(:placeholder-shown) ~ .label-fixed,
-.tags-wrapper:has(#Colum_7:focus) .label-fixed,
-.tags-wrapper:has(#Colum_7:not(:placeholder-shown)) .label-fixed {
+#Colum_7:not(:placeholder-shown) ~ .label-fixed {
   top: -8px;
-  left: 50%;
-  font-size: 11px;
   color: #ff4a56;
 }
-/* Container chứa tags và input */
+
 .tags-container {
   width: 200px;
   min-height: 30px;
-  max-height: 60px;                 /* Giới hạn chiều cao để scroll */
-  overflow-y: auto;                 /* Cho phép cuộn */
+  max-height: 60px;
+  overflow-y: auto;
   overflow-x: hidden;
   position: relative;
   border: 1px solid #ff4a56;
-  border-radius: 1px;
   background-color: #fff;
   font-size: 11px;
   display: flex;
   flex-direction: column;
   gap: 1px;
   box-sizing: border-box;
-  
+  max-width: 100%;
 }
+
 .tags-container .tag {
   background-color: #e0e0e0;
   padding: 1px;
@@ -2455,24 +2428,23 @@ textarea#Colum_6 {
   align-items: center;
   line-height: 16px;
 }
+
 .tags-container .tag span {
   margin-left: 6px;
   cursor: pointer;
   font-weight: bold;
 }
-/* Input */
+
 #Colum_7 {
-  order: -1;                      /* Input nằm trên cùng các tag */
+  order: -1;
   font-size: 11px;
-  border: none;                   /* Bỏ viền mặc định */
-  border-bottom: 1.5px solid #ccc;/* ✅ Viền dưới */
+  border: none;
+  border-bottom: 1.5px solid #ccc;
   outline: none;
   width: 100%;
   background: transparent;
   min-height: 30px;
 }
-
-
 
 /* Dropdown */
 .dropdown-list {
@@ -2489,7 +2461,7 @@ textarea#Colum_6 {
   z-index: 999;
   display: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+  box-sizing: border-box;
 }
 
 .dropdown-list div {
@@ -2497,12 +2469,10 @@ textarea#Colum_6 {
   line-height: 16px;
   cursor: pointer;
   border-bottom: 1px solid #fff;
-
 }
 
 .dropdown-list div:nth-child(odd) {
   background-color: #aed6f1;
-
 }
 .dropdown-list div:nth-child(even) {
   background-color: #d4eaf9;
@@ -2511,15 +2481,12 @@ textarea#Colum_6 {
   background-color: #cceeff;
 }
 
-
-/* END SELECT_7 */	
-
 /* BUTTON FORM */
 .form-buttons {
   display: flex;
-  justify-content: center;  /* Căn giữa nút theo chiều ngang */
+  justify-content: center;
   align-items: center;
-  gap: 20px;                /* Khoảng cách giữa 2 nút */
+  gap: 20px;
   margin-top: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -2540,67 +2507,34 @@ textarea#Colum_6 {
 .form-buttons button:hover {
   background-color: #e03c48;
 }
-/* END BUTTON FORM */
 
-/* @media (max-width: 768px) { */
-/* @media (max-width: 768px) { */
+/* RESPONSIVE FIX */
 @media (max-width: 768px) and (orientation: portrait) {
   #nhaplieu {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 12px;
   }
 
   form .nhaplieu {
-    width: 48%; /* chia đôi, chừa khoảng cách */
+    width: 48%;
     margin-bottom: 8px;
-    position: relative;
   }
 
-  form .nhaplieu textarea {
-    width: 100%; /* chiếm trọn khối .nhaplieu */
-  }
-  #Colum_2 {
-    width: 100%;
-  }
-  #Colum_6 {
-    width: 100%;
-  }
+  #Colum_2,
   #Colum_6,
-  .tagify {
-    width: 100% !important;
-  }
-/* Nhản Colum_6 100% */	
-form .nhaplieu.tagify-wrapper {
-  width: 47%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
-  white-space: nowrap;
-}
-
-/* ✅ Select_7 cũng chiếm 100% */	
+  #Colum_7,
+  #Colum_4,
+  .tagify,
+  .tagify__input,
   .tags-wrapper,
   .tags-container,
-  #Colum_7,
-  #dropdown7 {
+  .gender-wrapper,
+  #dropdown4,
+  #dropdown7,
+  .dropdown-list {
     width: 100% !important;
-  }
- 
-	
-  /* ✅ Select_4 cũng chiếm 100% */
-  .gender-wrapper {
-    width: 100%;
-  }
-  #Colum_4 {
-    width: 100%;
-  }
-  #dropdown4 {
-    width: 100%;
-  }
-	
-  .form-buttons {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .form-buttons button {
@@ -2608,7 +2542,6 @@ form .nhaplieu.tagify-wrapper {
     font-size: 12px;
   }
 }
-
 
 /*  END FORM NHẬP DỮ LIỆU  */
 
