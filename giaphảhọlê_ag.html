@@ -2553,7 +2553,21 @@ textarea#Colum_6 {
 
 /* END BUTTON FORM */
 
-/* @media (max-width: 768px) { */
+/* 🌐 Giao diện mặc định: 3 cột */
+form .nhaplieu {
+  width: calc(33.333% - 20px);
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* ✅ Các input/textarea bên trong chiếm hết chiều ngang khối */
+form .nhaplieu textarea,
+form .nhaplieu input,
+form .nhaplieu select {
+  width: 100%;
+}
+
+/* 📱 Portrait: điện thoại xoay dọc */
 @media (max-width: 768px) and (orientation: portrait) {
   #nhaplieu {
     width: 100%;
@@ -2563,64 +2577,57 @@ textarea#Colum_6 {
   }
 
   form .nhaplieu {
-    width: 48%; /* chia đôi, chừa khoảng cách */
-    margin-bottom: 8px;
-    position: relative;
-  }
-
-  form .nhaplieu textarea {
-    width: 100%; /* chiếm trọn khối .nhaplieu */
-  }
-  #Colum_2 {
-    width: 100%;
-  }
-  #Colum_6 {
-    width: 100%;
-  }
-  #Colum_6,
-  .tagify {
-    width: 100% !important;
-  }
-  /* Nhản Colum_6 100% */	
- form .nhaplieu.tagify-wrapper {
-  width: 47%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
-  white-space: nowrap;
- }
-
- 
-/* ✅ Select_7 cũng chiếm 100% */	
-  .tags-wrapper,
-  .tags-container,
-  #Colum_7,
-  #dropdown7 {
-    width: 100% !important;
-  }
-
-  
-  /* ✅ Select_4 cũng chiếm 100% */
-  .gender-wrapper {
-    width: 100%;
-  }
-  #Colum_4 {
-    width: 100%;
-  }
-  #dropdown4 {
-    width: 100%;
-  }
-
-  
-  .form-buttons {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .form-buttons button {
-    padding: 4px 10px;
-    font-size: 12px;
+    width: 48%; /* chia đôi */
   }
 }
 
+/* 📱 Landscape: điện thoại xoay ngang */
+@media (max-width: 980px) and (orientation: landscape) {
+  #nhaplieu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  form .nhaplieu {
+    width: 48%;
+  }
+}
+
+/* 📱 Điện thoại rất nhỏ (≤ 480px): chỉ 1 cột */
+@media (max-width: 480px) {
+  form .nhaplieu {
+    width: 100%;
+  }
+}
+
+/* ✅ Các phần tử đặc biệt chiếm 100% chiều ngang */
+#Colum_2,
+#Colum_4,
+#Colum_6,
+#Colum_7,
+.tagify,
+.gender-wrapper,
+.tags-wrapper,
+.tags-container,
+#dropdown4,
+#dropdown7,
+form .nhaplieu.tagify-wrapper {
+  width: 100% !important;
+}
+
+/* ✅ Nút bấm */
+.form-buttons {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  padding: 4px 10px;
+  font-size: 12px;
+}
 
 </style>
 
