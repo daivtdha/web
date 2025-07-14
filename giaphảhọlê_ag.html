@@ -2553,8 +2553,7 @@ textarea#Colum_6 {
 /* END BUTTON FORM */
 
 /* @media (max-width: 768px) { */
-/* @media (max-width: 768px) { */
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: landscape) {
   #nhaplieu {
     width: 100%;
     display: flex;
@@ -2563,61 +2562,26 @@ textarea#Colum_6 {
   }
 
   form .nhaplieu {
-    width: 48%; /* chia đôi, chừa khoảng cách */
+    width: 48%;
     margin-bottom: 8px;
-    position: relative;
   }
 
-  form .nhaplieu textarea {
-    width: 100%; /* chiếm trọn khối .nhaplieu */
-  }
-  #Colum_2 {
-    width: 100%;
-  }
-  #Colum_6 {
-    width: 100%;
-  }
+  form .nhaplieu textarea,
+  form .nhaplieu input,
+  .tags-wrapper,
+  .tags-container,
+  #Colum_7,
+  #dropdown7,
+  #Colum_4,
+  #dropdown4,
   #Colum_6,
   .tagify {
     width: 100% !important;
   }
-  /* Nhản Colum_6 100% */	
- form .nhaplieu.tagify-wrapper {
-  width: 47%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
-  white-space: nowrap;
- }
 
- 
-/* ✅ Select_7 cũng chiếm 100% */	
-  .tags-wrapper,
-  .tags-container,
-  #Colum_7,
-  #dropdown7 {
-    width: 100% !important;
-  }
-
-  
-  /* ✅ Select_4 cũng chiếm 100% */
-  .gender-wrapper {
-    width: 100%;
-  }
-  #Colum_4 {
-    width: 100%;
-  }
-  #dropdown4 {
-    width: 100%;
-  }
-
-  
   .form-buttons {
     width: 100%;
     text-align: center;
-    margin-top: 10px;
-  }
-
-  .form-buttons button {
-    padding: 4px 10px;
-    font-size: 12px;
   }
 }
 
