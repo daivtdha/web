@@ -2618,8 +2618,47 @@ textarea#Colum_6 {
     font-size: 12px;
   }
 }
+/*  điện thoại xoay ngang  */
+@media (max-width: 980px) and (orientation: landscape) {
+  #nhaplieu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* ✅ Căn giữa các cột */
+  }
 
+  form .nhaplieu {
+    width: 45%;              /* ✅ Chia 2 cột đẹp khi ngang */
+    margin-bottom: 8px;
+    position: relative;
+  }
 
+  form .nhaplieu textarea,
+  form .nhaplieu input {
+    width: 100%;
+  }
+
+  /* Các phần đặc biệt như dropdowns, tagify, ... */
+  .tagify,
+  #Colum_6,
+  #Colum_7,
+  #dropdown7,
+  #dropdown4 {
+    width: 100% !important;
+  }
+
+  .form-buttons {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form-buttons button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+/*  End điện thoại xoay ngang  */
 /*  END FORM NHẬP DỮ LIỆU  */
 
 </style>
