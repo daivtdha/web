@@ -2158,18 +2158,22 @@ font-weight: bold;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
-  padding: 20px 10px 10px;
-  width: 79%;
+  padding: 20px;
+  width: auto;                           /* Không cần 100% nữa */
+  max-width: 95%;
   max-height: 90%;
   overflow-y: auto;
   border: 2px solid #ff4a56;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   z-index: 999;
   border-radius: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 220px); /* 3 cột cố định 220px */
+  justify-content: center;                 /* ⭐ Căn giữa các cột */
+  gap: 12px 24px;
 }
+
 
 form#nhaplieu {
   display: flex;
