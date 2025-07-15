@@ -2639,15 +2639,33 @@ textarea#Colum_6 {
   }
 
   /* Các phần đặc biệt như dropdowns, tagify, ... */
-  #Colum_6 {
-    width: 100% !important;
-  }
-.tagify {
+
+form .nhaplieu.tagify-wrapper {
   width: 100% !important;
 }
+
 .tagify-wrapper {
-  width: 45% !important;
-}	
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+#Colum_6,
+.tagify {
+  width: 100% !important;
+  box-sizing: border-box;
+  min-width: 0; /* quan trọng để ngăn chặn overflow */
+}
+
+.tagify__input {
+  width: 100% !important;
+  flex: 1 1 auto;
+}
+
+.tagify__tag {
+  max-width: 100%;
+}
+	
+	
   /* Colum_2 ép full width */
   #Colum_2 {
     width: 100% !important;
