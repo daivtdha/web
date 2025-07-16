@@ -2397,7 +2397,7 @@ textarea {
   margin: 0 !important;
   box-sizing: border-box;
   flex: 0 0 auto;
-  
+  border-bottom: 1px solid #ccc;/* ✅ Viền dưới */  
 }
 
 /* ✅ Tag trong Colum_6 */
@@ -2524,6 +2524,7 @@ textarea#Colum_6 {
   box-sizing: border-box;
   margin: 0;
   flex: 1 1 auto;
+  border-bottom: 1px solid #ccc;/* ✅ Viền dưới */
 }
 
 
@@ -2699,12 +2700,22 @@ textarea#Colum_6 {
   }
 
   /* Colum_7 ép toàn bộ nhánh Tagify */
-  .tags-wrapper,
-  .tags-container,
-  #Colum_7,
-  #dropdown7 {
-    width: 100% !important;
-  }
+/* Chiếm toàn bộ chiều ngang cho phần chứa mối liên hệ */
+.tags-wrapper,
+.tags-container,
+#Colum_7,
+#dropdown7 {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* 👉 Mỗi tag trong mối liên hệ cũng phải full width */
+.tags-container .tag {
+  width: 100% !important;
+  box-sizing: border-box;
+  justify-content: space-between;  /* để span tên + nút × tách ra 2 đầu */
+}
+
 
   .form-buttons {
     width: 100%;
