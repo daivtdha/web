@@ -1959,12 +1959,13 @@ font-weight: bold;
   background-size: cover;
   background-position: center center;
   opacity: 0;
-  animation: imageAnimation 108s linear infinite;
-
+  animation: imageAnimation 140s linear infinite;
 }
 
+
+
 .slideshow li:nth-child(1) span {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg');
+  background-image: url('D3-JS/sky.jpg');
   animation-delay: 0s;
 }
 .slideshow li:nth-child(2) span {
@@ -2036,15 +2037,18 @@ font-weight: bold;
   animation-delay: 102s;
 }
 
+
+
+/* Keyframes chỉ cần đảm bảo mỗi ảnh hiện dần rồi tắt */
 @keyframes imageAnimation {
   0%   { opacity: 0; }
   5%   { opacity: 0.7; }
   10%  { opacity: 1; }
-  90%  { opacity: 1; }
-  95%  { opacity: 0.7; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0.7; }
+  35%  { opacity: 0; }
   100% { opacity: 0; }
 }
-
 
 
 /* Background header */
