@@ -2677,16 +2677,6 @@ textarea#Colum_6 {
     width: 100%;
   }
 
-  /* Các phần đặc biệt như dropdowns, tagify, ... */
- 
-#Colum_6.tagify,
-.tagify,
-.tagify__tag {
-  width: 100% !important;      /* ✅ Thay vì 200px */
- }	
-  #Colum_6 {
-    width: 100% !important;
-  }
   /* Colum_2 ép full width */
   #Colum_2 {
     width: 100% !important;
@@ -2699,8 +2689,17 @@ textarea#Colum_6 {
     width: 100% !important;
   }
 
-  /* Colum_7 ép toàn bộ nhánh Tagify */
-/* Chiếm toàn bộ chiều ngang cho phần chứa mối liên hệ */
+/* Các phần đặc biệt như dropdowns, tagify, ... */
+ 
+#Colum_6.tagify,
+.tagify,
+.tagify__tag {
+  width: 100% !important;      /* ✅ Thay vì 200px */
+ }	
+#Colum_6 {
+  width: 100% !important;
+}
+/* Colum_7 ép toàn bộ nhánh Tagify */
 .tags-wrapper,
 .tags-container,
 #Colum_7,
@@ -2715,8 +2714,6 @@ textarea#Colum_6 {
   box-sizing: border-box;
   justify-content: space-between;  /* để span tên + nút × tách ra 2 đầu */
 }
-
-
   .form-buttons {
     width: 100%;
     text-align: center;
