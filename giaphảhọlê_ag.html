@@ -2660,29 +2660,45 @@ textarea#Colum_6 {
 /*  điện thoại xoay ngang  */
 @media (max-width: 980px) and (orientation: landscape) {
   #nhaplieu {
-    width: 100%;
+    width: 85%;                         /* ✅ Giảm chiều rộng form */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;     /* ✅ Canh 2 cột cách đều nhau */
+    margin: 0 auto;                     /* ✅ Căn giữa form trong màn hình */
   }
 
-  form .nhaplieu,
-  form .nhaplieu.tagify-wrapper {
-    width: 100% !important;
+  form .nhaplieu {
+    width: 48%;                         /* ✅ Chia đều 2 cột, giữ gap */
+    margin-bottom: 8px;
+    position: relative;
   }
 
+  form .nhaplieu textarea,
+  form .nhaplieu input {
+    width: 100%;
+  }
+
+  /* Tagify Colum_6 */
+  .tagify-wrapper,
   .tagify,
-  #Colum_6,
-  input#Colum_6,
-  textarea#Colum_6 {
+  #Colum_6 {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Colum_2 ép full width */
+  #Colum_2 {
     width: 100% !important;
   }
 
-  /* Các input khác */
-  #Colum_2,
+  /* Giới tính Colum_4 */
   .gender-wrapper,
   #Colum_4,
-  #dropdown4,
+  #dropdown4 {
+    width: 100% !important;
+  }
+
+  /* Mối liên hệ Colum_7 */
   .tags-wrapper,
   .tags-container,
   #Colum_7,
@@ -2693,11 +2709,14 @@ textarea#Colum_6 {
   .form-buttons {
     width: 100%;
     text-align: center;
+    margin-top: 10px;
+  }
+
+  .form-buttons button {
+    padding: 6px 12px;
+    font-size: 14px;
   }
 }
-
-
-
 /*  End điện thoại xoay ngang  */
 
 /*  END FORM NHẬP DỮ LIỆU  */
