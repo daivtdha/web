@@ -2616,13 +2616,32 @@ textarea#Colum_6 {
   #Colum_2 {
     width: 100%;
   }
-  #Colum_6 {
-    width: 100%;
-  }
-  #Colum_6,
-  .tagify {
-    width: 100% !important;
-  }
+#Colum_6 {
+  width: 100%;
+}
+
+#Colum_6,
+.tagify {
+  width: 100% !important;
+}
+
+/* Đảm bảo container của các tag hiển thị đầy đủ và cuộn được nếu tràn */
+.tags-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 2px; /* Tránh bị che bởi scrollbar nếu có */
+}
+
+/* Đảm bảo từng tag không bị co nhỏ, x luôn hiển thị */
+.tags-container .tag {
+  flex: 0 0 auto;
+  min-width: fit-content;
+  margin-right: 6px;
+  max-width: none; /* ✅ tránh tag bị cắt ngang chữ */
+}
+	
   /* Nhản Colum_6 100% */	
  form .nhaplieu.tagify-wrapper {
   width: 47%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
