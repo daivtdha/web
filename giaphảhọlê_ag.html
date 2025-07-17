@@ -2617,14 +2617,34 @@ textarea#Colum_6 {
     width: 100%;
   }
 
-#Colum_6.tagify,
-.tagify,
-.tagify__tag {
-  width: 100% !important;      /* ✅ Thay vì 200px */
- }	
-#Colum_6 {
+/* Giữ input 100% */
+#Colum_6,
+.tagify {
   width: 100% !important;
-}	
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container các tag không vượt quá input */
+.tagify__input,
+.tags-container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+/* Từng tag co giãn hợp lý */
+.tags-container .tag,
+.tagify__tag {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  margin-right: 6px;
+}
+	
 	
   /* Nhản Colum_6 100% */	
  form .nhaplieu.tagify-wrapper {
