@@ -2686,33 +2686,36 @@ textarea#Colum_6 {
   }
 }
 /* 📱 Giao diện khi điện thoại xoay ngang */
+
 @media (max-width: 980px) and (orientation: landscape) {
   #nhaplieu {
-    width: 100%;
+    width: 90%; /* ✅ Giảm xuống dưới 100% cho dễ nhìn */
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* ✅ Căn giữa các khối nhập liệu */
+    justify-content: center;
   }
 
   form .nhaplieu {
-    width: 45%;              /* ✅ Chia 2 cột đều nhau */
+    width: 45%; /* ✅ Chia 2 cột đẹp khi ngang */
     margin-bottom: 8px;
     position: relative;
-  }
-
-  form .nhaplieu input,
-  form .nhaplieu textarea {
-    width: 100%;             /* ✅ Input/textarea full width trong khối */
     box-sizing: border-box;
   }
 
-  /* 🟢 Colum_2: ép full chiều ngang */
+  form .nhaplieu textarea,
+  form .nhaplieu input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Colum_2 ép full width */
   #Colum_2 {
     width: 100% !important;
     box-sizing: border-box;
   }
 
-  /* 🟢 Colum_4: phần giới tính gồm input và dropdown */
+  /* Colum_4: Giới tính + dropdown */
   .gender-wrapper,
   #Colum_4,
   #dropdown4 {
@@ -2720,7 +2723,7 @@ textarea#Colum_6 {
     box-sizing: border-box;
   }
 
-  /* 🟢 Colum_6: Tagify */
+  /* Colum_6: tagify */
   #Colum_6,
   #Colum_6.tagify,
   .tagify,
@@ -2729,7 +2732,7 @@ textarea#Colum_6 {
     box-sizing: border-box;
   }
 
-  /* 🟢 Colum_7: Mối quan hệ */
+  /* Colum_7: tagify đặc biệt */
   .tags-wrapper,
   .tags-container,
   #Colum_7,
@@ -2738,28 +2741,17 @@ textarea#Colum_6 {
     box-sizing: border-box;
   }
 
-  /* 🏷️ Mỗi tag: full width, chia đều span và nút × */
+  /* Mỗi tag trong tags-container */
   .tags-container .tag {
     width: 100% !important;
     box-sizing: border-box;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    padding: 2px 6px;
-    margin-bottom: 4px;
+    justify-content: space-between; /* Tên + nút × tách 2 đầu */
   }
 
-  .tags-container .tag span {
-    flex: 1;
+  /* Thêm scroll ngang nếu tag quá dài */
+  .tags-container {
+    overflow-x: auto;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .tags-container .tag .tag__removeBtn {
-    flex-shrink: 0;
-    margin-left: 8px;
-    cursor: pointer;
   }
   .form-buttons {
     width: 100%;
