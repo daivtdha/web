@@ -2685,74 +2685,65 @@ textarea#Colum_6 {
     font-size: 12px;
   }
 }
-/* 📱 Giao diện khi điện thoại xoay ngang */
-
+/*  điện thoại xoay ngang  */
 @media (max-width: 980px) and (orientation: landscape) {
   #nhaplieu {
-    width: 90%; /* ✅ Giảm xuống dưới 100% cho dễ nhìn */
-    margin: 0 auto;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* ✅ Căn giữa các cột */
   }
 
   form .nhaplieu {
-    width: 45%; /* ✅ Chia 2 cột đẹp khi ngang */
+    width: 40%;              /* ✅ Chia 2 cột đẹp khi ngang */
     margin-bottom: 8px;
     position: relative;
-    box-sizing: border-box;
   }
 
   form .nhaplieu textarea,
   form .nhaplieu input {
     width: 100%;
-    box-sizing: border-box;
   }
+
 
   /* Colum_2 ép full width */
   #Colum_2 {
     width: 100% !important;
-    box-sizing: border-box;
   }
 
-  /* Colum_4: Giới tính + dropdown */
+  /* Giới tính Colum_4 ép full */
   .gender-wrapper,
   #Colum_4,
   #dropdown4 {
     width: 100% !important;
-    box-sizing: border-box;
   }
 
-  /* Colum_6: tagify */
-  #Colum_6,
-  #Colum_6.tagify,
-  .tagify,
-  .tagify__tag {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
+/* Các phần đặc biệt như dropdowns, tagify, ... */
+ 
+#Colum_6.tagify,
+.tagify,
+.tagify__tag {
+  width: 100% !important;      /* ✅ Thay vì 200px */
+ }	
+#Colum_6 {
+  width: 100% !important;
+}
+/* Colum_7 ép toàn bộ nhánh Tagify */
+.tags-wrapper,
+.tags-container,
+#Colum_7,
+#dropdown7 {
+  width: 100% !important;
+  box-sizing: border-box;
+}
 
-  /* Colum_7: tagify đặc biệt */
-  .tags-wrapper,
-  .tags-container,
-  #Colum_7,
-  #dropdown7 {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
+/* 👉 Mỗi tag trong mối liên hệ cũng phải full width */
+.tags-container .tag {
+  width: 100% !important;
+  box-sizing: border-box;
+  justify-content: space-between;  /* để span tên + nút × tách ra 2 đầu */
+}
 
-  /* Mỗi tag trong tags-container */
-  .tags-container .tag {
-    width: 100% !important;
-    box-sizing: border-box;
-    justify-content: space-between; /* Tên + nút × tách 2 đầu */
-  }
-
-  /* Thêm scroll ngang nếu tag quá dài */
-  .tags-container {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
   .form-buttons {
     width: 100%;
     text-align: center;
@@ -2764,6 +2755,7 @@ textarea#Colum_6 {
     font-size: 14px;
   }
 }
+
 
 /*  End điện thoại xoay ngang  */
 
