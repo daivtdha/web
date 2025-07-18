@@ -2374,7 +2374,7 @@ textarea {
 /* ✅ TAGIFY CHUẨN HOÁ (Colum_6) */
 #Colum_6.tagify,
 .tagify {
-  width: 100% !important;      /* ✅ Thay vì 200px */
+  width: 200px;
   font-size: 11px;
   box-sizing: border-box;
   border: 1px solid #ff4a56;
@@ -2397,7 +2397,7 @@ textarea {
   margin: 0 !important;
   box-sizing: border-box;
   flex: 0 0 auto;
-  border-bottom: 1px solid #ccc;/* ✅ Viền dưới */  
+  border-bottom: 1px solid #ccc;/* ✅ Viền dưới */ 
 }
 
 /* ✅ Tag trong Colum_6 */
@@ -2505,14 +2505,8 @@ textarea#Colum_6 {
 }
 
 .tags-container .tag span {
-  margin-right: 11px;  /* ✅ Dịch nút x vào bên trái */
-}
-.tags-container .tag .tag-close {
-  font-size: 16px;   /* ✅ Tăng size nút × */
-  cursor: pointer;
   margin-left: 6px;
-  margin-right: 6px;
-  line-height: 16px;
+  cursor: pointer;
 }
 
 /* ✅ Input trong Colum_7 */
@@ -2520,6 +2514,7 @@ textarea#Colum_6 {
   order: -1;
   font-size: 11px;
   border: none;
+  border-bottom: 1.5px solid #ccc;
   outline: none;
   width: 100%;
   background: transparent;
@@ -2529,7 +2524,6 @@ textarea#Colum_6 {
   box-sizing: border-box;
   margin: 0;
   flex: 1 1 auto;
-  border-bottom: 1px solid #ccc;/* ✅ Viền dưới */
 }
 
 
@@ -2557,7 +2551,16 @@ textarea#Colum_6 {
   border-bottom: 1px solid #fff;
 }
 
-
+.tags-container .tag span {
+  margin-right: 15px;  /* ✅ Dịch nút x vào bên trái */
+}
+.tags-container .tag .tag-close {
+  font-size: 16px;   /* ✅ Tăng size nút × */
+  cursor: pointer;
+  margin-left: 6px;
+  margin-right: 6px;
+  line-height: 16px;
+}
 
 /* END SELECT_7 */
 
@@ -2616,8 +2619,7 @@ textarea#Colum_6 {
   #Colum_2 {
     width: 100%;
   }
-
-/* Giữ input 100% */
+/* ✅ Colum_6 Giữ input 100% */
 #Colum_6,
 .tagify {
   width: 100% !important;
@@ -2644,8 +2646,7 @@ textarea#Colum_6 {
   box-sizing: border-box;
   margin-right: 6px;
 }
-	
-	
+
   /* Nhản Colum_6 100% */	
  form .nhaplieu.tagify-wrapper {
   width: 47%;               /* ✅ Cho chiếm toàn bộ chiều ngang */
